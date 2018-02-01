@@ -1,43 +1,40 @@
 ---
 title: "Node.js 用 Azure Search モジュール"
 description: "Node.js 用 Azure Search モジュールのリファレンス"
-keywords: Azure,SDK,API,Search, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Search
-ms.openlocfilehash: dc9d4c5128c99a9518bd059e191bb11e4de4b78f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: bf99013b4479548d07531358bc5103b4e6ac7977
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="azure-search-modules-for-nodejs"></a><span data-ttu-id="98359-104">Node.js 用 Azure Search モジュール</span><span class="sxs-lookup"><span data-stu-id="98359-104">Azure Search modules for Node.js</span></span>
+# <a name="azure-search-modules-for-nodejs"></a><span data-ttu-id="035cc-103">Node.js 用 Azure Search モジュール</span><span class="sxs-lookup"><span data-stu-id="035cc-103">Azure Search modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="98359-105">概要</span><span class="sxs-lookup"><span data-stu-id="98359-105">Overview</span></span>
+<span data-ttu-id="035cc-104">Azure Search は、サーバーとインフラストラクチャの管理を Microsoft に委任するクラウドの Search-as-a-service (サービスとしての検索) ソリューションです。データを取り込んだら、アプリケーションに検索機能を追加して、すぐに利用を開始できます。</span><span class="sxs-lookup"><span data-stu-id="035cc-104">Azure Search is a cloud search-as-a-service solution that delegates server and infrastructure management to Microsoft, leaving you with a ready-to-use service that you can populate with your data and then use to add search to your application.</span></span>
 
-<span data-ttu-id="98359-106">Azure Search は、サーバーとインフラストラクチャの管理を Microsoft に委任するクラウドの Search-as-a-service (サービスとしての検索) ソリューションです。データを取り込んだら、アプリケーションに検索機能を追加して、すぐに利用を開始できます。</span><span class="sxs-lookup"><span data-stu-id="98359-106">Azure Search is a cloud search-as-a-service solution that delegates server and infrastructure management to Microsoft, leaving you with a ready-to-use service that you can populate with your data and then use to add search to your application.</span></span>
+<span data-ttu-id="035cc-105">Azure Search の詳細については、[こちら](https://docs.microsoft.com/azure/search/search-what-is-azure-search)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="035cc-105">Learn more about [Azure Search](https://docs.microsoft.com/azure/search/search-what-is-azure-search).</span></span>
 
-<span data-ttu-id="98359-107">Azure Search の詳細については、[こちら](https://docs.microsoft.com/azure/search/search-what-is-azure-search)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="98359-107">Learn more about [Azure Search](https://docs.microsoft.com/azure/search/search-what-is-azure-search).</span></span>
+## <a name="management-package"></a><span data-ttu-id="035cc-106">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="035cc-106">Management package</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="98359-108">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="98359-108">Management package</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="035cc-107">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="035cc-107">Install the npm module</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="98359-109">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="98359-109">Install the npm module</span></span>
-
-<span data-ttu-id="98359-110">Azure Search の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="98359-110">Install the Azure Search npm module</span></span>
+<span data-ttu-id="035cc-108">Azure Search の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="035cc-108">Install the Azure Search npm module</span></span>
 
 ```bash
 npm install azure-arm-search
 ```
 
-### <a name="example"></a><span data-ttu-id="98359-111">例</span><span class="sxs-lookup"><span data-stu-id="98359-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="035cc-109">例</span><span class="sxs-lookup"><span data-stu-id="035cc-109">Example</span></span>
 
-<span data-ttu-id="98359-112">この例では、Azure に新しい Search サービスを作成し、そのリソース グループに含まれるリソースを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="98359-112">This example creates a new Search service in Azure, and lists the resources in its resource group.</span></span>
+<span data-ttu-id="035cc-110">この例では、Azure に新しい Search サービスを作成し、そのリソース グループに含まれるリソースを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="035cc-110">This example creates a new Search service in Azure, and lists the resources in its resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -59,6 +56,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="98359-113">サンプル</span><span class="sxs-lookup"><span data-stu-id="98359-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="035cc-111">サンプル</span><span class="sxs-lookup"><span data-stu-id="035cc-111">Samples</span></span>
 
-<span data-ttu-id="98359-114">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="98359-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="035cc-112">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="035cc-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
