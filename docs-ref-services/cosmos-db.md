@@ -1,25 +1,22 @@
 ---
 title: "Node.js 用 Azure Cosmos DB モジュール"
 description: "Node.js 用 Azure Cosmos DB モジュールのリファレンス"
-keywords: Azure,SDK,API,Cosmos DB, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cosmos DB
-ms.openlocfilehash: 1f545f89b5304b611dbe1ed9cb86052c112f13c1
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 575c276ec755dabe8e7b9ed76ba98ef8073c4f1b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-cosmos-db-modules-for-nodejs"></a>Node.js 用 Azure Cosmos DB モジュール
-
-## <a name="overview"></a>概要
 
 Azure Cosmos DB は、Microsoft のグローバルに分散されたマルチモデル データベース サービスです。 Azure Cosmos DB では、Azure のリージョンをいくつでもまたいでスループットとストレージを柔軟かつ個別にスケーリングすることができます。 このサービスは包括的なサービス レベル アグリーメント (SLA) により、スループット、待ち時間、可用性、整合性が保証されています。この点は、他のどのデータベース サービスにもないメリットです。
 

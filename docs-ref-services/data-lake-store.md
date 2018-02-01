@@ -1,25 +1,23 @@
 ---
 title: "Node.js 用 Azure Data Lake Store モジュール"
 description: "Node.js 用 Azure Data Lake Store モジュールのリファレンス"
-keywords: Azure,SDK,API,Data Lake Store, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Store
-ms.openlocfilehash: 5885bf8f073e4f4f1ac2be88b8691b092e8a21d3
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: a108cc6d184b72d2d4227f9e60da6b7a535f92ae
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-data-lake-store-modules-for-nodejs"></a>Node.js 用 Azure Data Lake Store モジュール
 
-## <a name="overview"></a>概要
 Azure Data Lake Store は、ビッグ データの分析ワークロードに対応するエンタープライズ規模のハイパースケール リポジトリです。 Azure Data Lake を使用すると、運用分析や調査分析を目的として任意のサイズ、種類、および取り込み速度のデータを 1 か所でキャプチャすることができます。
 
 ## <a name="management-package"></a>管理パッケージ

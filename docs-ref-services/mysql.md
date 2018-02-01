@@ -1,25 +1,22 @@
 ---
 title: "Node.js 用 Azure MySQL モジュール"
 description: "Node.js 用 Azure MySQL モジュールのリファレンス"
-keywords: "Azure, Node, SDK, API, nodejs, javascript, データベース, MySQL"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: mysql
-ms.openlocfilehash: 3efc0fcccb7cb01711ad1ce98e9ff9a2d87b77fe
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: c78f61d0f76b6a40ad85ae0e7d9101349666eb0b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-mysql-modules-for-nodejs"></a>Node.js 用 Azure MySQL モジュール
-
-## <a name="overview"></a>概要
 
 Azure Database for MySQL へのアクセスに推奨されるクライアント ライブラリは、オープンソースの [Azure Database for MySQL 用 Node.js 接続ライブラリ](https://github.com/sidorares/node-mysql2)です。 
 

@@ -1,25 +1,22 @@
 ---
 title: "Node.js 用 Azure Resource Manager モジュール"
 description: "Node.js 用 Azure Resource Manager モジュールのリファレンス"
-keywords: Azure,SDK,API,Resources, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Resources
-ms.openlocfilehash: 9ccb49ff6de18afbd8409311364d42937c3a8651
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 219dae56dd42719d3e4d3584697d0157cb8d7458
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-resource-modules-for-nodejs"></a>Node.js 用 Azure Resource モジュール
-
-## <a name="overview"></a>概要
 
 Azure のソリューションに必要なインフラストラクチャのデプロイと管理は、Azure Resource Manager を使って行うことができます。 関連するリソースはリソース グループにまとめ、JSON テンプレートを使って必要なリソースをデプロイします。
 

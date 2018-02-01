@@ -1,30 +1,27 @@
 ---
 title: "Node.js 用 Azure Storage モジュール"
 description: "Node.js 用 Azure Storage モジュールのリファレンス"
-keywords: "Azure, Node, SDK, API, ストレージ, nodejs, javascript"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: storage
-ms.openlocfilehash: 61d3f3bb49d10e63a353c474067a155223bb6c76
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: b94c6fbb50e656e0dcc542236afe791c7ddc9be4
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-storage-modules-for-nodejs"></a>Node.js 用 Azure Storage モジュール
-
-## <a name="overview"></a>概要
 
 Azure Storage クライアント モジュールは、次のようなときに使用します。
 
 - [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-nodejs-how-to-use-blob-storage) との間でオブジェクトとファイルの読み取りと書き込みを行う
-- クラウドに接続されているアプリケーション間で [Azure Queue Storage](https://docs.microsoft.com/azure/storage/storage-nodejs-how-to-use-queues) を使ってメッセージを送受信する
+- クラウドに接続されているアプリケーションの間で [Azure Queue Storage](https://docs.microsoft.com/azure/storage/storage-nodejs-how-to-use-queues) を使ってメッセージを送受信する
 - [Azure Table Storage](https://docs.microsoft.com/azure/storage/storage-nodejs-how-to-use-table-storage) を使って大きな構造化データの読み取りと書き込みを行う
 
 Node.js アプリから管理モジュールを使って、Azure ストレージ アカウントの作成、更新、管理のほか、アクセス キーの照会と再生成を行うことができます。

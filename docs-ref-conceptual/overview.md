@@ -1,20 +1,19 @@
 ---
 title: "Node.js 用 Azure モジュール"
 description: "Node.js 用 Azure 管理/サービス モジュールの概要"
-keywords: "Azure, Node.js, SDK, API, 管理, クライアント, サービス"
-author: TomArcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 06/17/2017
 ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 56dc4f4f36d4e0e9a2d40b38ff8f0b1f9690818c
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 6041303dcb8734cc17052756d291efa6b4c2269e
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-modules-for-nodejs"></a>Node.js 用 Azure モジュール
 
@@ -106,4 +105,4 @@ blobService.listBlobsSegmented('testcontainer', null, function(error, result, re
 - [Web アプリ](node-samples-services-web-and-mobile.md)
 - [SQL Database](node-samples-services-database.md)
    
-サービス モジュールと管理モジュールの全モジュールについて[リファレンス](https://docs.microsoft.com/nodejs/api)が公開されています。 新機能、重大な変更、以前のバージョンからの移行手順については、[リリース ノート](https://github.com/Azure/azure-sdk-for-node/releases)を参照してください。
+サービス モジュールと管理モジュールの全モジュールについて[リファレンス](https://docs.microsoft.com/javascript/api)が公開されています。 新機能、重大な変更、以前のバージョンからの移行手順については、[リリース ノート](https://github.com/Azure/azure-sdk-for-node/releases)を参照してください。
