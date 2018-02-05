@@ -1,22 +1,22 @@
 ---
-title: "Node.js での Azure Web およびモバイル アプリの作成に関するサンプル コード"
-description: "Node.js で Azure の Web アプリとモバイル アプリを作成する方法について紹介したサンプル コード。"
-author: tomarcher
-manager: douge
+title: "Node.js を使用した Azure Web アプリおよびモバイル アプリのサンプル コード"
+description: "Node.js の Azure Web アプリおよびモバイル アプリのサンプル コード"
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: fab798da79c630b605f0a401b7e6b13cccdbd808
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: ee886b216ca9521a6173af0bd272233b959ad38e
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-building-azure-web-and-mobile-apps-with-nodejs"></a>Node.js での Azure Web およびモバイル アプリの作成に関するサンプル コード
+# <a name="azure-web-and-mobile-apps-with-nodejs-code-samples"></a>Node.js を使用した Azure Web アプリおよびモバイル アプリのサンプル コード
 
-以下のサンプル コードには、Node.js で Azure Web アプリおよびモバイル アプリを作成する方法が紹介されています。
+以下のサンプル コードでは、Node.js で Azure Web アプリおよびモバイル アプリを作成する方法を示します。
 
 他のタスクのコードが必要な場合は、[Azure Node.js サンプル](https://azure.microsoft.com/resources/samples/?term=nodejs)の完全な一覧を参照してください。
 

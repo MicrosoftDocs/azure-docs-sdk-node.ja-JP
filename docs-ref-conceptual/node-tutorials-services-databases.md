@@ -1,18 +1,18 @@
 ---
-title: "Node.js で Azure データベースを使用するためのチュートリアル"
+title: "Node.js を使用した Azure データベースのチュートリアル"
 description: "Node.js で Azure データベースに接続して使用するためのチュートリアル。"
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 3bbb177f8d5442a5b8bd010ee709be49d24739b3
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: f50a3021c3d5126e68daec6631ee14db13c7d20b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="tutorials-for-using-azure-databases-with-nodejs"></a>Node.js で Azure データベースを使用するためのチュートリアル
 

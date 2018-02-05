@@ -2,24 +2,24 @@
 title: "Azure の Node.js 開発者向けツール | Microsoft Docs"
 description: "Azure における Node.js 開発を目的とした各ツールをインストールします。"
 services: multiple
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.service: azure-nodejs
 ms.tgt_pltfrm: na
 ms.devlang: nodejs
 ms.topic: article
-ms.date: 07/14/2017
-ms.author: tarcher
-ms.openlocfilehash: 587e0d4f7e7362875d75acad78cba2f03c9b63b5
-ms.sourcegitcommit: c49cb091b0176ec92e920e70a366be57465ea719
+ms.date: 11/07/2017
+ms.author: cshoe
+ms.openlocfilehash: e9fe95ce6c02d50a70ea51284174c938796148fe
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-tools-for-nodejs-developers"></a>Azure の Node.js 開発者向けツール
-Azure 上の Node.js を使った開発に、オペレーティング システムの垣根を越えてお勧めする優れたツールを紹介します。
+Azure を使用して Node.js 上で開発を行う場合は、次のツールをお勧めします。
 
-### <a name="optional-install-the-azure-cli"></a>(省略可) Azure CLI のインストール
+## <a name="azure-cli"></a>Azure CLI
 Azure CLI は、コマンド ラインから Azure リソースを管理する目的に最適化されています。
 
 ![CLI](media/node-azure-tools/cli.png)
@@ -27,10 +27,23 @@ Azure CLI は、コマンド ラインから Azure リソースを管理する�
 > [!div class="nextstepaction"]
 > [Azure CLI 2.0 をインストールします](https://docs.microsoft.com/cli/azure/install-az-cli2)
 
-### <a name="optional-install-visual-studio-code"></a>(省略可) Visual Studio Code のインストール
+## <a name="visual-studio-code"></a>Visual Studio Code
 あらゆる OS で Node.js アプリを編集したりデバッグしたりすることができます。
 
 ![Visual Studio Code](media/node-azure-tools/vs-code.png)
 
 > [!div class="nextstepaction"]
 > [Visual Studio Code をダウンロードする](https://code.visualstudio.com)
+
+### <a name="azure-extensions"></a>Azure 拡張機能
+Visual Studio Code で直接 Azure サービスとやり取りするには、次の無料の拡張機能を使用します。
+
+| ツール | [説明]  |
+|:---------:|---------|
+| [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Azure Functions ツール](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | 関数の作成、管理、表示、デバッグ、およびデプロイを行います|
+| [Mobile Apps](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![App Service ツール](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | サイトと Azure Portal の参照、新しいサイト (Node.js 上の Linux のみ) の作成、およびスロットへのデプロイを行います |
+| [Cosmos DB](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)  <br> [![Cosmos DB ツール](media/node-azure-tools/icon-cosmos-db.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)| Azure でグローバル分散型のマルチモデル データベースを作成、参照、および更新します |
+| [Docker](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)   <br> [![Cosmos DB ツール](media/node-azure-tools/icon-docker.png)](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)| Docker コンテナーとイメージ、Docker Hub、および Azure コンテナー レジストリを管理します |
+
+> [!div class="nextstepaction"]
+> [Visual Studio Code Marketplace のその他の Azure 拡張機能 を取得する](https://marketplace.visualstudio.com/search?term=azure&target=VSCode&category=All%20categories&sortBy=Relevance)

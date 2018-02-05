@@ -1,22 +1,22 @@
 ---
-title: "Node.js で Azure Storage を使用するためのサンプル コード"
-description: "Node.js で Azure Storage を使用する方法を紹介したサンプル コード。"
-author: tomarcher
-manager: douge
+title: "Node.js を使用した Azure Storage のサンプル コード"
+description: "Node.js で Azure Storage を使用する方法を示すサンプル コード。"
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: b8bb35016f229b12326ad0667ebdbba63614cb4e
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 70a30d92dba7c18b7f85127ba7359d94711b570a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-storage-with-nodejs"></a>Node.js で Azure Storage を使用するためのサンプル コード
+# <a name="azure-storage-with-nodejs-code-samples"></a>Node.js を使用した Azure Storage のサンプル コード
 
-以下のサンプル コードでは、Node.js で Azure Storage を使用する方法を紹介しています。
+次のサンプル コードでは、Node.js で Azure Storage を使用する方法を示します。
 
 他のタスクのコードが必要な場合は、[Azure Node.js サンプル](https://azure.microsoft.com/resources/samples/?term=nodejs)の完全な一覧を参照してください。
 

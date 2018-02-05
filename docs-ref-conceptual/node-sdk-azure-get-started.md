@@ -1,20 +1,19 @@
 ---
 title: "Node.js 用 Azure モジュールの概要"
-description: "ユーザー自身の Azure サブスクリプションで Node.js 用 Azure モジュールを使うための基本的な事柄について説明します。"
-keywords: "Azure, Node, SDK, API, 概要, node.js"
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "Node.js 用の Azure モジュールを使用した認証およびリソース管理の概要"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Node.js 用 Azure モジュールの概要
 
@@ -23,7 +22,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="prerequisites"></a>前提条件
 
 - Azure アカウント。 所有していない場合は、[無料試用版を入手](https://azure.microsoft.com/free/)してください。
-- [Node.JS](https://nodejs.org)
+- [Node.js](https://nodejs.org)
 - [Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) または [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。
 
 [!INCLUDE [azure-cloud-shell](../docs-ref-conceptual/includes/cloud-shell-try-it.md)]
@@ -258,13 +257,13 @@ node uploadFile.js
 az group delete --name myResourceGroup
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。
 
 ## <a name="reference"></a>リファレンス 
 
-すべてのパッケージには、[リファレンス](/nodejs/api/overview/azure/?view=azure-node-2.0.0)が提供されています。
+すべてのパッケージには、[リファレンス](/javascript/api/overview/azure/)が提供されています。
 
 ## <a name="get-help-and-give-feedback"></a>質問とフィードバック
 

@@ -1,20 +1,20 @@
 ---
-title: "Node.js で Azure のセキュリティと ID を使用するためのサンプル コード"
-description: "Node.js で Azure のセキュリティと ID を使用する方法を紹介したサンプル コード。"
-author: tomarcher
-manager: douge
+title: "Node.js を使用した Azure のセキュリティおよび ID のサンプル コード"
+description: "Node.js で Azure のセキュリティと ID を使用する方法を示すサンプル コード。"
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 9bd49a6daaee0abdac84a00c89ba326abcbe253f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 860539cf309acf4c4dd09f0924700bf93193195f
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-security-and-identity-with-nodejs"></a>Node.js で Azure のセキュリティと ID を使用するためのサンプル コード
+# <a name="azure-security-and-identity-with-nodejs-code-samples"></a>Node.js を使用した Azure のセキュリティおよび ID のサンプル コード
 
 以下のサンプル コードには、Node.js で Azure のセキュリティと ID を使用する方法が紹介されています。
 
