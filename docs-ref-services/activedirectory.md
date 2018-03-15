@@ -10,15 +10,18 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: active-directory
-ms.openlocfilehash: 59ef5321db6e5e7f3ad0e3b63aaa6a107207d3c2
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: c91b8396dbfeb766887b650541044f7ce2e7bde6
+ms.sourcegitcommit: 79213a25192d8913bf8ec16c19fbec6a8eb691f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="azure-active-directory-modules-for-nodejs"></a>Node.js 用 Azure Active Directory モジュール
 
 ## <a name="overview"></a>概要
+
+> [!IMPORTANT]
+> Azure Active Directory リソースにアクセスする場合、Azure AD Graph API ではなく [Microsoft Graph](https://graph.microsoft.io/) を使用することを強くお勧めします。 開発作業は現在 Microsoft Graph に集中しており、Azure AD Graph API の追加の機能強化は予定されていません。 Azure AD Graph API の使用が適切なシナリオの数は非常に限られています。詳しくは、Office デベロッパー センターのブログ投稿「[Microsoft Graph or the Azure AD Graph (Microsoft Graph または Azure AD Graph)](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph)」をご覧ください。
 
 Node.js アプリケーションで AAD に対して認証を行い、AAD によって保護された Web リソースにアクセスするには、[Azure Active Directory Authentication Library (ADAL) for Node.js](https://www.npmjs.com/package/adal-node) を使用します。
 
