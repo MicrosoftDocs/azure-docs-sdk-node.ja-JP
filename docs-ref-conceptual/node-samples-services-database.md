@@ -1,18 +1,18 @@
 ---
-title: "Node.js を使用した Azure データベースのサンプル コード"
-description: "Node.js で Azure データベースを使用する方法を示すサンプル コード。"
+title: Node.js を使用した Azure データベースのサンプル コード
+description: Node.js で Azure データベースを使用する方法を示すサンプル コード。
 author: craigshoemaker
 manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
-ms.date: 06/17/2017
+ms.date: 03/20/2018
 ms.author: cshoe
-ms.openlocfilehash: f721bb1c4d8a84009b850c52cb26eeb0a16abca9
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 4fe35379c00bb321aa91cf36f8bf749d23120a2d
+ms.sourcegitcommit: 178734fbd3784ade4d8bdb5141be6d7ca7e017f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="azure-databases-with-nodejs-code-samples"></a>Node.js を使用した Azure データベースのサンプル コード
 
@@ -24,10 +24,7 @@ ms.lasthandoff: 01/26/2018
 |---|---|
 | **Cosmos DB** ||
 | [Azure Cosmos DB と Graph API を使用する](https://azure.microsoft.com/resources/samples/azure-cosmos-db-graph-nodejs-getting-started/) | Node.js アプリケーションから Azure Cosmos DB と Graph API を使用してデータを格納する方法やデータにアクセスする方法について説明します。 |
-| [Azure Cosmos DB と DocumentDB API を使用する](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-nodejs-getting-started/) | Node.js アプリケーションから Azure Cosmos DB と DocumentDB API を使用してデータを格納する方法やデータにアクセスする方法について説明します。 |
-| **DocumentDB** ||
-| [DocumentDB を使用した Node.js および Express での Web アプリケーション開発](https://azure.microsoft.com/resources/samples/documentdb-node-todo-app/) | Azure 上の Node.js Express アプリケーションから Azure DocumentDB を使用してデータを格納する方法やデータにアクセスする方法について説明します。 |
-| [DocumentDB を使用した Node.js コンソール アプリの開発](https://azure.microsoft.com/resources/samples/documentdb-node-getting-started/) | このサンプルは、Microsoft Azure DocumentDB サービスと Node.js の基本的な操作を短時間で身に付けることができるように作られています。 |
+| [Azure Cosmos DB SQL API を使用する](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-nodejs-getting-started/) | Node.js アプリケーションから Azure Cosmos DB と SQL API を使用してデータを格納する方法やデータにアクセスする方法について説明します。 |
 | **MongoDB** ||
 | [Azure における Node.js と MongoDB Web アプリ](https://azure.microsoft.com/resources/samples/meanjs/) | 「[Azure で Node.js と MongoDB Web アプリを構築する](http://docs.microsoft.com/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app?toc=/azure/node/toc.json&bc=/azure/node/toc.json)」のチュートリアルに沿って利用できるサンプル アプリケーションです。 |
 | **SQL Database** ||
