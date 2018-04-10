@@ -1,6 +1,6 @@
 ---
-title: "その他の Node.js 用 Azure モジュール"
-description: "その他の Node.js 用 Azure モジュールのリファレンス"
+title: その他の Node.js 用 Azure モジュール
+description: その他の Node.js 用 Azure モジュールのリファレンス
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -10,13 +10,13 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Other
-ms.openlocfilehash: 29a89faa57d295a3e157732efd612008b604fcdc
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: c3947dfa957596876f1b7a900867e43a497c0609
+ms.sourcegitcommit: c130d1e69ff1f4a7a857c0067e953309548b3dba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="azure-other-modules-for-nodejs"></a>その他の Node.js 用 Azure モジュール
+# <a name="other-modules-for-azure-nodejs"></a>Azure Node.js のその他のモジュール
 
 このモジュールは、ばらばらに存在する Azure Node.js モジュールをすべて 1 か所にまとめたものです。
 
