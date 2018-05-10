@@ -1,4 +1,4 @@
 | | |
 |---|---|
-| <span data-ttu-id="53900-101">**仮想マシンの管理**</span><span class="sxs-lookup"><span data-stu-id="53900-101">**Virtual machine management**</span></span> ||
-| [<span data-ttu-id="53900-102">Node.js による Azure 仮想マシン管理のサンプル</span><span class="sxs-lookup"><span data-stu-id="53900-102">Azure virtual machines management sample with Node.js</span></span>](https://github.com/Azure-Samples/storage-blob-node-getting-started) | <span data-ttu-id="53900-103">仮想マシンの作成、リスト、再起動、削除の方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="53900-103">Demonstrates how to create, list, restart, and delete virtual machines.</span></span> |
+| <span data-ttu-id="28ea1-101">**仮想マシンの管理**</span><span class="sxs-lookup"><span data-stu-id="28ea1-101">**Virtual machine management**</span></span> ||
+| [<span data-ttu-id="28ea1-102">Node.js による Azure 仮想マシン管理のサンプル</span><span class="sxs-lookup"><span data-stu-id="28ea1-102">Azure virtual machines management sample with Node.js</span></span>](https://github.com/Azure-Samples/compute-node-manage-vm) | <span data-ttu-id="28ea1-103">仮想マシンの作成、リスト、再起動、削除の方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="28ea1-103">Demonstrates how to create, list, restart, and delete virtual machines.</span></span> |
