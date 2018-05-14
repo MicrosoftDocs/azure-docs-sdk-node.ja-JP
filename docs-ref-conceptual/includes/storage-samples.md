@@ -1,5 +1,5 @@
 
-* [<span data-ttu-id="b9894-101">Node.js での Azure Blob service の概要</span><span class="sxs-lookup"><span data-stu-id="b9894-101">Getting Started with Azure Blob Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-blob-node-getting-started/)
-* [<span data-ttu-id="b9894-102">Node.js での Azure File サービスの概要</span><span class="sxs-lookup"><span data-stu-id="b9894-102">Getting Started with Azure File Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-file-node-getting-started/)
-* [<span data-ttu-id="b9894-103">Node.js での Azure Queue サービスの概要</span><span class="sxs-lookup"><span data-stu-id="b9894-103">Getting Started with Azure Queue Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-queue-node-getting-started/)
-* [<span data-ttu-id="b9894-104">Node.js での Azure Table service の概要</span><span class="sxs-lookup"><span data-stu-id="b9894-104">Getting Started with Azure Table Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-table-node-getting-started/)
+* [Node.js での Azure Blob service の概要](https://azure.microsoft.com/resources/samples/storage-blob-node-getting-started/)
+* [Node.js での Azure File サービスの概要](https://azure.microsoft.com/resources/samples/storage-file-node-getting-started/)
+* [Node.js での Azure Queue サービスの概要](https://azure.microsoft.com/resources/samples/storage-queue-node-getting-started/)
+* [Node.js での Azure Table service の概要](https://azure.microsoft.com/resources/samples/storage-table-node-getting-started/)

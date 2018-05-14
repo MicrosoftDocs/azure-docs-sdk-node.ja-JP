@@ -1,5 +1,5 @@
 | | |
 |---|---|
-| <span data-ttu-id="164d2-101">**Azure Active Directory**</span><span class="sxs-lookup"><span data-stu-id="164d2-101">**Azure Active Directory**</span></span> ||
-| [<span data-ttu-id="164d2-102">Azure AD を使用することによる Web API の保護</span><span class="sxs-lookup"><span data-stu-id="164d2-102">Securing a web API with Azure AD</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapi/) | <span data-ttu-id="164d2-103">Azure AD と OAuth 2.0 のアクセス トークンをセキュリティに使用した NodeJS Web API。</span><span class="sxs-lookup"><span data-stu-id="164d2-103">A NodeJS web API that is secured using Azure AD and OAuth 2.0 access tokens.</span></span> |
-| [<span data-ttu-id="164d2-104">NodeJS Web アプリケーションへの Azure AD の統合</span><span class="sxs-lookup"><span data-stu-id="164d2-104">Integrating Azure AD into a NodeJS web application</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) | <span data-ttu-id="164d2-105">Azure AD ユーザーを OpenID Connect で認証する NodeJS Web アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="164d2-105">A NodeJS web application that authenticates Azure AD users with OpenID Connect.</span></span> |
+| **Azure Active Directory** ||
+| [Azure AD を使用することによる Web API の保護](https://azure.microsoft.com/resources/samples/active-directory-node-webapi/) | Azure AD と OAuth 2.0 のアクセス トークンをセキュリティに使用した NodeJS Web API。 |
+| [NodeJS Web アプリケーションへの Azure AD の統合](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) | Azure AD ユーザーを OpenID Connect で認証する NodeJS Web アプリケーション。 |

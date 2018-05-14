@@ -1,3 +1,3 @@
 | | |
 |--|--|
-| [<span data-ttu-id="a19a0-101">PostgreSQL を使った Node.js コード スニペット</span><span class="sxs-lookup"><span data-stu-id="a19a0-101">Node.js code snippets using PostgreSQL</span></span>](https://www.npmjs.com/package/pg) | <span data-ttu-id="a19a0-102">プールの作成方法、クエリの実行方法、専用クライアントの取得方法などについて説明します。</span><span class="sxs-lookup"><span data-stu-id="a19a0-102">Learn how to create a pool, execute a query, obtain an exclusive client, and more.</span></span>
+| [PostgreSQL を使った Node.js コード スニペット](https://www.npmjs.com/package/pg) | プールの作成方法、クエリの実行方法、専用クライアントの取得方法などについて説明します。
