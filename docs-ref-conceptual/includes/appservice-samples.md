@@ -1,4 +1,4 @@
-- [Node.js バックエンド用の App Service Mobile の完全なクイックスタート](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)
-- [Node.js で Azure Websites を管理する](https://azure.microsoft.com/resources/samples/app-service-web-nodejs-manage/)
-- [Azure App Service に関する MEAN.js のサンプル](https://azure.microsoft.com/resources/samples/meanjs/)
-- [FoodTrucks - Azure App Service 用 Node API アプリ](https://azure.microsoft.com/resources/samples/app-service-api-node-food-trucks/)
+- [<span data-ttu-id="a14bf-101">Node.js バックエンド用の App Service Mobile の完全なクイックスタート</span><span class="sxs-lookup"><span data-stu-id="a14bf-101">App Service Mobile completed quickstart for Node.js backend</span></span>](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)
+- [<span data-ttu-id="a14bf-102">Node.js で Azure Websites を管理する</span><span class="sxs-lookup"><span data-stu-id="a14bf-102">Manage Azure websites with Node.js</span></span>](https://azure.microsoft.com/resources/samples/app-service-web-nodejs-manage/)
+- [<span data-ttu-id="a14bf-103">Azure App Service に関する MEAN.js のサンプル</span><span class="sxs-lookup"><span data-stu-id="a14bf-103">MEAN.js sample for Azure App Service</span></span>](https://azure.microsoft.com/resources/samples/meanjs/)
+- [<span data-ttu-id="a14bf-104">FoodTrucks - Azure App Service 用 Node API アプリ</span><span class="sxs-lookup"><span data-stu-id="a14bf-104">FoodTrucks - Node API App for Azure App Service</span></span>](https://azure.microsoft.com/resources/samples/app-service-api-node-food-trucks/)
