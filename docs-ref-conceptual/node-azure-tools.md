@@ -1,20 +1,20 @@
 ---
-title: "Azure の Node.js 開発者向けツール | Microsoft Docs"
-description: "Azure における Node.js 開発を目的とした各ツールをインストールします。"
+title: Azure の Node.js 開発者向けツール | Microsoft Docs
+description: Azure における Node.js 開発を目的とした各ツールをインストールします。
 services: multiple
-author: craigshoemaker
+author: rloutlaw
 manager: routlaw
 ms.service: azure-nodejs
 ms.tgt_pltfrm: na
 ms.devlang: nodejs
 ms.topic: article
 ms.date: 11/07/2017
-ms.author: cshoe
-ms.openlocfilehash: e9fe95ce6c02d50a70ea51284174c938796148fe
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.author: routlaw
+ms.openlocfilehash: 172cc3e1bff763cbf768dce5aa85065da0dd4927
+ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-tools-for-nodejs-developers"></a>Azure の Node.js 開発者向けツール
 Azure を使用して Node.js 上で開発を行う場合は、次のツールをお勧めします。
