@@ -1,20 +1,20 @@
 ---
-title: "Node.js 用 Azure IoT Hub モジュール"
-description: "Node.js 用 Azure IoT Hub モジュールのリファレンス"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Node.js 用 Azure IoT Hub モジュール
+description: Node.js 用 Azure IoT Hub モジュールのリファレンス
+author: dominicbetts
+ms.author: dobett
+manager: timlt
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
-ms.openlocfilehash: 66a0cad731d8e8dfd5cea64bdc910189a23fc6f0
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 77dd4c30da43af7cace048b43b7997fb1952abf1
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-iot-hub-modules-for-nodejs"></a>Node.js 用 Azure IoT Hub モジュール
 

@@ -1,20 +1,20 @@
 ---
-title: "Node.js 用 Azure HDInsight モジュール"
-description: "Node.js 用 Azure HDInsight モジュールのリファレンス"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Node.js 用 Azure HDInsight モジュール
+description: Node.js 用 Azure HDInsight モジュールのリファレンス
+author: mumian
+ms.author: jgao
+manager: cgronlun
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: HDInsight
-ms.openlocfilehash: 897ef2e3d2316a1f6f5637027ac2a2211c556f7a
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 311933f619ceab5d679c8b0a767d3b52960c5ce1
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-hdinsight-modules-for-nodejs"></a>Node.js 用 Azure HDInsight モジュール
 

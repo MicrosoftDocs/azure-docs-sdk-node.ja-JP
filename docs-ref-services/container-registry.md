@@ -1,20 +1,20 @@
 ---
-title: "Node.js 用 Azure Container Registry モジュール"
-description: "Node.js 用 Azure Container Registry モジュールのリファレンス"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Node.js 用 Azure Container Registry モジュール
+description: Node.js 用 Azure Container Registry モジュールのリファレンス
+author: mmacy
+ms.author: marsma
+manager: jeconnoc
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Container Registry
-ms.openlocfilehash: dda0e9bbfaa8a3e060f3b8f820d5bab315662629
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: ca83b97e94312498f4f93c587cf0c90485136841
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-container-registry-modules-for-nodejs"></a>Node.js 用 Azure Container Registry モジュール
 

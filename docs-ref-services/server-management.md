@@ -1,27 +1,27 @@
 ---
-title: "Node.js 用 Azure Server Management モジュール"
-description: "Node.js 用 Azure Server Management モジュールのリファレンス"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Node.js 用 Azure Server Management モジュール
+description: Node.js 用 Azure Server Management モジュールのリファレンス
+author: rloutlaw
+ms.author: ROutlaw
+manager: angrobe
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Server Management
-ms.openlocfilehash: a3ac75c82df92c8ab5b8177da40d47c102311bb6
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: bd9577bf758552227a98a81b756a81ce05239be2
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-server-management-modules-for-nodejs"></a>Node.js 用 Azure Server Management モジュール
 
 ノード、ゲートウェイ、セッション、PowerShell コマンド、PowerShell セッションは、Azure サーバー マネージャーで管理することができます。
 
 > [!WARNING]
-> この API は非推奨化され、今後は [Azure Resource Manager](/javascript/api/overview/azure/resources) の使用が推奨されるため、一部のサービスでは利用できない場合があります。
+> この API は非推奨となり、今後は [Azure Resource Manager](/javascript/api/overview/azure/resources) の使用が推奨されるため、一部のサービスでは利用できない場合があります。
 
 ## <a name="install-the-module-with-npm"></a>npm でモジュールをインストールする
 
