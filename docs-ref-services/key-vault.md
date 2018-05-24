@@ -1,40 +1,40 @@
 ---
-title: "Node.js 用 Azure Key Vault モジュール"
-description: "Node.js 用 Azure Key Vault モジュールのリファレンス"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Node.js 用 Azure Key Vault モジュール
+description: Node.js 用 Azure Key Vault モジュールのリファレンス
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Key Vault
-ms.openlocfilehash: aacc02088236ee5b6a941dfb266b9b198b04ad3a
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 72bf4bc5443618f5f1bb9b4d1bb4d905669ff8c8
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="azure-key-vault-modules-for-nodejs"></a><span data-ttu-id="33937-103">Node.js 用 Azure Key Vault モジュール</span><span class="sxs-lookup"><span data-stu-id="33937-103">Azure Key Vault modules for Node.js</span></span>
+# <a name="azure-key-vault-modules-for-nodejs"></a><span data-ttu-id="a9d3b-103">Node.js 用 Azure Key Vault モジュール</span><span class="sxs-lookup"><span data-stu-id="a9d3b-103">Azure Key Vault modules for Node.js</span></span>
 
-<span data-ttu-id="33937-104">Azure Key Vault は、クラウド アプリケーションやサービスで使用される暗号化キーとシークレットをセキュリティで保護するために役立ちます。</span><span class="sxs-lookup"><span data-stu-id="33937-104">Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services.</span></span> <span data-ttu-id="33937-105">Key Vault を使用すると、キーとシークレット (認証キー、ストレージ アカウント キー、データ暗号化キー、PFX ファイル、パスワードなど) をハードウェア セキュリティ モジュール (HSM) で保護されたキーを使用して暗号化できます。</span><span class="sxs-lookup"><span data-stu-id="33937-105">By using Key Vault, you can encrypt keys and secrets (such as authentication keys, storage account keys, data encryption keys, .PFX files, and passwords) by using keys that are protected by hardware security modules (HSMs).</span></span> <span data-ttu-id="33937-106">さらに安心感を高めたい場合には、HSM でキーのインポートや生成を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="33937-106">For added assurance, you can import or generate keys in HSMs.</span></span> <span data-ttu-id="33937-107">その場合、FIPS 140-2 Level 2 適合の HSM (ハードウェアおよびファームウェア) でマイクロソフトがお客様のキーを処理します。</span><span class="sxs-lookup"><span data-stu-id="33937-107">If you choose to do this, Microsoft processes your keys in FIPS 140-2 Level 2 validated HSMs (hardware and firmware).</span></span>
+<span data-ttu-id="a9d3b-104">Azure Key Vault は、クラウド アプリケーションやサービスで使用される暗号化キーとシークレットをセキュリティで保護するために役立ちます。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-104">Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services.</span></span> <span data-ttu-id="a9d3b-105">Key Vault を使用すると、キーとシークレット (認証キー、ストレージ アカウント キー、データ暗号化キー、PFX ファイル、パスワードなど) をハードウェア セキュリティ モジュール (HSM) で保護されたキーを使用して暗号化できます。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-105">By using Key Vault, you can encrypt keys and secrets (such as authentication keys, storage account keys, data encryption keys, .PFX files, and passwords) by using keys that are protected by hardware security modules (HSMs).</span></span> <span data-ttu-id="a9d3b-106">さらに安心感を高めたい場合には、HSM でキーのインポートや生成を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-106">For added assurance, you can import or generate keys in HSMs.</span></span> <span data-ttu-id="a9d3b-107">その場合、FIPS 140-2 Level 2 適合の HSM (ハードウェアおよびファームウェア) でマイクロソフトがお客様のキーを処理します。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-107">If you choose to do this, Microsoft processes your keys in FIPS 140-2 Level 2 validated HSMs (hardware and firmware).</span></span>
 
-<span data-ttu-id="33937-108">Key Vault は、キー管理プロセスを合理化し、データにアクセスして暗号化するキーの制御を維持できます。</span><span class="sxs-lookup"><span data-stu-id="33937-108">Key Vault streamlines the key management process and enables you to maintain control of keys that access and encrypt your data.</span></span> <span data-ttu-id="33937-109">開発者は、開発やテスト用のキーを数分で作成し、それらをシームレスに実稼働キーに移行できます。</span><span class="sxs-lookup"><span data-stu-id="33937-109">Developers can create keys for development and testing in minutes, and then seamlessly migrate them to production keys.</span></span> <span data-ttu-id="33937-110">セキュリティ管理者は、必要に応じて、キーに権限を付与する (取り消す) ことができます。</span><span class="sxs-lookup"><span data-stu-id="33937-110">Security administrators can grant (and revoke) permission to keys, as needed.</span></span>
+<span data-ttu-id="a9d3b-108">Key Vault は、キー管理プロセスを合理化し、データにアクセスして暗号化するキーの制御を維持できます。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-108">Key Vault streamlines the key management process and enables you to maintain control of keys that access and encrypt your data.</span></span> <span data-ttu-id="a9d3b-109">開発者は、開発やテスト用のキーを数分で作成し、それらをシームレスに実稼働キーに移行できます。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-109">Developers can create keys for development and testing in minutes, and then seamlessly migrate them to production keys.</span></span> <span data-ttu-id="a9d3b-110">セキュリティ管理者は、必要に応じて、キーに権限を付与する (取り消す) ことができます。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-110">Security administrators can grant (and revoke) permission to keys, as needed.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="33937-111">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="33937-111">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="a9d3b-111">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="a9d3b-111">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="33937-112">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="33937-112">Install the npm module</span></span> 
+### <a name="install-the-npm-module"></a><span data-ttu-id="a9d3b-112">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="a9d3b-112">Install the npm module</span></span> 
 
-<span data-ttu-id="33937-113">Azure Key Vault の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="33937-113">Install the Azure Key Vault npm module</span></span>
+<span data-ttu-id="a9d3b-113">Azure Key Vault の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-113">Install the Azure Key Vault npm module</span></span>
 
 ```bash
 npm install azure-arm-keyvault
 ```
 
-### <a name="example"></a><span data-ttu-id="33937-114">例</span><span class="sxs-lookup"><span data-stu-id="33937-114">Example</span></span>
+### <a name="example"></a><span data-ttu-id="a9d3b-114">例</span><span class="sxs-lookup"><span data-stu-id="a9d3b-114">Example</span></span>
 
-<span data-ttu-id="33937-115">この例では、Azure に新しい Key Vault サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="33937-115">This example creates a new Key Vault service in Azure.</span></span>
+<span data-ttu-id="a9d3b-115">この例では、Azure に新しい Key Vault サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-115">This example creates a new Key Vault service in Azure.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -75,10 +75,10 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="33937-116">サンプル</span><span class="sxs-lookup"><span data-stu-id="33937-116">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="a9d3b-116">サンプル</span><span class="sxs-lookup"><span data-stu-id="a9d3b-116">Samples</span></span>
 
-- [<span data-ttu-id="33937-117">Node.js を使用した Key Vault の概要</span><span class="sxs-lookup"><span data-stu-id="33937-117">Getting started with Key Vault in Node.js</span></span>](https://azure.microsoft.com/resources/samples/key-vault-node-getting-started/)
-- [<span data-ttu-id="33937-118">Azure のリソースとリソース グループを Node.js で管理する</span><span class="sxs-lookup"><span data-stu-id="33937-118">Manage Azure resources and resource groups with Node.js</span></span>](https://azure.microsoft.com/resources/samples/resource-manager-node-resources-and-groups/) 
-- [<span data-ttu-id="33937-119">NodeJS Web アプリケーションへの Azure AD の統合</span><span class="sxs-lookup"><span data-stu-id="33937-119">Integrating Azure AD into a NodeJS web application</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) 
+- [<span data-ttu-id="a9d3b-117">Node.js を使用した Key Vault の概要</span><span class="sxs-lookup"><span data-stu-id="a9d3b-117">Getting started with Key Vault in Node.js</span></span>](https://azure.microsoft.com/resources/samples/key-vault-node-getting-started/)
+- [<span data-ttu-id="a9d3b-118">Azure のリソースとリソース グループを Node.js で管理する</span><span class="sxs-lookup"><span data-stu-id="a9d3b-118">Manage Azure resources and resource groups with Node.js</span></span>](https://azure.microsoft.com/resources/samples/resource-manager-node-resources-and-groups/) 
+- [<span data-ttu-id="a9d3b-119">NodeJS Web アプリケーションへの Azure AD の統合</span><span class="sxs-lookup"><span data-stu-id="a9d3b-119">Integrating Azure AD into a NodeJS web application</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) 
 
-<span data-ttu-id="33937-120">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="33937-120">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="a9d3b-120">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="a9d3b-120">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

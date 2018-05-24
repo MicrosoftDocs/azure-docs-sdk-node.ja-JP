@@ -1,45 +1,45 @@
 ---
-title: "Node.js 用 Azure Advisor モジュール"
-description: "Node.js 用 Azure Advisor モジュールのリファレンス"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Node.js 用 Azure Advisor モジュール
+description: Node.js 用 Azure Advisor モジュールのリファレンス
+author: KumudD
+ms.author: kumud
+manager: jeconnoc
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Advisor
-ms.openlocfilehash: aad3b292c6304159f68a81270e671cd335c972ec
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 07b6369ef69343cc47cd38484ebb87d050264775
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="azure-advisor-modules-for-nodejs"></a><span data-ttu-id="cd1d1-103">Node.js 用 Azure Advisor モジュール</span><span class="sxs-lookup"><span data-stu-id="cd1d1-103">Azure Advisor modules for Node.js</span></span>
+# <a name="azure-advisor-modules-for-nodejs"></a><span data-ttu-id="d4d6d-103">Node.js 用 Azure Advisor モジュール</span><span class="sxs-lookup"><span data-stu-id="d4d6d-103">Azure Advisor modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="cd1d1-104">概要</span><span class="sxs-lookup"><span data-stu-id="cd1d1-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="d4d6d-104">概要</span><span class="sxs-lookup"><span data-stu-id="d4d6d-104">Overview</span></span>
 
-<span data-ttu-id="cd1d1-105">Azure Advisor は、ベスト プラクティスに従って Azure デプロイメントを最適化できるようにする、個人用に設定されたクラウド コンサルタントです。</span><span class="sxs-lookup"><span data-stu-id="cd1d1-105">Azure Advisor is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments.</span></span> <span data-ttu-id="cd1d1-106">Azure のリソースの構成と利用統計情報を分析し、Azure リソースの費用対効果、パフォーマンス、高可用性、セキュリティを向上させるために役立つソリューションを推奨します。</span><span class="sxs-lookup"><span data-stu-id="cd1d1-106">Advisor analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost effectiveness, performance, high availability, and security of your Azure resources.</span></span>
+<span data-ttu-id="d4d6d-105">Azure Advisor は、ベスト プラクティスに従って Azure デプロイメントを最適化できるようにする、個人用に設定されたクラウド コンサルタントです。</span><span class="sxs-lookup"><span data-stu-id="d4d6d-105">Azure Advisor is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments.</span></span> <span data-ttu-id="d4d6d-106">Azure のリソースの構成と利用統計情報を分析し、Azure リソースの費用対効果、パフォーマンス、高可用性、セキュリティを向上させるために役立つソリューションを推奨します。</span><span class="sxs-lookup"><span data-stu-id="d4d6d-106">Advisor analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost effectiveness, performance, high availability, and security of your Azure resources.</span></span>
 
-<span data-ttu-id="cd1d1-107">Advisor では、以下の項目を実行できます。</span><span class="sxs-lookup"><span data-stu-id="cd1d1-107">With Advisor, you can:</span></span>
-- <span data-ttu-id="cd1d1-108">先の見通しを持ち、処理が可能で、個人用に設定されたベスト プラクティスの推奨事項を取得する。</span><span class="sxs-lookup"><span data-stu-id="cd1d1-108">Get proactive, actionable, and personalized best practices recommendations.</span></span>
-- <span data-ttu-id="cd1d1-109">リソースのパフォーマンス、セキュリティ、および高可用性を向上させながら、総合的な Azure の支出を削減する機会を捉える。</span><span class="sxs-lookup"><span data-stu-id="cd1d1-109">Improve the performance, security, and high availability of your resources, as you identify opportunities to reduce your overall Azure spend.</span></span>
-- <span data-ttu-id="cd1d1-110">アクション提案をインラインで含めた推奨事項を取得する。</span><span class="sxs-lookup"><span data-stu-id="cd1d1-110">Get recommendations with proposed actions inline.</span></span>
+<span data-ttu-id="d4d6d-107">Advisor では、以下の項目を実行できます。</span><span class="sxs-lookup"><span data-stu-id="d4d6d-107">With Advisor, you can:</span></span>
+- <span data-ttu-id="d4d6d-108">先の見通しを持ち、処理が可能で、個人用に設定されたベスト プラクティスの推奨事項を取得する。</span><span class="sxs-lookup"><span data-stu-id="d4d6d-108">Get proactive, actionable, and personalized best practices recommendations.</span></span>
+- <span data-ttu-id="d4d6d-109">リソースのパフォーマンス、セキュリティ、および高可用性を向上させながら、総合的な Azure の支出を削減する機会を捉える。</span><span class="sxs-lookup"><span data-stu-id="d4d6d-109">Improve the performance, security, and high availability of your resources, as you identify opportunities to reduce your overall Azure spend.</span></span>
+- <span data-ttu-id="d4d6d-110">アクション提案をインラインで含めた推奨事項を取得する。</span><span class="sxs-lookup"><span data-stu-id="d4d6d-110">Get recommendations with proposed actions inline.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="cd1d1-111">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="cd1d1-111">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="d4d6d-111">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="d4d6d-111">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="cd1d1-112">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="cd1d1-112">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="d4d6d-112">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="d4d6d-112">Install the npm module</span></span>
 
-<span data-ttu-id="cd1d1-113">Azure Advisor の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="cd1d1-113">Install the Azure Advisor npm module</span></span>
+<span data-ttu-id="d4d6d-113">Azure Advisor の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="d4d6d-113">Install the Azure Advisor npm module</span></span>
 
 ```bash
 npm install azure-arm-advisor
 ```
 
-### <a name="example"></a><span data-ttu-id="cd1d1-114">例</span><span class="sxs-lookup"><span data-stu-id="cd1d1-114">Example</span></span>
+### <a name="example"></a><span data-ttu-id="d4d6d-114">例</span><span class="sxs-lookup"><span data-stu-id="d4d6d-114">Example</span></span>
 
-<span data-ttu-id="cd1d1-115">この例では、Azure Advisor からの推奨事項を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="cd1d1-115">This example displays the list of recommendations from Azure Advisor.</span></span>
+<span data-ttu-id="d4d6d-115">この例では、Azure Advisor からの推奨事項を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="d4d6d-115">This example displays the list of recommendations from Azure Advisor.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="cd1d1-116">サンプル</span><span class="sxs-lookup"><span data-stu-id="cd1d1-116">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="d4d6d-116">サンプル</span><span class="sxs-lookup"><span data-stu-id="d4d6d-116">Samples</span></span>
 
-<span data-ttu-id="cd1d1-117">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="cd1d1-117">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="d4d6d-117">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="d4d6d-117">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

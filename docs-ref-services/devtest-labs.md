@@ -1,38 +1,38 @@
 ---
-title: "Node.js 用 Azure DevTest Labs モジュール"
-description: "Node.js 用 Azure DevTest Labs モジュールのリファレンス"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Node.js 用 Azure DevTest Labs モジュール
+description: Node.js 用 Azure DevTest Labs モジュールのリファレンス
+author: craigcaseyMSFT
+ms.author: v-craic
+manager: v-laurab
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DevTest Labs
-ms.openlocfilehash: 7754280741c09d47e138518d33628c667944c651
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 5bd010d26ca11f9909191f25128b9bdb89811fd5
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="azure-devtest-labs-modules-for-nodejs"></a><span data-ttu-id="e1348-103">Node.js 用 Azure DevTest Labs モジュール</span><span class="sxs-lookup"><span data-stu-id="e1348-103">Azure DevTest Labs modules for Node.js</span></span>
+# <a name="azure-devtest-labs-modules-for-nodejs"></a><span data-ttu-id="bc9e3-103">Node.js 用 Azure DevTest Labs モジュール</span><span class="sxs-lookup"><span data-stu-id="bc9e3-103">Azure DevTest Labs modules for Node.js</span></span>
 
-<span data-ttu-id="e1348-104">Azure DevTest Labs は、無駄を最小限に抑え、コストを管理しつつ、Azure で迅速に環境を作成するためのサポートを開発者とテスト担当者に提供するサービスです。</span><span class="sxs-lookup"><span data-stu-id="e1348-104">Azure DevTest Labs is a service that helps developers and testers quickly create environments in Azure while minimizing waste and controlling cost.</span></span> <span data-ttu-id="e1348-105">再利用可能なテンプレートとアーティファクトを使用して Windows と Linux の環境を迅速にプロビジョニングすることで、アプリケーションの最新バージョンをテストできます。</span><span class="sxs-lookup"><span data-stu-id="e1348-105">You can test the latest version of your application by quickly provisioning Windows and Linux environments using reusable templates and artifacts.</span></span> <span data-ttu-id="e1348-106">デプロイ パイプラインと DevTest ラボを簡単に統合し、オンデマンドの環境をプロビジョニングします。</span><span class="sxs-lookup"><span data-stu-id="e1348-106">Easily integrate your deployment pipeline with DevTest Labs to provision on-demand environments.</span></span> <span data-ttu-id="e1348-107">複数のテスト エージェントをプロビジョニングしてロード テストをスケール アップし、トレーニングおよびデモの事前プロビジョニング済み環境を作成します。</span><span class="sxs-lookup"><span data-stu-id="e1348-107">Scale up your load testing by provisioning multiple test agents, and create pre-provisioned environments for training and demos.</span></span>
+<span data-ttu-id="bc9e3-104">Azure DevTest Labs は、無駄を最小限に抑え、コストを管理しつつ、Azure で迅速に環境を作成するためのサポートを開発者とテスト担当者に提供するサービスです。</span><span class="sxs-lookup"><span data-stu-id="bc9e3-104">Azure DevTest Labs is a service that helps developers and testers quickly create environments in Azure while minimizing waste and controlling cost.</span></span> <span data-ttu-id="bc9e3-105">再利用可能なテンプレートとアーティファクトを使用して Windows と Linux の環境を迅速にプロビジョニングすることで、アプリケーションの最新バージョンをテストできます。</span><span class="sxs-lookup"><span data-stu-id="bc9e3-105">You can test the latest version of your application by quickly provisioning Windows and Linux environments using reusable templates and artifacts.</span></span> <span data-ttu-id="bc9e3-106">デプロイ パイプラインと DevTest ラボを簡単に統合し、オンデマンドの環境をプロビジョニングします。</span><span class="sxs-lookup"><span data-stu-id="bc9e3-106">Easily integrate your deployment pipeline with DevTest Labs to provision on-demand environments.</span></span> <span data-ttu-id="bc9e3-107">複数のテスト エージェントをプロビジョニングしてロード テストをスケール アップし、トレーニングおよびデモの事前プロビジョニング済み環境を作成します。</span><span class="sxs-lookup"><span data-stu-id="bc9e3-107">Scale up your load testing by provisioning multiple test agents, and create pre-provisioned environments for training and demos.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="e1348-108">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="e1348-108">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="bc9e3-108">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="bc9e3-108">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="e1348-109">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="e1348-109">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="bc9e3-109">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="bc9e3-109">Install the npm module</span></span>
 
-<span data-ttu-id="e1348-110">Azure DevTest Labs の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="e1348-110">Install the Azure DevTest Labs npm module</span></span>
+<span data-ttu-id="bc9e3-110">Azure DevTest Labs の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="bc9e3-110">Install the Azure DevTest Labs npm module</span></span>
 
 ```bash
 npm install azure-arm-devtestlabs
 ```
 
-### <a name="example"></a><span data-ttu-id="e1348-111">例</span><span class="sxs-lookup"><span data-stu-id="e1348-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="bc9e3-111">例</span><span class="sxs-lookup"><span data-stu-id="bc9e3-111">Example</span></span>
 
-<span data-ttu-id="e1348-112">この例では、ラボの詳細を取得して出力します。</span><span class="sxs-lookup"><span data-stu-id="e1348-112">This example gets and prints the details of a lab.</span></span>
+<span data-ttu-id="bc9e3-112">この例では、ラボの詳細を取得して出力します。</span><span class="sxs-lookup"><span data-stu-id="bc9e3-112">This example gets and prints the details of a lab.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure
 
 ```
 
-## <a name="samples"></a><span data-ttu-id="e1348-113">サンプル</span><span class="sxs-lookup"><span data-stu-id="e1348-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="bc9e3-113">サンプル</span><span class="sxs-lookup"><span data-stu-id="bc9e3-113">Samples</span></span>
 
-<span data-ttu-id="e1348-114">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="e1348-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="bc9e3-114">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="bc9e3-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
