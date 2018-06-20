@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260405"
 ---
 # <a name="azure-authorization-modules-for-nodejs"></a><span data-ttu-id="2fcf5-103">Node.js 用 Azure 承認モジュール</span><span class="sxs-lookup"><span data-stu-id="2fcf5-103">Azure Authorization modules for Node.js</span></span>
 

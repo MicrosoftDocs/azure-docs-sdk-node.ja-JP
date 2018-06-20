@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262219"
 ---
 # <a name="azure-dns-modules-for-nodejs"></a><span data-ttu-id="11f99-103">Node.js 用 Azure DNS モジュール</span><span class="sxs-lookup"><span data-stu-id="11f99-103">Azure DNS modules for Node.js</span></span>
 

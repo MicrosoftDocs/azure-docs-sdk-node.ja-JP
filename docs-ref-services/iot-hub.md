@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260325"
 ---
 # <a name="azure-iot-hub-modules-for-nodejs"></a><span data-ttu-id="5a77a-103">Node.js 用 Azure IoT Hub モジュール</span><span class="sxs-lookup"><span data-stu-id="5a77a-103">Azure IoT Hub modules for Node.js</span></span>
 

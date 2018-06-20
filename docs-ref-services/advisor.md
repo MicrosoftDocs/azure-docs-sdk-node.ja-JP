@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34266653"
 ---
 # <a name="azure-advisor-modules-for-nodejs"></a><span data-ttu-id="d4d6d-103">Node.js 用 Azure Advisor モジュール</span><span class="sxs-lookup"><span data-stu-id="d4d6d-103">Azure Advisor modules for Node.js</span></span>
 

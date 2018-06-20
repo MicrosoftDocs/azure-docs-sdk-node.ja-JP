@@ -1,6 +1,6 @@
 ---
-title: "Node.js の Azure Billing サンプル コード"
-description: "Node.js で Azure Billing の機能を追加する方法を示したサンプル コード。"
+title: Node.js の Azure Billing サンプル コード
+description: Node.js で Azure Billing の機能を追加する方法を示したサンプル コード。
 author: ityer
 manager: limorl
 ms.devlang: nodejs
@@ -13,6 +13,7 @@ ms.sourcegitcommit: 37edf026ed6d21abd1cf45a65b3b0329a8bdf18d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29781778"
 ---
 # <a name="azure-billing-with-nodejs-code-samples"></a><span data-ttu-id="66a0d-103">Node.js サンプル コードを使用した Azure Billing</span><span class="sxs-lookup"><span data-stu-id="66a0d-103">Azure Billing with Node.js code samples</span></span>
 

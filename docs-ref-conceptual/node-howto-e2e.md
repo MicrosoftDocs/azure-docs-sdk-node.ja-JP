@@ -1,6 +1,6 @@
 ---
-title: "Visual Studio Code と Azure での Node.js 開発"
-description: "Node.js アプリの作成、Docker 化、Azure へのデプロイの方法を紹介する完全なエンド ツー エンドのチュートリアル"
+title: Visual Studio Code と Azure での Node.js 開発
+description: Node.js アプリの作成、Docker 化、Azure へのデプロイの方法を紹介する完全なエンド ツー エンドのチュートリアル
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908142"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a><span data-ttu-id="934b8-103">Visual Studio Code と Azure での Node.js 開発</span><span class="sxs-lookup"><span data-stu-id="934b8-103">Node.js development with Visual Studio Code and Azure</span></span>
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 08/17/2017
 
 1. <span data-ttu-id="934b8-141">「`.js`」と入力すると、プロジェクトに含まれているすべての JavaScript/JSON ファイルが、各ファイルの親ディレクトリと共に表示されます。</span><span class="sxs-lookup"><span data-stu-id="934b8-141">Enter `.js` to display all the JavaScript/JSON files in the project along with each file's parent directory</span></span> 
 
-    ![すべての .js* ファイルを表示](./media/node-howto-e2e/git-output.png)
+    ![すべての .js\* ファイルを表示](./media/node-howto-e2e/git-output.png)
 
 1. <span data-ttu-id="934b8-143">`server.js` (アプリのスタートアップ スクリプト) を選択します。</span><span class="sxs-lookup"><span data-stu-id="934b8-143">Select `server.js`, which is the startup script for the app.</span></span> 
 

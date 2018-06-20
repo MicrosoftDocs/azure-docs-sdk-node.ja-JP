@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220584"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a><span data-ttu-id="e480d-103">Node.js 用 Azure モジュールの概要</span><span class="sxs-lookup"><span data-stu-id="e480d-103">Get started with the Azure modules for Node.js</span></span>
 

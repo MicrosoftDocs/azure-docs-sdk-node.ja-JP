@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220594"
 ---
 # <a name="tutorials-for-using-azure-databases-with-nodejs"></a><span data-ttu-id="4508f-103">Node.js で Azure データベースを使用するためのチュートリアル</span><span class="sxs-lookup"><span data-stu-id="4508f-103">Tutorials for using Azure databases with Node.js</span></span>
 

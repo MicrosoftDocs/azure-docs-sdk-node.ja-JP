@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259844"
 ---
 # <a name="azure-virtual-machine-modules-for-nodejs"></a><span data-ttu-id="c95dc-103">Node.js 用 Azure 仮想マシン モジュール</span><span class="sxs-lookup"><span data-stu-id="c95dc-103">Azure Virtual Machine Modules for Node.js</span></span>
 
