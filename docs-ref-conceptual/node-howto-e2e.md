@@ -1,6 +1,6 @@
 ---
-title: "Visual Studio Code と Azure での Node.js 開発"
-description: "Node.js アプリの作成、Docker 化、Azure へのデプロイの方法を紹介する完全なエンド ツー エンドのチュートリアル"
+title: Visual Studio Code と Azure での Node.js 開発
+description: Node.js アプリの作成、Docker 化、Azure へのデプロイの方法を紹介する完全なエンド ツー エンドのチュートリアル
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908142"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a>Visual Studio Code と Azure での Node.js 開発
 
