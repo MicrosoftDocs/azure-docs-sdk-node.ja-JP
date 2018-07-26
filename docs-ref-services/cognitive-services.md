@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7941d3850ef6c3518ff0ab13fe1b1ea239ab1828
+ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259971"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39188998"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>JavaScript Azure Cognitive Services モジュール
 
@@ -29,7 +29,7 @@ ms.locfileid: "34259971"
 - 成人向け/わいせつな描写に対する設定を適用すれば、アダルト コンテンツの自動制限を有効にできます。
 - 画像の種類や写真内の配色を特定します。
 
-お使いのブラウザーで無料の [Computer Vision を試す](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/)。
+お使いのブラウザーで無料の [Computer Vision を試す](https://azure.microsoft.com/services/cognitive-services/computer-vision/)。
 
 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) を使用して次の JavaScript モジュールを取得します。
 
@@ -55,7 +55,7 @@ Content Moderator サービスの[詳細](/azure/cognitive-services/content-mode
 
 写真に含まれる顔を検出、識別、分析、グループ化、タグ付けします。 
 
-お使いのブラウザーで [Face API を試す](https://azure.microsoft.com/en-us/services/cognitive-services/face/)。
+お使いのブラウザーで [Face API を試す](https://azure.microsoft.com/services/cognitive-services/face/)。
 
 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) を使用して次の JavaScript モジュールを取得します。
 
@@ -71,7 +71,7 @@ Face API の[詳細](/azure/cognitive-services/face/overview)を確認し、[Fac
 
 Bing Web Search API でインデックス設定された Web ドキュメントを取得し、結果の種類、新しさなどで結果を絞り込みます。 
 
-お使いのブラウザーで [Web Search API を試す](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/)。
+お使いのブラウザーで [Web Search API を試す](https://azure.microsoft.com/services/cognitive-services/bing-web-search-api/)。
 
 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) を使用して次の JavaScript モジュールを取得します。
 
@@ -85,7 +85,7 @@ Bing Web Search API の[詳細](/azure/cognitive-services/bing-web-search/overvi
 
 画像を検索し、検索結果として、サムネイル、完全な画像 URL、画像のメタデータなどを取得します。
 
-お使いのブラウザーで [Image Search API を試す](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/)。
+お使いのブラウザーで [Image Search API を試す](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/)。
 
 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) を使用して次の JavaScript モジュールを取得します。
 
@@ -162,7 +162,7 @@ Text Analytics API は、未加工のテキストに対する自然言語処理�
 - キー フレーズの抽出
 - 言語検出
 
-お使いのブラウザーで [Text Analytics API を試す](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/)。
+お使いのブラウザーで [Text Analytics API を試す](https://azure.microsoft.com/services/cognitive-services/text-analytics/)。
 
 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) を使用して次の JavaScript モジュールを取得します。
 
@@ -177,7 +177,7 @@ Text Analytics API の[詳細](/azure/cognitive-services/text-analytics/overview
 
 Bing Spell Check API を使用して、コンテキストに応じた文法およびスペル チェックを実行します。
 
-お使いのブラウザーで [Spell Check API を試す](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/)。
+お使いのブラウザーで [Spell Check API を試す](https://azure.microsoft.com/services/cognitive-services/spell-check/)。
 
 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) を使用して次の JavaScript モジュールを取得します。
 
