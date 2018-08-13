@@ -1,0 +1,1973 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b16d5be24895f7f28271d0eb61a0ee865cc50a6d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40065915"
+items:
+- uid: azure-arm-compute.Snapshots
+  name: Snapshots
+  fullName: Snapshots
+  children:
+  - azure-arm-compute.Snapshots.beginCreateOrUpdate
+  - azure-arm-compute.Snapshots.beginCreateOrUpdate_1
+  - azure-arm-compute.Snapshots.beginCreateOrUpdate_2
+  - azure-arm-compute.Snapshots.beginCreateOrUpdateWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.beginDeleteMethod
+  - azure-arm-compute.Snapshots.beginDeleteMethod_1
+  - azure-arm-compute.Snapshots.beginDeleteMethod_2
+  - azure-arm-compute.Snapshots.beginDeleteMethodWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.beginGrantAccess_1
+  - azure-arm-compute.Snapshots.beginGrantAccess_2
+  - azure-arm-compute.Snapshots.beginGrantAccess
+  - azure-arm-compute.Snapshots.beginGrantAccessWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.beginRevokeAccess
+  - azure-arm-compute.Snapshots.beginRevokeAccess_1
+  - azure-arm-compute.Snapshots.beginRevokeAccess_2
+  - azure-arm-compute.Snapshots.beginRevokeAccessWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.beginUpdate_1
+  - azure-arm-compute.Snapshots.beginUpdate
+  - azure-arm-compute.Snapshots.beginUpdate_2
+  - azure-arm-compute.Snapshots.beginUpdateWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.createOrUpdate
+  - azure-arm-compute.Snapshots.createOrUpdate_1
+  - azure-arm-compute.Snapshots.createOrUpdate_2
+  - azure-arm-compute.Snapshots.createOrUpdateWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.deleteMethod
+  - azure-arm-compute.Snapshots.deleteMethod_1
+  - azure-arm-compute.Snapshots.deleteMethod_2
+  - azure-arm-compute.Snapshots.deleteMethodWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.get
+  - azure-arm-compute.Snapshots.get_1
+  - azure-arm-compute.Snapshots.get_2
+  - azure-arm-compute.Snapshots.getWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.grantAccess
+  - azure-arm-compute.Snapshots.grantAccess_2
+  - azure-arm-compute.Snapshots.grantAccess_1
+  - azure-arm-compute.Snapshots.grantAccessWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.list
+  - azure-arm-compute.Snapshots.list_1
+  - azure-arm-compute.Snapshots.list_2
+  - azure-arm-compute.Snapshots.listByResourceGroup_1
+  - azure-arm-compute.Snapshots.listByResourceGroup_2
+  - azure-arm-compute.Snapshots.listByResourceGroup
+  - azure-arm-compute.Snapshots.listByResourceGroupNext
+  - azure-arm-compute.Snapshots.listByResourceGroupNext_1
+  - azure-arm-compute.Snapshots.listByResourceGroupNext_2
+  - azure-arm-compute.Snapshots.listByResourceGroupNextWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.listByResourceGroupWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.listNext_1
+  - azure-arm-compute.Snapshots.listNext_2
+  - azure-arm-compute.Snapshots.listNext
+  - azure-arm-compute.Snapshots.listNextWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.listWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.revokeAccess
+  - azure-arm-compute.Snapshots.revokeAccess_1
+  - azure-arm-compute.Snapshots.revokeAccess_2
+  - azure-arm-compute.Snapshots.revokeAccessWithHttpOperationResponse
+  - azure-arm-compute.Snapshots.update
+  - azure-arm-compute.Snapshots.update_1
+  - azure-arm-compute.Snapshots.update_2
+  - azure-arm-compute.Snapshots.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginCreateOrUpdate
+  name: beginCreateOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-101">作成またはスナップショットを更新します。</span><span class="sxs-lookup"><span data-stu-id="781ba-101">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-102">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-102">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-103">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-103">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-104">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-104">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-105">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-105">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-106">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-106">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: >
+        <span data-ttu-id="781ba-107">ディスクの Put 操作の本文に指定されているスナップショット オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="781ba-107">Snapshot object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginCreateOrUpdate_1
+  name: beginCreateOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-108">作成またはスナップショットを更新します。</span><span class="sxs-lookup"><span data-stu-id="781ba-108">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginCreateOrUpdate_2
+  name: beginCreateOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-109">作成またはスナップショットを更新します。</span><span class="sxs-lookup"><span data-stu-id="781ba-109">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options: function, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginCreateOrUpdateWithHttpOperationResponse
+  name: beginCreateOrUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-110">作成またはスナップショットを更新します。</span><span class="sxs-lookup"><span data-stu-id="781ba-110">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-111">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-111">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-112">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-112">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-113">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-113">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-114">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-114">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-115">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-115">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: >
+        <span data-ttu-id="781ba-116">ディスクの Put 操作の本文に指定されているスナップショット オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="781ba-116">Snapshot object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginDeleteMethod
+  name: beginDeleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-117">スナップショットを削除します。</span><span class="sxs-lookup"><span data-stu-id="781ba-117">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-118">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-118">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-119">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-119">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-120">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-120">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-121">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-121">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-122">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-122">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginDeleteMethod_1
+  name: beginDeleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-123">スナップショットを削除します。</span><span class="sxs-lookup"><span data-stu-id="781ba-123">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<OperationStatusResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.OperationStatusResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginDeleteMethod_2
+  name: beginDeleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-124">スナップショットを削除します。</span><span class="sxs-lookup"><span data-stu-id="781ba-124">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, snapshotName: string, options: function, callback: ServiceCallback<OperationStatusResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.OperationStatusResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginDeleteMethodWithHttpOperationResponse
+  name: beginDeleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-125">スナップショットを削除します。</span><span class="sxs-lookup"><span data-stu-id="781ba-125">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-126">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-126">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-127">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-127">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-128">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-128">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-129">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-129">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-130">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-130">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.OperationStatusResponse>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginGrantAccess_1
+  name: beginGrantAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-131">スナップショットへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="781ba-131">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginGrantAccess_2
+  name: beginGrantAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-132">スナップショットへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="781ba-132">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options: function, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginGrantAccess
+  name: beginGrantAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-133">スナップショットへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="781ba-133">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-134">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-134">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-135">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-135">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-136">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-136">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-137">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-137">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-138">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-138">The max name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="781ba-139">スナップショットの get アクセス操作の本文で指定したアクセス データのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="781ba-139">Access data object supplied in the body of the get snapshot access operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginGrantAccessWithHttpOperationResponse
+  name: beginGrantAccessWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-140">スナップショットへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="781ba-140">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginGrantAccessWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-141">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-141">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-142">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-142">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-143">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-143">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-144">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-144">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-145">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-145">The max name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="781ba-146">スナップショットの get アクセス操作の本文で指定したアクセス データのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="781ba-146">Access data object supplied in the body of the get snapshot access operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginRevokeAccess
+  name: beginRevokeAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-147">スナップショットへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="781ba-147">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-148">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-148">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-149">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-149">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-150">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-150">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-151">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-151">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-152">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-152">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginRevokeAccess_1
+  name: beginRevokeAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-153">スナップショットへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="781ba-153">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<OperationStatusResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.OperationStatusResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginRevokeAccess_2
+  name: beginRevokeAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-154">スナップショットへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="781ba-154">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, snapshotName: string, options: function, callback: ServiceCallback<OperationStatusResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.OperationStatusResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginRevokeAccessWithHttpOperationResponse
+  name: beginRevokeAccessWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-155">スナップショットへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="781ba-155">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function beginRevokeAccessWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-156">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-156">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-157">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-157">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-158">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-158">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-159">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-159">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-160">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-160">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.OperationStatusResponse>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginUpdate_1
+  name: beginUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-161">更新プログラム (修正プログラム) スナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-161">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginUpdate
+  name: beginUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-162">更新プログラム (修正プログラム) スナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-162">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-163">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-163">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-164">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-164">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-165">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-165">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-166">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-166">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-167">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-167">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: >
+        <span data-ttu-id="781ba-168">修正プログラムのスナップショットの操作の本文で指定されたオブジェクトのスナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-168">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginUpdate_2
+  name: beginUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-169">更新プログラム (修正プログラム) スナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-169">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options: function, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.beginUpdateWithHttpOperationResponse
+  name: beginUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-170">更新プログラム (修正プログラム) スナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-170">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-171">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-171">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-172">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-172">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-173">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-173">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-174">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-174">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-175">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-175">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: >
+        <span data-ttu-id="781ba-176">修正プログラムのスナップショットの操作の本文で指定されたオブジェクトのスナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-176">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.createOrUpdate
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-177">作成またはスナップショットを更新します。</span><span class="sxs-lookup"><span data-stu-id="781ba-177">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-178">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-178">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-179">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-179">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-180">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-180">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-181">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-181">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-182">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-182">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: >
+        <span data-ttu-id="781ba-183">ディスクの Put 操作の本文に指定されているスナップショット オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="781ba-183">Snapshot object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.createOrUpdate_1
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-184">作成またはスナップショットを更新します。</span><span class="sxs-lookup"><span data-stu-id="781ba-184">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.createOrUpdate_2
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-185">作成またはスナップショットを更新します。</span><span class="sxs-lookup"><span data-stu-id="781ba-185">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options: function, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-186">作成またはスナップショットを更新します。</span><span class="sxs-lookup"><span data-stu-id="781ba-186">Creates or updates a snapshot.</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-187">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-187">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-188">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-188">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-189">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-189">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-190">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-190">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-191">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-191">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.Snapshot
+      description: >
+        <span data-ttu-id="781ba-192">ディスクの Put 操作の本文に指定されているスナップショット オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="781ba-192">Snapshot object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-193">スナップショットを削除します。</span><span class="sxs-lookup"><span data-stu-id="781ba-193">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-194">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-194">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-195">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-195">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-196">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-196">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-197">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-197">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-198">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-198">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-199">スナップショットを削除します。</span><span class="sxs-lookup"><span data-stu-id="781ba-199">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<OperationStatusResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.OperationStatusResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-200">スナップショットを削除します。</span><span class="sxs-lookup"><span data-stu-id="781ba-200">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, snapshotName: string, options: function, callback: ServiceCallback<OperationStatusResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.OperationStatusResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-201">スナップショットを削除します。</span><span class="sxs-lookup"><span data-stu-id="781ba-201">Deletes a snapshot.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-202">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-202">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-203">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-203">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-204">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-204">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-205">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-205">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-206">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-206">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.OperationStatusResponse>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-207">スナップショットに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="781ba-207">Gets information about a snapshot.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-208">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-208">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-209">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-209">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-210">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-210">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-211">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-211">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-212">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-212">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-213">スナップショットに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="781ba-213">Gets information about a snapshot.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-214">スナップショットに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="781ba-214">Gets information about a snapshot.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, snapshotName: string, options: function, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-215">スナップショットに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="781ba-215">Gets information about a snapshot.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-216">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-216">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-217">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-217">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-218">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-218">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-219">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-219">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-220">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-220">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.grantAccess
+  name: grantAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-221">スナップショットへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="781ba-221">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-222">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-222">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-223">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-223">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-224">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-224">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-225">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-225">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-226">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-226">The max name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="781ba-227">スナップショットの get アクセス操作の本文で指定したアクセス データのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="781ba-227">Access data object supplied in the body of the get snapshot access operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.grantAccess_2
+  name: grantAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-228">スナップショットへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="781ba-228">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options: function, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.grantAccess_1
+  name: grantAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-229">スナップショットへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="781ba-229">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.grantAccessWithHttpOperationResponse
+  name: grantAccessWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-230">スナップショットへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="781ba-230">Grants access to a snapshot.</span></span>
+  syntax:
+    content: 'function grantAccessWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-231">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-231">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-232">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-232">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-233">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-233">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-234">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-234">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-235">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-235">The max name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="781ba-236">スナップショットの get アクセス操作の本文で指定したアクセス データのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="781ba-236">Access data object supplied in the body of the get snapshot access operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.list
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-237">サブスクリプションのスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-237">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function list(options?: function)'
+    parameters:
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.list_1
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-238">サブスクリプションのスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-238">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function list(callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.list_2
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-239">サブスクリプションのスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-239">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function list(options: function, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroup_1
+  name: listByResourceGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-240">リソース グループの下にスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-240">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroup_2
+  name: listByResourceGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-241">リソース グループの下にスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-241">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options: function, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroup
+  name: listByResourceGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-242">リソース グループの下にスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-242">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-243">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-243">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupNext
+  name: listByResourceGroupNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-244">リソース グループの下にスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-244">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-245">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="781ba-245">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupNext_1
+  name: listByResourceGroupNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-246">リソース グループの下にスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-246">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupNext_2
+  name: listByResourceGroupNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-247">リソース グループの下にスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-247">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: function, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupNextWithHttpOperationResponse
+  name: listByResourceGroupNextWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-248">リソース グループの下にスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-248">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-249">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="781ba-249">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listByResourceGroupWithHttpOperationResponse
+  name: listByResourceGroupWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-250">リソース グループの下にスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-250">Lists snapshots under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-251">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-251">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listNext_1
+  name: listNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-252">サブスクリプションのスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-252">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listNext_2
+  name: listNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-253">サブスクリプションのスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-253">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<SnapshotList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.SnapshotList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listNext
+  name: listNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-254">サブスクリプションのスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-254">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-255">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="781ba-255">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.SnapshotList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-256">サブスクリプションのスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-256">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-257">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="781ba-257">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-258">サブスクリプションのスナップショットを一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="781ba-258">Lists snapshots under a subscription.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(options?: function)'
+    parameters:
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.revokeAccess
+  name: revokeAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-259">スナップショットへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="781ba-259">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-260">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-260">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-261">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-261">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-262">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-262">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-263">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-263">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-264">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-264">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.revokeAccess_1
+  name: revokeAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-265">スナップショットへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="781ba-265">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<OperationStatusResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.OperationStatusResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.revokeAccess_2
+  name: revokeAccess
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-266">スナップショットへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="781ba-266">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, snapshotName: string, options: function, callback: ServiceCallback<OperationStatusResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.OperationStatusResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.OperationStatusResponse>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.revokeAccessWithHttpOperationResponse
+  name: revokeAccessWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-267">スナップショットへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="781ba-267">Revokes access to a snapshot.</span></span>
+  syntax:
+    content: 'function revokeAccessWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-268">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-268">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-269">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-269">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-270">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-270">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-271">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-271">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-272">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-272">The max name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.OperationStatusResponse>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-273">更新プログラム (修正プログラム) スナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-273">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-274">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-274">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-275">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-275">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-276">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-276">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-277">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-277">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-278">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-278">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: >
+        <span data-ttu-id="781ba-279">修正プログラムのスナップショットの操作の本文で指定されたオブジェクトのスナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-279">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.update_1
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-280">更新プログラム (修正プログラム) スナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-280">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.update_2
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-281">更新プログラム (修正プログラム) スナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-281">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options: function, callback: ServiceCallback<Snapshot>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: snapshotName
+      type:
+      - string
+      description: ''
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Snapshot>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Snapshot>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Snapshots.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="781ba-282">更新プログラム (修正プログラム) スナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-282">Updates (patches) a snapshot.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-283">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-283">The name of the resource group.</span></span>
+    - id: snapshotName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="781ba-284">作成されるスナップショットの名前。</span><span class="sxs-lookup"><span data-stu-id="781ba-284">The name of the snapshot that is being created.</span></span>
+
+        <span data-ttu-id="781ba-285">スナップショットを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="781ba-285">The name can't be changed after the snapshot is created.</span></span> <span data-ttu-id="781ba-286">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="781ba-286">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="781ba-287">最大名の長さは 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="781ba-287">The max name length is 80 characters.</span></span>
+    - id: snapshot
+      type:
+      - azure-arm-compute.SnapshotUpdate
+      description: >
+        <span data-ttu-id="781ba-288">修正プログラムのスナップショットの操作の本文で指定されたオブジェクトのスナップショット。</span><span class="sxs-lookup"><span data-stu-id="781ba-288">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  package: azure-arm-compute
+references:
+- uid: azure-arm-compute.Snapshot
+  spec.typeScript:
+  - name: Snapshot
+    fullName: Snapshot
+    uid: azure-arm-compute.Snapshot
+- uid: Promise<azure-arm-compute.Snapshot>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Snapshot
+    fullName: Snapshot
+    uid: azure-arm-compute.Snapshot
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.Snapshot>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Snapshot
+    fullName: Snapshot
+    uid: azure-arm-compute.Snapshot
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.Snapshot>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Snapshot
+    fullName: Snapshot
+    uid: azure-arm-compute.Snapshot
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-compute.OperationStatusResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: OperationStatusResponse
+    fullName: OperationStatusResponse
+    uid: azure-arm-compute.OperationStatusResponse
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.OperationStatusResponse>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: OperationStatusResponse
+    fullName: OperationStatusResponse
+    uid: azure-arm-compute.OperationStatusResponse
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.OperationStatusResponse>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: OperationStatusResponse
+    fullName: OperationStatusResponse
+    uid: azure-arm-compute.OperationStatusResponse
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-compute.GrantAccessData
+  spec.typeScript:
+  - name: GrantAccessData
+    fullName: GrantAccessData
+    uid: azure-arm-compute.GrantAccessData
+- uid: Promise<azure-arm-compute.AccessUri>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.AccessUri>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-compute.SnapshotUpdate
+  spec.typeScript:
+  - name: SnapshotUpdate
+    fullName: SnapshotUpdate
+    uid: azure-arm-compute.SnapshotUpdate
+- uid: Promise<azure-arm-compute.SnapshotList>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: SnapshotList
+    fullName: SnapshotList
+    uid: azure-arm-compute.SnapshotList
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.SnapshotList>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: SnapshotList
+    fullName: SnapshotList
+    uid: azure-arm-compute.SnapshotList
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.SnapshotList>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: SnapshotList
+    fullName: SnapshotList
+    uid: azure-arm-compute.SnapshotList
+  - name: '>>'
+    fullName: '>>'

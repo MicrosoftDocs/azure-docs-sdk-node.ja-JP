@@ -1,0 +1,403 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 93c9390372163dce12b8539afbad4c7434f676d1
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40065079"
+items:
+- uid: ms-rest.ServiceClient
+  id: ms-rest.ServiceClient
+  name: ServiceClient
+  summary: <span data-ttu-id="c7ef1-101">ServiceClient クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-101">Initializes a new instance of the ServiceClient class.</span></span>
+  fullName: ms-rest.ServiceClient
+  type: Class
+  children:
+  - ms-rest.ServiceClient.#ctor
+  - ms-rest.ServiceClient#addFilter
+  - ms-rest.ServiceClient#sendRequest
+  - ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  - ms-rest.ServiceClient#addUserAgentInfo
+  - ms-rest.ServiceClient#getPackageJsonInfo
+  langs:
+  - js
+- id: ms-rest.ServiceClient.#ctor
+  uid: ms-rest.ServiceClient.#ctor
+  parent: ms-rest.ServiceClient
+  name: ServiceClient(credentials, options)
+  fullName: ms-rest.ServiceClient.ServiceClient(credentials, options)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - object
+      description: <span data-ttu-id="c7ef1-102">BasicAuthenticationCredentials または TokenCredentials オブジェクトの認証に使用します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-102">BasicAuthenticationCredentials or TokenCredentials object used for authentication.</span></span>
+      optional: true
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="c7ef1-103">パラメーターのオプション</span><span class="sxs-lookup"><span data-stu-id="c7ef1-103">The parameter options</span></span>
+      optional: true
+    - id: options.filters
+      type:
+      - Array
+      description: <span data-ttu-id="c7ef1-104">要求パイプラインに追加するフィルター</span><span class="sxs-lookup"><span data-stu-id="c7ef1-104">Filters to be added to the request pipeline</span></span>
+      optional: true
+    - id: options.requestOptions
+      type:
+      - object
+      description: <span data-ttu-id="c7ef1-105">要求オブジェクトのオプション[オプションのドキュメント](https://github.com/request/request#requestoptions-callback)</span><span class="sxs-lookup"><span data-stu-id="c7ef1-105">Options for the request object [Options doc](https://github.com/request/request#requestoptions-callback)</span></span>
+      optional: true
+    - id: options.noRetryPolicy
+      type:
+      - undefinedbool
+      description: <span data-ttu-id="c7ef1-106">場合に true,、既定の再試行ポリシーをオフに設定します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-106">If set to true, turn off default retry policy</span></span>
+      optional: true
+    - id: options.rpRegistrationRetryTimeout
+      type:
+      - number
+      description: <span data-ttu-id="c7ef1-107">AutomaticRPRegistration を秒単位での再試行タイムアウト。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-107">The retry timeout in seconds for AutomaticRPRegistration.</span></span> <span data-ttu-id="c7ef1-108">既定値は 30 です。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-108">Default value is 30.</span></span>
+      optional: true
+    content: new ServiceClient(credentials, options)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#addFilter
+  id: ms-rest.ServiceClient#addFilter
+  parent: ms-rest.ServiceClient
+  name: addFilter(filter)
+  summary: >-
+    <span data-ttu-id="c7ef1-109">フィルター処理操作をこの ServiceClient に関連付けます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-109">Associate a filtering operation with this ServiceClient.</span></span> <span data-ttu-id="c7ef1-110">フィルター操作には、ログや自動的な再試行などが含まれる場合があります。フィルター操作は、関数シグネチャ。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-110">Filtering operations can include logging, automatically retrying, etc. Filter operations are functions the signature:</span></span>
+
+        "function (requestOptions, next, callback)".
+
+    <span data-ttu-id="c7ef1-111">要求オプションに対するプリプロセスを行った後、は、メソッドを呼び出し、現在のオプションと次のシグネチャのコールバックを"next"を渡す必要があります。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-111">After doing its preprocessing on the request options, the method needs to call "next" passing the current options and a callback with the following signature:</span></span>
+
+        "function (error, result, response, body)"
+
+    <span data-ttu-id="c7ef1-112">このコールバックで、および結果または応答を処理した後は、他のフィルター処理を続行するコールバックに渡された元の呼び出しをサービス呼び出しの完了コールバック必要があります。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-112">In this callback, and after processing the result or response, the callback needs invoke the original passed in callback to continue processing other filters and finish up the service invocation.</span></span>
+  fullName: ms-rest.ServiceClient.addFilter(filter)
+  type: Function
+  syntax:
+    parameters:
+    - id: filter
+      type:
+      - function
+      description: <span data-ttu-id="c7ef1-113">新しいフィルター オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-113">The new filter object.</span></span>
+    return:
+      type:
+      - ms-rest.QueueService
+      description: <span data-ttu-id="c7ef1-114">フィルターが適用された新しいサービスのクライアント。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-114">A new service client with the filter applied.</span></span>
+    content: function addFilter(filter)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#sendRequest
+  id: ms-rest.ServiceClient#sendRequest
+  parent: ms-rest.ServiceClient
+  name: sendRequest(options, optionalCallback)
+  summary: <span data-ttu-id="c7ef1-115">要求を送信し、応答を返します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-115">Sends the request and returns the response.</span></span>
+  fullName: ms-rest.ServiceClient.sendRequest(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{result} - The parsed (JSON.parse()) responseBody.'
+    value: '{result} - The parsed (JSON.parse()) responseBody.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error}  - The error object.'
+    value: '{Error}  - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      - ms-rest.WebResource
+      description: <span data-ttu-id="c7ef1-116">要求を正常に送信するを指定する必要があります、要求オプション。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-116">The request options that should be provided to send a request successfully.</span></span> <span data-ttu-id="c7ef1-117">オプション オブジェクト (単純な json オブジェクト) または WebResource オブジェクトは、か、すべて要求を行うために必要なプロパティが設定されたられますことができます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-117">It can either be an options object (a simple json object) or the WebResource object with all the required properties set to make a request.</span></span>
+    - id: options.method
+      type:
+      - string
+      description: <span data-ttu-id="c7ef1-118">HTTP 要求メソッド。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-118">The HTTP request method.</span></span> <span data-ttu-id="c7ef1-119">有効な値は、'GET'、'PUT'、'ヘッド'、'DELETE'、'OPTIONS'、'POST'、'PATCH' には。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-119">Valid values are 'GET', 'PUT', 'HEAD', 'DELETE', 'OPTIONS', 'POST', 'PATCH'.</span></span>
+    - id: options.url
+      type:
+      - string
+      description: <span data-ttu-id="c7ef1-120">要求 url。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-120">The request url.</span></span> <span data-ttu-id="c7ef1-121">これは、その中のクエリ パラメーターがない可能性がありますもかまいません。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-121">It may or may not have query parameters in it.</span></span> <span data-ttu-id="c7ef1-122">'Url' を指定するか、オプションのオブジェクトに 'pathTemplate' を指定します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-122">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="c7ef1-123">どちらのオプションは相互に排他的です。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-123">Both the options are mutually exclusive.</span></span>
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"c7ef1-124\">'Key' が、' クエリのパラメーター名 'と 'value'、url に付加するクエリ パラメーターの辞書は、' クエリ パラメーターの値' です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-124\">A dictionary of query parameters to be appended to the url, where the 'key' is the 'query-parameter-name' and the 'value' is the 'query-parameter-value'.</span></span> <span data-ttu-id=\"c7ef1-125\">型は 'string'、' クエリ パラメーターの値 ' 指定できますか、'object' 型のことができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-125\">The 'query-parameter-value' can be of type 'string' or it can be of type 'object'.</span></span> <span data-ttu-id=\"c7ef1-126\">Url エンコードをスキップする場合に、'object' の形式を使用してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-126\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"c7ef1-127\">オブジェクトの形式を使用しているときに、オブジェクトは、' クエリ パラメーターの値 ' を提供する値をという名前のプロパティが必要です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-127\">While using the object format, the object must have a property named value which provides the 'query-parameter-value'.</span></span>\n<span data-ttu-id=\"c7ef1-128\">例:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-128\">Example:</span></span> \n   - <span data-ttu-id=\"c7ef1-129\">クエリ パラメーターの値 'object' の形式: {'クエリ パラメーター名 ': {値:' クエリのパラメーターの値 '、skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-129\">query-parameter-value in 'object' format: { 'query-parameter-name': { value: 'query-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"c7ef1-130\">クエリ パラメーターの値 'string' の形式: {'クエリ パラメーター名 ':' クエリ パラメーター値 '}。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-130\">query-parameter-value in 'string' format: { 'query-parameter-name': 'query-parameter-value'}.</span></span>\n<span data-ttu-id=\"c7ef1-131\">注: ' options.url が既にいくつかのクエリ パラメーターとしている場合、options.queryParameters で指定された値は、url に追加されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-131\">Note: 'If options.url already has some query parameters, then the value provided in options.queryParameters will be appended to the url.</span></span>"
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="c7ef1-132">要求のパス テンプレートの url。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-132">The path template of the request url.</span></span> <span data-ttu-id="c7ef1-133">'Url' を指定するか、オプションのオブジェクトに 'pathTemplate' を指定します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-133">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="c7ef1-134">どちらのオプションは相互に排他的です。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-134">Both the options are mutually exclusive.</span></span>
+
+        <span data-ttu-id="c7ef1-135">例: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span><span class="sxs-lookup"><span data-stu-id="c7ef1-135">Example: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span></span>
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: "<span data-ttu-id=\"c7ef1-136\">要求のベース url。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-136\">The base url of the request.</span></span> <span data-ttu-id=\"c7ef1-137\">既定値: 'https://management.azure.com'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-137\">Default value is: 'https://management.azure.com'.</span></span> <span data-ttu-id=\"c7ef1-138\">これは、options.pathTemplate でのみ適用されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-138\">This is applicable only with options.pathTemplate.</span></span> <span data-ttu-id=\"c7ef1-139\">Options.url を提供する、完全な url を指定することが必要だ場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-139\">If you are providing options.url then it is expected that you provide the complete url.</span></span>"
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"c7ef1-140\">PathTemplate の実際の値に置き換える必要があるパス パラメーターのディクショナリ。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-140\">A dictionary of path parameters that need to be replaced with actual values in the pathTemplate.</span></span>\n<span data-ttu-id=\"c7ef1-141\">ここで、キー 'パス-パラメーターの名前' であり、値は、' パスのパラメーターの値 '。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-141\">Here the key is the 'path-parameter-name' and the value is the 'path-parameter-value'.</span></span> <span data-ttu-id=\"c7ef1-142\">'パス-パラメーター-値' は 'string' 型または 'object' 型のことができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-142\">The 'path-parameter-value' can be of type 'string'  or it can be of type 'object'.</span></span>\n<span data-ttu-id=\"c7ef1-143\">Url エンコードをスキップする場合に、'object' の形式を使用してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-143\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"c7ef1-144\">オブジェクトの形式を使用しているときに、オブジェクトは、' パス パラメーターの値 ' を提供する値をという名前のプロパティが必要です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-144\">While using the object format, the object must have a property named value which provides the 'path-parameter-value'.</span></span>\n<span data-ttu-id=\"c7ef1-145\">例:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-145\">Example:</span></span> \n   - <span data-ttu-id=\"c7ef1-146\">'object' の形式でパスとパラメーターの値: {'パス パラメーター名 ': {値:' のパスとパラメーターの値 '、skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-146\">path-parameter-value in 'object' format: { 'path-parameter-name': { value: 'path-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"c7ef1-147\">'string' の形式でパスとパラメーターの値: {'パス パラメーター名 ':' パス-パラメーター-value'}。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-147\">path-parameter-value in 'string' format: { 'path-parameter-name': 'path-parameter-value' }.</span></span>"
+      optional: true
+    - id: options.formData
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="c7ef1-148">フォーム データ オブジェクトのキー値のペアのディクショナリ。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-148">A dictionary of key-value pairs for the formData object.</span></span>
+
+        <span data-ttu-id="c7ef1-149">場合は、予想される 'Content-type' に設定するのには 'アプリケーション/x-www-form-urlencoded' しで設定してください' マルチパート/フォーム データ 'を' Content-type ' ヘッダーが設定される他 options.headers オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-149">If the expected 'Content-Type' to be set is 'application/x-www-form-urlencoded' then please set it in the options.headers object else the 'Content-Type' header will be set to 'multipart/form-data'.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="c7ef1-150">要求ヘッダー、要求に適用する必要があるのディクショナリ。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-150">A dictionary of request headers that need to be applied to the request.</span></span>
+
+        <span data-ttu-id="c7ef1-151">ここで、キーは、' ヘッダーの名前 ' と、値は、' ヘッダー値 '。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-151">Here the key is the 'header-name' and the value is the 'header-value'.</span></span> <span data-ttu-id="c7ef1-152">ヘッダー値は、文字列型にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-152">The header-value MUST be of type string.</span></span>
+         - <span data-ttu-id="c7ef1-153">ContentType は、キー名で 'Content-type' として指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-153">ContentType must be provided with the key name as 'Content-Type'.</span></span> <span data-ttu-id="c7ef1-154">既定値 ' application/json;charset = utf-8 '。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-154">Default value 'application/json; charset=utf-8'.</span></span>
+         - <span data-ttu-id="c7ef1-155">'Transfer-encoding' に設定されている 'チャンク' 既定 'options.bodyIsStream' に設定されている場合は true。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-155">'Transfer-Encoding' is set to 'chunked' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="c7ef1-156">'Content-type' は、既定で 'options.bodyIsStream' が設定されている場合で、' アプリケーションまたはオクテット ストリーム ' に設定が true に設定します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-156">'Content-Type' is set to 'application/octet-stream' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="c7ef1-157">'ブラウザーの言語' 既定が 'EN-US' に設定されています。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-157">'accept-language' by default is set to 'en-US'</span></span>
+         - <span data-ttu-id="c7ef1-158">' x-ms-クライアント要求 id' 既定では、新しい Guid に設定されます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-158">'x-ms-client-request-id' by default is set to a new Guid.</span></span> <span data-ttu-id="c7ef1-159">True に options.disableClientRequestId に設定してください、要求の guid を生成できません。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-159">To not generate a guid for the request, please set options.disableClientRequestId to true</span></span>
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: <span data-ttu-id="c7ef1-160">True に設定する、新しい Guid() に設定されていない ' x-ms-クライアント要求 id' ヘッダーをクライアントに指示します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-160">When set to true, instructs the client to not set 'x-ms-client-request-id' header to a new Guid().</span></span>
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: <span data-ttu-id="c7ef1-161">要求本文。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-161">The request body.</span></span> <span data-ttu-id="c7ef1-162">任意の型のことができます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-162">It can be of any type.</span></span> <span data-ttu-id="c7ef1-163">このメソッドは、要求本文を JSON.stringify() になります。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-163">This method will JSON.stringify() the request body.</span></span>
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="c7ef1-164">要求本文をシリアル化する方法についてを説明します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-164">Provides information on how to serialize the request body.</span></span>
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="c7ef1-165">応答本文を逆シリアル化する方法についてを説明します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-165">Provides information on how to deserialize the response body.</span></span>
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: '<span data-ttu-id="c7ef1-166">ときに、このメソッドは true に設定は適用されません`JSON.stringify()`要求本文にします。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-166">When set to true, this method will not apply `JSON.stringify()` to the request body.</span></span> <span data-ttu-id="c7ef1-167">既定値: false。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-167">Default value: false.</span></span>'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: <span data-ttu-id="c7ef1-168">要求本文がストリーム (ファイルのアップロード シナリオに便利です) であるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-168">Indicates whether the request body is a stream (useful for file upload scenarios).</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="c7ef1-169">省略可能なコールバック。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-169">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        <span data-ttu-id="c7ef1-170">コールバックは、最後のパラメーターとして渡された場合その他のコールバックが約束を返しますそれを返します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-170">If a callback was passed as the last parameter then it returns the callback else returns a Promise.</span></span>
+
+            {function} optionalCallback(err, result, request, response)
+
+                         {Error}  err      - The Error object if an error occurred, null otherwise.
+
+                         {object} result   - The parsed (JSON.parse()) responseBody
+
+                         {object} request  - The HTTP Request object.
+
+                         {stream} response - The raw HTTP Response stream.
+
+            {Promise} A promise is returned.
+    content: function sendRequest(options, optionalCallback)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  id: ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  parent: ms-rest.ServiceClient
+  name: sendRequestWithHttpOperationResponse(options, optionalCallback)
+  summary: <span data-ttu-id="c7ef1-171">要求を送信し、応答を返します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-171">Sends the request and returns the response.</span></span>
+  fullName: ms-rest.ServiceClient.sendRequestWithHttpOperationResponse(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<T>} - The HttpOperationResponse which contains the raw request, response and the parsed (JSON.parse) response body'
+    value: '{HttpOperationResponse<T>} - The HttpOperationResponse which contains the raw request, response and the parsed (JSON.parse) response body'
+  - originalTitle: reject
+    title: reject
+    text: '{Error}  - The error object.'
+    value: '{Error}  - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      - ms-rest.WebResource
+      description: <span data-ttu-id="c7ef1-172">要求を正常に送信するを指定する必要があります、要求オプション。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-172">The request options that should be provided to send a request successfully.</span></span> <span data-ttu-id="c7ef1-173">オプション オブジェクト (単純な json オブジェクト) または WebResource オブジェクトは、か、すべて要求を行うために必要なプロパティが設定されたられますことができます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-173">It can either be an options object (a simple json object) or the WebResource object with all the required properties set to make a request.</span></span>
+    - id: options.method
+      type:
+      - string
+      description: <span data-ttu-id="c7ef1-174">HTTP 要求メソッド。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-174">The HTTP request method.</span></span> <span data-ttu-id="c7ef1-175">有効な値は、'GET'、'PUT'、'ヘッド'、'DELETE'、'OPTIONS'、'POST'、'PATCH' には。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-175">Valid values are 'GET', 'PUT', 'HEAD', 'DELETE', 'OPTIONS', 'POST', 'PATCH'.</span></span>
+    - id: options.url
+      type:
+      - string
+      description: <span data-ttu-id="c7ef1-176">要求 url。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-176">The request url.</span></span> <span data-ttu-id="c7ef1-177">これは、その中のクエリ パラメーターがない可能性がありますもかまいません。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-177">It may or may not have query parameters in it.</span></span> <span data-ttu-id="c7ef1-178">'Url' を指定するか、オプションのオブジェクトに 'pathTemplate' を指定します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-178">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="c7ef1-179">どちらのオプションは相互に排他的です。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-179">Both the options are mutually exclusive.</span></span>
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"c7ef1-180\">'Key' が、' クエリのパラメーター名 'と 'value'、url に付加するクエリ パラメーターの辞書は、' クエリ パラメーターの値' です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-180\">A dictionary of query parameters to be appended to the url, where the 'key' is the 'query-parameter-name' and the 'value' is the 'query-parameter-value'.</span></span> <span data-ttu-id=\"c7ef1-181\">型は 'string'、' クエリ パラメーターの値 ' 指定できますか、'object' 型のことができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-181\">The 'query-parameter-value' can be of type 'string' or it can be of type 'object'.</span></span> <span data-ttu-id=\"c7ef1-182\">Url エンコードをスキップする場合に、'object' の形式を使用してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-182\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"c7ef1-183\">オブジェクトの形式を使用しているときに、オブジェクトは、' クエリ パラメーターの値 ' を提供する値をという名前のプロパティが必要です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-183\">While using the object format, the object must have a property named value which provides the 'query-parameter-value'.</span></span>\n<span data-ttu-id=\"c7ef1-184\">例:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-184\">Example:</span></span> \n   - <span data-ttu-id=\"c7ef1-185\">クエリ パラメーターの値 'object' の形式: {'クエリ パラメーター名 ': {値:' クエリのパラメーターの値 '、skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-185\">query-parameter-value in 'object' format: { 'query-parameter-name': { value: 'query-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"c7ef1-186\">クエリ パラメーターの値 'string' の形式: {'クエリ パラメーター名 ':' クエリ パラメーター値 '}。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-186\">query-parameter-value in 'string' format: { 'query-parameter-name': 'query-parameter-value'}.</span></span>\n<span data-ttu-id=\"c7ef1-187\">注: ' options.url が既にいくつかのクエリ パラメーターとしている場合、options.queryParameters で指定された値は、url に追加されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-187\">Note: 'If options.url already has some query parameters, then the value provided in options.queryParameters will be appended to the url.</span></span>"
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="c7ef1-188">要求のパス テンプレートの url。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-188">The path template of the request url.</span></span> <span data-ttu-id="c7ef1-189">'Url' を指定するか、オプションのオブジェクトに 'pathTemplate' を指定します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-189">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="c7ef1-190">どちらのオプションは相互に排他的です。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-190">Both the options are mutually exclusive.</span></span>
+
+        <span data-ttu-id="c7ef1-191">例: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span><span class="sxs-lookup"><span data-stu-id="c7ef1-191">Example: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span></span>
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: "<span data-ttu-id=\"c7ef1-192\">要求のベース url。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-192\">The base url of the request.</span></span> <span data-ttu-id=\"c7ef1-193\">既定値: 'https://management.azure.com'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-193\">Default value is: 'https://management.azure.com'.</span></span> <span data-ttu-id=\"c7ef1-194\">これは、options.pathTemplate でのみ適用されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-194\">This is applicable only with options.pathTemplate.</span></span> <span data-ttu-id=\"c7ef1-195\">Options.url を提供する、完全な url を指定することが必要だ場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-195\">If you are providing options.url then it is expected that you provide the complete url.</span></span>"
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"c7ef1-196\">PathTemplate の実際の値に置き換える必要があるパス パラメーターのディクショナリ。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-196\">A dictionary of path parameters that need to be replaced with actual values in the pathTemplate.</span></span>\n<span data-ttu-id=\"c7ef1-197\">ここで、キー 'パス-パラメーターの名前' であり、値は、' パスのパラメーターの値 '。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-197\">Here the key is the 'path-parameter-name' and the value is the 'path-parameter-value'.</span></span> <span data-ttu-id=\"c7ef1-198\">'パス-パラメーター-値' は 'string' 型または 'object' 型のことができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-198\">The 'path-parameter-value' can be of type 'string'  or it can be of type 'object'.</span></span>\n<span data-ttu-id=\"c7ef1-199\">Url エンコードをスキップする場合に、'object' の形式を使用してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-199\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"c7ef1-200\">オブジェクトの形式を使用しているときに、オブジェクトは、' パス パラメーターの値 ' を提供する値をという名前のプロパティが必要です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-200\">While using the object format, the object must have a property named value which provides the 'path-parameter-value'.</span></span>\n<span data-ttu-id=\"c7ef1-201\">例:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-201\">Example:</span></span> \n   - <span data-ttu-id=\"c7ef1-202\">'object' の形式でパスとパラメーターの値: {'パス パラメーター名 ': {値:' のパスとパラメーターの値 '、skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-202\">path-parameter-value in 'object' format: { 'path-parameter-name': { value: 'path-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"c7ef1-203\">'string' の形式でパスとパラメーターの値: {'パス パラメーター名 ':' パス-パラメーター-value'}。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c7ef1-203\">path-parameter-value in 'string' format: { 'path-parameter-name': 'path-parameter-value' }.</span></span>"
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="c7ef1-204">要求ヘッダー、要求に適用する必要があるのディクショナリ。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-204">A dictionary of request headers that need to be applied to the request.</span></span>
+
+        <span data-ttu-id="c7ef1-205">ここで、キーは、' ヘッダーの名前 ' と、値は、' ヘッダー値 '。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-205">Here the key is the 'header-name' and the value is the 'header-value'.</span></span> <span data-ttu-id="c7ef1-206">ヘッダー値は、文字列型にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-206">The header-value MUST be of type string.</span></span>
+         - <span data-ttu-id="c7ef1-207">ContentType は、キー名で 'Content-type' として指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-207">ContentType must be provided with the key name as 'Content-Type'.</span></span> <span data-ttu-id="c7ef1-208">既定値 ' application/json;charset = utf-8 '。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-208">Default value 'application/json; charset=utf-8'.</span></span>
+         - <span data-ttu-id="c7ef1-209">'Transfer-encoding' に設定されている 'チャンク' 既定 'options.bodyIsStream' に設定されている場合は true。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-209">'Transfer-Encoding' is set to 'chunked' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="c7ef1-210">'Content-type' は、既定で 'options.bodyIsStream' が設定されている場合で、' アプリケーションまたはオクテット ストリーム ' に設定が true に設定します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-210">'Content-Type' is set to 'application/octet-stream' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="c7ef1-211">'ブラウザーの言語' 既定が 'EN-US' に設定されています。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-211">'accept-language' by default is set to 'en-US'</span></span>
+         - <span data-ttu-id="c7ef1-212">' x-ms-クライアント要求 id' 既定では、新しい Guid に設定されます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-212">'x-ms-client-request-id' by default is set to a new Guid.</span></span> <span data-ttu-id="c7ef1-213">True に options.disableClientRequestId に設定してください、要求の guid を生成できません。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-213">To not generate a guid for the request, please set options.disableClientRequestId to true</span></span>
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: <span data-ttu-id="c7ef1-214">True に設定する、新しい Guid() に設定されていない ' x-ms-クライアント要求 id' ヘッダーをクライアントに指示します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-214">When set to true, instructs the client to not set 'x-ms-client-request-id' header to a new Guid().</span></span>
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: <span data-ttu-id="c7ef1-215">要求本文。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-215">The request body.</span></span> <span data-ttu-id="c7ef1-216">任意の型のことができます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-216">It can be of any type.</span></span> <span data-ttu-id="c7ef1-217">このメソッドは、要求本文を JSON.stringify() になります。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-217">This method will JSON.stringify() the request body.</span></span>
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: <span data-ttu-id="c7ef1-218">要求本文。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-218">The request body.</span></span> <span data-ttu-id="c7ef1-219">任意の型のことができます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-219">It can be of any type.</span></span> <span data-ttu-id="c7ef1-220">このメソッドは、要求本文を JSON.stringify() になります。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-220">This method will JSON.stringify() the request body.</span></span>
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="c7ef1-221">要求本文をシリアル化する方法についてを説明します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-221">Provides information on how to serialize the request body.</span></span>
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="c7ef1-222">応答本文を逆シリアル化する方法についてを説明します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-222">Provides information on how to deserialize the response body.</span></span>
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: '<span data-ttu-id="c7ef1-223">ときに、このメソッドは true に設定は適用されません`JSON.stringify()`要求本文にします。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-223">When set to true, this method will not apply `JSON.stringify()` to the request body.</span></span> <span data-ttu-id="c7ef1-224">既定値: false。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-224">Default value: false.</span></span>'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: <span data-ttu-id="c7ef1-225">要求本文がストリーム (ファイルのアップロード シナリオに便利です) であるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-225">Indicates whether the request body is a stream (useful for file upload scenarios).</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="c7ef1-226">省略可能なコールバック。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-226">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise
+      description: <span data-ttu-id="c7ef1-227">Promise が返されます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-227">A promise is returned.</span></span>
+    content: function sendRequestWithHttpOperationResponse(options, optionalCallback)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#addUserAgentInfo
+  id: ms-rest.ServiceClient#addUserAgentInfo
+  parent: ms-rest.ServiceClient
+  name: addUserAgentInfo(additionalUserAgentInfo)
+  summary: <span data-ttu-id="c7ef1-228">ユーザー エージェント ヘッダーをカスタム情報を追加します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-228">Adds custom information to user agent header</span></span>
+  fullName: ms-rest.ServiceClient.addUserAgentInfo(additionalUserAgentInfo)
+  type: Function
+  syntax:
+    parameters:
+    - id: additionalUserAgentInfo
+      type:
+      - ms-rest.any
+      description: <span data-ttu-id="c7ef1-229">文字列としてのユーザー エージェント ヘッダーに追加する情報です。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-229">information to be added to user agent header, as string.</span></span>
+    content: function addUserAgentInfo(additionalUserAgentInfo)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#getPackageJsonInfo
+  id: ms-rest.ServiceClient#getPackageJsonInfo
+  parent: ms-rest.ServiceClient
+  name: getPackageJsonInfo(managementClientDir)
+  summary: >-
+    <span data-ttu-id="c7ef1-230">Package.json を azure nodejs の指定したパッケージの検索を試みます。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-230">Attempts to find package.json for the given azure nodejs package.</span></span>
+
+    <span data-ttu-id="c7ef1-231">場合、名前とバージョンを返しますがパッケージの読み取りでの package.json package.json が見つからない場合、既定値を返します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-231">If found, returns the name and version of the package by reading the package.json If package.json is not found, returns a default value.</span></span>
+  fullName: ms-rest.ServiceClient.getPackageJsonInfo(managementClientDir)
+  type: Function
+  syntax:
+    parameters:
+    - id: managementClientDir
+      type:
+      - string
+      description: <span data-ttu-id="c7ef1-232">特定の azure の管理クライアントのディレクトリを渡します。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-232">pass the directory of the specific azure management client.</span></span>
+    return:
+      type:
+      - object
+      description: <span data-ttu-id="c7ef1-233">packageJsonInfo -"name"と、目的のパッケージの「バージョン」。</span><span class="sxs-lookup"><span data-stu-id="c7ef1-233">packageJsonInfo - "name" and "version" of the desired package.</span></span>
+    content: function getPackageJsonInfo(managementClientDir)
+  langs:
+  - js
+references:
+- uid: ms-rest.WebResource
+  name: WebResource
+  fullName: ms-rest.WebResource
+  isExternal: false

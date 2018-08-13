@@ -1,0 +1,175 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6372d6412f2080ab5989793a57c7477d2efb00b4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40067487"
+items:
+- uid: azure-event-processor-host.Lease
+  name: Lease
+  fullName: Lease
+  children:
+  - azure-event-processor-host.Lease.acquire
+  - azure-event-processor-host.Lease.getContent
+  - azure-event-processor-host.Lease.isHeld
+  - azure-event-processor-host.Lease.leaseId
+  - azure-event-processor-host.Lease.partitionId
+  - azure-event-processor-host.Lease.release
+  - azure-event-processor-host.Lease.renew
+  - azure-event-processor-host.Lease.updateContent
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="ee146-101">EventHub のコンシューマー グループ内の特定のパーティションの受信側でのデータのオフセットが受信したチェックポイントに使用するリースをについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ee146-101">Describes the lease used to checkpoint the offset of data received by a receiver for a given partition in a consumer group for an EventHub.</span></span>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.acquire
+  name: acquire
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ee146-102">リースを取得します。</span><span class="sxs-lookup"><span data-stu-id="ee146-102">Acquires the lease.</span></span>
+  syntax:
+    content: 'function acquire(options: any)'
+    parameters:
+    - id: options
+      type:
+      - any
+      description: <span data-ttu-id="ee146-103">リースを取得するに渡される必要がある任意のオプション。</span><span class="sxs-lookup"><span data-stu-id="ee146-103">Any options that need to be passed to acquire the lease.</span></span>
+    return:
+      type:
+      - Promise<azure-event-processor-host.Lease>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.getContent
+  name: getContent
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ee146-104">コンテンツを取得します。</span><span class="sxs-lookup"><span data-stu-id="ee146-104">Gets the content.</span></span>
+  syntax:
+    content: 'function getContent(options?: any)'
+    parameters:
+    - id: options
+      type:
+      - any
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<string>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.isHeld
+  name: isHeld
+  fullName: isHeld
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'isHeld: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.leaseId
+  name: leaseId
+  fullName: leaseId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'leaseId?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'partitionId?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.release
+  name: release
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ee146-105">リースを解放します。</span><span class="sxs-lookup"><span data-stu-id="ee146-105">Releases the lease.</span></span>
+  syntax:
+    content: 'function release(options: any)'
+    parameters:
+    - id: options
+      type:
+      - any
+      description: <span data-ttu-id="ee146-106">リースの解放に渡される必要がある任意のオプション。</span><span class="sxs-lookup"><span data-stu-id="ee146-106">Any options that need to be passed to release the lease.</span></span>
+    return:
+      type:
+      - Promise<azure-event-processor-host.Lease>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.renew
+  name: renew
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ee146-107">リースを更新します。</span><span class="sxs-lookup"><span data-stu-id="ee146-107">Renews the lease.</span></span>
+  syntax:
+    content: 'function renew(options: any)'
+    parameters:
+    - id: options
+      type:
+      - any
+      description: <span data-ttu-id="ee146-108">リースの更新に渡される必要がある任意のオプション。</span><span class="sxs-lookup"><span data-stu-id="ee146-108">Any options that need to be passed to renew the lease.</span></span>
+    return:
+      type:
+      - Promise<azure-event-processor-host.Lease>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.updateContent
+  name: updateContent
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ee146-109">コンテンツを更新します</span><span class="sxs-lookup"><span data-stu-id="ee146-109">Updates the content</span></span>
+  syntax:
+    content: 'function updateContent(text: string, options?: any)'
+    parameters:
+    - id: text
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - any
+      description: <span data-ttu-id="ee146-110">Blob コンテンツの更新に渡される必要がある任意のオプション。</span><span class="sxs-lookup"><span data-stu-id="ee146-110">Any options that need to be passed to update the blob content.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-processor-host.Lease>
+  package: azure-event-processor-host
+references:
+- uid: Promise<azure-event-processor-host.Lease>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Lease
+    fullName: Lease
+    uid: azure-event-processor-host.Lease
+  - name: '>'
+    fullName: '>'

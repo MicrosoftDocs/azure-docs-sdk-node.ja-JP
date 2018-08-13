@@ -1,0 +1,99 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 41beee5102e40014d0ca90c39273991e9755f373
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40065791"
+items:
+- uid: azure-iot-device.DeviceClientOptions
+  name: DeviceClientOptions
+  fullName: DeviceClientOptions
+  children:
+  - azure-iot-device.DeviceClientOptions.amqp
+  - azure-iot-device.DeviceClientOptions.ca
+  - azure-iot-device.DeviceClientOptions.http
+  - azure-iot-device.DeviceClientOptions.mqtt
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="306e3-101">クライアント オブジェクトのオプションです。</span><span class="sxs-lookup"><span data-stu-id="306e3-101">Options for the Client object.</span></span>  <span data-ttu-id="306e3-102">渡される、<xref:Client.setOptions>関数。</span><span class="sxs-lookup"><span data-stu-id="306e3-102">Passed into the <xref:Client.setOptions> function.</span></span>
+  extends:
+    name: X509
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceClientOptions.amqp
+  name: amqp
+  fullName: amqp
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="306e3-103">Mqtt トランスポートに固有のオプションを省略可能なオブジェクト</span><span class="sxs-lookup"><span data-stu-id="306e3-103">Optional object with options specific to the Mqtt transport</span></span>
+  optional: true
+  syntax:
+    content: 'amqp?: AmqpTransportOptions'
+    return:
+      type:
+      - azure-iot-device.AmqpTransportOptions
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceClientOptions.ca
+  name: ca
+  fullName: ca
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="306e3-104">ハブのサービスで使用されている証明機関の PEM 形式での公開証明書。</span><span class="sxs-lookup"><span data-stu-id="306e3-104">Public certificate in PEM form for certificate authority being used by the Hub service.</span></span>  <span data-ttu-id="306e3-105">これは、TLS 接続をセキュリティで保護するハブを使用している CA および、クライアントがハブの id を検証するために、このパブリック証明書を使用して接続を検証します。</span><span class="sxs-lookup"><span data-stu-id="306e3-105">This is the CA that the hub is using to secure TLS connections and the client validates the connection using this public cert in order to validate the identity of the hub.</span></span>  <span data-ttu-id="306e3-106">Azure データ センター内での Azure IoT Hub に接続する場合は、これを設定する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="306e3-106">If you are connecting to an Azure IoT Hub inside of an Azure data center, you do not need to set this.</span></span>  <span data-ttu-id="306e3-107">他のハブ (例: Edge ハブ) に接続する場合は、TLS のハブを使用しているサーバー証明書を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="306e3-107">If you are connecting to some other hub (e.g. an Edge Hub), then you may need to set this to the server cert that the hub uses for TLS.</span></span>'
+  optional: true
+  syntax:
+    content: 'ca?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceClientOptions.http
+  name: http
+  fullName: http
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="306e3-108">Mqtt トランスポートに固有のオプションを省略可能なオブジェクト</span><span class="sxs-lookup"><span data-stu-id="306e3-108">Optional object with options specific to the Mqtt transport</span></span>
+  optional: true
+  syntax:
+    content: 'http?: HttpTransportOptions'
+    return:
+      type:
+      - azure-iot-device.HttpTransportOptions
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceClientOptions.mqtt
+  name: mqtt
+  fullName: mqtt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="306e3-109">Mqtt トランスポートに固有のオプションを省略可能なオブジェクト</span><span class="sxs-lookup"><span data-stu-id="306e3-109">Optional object with options specific to the Mqtt transport</span></span>
+  optional: true
+  syntax:
+    content: 'mqtt?: MqttTransportOptions'
+    return:
+      type:
+      - azure-iot-device.MqttTransportOptions
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.AmqpTransportOptions
+  spec.typeScript:
+  - name: AmqpTransportOptions
+    fullName: AmqpTransportOptions
+    uid: azure-iot-device.AmqpTransportOptions
+- uid: azure-iot-device.HttpTransportOptions
+  spec.typeScript:
+  - name: HttpTransportOptions
+    fullName: HttpTransportOptions
+    uid: azure-iot-device.HttpTransportOptions
+- uid: azure-iot-device.MqttTransportOptions
+  spec.typeScript:
+  - name: MqttTransportOptions
+    fullName: MqttTransportOptions
+    uid: azure-iot-device.MqttTransportOptions

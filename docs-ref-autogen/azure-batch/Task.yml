@@ -1,0 +1,1282 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1dcbba7e8575caa287a8231750424cfa6e27c97a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40067475"
+items:
+- uid: azure-batch.Task
+  name: Task
+  fullName: Task
+  children:
+  - azure-batch.Task.add
+  - azure-batch.Task.add_1
+  - azure-batch.Task.add_2
+  - azure-batch.Task.addCollection_1
+  - azure-batch.Task.addCollection
+  - azure-batch.Task.addCollection_2
+  - azure-batch.Task.addCollectionWithHttpOperationResponse
+  - azure-batch.Task.addWithHttpOperationResponse
+  - azure-batch.Task.deleteMethod_1
+  - azure-batch.Task.deleteMethod_2
+  - azure-batch.Task.deleteMethod
+  - azure-batch.Task.deleteMethodWithHttpOperationResponse
+  - azure-batch.Task.get_1
+  - azure-batch.Task.get_2
+  - azure-batch.Task.get
+  - azure-batch.Task.getWithHttpOperationResponse
+  - azure-batch.Task.list
+  - azure-batch.Task.list_1
+  - azure-batch.Task.list_2
+  - azure-batch.Task.listNext
+  - azure-batch.Task.listNext_1
+  - azure-batch.Task.listNext_2
+  - azure-batch.Task.listNextWithHttpOperationResponse
+  - azure-batch.Task.listSubtasks_1
+  - azure-batch.Task.listSubtasks_2
+  - azure-batch.Task.listSubtasks
+  - azure-batch.Task.listSubtasksWithHttpOperationResponse
+  - azure-batch.Task.listWithHttpOperationResponse
+  - azure-batch.Task.reactivate
+  - azure-batch.Task.reactivate_1
+  - azure-batch.Task.reactivate_2
+  - azure-batch.Task.reactivateWithHttpOperationResponse
+  - azure-batch.Task.terminate
+  - azure-batch.Task.terminate_1
+  - azure-batch.Task.terminate_2
+  - azure-batch.Task.terminateWithHttpOperationResponse
+  - azure-batch.Task.update
+  - azure-batch.Task.update_1
+  - azure-batch.Task.update_2
+  - azure-batch.Task.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.Task.add
+  name: add
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function add(jobId: string, task: TaskAddParameter, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-101">タスクが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-101">The ID of the job to which the task is to be added.</span></span>
+    - id: task
+      type:
+      - azure-batch.TaskAddParameter
+      description: >
+        <span data-ttu-id="d51f7-102">追加するタスク。</span><span class="sxs-lookup"><span data-stu-id="d51f7-102">The task to be added.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.add_1
+  name: add
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function add(jobId: string, task: TaskAddParameter, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: task
+      type:
+      - azure-batch.TaskAddParameter
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.add_2
+  name: add
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function add(jobId: string, task: TaskAddParameter, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: task
+      type:
+      - azure-batch.TaskAddParameter
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.addCollection_1
+  name: addCollection
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function addCollection(jobId: string, value: TaskAddParameter[], callback: ServiceCallback<TaskAddCollectionResult>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: value
+      type:
+      - azure-batch.TaskAddParameter[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.TaskAddCollectionResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.TaskAddCollectionResult>
+  package: azure-batch
+- uid: azure-batch.Task.addCollection
+  name: addCollection
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function addCollection(jobId: string, value: TaskAddParameter[], options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-103">タスクのコレクションが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-103">The ID of the job to which the task collection is to be added.</span></span>
+    - id: value
+      type:
+      - azure-batch.TaskAddParameter[]
+      description: >
+        <span data-ttu-id="d51f7-104">追加するタスクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="d51f7-104">The collection of tasks to add.</span></span> <span data-ttu-id="d51f7-105">このコレクションのシリアル化された合計サイズは 4 MB 未満である必要があります。</span><span class="sxs-lookup"><span data-stu-id="d51f7-105">The total serialized size of this collection must be less than 4MB.</span></span> <span data-ttu-id="d51f7-106">(たとえば、各タスクは 100 のリソース ファイルまたは環境変数の場合など) の 4 MB を超える場合は、要求は 'RequestBodyTooLarge' のコードでは失敗し、以下のタスクをもう一度試す必要があります。</span><span class="sxs-lookup"><span data-stu-id="d51f7-106">If it is greater than 4MB (for example if each task has 100's of resource files or environment variables), the request will fail with code 'RequestBodyTooLarge' and should be retried again with fewer tasks.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-batch.TaskAddCollectionResult>
+  package: azure-batch
+- uid: azure-batch.Task.addCollection_2
+  name: addCollection
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function addCollection(jobId: string, value: TaskAddParameter[], options: function, callback: ServiceCallback<TaskAddCollectionResult>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: value
+      type:
+      - azure-batch.TaskAddParameter[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.TaskAddCollectionResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.TaskAddCollectionResult>
+  package: azure-batch
+- uid: azure-batch.Task.addCollectionWithHttpOperationResponse
+  name: addCollectionWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function addCollectionWithHttpOperationResponse(jobId: string, value: TaskAddParameter[], options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-107">タスクのコレクションが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-107">The ID of the job to which the task collection is to be added.</span></span>
+    - id: value
+      type:
+      - azure-batch.TaskAddParameter[]
+      description: >
+        <span data-ttu-id="d51f7-108">追加するタスクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="d51f7-108">The collection of tasks to add.</span></span> <span data-ttu-id="d51f7-109">このコレクションのシリアル化された合計サイズは 4 MB 未満である必要があります。</span><span class="sxs-lookup"><span data-stu-id="d51f7-109">The total serialized size of this collection must be less than 4MB.</span></span> <span data-ttu-id="d51f7-110">(たとえば、各タスクは 100 のリソース ファイルまたは環境変数の場合など) の 4 MB を超える場合は、要求は 'RequestBodyTooLarge' のコードでは失敗し、以下のタスクをもう一度試す必要があります。</span><span class="sxs-lookup"><span data-stu-id="d51f7-110">If it is greater than 4MB (for example if each task has 100's of resource files or environment variables), the request will fail with code 'RequestBodyTooLarge' and should be retried again with fewer tasks.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-batch.TaskAddCollectionResult>>
+  package: azure-batch
+- uid: azure-batch.Task.addWithHttpOperationResponse
+  name: addWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function addWithHttpOperationResponse(jobId: string, task: TaskAddParameter, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-111">タスクが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-111">The ID of the job to which the task is to be added.</span></span>
+    - id: task
+      type:
+      - azure-batch.TaskAddParameter
+      description: >
+        <span data-ttu-id="d51f7-112">追加するタスク。</span><span class="sxs-lookup"><span data-stu-id="d51f7-112">The task to be added.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-batch
+- uid: azure-batch.Task.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function deleteMethod(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function deleteMethod(jobId: string, taskId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function deleteMethod(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-113">タスクを削除するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-113">The ID of the job from which to delete the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-114">削除するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-114">The ID of the task to delete.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-115">タスクを削除するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-115">The ID of the job from which to delete the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-116">削除するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-116">The ID of the task to delete.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-batch
+- uid: azure-batch.Task.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function get(jobId: string, taskId: string, callback: ServiceCallback<CloudTask>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTask>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTask>
+  package: azure-batch
+- uid: azure-batch.Task.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function get(jobId: string, taskId: string, options: function, callback: ServiceCallback<CloudTask>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTask>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTask>
+  package: azure-batch
+- uid: azure-batch.Task.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function get(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-117">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-117">The ID of the job that contains the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-118">に関する情報を取得するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-118">The ID of the task to get information about.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-batch.CloudTask>
+  package: azure-batch
+- uid: azure-batch.Task.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function getWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-119">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-119">The ID of the job that contains the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-120">に関する情報を取得するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-120">The ID of the task to get information about.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-batch.CloudTask>>
+  package: azure-batch
+- uid: azure-batch.Task.list
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function list(jobId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-121">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-121">The ID of the job.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListResult>
+  package: azure-batch
+- uid: azure-batch.Task.list_1
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function list(jobId: string, callback: ServiceCallback<CloudTaskListResult>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTaskListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListResult>
+  package: azure-batch
+- uid: azure-batch.Task.list_2
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function list(jobId: string, options: function, callback: ServiceCallback<CloudTaskListResult>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTaskListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListResult>
+  package: azure-batch
+- uid: azure-batch.Task.listNext
+  name: listNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-122">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="d51f7-122">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListResult>
+  package: azure-batch
+- uid: azure-batch.Task.listNext_1
+  name: listNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudTaskListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTaskListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListResult>
+  package: azure-batch
+- uid: azure-batch.Task.listNext_2
+  name: listNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<CloudTaskListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTaskListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListResult>
+  package: azure-batch
+- uid: azure-batch.Task.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-123">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="d51f7-123">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-batch.CloudTaskListResult>>
+  package: azure-batch
+- uid: azure-batch.Task.listSubtasks_1
+  name: listSubtasks
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listSubtasks(jobId: string, taskId: string, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTaskListSubtasksResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListSubtasksResult>
+  package: azure-batch
+- uid: azure-batch.Task.listSubtasks_2
+  name: listSubtasks
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listSubtasks(jobId: string, taskId: string, options: function, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTaskListSubtasksResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListSubtasksResult>
+  package: azure-batch
+- uid: azure-batch.Task.listSubtasks
+  name: listSubtasks
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listSubtasks(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-124">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-124">The ID of the job.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-125">タスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-125">The ID of the task.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListSubtasksResult>
+  package: azure-batch
+- uid: azure-batch.Task.listSubtasksWithHttpOperationResponse
+  name: listSubtasksWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listSubtasksWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-126">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-126">The ID of the job.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-127">タスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-127">The ID of the task.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-batch.CloudTaskListSubtasksResult>>
+  package: azure-batch
+- uid: azure-batch.Task.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listWithHttpOperationResponse(jobId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-128">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-128">The ID of the job.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-batch.CloudTaskListResult>>
+  package: azure-batch
+- uid: azure-batch.Task.reactivate
+  name: reactivate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function reactivate(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-129">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-129">The ID of the job containing the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-130">再アクティブ化するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-130">The ID of the task to reactivate.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.reactivate_1
+  name: reactivate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function reactivate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.reactivate_2
+  name: reactivate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function reactivate(jobId: string, taskId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.reactivateWithHttpOperationResponse
+  name: reactivateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function reactivateWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-131">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-131">The ID of the job containing the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-132">再アクティブ化するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-132">The ID of the task to reactivate.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-batch
+- uid: azure-batch.Task.terminate
+  name: terminate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function terminate(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-133">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-133">The ID of the job containing the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-134">終了するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-134">The ID of the task to terminate.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.terminate_1
+  name: terminate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function terminate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.terminate_2
+  name: terminate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function terminate(jobId: string, taskId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.terminateWithHttpOperationResponse
+  name: terminateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function terminateWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-135">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-135">The ID of the job containing the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-136">終了するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-136">The ID of the task to terminate.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-batch
+- uid: azure-batch.Task.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d51f7-137">指定したタスクのプロパティを更新します。</span><span class="sxs-lookup"><span data-stu-id="d51f7-137">Updates the properties of the specified task.</span></span>
+  syntax:
+    content: 'function update(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-138">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-138">The ID of the job containing the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-139">更新するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-139">The ID of the task to update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.update_1
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d51f7-140">指定したタスクのプロパティを更新します。</span><span class="sxs-lookup"><span data-stu-id="d51f7-140">Updates the properties of the specified task.</span></span>
+  syntax:
+    content: 'function update(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.update_2
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d51f7-141">指定したタスクのプロパティを更新します。</span><span class="sxs-lookup"><span data-stu-id="d51f7-141">Updates the properties of the specified task.</span></span>
+  syntax:
+    content: 'function update(jobId: string, taskId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
+- uid: azure-batch.Task.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d51f7-142">指定したタスクのプロパティを更新します。</span><span class="sxs-lookup"><span data-stu-id="d51f7-142">Updates the properties of the specified task.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-143">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-143">The ID of the job containing the task.</span></span>
+    - id: taskId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d51f7-144">更新するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="d51f7-144">The ID of the task to update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-batch
+references:
+- uid: azure-batch.TaskAddParameter
+  spec.typeScript:
+  - name: TaskAddParameter
+    fullName: TaskAddParameter
+    uid: azure-batch.TaskAddParameter
+- uid: azure-batch.TaskAddParameter[]
+  spec.typeScript:
+  - name: TaskAddParameter
+    fullName: TaskAddParameter
+    uid: azure-batch.TaskAddParameter
+  - name: '[]'
+    fullName: '[]'
+- uid: Promise<azure-batch.TaskAddCollectionResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: TaskAddCollectionResult
+    fullName: TaskAddCollectionResult
+    uid: azure-batch.TaskAddCollectionResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-batch.TaskAddCollectionResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: TaskAddCollectionResult
+    fullName: TaskAddCollectionResult
+    uid: azure-batch.TaskAddCollectionResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-batch.TaskAddCollectionResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: TaskAddCollectionResult
+    fullName: TaskAddCollectionResult
+    uid: azure-batch.TaskAddCollectionResult
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-batch.CloudTask>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CloudTask
+    fullName: CloudTask
+    uid: azure-batch.CloudTask
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-batch.CloudTask>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: CloudTask
+    fullName: CloudTask
+    uid: azure-batch.CloudTask
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-batch.CloudTask>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: CloudTask
+    fullName: CloudTask
+    uid: azure-batch.CloudTask
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-batch.CloudTaskListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CloudTaskListResult
+    fullName: CloudTaskListResult
+    uid: azure-batch.CloudTaskListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-batch.CloudTaskListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: CloudTaskListResult
+    fullName: CloudTaskListResult
+    uid: azure-batch.CloudTaskListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-batch.CloudTaskListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: CloudTaskListResult
+    fullName: CloudTaskListResult
+    uid: azure-batch.CloudTaskListResult
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-batch.CloudTaskListSubtasksResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CloudTaskListSubtasksResult
+    fullName: CloudTaskListSubtasksResult
+    uid: azure-batch.CloudTaskListSubtasksResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-batch.CloudTaskListSubtasksResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: CloudTaskListSubtasksResult
+    fullName: CloudTaskListSubtasksResult
+    uid: azure-batch.CloudTaskListSubtasksResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-batch.CloudTaskListSubtasksResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: CloudTaskListSubtasksResult
+    fullName: CloudTaskListSubtasksResult
+    uid: azure-batch.CloudTaskListSubtasksResult
+  - name: '>>'
+    fullName: '>>'
