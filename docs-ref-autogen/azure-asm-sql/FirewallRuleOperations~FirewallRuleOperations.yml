@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5c821692ec408af0a872de276d63a516edf2f3ac
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064183"
+items:
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations
+  summary: >-
+    <span data-ttu-id="2a0a3-101">Azure SQL Database Management API には、Azure SQL データベース サーバーのサーバー レベルのファイアウォール規則を管理するための操作が含まれます。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-101">The Azure SQL Database Management API includes operations for managing the server-level Firewall Rules for Azure SQL Database Servers.</span></span> <span data-ttu-id="2a0a3-102">Azure SQL Database Management API では; を使用してデータベース レベルのファイアウォール ルールを管理することはできません。また、マスターまたは個々 のユーザー データベースに対して TRANSACT-SQL ステートメントを実行してのみ管理できます。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-102">You cannot manage the database-level firewall rules using the Azure SQL Database Management API; they can only be managed by running the Transact-SQL statements against the master or individual user databases.</span></span>
+
+    <span data-ttu-id="2a0a3-103">__注__: [SqlManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link SqlManagementClient ~ SqlManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-103">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="2a0a3-104">[FirewallRules] を参照してください。 {@link SqlManagementClient ~ SqlManagementClient #firewallRules}。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-104">See [firewallRules] {@link SqlManagementClient~SqlManagementClient#firewallRules}.</span></span>
+
+    <span data-ttu-id="2a0a3-105">FirewallRuleOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-105">Initializes a new instance of the FirewallRuleOperations class.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations
+  type: Class
+  children:
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations(client)
+  fullName: azure-asm-sql.FirewallRuleOperations.FirewallRuleOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="2a0a3-106">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-106">Reference to the service client.</span></span>
+    content: new FirewallRuleOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: create(serverName, parameters, callback)
+  summary: <span data-ttu-id="2a0a3-107">Azure SQL Database サーバーの新しいサーバー レベルのファイアウォール規則を追加します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-107">Adds a new server-level Firewall Rule for an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.create(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-108">このルールを適用する Azure SQL Database サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-108">The name of the Azure SQL Database Server to which this rule will be applied.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleCreateParameters
+      description: <span data-ttu-id="2a0a3-109">ファイアウォール規則の作成操作のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-109">The parameters for the Create Firewall Rule operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-110">取得または新しいファイアウォール ルールの名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-110">Gets or sets the name for the new Firewall Rule.</span></span>
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-111">取得または新しいファイアウォール ルールの開始 IP アドレスを設定します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-111">Gets or sets the beginning IP address for the new Firewall Rule.</span></span>
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-112">取得または新しいファイアウォール ルールの終了 IP アドレスを設定します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-112">Gets or sets the ending IP address for the new Firewall Rule.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="2a0a3-113">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-113">The response stream.</span></span>
+    content: function create(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: deleteMethod(serverName, ruleName, callback)
+  summary: <span data-ttu-id="2a0a3-114">Azure SQL Database サーバーからサーバー レベルのファイアウォール規則を削除します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-114">Deletes a server-level Firewall Rule from an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.deleteMethod(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-115">時は、削除されることのファイアウォール ルールがある Azure SQL Database サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-115">The name of the Azure SQL Database Server that will have the Firewall Fule removed from it.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-116">削除時のファイアウォール ルールの名前。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-116">The name of the Firewall Fule to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="2a0a3-117">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-117">The response stream.</span></span>
+    content: function deleteMethod(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: get(serverName, ruleName, callback)
+  summary: <span data-ttu-id="2a0a3-118">名前が一致する Azure SQL Database サーバーのファイアウォール規則を返します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-118">Returns the Firewall rule for an Azure SQL Database Server with a matching name.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.get(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-119">ファイアウォール規則のクエリを Azure SQL Database サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-119">The name of the Azure SQL Database Server to query for the Firewall Rule.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-120">取得する規則の名前。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-120">The name of the rule to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="2a0a3-121">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-121">The response stream.</span></span>
+    content: function get(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: list(serverName, callback)
+  summary: <span data-ttu-id="2a0a3-122">Azure SQL Database サーバーのサーバー レベルのファイアウォール規則の一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-122">Returns a list of server-level Firewall Rules for an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-123">ファイアウォール規則を一覧から Azure SQL Database サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-123">The name of the Azure SQL Database Server from which to list the Firewall Rules.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="2a0a3-124">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-124">The response stream.</span></span>
+    content: function list(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: update(serverName, ruleName, parameters, callback)
+  summary: <span data-ttu-id="2a0a3-125">Azure SQL Database サーバーの既存のサーバー レベルのファイアウォール規則を更新します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-125">Updates an existing server-level Firewall Rule for an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.update(serverName, ruleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-126">更新するファイアウォール規則を持つ Azure SQL Database サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-126">The name of the Azure SQL Database Server that has the Firewall Rule to be updated.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-127">更新するファイアウォール規則の名前。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-127">The name of the Firewall Rule to be updated.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleUpdateParameters
+      description: <span data-ttu-id="2a0a3-128">ファイアウォール規則の更新操作のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-128">The parameters for the Update Firewall Rule operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-129">取得またはファイアウォール ルールの新しい名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-129">Gets or sets the new name of the Firewall Rule.</span></span>
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-130">取得またはこのファイアウォール規則の新しい開始 IP アドレスを設定します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-130">Gets or sets the new beginning IP address for this Firewall Rule.</span></span>
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="2a0a3-131">取得またはこのファイアウォール規則の新しい終了 IP アドレスを設定します。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-131">Gets or sets the new ending IP address for this Firewall Rule.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="2a0a3-132">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="2a0a3-132">The response stream.</span></span>
+    content: function update(serverName, ruleName, parameters, callback)
+  langs:
+  - js

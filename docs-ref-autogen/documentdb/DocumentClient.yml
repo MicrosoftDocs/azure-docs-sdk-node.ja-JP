@@ -1,0 +1,2524 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 99d34b9f67f4793f59a448d80cf88796f9b44ae1
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064716"
+items:
+- uid: documentdb.DocumentClient
+  id: documentdb.DocumentClient
+  name: DocumentClient
+  summary: >-
+    <span data-ttu-id="9e6fb-101">Azure Cosmos DB データベース アカウントのクライアント側の論理表現を提供します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-101">Provides a client-side logical representation of the Azure Cosmos DB database account.</span></span>
+
+    <span data-ttu-id="9e6fb-102">このクライアントは、構成し、Azure Cosmos DB データベース サービスで要求の実行に使用されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-102">This client is used to configure and execute requests in the Azure Cosmos DB database service.</span></span>
+  fullName: documentdb.DocumentClient
+  type: Class
+  children:
+  - documentdb.DocumentClient.#ctor
+  - documentdb.DocumentClient#getWriteEndpoint
+  - documentdb.DocumentClient#getReadEndpoint
+  - documentdb.DocumentClient#createDatabase
+  - documentdb.DocumentClient#createCollection
+  - documentdb.DocumentClient#createDocument
+  - documentdb.DocumentClient#createAttachment
+  - documentdb.DocumentClient#createUser
+  - documentdb.DocumentClient#createPermission
+  - documentdb.DocumentClient#createTrigger
+  - documentdb.DocumentClient#createUserDefinedFunction
+  - documentdb.DocumentClient#createStoredProcedure
+  - documentdb.DocumentClient#createAttachmentAndUploadMedia
+  - documentdb.DocumentClient#readDatabase
+  - documentdb.DocumentClient#readCollection
+  - documentdb.DocumentClient#readDocument
+  - documentdb.DocumentClient#readAttachment
+  - documentdb.DocumentClient#readUser
+  - documentdb.DocumentClient#readPermission
+  - documentdb.DocumentClient#readTrigger
+  - documentdb.DocumentClient#readUserDefinedFunction
+  - documentdb.DocumentClient#readStoredProcedure
+  - documentdb.DocumentClient#readConflict
+  - documentdb.DocumentClient#readDatabases
+  - documentdb.DocumentClient#readCollections
+  - documentdb.DocumentClient#readDocuments
+  - documentdb.DocumentClient#readPartitionKeyRanges
+  - documentdb.DocumentClient#readAttachments
+  - documentdb.DocumentClient#readUsers
+  - documentdb.DocumentClient#readPermissions
+  - documentdb.DocumentClient#readTriggers
+  - documentdb.DocumentClient#readUserDefinedFunctions
+  - documentdb.DocumentClient#readStoredProcedures
+  - documentdb.DocumentClient#readConflicts
+  - documentdb.DocumentClient#queryDatabases
+  - documentdb.DocumentClient#queryCollections
+  - documentdb.DocumentClient#queryDocuments
+  - documentdb.DocumentClient#queryPartitionKeyRanges
+  - documentdb.DocumentClient#queryAttachments
+  - documentdb.DocumentClient#queryUsers
+  - documentdb.DocumentClient#queryPermissions
+  - documentdb.DocumentClient#queryTriggers
+  - documentdb.DocumentClient#queryUserDefinedFunctions
+  - documentdb.DocumentClient#queryStoredProcedures
+  - documentdb.DocumentClient#queryConflicts
+  - documentdb.DocumentClient#deleteDatabase
+  - documentdb.DocumentClient#deleteCollection
+  - documentdb.DocumentClient#deleteDocument
+  - documentdb.DocumentClient#deleteAttachment
+  - documentdb.DocumentClient#deleteUser
+  - documentdb.DocumentClient#deletePermission
+  - documentdb.DocumentClient#deleteTrigger
+  - documentdb.DocumentClient#deleteUserDefinedFunction
+  - documentdb.DocumentClient#deleteStoredProcedure
+  - documentdb.DocumentClient#deleteConflict
+  - documentdb.DocumentClient#replaceCollection
+  - documentdb.DocumentClient#replaceDocument
+  - documentdb.DocumentClient#replaceAttachment
+  - documentdb.DocumentClient#replaceUser
+  - documentdb.DocumentClient#replacePermission
+  - documentdb.DocumentClient#replaceTrigger
+  - documentdb.DocumentClient#replaceUserDefinedFunction
+  - documentdb.DocumentClient#replaceStoredProcedure
+  - documentdb.DocumentClient#upsertDocument
+  - documentdb.DocumentClient#upsertAttachment
+  - documentdb.DocumentClient#upsertUser
+  - documentdb.DocumentClient#upsertPermission
+  - documentdb.DocumentClient#upsertTrigger
+  - documentdb.DocumentClient#upsertUserDefinedFunction
+  - documentdb.DocumentClient#upsertStoredProcedure
+  - documentdb.DocumentClient#upsertAttachmentAndUploadMedia
+  - documentdb.DocumentClient#readMedia
+  - documentdb.DocumentClient#updateMedia
+  - documentdb.DocumentClient#executeStoredProcedure
+  - documentdb.DocumentClient#replaceOffer
+  - documentdb.DocumentClient#readOffer
+  - documentdb.DocumentClient#readOffers
+  - documentdb.DocumentClient#queryOffers
+  - documentdb.DocumentClient#getDatabaseAccount
+  - documentdb.DocumentClient#getSessionToken
+  langs:
+  - js
+- id: documentdb.DocumentClient.#ctor
+  uid: documentdb.DocumentClient.#ctor
+  parent: documentdb.DocumentClient
+  name: DocumentClient(urlConnection, auth, connectionPolicy, consistencyLevel)
+  fullName: documentdb.DocumentClient.DocumentClient(urlConnection, auth, connectionPolicy, consistencyLevel)
+  summary: >-
+    <span data-ttu-id="9e6fb-103">Azure Cosmos DB データベース アカウントのクライアント側の論理表現を提供します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-103">Provides a client-side logical representation of the Azure Cosmos DB database account.</span></span>
+
+    <span data-ttu-id="9e6fb-104">このクライアントは、構成し、Azure Cosmos DB データベース サービスで要求の実行に使用されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-104">This client is used to configure and execute requests in the Azure Cosmos DB database service.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: urlConnection
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-105">クライアントの作成に使用するサービス エンドポイント。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-105">The service endpoint to use to create the client.</span></span>
+    - id: auth
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-106">必要があり、要求の認証に使用されるオブジェクトに、オプションのいずれかが含まれています</span><span class="sxs-lookup"><span data-stu-id="9e6fb-106">An object that is used for authenticating requests and must contains one of the options</span></span>
+    - id: auth.masterKey
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-107">クライアントの作成に使用する認証のマスター キー。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-107">The authorization master key to use to create the client.</span></span>
+      optional: true
+    - id: auth.resourceTokens
+      type:
+      - Object
+      description: <span data-ttu-id="9e6fb-108">リソース トークンを含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-108">An object that contains resources tokens.</span></span> <span data-ttu-id="9e6fb-109">オブジェクトのキーはリソース Id で、値は、リソース トークンです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-109">Keys for the object are resource Ids and values are the resource tokens.</span></span>
+      optional: true
+    - id: auth.permissionFeed
+      type:
+      - Array
+      description: <span data-ttu-id="9e6fb-110">配列の<xref:Permission>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-110">An array of <xref:Permission> objects.</span></span>
+      optional: true
+    - id: connectionPolicy
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-111">インスタンス<xref:ConnectionPolicy>クラス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-111">An instance of <xref:ConnectionPolicy> class.</span></span> <span data-ttu-id="9e6fb-112">このパラメーターは省略可能と省略した場合、既定 connectionPolicy が使用されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-112">This parameter is optional and the default connectionPolicy will be used if omitted.</span></span>
+      optional: true
+    - id: consistencyLevel
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-113">整合性レベルを表す省略可能なパラメーター。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-113">An optional parameter that represents the consistency level.</span></span> <span data-ttu-id="9e6fb-114">任意の値がかかることが<xref:ConsistencyLevel>します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-114">It can take any value from <xref:ConsistencyLevel>.</span></span>
+      optional: true
+    content: new DocumentClient(urlConnection, auth, connectionPolicy, consistencyLevel)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#getWriteEndpoint
+  id: documentdb.DocumentClient#getWriteEndpoint
+  parent: documentdb.DocumentClient
+  name: getWriteEndpoint(callback)
+  summary: <span data-ttu-id="9e6fb-115">Geo レプリケートされたデータベース アカウントの現在の書き込みエンドポイントを取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-115">Gets the curent write endpoint for a geo-replicated database account.</span></span>
+  fullName: documentdb.DocumentClient.getWriteEndpoint(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="9e6fb-116">コールバック関数を引数として endpoint(string) をとります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-116">The callback function which takes endpoint(string) as an argument.</span></span>
+    content: function getWriteEndpoint(callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#getReadEndpoint
+  id: documentdb.DocumentClient#getReadEndpoint
+  parent: documentdb.DocumentClient
+  name: getReadEndpoint(callback)
+  summary: <span data-ttu-id="9e6fb-117">Geo レプリケートされたデータベース アカウントのエンドポイントを読み取る curent を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-117">Gets the curent read endpoint for a geo-replicated database account.</span></span>
+  fullName: documentdb.DocumentClient.getReadEndpoint(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="9e6fb-118">コールバック関数を引数として endpoint(string) をとります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-118">The callback function which takes endpoint(string) as an argument.</span></span>
+    content: function getReadEndpoint(callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createDatabase
+  id: documentdb.DocumentClient#createDatabase
+  parent: documentdb.DocumentClient
+  name: createDatabase(body, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-119">データベースを作成するための要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-119">Send a request for creating a database.</span></span>
+
+    <p>
+     <span data-ttu-id="9e6fb-120">データベースは、ユーザー、アクセス許可、およびコレクションのセットを管理します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-120">A database manages users, permissions and a set of collections.</span></span>  <br>
+     <span data-ttu-id="9e6fb-121">各 Azure Cosmos DB データベース アカウントは、複数の独立した名前付きデータの論理コンテナーになっているデータベースでのデータベースをサポートできます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-121">Each Azure Cosmos DB Database Account is able to support multiple independent named databases, with the database being the logical container for data.</span></span> <br>
+     <span data-ttu-id="9e6fb-122">各データベースは、さらに 1 つまたは複数のドキュメントを含むそれぞれが 1 つまたは複数のコレクションで構成されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-122">Each Database consists of one or more collections, each of which in turn contain one or more documents.</span></span> <span data-ttu-id="9e6fb-123">データベースがあるため、リソースを管理、サービス マスター _ キーがアクセスして、ユーザーの Api を使用して、操作を正常に完了するために必要になります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-123">Since databases are an an administrative resource, the Service Master Key will be required in order to access and successfully complete any action using the User APIs.</span></span> <br>
+    </p>
+  fullName: documentdb.DocumentClient.createDatabase(body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: body
+      type:
+      - Object
+      description: <span data-ttu-id="9e6fb-124">作成するデータベースを表す json オブジェクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-124">A json object that represents The database to be created.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-125">データベースの id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-125">The id of the database.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-126">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-126">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-127">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-127">The callback for the request.</span></span>
+    content: function createDatabase(body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createCollection
+  id: documentdb.DocumentClient#createCollection
+  parent: documentdb.DocumentClient
+  name: createCollection(databaseLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-128">コレクションを作成します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-128">Creates a collection.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-129">コレクションは、ドキュメントの名前付きの論理コンテナーです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-129">A collection is a named logical container for documents.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-130">データベースは、0 個以上の名前付きコレクションを含めることができ、各コレクションは、0 個以上の JSON ドキュメントで構成されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-130">A database may contain zero or more named collections and each collection consists of zero or more JSON documents.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-131">スキーマ フリーである、同じ構造またはフィールドを共有する、コレクション内のドキュメントは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-131">Being schema-free, the documents in a collection do not need to share the same structure or fields.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-132">コレクションは、アプリケーションのリソースであるため、行うことができます、マスター _ キーまたはリソース キーを使用します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-132">Since collections are application resources, they can be authorized using either the master key or resource keys.</span></span> <br>
+
+    </p>
+  fullName: documentdb.DocumentClient.createCollection(databaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-133">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-133">The self-link of the database.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-134">コレクションの本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-134">Represents the body of the collection.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-135">コレクションの id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-135">The id of the collection.</span></span>
+    - id: body.indexingPolicy
+      type:
+      - documentdb.IndexingPolicy
+      description: <span data-ttu-id="9e6fb-136">コレクションに関連付けられているインデックス作成ポリシー。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-136">The indexing policy associated with the collection.</span></span>
+    - id: body.defaultTtl
+      type:
+      - number
+      description: <span data-ttu-id="9e6fb-137">コレクション内のドキュメントを秒単位で有効期限の既定の時間。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-137">The default time to live in seconds for documents in a collection.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-138">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-138">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-139">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-139">The callback for the request.</span></span>
+    content: function createCollection(databaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createDocument
+  id: documentdb.DocumentClient#createDocument
+  parent: documentdb.DocumentClient
+  name: createDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-140">ドキュメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-140">Create a document.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-141">JSON ドキュメントのセットのスキーマはありません。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-141">There is no set schema for JSON documents.</span></span> <span data-ttu-id="9e6fb-142">任意の数のカスタム プロパティおよび添付ファイルのオプションのリストに含まれる場合があります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-142">They may contain any number of custom properties as well as an optional list of attachments.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-143">ドキュメントは、アプリケーションのリソースとのマスター _ キーまたはリソース キーを使用して承認することができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-143">A Document is an application resource and can be authorized using the master key or resource keys</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.createDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentsFeedOrDatabaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-144">コレクションのリンクまたはパーティション リゾルバーを使用している場合、データベースのリンク</span><span class="sxs-lookup"><span data-stu-id="9e6fb-144">The collection link or database link if using a partition resolver</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-145">ドキュメントの本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-145">Represents the body of the document.</span></span> <span data-ttu-id="9e6fb-146">任意の数のユーザー定義プロパティを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-146">Can contain any number of user defined properties.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-147">ドキュメントの id は、ドキュメントごとに固有である必要があります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-147">The id of the document, MUST be unique for each document.</span></span>
+      optional: true
+    - id: body.ttl
+      type:
+      - number
+      description: <span data-ttu-id="9e6fb-148">ドキュメントの秒の有効期間。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-148">The time to live in seconds of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-149">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-149">The request options.</span></span>
+      optional: true
+    - id: options.disableAutomaticIdGeneration
+      type:
+      - boolean
+      description: <span data-ttu-id="9e6fb-150">自動 id 生成を無効にします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-150">Disables the automatic id generation.</span></span> <span data-ttu-id="9e6fb-151">本文に id がありませんし、このオプションが true の場合、エラーが返されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-151">If id is missing in the body and this option is true, an error will be returned.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-152">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-152">The callback for the request.</span></span>
+    content: function createDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createAttachment
+  id: documentdb.DocumentClient#createAttachment
+  parent: documentdb.DocumentClient
+  name: createAttachment(documentLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-153">ドキュメント オブジェクトの添付ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-153">Create an attachment for the document object.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-154">各ドキュメントには、0 個以上の添付ファイルを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-154">Each document may contain zero or more attachments.</span></span> <span data-ttu-id="9e6fb-155">テキスト、イメージ、バイナリ データの MIME タイプの添付ファイルができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-155">Attachments can be of any MIME type - text, image, binary data.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-156">これらは、Azure Blob ストレージの外部で保存されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-156">These are stored externally in Azure Blob storage.</span></span> <span data-ttu-id="9e6fb-157">親ドキュメントが削除されたときに、添付ファイルが自動的に削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-157">Attachments are automatically deleted when the parent document is deleted.</span></span>
+
+    </P>
+  fullName: documentdb.DocumentClient.createAttachment(documentLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-158">ドキュメントは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-158">The self-link of the document.</span></span>
+    - id: body
+      type:
+      - Object
+      description: <span data-ttu-id="9e6fb-159">メタデータ、メディア、contentType のように、添付ファイルのメディアを定義します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-159">The metadata the defines the attachment media like media, contentType.</span></span> <span data-ttu-id="9e6fb-160">メタデータの一部として、その他のプロパティを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-160">It can include any other properties as part of the metedata.</span></span>
+    - id: body.contentType
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-161">添付ファイルの MIME コンテンツ タイプ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-161">The MIME contentType of the attachment.</span></span>
+    - id: body.media
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-162">添付ファイルのコンテンツに関連付けられたメディア リンク。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-162">Media link associated with the attachment content.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-163">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-163">The request options.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-164">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-164">The callback for the request.</span></span>
+    content: function createAttachment(documentLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createUser
+  id: documentdb.DocumentClient#createUser
+  parent: documentdb.DocumentClient
+  name: createUser(databaseLink, body, options, callback)
+  summary: <span data-ttu-id="9e6fb-165">データベース ユーザーを作成します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-165">Create a database user.</span></span>
+  fullName: documentdb.DocumentClient.createUser(databaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-166">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-166">The self-link of the database.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-167">ユーザーの本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-167">Represents the body of the user.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-168">ユーザーの id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-168">The id of the user.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-169">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-169">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-170">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-170">The callback for the request.</span></span>
+    content: function createUser(databaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createPermission
+  id: documentdb.DocumentClient#createPermission
+  parent: documentdb.DocumentClient
+  name: createPermission(userLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-171">アクセス許可を作成します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-171">Create a permission.</span></span>
+
+    <p> <span data-ttu-id="9e6fb-172">アクセス許可は、ユーザーごとにドキュメントやコレクションなどの特定のリソースにアクセスする権限を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-172">A permission represents a per-User Permission to access a specific resource e.g. Document or Collection.</span></span>  </p>
+  fullName: documentdb.DocumentClient.createPermission(userLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-173">ユーザーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-173">The self-link of the user.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-174">アクセス許可の本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-174">Represents the body of the permission.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-175">アクセス許可の id</span><span class="sxs-lookup"><span data-stu-id="9e6fb-175">The id of the permission</span></span>
+    - id: body.permissionMode
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-176">アクセス許可モードの値でなければなりません <xref:documentdb.PermissionMode></span><span class="sxs-lookup"><span data-stu-id="9e6fb-176">The mode of the permission, must be a value of <xref:documentdb.PermissionMode></span></span>
+    - id: body.resource
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-177">適用されるアクセス許可リソースのリンク。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-177">The link of the resource that the permission will be applied to.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-178">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-178">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-179">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-179">The callback for the request.</span></span>
+    content: function createPermission(userLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createTrigger
+  id: documentdb.DocumentClient#createTrigger
+  parent: documentdb.DocumentClient
+  name: createTrigger(collectionLink, trigger, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-180">トリガーを作成します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-180">Create a trigger.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-181">実行する JavaScript で定義されている投稿トリガーを作成、更新および削除を azure Cosmos DB より前のサポートします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-181">Azure Cosmos DB supports pre and post triggers defined in JavaScript to be executed on creates, updates and deletes.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-182">詳細については、サーバー側 JavaScript API のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-182">For additional details, refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.createTrigger(collectionLink, trigger, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-183">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-183">The self-link of the collection.</span></span>
+    - id: trigger
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-184">トリガーの本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-184">Represents the body of the trigger.</span></span>
+    - id: trigger.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-185">トリガーの id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-185">The id of the trigger.</span></span>
+    - id: trigger.triggerType
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-186">トリガーの種類は、の値のいずれかを指定する必要があります<xref:documentdb.TriggerType>します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-186">The type of the trigger, should be one of the values of <xref:documentdb.TriggerType>.</span></span>
+    - id: trigger.triggerOperation
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-187">トリガーの操作は、の値のいずれかを指定する必要があります<xref:documentdb.TriggerOperation>します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-187">The trigger operation, should be one of the values of <xref:documentdb.TriggerOperation>.</span></span>
+    - id: trigger.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="9e6fb-188">トリガーの本文を渡すことができますも文字列として。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-188">The body of the trigger, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-189">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-189">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-190">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-190">The callback for the request.</span></span>
+    content: function createTrigger(collectionLink, trigger, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createUserDefinedFunction
+  id: documentdb.DocumentClient#createUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: createUserDefinedFunction(collectionLink, udf, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-191">UserDefinedFunction を作成します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-191">Create a UserDefinedFunction.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-192">Azure Cosmos DB では、クエリ、ストアド プロシージャおよびトリガー内で使用できる JavaScript Udf をサポートします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-192">Azure Cosmos DB supports JavaScript UDFs which can be used inside queries, stored procedures and triggers.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-193">詳細については、サーバー側 JavaScript API のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-193">For additional details, refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.createUserDefinedFunction(collectionLink, udf, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-194">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-194">The self-link of the collection.</span></span>
+    - id: udf
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-195">UserDefinedFunction の本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-195">Represents the body of the userDefinedFunction.</span></span>
+    - id: udf.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-196">Udf の id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-196">The id of the udf.</span></span>
+    - id: udf.userDefinedFunctionType
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-197">Udf の種類、必要があるの値のいずれか <xref:documentdb.UserDefinedFunctionType></span><span class="sxs-lookup"><span data-stu-id="9e6fb-197">The type of the udf, it should be one of the values of <xref:documentdb.UserDefinedFunctionType></span></span>
+    - id: udf.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="9e6fb-198">本体を表す、udf を渡すことができますも文字列として。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-198">Represents the body of the udf, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-199">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-199">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-200">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-200">The callback for the request.</span></span>
+    content: function createUserDefinedFunction(collectionLink, udf, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createStoredProcedure
+  id: documentdb.DocumentClient#createStoredProcedure
+  parent: documentdb.DocumentClient
+  name: createStoredProcedure(collectionLink, sproc, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-201">ストアド プロシージャを作成します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-201">Create a StoredProcedure.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-202">Azure Cosmos DB では、ドキュメントのコレクションに対して直接記憶域階層で実行されるストアド プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-202">Azure Cosmos DB allows stored procedures to be executed in the storage tier, directly against a document collection.</span></span> <span data-ttu-id="9e6fb-203">スクリプト</span><span class="sxs-lookup"><span data-stu-id="9e6fb-203">The script</span></span> <br>
+
+    <span data-ttu-id="9e6fb-204">指定したコレクションのプライマリ ストレージのパーティションに ACID トランザクションで実行を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-204">gets executed under ACID transactions on the primary storage partition of the specified collection.</span></span> <span data-ttu-id="9e6fb-205">詳細については、</span><span class="sxs-lookup"><span data-stu-id="9e6fb-205">For additional details,</span></span> <br>
+
+    <span data-ttu-id="9e6fb-206">サーバー側 JavaScript API のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-206">refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.createStoredProcedure(collectionLink, sproc, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-207">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-207">The self-link of the collection.</span></span>
+    - id: sproc
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-208">ストアド プロシージャの本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-208">Represents the body of the stored procedure.</span></span>
+    - id: sproc.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-209">ストアド プロシージャの id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-209">The id of the stored procedure.</span></span>
+    - id: sproc.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="9e6fb-210">ストアド プロシージャの本文を渡すことができますも文字列として。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-210">The body of the stored procedure, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-211">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-211">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-212">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-212">The callback for the request.</span></span>
+    content: function createStoredProcedure(collectionLink, sproc, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#createAttachmentAndUploadMedia
+  id: documentdb.DocumentClient#createAttachmentAndUploadMedia
+  parent: documentdb.DocumentClient
+  name: createAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  summary: <span data-ttu-id="9e6fb-213">ドキュメント オブジェクトの添付ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-213">Create an attachment for the document object.</span></span>
+  fullName: documentdb.DocumentClient.createAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-214">ドキュメントは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-214">The self-link of the document.</span></span>
+    - id: readableStream
+      type:
+      - documentdb.stream.Readable
+      description: <span data-ttu-id="9e6fb-215">アップロードする必要があるメディア自体を表すストリーム。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-215">the stream that represents the media itself that needs to be uploaded.</span></span>
+    - id: options
+      type:
+      - documentdb.MediaOptions
+      description: <span data-ttu-id="9e6fb-216">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-216">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-217">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-217">The callback for the request.</span></span>
+    content: function createAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readDatabase
+  id: documentdb.DocumentClient#readDatabase
+  parent: documentdb.DocumentClient
+  name: readDatabase(databaseLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-218">データベースを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-218">Reads a database.</span></span>
+  fullName: documentdb.DocumentClient.readDatabase(databaseLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-219">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-219">The self-link of the database.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-220">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-220">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-221">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-221">The callback for the request.</span></span>
+    content: function readDatabase(databaseLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readCollection
+  id: documentdb.DocumentClient#readCollection
+  parent: documentdb.DocumentClient
+  name: readCollection(collectionLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-222">コレクションを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-222">Reads a collection.</span></span>
+  fullName: documentdb.DocumentClient.readCollection(collectionLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-223">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-223">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-224">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-224">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-225">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-225">The callback for the request.</span></span>
+    content: function readCollection(collectionLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readDocument
+  id: documentdb.DocumentClient#readDocument
+  parent: documentdb.DocumentClient
+  name: readDocument(documentLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-226">ドキュメントを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-226">Reads a document.</span></span>
+  fullName: documentdb.DocumentClient.readDocument(documentLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-227">ドキュメントは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-227">The self-link of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-228">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-228">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-229">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-229">The callback for the request.</span></span>
+    content: function readDocument(documentLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readAttachment
+  id: documentdb.DocumentClient#readAttachment
+  parent: documentdb.DocumentClient
+  name: readAttachment(attachmentLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-230">添付ファイル オブジェクトを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-230">Reads an Attachment object.</span></span>
+  fullName: documentdb.DocumentClient.readAttachment(attachmentLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: attachmentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-231">自己リンク、添付ファイル。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-231">The self-link of the attachment.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-232">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-232">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-233">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-233">The callback for the request.</span></span>
+    content: function readAttachment(attachmentLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readUser
+  id: documentdb.DocumentClient#readUser
+  parent: documentdb.DocumentClient
+  name: readUser(userLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-234">ユーザーを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-234">Reads a user.</span></span>
+  fullName: documentdb.DocumentClient.readUser(userLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-235">ユーザーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-235">The self-link of the user.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-236">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-236">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-237">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-237">The callback for the request.</span></span>
+    content: function readUser(userLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readPermission
+  id: documentdb.DocumentClient#readPermission
+  parent: documentdb.DocumentClient
+  name: readPermission(permissionLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-238">アクセス許可を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-238">Reads a permission.</span></span>
+  fullName: documentdb.DocumentClient.readPermission(permissionLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: permissionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-239">自己リンク アクセス許可。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-239">The self-link of the permission.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-240">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-240">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-241">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-241">The callback for the request.</span></span>
+    content: function readPermission(permissionLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readTrigger
+  id: documentdb.DocumentClient#readTrigger
+  parent: documentdb.DocumentClient
+  name: readTrigger(triggerLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-242">トリガー オブジェクトを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-242">Reads a trigger object.</span></span>
+  fullName: documentdb.DocumentClient.readTrigger(triggerLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: triggerLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-243">トリガーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-243">The self-link of the trigger.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-244">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-244">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-245">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-245">The callback for the request.</span></span>
+    content: function readTrigger(triggerLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readUserDefinedFunction
+  id: documentdb.DocumentClient#readUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: readUserDefinedFunction(udfLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-246">Udf のオブジェクトを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-246">Reads a udf object.</span></span>
+  fullName: documentdb.DocumentClient.readUserDefinedFunction(udfLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: udfLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-247">ユーザーの自己リンク関数を定義します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-247">The self-link of the user defined function.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-248">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-248">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-249">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-249">The callback for the request.</span></span>
+    content: function readUserDefinedFunction(udfLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readStoredProcedure
+  id: documentdb.DocumentClient#readStoredProcedure
+  parent: documentdb.DocumentClient
+  name: readStoredProcedure(sprocLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-250">StoredProcedure オブジェクトを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-250">Reads a StoredProcedure object.</span></span>
+  fullName: documentdb.DocumentClient.readStoredProcedure(sprocLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sprocLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-251">ストアド プロシージャは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-251">The self-link of the stored procedure.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-252">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-252">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-253">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-253">The callback for the request.</span></span>
+    content: function readStoredProcedure(sprocLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readConflict
+  id: documentdb.DocumentClient#readConflict
+  parent: documentdb.DocumentClient
+  name: readConflict(conflictLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-254">競合を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-254">Reads a conflict.</span></span>
+  fullName: documentdb.DocumentClient.readConflict(conflictLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: conflictLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-255">競合は自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-255">The self-link of the conflict.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-256">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-256">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-257">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-257">The callback for the request.</span></span>
+    content: function readConflict(conflictLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readDatabases
+  id: documentdb.DocumentClient#readDatabases
+  parent: documentdb.DocumentClient
+  name: readDatabases(options)
+  summary: <span data-ttu-id="9e6fb-258">すべてのデータベースを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-258">Lists all databases.</span></span>
+  fullName: documentdb.DocumentClient.readDatabases(options)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-259">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-259">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-260">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-260">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readDatabases(options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readCollections
+  id: documentdb.DocumentClient#readCollections
+  parent: documentdb.DocumentClient
+  name: readCollections(databaseLink, options)
+  summary: <span data-ttu-id="9e6fb-261">このデータベース内のすべてのコレクションを取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-261">Get all collections in this database.</span></span>
+  fullName: documentdb.DocumentClient.readCollections(databaseLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-262">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-262">The self-link of the database.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-263">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-263">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-264">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-264">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readCollections(databaseLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readDocuments
+  id: documentdb.DocumentClient#readDocuments
+  parent: documentdb.DocumentClient
+  name: readDocuments(collectionLink, options)
+  summary: <span data-ttu-id="9e6fb-265">このコレクション内のすべてのドキュメントを取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-265">Get all documents in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readDocuments(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-266">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-266">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-267">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-267">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-268">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-268">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readDocuments(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readPartitionKeyRanges
+  id: documentdb.DocumentClient#readPartitionKeyRanges
+  parent: documentdb.DocumentClient
+  name: readPartitionKeyRanges(collectionLink, options)
+  summary: <span data-ttu-id="9e6fb-269">すべてのパーティションを取得します。 このコレクション内の範囲のキー。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-269">Get all Partition key Ranges in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readPartitionKeyRanges(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-270">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-270">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-271">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-271">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-272">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-272">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readPartitionKeyRanges(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readAttachments
+  id: documentdb.DocumentClient#readAttachments
+  parent: documentdb.DocumentClient
+  name: readAttachments(documentLink, options)
+  summary: <span data-ttu-id="9e6fb-273">このドキュメントのすべての添付ファイルを取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-273">Get all attachments for this document.</span></span>
+  fullName: documentdb.DocumentClient.readAttachments(documentLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-274">ドキュメントは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-274">The self-link of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-275">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-275">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-276">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-276">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readAttachments(documentLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readUsers
+  id: documentdb.DocumentClient#readUsers
+  parent: documentdb.DocumentClient
+  name: readUsers(databaseLink, feedOptions)
+  summary: <span data-ttu-id="9e6fb-277">このデータベース内のすべてのユーザーを取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-277">Get all users in this database.</span></span>
+  fullName: documentdb.DocumentClient.readUsers(databaseLink, feedOptions)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-278">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-278">The self-link of the database.</span></span>
+    - id: feedOptions
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-279">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-279">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-280">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-280">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readUsers(databaseLink, feedOptions)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readPermissions
+  id: documentdb.DocumentClient#readPermissions
+  parent: documentdb.DocumentClient
+  name: readPermissions(userLink, feedOptions)
+  summary: <span data-ttu-id="9e6fb-281">このユーザーのすべてのアクセス許可を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-281">Get all permissions for this user.</span></span>
+  fullName: documentdb.DocumentClient.readPermissions(userLink, feedOptions)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-282">ユーザーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-282">The self-link of the user.</span></span>
+    - id: feedOptions
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-283">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-283">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-284">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-284">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readPermissions(userLink, feedOptions)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readTriggers
+  id: documentdb.DocumentClient#readTriggers
+  parent: documentdb.DocumentClient
+  name: readTriggers(collectionLink, options)
+  summary: <span data-ttu-id="9e6fb-285">このコレクション内のすべてのトリガーを取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-285">Get all triggers in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readTriggers(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-286">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-286">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-287">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-287">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-288">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-288">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readTriggers(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readUserDefinedFunctions
+  id: documentdb.DocumentClient#readUserDefinedFunctions
+  parent: documentdb.DocumentClient
+  name: readUserDefinedFunctions(collectionLink, options)
+  summary: <span data-ttu-id="9e6fb-289">このコレクション内のすべての UserDefinedFunctions を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-289">Get all UserDefinedFunctions in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readUserDefinedFunctions(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-290">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-290">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-291">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-291">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-292">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-292">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readUserDefinedFunctions(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readStoredProcedures
+  id: documentdb.DocumentClient#readStoredProcedures
+  parent: documentdb.DocumentClient
+  name: readStoredProcedures(collectionLink, options)
+  summary: <span data-ttu-id="9e6fb-293">このコレクション内のすべての StoredProcedures を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-293">Get all StoredProcedures in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readStoredProcedures(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-294">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-294">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-295">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-295">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-296">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-296">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readStoredProcedures(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readConflicts
+  id: documentdb.DocumentClient#readConflicts
+  parent: documentdb.DocumentClient
+  name: readConflicts(collectionLink, options)
+  summary: <span data-ttu-id="9e6fb-297">このコレクション内のすべての競合を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-297">Get all conflicts in this collection.</span></span>
+  fullName: documentdb.DocumentClient.readConflicts(collectionLink, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-298">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-298">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-299">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-299">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-300">読み取りフィードを処理するために QueryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-300">An instance of QueryIterator to handle reading feed.</span></span>'
+    content: function readConflicts(collectionLink, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryDatabases
+  id: documentdb.DocumentClient#queryDatabases
+  parent: documentdb.DocumentClient
+  name: queryDatabases(query, options)
+  summary: <span data-ttu-id="9e6fb-301">クエリに適合するすべてのデータベースを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-301">Lists all databases that satisfy a query.</span></span>
+  fullName: documentdb.DocumentClient.queryDatabases(query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-302">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-302">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-303">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-303">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-304">読み取りフィードを処理するために QueryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-304">An instance of QueryIterator to handle reading feed.</span></span>'
+    content: function queryDatabases(query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryCollections
+  id: documentdb.DocumentClient#queryCollections
+  parent: documentdb.DocumentClient
+  name: queryCollections(databaseLink, query, options)
+  summary: <span data-ttu-id="9e6fb-305">データベースのコレクションをクエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-305">Query the collections for the database.</span></span>
+  fullName: documentdb.DocumentClient.queryCollections(databaseLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-306">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-306">The self-link of the database.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-307">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-307">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-308">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-308">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-309">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-309">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryCollections(databaseLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryDocuments
+  id: documentdb.DocumentClient#queryDocuments
+  parent: documentdb.DocumentClient
+  name: queryDocuments(documentsFeedOrDatabaseLink, query, options)
+  summary: <span data-ttu-id="9e6fb-310">コレクションのドキュメントのクエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-310">Query the documents for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryDocuments(documentsFeedOrDatabaseLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentsFeedOrDatabaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-311">コレクションのリンクまたはパーティション リゾルバーを使用している場合、データベースのリンク</span><span class="sxs-lookup"><span data-stu-id="9e6fb-311">The collection link or database link if using a partition resolver</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-312">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-312">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-313">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-313">Represents the feed options.</span></span>
+      optional: true
+    - id: options.partitionKey
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-314">パーティション リゾルバーで使用する省略可能なパーティション キー</span><span class="sxs-lookup"><span data-stu-id="9e6fb-314">Optional partition key to be used with the partition resolver</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-315">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-315">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryDocuments(documentsFeedOrDatabaseLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryPartitionKeyRanges
+  id: documentdb.DocumentClient#queryPartitionKeyRanges
+  parent: documentdb.DocumentClient
+  name: queryPartitionKeyRanges(databaseLink, query, options)
+  summary: <span data-ttu-id="9e6fb-316">パーティション キー範囲をクエリします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-316">Query the partition key ranges</span></span>
+  fullName: documentdb.DocumentClient.queryPartitionKeyRanges(databaseLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-317">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-317">The self-link of the database.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-318">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-318">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-319">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-319">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-320">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-320">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryPartitionKeyRanges(databaseLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryAttachments
+  id: documentdb.DocumentClient#queryAttachments
+  parent: documentdb.DocumentClient
+  name: queryAttachments(documentLink, query, options)
+  summary: <span data-ttu-id="9e6fb-321">ドキュメントの添付ファイルをクエリします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-321">Query the attachments for the document.</span></span>
+  fullName: documentdb.DocumentClient.queryAttachments(documentLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-322">ドキュメントは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-322">The self-link of the document.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-323">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-323">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-324">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-324">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-325">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-325">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryAttachments(documentLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryUsers
+  id: documentdb.DocumentClient#queryUsers
+  parent: documentdb.DocumentClient
+  name: queryUsers(databaseLink, query, options)
+  summary: <span data-ttu-id="9e6fb-326">データベースのユーザーのクエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-326">Query the users for the database.</span></span>
+  fullName: documentdb.DocumentClient.queryUsers(databaseLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-327">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-327">The self-link of the database.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-328">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-328">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-329">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-329">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-330">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-330">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryUsers(databaseLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryPermissions
+  id: documentdb.DocumentClient#queryPermissions
+  parent: documentdb.DocumentClient
+  name: queryPermissions(userLink, query, options)
+  summary: <span data-ttu-id="9e6fb-331">ユーザーのアクセス許可のクエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-331">Query the permission for the user.</span></span>
+  fullName: documentdb.DocumentClient.queryPermissions(userLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-332">ユーザーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-332">The self-link of the user.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-333">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-333">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-334">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-334">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-335">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-335">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryPermissions(userLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryTriggers
+  id: documentdb.DocumentClient#queryTriggers
+  parent: documentdb.DocumentClient
+  name: queryTriggers(collectionLink, query, options)
+  summary: <span data-ttu-id="9e6fb-336">コレクションのトリガーのクエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-336">Query the triggers for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryTriggers(collectionLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-337">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-337">The self-link of the collection.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-338">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-338">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-339">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-339">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-340">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-340">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryTriggers(collectionLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryUserDefinedFunctions
+  id: documentdb.DocumentClient#queryUserDefinedFunctions
+  parent: documentdb.DocumentClient
+  name: queryUserDefinedFunctions(collectionLink, query, options)
+  summary: <span data-ttu-id="9e6fb-341">クエリ ユーザーには、コレクションの関数が定義されています。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-341">Query the user defined functions for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryUserDefinedFunctions(collectionLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-342">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-342">The self-link of the collection.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-343">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-343">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-344">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-344">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-345">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-345">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryUserDefinedFunctions(collectionLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryStoredProcedures
+  id: documentdb.DocumentClient#queryStoredProcedures
+  parent: documentdb.DocumentClient
+  name: queryStoredProcedures(collectionLink, query, options)
+  summary: <span data-ttu-id="9e6fb-346">コレクションの storedProcedures をクエリします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-346">Query the storedProcedures for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryStoredProcedures(collectionLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-347">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-347">The self-link of the collection.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-348">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-348">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-349">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-349">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-350">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-350">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryStoredProcedures(collectionLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryConflicts
+  id: documentdb.DocumentClient#queryConflicts
+  parent: documentdb.DocumentClient
+  name: queryConflicts(collectionLink, query, options)
+  summary: <span data-ttu-id="9e6fb-351">クエリ、コレクションに対して競合をします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-351">Query the conflicts for the collection.</span></span>
+  fullName: documentdb.DocumentClient.queryConflicts(collectionLink, query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-352">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-352">The self-link of the collection.</span></span>
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-353">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-353">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-354">フィードのオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-354">Represents the feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-355">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-355">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function queryConflicts(collectionLink, query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteDatabase
+  id: documentdb.DocumentClient#deleteDatabase
+  parent: documentdb.DocumentClient
+  name: deleteDatabase(databaseLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-356">データベース オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-356">Delete the database object.</span></span>
+  fullName: documentdb.DocumentClient.deleteDatabase(databaseLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-357">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-357">The self-link of the database.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-358">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-358">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-359">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-359">The callback for the request.</span></span>
+    content: function deleteDatabase(databaseLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteCollection
+  id: documentdb.DocumentClient#deleteCollection
+  parent: documentdb.DocumentClient
+  name: deleteCollection(collectionLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-360">コレクション オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-360">Delete the collection object.</span></span>
+  fullName: documentdb.DocumentClient.deleteCollection(collectionLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-361">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-361">The self-link of the collection.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-362">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-362">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-363">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-363">The callback for the request.</span></span>
+    content: function deleteCollection(collectionLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteDocument
+  id: documentdb.DocumentClient#deleteDocument
+  parent: documentdb.DocumentClient
+  name: deleteDocument(documentLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-364">ドキュメント オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-364">Delete the document object.</span></span>
+  fullName: documentdb.DocumentClient.deleteDocument(documentLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-365">ドキュメントは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-365">The self-link of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-366">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-366">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-367">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-367">The callback for the request.</span></span>
+    content: function deleteDocument(documentLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteAttachment
+  id: documentdb.DocumentClient#deleteAttachment
+  parent: documentdb.DocumentClient
+  name: deleteAttachment(attachmentLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-368">添付ファイルのオブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-368">Delete the attachment object.</span></span>
+  fullName: documentdb.DocumentClient.deleteAttachment(attachmentLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: attachmentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-369">自己リンク、添付ファイル。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-369">The self-link of the attachment.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-370">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-370">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-371">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-371">The callback for the request.</span></span>
+    content: function deleteAttachment(attachmentLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteUser
+  id: documentdb.DocumentClient#deleteUser
+  parent: documentdb.DocumentClient
+  name: deleteUser(userLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-372">ユーザー オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-372">Delete the user object.</span></span>
+  fullName: documentdb.DocumentClient.deleteUser(userLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-373">ユーザーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-373">The self-link of the user.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-374">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-374">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-375">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-375">The callback for the request.</span></span>
+    content: function deleteUser(userLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deletePermission
+  id: documentdb.DocumentClient#deletePermission
+  parent: documentdb.DocumentClient
+  name: deletePermission(permissionLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-376">アクセス許可オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-376">Delete the permission object.</span></span>
+  fullName: documentdb.DocumentClient.deletePermission(permissionLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: permissionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-377">自己リンク アクセス許可。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-377">The self-link of the permission.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-378">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-378">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-379">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-379">The callback for the request.</span></span>
+    content: function deletePermission(permissionLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteTrigger
+  id: documentdb.DocumentClient#deleteTrigger
+  parent: documentdb.DocumentClient
+  name: deleteTrigger(triggerLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-380">トリガー オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-380">Delete the trigger object.</span></span>
+  fullName: documentdb.DocumentClient.deleteTrigger(triggerLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: triggerLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-381">トリガーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-381">The self-link of the trigger.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-382">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-382">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-383">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-383">The callback for the request.</span></span>
+    content: function deleteTrigger(triggerLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteUserDefinedFunction
+  id: documentdb.DocumentClient#deleteUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: deleteUserDefinedFunction(udfLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-384">UserDefinedFunction オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-384">Delete the UserDefinedFunction object.</span></span>
+  fullName: documentdb.DocumentClient.deleteUserDefinedFunction(udfLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: udfLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-385">ユーザーの自己リンク関数を定義します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-385">The self-link of the user defined function.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-386">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-386">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-387">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-387">The callback for the request.</span></span>
+    content: function deleteUserDefinedFunction(udfLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteStoredProcedure
+  id: documentdb.DocumentClient#deleteStoredProcedure
+  parent: documentdb.DocumentClient
+  name: deleteStoredProcedure(sprocLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-388">StoredProcedure オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-388">Delete the StoredProcedure object.</span></span>
+  fullName: documentdb.DocumentClient.deleteStoredProcedure(sprocLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sprocLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-389">ストアド プロシージャは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-389">The self-link of the stored procedure.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-390">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-390">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-391">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-391">The callback for the request.</span></span>
+    content: function deleteStoredProcedure(sprocLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#deleteConflict
+  id: documentdb.DocumentClient#deleteConflict
+  parent: documentdb.DocumentClient
+  name: deleteConflict(conflictLink, options, callback)
+  summary: <span data-ttu-id="9e6fb-392">競合オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-392">Delete the conflict object.</span></span>
+  fullName: documentdb.DocumentClient.deleteConflict(conflictLink, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: conflictLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-393">競合は自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-393">The self-link of the conflict.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-394">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-394">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-395">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-395">The callback for the request.</span></span>
+    content: function deleteConflict(conflictLink, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceCollection
+  id: documentdb.DocumentClient#replaceCollection
+  parent: documentdb.DocumentClient
+  name: replaceCollection(collectionLink, collection, options, callback)
+  summary: <span data-ttu-id="9e6fb-396">ドキュメント コレクションを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-396">Replace the document collection.</span></span>
+  fullName: documentdb.DocumentClient.replaceCollection(collectionLink, collection, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-397">自己リンクのドキュメントのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-397">The self-link of the document collection.</span></span>
+    - id: collection
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-398">ドキュメント コレクションの新しい本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-398">Represent the new document collection body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-399">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-399">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-400">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-400">The callback for the request.</span></span>
+    content: function replaceCollection(collectionLink, collection, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceDocument
+  id: documentdb.DocumentClient#replaceDocument
+  parent: documentdb.DocumentClient
+  name: replaceDocument(documentLink, document, options, callback)
+  summary: <span data-ttu-id="9e6fb-401">ドキュメント オブジェクトを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-401">Replace the document object.</span></span>
+  fullName: documentdb.DocumentClient.replaceDocument(documentLink, document, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-402">ドキュメントは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-402">The self-link of the document.</span></span>
+    - id: document
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-403">新しいドキュメントの本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-403">Represent the new document body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-404">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-404">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-405">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-405">The callback for the request.</span></span>
+    content: function replaceDocument(documentLink, document, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceAttachment
+  id: documentdb.DocumentClient#replaceAttachment
+  parent: documentdb.DocumentClient
+  name: replaceAttachment(attachmentLink, attachment, options, callback)
+  summary: <span data-ttu-id="9e6fb-406">添付ファイルのオブジェクトを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-406">Replace the attachment object.</span></span>
+  fullName: documentdb.DocumentClient.replaceAttachment(attachmentLink, attachment, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: attachmentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-407">自己リンク、添付ファイル。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-407">The self-link of the attachment.</span></span>
+    - id: attachment
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-408">新しい添付ファイルの本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-408">Represent the new attachment body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-409">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-409">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-410">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-410">The callback for the request.</span></span>
+    content: function replaceAttachment(attachmentLink, attachment, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceUser
+  id: documentdb.DocumentClient#replaceUser
+  parent: documentdb.DocumentClient
+  name: replaceUser(userLink, user, options, callback)
+  summary: <span data-ttu-id="9e6fb-411">ユーザー オブジェクトを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-411">Replace the user object.</span></span>
+  fullName: documentdb.DocumentClient.replaceUser(userLink, user, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-412">ユーザーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-412">The self-link of the user.</span></span>
+    - id: user
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-413">新しいユーザーの本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-413">Represent the new user body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-414">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-414">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-415">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-415">The callback for the request.</span></span>
+    content: function replaceUser(userLink, user, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replacePermission
+  id: documentdb.DocumentClient#replacePermission
+  parent: documentdb.DocumentClient
+  name: replacePermission(permissionLink, permission, options, callback)
+  summary: <span data-ttu-id="9e6fb-416">アクセス許可オブジェクトを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-416">Replace the permission object.</span></span>
+  fullName: documentdb.DocumentClient.replacePermission(permissionLink, permission, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: permissionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-417">自己リンク アクセス許可。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-417">The self-link of the permission.</span></span>
+    - id: permission
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-418">新しいアクセス許可の本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-418">Represent the new permission body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-419">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-419">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-420">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-420">The callback for the request.</span></span>
+    content: function replacePermission(permissionLink, permission, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceTrigger
+  id: documentdb.DocumentClient#replaceTrigger
+  parent: documentdb.DocumentClient
+  name: replaceTrigger(triggerLink, trigger, options, callback)
+  summary: <span data-ttu-id="9e6fb-421">トリガー オブジェクトを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-421">Replace the trigger object.</span></span>
+  fullName: documentdb.DocumentClient.replaceTrigger(triggerLink, trigger, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: triggerLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-422">トリガーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-422">The self-link of the trigger.</span></span>
+    - id: trigger
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-423">新しいトリガーの本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-423">Represent the new trigger body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-424">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-424">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-425">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-425">The callback for the request.</span></span>
+    content: function replaceTrigger(triggerLink, trigger, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceUserDefinedFunction
+  id: documentdb.DocumentClient#replaceUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: replaceUserDefinedFunction(udfLink, udf, options, callback)
+  summary: <span data-ttu-id="9e6fb-426">UserDefinedFunction オブジェクトを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-426">Replace the UserDefinedFunction object.</span></span>
+  fullName: documentdb.DocumentClient.replaceUserDefinedFunction(udfLink, udf, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: udfLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-427">ユーザーの自己リンク関数を定義します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-427">The self-link of the user defined function.</span></span>
+    - id: udf
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-428">新しい udf の本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-428">Represent the new udf body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-429">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-429">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-430">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-430">The callback for the request.</span></span>
+    content: function replaceUserDefinedFunction(udfLink, udf, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceStoredProcedure
+  id: documentdb.DocumentClient#replaceStoredProcedure
+  parent: documentdb.DocumentClient
+  name: replaceStoredProcedure(sprocLink, sproc, options, callback)
+  summary: <span data-ttu-id="9e6fb-431">StoredProcedure オブジェクトを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-431">Replace the StoredProcedure object.</span></span>
+  fullName: documentdb.DocumentClient.replaceStoredProcedure(sprocLink, sproc, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sprocLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-432">ストアド プロシージャは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-432">The self-link of the stored procedure.</span></span>
+    - id: sproc
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-433">新しいストアド プロシージャの本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-433">Represent the new sproc body.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-434">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-434">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-435">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-435">The callback for the request.</span></span>
+    content: function replaceStoredProcedure(sprocLink, sproc, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertDocument
+  id: documentdb.DocumentClient#upsertDocument
+  parent: documentdb.DocumentClient
+  name: upsertDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-436">ドキュメントのアップサート</span><span class="sxs-lookup"><span data-stu-id="9e6fb-436">Upsert a document.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-437">JSON ドキュメントのセットのスキーマはありません。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-437">There is no set schema for JSON documents.</span></span> <span data-ttu-id="9e6fb-438">任意の数のカスタム プロパティおよび添付ファイルのオプションのリストに含まれる場合があります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-438">They may contain any number of custom properties as well as an optional list of attachments.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-439">ドキュメントは、アプリケーションのリソースとのマスター _ キーまたはリソース キーを使用して承認することができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-439">A Document is an application resource and can be authorized using the master key or resource keys</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.upsertDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentsFeedOrDatabaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-440">コレクションのリンクまたはパーティション リゾルバーを使用している場合、データベースのリンク</span><span class="sxs-lookup"><span data-stu-id="9e6fb-440">The collection link or database link if using a partition resolver</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-441">ドキュメントの本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-441">Represents the body of the document.</span></span> <span data-ttu-id="9e6fb-442">任意の数のユーザー定義プロパティを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-442">Can contain any number of user defined properties.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-443">ドキュメントの id は、ドキュメントごとに固有である必要があります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-443">The id of the document, MUST be unique for each document.</span></span>
+      optional: true
+    - id: body.ttl
+      type:
+      - number
+      description: <span data-ttu-id="9e6fb-444">ドキュメントの秒の有効期間。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-444">The time to live in seconds of the document.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-445">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-445">The request options.</span></span>
+      optional: true
+    - id: options.disableAutomaticIdGeneration
+      type:
+      - boolean
+      description: <span data-ttu-id="9e6fb-446">自動 id 生成を無効にします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-446">Disables the automatic id generation.</span></span> <span data-ttu-id="9e6fb-447">本文に id がありませんし、このオプションが true の場合、エラーが返されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-447">If id is missing in the body and this option is true, an error will be returned.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-448">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-448">The callback for the request.</span></span>
+    content: function upsertDocument(documentsFeedOrDatabaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertAttachment
+  id: documentdb.DocumentClient#upsertAttachment
+  parent: documentdb.DocumentClient
+  name: upsertAttachment(documentLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-449">Upsert ドキュメント オブジェクトの添付ファイル。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-449">Upsert an attachment for the document object.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-450">各ドキュメントには、0 個以上の添付ファイルを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-450">Each document may contain zero or more attachments.</span></span> <span data-ttu-id="9e6fb-451">テキスト、イメージ、バイナリ データの MIME タイプの添付ファイルができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-451">Attachments can be of any MIME type - text, image, binary data.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-452">これらは、Azure Blob ストレージの外部で保存されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-452">These are stored externally in Azure Blob storage.</span></span> <span data-ttu-id="9e6fb-453">親ドキュメントが削除されたときに、添付ファイルが自動的に削除します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-453">Attachments are automatically deleted when the parent document is deleted.</span></span>
+
+    </P>
+  fullName: documentdb.DocumentClient.upsertAttachment(documentLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-454">ドキュメントは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-454">The self-link of the document.</span></span>
+    - id: body
+      type:
+      - Object
+      description: <span data-ttu-id="9e6fb-455">メタデータ、メディア、contentType のように、添付ファイルのメディアを定義します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-455">The metadata the defines the attachment media like media, contentType.</span></span> <span data-ttu-id="9e6fb-456">メタデータの一部として、その他のプロパティを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-456">It can include any other properties as part of the metedata.</span></span>
+    - id: body.contentType
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-457">添付ファイルの MIME コンテンツ タイプ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-457">The MIME contentType of the attachment.</span></span>
+    - id: body.media
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-458">添付ファイルのコンテンツに関連付けられたメディア リンク。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-458">Media link associated with the attachment content.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-459">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-459">The request options.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-460">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-460">The callback for the request.</span></span>
+    content: function upsertAttachment(documentLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertUser
+  id: documentdb.DocumentClient#upsertUser
+  parent: documentdb.DocumentClient
+  name: upsertUser(databaseLink, body, options, callback)
+  summary: <span data-ttu-id="9e6fb-461">Upsert データベース ユーザーです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-461">Upsert a database user.</span></span>
+  fullName: documentdb.DocumentClient.upsertUser(databaseLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: databaseLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-462">データベースは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-462">The self-link of the database.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-463">ユーザーの本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-463">Represents the body of the user.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-464">ユーザーの id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-464">The id of the user.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-465">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-465">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-466">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-466">The callback for the request.</span></span>
+    content: function upsertUser(databaseLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertPermission
+  id: documentdb.DocumentClient#upsertPermission
+  parent: documentdb.DocumentClient
+  name: upsertPermission(userLink, body, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-467">Upsert を許可します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-467">Upsert a permission.</span></span>
+
+    <p> <span data-ttu-id="9e6fb-468">アクセス許可は、ユーザーごとにドキュメントやコレクションなどの特定のリソースにアクセスする権限を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-468">A permission represents a per-User Permission to access a specific resource e.g. Document or Collection.</span></span>  </p>
+  fullName: documentdb.DocumentClient.upsertPermission(userLink, body, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: userLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-469">ユーザーは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-469">The self-link of the user.</span></span>
+    - id: body
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-470">アクセス許可の本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-470">Represents the body of the permission.</span></span>
+    - id: body.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-471">アクセス許可の id</span><span class="sxs-lookup"><span data-stu-id="9e6fb-471">The id of the permission</span></span>
+    - id: body.permissionMode
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-472">アクセス許可モードの値でなければなりません <xref:documentdb.PermissionMode></span><span class="sxs-lookup"><span data-stu-id="9e6fb-472">The mode of the permission, must be a value of <xref:documentdb.PermissionMode></span></span>
+    - id: body.resource
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-473">適用されるアクセス許可リソースのリンク。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-473">The link of the resource that the permission will be applied to.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-474">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-474">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-475">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-475">The callback for the request.</span></span>
+    content: function upsertPermission(userLink, body, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertTrigger
+  id: documentdb.DocumentClient#upsertTrigger
+  parent: documentdb.DocumentClient
+  name: upsertTrigger(collectionLink, trigger, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-476">Upsert をトリガーします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-476">Upsert a trigger.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-477">実行する JavaScript で定義されている投稿トリガーを作成、更新および削除を azure Cosmos DB より前のサポートします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-477">Azure Cosmos DB supports pre and post triggers defined in JavaScript to be executed on creates, updates and deletes.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-478">詳細については、サーバー側 JavaScript API のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-478">For additional details, refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.upsertTrigger(collectionLink, trigger, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-479">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-479">The self-link of the collection.</span></span>
+    - id: trigger
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-480">トリガーの本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-480">Represents the body of the trigger.</span></span>
+    - id: trigger.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-481">トリガーの id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-481">The id of the trigger.</span></span>
+    - id: trigger.triggerType
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-482">トリガーの種類は、の値のいずれかを指定する必要があります<xref:documentdb.TriggerType>します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-482">The type of the trigger, should be one of the values of <xref:documentdb.TriggerType>.</span></span>
+    - id: trigger.triggerOperation
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-483">トリガーの操作は、の値のいずれかを指定する必要があります<xref:documentdb.TriggerOperation>します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-483">The trigger operation, should be one of the values of <xref:documentdb.TriggerOperation>.</span></span>
+    - id: trigger.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="9e6fb-484">トリガーの本文を渡すことができますも文字列として。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-484">The body of the trigger, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-485">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-485">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-486">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-486">The callback for the request.</span></span>
+    content: function upsertTrigger(collectionLink, trigger, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertUserDefinedFunction
+  id: documentdb.DocumentClient#upsertUserDefinedFunction
+  parent: documentdb.DocumentClient
+  name: upsertUserDefinedFunction(collectionLink, udf, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-487">Upsert をユーザー定義関数。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-487">Upsert a UserDefinedFunction.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-488">Azure Cosmos DB では、クエリ、ストアド プロシージャおよびトリガー内で使用できる JavaScript Udf をサポートします。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-488">Azure Cosmos DB supports JavaScript UDFs which can be used inside queries, stored procedures and triggers.</span></span> <br>
+
+    <span data-ttu-id="9e6fb-489">詳細については、サーバー側 JavaScript API のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-489">For additional details, refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.upsertUserDefinedFunction(collectionLink, udf, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-490">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-490">The self-link of the collection.</span></span>
+    - id: udf
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-491">UserDefinedFunction の本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-491">Represents the body of the userDefinedFunction.</span></span>
+    - id: udf.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-492">Udf の id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-492">The id of the udf.</span></span>
+    - id: udf.userDefinedFunctionType
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-493">Udf の種類、必要があるの値のいずれか <xref:documentdb.UserDefinedFunctionType></span><span class="sxs-lookup"><span data-stu-id="9e6fb-493">The type of the udf, it should be one of the values of <xref:documentdb.UserDefinedFunctionType></span></span>
+    - id: udf.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="9e6fb-494">本体を表す、udf を渡すことができますも文字列として。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-494">Represents the body of the udf, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-495">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-495">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-496">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-496">The callback for the request.</span></span>
+    content: function upsertUserDefinedFunction(collectionLink, udf, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertStoredProcedure
+  id: documentdb.DocumentClient#upsertStoredProcedure
+  parent: documentdb.DocumentClient
+  name: upsertStoredProcedure(collectionLink, sproc, options, callback)
+  summary: >-
+    <span data-ttu-id="9e6fb-497">Upsert ストアド プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-497">Upsert a StoredProcedure.</span></span>
+
+    <p>
+
+    <span data-ttu-id="9e6fb-498">Azure Cosmos DB では、ドキュメントのコレクションに対して直接記憶域階層で実行されるストアド プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-498">Azure Cosmos DB allows stored procedures to be executed in the storage tier, directly against a document collection.</span></span> <span data-ttu-id="9e6fb-499">スクリプト</span><span class="sxs-lookup"><span data-stu-id="9e6fb-499">The script</span></span> <br>
+
+    <span data-ttu-id="9e6fb-500">指定したコレクションのプライマリ ストレージのパーティションに ACID トランザクションで実行を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-500">gets executed under ACID transactions on the primary storage partition of the specified collection.</span></span> <span data-ttu-id="9e6fb-501">詳細については、</span><span class="sxs-lookup"><span data-stu-id="9e6fb-501">For additional details,</span></span> <br>
+
+    <span data-ttu-id="9e6fb-502">サーバー側 JavaScript API のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-502">refer to the server-side JavaScript API documentation.</span></span>
+
+    </p>
+  fullName: documentdb.DocumentClient.upsertStoredProcedure(collectionLink, sproc, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-503">自己リンクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-503">The self-link of the collection.</span></span>
+    - id: sproc
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-504">ストアド プロシージャの本体を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-504">Represents the body of the stored procedure.</span></span>
+    - id: sproc.id
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-505">ストアド プロシージャの id。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-505">The id of the stored procedure.</span></span>
+    - id: sproc.serverScript
+      type:
+      - function
+      description: <span data-ttu-id="9e6fb-506">ストアド プロシージャの本文を渡すことができますも文字列として。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-506">The body of the stored procedure, it can be passed as stringified too.</span></span>
+    - id: options
+      type:
+      - documentdb.RequestOptions
+      description: <span data-ttu-id="9e6fb-507">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-507">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-508">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-508">The callback for the request.</span></span>
+    content: function upsertStoredProcedure(collectionLink, sproc, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#upsertAttachmentAndUploadMedia
+  id: documentdb.DocumentClient#upsertAttachmentAndUploadMedia
+  parent: documentdb.DocumentClient
+  name: upsertAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  summary: <span data-ttu-id="9e6fb-509">Upsert ドキュメント オブジェクトの添付ファイル。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-509">Upsert an attachment for the document object.</span></span>
+  fullName: documentdb.DocumentClient.upsertAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: documentLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-510">ドキュメントは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-510">The self-link of the document.</span></span>
+    - id: readableStream
+      type:
+      - documentdb.stream.Readable
+      description: <span data-ttu-id="9e6fb-511">アップロードする必要があるメディア自体を表すストリーム。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-511">the stream that represents the media itself that needs to be uploaded.</span></span>
+    - id: options
+      type:
+      - documentdb.MediaOptions
+      description: <span data-ttu-id="9e6fb-512">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-512">The request options.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-513">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-513">The callback for the request.</span></span>
+    content: function upsertAttachmentAndUploadMedia(documentLink, readableStream, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readMedia
+  id: documentdb.DocumentClient#readMedia
+  parent: documentdb.DocumentClient
+  name: readMedia(mediaLink, callback)
+  summary: <span data-ttu-id="9e6fb-514">添付ファイルのオブジェクト用のメディアを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-514">Read the media for the attachment object.</span></span>
+  fullName: documentdb.DocumentClient.readMedia(mediaLink, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-515">添付ファイルのメディアのメディア リンク。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-515">The media link of the media in the attachment.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-516">要求のコールバックをバッファーまたはの値に応じて、ストリーム、結果のパラメーターを指定できます<xref:documentdb.MediaReadMode>します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-516">The callback for the request, the result parameter can be a buffer or a stream depending on the value of <xref:documentdb.MediaReadMode>.</span></span>
+    content: function readMedia(mediaLink, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#updateMedia
+  id: documentdb.DocumentClient#updateMedia
+  parent: documentdb.DocumentClient
+  name: updateMedia(mediaLink, readableStream, options, callback)
+  summary: <span data-ttu-id="9e6fb-517">添付ファイルのメディアの更新</span><span class="sxs-lookup"><span data-stu-id="9e6fb-517">Update media for the attachment</span></span>
+  fullName: documentdb.DocumentClient.updateMedia(mediaLink, readableStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-518">添付ファイルのメディアのメディア リンク。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-518">The media link of the media in the attachment.</span></span>
+    - id: readableStream
+      type:
+      - documentdb.stream.Readable
+      description: <span data-ttu-id="9e6fb-519">アップロードする必要があるメディア自体を表すストリーム。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-519">The stream that represents the media itself that needs to be uploaded.</span></span>
+    - id: options
+      type:
+      - documentdb.MediaOptions
+      description: <span data-ttu-id="9e6fb-520">メディアのオプション</span><span class="sxs-lookup"><span data-stu-id="9e6fb-520">options for the media</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-521">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-521">The callback for the request.</span></span>
+    content: function updateMedia(mediaLink, readableStream, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#executeStoredProcedure
+  id: documentdb.DocumentClient#executeStoredProcedure
+  parent: documentdb.DocumentClient
+  name: executeStoredProcedure(sprocLink, params, options, callback)
+  summary: <span data-ttu-id="9e6fb-522">パーティション キーを持つ、オブジェクトによって表されるストアド プロシージャを実行します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-522">Execute the StoredProcedure represented by the object with partition key.</span></span>
+  fullName: documentdb.DocumentClient.executeStoredProcedure(sprocLink, params, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sprocLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-523">ストアド プロシージャは自己リンクは、します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-523">The self-link of the stored procedure.</span></span>
+    - id: params
+      type:
+      - Array
+      description: <span data-ttu-id="9e6fb-524">ストアド プロシージャのパラメーターを表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-524">represent the parameters of the stored procedure.</span></span>
+      optional: true
+    - id: options
+      type:
+      - Object
+      description: <span data-ttu-id="9e6fb-525">パーティション キー</span><span class="sxs-lookup"><span data-stu-id="9e6fb-525">partition key</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-526">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-526">The callback for the request.</span></span>
+    content: function executeStoredProcedure(sprocLink, params, options, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#replaceOffer
+  id: documentdb.DocumentClient#replaceOffer
+  parent: documentdb.DocumentClient
+  name: replaceOffer(offerLink, offer, callback)
+  summary: <span data-ttu-id="9e6fb-527">オファー オブジェクトを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-527">Replace the offer object.</span></span>
+  fullName: documentdb.DocumentClient.replaceOffer(offerLink, offer, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: offerLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-528">自己リンクの提供。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-528">The self-link of the offer.</span></span>
+    - id: offer
+      type:
+      - object
+      description: <span data-ttu-id="9e6fb-529">新しいプランの本文を表します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-529">Represent the new offer body.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-530">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-530">The callback for the request.</span></span>
+    content: function replaceOffer(offerLink, offer, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readOffer
+  id: documentdb.DocumentClient#readOffer
+  parent: documentdb.DocumentClient
+  name: readOffer(offerLink, callback)
+  summary: <span data-ttu-id="9e6fb-531">プランを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-531">Reads an offer.</span></span>
+  fullName: documentdb.DocumentClient.readOffer(offerLink, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: offerLink
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-532">自己リンクの提供。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-532">The self-link of the offer.</span></span>
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-533">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-533">The callback for the request.</span></span>
+    content: function readOffer(offerLink, callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#readOffers
+  id: documentdb.DocumentClient#readOffers
+  parent: documentdb.DocumentClient
+  name: readOffers(options)
+  summary: <span data-ttu-id="9e6fb-534">すべてのプランを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-534">Lists all offers.</span></span>
+  fullName: documentdb.DocumentClient.readOffers(options)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-535">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-535">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-536">読み取りフィードを処理するために queryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-536">An instance of queryIterator to handle reading feed.</span></span>'
+    content: function readOffers(options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#queryOffers
+  id: documentdb.DocumentClient#queryOffers
+  parent: documentdb.DocumentClient
+  name: queryOffers(query, options)
+  summary: <span data-ttu-id="9e6fb-537">クエリに適合するすべてのプランを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-537">Lists all offers that satisfy a query.</span></span>
+  fullName: documentdb.DocumentClient.queryOffers(query, options)
+  type: Function
+  syntax:
+    parameters:
+    - id: query
+      type:
+      - documentdb.SqlQuerySpec
+      - string
+      description: <span data-ttu-id="9e6fb-538">SQL クエリ。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-538">A SQL query.</span></span>
+    - id: options
+      type:
+      - documentdb.FeedOptions
+      description: <span data-ttu-id="9e6fb-539">フィードのオプションです。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-539">The feed options.</span></span>
+      optional: true
+    return:
+      type:
+      - documentdb.QueryIterator
+      description: '- <span data-ttu-id="9e6fb-540">読み取りフィードを処理するために QueryIterator のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-540">An instance of QueryIterator to handle reading feed.</span></span>'
+    content: function queryOffers(query, options)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#getDatabaseAccount
+  id: documentdb.DocumentClient#getDatabaseAccount
+  parent: documentdb.DocumentClient
+  name: getDatabaseAccount(callback)
+  summary: <span data-ttu-id="9e6fb-541">データベースのアカウント情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-541">Gets the Database account information.</span></span>
+  fullName: documentdb.DocumentClient.getDatabaseAccount(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options.urlConnection
+      type:
+      - string
+      description: <span data-ttu-id="9e6fb-542">エンドポイント url は、データベース アカウントが取得する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-542">The endpoint url whose database account needs to be retrieved.</span></span> <span data-ttu-id="9e6fb-543">表示ない場合は、現時点では、現在のクライアントの url が使用されます。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-543">If not present, current client's url will be used.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - documentdb.RequestCallback
+      description: <span data-ttu-id="9e6fb-544">要求のコールバック。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-544">The callback for the request.</span></span> <span data-ttu-id="9e6fb-545">コールバックの 2 番目のパラメーターの型がで<xref:documentdb.DatabaseAccount>します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-545">The second parameter of the callback will be of type <xref:documentdb.DatabaseAccount>.</span></span>
+    content: function getDatabaseAccount(callback)
+  langs:
+  - js
+- uid: documentdb.DocumentClient#getSessionToken
+  id: documentdb.DocumentClient#getSessionToken
+  parent: documentdb.DocumentClient
+  name: getSessionToken(collectionLink)
+  summary: <span data-ttu-id="9e6fb-546">指定された collectionLink の SessionToken を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e6fb-546">Gets the SessionToken for a given collectionLink</span></span>
+  fullName: documentdb.DocumentClient.getSessionToken(collectionLink)
+  type: Function
+  syntax:
+    parameters:
+    - id: collectionLink
+      description: <span data-ttu-id="9e6fb-547">セッション トークンを必要とするコレクションのリンク</span><span class="sxs-lookup"><span data-stu-id="9e6fb-547">The link of the collection for which the session token is needed</span></span>
+    content: function getSessionToken(collectionLink)
+  langs:
+  - js
+references:
+- uid: documentdb.QueryIterator
+  name: QueryIterator
+  fullName: documentdb.QueryIterator
+  isExternal: false

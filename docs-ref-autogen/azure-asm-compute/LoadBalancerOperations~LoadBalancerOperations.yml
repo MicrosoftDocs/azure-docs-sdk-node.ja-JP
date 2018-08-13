@@ -1,0 +1,347 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: baf17532e911689324ff3b6a43fc6937bdf430d8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063889"
+items:
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations
+  summary: >-
+    <span data-ttu-id="b6a03-101">コンピューティングの管理 API には、サブスクリプションのロード バランサーを管理するための操作が含まれます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-101">The Compute Management API includes operations for managing the load balancers for your subscription.</span></span>
+
+    <span data-ttu-id="b6a03-102">__注__: [ComputeManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link ComputeManagementClient ~ ComputeManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="b6a03-102">__NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="b6a03-103">[LoadBalancers] を参照してください。 {@link ComputeManagementClient ~ ComputeManagementClient #loadBalancers}。</span><span class="sxs-lookup"><span data-stu-id="b6a03-103">See [loadBalancers] {@link ComputeManagementClient~ComputeManagementClient#loadBalancers}.</span></span>
+
+    <span data-ttu-id="b6a03-104">LoadBalancerOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-104">Initializes a new instance of the LoadBalancerOperations class.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations
+  type: Class
+  children:
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations(client)
+  fullName: azure-asm-compute.LoadBalancerOperations.LoadBalancerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="b6a03-105">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="b6a03-105">Reference to the service client.</span></span>
+    content: new LoadBalancerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginCreating(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="b6a03-106">内部ロード バランサーを追加、既存の展開。</span><span class="sxs-lookup"><span data-stu-id="b6a03-106">Add an internal load balancer to a an existing deployment.</span></span> <span data-ttu-id="b6a03-107">入力エンドポイントで使用する場合、内部ロード バランサーは負荷分散をこの展開のロールに使用できる追加のプライベート VIP を提供します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-107">When used by an input endpoint, the internal load balancer will provide an additional private VIP that can be used for load balancing to the roles in this deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginCreating(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-108">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-108">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-109">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-109">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: <span data-ttu-id="b6a03-110">ロード バランサーの作成操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="b6a03-110">Parameters supplied to the Create Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-111">ロード バランサーの名前です。</span><span class="sxs-lookup"><span data-stu-id="b6a03-111">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="b6a03-112">仮想 IP アドレス (VIP) このロード バランサーの構成を提供します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-112">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-113">このロード バランサーの VIP の種類。</span><span class="sxs-lookup"><span data-stu-id="b6a03-113">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="b6a03-114">現在、唯一 'Private' はサポートされます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-114">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="b6a03-115">これにより、負荷分散プライベート VIP でサービスが作成されます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-115">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-116">展開が、仮想ネットワーク内に存在する場合は、ロード バランサーの仮想ネットワークのサブネットを指定してください。</span><span class="sxs-lookup"><span data-stu-id="b6a03-116">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="b6a03-117">ロード バランサーによって管理されている VIP はこのサブネットから IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-117">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="b6a03-118">展開では、仮想ネットワークの外部で存在する場合、サブネットを指定しないと、プライベート VIP は、一般的なプライベート アドレス プールから IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-118">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-119">仮想ネットワーク内で、展開が存在する場合は、ロード バランサーのサブネットから特定のアドレスを指定できます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-119">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="b6a03-120">ロード バランサーの VIP はこの特定の IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-120">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="b6a03-121">静的仮想ネットワークの IP アドレスが指定されている場合、ロード バランサーの SubnetName 要素も指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-121">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="b6a03-122">展開では、仮想ネットワークの外部で存在する場合、仮想ネットワークの静的 IP アドレスは指定しません。</span><span class="sxs-lookup"><span data-stu-id="b6a03-122">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="b6a03-123">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="b6a03-123">The response stream.</span></span>
+    content: function beginCreating(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  summary: <span data-ttu-id="b6a03-124">内部ロード バランサーを展開から削除します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-124">Delete an internal load balancer from the deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-125">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-125">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-126">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-126">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-127">ロード バランサーの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-127">The name of the load balancer.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="b6a03-128">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="b6a03-128">The response stream.</span></span>
+    content: function beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: <span data-ttu-id="b6a03-129">既存のデプロイに関連付けられている内部ロード バランサーを更新します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-129">Updates an internal load balancer associated with an existing deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-130">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-130">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-131">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-131">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-132">ロード バランサーの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-132">The name of the loadBalancer.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: <span data-ttu-id="b6a03-133">ロード バランサーの更新操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="b6a03-133">Parameters supplied to the Update Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-134">ロード バランサーの名前です。</span><span class="sxs-lookup"><span data-stu-id="b6a03-134">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="b6a03-135">仮想 IP アドレス (VIP) このロード バランサーの構成を提供します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-135">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-136">このロード バランサーの VIP の種類。</span><span class="sxs-lookup"><span data-stu-id="b6a03-136">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="b6a03-137">現在、唯一 'Private' はサポートされます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-137">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="b6a03-138">これにより、負荷分散プライベート VIP でサービスが作成されます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-138">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-139">展開が、仮想ネットワーク内に存在する場合は、ロード バランサーの仮想ネットワークのサブネットを指定してください。</span><span class="sxs-lookup"><span data-stu-id="b6a03-139">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="b6a03-140">ロード バランサーによって管理されている VIP はこのサブネットから IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-140">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="b6a03-141">展開では、仮想ネットワークの外部で存在する場合、サブネットを指定しないと、プライベート VIP は、一般的なプライベート アドレス プールから IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-141">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-142">仮想ネットワーク内で、展開が存在する場合は、ロード バランサーのサブネットから特定のアドレスを指定できます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-142">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="b6a03-143">ロード バランサーの VIP はこの特定の IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-143">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="b6a03-144">静的仮想ネットワークの IP アドレスが指定されている場合、ロード バランサーの SubnetName 要素も指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-144">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="b6a03-145">展開では、仮想ネットワークの外部で存在する場合、仮想ネットワークの静的 IP アドレスは指定しません。</span><span class="sxs-lookup"><span data-stu-id="b6a03-145">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="b6a03-146">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="b6a03-146">The response stream.</span></span>
+    content: function beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: create(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="b6a03-147">内部ロード バランサーを追加、既存の展開。</span><span class="sxs-lookup"><span data-stu-id="b6a03-147">Add an internal load balancer to a an existing deployment.</span></span> <span data-ttu-id="b6a03-148">入力エンドポイントで使用する場合、内部ロード バランサーは負荷分散をこの展開のロールに使用できる追加のプライベート VIP を提供します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-148">When used by an input endpoint, the internal load balancer will provide an additional private VIP that can be used for load balancing to the roles in this deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.create(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-149">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-149">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-150">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-150">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: <span data-ttu-id="b6a03-151">ロード バランサーの作成操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="b6a03-151">Parameters supplied to the Create Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-152">ロード バランサーの名前です。</span><span class="sxs-lookup"><span data-stu-id="b6a03-152">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="b6a03-153">仮想 IP アドレス (VIP) このロード バランサーの構成を提供します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-153">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-154">このロード バランサーの VIP の種類。</span><span class="sxs-lookup"><span data-stu-id="b6a03-154">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="b6a03-155">現在、唯一 'Private' はサポートされます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-155">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="b6a03-156">これにより、負荷分散プライベート VIP でサービスが作成されます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-156">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-157">展開が、仮想ネットワーク内に存在する場合は、ロード バランサーの仮想ネットワークのサブネットを指定してください。</span><span class="sxs-lookup"><span data-stu-id="b6a03-157">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="b6a03-158">ロード バランサーによって管理されている VIP はこのサブネットから IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-158">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="b6a03-159">展開では、仮想ネットワークの外部で存在する場合、サブネットを指定しないと、プライベート VIP は、一般的なプライベート アドレス プールから IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-159">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-160">仮想ネットワーク内で、展開が存在する場合は、ロード バランサーのサブネットから特定のアドレスを指定できます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-160">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="b6a03-161">ロード バランサーの VIP はこの特定の IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-161">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="b6a03-162">静的仮想ネットワークの IP アドレスが指定されている場合、ロード バランサーの SubnetName 要素も指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-162">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="b6a03-163">展開では、仮想ネットワークの外部で存在する場合、仮想ネットワークの静的 IP アドレスは指定しません。</span><span class="sxs-lookup"><span data-stu-id="b6a03-163">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="b6a03-164">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="b6a03-164">The response stream.</span></span>
+    content: function create(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  summary: <span data-ttu-id="b6a03-165">内部ロード バランサーを展開から削除します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-165">Delete an internal load balancer from the deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-166">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-166">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-167">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-167">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-168">ロード バランサーの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-168">The name of the load balancer.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="b6a03-169">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="b6a03-169">The response stream.</span></span>
+    content: function deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: <span data-ttu-id="b6a03-170">既存のデプロイに関連付けられている内部ロード バランサーを更新します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-170">Updates an internal load balancer associated with an existing deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-171">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-171">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-172">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-172">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-173">ロード バランサーの名前。</span><span class="sxs-lookup"><span data-stu-id="b6a03-173">The name of the loadBalancer.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: <span data-ttu-id="b6a03-174">ロード バランサーの更新操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="b6a03-174">Parameters supplied to the Update Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-175">ロード バランサーの名前です。</span><span class="sxs-lookup"><span data-stu-id="b6a03-175">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="b6a03-176">仮想 IP アドレス (VIP) このロード バランサーの構成を提供します。</span><span class="sxs-lookup"><span data-stu-id="b6a03-176">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-177">このロード バランサーの VIP の種類。</span><span class="sxs-lookup"><span data-stu-id="b6a03-177">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="b6a03-178">現在、唯一 'Private' はサポートされます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-178">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="b6a03-179">これにより、負荷分散プライベート VIP でサービスが作成されます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-179">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-180">展開が、仮想ネットワーク内に存在する場合は、ロード バランサーの仮想ネットワークのサブネットを指定してください。</span><span class="sxs-lookup"><span data-stu-id="b6a03-180">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="b6a03-181">ロード バランサーによって管理されている VIP はこのサブネットから IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-181">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="b6a03-182">展開では、仮想ネットワークの外部で存在する場合、サブネットを指定しないと、プライベート VIP は、一般的なプライベート アドレス プールから IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-182">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="b6a03-183">仮想ネットワーク内で、展開が存在する場合は、ロード バランサーのサブネットから特定のアドレスを指定できます。</span><span class="sxs-lookup"><span data-stu-id="b6a03-183">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="b6a03-184">ロード バランサーの VIP はこの特定の IP アドレスになります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-184">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="b6a03-185">静的仮想ネットワークの IP アドレスが指定されている場合、ロード バランサーの SubnetName 要素も指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6a03-185">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="b6a03-186">展開では、仮想ネットワークの外部で存在する場合、仮想ネットワークの静的 IP アドレスは指定しません。</span><span class="sxs-lookup"><span data-stu-id="b6a03-186">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="b6a03-187">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="b6a03-187">The response stream.</span></span>
+    content: function update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js

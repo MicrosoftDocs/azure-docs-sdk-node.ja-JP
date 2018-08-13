@@ -1,0 +1,228 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 69cd8be33fc74bdf792e221b491c62d90f8c69d5
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064182"
+items:
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: DatabaseCopyOperations
+  summary: >-
+    <span data-ttu-id="a50c1-101">SQL Database Management API を表すには、サブスクリプションの SQL Server データベースのコピーを管理するための操作が含まれます。</span><span class="sxs-lookup"><span data-stu-id="a50c1-101">Represents the SQL Database Management API includes operations for managing SQL Server database copies for a subscription.</span></span>
+
+    <span data-ttu-id="a50c1-102">__注__: [SqlManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link SqlManagementClient ~ SqlManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="a50c1-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="a50c1-103">[DatabaseCopies] を参照してください。 {@link SqlManagementClient ~ SqlManagementClient #databaseCopies}。</span><span class="sxs-lookup"><span data-stu-id="a50c1-103">See [databaseCopies] {@link SqlManagementClient~SqlManagementClient#databaseCopies}.</span></span>
+
+    <span data-ttu-id="a50c1-104">DatabaseCopyOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-104">Initializes a new instance of the DatabaseCopyOperations class.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.#ctor
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#create
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#deleteMethod
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#get
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#list
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.#ctor
+  uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.#ctor
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: DatabaseCopyOperations(client)
+  fullName: azure-asm-sql.DatabaseCopyOperations.DatabaseCopyOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="a50c1-105">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="a50c1-105">Reference to the service client.</span></span>
+    content: new DatabaseCopyOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#create
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#create
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: create(serverName, databaseName, parameters, callback)
+  summary: <span data-ttu-id="a50c1-106">SQL Server データベースのコピーを開始します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-106">Starts a SQL Server database copy.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.create(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-107">ソース データベースが存在する SQL Server の名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-107">The name of the SQL Server where the source database resides.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-108">ソース データベースの名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-108">The name of the source database.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCopyCreateParameters
+      description: <span data-ttu-id="a50c1-109">データベースの作成の他のパラメーターは、操作をコピーします。</span><span class="sxs-lookup"><span data-stu-id="a50c1-109">The additional parameters for the create database copy operation.</span></span>
+    - id: parameters.partnerServer
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-110">コピーの移行先サーバーの名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-110">Gets the name of the destination server for the copy.</span></span>
+    - id: parameters.partnerDatabase
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-111">コピーの転送先データベースの名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-111">Gets the name of the destination database for the copy.</span></span>
+    - id: parameters.isContinuous
+      type:
+      - boolean
+      description: <span data-ttu-id="a50c1-112">コピーを継続的にするかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-112">Gets a value that indicates whether the copy should be continuous.</span></span>
+    - id: parameters.isOfflineSecondary
+      type:
+      - boolean
+      description: <span data-ttu-id="a50c1-113">オフラインのセカンダリ コピーであるかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-113">Gets a value that indicates whether it is an offline secondary copy.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a50c1-114">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="a50c1-114">The response stream.</span></span>
+    content: function create(serverName, databaseName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#deleteMethod
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#deleteMethod
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: deleteMethod(serverName, databaseName, databaseCopyName, callback)
+  summary: <span data-ttu-id="a50c1-115">SQL Server データベースのコピーを停止します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-115">Stops a SQL Server database copy.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.deleteMethod(serverName, databaseName, databaseCopyName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-116">ソースまたは変換先の SQL Server インスタンスの名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-116">The name of the source or destination SQL Server instance.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-117">データベースの名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-117">The name of the database.</span></span>
+    - id: databaseCopyName
+      type:
+      - azure-asm-sql.Guid
+      description: <span data-ttu-id="a50c1-118">停止するデータベースのコピーの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="a50c1-118">The unique identifier for the database copy to stop.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a50c1-119">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="a50c1-119">The response stream.</span></span>
+    content: function deleteMethod(serverName, databaseName, databaseCopyName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#get
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#get
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: get(serverName, databaseName, databaseCopyName, callback)
+  summary: <span data-ttu-id="a50c1-120">SQL Server データベースのコピーに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-120">Retrieves information about a SQL Server database copy.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.get(serverName, databaseName, databaseCopyName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-121">ソースまたは変換先の SQL Server インスタンスの名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-121">The name of the source or destination SQL Server instance.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-122">データベースの名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-122">The name of the database.</span></span>
+    - id: databaseCopyName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-123">取得するデータベースのコピーの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="a50c1-123">The unique identifier for the database copy to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a50c1-124">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="a50c1-124">The response stream.</span></span>
+    content: function get(serverName, databaseName, databaseCopyName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#list
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#list
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: list(serverName, databaseName, callback)
+  summary: <span data-ttu-id="a50c1-125">データベースの SQL Server データベースのコピーの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-125">Retrieves the list of SQL Server database copies for a database.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.list(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-126">クエリを実行するデータベース サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-126">The name of the database server to be queried.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-127">クエリを実行するデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-127">The name of the database to be queried.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a50c1-128">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="a50c1-128">The response stream.</span></span>
+    content: function list(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#update
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#update
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: update(serverName, databaseName, databaseCopyName, parameters, callback)
+  summary: <span data-ttu-id="a50c1-129">SQL Server データベースのコピーを更新します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-129">Updates a SQL Server database copy.</span></span>
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.update(serverName, databaseName, databaseCopyName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-130">ソースまたは変換先の SQL Server インスタンスの名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-130">The name of the source or destination SQL Server instance.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="a50c1-131">データベースの名前。</span><span class="sxs-lookup"><span data-stu-id="a50c1-131">The name of the database.</span></span>
+    - id: databaseCopyName
+      type:
+      - azure-asm-sql.Guid
+      description: <span data-ttu-id="a50c1-132">更新するデータベースのコピーの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="a50c1-132">The unique identifier for the database copy to update.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCopyUpdateParameters
+      description: <span data-ttu-id="a50c1-133">データベースの更新の追加のパラメーターは、操作をコピーします。</span><span class="sxs-lookup"><span data-stu-id="a50c1-133">The additional parameters for the update database copy operation.</span></span>
+    - id: parameters.isForcedTerminate
+      type:
+      - boolean
+      description: <span data-ttu-id="a50c1-134">取得または強制またはフレンドリ終了は、データベースの削除操作が発生するかどうかを設定します。</span><span class="sxs-lookup"><span data-stu-id="a50c1-134">Gets or sets whether a Delete Database Operation will result in forced or friendly termination.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="a50c1-135">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="a50c1-135">The response stream.</span></span>
+    content: function update(serverName, databaseName, databaseCopyName, parameters, callback)
+  langs:
+  - js

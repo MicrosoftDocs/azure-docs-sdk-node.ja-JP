@@ -1,0 +1,466 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f8d4332e8e550322acec13e55dc8b09a55d188ab
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063894"
+items:
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations
+  summary: >-
+    <span data-ttu-id="cd996-101">Service Bus の管理 API には、Service Bus 名前空間を管理するための操作が含まれます。</span><span class="sxs-lookup"><span data-stu-id="cd996-101">The Service Bus Management API includes operations for managing Service Bus namespaces.</span></span>
+
+    <span data-ttu-id="cd996-102">__注__: [ServiceBusManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link ServiceBusManagementClient ~ ServiceBusManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="cd996-102">__NOTE__: An instance of this class is automatically created for an instance of the [ServiceBusManagementClient] {@link ServiceBusManagementClient~ServiceBusManagementClient}.</span></span>
+
+    <span data-ttu-id="cd996-103">[名前空間] を参照してください。 {@link ServiceBusManagementClient ~ ServiceBusManagementClient #namespaces}。</span><span class="sxs-lookup"><span data-stu-id="cd996-103">See [namespaces] {@link ServiceBusManagementClient~ServiceBusManagementClient#namespaces}.</span></span>
+
+    <span data-ttu-id="cd996-104">NamespaceOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="cd996-104">Initializes a new instance of the NamespaceOperations class.</span></span>
+  fullName: azure-asm-sb.NamespaceOperations
+  type: Class
+  children:
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  langs:
+  - js
+- id: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  uid: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations(client)
+  fullName: azure-asm-sb.NamespaceOperations.NamespaceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: <span data-ttu-id="cd996-105">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="cd996-105">Reference to the service client.</span></span>
+    content: new NamespaceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: checkAvailability(namespaceName, callback)
+  summary: <span data-ttu-id="cd996-106">すべての Windows Azure サブスクリプションでは、特定のサービス名前空間の可用性を確認します。</span><span class="sxs-lookup"><span data-stu-id="cd996-106">Checks the availability of the given service namespace across all Windows Azure subscriptions.</span></span> <span data-ttu-id="cd996-107">これは、機能は、ドメイン名がサービス名前空間の名前に基づいて作成されるため便利です。</span><span class="sxs-lookup"><span data-stu-id="cd996-107">This is useful because the domain name is created based on the service namespace name.</span></span>  <span data-ttu-id="cd996-108">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj870968.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="cd996-108">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj870968.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.checkAvailability(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-109">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-109">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-110">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-110">The response stream.</span></span>
+    content: function checkAvailability(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: create(namespaceName, region, callback)
+  summary: <span data-ttu-id="cd996-111">新しいサービス名前空間を作成します。</span><span class="sxs-lookup"><span data-stu-id="cd996-111">Creates a new service namespace.</span></span> <span data-ttu-id="cd996-112">作成されると、この名前空間のリソース マニフェストは不変です。</span><span class="sxs-lookup"><span data-stu-id="cd996-112">Once created, this namespace's resource manifest is immutable.</span></span> <span data-ttu-id="cd996-113">この操作は、べき等です。</span><span class="sxs-lookup"><span data-stu-id="cd996-113">This operation is idempotent.</span></span>  <span data-ttu-id="cd996-114">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="cd996-114">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.create(namespaceName, region, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-115">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-115">The namespace name.</span></span>
+    - id: region
+      type:
+      - string
+      description: <span data-ttu-id="cd996-116">名前空間となる領域。</span><span class="sxs-lookup"><span data-stu-id="cd996-116">The namespace region.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-117">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-117">The response stream.</span></span>
+    content: function create(namespaceName, region, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createAuthorizationRule(namespaceName, rule, callback)
+  summary: <span data-ttu-id="cd996-118">作成する名前空間の承認規則の操作は、名前空間の承認規則を作成します。</span><span class="sxs-lookup"><span data-stu-id="cd996-118">The create namespace authorization rule operation creates an authorization rule for a namespace</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-119">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-119">The namespace name.</span></span>
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: <span data-ttu-id="cd996-120">共有アクセス承認規則。</span><span class="sxs-lookup"><span data-stu-id="cd996-120">The shared access authorization rule.</span></span>
+    - id: rule.keyName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-121">使用されたキーの名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-121">The name of the key that was used.</span></span>
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: <span data-ttu-id="cd996-122">使用された主キー。</span><span class="sxs-lookup"><span data-stu-id="cd996-122">The primary key that was used.</span></span>
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: <span data-ttu-id="cd996-123">サポートされているセカンダリ キー。</span><span class="sxs-lookup"><span data-stu-id="cd996-123">The secondary key that was used.</span></span>
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: <span data-ttu-id="cd996-124">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="cd996-124">The type of the claim.</span></span>
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: <span data-ttu-id="cd996-125">要求の値。</span><span class="sxs-lookup"><span data-stu-id="cd996-125">The value of the claim.</span></span>
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: <span data-ttu-id="cd996-126">ルールに関連付けられている権限。</span><span class="sxs-lookup"><span data-stu-id="cd996-126">The rights associated with the rule.</span></span>
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: <span data-ttu-id="cd996-127">承認規則が作成された時刻。</span><span class="sxs-lookup"><span data-stu-id="cd996-127">The time at which the authorization rule was created.</span></span>
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: <span data-ttu-id="cd996-128">ルールが更新された最新の日時。</span><span class="sxs-lookup"><span data-stu-id="cd996-128">The most recent time the rule was updated.</span></span>
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: <span data-ttu-id="cd996-129">ルールのリビジョン番号。</span><span class="sxs-lookup"><span data-stu-id="cd996-129">The revision number for the rule.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-130">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-130">The response stream.</span></span>
+    content: function createAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createNamespace(namespaceName, namespaceEntity, callback)
+  summary: <span data-ttu-id="cd996-131">新しいサービス名前空間を作成します。</span><span class="sxs-lookup"><span data-stu-id="cd996-131">Creates a new service namespace.</span></span> <span data-ttu-id="cd996-132">作成されると、この名前空間のリソース マニフェストは不変です。</span><span class="sxs-lookup"><span data-stu-id="cd996-132">Once created, this namespace's resource manifest is immutable.</span></span> <span data-ttu-id="cd996-133">この操作は、べき等です。</span><span class="sxs-lookup"><span data-stu-id="cd996-133">This operation is idempotent.</span></span>  <span data-ttu-id="cd996-134">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="cd996-134">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createNamespace(namespaceName, namespaceEntity, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-135">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-135">The namespace name.</span></span>
+    - id: namespaceEntity
+      type:
+      - azure-asm-sb.ServiceBusNamespaceCreateParameters
+      description: <span data-ttu-id="cd996-136">Service bus 名前空間にします。</span><span class="sxs-lookup"><span data-stu-id="cd996-136">The service bus namespace.</span></span>
+    - id: namespaceEntity.region
+      type:
+      - string
+      description: <span data-ttu-id="cd996-137">名前空間となる領域。</span><span class="sxs-lookup"><span data-stu-id="cd996-137">The namespace region.</span></span>
+    - id: namespaceEntity.createACSNamespace
+      type:
+      - boolean
+      description: <span data-ttu-id="cd996-138">かどうか ServiceBus の ACS 認証を必要とします。</span><span class="sxs-lookup"><span data-stu-id="cd996-138">Whether or not ACS authentication is needed for ServiceBus.</span></span>
+      optional: true
+    - id: namespaceEntity.namespaceType
+      type:
+      - azure-asm-sb.NamespaceType
+      description: <span data-ttu-id="cd996-139">取得または名前空間の種類を設定します。</span><span class="sxs-lookup"><span data-stu-id="cd996-139">Gets or sets the namespace type.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-140">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-140">The response stream.</span></span>
+    content: function createNamespace(namespaceName, namespaceEntity, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteMethod(namespaceName, callback)
+  summary: <span data-ttu-id="cd996-141">既存の名前空間を削除します。</span><span class="sxs-lookup"><span data-stu-id="cd996-141">Deletes an existing namespace.</span></span> <span data-ttu-id="cd996-142">この操作には、キュー、トピック、リレー ポイント、および名前空間に格納されているメッセージを含むすべての関連エンティティも削除されます。</span><span class="sxs-lookup"><span data-stu-id="cd996-142">This operation also removes all associated entities including queues, topics, relay points, and messages stored under the namespace.</span></span>  <span data-ttu-id="cd996-143">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856296.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="cd996-143">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856296.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteMethod(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-144">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-144">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-145">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-145">The response stream.</span></span>
+    content: function deleteMethod(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteAuthorizationRule(namespaceName, ruleName, callback)
+  summary: <span data-ttu-id="cd996-146">名前空間の承認規則の削除操作は、名前空間の承認規則を削除します。</span><span class="sxs-lookup"><span data-stu-id="cd996-146">The delete namespace authorization rule operation deletes an authorization rule for a namespace</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteAuthorizationRule(namespaceName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-147">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-147">The namespace name.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-148">規則の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-148">The rule name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-149">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-149">The response stream.</span></span>
+    content: function deleteAuthorizationRule(namespaceName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: get(namespaceName, callback)
+  summary: <span data-ttu-id="cd996-150">指定した名前空間の説明を返します。</span><span class="sxs-lookup"><span data-stu-id="cd996-150">Returns the description for the specified namespace.</span></span>  <span data-ttu-id="cd996-151">(を参照してくださいhttp://msdn.microsoft.com/library/azure/dn140232.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="cd996-151">(see http://msdn.microsoft.com/library/azure/dn140232.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.get(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-152">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-152">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-153">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-153">The response stream.</span></span>
+    content: function get(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getAuthorizationRule(namespaceName, entityName, callback)
+  summary: <span data-ttu-id="cd996-154">承認規則の取得操作では、名前で名前空間の承認規則を取得します。</span><span class="sxs-lookup"><span data-stu-id="cd996-154">The get authorization rule operation gets an authorization rule for a namespace by name.</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getAuthorizationRule(namespaceName, entityName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-155">名前空間の承認規則を取得します。</span><span class="sxs-lookup"><span data-stu-id="cd996-155">The namespace to get the authorization rule for.</span></span>
+    - id: entityName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-156">承認規則を取得するエンティティの名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-156">The entity name to get the authorization rule for.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-157">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-157">The response stream.</span></span>
+    content: function getAuthorizationRule(namespaceName, entityName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getNamespaceDescription(namespaceName, callback)
+  summary: <span data-ttu-id="cd996-158">名前空間の説明は、サービス名前空間の目的のセマンティクスを定義する XML AtomPub ドキュメントです。</span><span class="sxs-lookup"><span data-stu-id="cd996-158">The namespace description is an XML AtomPub document that defines the desired semantics for a service namespace.</span></span> <span data-ttu-id="cd996-159">名前空間の説明には、次のプロパティが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd996-159">The namespace description contains the following properties.</span></span>  <span data-ttu-id="cd996-160">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj873988.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="cd996-160">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj873988.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getNamespaceDescription(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-161">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-161">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-162">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-162">The response stream.</span></span>
+    content: function getNamespaceDescription(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: list(callback)
+  summary: <span data-ttu-id="cd996-163">使用可能な名前空間の一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="cd996-163">Lists the available namespaces.</span></span>  <span data-ttu-id="cd996-164">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/azure/hh780759.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="cd996-164">(see http://msdn.microsoft.com/en-us/library/azure/hh780759.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-165">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-165">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: listAuthorizationRules(namespaceName, callback)
+  summary: <span data-ttu-id="cd996-166">承認規則の取得操作では、名前空間の承認規則を取得します。</span><span class="sxs-lookup"><span data-stu-id="cd996-166">The get authorization rules operation gets the authorization rules for a namespace.</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.listAuthorizationRules(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-167">名前空間の承認規則を取得します。</span><span class="sxs-lookup"><span data-stu-id="cd996-167">The namespace to get the authorization rule for.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-168">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-168">The response stream.</span></span>
+    content: function listAuthorizationRules(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: updateAuthorizationRule(namespaceName, rule, callback)
+  summary: <span data-ttu-id="cd996-169">更新プログラムの承認規則の操作では、名前空間の承認規則を更新します。</span><span class="sxs-lookup"><span data-stu-id="cd996-169">The update authorization rule operation updates an authorization rule for a namespace.</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.updateAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-170">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-170">The namespace name.</span></span>
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: <span data-ttu-id="cd996-171">更新されたアクセスの承認規則。</span><span class="sxs-lookup"><span data-stu-id="cd996-171">Updated access authorization rule.</span></span>
+      optional: true
+    - id: rule.keyName
+      type:
+      - string
+      description: <span data-ttu-id="cd996-172">使用されたキーの名前。</span><span class="sxs-lookup"><span data-stu-id="cd996-172">The name of the key that was used.</span></span>
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: <span data-ttu-id="cd996-173">使用された主キー。</span><span class="sxs-lookup"><span data-stu-id="cd996-173">The primary key that was used.</span></span>
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: <span data-ttu-id="cd996-174">サポートされているセカンダリ キー。</span><span class="sxs-lookup"><span data-stu-id="cd996-174">The secondary key that was used.</span></span>
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: <span data-ttu-id="cd996-175">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="cd996-175">The type of the claim.</span></span>
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: <span data-ttu-id="cd996-176">要求の値。</span><span class="sxs-lookup"><span data-stu-id="cd996-176">The value of the claim.</span></span>
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: <span data-ttu-id="cd996-177">ルールに関連付けられている権限。</span><span class="sxs-lookup"><span data-stu-id="cd996-177">The rights associated with the rule.</span></span>
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: <span data-ttu-id="cd996-178">承認規則が作成された時刻。</span><span class="sxs-lookup"><span data-stu-id="cd996-178">The time at which the authorization rule was created.</span></span>
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: <span data-ttu-id="cd996-179">ルールが更新された最新の日時。</span><span class="sxs-lookup"><span data-stu-id="cd996-179">The most recent time the rule was updated.</span></span>
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: <span data-ttu-id="cd996-180">ルールのリビジョン番号。</span><span class="sxs-lookup"><span data-stu-id="cd996-180">The revision number for the rule.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cd996-181">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cd996-181">The response stream.</span></span>
+    content: function updateAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js

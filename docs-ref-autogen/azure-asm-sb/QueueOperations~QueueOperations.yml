@@ -1,0 +1,471 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4e46f0fcf1c3a688b4a2234840c62b9c527faea6
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063906"
+items:
+- uid: azure-asm-sb.QueueOperations~QueueOperations
+  id: azure-asm-sb.QueueOperations~QueueOperations
+  name: QueueOperations
+  summary: >-
+    <span data-ttu-id="0831a-101">Service Bus の管理 API には、Service Bus キューを管理するための操作が含まれます。</span><span class="sxs-lookup"><span data-stu-id="0831a-101">The Service Bus Management API includes operations for managing Service Bus queues.</span></span>
+
+    <span data-ttu-id="0831a-102">__注__: [ServiceBusManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link ServiceBusManagementClient ~ ServiceBusManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="0831a-102">__NOTE__: An instance of this class is automatically created for an instance of the [ServiceBusManagementClient] {@link ServiceBusManagementClient~ServiceBusManagementClient}.</span></span>
+
+    <span data-ttu-id="0831a-103">[キュー] を参照してください。 {@link ServiceBusManagementClient ~ ServiceBusManagementClient #queues}。</span><span class="sxs-lookup"><span data-stu-id="0831a-103">See [queues] {@link ServiceBusManagementClient~ServiceBusManagementClient#queues}.</span></span>
+
+    <span data-ttu-id="0831a-104">QueueOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="0831a-104">Initializes a new instance of the QueueOperations class.</span></span>
+  fullName: azure-asm-sb.QueueOperations
+  type: Class
+  children:
+  - azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  - azure-asm-sb.QueueOperations~QueueOperations#create
+  - azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  - azure-asm-sb.QueueOperations~QueueOperations#get
+  - azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  - azure-asm-sb.QueueOperations~QueueOperations#list
+  - azure-asm-sb.QueueOperations~QueueOperations#update
+  langs:
+  - js
+- id: azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  uid: azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: QueueOperations(client)
+  fullName: azure-asm-sb.QueueOperations.QueueOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: <span data-ttu-id="0831a-105">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="0831a-105">Reference to the service client.</span></span>
+    content: new QueueOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#create
+  id: azure-asm-sb.QueueOperations~QueueOperations#create
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: create(namespaceName, queue, callback)
+  summary: <span data-ttu-id="0831a-106">新しいキューを作成します。</span><span class="sxs-lookup"><span data-stu-id="0831a-106">Creates a new queue.</span></span> <span data-ttu-id="0831a-107">作成されると、このキューのリソース マニフェストは不変です。</span><span class="sxs-lookup"><span data-stu-id="0831a-107">Once created, this queue's resource manifest is immutable.</span></span> <span data-ttu-id="0831a-108">この操作は、べき等です。</span><span class="sxs-lookup"><span data-stu-id="0831a-108">This operation is idempotent.</span></span> <span data-ttu-id="0831a-109">同じ名前のキューが正常に作成された後に作成の呼び出しを繰り返すと、409 競合エラー メッセージが発生します。</span><span class="sxs-lookup"><span data-stu-id="0831a-109">Repeating the create call, after a queue with same name has been created successfully, will result in a 409 Conflict error message.</span></span>  <span data-ttu-id="0831a-110">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856295.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="0831a-110">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856295.aspx for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.create(namespaceName, queue, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0831a-111">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="0831a-111">The namespace name.</span></span>
+    - id: queue
+      type:
+      - azure-asm-sb.ServiceBusQueueCreateParameters
+      description: <span data-ttu-id="0831a-112">Service bus のキュー。</span><span class="sxs-lookup"><span data-stu-id="0831a-112">The service bus queue.</span></span>
+    - id: queue.name
+      type:
+      - string
+      description: <span data-ttu-id="0831a-113">キューの名前。</span><span class="sxs-lookup"><span data-stu-id="0831a-113">The name of the queue.</span></span>
+    - id: queue.lockDuration
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="0831a-114">受信者の処理のメッセージのロックを秒単位の時間を決定します。</span><span class="sxs-lookup"><span data-stu-id="0831a-114">Determines the amount of time in seconds in which a message should be locked for processing by a receiver.</span></span>
+
+        <span data-ttu-id="0831a-115">この期間の後メッセージは、次の受信者によってはロックを解除し、使用可能。</span><span class="sxs-lookup"><span data-stu-id="0831a-115">After this period, the message is unlocked and available for consumption by the next receiver.</span></span> <span data-ttu-id="0831a-116">キューの作成時にのみ設定可能: \* 範囲: 0 - 5 分。</span><span class="sxs-lookup"><span data-stu-id="0831a-116">Settable only at queue creation time:\* Range: 0 - 5 minutes.</span></span> <span data-ttu-id="0831a-117">0 は、メッセージがロックされていないことを意味する \* 既定値: 30 秒</span><span class="sxs-lookup"><span data-stu-id="0831a-117">0 means that the message is not locked\* Default: 30 seconds</span></span>
+      optional: true
+    - id: queue.maxSizeInMegabytes
+      type:
+      - number
+      description: '<span data-ttu-id="0831a-118">キューの最大サイズをメガバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="0831a-118">Specifies the maximum queue size in megabytes.</span></span> <span data-ttu-id="0831a-119">この値を超えるキューを原因となるメッセージをエンキューする試みは失敗します。</span><span class="sxs-lookup"><span data-stu-id="0831a-119">Any attempt to enqueue a message that will cause the queue to exceed this value will fail.</span></span> <span data-ttu-id="0831a-120">このパラメーターは、次の値を使用してキューの作成時にのみ設定できます: \* 範囲: 1 ~ 1024 (有効な値は 1024、2048、3072、4096、5120) \* 既定: 1 \* 1024 (有効な値は 1024、2048、4096、5120 3072)</span><span class="sxs-lookup"><span data-stu-id="0831a-120">You can only set this parameter at queue creation time using the following values: \* Range: 1 - 1024 (valid values are 1024, 2048, 3072, 4096, 5120) \* Default: 1\*1024 (valid values are 1024, 2048, 3072, 4096, 5120)</span></span>'
+      optional: true
+    - id: queue.requiresDuplicateDetection
+      type:
+      - boolean
+      description: '<span data-ttu-id="0831a-121">永続的なキューのキュー作成良く既定値にのみ設定可能: false</span><span class="sxs-lookup"><span data-stu-id="0831a-121">Settable only at queue creation time.\* Default for durable queue: false</span></span>'
+      optional: true
+    - id: queue.requiresSession
+      type:
+      - boolean
+      description: '<span data-ttu-id="0831a-122">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="0831a-122">Settable only at queue creation time.</span></span> <span data-ttu-id="0831a-123">True の場合、キューに設定する場合は、セッション対応であり、唯一の SessionReceiver がサポートされます。</span><span class="sxs-lookup"><span data-stu-id="0831a-123">If set to true, the queue will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="0831a-124">セッション対応キューは永続的なキューの REST.\* が既定でサポートされていません: false</span><span class="sxs-lookup"><span data-stu-id="0831a-124">Session-aware queues are not supported through REST.\* Default for durable queue: false</span></span>'
+      optional: true
+    - id: queue.defaultMessageTimeToLive
+      type:
+      - string
+      description: '<span data-ttu-id="0831a-125">配信不能が有効かどうかによってメッセージの DeadLetterQueue に移動または削除の指定した時間より長くキューに格納されている場合に自動的にします。</span><span class="sxs-lookup"><span data-stu-id="0831a-125">Depending on whether DeadLettering is enabled, a message is automatically moved to the DeadLetterQueue or deleted if it has been stored in the queue for longer than the specified time.</span></span> <span data-ttu-id="0831a-126">この値は、メッセージの TTL がキューに設定された TTL より小さい場合にのみ、メッセージで指定された TTL によって上書きされます。</span><span class="sxs-lookup"><span data-stu-id="0831a-126">This value is overwritten by a TTL specified on the message if and only if the message TTL is smaller than the TTL set on the queue.</span></span> <span data-ttu-id="0831a-127">この値は、キューが作成された後、変更可能な: * 範囲: 1 秒の既定の TimeSpan.MaxValue*: TimeSpan.MaxValue</span><span class="sxs-lookup"><span data-stu-id="0831a-127">This value is immutable after the Queue has been created:* Range: 1 second - TimeSpan.MaxValue* Default: TimeSpan.MaxValue</span></span>'
+      optional: true
+    - id: queue.deadLetteringOnMessageExpiration
+      type:
+      - boolean
+      description: "<span data-ttu-id=\"0831a-128\">このフィールドは、Service Bus が TTL の有効期限が切れたメッセージを処理する方法を制御します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-128\">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id=\"0831a-129\">有効になっていると、メッセージの有効期限が切れる、Service Bus では、キューからメッセージをキューの配信不能サブキューに移動します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-129\">If it is enabled and a message expires, the Service Bus moves the message from the queue into the queue's dead-letter sub-queue.</span></span> <span data-ttu-id=\"0831a-130\">無効の場合、キューからメッセージを完全に削除されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-130\">If disabled, message will be permanently deleted from the queue.</span></span> <span data-ttu-id=\"0831a-131\">キュー作成良く既定値にのみ設定可能: false</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-131\">Settable only at queue creation time.\\* Default: false</span></span>"
+      optional: true
+    - id: queue.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: '<span data-ttu-id="0831a-132">Service Bus がメッセージの重複を検出する期間を指定します: * 範囲: 1 秒、7 日間 * 既定: 10 分</span><span class="sxs-lookup"><span data-stu-id="0831a-132">Specifies the time span during which the Service Bus detects message duplication:* Range: 1 second - 7 days* Default: 10 minutes</span></span>'
+      optional: true
+    - id: queue.maxDeliveryCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-133">SB メッセージは配信不能が移動または破棄する前に配信する試行の回数の最大数。</span><span class="sxs-lookup"><span data-stu-id="0831a-133">The maximum number of times a message SB will try to deliver before being dead lettered or discarded.</span></span>
+      optional: true
+    - id: queue.enableBatchedOperations
+      type:
+      - boolean
+      description: <span data-ttu-id="0831a-134">有効またはサービス側での特定のキューに操作を実行するときに、バッチ動作を無効にします。</span><span class="sxs-lookup"><span data-stu-id="0831a-134">Enables or disables service side batching behavior when performing operations for the specific queue.</span></span> <span data-ttu-id="0831a-135">有効な場合、service bus は収集/バッチ接続の効率をバックエンドに複数の操作。</span><span class="sxs-lookup"><span data-stu-id="0831a-135">When enabled, service bus will collect/batch multiple operations to the backend to be more connection efficient.</span></span> <span data-ttu-id="0831a-136">ユーザーが操作の待機時間の短縮を希望する場合は、この機能を無効することができます。</span><span class="sxs-lookup"><span data-stu-id="0831a-136">If user wants lower operation latency then they can disable this feature.</span></span>
+      optional: true
+    - id: queue.sizeInBytes
+      type:
+      - number
+      description: "<span data-ttu-id=\"0831a-137\">現在キューにメッセージを実際のバイト数が、キューの quota.\\* 範囲に対して占めてが反映されます 0 MaxTopicSizeinMegaBytes。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-137\">Reflects the actual bytes that messages in the queue currently occupy toward the queue's quota.\\* Range: 0 -MaxTopicSizeinMegaBytes</span></span>"
+      optional: true
+    - id: queue.messageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-138">キューに現在のメッセージの数を表示します。</span><span class="sxs-lookup"><span data-stu-id="0831a-138">Displays the number of messages currently in the queue.</span></span>
+      optional: true
+    - id: queue.isAnonymousAccessible
+      type:
+      - boolean
+      description: <span data-ttu-id="0831a-139">匿名アクセスが許可されているかどうかを取得します。</span><span class="sxs-lookup"><span data-stu-id="0831a-139">Gets whether anonymous access is allowed.</span></span>
+      optional: true
+    - id: queue.authorizationRules
+      type:
+      - array
+      description: <span data-ttu-id="0831a-140">説明の承認規則を取得します。</span><span class="sxs-lookup"><span data-stu-id="0831a-140">Gets the authorization rules for the description.</span></span>
+      optional: true
+    - id: queue.status
+      type:
+      - string
+      description: <span data-ttu-id="0831a-141">取得または設定 (有効または無効になっています)、キューの現在の状態。</span><span class="sxs-lookup"><span data-stu-id="0831a-141">Gets or sets the current status of the queue (enabled or disabled).</span></span> <span data-ttu-id="0831a-142">キューを無効にすると、そのキューが送信またはメッセージを受信できません。</span><span class="sxs-lookup"><span data-stu-id="0831a-142">When a queue is disabled, that queue cannot send or receive messages.</span></span>
+      optional: true
+    - id: queue.supportOrdering
+      type:
+      - boolean
+      description: <span data-ttu-id="0831a-143">取得またはキューが順序付けをサポートしているかどうかを設定します。</span><span class="sxs-lookup"><span data-stu-id="0831a-143">Gets or sets whether the queue supports ordering.</span></span>
+      optional: true
+    - id: queue.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: <span data-ttu-id="0831a-144">現在のキューの統計情報です。</span><span class="sxs-lookup"><span data-stu-id="0831a-144">Current queue statistics.</span></span>
+      optional: true
+    - id: queue.countDetails.activeMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-145">現在アクティブなメッセージ数。</span><span class="sxs-lookup"><span data-stu-id="0831a-145">The current number of active messages.</span></span>
+      optional: true
+    - id: queue.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-146">配信不能メッセージの現在数。</span><span class="sxs-lookup"><span data-stu-id="0831a-146">The current number of dead letters.</span></span>
+      optional: true
+    - id: queue.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-147">スケジュールされたメッセージの現在数。</span><span class="sxs-lookup"><span data-stu-id="0831a-147">The current number of scheduled messages.</span></span>
+      optional: true
+    - id: queue.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-148">現在転送配信不能メッセージ数。</span><span class="sxs-lookup"><span data-stu-id="0831a-148">The current number of transfer dead letters.</span></span>
+      optional: true
+    - id: queue.countDetails.transferMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-149">転送メッセージの現在数。</span><span class="sxs-lookup"><span data-stu-id="0831a-149">The current number of transfer messages.</span></span>
+      optional: true
+    - id: queue.autoDeleteOnIdle
+      type:
+      - string
+      description: <span data-ttu-id="0831a-150">実装されています。</span><span class="sxs-lookup"><span data-stu-id="0831a-150">Implemented.</span></span>
+      optional: true
+    - id: queue.entityAvailabilityStatus
+      type:
+      - string
+      description: <span data-ttu-id="0831a-151">キューの現在の可用性の状態。</span><span class="sxs-lookup"><span data-stu-id="0831a-151">The current availability status of the queue.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0831a-152">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="0831a-152">The response stream.</span></span>
+    content: function create(namespaceName, queue, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  id: azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: deleteMethod(namespaceName, queueName, callback)
+  summary: <span data-ttu-id="0831a-153">既存のキューを削除します。</span><span class="sxs-lookup"><span data-stu-id="0831a-153">Deletes an existing queue.</span></span> <span data-ttu-id="0831a-154">この操作では、キューにメッセージを含む関連付けられているすべての状態も削除されます。</span><span class="sxs-lookup"><span data-stu-id="0831a-154">This operation will also remove all associated state including messages in the queue.</span></span>  <span data-ttu-id="0831a-155">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/hh780747.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="0831a-155">(see http://msdn.microsoft.com/en-us/library/hh780747.aspx for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.deleteMethod(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0831a-156">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="0831a-156">The namespace name.</span></span>
+    - id: queueName
+      type:
+      - string
+      description: <span data-ttu-id="0831a-157">キュー名。</span><span class="sxs-lookup"><span data-stu-id="0831a-157">The queue name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0831a-158">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="0831a-158">The response stream.</span></span>
+    content: function deleteMethod(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#get
+  id: azure-asm-sb.QueueOperations~QueueOperations#get
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: get(namespaceName, queueName, callback)
+  summary: <span data-ttu-id="0831a-159">キューの説明は、サブスクリプションの目的のセマンティクスを定義する XML AtomPub ドキュメントです。</span><span class="sxs-lookup"><span data-stu-id="0831a-159">The queue description is an XML AtomPub document that defines the desired semantics for a subscription.</span></span> <span data-ttu-id="0831a-160">キューの説明には、次のプロパティが含まれています。</span><span class="sxs-lookup"><span data-stu-id="0831a-160">The queue description contains the following properties.</span></span> <span data-ttu-id="0831a-161">詳細については、QueueDescription プロパティのトピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0831a-161">For more information, see the QueueDescription Properties topic.</span></span>  <span data-ttu-id="0831a-162">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780773.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="0831a-162">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh780773.aspx for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.get(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0831a-163">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="0831a-163">The namespace name.</span></span>
+    - id: queueName
+      type:
+      - string
+      description: <span data-ttu-id="0831a-164">キュー名。</span><span class="sxs-lookup"><span data-stu-id="0831a-164">The queue name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0831a-165">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="0831a-165">The response stream.</span></span>
+    content: function get(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  id: azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: getConnectionDetails(namespaceName, queueName, callback)
+  summary: <span data-ttu-id="0831a-166">キューの接続文字列のセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="0831a-166">Gets the set of connection strings for a queue.</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.getConnectionDetails(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0831a-167">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="0831a-167">The namespace name.</span></span>
+    - id: queueName
+      type:
+      - string
+      description: <span data-ttu-id="0831a-168">キュー名。</span><span class="sxs-lookup"><span data-stu-id="0831a-168">The queue name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0831a-169">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="0831a-169">The response stream.</span></span>
+    content: function getConnectionDetails(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#list
+  id: azure-asm-sb.QueueOperations~QueueOperations#list
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: list(namespaceName, callback)
+  summary: <span data-ttu-id="0831a-170">サービス名前空間のキューを列挙します。</span><span class="sxs-lookup"><span data-stu-id="0831a-170">Enumerates the queues in the service namespace.</span></span> <span data-ttu-id="0831a-171">最大 100 キューまで格納している各ページに結果が返されます。</span><span class="sxs-lookup"><span data-stu-id="0831a-171">The result is returned in pages, each containing up to 100 queues.</span></span> <span data-ttu-id="0831a-172">名前空間に 100 を超えるキューが含まれている場合、最初のページとデータの次のページを表示する URI を持つ次のリンクを含むフィードが返されます。</span><span class="sxs-lookup"><span data-stu-id="0831a-172">If the namespace contains more than 100 queues, a feed is returned that contains the first page and a next link with the URI to view the next page of data.</span></span>  <span data-ttu-id="0831a-173">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780759.asp詳細)</span><span class="sxs-lookup"><span data-stu-id="0831a-173">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh780759.asp for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.list(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0831a-174">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="0831a-174">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0831a-175">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="0831a-175">The response stream.</span></span>
+    content: function list(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#update
+  id: azure-asm-sb.QueueOperations~QueueOperations#update
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: update(namespaceName, queue, callback)
+  summary: <span data-ttu-id="0831a-176">キューの説明を更新し、呼び出しを対応する DB エントリを更新します。</span><span class="sxs-lookup"><span data-stu-id="0831a-176">Updates the queue description and makes a call to update corresponding DB entries.</span></span>  <span data-ttu-id="0831a-177">(を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856305.aspx詳細)</span><span class="sxs-lookup"><span data-stu-id="0831a-177">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856305.aspx for more information)</span></span>
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.update(namespaceName, queue, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0831a-178">名前空間の名前。</span><span class="sxs-lookup"><span data-stu-id="0831a-178">The namespace name.</span></span>
+    - id: queue
+      type:
+      - azure-asm-sb.ServiceBusQueue
+      description: <span data-ttu-id="0831a-179">Service bus のキュー。</span><span class="sxs-lookup"><span data-stu-id="0831a-179">The service bus queue.</span></span>
+    - id: queue.name
+      type:
+      - string
+      description: <span data-ttu-id="0831a-180">キューの名前。</span><span class="sxs-lookup"><span data-stu-id="0831a-180">The name of the queue.</span></span>
+      optional: true
+    - id: queue.lockDuration
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="0831a-181">受信者の処理のメッセージのロックを秒単位の時間を決定します。</span><span class="sxs-lookup"><span data-stu-id="0831a-181">Determines the amount of time in seconds in which a message should be locked for processing by a receiver.</span></span>
+
+        <span data-ttu-id="0831a-182">この期間の後メッセージは、次の受信者によってはロックを解除し、使用可能。</span><span class="sxs-lookup"><span data-stu-id="0831a-182">After this period, the message is unlocked and available for consumption by the next receiver.</span></span> <span data-ttu-id="0831a-183">キューの作成時にのみ設定可能: \* 範囲: 0 - 5 分。</span><span class="sxs-lookup"><span data-stu-id="0831a-183">Settable only at queue creation time:\* Range: 0 - 5 minutes.</span></span> <span data-ttu-id="0831a-184">0 は、メッセージがロックされていないことを意味する \* 既定値: 30 秒</span><span class="sxs-lookup"><span data-stu-id="0831a-184">0 means that the message is not locked\* Default: 30 seconds</span></span>
+      optional: true
+    - id: queue.maxSizeInMegabytes
+      type:
+      - number
+      description: '<span data-ttu-id="0831a-185">キューの最大サイズをメガバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="0831a-185">Specifies the maximum queue size in megabytes.</span></span> <span data-ttu-id="0831a-186">この値を超えるキューを原因となるメッセージをエンキューする試みは失敗します。</span><span class="sxs-lookup"><span data-stu-id="0831a-186">Any attempt to enqueue a message that will cause the queue to exceed this value will fail.</span></span> <span data-ttu-id="0831a-187">このパラメーターは、次の値を使用してキューの作成時にのみ設定できます: \* 範囲: 1 ~ 1024 (有効な値は 1024、2048、3072、4096、5120) \* 既定: 1 \* 1024 (有効な値は 1024、2048、4096、5120 3072)</span><span class="sxs-lookup"><span data-stu-id="0831a-187">You can only set this parameter at queue creation time using the following values: \* Range: 1 - 1024 (valid values are 1024, 2048, 3072, 4096, 5120) \* Default: 1\*1024 (valid values are 1024, 2048, 3072, 4096, 5120)</span></span>'
+      optional: true
+    - id: queue.requiresDuplicateDetection
+      type:
+      - boolean
+      description: '<span data-ttu-id="0831a-188">永続的なキューのキュー作成良く既定値にのみ設定可能: false</span><span class="sxs-lookup"><span data-stu-id="0831a-188">Settable only at queue creation time.\* Default for durable queue: false</span></span>'
+      optional: true
+    - id: queue.requiresSession
+      type:
+      - boolean
+      description: '<span data-ttu-id="0831a-189">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="0831a-189">Settable only at queue creation time.</span></span> <span data-ttu-id="0831a-190">True の場合、キューに設定する場合は、セッション対応であり、唯一の SessionReceiver がサポートされます。</span><span class="sxs-lookup"><span data-stu-id="0831a-190">If set to true, the queue will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="0831a-191">セッション対応キューは永続的なキューの REST.\* が既定でサポートされていません: false</span><span class="sxs-lookup"><span data-stu-id="0831a-191">Session-aware queues are not supported through REST.\* Default for durable queue: false</span></span>'
+      optional: true
+    - id: queue.defaultMessageTimeToLive
+      type:
+      - string
+      description: '<span data-ttu-id="0831a-192">配信不能が有効かどうかによってメッセージの DeadLetterQueue に移動または削除の指定した時間より長くキューに格納されている場合に自動的にします。</span><span class="sxs-lookup"><span data-stu-id="0831a-192">Depending on whether DeadLettering is enabled, a message is automatically moved to the DeadLetterQueue or deleted if it has been stored in the queue for longer than the specified time.</span></span> <span data-ttu-id="0831a-193">この値は、メッセージの TTL がキューに設定された TTL より小さい場合にのみ、メッセージで指定された TTL によって上書きされます。</span><span class="sxs-lookup"><span data-stu-id="0831a-193">This value is overwritten by a TTL specified on the message if and only if the message TTL is smaller than the TTL set on the queue.</span></span> <span data-ttu-id="0831a-194">この値は、キューが作成された後、変更可能な: * 範囲: 1 秒の既定の TimeSpan.MaxValue*: TimeSpan.MaxValue</span><span class="sxs-lookup"><span data-stu-id="0831a-194">This value is immutable after the Queue has been created:* Range: 1 second - TimeSpan.MaxValue* Default: TimeSpan.MaxValue</span></span>'
+      optional: true
+    - id: queue.deadLetteringOnMessageExpiration
+      type:
+      - boolean
+      description: "<span data-ttu-id=\"0831a-195\">このフィールドは、Service Bus が TTL の有効期限が切れたメッセージを処理する方法を制御します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-195\">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id=\"0831a-196\">有効になっていると、メッセージの有効期限が切れる、Service Bus では、キューからメッセージをキューの配信不能サブキューに移動します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-196\">If it is enabled and a message expires, the Service Bus moves the message from the queue into the queue's dead-letter sub-queue.</span></span> <span data-ttu-id=\"0831a-197\">無効の場合、キューからメッセージを完全に削除されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-197\">If disabled, message will be permanently deleted from the queue.</span></span> <span data-ttu-id=\"0831a-198\">キュー作成良く既定値にのみ設定可能: false</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-198\">Settable only at queue creation time.\\* Default: false</span></span>"
+      optional: true
+    - id: queue.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: '<span data-ttu-id="0831a-199">Service Bus がメッセージの重複を検出する期間を指定します: * 範囲: 1 秒、7 日間 * 既定: 10 分</span><span class="sxs-lookup"><span data-stu-id="0831a-199">Specifies the time span during which the Service Bus detects message duplication:* Range: 1 second - 7 days* Default: 10 minutes</span></span>'
+      optional: true
+    - id: queue.maxDeliveryCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-200">SB メッセージは配信不能が移動または破棄する前に配信する試行の回数の最大数。</span><span class="sxs-lookup"><span data-stu-id="0831a-200">The maximum number of times a message SB will try to deliver before being dead lettered or discarded.</span></span>
+      optional: true
+    - id: queue.enableBatchedOperations
+      type:
+      - boolean
+      description: <span data-ttu-id="0831a-201">有効またはサービス側での特定のキューに操作を実行するときに、バッチ動作を無効にします。</span><span class="sxs-lookup"><span data-stu-id="0831a-201">Enables or disables service side batching behavior when performing operations for the specific queue.</span></span> <span data-ttu-id="0831a-202">有効な場合、service bus は収集/バッチ接続の効率をバックエンドに複数の操作。</span><span class="sxs-lookup"><span data-stu-id="0831a-202">When enabled, service bus will collect/batch multiple operations to the backend to be more connection efficient.</span></span> <span data-ttu-id="0831a-203">ユーザーが操作の待機時間の短縮を希望する場合は、この機能を無効することができます。</span><span class="sxs-lookup"><span data-stu-id="0831a-203">If user wants lower operation latency then they can disable this feature.</span></span>
+      optional: true
+    - id: queue.sizeInBytes
+      type:
+      - number
+      description: "<span data-ttu-id=\"0831a-204\">現在キューにメッセージを実際のバイト数が、キューの quota.\\* 範囲に対して占めてが反映されます 0 MaxTopicSizeinMegaBytes。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0831a-204\">Reflects the actual bytes that messages in the queue currently occupy toward the queue's quota.\\* Range: 0 -MaxTopicSizeinMegaBytes</span></span>"
+      optional: true
+    - id: queue.messageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-205">キューに現在のメッセージの数を表示します。</span><span class="sxs-lookup"><span data-stu-id="0831a-205">Displays the number of messages currently in the queue.</span></span>
+      optional: true
+    - id: queue.isAnonymousAccessible
+      type:
+      - boolean
+      description: <span data-ttu-id="0831a-206">匿名アクセスが許可されているかどうかを取得します。</span><span class="sxs-lookup"><span data-stu-id="0831a-206">Gets whether anonymous access is allowed.</span></span>
+      optional: true
+    - id: queue.authorizationRules
+      type:
+      - array
+      description: <span data-ttu-id="0831a-207">説明の承認規則を取得します。</span><span class="sxs-lookup"><span data-stu-id="0831a-207">Gets the authorization rules for the description.</span></span>
+      optional: true
+    - id: queue.status
+      type:
+      - string
+      description: <span data-ttu-id="0831a-208">取得または設定 (有効または無効になっています)、キューの現在の状態。</span><span class="sxs-lookup"><span data-stu-id="0831a-208">Gets or sets the current status of the queue (enabled or disabled).</span></span> <span data-ttu-id="0831a-209">キューを無効にすると、そのキューが送信またはメッセージを受信できません。</span><span class="sxs-lookup"><span data-stu-id="0831a-209">When a queue is disabled, that queue cannot send or receive messages.</span></span>
+      optional: true
+    - id: queue.createdAt
+      type:
+      - date
+      description: <span data-ttu-id="0831a-210">キューが作成された時刻。</span><span class="sxs-lookup"><span data-stu-id="0831a-210">The time the queue was created at.</span></span>
+      optional: true
+    - id: queue.updatedAt
+      type:
+      - date
+      description: <span data-ttu-id="0831a-211">キューが最後に更新された時刻。</span><span class="sxs-lookup"><span data-stu-id="0831a-211">The time the queue was last updated.</span></span>
+      optional: true
+    - id: queue.accessedAt
+      type:
+      - date
+      description: <span data-ttu-id="0831a-212">キューの最終アクセス時刻。</span><span class="sxs-lookup"><span data-stu-id="0831a-212">The time the queue was last accessed.</span></span>
+      optional: true
+    - id: queue.supportOrdering
+      type:
+      - boolean
+      description: <span data-ttu-id="0831a-213">取得またはキューが順序付けをサポートしているかどうかを設定します。</span><span class="sxs-lookup"><span data-stu-id="0831a-213">Gets or sets whether the queue supports ordering.</span></span>
+      optional: true
+    - id: queue.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: <span data-ttu-id="0831a-214">現在のキューの統計情報です。</span><span class="sxs-lookup"><span data-stu-id="0831a-214">Current queue statistics.</span></span>
+      optional: true
+    - id: queue.countDetails.activeMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-215">現在アクティブなメッセージ数。</span><span class="sxs-lookup"><span data-stu-id="0831a-215">The current number of active messages.</span></span>
+      optional: true
+    - id: queue.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-216">配信不能メッセージの現在数。</span><span class="sxs-lookup"><span data-stu-id="0831a-216">The current number of dead letters.</span></span>
+      optional: true
+    - id: queue.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-217">スケジュールされたメッセージの現在数。</span><span class="sxs-lookup"><span data-stu-id="0831a-217">The current number of scheduled messages.</span></span>
+      optional: true
+    - id: queue.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-218">現在転送配信不能メッセージ数。</span><span class="sxs-lookup"><span data-stu-id="0831a-218">The current number of transfer dead letters.</span></span>
+      optional: true
+    - id: queue.countDetails.transferMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="0831a-219">転送メッセージの現在数。</span><span class="sxs-lookup"><span data-stu-id="0831a-219">The current number of transfer messages.</span></span>
+      optional: true
+    - id: queue.autoDeleteOnIdle
+      type:
+      - string
+      description: <span data-ttu-id="0831a-220">実装されています。</span><span class="sxs-lookup"><span data-stu-id="0831a-220">Implemented.</span></span>
+      optional: true
+    - id: queue.entityAvailabilityStatus
+      type:
+      - string
+      description: <span data-ttu-id="0831a-221">キューの現在の可用性の状態。</span><span class="sxs-lookup"><span data-stu-id="0831a-221">The current availability status of the queue.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0831a-222">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="0831a-222">The response stream.</span></span>
+    content: function update(namespaceName, queue, callback)
+  langs:
+  - js

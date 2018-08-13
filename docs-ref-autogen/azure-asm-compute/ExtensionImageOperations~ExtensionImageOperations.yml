@@ -1,0 +1,929 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ac1e20f410103a7d8236e85e78387bc84acda4ef
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063949"
+items:
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations
+  summary: >-
+    <span data-ttu-id="cff89-101">サービス管理 API には、サービスと、パブリッシャーのサブスクリプションの仮想マシン拡張機能のイメージを管理するための操作が含まれます。</span><span class="sxs-lookup"><span data-stu-id="cff89-101">The Service Management API includes operations for managing the service and virtual machine extension images in your publisher subscription.</span></span>
+
+    <span data-ttu-id="cff89-102">__注__: [ComputeManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link ComputeManagementClient ~ ComputeManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="cff89-102">__NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="cff89-103">[ExtensionImages] を参照してください。 {@link ComputeManagementClient ~ ComputeManagementClient #extensionImages}。</span><span class="sxs-lookup"><span data-stu-id="cff89-103">See [extensionImages] {@link ComputeManagementClient~ComputeManagementClient#extensionImages}.</span></span>
+
+    <span data-ttu-id="cff89-104">ExtensionImageOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="cff89-104">Initializes a new instance of the ExtensionImageOperations class.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations(client)
+  fullName: azure-asm-compute.ExtensionImageOperations.ExtensionImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="cff89-105">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="cff89-105">Reference to the service client.</span></span>
+    content: new ExtensionImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginRegistering(parameters, callback)
+  summary: <span data-ttu-id="cff89-106">新しい拡張機能を登録します。</span><span class="sxs-lookup"><span data-stu-id="cff89-106">Register a new extension.</span></span> <span data-ttu-id="cff89-107">拡張機能は、その ProviderNamespace と型 (文字列) の組み合わせによって識別されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-107">An extension is identified by the combination of its ProviderNamespace and Type (case-sensitive string).</span></span> <span data-ttu-id="cff89-108">登録済みの拡張機能の同じ id (つまり ProviderNamespace と型の組み合わせ) を持つ拡張機能の登録は許可されません。</span><span class="sxs-lookup"><span data-stu-id="cff89-108">It is not allowed to register an extension with the same identity (i.e. combination of ProviderNamespace and Type) of an already-registered extension.</span></span> <span data-ttu-id="cff89-109">既存の拡張機能の新しいバージョンを登録するには、更新プログラムの拡張機能 API を使用してください。</span><span class="sxs-lookup"><span data-stu-id="cff89-109">To register new version of an existing extension, the Update Extension API should be used.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginRegistering(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: <span data-ttu-id="cff89-110">仮想マシン拡張機能のイメージの登録操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="cff89-110">Parameters supplied to the Register Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="cff89-111">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-111">Required.</span></span> <span data-ttu-id="cff89-112">拡張機能のプロバイダーの名前空間。</span><span class="sxs-lookup"><span data-stu-id="cff89-112">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="cff89-113">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-113">Required.</span></span> <span data-ttu-id="cff89-114">拡張機能の型。</span><span class="sxs-lookup"><span data-stu-id="cff89-114">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="cff89-115">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-115">Required.</span></span> <span data-ttu-id="cff89-116">拡張機能のバージョン。</span><span class="sxs-lookup"><span data-stu-id="cff89-116">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="cff89-117">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-117">Required.</span></span> <span data-ttu-id="cff89-118">拡張機能の 1 つの行のラベル。</span><span class="sxs-lookup"><span data-stu-id="cff89-118">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cff89-119">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-119">Required.</span></span> <span data-ttu-id="cff89-120">サポートされているホスト リソース。</span><span class="sxs-lookup"><span data-stu-id="cff89-120">The supported hosting resources.</span></span> <span data-ttu-id="cff89-121">これには、'WebRole' や 'WorkerRole' を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-121">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="cff89-122">例: </span><span class="sxs-lookup"><span data-stu-id="cff89-122">E.g.</span></span>
+
+        <span data-ttu-id="cff89-123">' WebRole |WorkerRole' または ' WebRole |WorkerRole |VmRole'。</span><span class="sxs-lookup"><span data-stu-id="cff89-123">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="cff89-124">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-124">Required.</span></span> <span data-ttu-id="cff89-125">拡張機能の ZIP パッケージを指す URI 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-125">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="cff89-126">ZIP パッケージには、実行可能ファイルの拡張機能とその他のサポート ファイル、および PluginManifest.xml マニフェストを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-126">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="cff89-127">MediaLink 値は、Azure blob ストレージの URL (Http または Https) をポイントする必要があり、ダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="cff89-127">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="cff89-128">Windows Azure はこのソースの場所から拡張機能パッケージをコピーし、すべてのリージョンにレプリケートします。</span><span class="sxs-lookup"><span data-stu-id="cff89-128">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="cff89-129">レプリケーションが完了するは、通常の時間には、20 分です。</span><span class="sxs-lookup"><span data-stu-id="cff89-129">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="cff89-130">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-130">Optional.</span></span> <span data-ttu-id="cff89-131">パラメーターのプライベート構成データの暗号化に証明書。</span><span class="sxs-lookup"><span data-stu-id="cff89-131">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="cff89-132">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-132">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="cff89-133">証明書の宣言に必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-133">Required for certificate declaration.</span></span> <span data-ttu-id="cff89-134">必要な場合は、暗号化、証明書をインストールする Windows 証明書ストアの場所。</span><span class="sxs-lookup"><span data-stu-id="cff89-134">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-135">その値は存在する場合に、'LocalMachine' を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-135">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-136">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-136">Optional.</span></span> <span data-ttu-id="cff89-137">必要な場合は、暗号化、証明書をインストールする Windows 証明書ストアの名前。</span><span class="sxs-lookup"><span data-stu-id="cff89-137">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-138">その値にする場合は 'My' は存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-138">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="cff89-139">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-139">Optional.</span></span>
+
+        <span data-ttu-id="cff89-140">拇印が、証明書の暗号化に必要かどうか。</span><span class="sxs-lookup"><span data-stu-id="cff89-140">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="cff89-141">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-141">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="cff89-142">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-142">Optional.</span></span> <span data-ttu-id="cff89-143">必要な場合は、暗号化の証明書のサムプリント アルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="cff89-143">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-144">その値は、'sha1' に存在する場合があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-144">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="cff89-145">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-145">Optional.</span></span> <span data-ttu-id="cff89-146">この拡張機能を追加で各デプロイに自動的に追加するエンドポイントを宣言します。</span><span class="sxs-lookup"><span data-stu-id="cff89-146">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="cff89-147">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-147">Optional.</span></span> <span data-ttu-id="cff89-148">この拡張機能に必要な入力エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-148">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="cff89-149">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-149">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-150">各入力エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-150">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cff89-151">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-151">Optional.</span></span>
+
+        <span data-ttu-id="cff89-152">この拡張機能に必要な内部エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-152">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="cff89-153">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-153">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-154">各内部エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-154">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cff89-155">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-155">Optional.</span></span> <span data-ttu-id="cff89-156">この拡張機能に必要なインスタンス入力エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-156">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="cff89-157">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-157">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-158">各インスタンス入力エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-158">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cff89-159">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-159">Optional.</span></span> <span data-ttu-id="cff89-160">パブリック構成データの XSD スキーマです。</span><span class="sxs-lookup"><span data-stu-id="cff89-160">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cff89-161">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-161">Optional.</span></span> <span data-ttu-id="cff89-162">プライベート構成データの XSD スキーマです。</span><span class="sxs-lookup"><span data-stu-id="cff89-162">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="cff89-163">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-163">Required.</span></span> <span data-ttu-id="cff89-164">拡張機能の詳細な説明。</span><span class="sxs-lookup"><span data-stu-id="cff89-164">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-165">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-165">Optional.</span></span> <span data-ttu-id="cff89-166">パブリッシャー名のテキスト。</span><span class="sxs-lookup"><span data-stu-id="cff89-166">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="cff89-167">パブリッシャーを使用すると、任意の日付に設定でき、表示のためだけになります。</span><span class="sxs-lookup"><span data-stu-id="cff89-167">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="cff89-168">発行元によって指定されていない場合は、Azure は拡張機能の要求を受信した UTC 時刻を自動的に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="cff89-168">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="cff89-169">拡張機能によってゲスト VM 内で使用されるローカルのリソースを宣言します。</span><span class="sxs-lookup"><span data-stu-id="cff89-169">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="cff89-170">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-170">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-171">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-171">Optional.</span></span> <span data-ttu-id="cff89-172">その値には 'true' または 'false' と 'true'、ロールのスタートアップに設定は、拡張機能のインストールが完了するまでブロックされます (大文字)。</span><span class="sxs-lookup"><span data-stu-id="cff89-172">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="cff89-173">このフラグは、インストールされている拡張子のないロールが起動できない場合に 'true' に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-173">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="cff89-174">'False' (既定値) に設定すると、ロールが拡張機能のインストールを完了するを待たず開始します。</span><span class="sxs-lookup"><span data-stu-id="cff89-174">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="cff89-175">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-175">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-176">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-176">Optional.</span></span> <span data-ttu-id="cff89-177">拡張機能を 'true' に設定されている場合はパブリックの使用、つまり API の一覧から返される、表示されません。</span><span class="sxs-lookup"><span data-stu-id="cff89-177">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="cff89-178">引き続きアクセスできるコンボ ProviderNamespace の型とバージョンを参照しています。</span><span class="sxs-lookup"><span data-stu-id="cff89-178">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="cff89-179">そのため、内部の拡張機能は、テストを目的のみに対するものです。</span><span class="sxs-lookup"><span data-stu-id="cff89-179">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="cff89-180">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-180">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="cff89-181">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-181">Optional.</span></span> <span data-ttu-id="cff89-182">拡張機能のサンプル構成します。</span><span class="sxs-lookup"><span data-stu-id="cff89-182">A sample configuration for the extension.</span></span> <span data-ttu-id="cff89-183">これは、ユーザーがダウンロードして、ユーザーは、カスタマイズされた入力パラメーターを置き換えることができます。</span><span class="sxs-lookup"><span data-stu-id="cff89-183">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="cff89-184">サンプル構成を十分にコメントする必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-184">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="cff89-185">'Configuration' を XML ドキュメント レベルの要素である必要がありますし、構成データが XML 形式である場合は、および省略可能なパブリック構成データが 'PublicConfig' の子要素に対応し、省略可能なプライベート構成データが子に対応しています'PrivateConfig' の要素。</span><span class="sxs-lookup"><span data-stu-id="cff89-185">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="cff89-186">サンプルの構成データは、発行元によって、パブリックとプライベート構成スキーマに対して検証する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-186">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-187">かどうか、このバージョンの拡張機能がすべてのリージョンにレプリケートされるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="cff89-187">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="cff89-188">True の場合、特定の拡張機能のバージョンは作成または更新の展開に使用できます。</span><span class="sxs-lookup"><span data-stu-id="cff89-188">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="cff89-189">それ以外の場合、特定の拡張機能バージョンを作成または更新の展開でエラーが発生可能性があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-189">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="cff89-190">一般的な時刻は、Azure によって完全にレプリケートする、新しく登録されたまたは新しく更新された拡張機能の 20 分です。</span><span class="sxs-lookup"><span data-stu-id="cff89-190">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="cff89-191">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-191">Optional.</span></span> <span data-ttu-id="cff89-192">このバージョンの拡張機能の使用許諾契約書 (エンド ユーザー ライセンス契約) を指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-192">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="cff89-193">これは、Windows Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-193">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="cff89-194">ソフトウェアは、追加の Eula を必要とする場合、使用許諾契約書へのリンクを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-194">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cff89-195">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-195">Optional.</span></span> <span data-ttu-id="cff89-196">このバージョンの拡張機能のプライバシーに関するドキュメントを指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-196">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="cff89-197">これは、Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-197">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="cff89-198">ソフトウェアは、すべてのデータと、ゲスト VM に転送を収集、追加のプライバシー ドキュメントを必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-198">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="cff89-199">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-199">Optional.</span></span> <span data-ttu-id="cff89-200">このバージョンの拡張機能のホーム ページを指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-200">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="cff89-201">これは、Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-201">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="cff89-202">ホーム ページは、使用状況に関する情報とカスタマー サポートの連絡先情報が必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-202">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-203">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-203">Optional.</span></span> <span data-ttu-id="cff89-204">拡張機能を 'true' に設定されている場合は、JSON ベースの構成を受け取ると想定されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-204">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="cff89-205">'False' に設定されている場合は、XML ベースの構成を受信する、拡張機能が必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-205">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="cff89-206">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-206">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-207">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-207">Optional.</span></span> <span data-ttu-id="cff89-208">これは、拡張機能のバージョンは、アクティブな展開で他のメジャー バージョンにアップグレードできません 'true' に設定されます。 場合、</span><span class="sxs-lookup"><span data-stu-id="cff89-208">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="cff89-209">値が 'false' の場合、またはも存在する場合は、その他のバージョンから拡張機能のバージョンにアップグレードできます。</span><span class="sxs-lookup"><span data-stu-id="cff89-209">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="cff89-210">ダウン グレードはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="cff89-210">Downgrade is not supported.</span></span> <span data-ttu-id="cff89-211">値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-211">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="cff89-212">拡張機能をサポートする OS を示す文字列プロパティです。</span><span class="sxs-lookup"><span data-stu-id="cff89-212">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="cff89-213">現在の値は、'Windows' または 'Linux' です。</span><span class="sxs-lookup"><span data-stu-id="cff89-213">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-214">拡張機能を公開している会社/組織の名前を含む文字列プロパティ。</span><span class="sxs-lookup"><span data-stu-id="cff89-214">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="cff89-215">スライスのために必要な領域の名前を含む文字列プロパティです。</span><span class="sxs-lookup"><span data-stu-id="cff89-215">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cff89-216">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cff89-216">The response stream.</span></span>
+    content: function beginRegistering(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUnregistering(providerNamespace, type, version, callback)
+  summary: >-
+    <span data-ttu-id="cff89-217">拡張機能の登録または更新プログラムの拡張機能 Api を使用して既に登録済み拡張機能のバージョンの登録を解除します。</span><span class="sxs-lookup"><span data-stu-id="cff89-217">Unregister a version of an extension that was previously registered using either the Register Extension or Update Extension APIs.</span></span> <span data-ttu-id="cff89-218">拡張機能のバージョンは、その ProviderNamespace、種類、および拡張機能を登録するときに指定されているバージョンの組み合わせによって識別されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-218">An extension version is identified by the combination of its ProviderNamespace, Type and Version which are specified when registering the extension.</span></span>
+
+    <span data-ttu-id="cff89-219">登録を解除ができる内部の拡張機能は、IsInternalExtension フィールドが に設定されている拡張機能の登録時に、または更新中に ' true' です。</span><span class="sxs-lookup"><span data-stu-id="cff89-219">Unregistering is only allowed for internal extensions, that is, the extensions for which the IsInternalExtension field is set to 'true' during registration or during an update.</span></span> <span data-ttu-id="cff89-220">サブスクリプションごとに登録できる拡張子の数のクォータ (15) があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-220">There is a quota (15) on the number of extensions that can be registered per subscription.</span></span> <span data-ttu-id="cff89-221">必要性を使用は、サブスクリプションの実行クォータを超過している場合に、一部の内部拡張機能の登録を解除または (同じ電子メールがパブリッシャーになるために使用) を Azure にお問い合わせくださいクォータを増やします。</span><span class="sxs-lookup"><span data-stu-id="cff89-221">If your subscription runs out of quota, you will wither need to unregister some of the internal extensions or contact Azure (same email used to become a publisher)  to increase the quota.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUnregistering(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="cff89-222">プロバイダーの登録を解除する拡張機能のイメージの名前空間。</span><span class="sxs-lookup"><span data-stu-id="cff89-222">The provider namespace of the extension image to unregister.</span></span>
+    - id: type
+      type:
+      - string
+      description: <span data-ttu-id="cff89-223">登録を解除する拡張機能のイメージの種類。</span><span class="sxs-lookup"><span data-stu-id="cff89-223">The type of the extension image to unregister.</span></span>
+    - id: version
+      type:
+      - string
+      description: <span data-ttu-id="cff89-224">登録を解除する拡張機能のイメージのバージョン。</span><span class="sxs-lookup"><span data-stu-id="cff89-224">The version of the extension image to unregister.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cff89-225">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cff89-225">The response stream.</span></span>
+    content: function beginUnregistering(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUpdating(parameters, callback)
+  summary: <span data-ttu-id="cff89-226">新しい拡張機能を更新します。</span><span class="sxs-lookup"><span data-stu-id="cff89-226">Update a new extension.</span></span> <span data-ttu-id="cff89-227">同じ id (つまり ProviderNamespace と型の組み合わせ) ではなく、別のバージョンに既に登録されていますが、拡張機能を更新することができます。</span><span class="sxs-lookup"><span data-stu-id="cff89-227">It is allowed to update an extension which had already been registered with the same identity (i.e. combination of ProviderNamespace and Type) but with different version.</span></span> <span data-ttu-id="cff89-228">拡張機能を更新する前に、登録されていない id がある場合は失敗または同じバージョンと同じ id で拡張機能が既に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-228">It will fail if the extension to update has an identity that has not been registered before, or there is already an extension with the same identity and same version.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUpdating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: <span data-ttu-id="cff89-229">仮想マシン拡張機能のイメージの更新操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="cff89-229">Parameters supplied to the Update Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="cff89-230">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-230">Required.</span></span> <span data-ttu-id="cff89-231">拡張機能のプロバイダーの名前空間。</span><span class="sxs-lookup"><span data-stu-id="cff89-231">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="cff89-232">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-232">Required.</span></span> <span data-ttu-id="cff89-233">拡張機能の型。</span><span class="sxs-lookup"><span data-stu-id="cff89-233">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="cff89-234">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-234">Required.</span></span> <span data-ttu-id="cff89-235">拡張機能のバージョン。</span><span class="sxs-lookup"><span data-stu-id="cff89-235">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="cff89-236">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-236">Required.</span></span> <span data-ttu-id="cff89-237">拡張機能の 1 つの行のラベル。</span><span class="sxs-lookup"><span data-stu-id="cff89-237">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cff89-238">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-238">Required.</span></span> <span data-ttu-id="cff89-239">サポートされているホスト リソース。</span><span class="sxs-lookup"><span data-stu-id="cff89-239">The supported hosting resources.</span></span> <span data-ttu-id="cff89-240">これには、'WebRole' や 'WorkerRole' を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-240">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="cff89-241">例: </span><span class="sxs-lookup"><span data-stu-id="cff89-241">E.g.</span></span>
+
+        <span data-ttu-id="cff89-242">' WebRole |WorkerRole' または ' WebRole |WorkerRole |VmRole'。</span><span class="sxs-lookup"><span data-stu-id="cff89-242">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="cff89-243">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-243">Required.</span></span> <span data-ttu-id="cff89-244">拡張機能の ZIP パッケージを指す URI 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-244">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="cff89-245">ZIP パッケージには、実行可能ファイルの拡張機能とその他のサポート ファイル、および PluginManifest.xml マニフェストを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-245">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="cff89-246">MediaLink 値は、Azure blob ストレージの URL (Http または Https) をポイントする必要があり、ダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="cff89-246">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="cff89-247">Windows Azure はこのソースの場所から拡張機能パッケージをコピーし、すべてのリージョンにレプリケートします。</span><span class="sxs-lookup"><span data-stu-id="cff89-247">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="cff89-248">レプリケーションが完了するは、通常の時間には、20 分です。</span><span class="sxs-lookup"><span data-stu-id="cff89-248">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="cff89-249">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-249">Optional.</span></span> <span data-ttu-id="cff89-250">パラメーターのプライベート構成データの暗号化に証明書。</span><span class="sxs-lookup"><span data-stu-id="cff89-250">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="cff89-251">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-251">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="cff89-252">証明書の宣言に必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-252">Required for certificate declaration.</span></span> <span data-ttu-id="cff89-253">必要な場合は、暗号化、証明書をインストールする Windows 証明書ストアの場所。</span><span class="sxs-lookup"><span data-stu-id="cff89-253">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-254">その値は存在する場合に、'LocalMachine' を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-254">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-255">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-255">Optional.</span></span> <span data-ttu-id="cff89-256">必要な場合は、暗号化、証明書をインストールする Windows 証明書ストアの名前。</span><span class="sxs-lookup"><span data-stu-id="cff89-256">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-257">その値にする場合は 'My' は存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-257">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="cff89-258">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-258">Optional.</span></span>
+
+        <span data-ttu-id="cff89-259">拇印が、証明書の暗号化に必要かどうか。</span><span class="sxs-lookup"><span data-stu-id="cff89-259">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="cff89-260">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-260">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="cff89-261">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-261">Optional.</span></span> <span data-ttu-id="cff89-262">必要な場合は、暗号化の証明書のサムプリント アルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="cff89-262">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-263">その値は、'sha1' に存在する場合があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-263">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="cff89-264">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-264">Optional.</span></span> <span data-ttu-id="cff89-265">この拡張機能を追加で各デプロイに自動的に追加するエンドポイントを宣言します。</span><span class="sxs-lookup"><span data-stu-id="cff89-265">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="cff89-266">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-266">Optional.</span></span> <span data-ttu-id="cff89-267">この拡張機能に必要な入力エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-267">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="cff89-268">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-268">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-269">各入力エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-269">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cff89-270">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-270">Optional.</span></span>
+
+        <span data-ttu-id="cff89-271">この拡張機能に必要な内部エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-271">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="cff89-272">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-272">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-273">各内部エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-273">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cff89-274">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-274">Optional.</span></span> <span data-ttu-id="cff89-275">この拡張機能に必要なインスタンス入力エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-275">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="cff89-276">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-276">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-277">各インスタンス入力エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-277">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cff89-278">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-278">Optional.</span></span> <span data-ttu-id="cff89-279">パブリック構成データの XSD スキーマです。</span><span class="sxs-lookup"><span data-stu-id="cff89-279">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cff89-280">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-280">Optional.</span></span> <span data-ttu-id="cff89-281">プライベート構成データの XSD スキーマです。</span><span class="sxs-lookup"><span data-stu-id="cff89-281">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="cff89-282">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-282">Required.</span></span> <span data-ttu-id="cff89-283">拡張機能の詳細な説明。</span><span class="sxs-lookup"><span data-stu-id="cff89-283">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-284">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-284">Optional.</span></span> <span data-ttu-id="cff89-285">パブリッシャー名のテキスト。</span><span class="sxs-lookup"><span data-stu-id="cff89-285">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="cff89-286">パブリッシャーを使用すると、任意の日付に設定でき、表示のためだけになります。</span><span class="sxs-lookup"><span data-stu-id="cff89-286">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="cff89-287">発行元によって指定されていない場合は、Azure は拡張機能の要求を受信した UTC 時刻を自動的に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="cff89-287">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="cff89-288">拡張機能によってゲスト VM 内で使用されるローカルのリソースを宣言します。</span><span class="sxs-lookup"><span data-stu-id="cff89-288">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="cff89-289">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-289">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-290">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-290">Optional.</span></span> <span data-ttu-id="cff89-291">その値には 'true' または 'false' と 'true'、ロールのスタートアップに設定は、拡張機能のインストールが完了するまでブロックされます (大文字)。</span><span class="sxs-lookup"><span data-stu-id="cff89-291">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="cff89-292">このフラグは、インストールされている拡張子のないロールが起動できない場合に 'true' に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-292">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="cff89-293">'False' (既定値) に設定すると、ロールが拡張機能のインストールを完了するを待たず開始します。</span><span class="sxs-lookup"><span data-stu-id="cff89-293">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="cff89-294">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-294">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-295">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-295">Optional.</span></span> <span data-ttu-id="cff89-296">拡張機能を 'true' に設定されている場合はパブリックの使用、つまり API の一覧から返される、表示されません。</span><span class="sxs-lookup"><span data-stu-id="cff89-296">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="cff89-297">引き続きアクセスできるコンボ ProviderNamespace の型とバージョンを参照しています。</span><span class="sxs-lookup"><span data-stu-id="cff89-297">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="cff89-298">そのため、内部の拡張機能は、テストを目的のみに対するものです。</span><span class="sxs-lookup"><span data-stu-id="cff89-298">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="cff89-299">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-299">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="cff89-300">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-300">Optional.</span></span> <span data-ttu-id="cff89-301">拡張機能のサンプル構成します。</span><span class="sxs-lookup"><span data-stu-id="cff89-301">A sample configuration for the extension.</span></span> <span data-ttu-id="cff89-302">これは、ユーザーがダウンロードして、ユーザーは、カスタマイズされた入力パラメーターを置き換えることができます。</span><span class="sxs-lookup"><span data-stu-id="cff89-302">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="cff89-303">サンプル構成を十分にコメントする必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-303">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="cff89-304">'Configuration' を XML ドキュメント レベルの要素である必要がありますし、構成データが XML 形式である場合は、および省略可能なパブリック構成データが 'PublicConfig' の子要素に対応し、省略可能なプライベート構成データが子に対応しています'PrivateConfig' の要素。</span><span class="sxs-lookup"><span data-stu-id="cff89-304">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="cff89-305">サンプルの構成データは、発行元によって、パブリックとプライベート構成スキーマに対して検証する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-305">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-306">かどうか、このバージョンの拡張機能がすべてのリージョンにレプリケートされるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="cff89-306">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="cff89-307">True の場合、特定の拡張機能のバージョンは作成または更新の展開に使用できます。</span><span class="sxs-lookup"><span data-stu-id="cff89-307">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="cff89-308">それ以外の場合、特定の拡張機能バージョンを作成または更新の展開でエラーが発生可能性があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-308">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="cff89-309">一般的な時刻は、Azure によって完全にレプリケートする、新しく登録されたまたは新しく更新された拡張機能の 20 分です。</span><span class="sxs-lookup"><span data-stu-id="cff89-309">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="cff89-310">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-310">Optional.</span></span> <span data-ttu-id="cff89-311">このバージョンの拡張機能の使用許諾契約書 (エンド ユーザー ライセンス契約) を指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-311">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="cff89-312">これは、Windows Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-312">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="cff89-313">ソフトウェアは、追加の Eula を必要とする場合、使用許諾契約書へのリンクを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-313">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cff89-314">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-314">Optional.</span></span> <span data-ttu-id="cff89-315">このバージョンの拡張機能のプライバシーに関するドキュメントを指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-315">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="cff89-316">これは、Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-316">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="cff89-317">ソフトウェアは、すべてのデータと、ゲスト VM に転送を収集、追加のプライバシー ドキュメントを必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-317">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="cff89-318">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-318">Optional.</span></span> <span data-ttu-id="cff89-319">このバージョンの拡張機能のホーム ページを指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-319">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="cff89-320">これは、Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-320">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="cff89-321">ホーム ページは、使用状況に関する情報とカスタマー サポートの連絡先情報が必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-321">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-322">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-322">Optional.</span></span> <span data-ttu-id="cff89-323">拡張機能を 'true' に設定されている場合は、JSON ベースの構成を受け取ると想定されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-323">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="cff89-324">'False' に設定されている場合は、XML ベースの構成を受信する、拡張機能が必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-324">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="cff89-325">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-325">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-326">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-326">Optional.</span></span> <span data-ttu-id="cff89-327">これは、拡張機能のバージョンは、アクティブな展開で他のメジャー バージョンにアップグレードできません 'true' に設定されます。 場合、</span><span class="sxs-lookup"><span data-stu-id="cff89-327">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="cff89-328">値が 'false' の場合、またはも存在する場合は、その他のバージョンから拡張機能のバージョンにアップグレードできます。</span><span class="sxs-lookup"><span data-stu-id="cff89-328">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="cff89-329">ダウン グレードはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="cff89-329">Downgrade is not supported.</span></span> <span data-ttu-id="cff89-330">値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-330">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="cff89-331">拡張機能をサポートする OS を示す文字列プロパティです。</span><span class="sxs-lookup"><span data-stu-id="cff89-331">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="cff89-332">現在の値は、'Windows' または 'Linux' です。</span><span class="sxs-lookup"><span data-stu-id="cff89-332">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-333">拡張機能を公開している会社/組織の名前を含む文字列プロパティ。</span><span class="sxs-lookup"><span data-stu-id="cff89-333">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="cff89-334">スライスのために必要な領域の名前を含む文字列プロパティです。</span><span class="sxs-lookup"><span data-stu-id="cff89-334">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cff89-335">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cff89-335">The response stream.</span></span>
+    content: function beginUpdating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: register(parameters, callback)
+  summary: <span data-ttu-id="cff89-336">新しい拡張機能を登録します。</span><span class="sxs-lookup"><span data-stu-id="cff89-336">Register a new extension.</span></span> <span data-ttu-id="cff89-337">拡張機能は、その ProviderNamespace と型 (文字列) の組み合わせによって識別されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-337">An extension is identified by the combination of its ProviderNamespace and Type (case-sensitive string).</span></span> <span data-ttu-id="cff89-338">登録済みの拡張機能の同じ id (つまり ProviderNamespace と型の組み合わせ) を持つ拡張機能の登録は許可されません。</span><span class="sxs-lookup"><span data-stu-id="cff89-338">It is not allowed to register an extension with the same identity (i.e. combination of ProviderNamespace and Type) of an already-registered extension.</span></span> <span data-ttu-id="cff89-339">既存の拡張機能の新しいバージョンを登録するには、更新プログラムの拡張機能 API を使用してください。</span><span class="sxs-lookup"><span data-stu-id="cff89-339">To register new version of an existing extension, the Update Extension API should be used.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.register(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: <span data-ttu-id="cff89-340">仮想マシン拡張機能のイメージの登録操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="cff89-340">Parameters supplied to the Register Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="cff89-341">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-341">Required.</span></span> <span data-ttu-id="cff89-342">拡張機能のプロバイダーの名前空間。</span><span class="sxs-lookup"><span data-stu-id="cff89-342">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="cff89-343">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-343">Required.</span></span> <span data-ttu-id="cff89-344">拡張機能の型。</span><span class="sxs-lookup"><span data-stu-id="cff89-344">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="cff89-345">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-345">Required.</span></span> <span data-ttu-id="cff89-346">拡張機能のバージョン。</span><span class="sxs-lookup"><span data-stu-id="cff89-346">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="cff89-347">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-347">Required.</span></span> <span data-ttu-id="cff89-348">拡張機能の 1 つの行のラベル。</span><span class="sxs-lookup"><span data-stu-id="cff89-348">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cff89-349">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-349">Required.</span></span> <span data-ttu-id="cff89-350">サポートされているホスト リソース。</span><span class="sxs-lookup"><span data-stu-id="cff89-350">The supported hosting resources.</span></span> <span data-ttu-id="cff89-351">これには、'WebRole' や 'WorkerRole' を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-351">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="cff89-352">例: </span><span class="sxs-lookup"><span data-stu-id="cff89-352">E.g.</span></span>
+
+        <span data-ttu-id="cff89-353">' WebRole |WorkerRole' または ' WebRole |WorkerRole |VmRole'。</span><span class="sxs-lookup"><span data-stu-id="cff89-353">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="cff89-354">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-354">Required.</span></span> <span data-ttu-id="cff89-355">拡張機能の ZIP パッケージを指す URI 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-355">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="cff89-356">ZIP パッケージには、実行可能ファイルの拡張機能とその他のサポート ファイル、および PluginManifest.xml マニフェストを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-356">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="cff89-357">MediaLink 値は、Azure blob ストレージの URL (Http または Https) をポイントする必要があり、ダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="cff89-357">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="cff89-358">Windows Azure はこのソースの場所から拡張機能パッケージをコピーし、すべてのリージョンにレプリケートします。</span><span class="sxs-lookup"><span data-stu-id="cff89-358">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="cff89-359">レプリケーションが完了するは、通常の時間には、20 分です。</span><span class="sxs-lookup"><span data-stu-id="cff89-359">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="cff89-360">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-360">Optional.</span></span> <span data-ttu-id="cff89-361">パラメーターのプライベート構成データの暗号化に証明書。</span><span class="sxs-lookup"><span data-stu-id="cff89-361">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="cff89-362">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-362">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="cff89-363">証明書の宣言に必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-363">Required for certificate declaration.</span></span> <span data-ttu-id="cff89-364">必要な場合は、暗号化、証明書をインストールする Windows 証明書ストアの場所。</span><span class="sxs-lookup"><span data-stu-id="cff89-364">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-365">その値は存在する場合に、'LocalMachine' を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-365">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-366">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-366">Optional.</span></span> <span data-ttu-id="cff89-367">必要な場合は、暗号化、証明書をインストールする Windows 証明書ストアの名前。</span><span class="sxs-lookup"><span data-stu-id="cff89-367">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-368">その値にする場合は 'My' は存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-368">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="cff89-369">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-369">Optional.</span></span>
+
+        <span data-ttu-id="cff89-370">拇印が、証明書の暗号化に必要かどうか。</span><span class="sxs-lookup"><span data-stu-id="cff89-370">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="cff89-371">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-371">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="cff89-372">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-372">Optional.</span></span> <span data-ttu-id="cff89-373">必要な場合は、暗号化の証明書のサムプリント アルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="cff89-373">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-374">その値は、'sha1' に存在する場合があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-374">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="cff89-375">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-375">Optional.</span></span> <span data-ttu-id="cff89-376">この拡張機能を追加で各デプロイに自動的に追加するエンドポイントを宣言します。</span><span class="sxs-lookup"><span data-stu-id="cff89-376">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="cff89-377">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-377">Optional.</span></span> <span data-ttu-id="cff89-378">この拡張機能に必要な入力エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-378">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="cff89-379">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-379">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-380">各入力エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-380">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cff89-381">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-381">Optional.</span></span>
+
+        <span data-ttu-id="cff89-382">この拡張機能に必要な内部エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-382">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="cff89-383">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-383">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-384">各内部エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-384">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cff89-385">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-385">Optional.</span></span> <span data-ttu-id="cff89-386">この拡張機能に必要なインスタンス入力エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-386">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="cff89-387">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-387">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-388">各インスタンス入力エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-388">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cff89-389">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-389">Optional.</span></span> <span data-ttu-id="cff89-390">パブリック構成データの XSD スキーマです。</span><span class="sxs-lookup"><span data-stu-id="cff89-390">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cff89-391">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-391">Optional.</span></span> <span data-ttu-id="cff89-392">プライベート構成データの XSD スキーマです。</span><span class="sxs-lookup"><span data-stu-id="cff89-392">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="cff89-393">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-393">Required.</span></span> <span data-ttu-id="cff89-394">拡張機能の詳細な説明。</span><span class="sxs-lookup"><span data-stu-id="cff89-394">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-395">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-395">Optional.</span></span> <span data-ttu-id="cff89-396">パブリッシャー名のテキスト。</span><span class="sxs-lookup"><span data-stu-id="cff89-396">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="cff89-397">パブリッシャーを使用すると、任意の日付に設定でき、表示のためだけになります。</span><span class="sxs-lookup"><span data-stu-id="cff89-397">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="cff89-398">発行元によって指定されていない場合は、Azure は拡張機能の要求を受信した UTC 時刻を自動的に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="cff89-398">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="cff89-399">拡張機能によってゲスト VM 内で使用されるローカルのリソースを宣言します。</span><span class="sxs-lookup"><span data-stu-id="cff89-399">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="cff89-400">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-400">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-401">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-401">Optional.</span></span> <span data-ttu-id="cff89-402">その値には 'true' または 'false' と 'true'、ロールのスタートアップに設定は、拡張機能のインストールが完了するまでブロックされます (大文字)。</span><span class="sxs-lookup"><span data-stu-id="cff89-402">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="cff89-403">このフラグは、インストールされている拡張子のないロールが起動できない場合に 'true' に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-403">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="cff89-404">'False' (既定値) に設定すると、ロールが拡張機能のインストールを完了するを待たず開始します。</span><span class="sxs-lookup"><span data-stu-id="cff89-404">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="cff89-405">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-405">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-406">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-406">Optional.</span></span> <span data-ttu-id="cff89-407">拡張機能を 'true' に設定されている場合はパブリックの使用、つまり API の一覧から返される、表示されません。</span><span class="sxs-lookup"><span data-stu-id="cff89-407">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="cff89-408">引き続きアクセスできるコンボ ProviderNamespace の型とバージョンを参照しています。</span><span class="sxs-lookup"><span data-stu-id="cff89-408">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="cff89-409">そのため、内部の拡張機能は、テストを目的のみに対するものです。</span><span class="sxs-lookup"><span data-stu-id="cff89-409">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="cff89-410">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-410">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="cff89-411">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-411">Optional.</span></span> <span data-ttu-id="cff89-412">拡張機能のサンプル構成します。</span><span class="sxs-lookup"><span data-stu-id="cff89-412">A sample configuration for the extension.</span></span> <span data-ttu-id="cff89-413">これは、ユーザーがダウンロードして、ユーザーは、カスタマイズされた入力パラメーターを置き換えることができます。</span><span class="sxs-lookup"><span data-stu-id="cff89-413">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="cff89-414">サンプル構成を十分にコメントする必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-414">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="cff89-415">'Configuration' を XML ドキュメント レベルの要素である必要がありますし、構成データが XML 形式である場合は、および省略可能なパブリック構成データが 'PublicConfig' の子要素に対応し、省略可能なプライベート構成データが子に対応しています'PrivateConfig' の要素。</span><span class="sxs-lookup"><span data-stu-id="cff89-415">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="cff89-416">サンプルの構成データは、発行元によって、パブリックとプライベート構成スキーマに対して検証する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-416">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-417">かどうか、このバージョンの拡張機能がすべてのリージョンにレプリケートされるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="cff89-417">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="cff89-418">True の場合、特定の拡張機能のバージョンは作成または更新の展開に使用できます。</span><span class="sxs-lookup"><span data-stu-id="cff89-418">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="cff89-419">それ以外の場合、特定の拡張機能バージョンを作成または更新の展開でエラーが発生可能性があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-419">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="cff89-420">一般的な時刻は、Azure によって完全にレプリケートする、新しく登録されたまたは新しく更新された拡張機能の 20 分です。</span><span class="sxs-lookup"><span data-stu-id="cff89-420">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="cff89-421">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-421">Optional.</span></span> <span data-ttu-id="cff89-422">このバージョンの拡張機能の使用許諾契約書 (エンド ユーザー ライセンス契約) を指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-422">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="cff89-423">これは、Windows Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-423">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="cff89-424">ソフトウェアは、追加の Eula を必要とする場合、使用許諾契約書へのリンクを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-424">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cff89-425">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-425">Optional.</span></span> <span data-ttu-id="cff89-426">このバージョンの拡張機能のプライバシーに関するドキュメントを指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-426">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="cff89-427">これは、Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-427">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="cff89-428">ソフトウェアは、すべてのデータと、ゲスト VM に転送を収集、追加のプライバシー ドキュメントを必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-428">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="cff89-429">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-429">Optional.</span></span> <span data-ttu-id="cff89-430">このバージョンの拡張機能のホーム ページを指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-430">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="cff89-431">これは、Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-431">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="cff89-432">ホーム ページは、使用状況に関する情報とカスタマー サポートの連絡先情報が必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-432">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-433">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-433">Optional.</span></span> <span data-ttu-id="cff89-434">拡張機能を 'true' に設定されている場合は、JSON ベースの構成を受け取ると想定されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-434">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="cff89-435">'False' に設定されている場合は、XML ベースの構成を受信する、拡張機能が必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-435">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="cff89-436">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-436">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-437">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-437">Optional.</span></span> <span data-ttu-id="cff89-438">これは、拡張機能のバージョンは、アクティブな展開で他のメジャー バージョンにアップグレードできません 'true' に設定されます。 場合、</span><span class="sxs-lookup"><span data-stu-id="cff89-438">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="cff89-439">値が 'false' の場合、またはも存在する場合は、その他のバージョンから拡張機能のバージョンにアップグレードできます。</span><span class="sxs-lookup"><span data-stu-id="cff89-439">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="cff89-440">ダウン グレードはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="cff89-440">Downgrade is not supported.</span></span> <span data-ttu-id="cff89-441">値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-441">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="cff89-442">拡張機能をサポートする OS を示す文字列プロパティです。</span><span class="sxs-lookup"><span data-stu-id="cff89-442">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="cff89-443">現在の値は、'Windows' または 'Linux' です。</span><span class="sxs-lookup"><span data-stu-id="cff89-443">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-444">拡張機能を公開している会社/組織の名前を含む文字列プロパティ。</span><span class="sxs-lookup"><span data-stu-id="cff89-444">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="cff89-445">スライスのために必要な領域の名前を含む文字列プロパティです。</span><span class="sxs-lookup"><span data-stu-id="cff89-445">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cff89-446">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cff89-446">The response stream.</span></span>
+    content: function register(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: unregister(providerNamespace, type, version, callback)
+  summary: >-
+    <span data-ttu-id="cff89-447">拡張機能の登録または更新プログラムの拡張機能 Api を使用して既に登録済み拡張機能のバージョンの登録を解除します。</span><span class="sxs-lookup"><span data-stu-id="cff89-447">Unregister a version of an extension that was previously registered using either the Register Extension or Update Extension APIs.</span></span> <span data-ttu-id="cff89-448">拡張機能のバージョンは、その ProviderNamespace、種類、および拡張機能を登録するときに指定されているバージョンの組み合わせによって識別されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-448">An extension version is identified by the combination of its ProviderNamespace, Type and Version which are specified when registering the extension.</span></span>
+
+    <span data-ttu-id="cff89-449">登録を解除ができる内部の拡張機能は、IsInternalExtension フィールドが に設定されている拡張機能の登録時に、または更新中に ' true' です。</span><span class="sxs-lookup"><span data-stu-id="cff89-449">Unregistering is only allowed for internal extensions, that is, the extensions for which the IsInternalExtension field is set to 'true' during registration or during an update.</span></span> <span data-ttu-id="cff89-450">サブスクリプションごとに登録できる拡張子の数のクォータ (15) があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-450">There is a quota (15) on the number of extensions that can be registered per subscription.</span></span> <span data-ttu-id="cff89-451">必要性を使用は、サブスクリプションの実行クォータを超過している場合に、一部の内部拡張機能の登録を解除または (同じ電子メールがパブリッシャーになるために使用) を Azure にお問い合わせくださいクォータを増やします。</span><span class="sxs-lookup"><span data-stu-id="cff89-451">If your subscription runs out of quota, you will wither need to unregister some of the internal extensions or contact Azure (same email used to become a publisher)  to increase the quota.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.unregister(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="cff89-452">プロバイダーの登録を解除する拡張機能のイメージの名前空間。</span><span class="sxs-lookup"><span data-stu-id="cff89-452">The provider namespace of the extension image to unregister.</span></span>
+    - id: type
+      type:
+      - string
+      description: <span data-ttu-id="cff89-453">登録を解除する拡張機能のイメージの種類。</span><span class="sxs-lookup"><span data-stu-id="cff89-453">The type of the extension image to unregister.</span></span>
+    - id: version
+      type:
+      - string
+      description: <span data-ttu-id="cff89-454">登録を解除する拡張機能のイメージのバージョン。</span><span class="sxs-lookup"><span data-stu-id="cff89-454">The version of the extension image to unregister.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cff89-455">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cff89-455">The response stream.</span></span>
+    content: function unregister(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: update(parameters, callback)
+  summary: <span data-ttu-id="cff89-456">新しい拡張機能を更新します。</span><span class="sxs-lookup"><span data-stu-id="cff89-456">Update a new extension.</span></span> <span data-ttu-id="cff89-457">同じ id (つまり ProviderNamespace と型の組み合わせ) ではなく、別のバージョンに既に登録されていますが、拡張機能を更新することができます。</span><span class="sxs-lookup"><span data-stu-id="cff89-457">It is allowed to update an extension which had already been registered with the same identity (i.e. combination of ProviderNamespace and Type) but with different version.</span></span> <span data-ttu-id="cff89-458">拡張機能を更新する前に、登録されていない id がある場合は失敗または同じバージョンと同じ id で拡張機能が既に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-458">It will fail if the extension to update has an identity that has not been registered before, or there is already an extension with the same identity and same version.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.update(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: <span data-ttu-id="cff89-459">仮想マシン拡張機能のイメージの更新操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="cff89-459">Parameters supplied to the Update Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="cff89-460">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-460">Required.</span></span> <span data-ttu-id="cff89-461">拡張機能のプロバイダーの名前空間。</span><span class="sxs-lookup"><span data-stu-id="cff89-461">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="cff89-462">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-462">Required.</span></span> <span data-ttu-id="cff89-463">拡張機能の型。</span><span class="sxs-lookup"><span data-stu-id="cff89-463">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="cff89-464">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-464">Required.</span></span> <span data-ttu-id="cff89-465">拡張機能のバージョン。</span><span class="sxs-lookup"><span data-stu-id="cff89-465">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="cff89-466">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-466">Required.</span></span> <span data-ttu-id="cff89-467">拡張機能の 1 つの行のラベル。</span><span class="sxs-lookup"><span data-stu-id="cff89-467">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cff89-468">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-468">Required.</span></span> <span data-ttu-id="cff89-469">サポートされているホスト リソース。</span><span class="sxs-lookup"><span data-stu-id="cff89-469">The supported hosting resources.</span></span> <span data-ttu-id="cff89-470">これには、'WebRole' や 'WorkerRole' を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-470">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="cff89-471">例: </span><span class="sxs-lookup"><span data-stu-id="cff89-471">E.g.</span></span>
+
+        <span data-ttu-id="cff89-472">' WebRole |WorkerRole' または ' WebRole |WorkerRole |VmRole'。</span><span class="sxs-lookup"><span data-stu-id="cff89-472">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="cff89-473">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-473">Required.</span></span> <span data-ttu-id="cff89-474">拡張機能の ZIP パッケージを指す URI 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-474">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="cff89-475">ZIP パッケージには、実行可能ファイルの拡張機能とその他のサポート ファイル、および PluginManifest.xml マニフェストを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-475">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="cff89-476">MediaLink 値は、Azure blob ストレージの URL (Http または Https) をポイントする必要があり、ダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="cff89-476">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="cff89-477">Windows Azure はこのソースの場所から拡張機能パッケージをコピーし、すべてのリージョンにレプリケートします。</span><span class="sxs-lookup"><span data-stu-id="cff89-477">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="cff89-478">レプリケーションが完了するは、通常の時間には、20 分です。</span><span class="sxs-lookup"><span data-stu-id="cff89-478">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="cff89-479">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-479">Optional.</span></span> <span data-ttu-id="cff89-480">パラメーターのプライベート構成データの暗号化に証明書。</span><span class="sxs-lookup"><span data-stu-id="cff89-480">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="cff89-481">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-481">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="cff89-482">証明書の宣言に必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-482">Required for certificate declaration.</span></span> <span data-ttu-id="cff89-483">必要な場合は、暗号化、証明書をインストールする Windows 証明書ストアの場所。</span><span class="sxs-lookup"><span data-stu-id="cff89-483">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-484">その値は存在する場合に、'LocalMachine' を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-484">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-485">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-485">Optional.</span></span> <span data-ttu-id="cff89-486">必要な場合は、暗号化、証明書をインストールする Windows 証明書ストアの名前。</span><span class="sxs-lookup"><span data-stu-id="cff89-486">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-487">その値にする場合は 'My' は存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-487">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="cff89-488">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-488">Optional.</span></span>
+
+        <span data-ttu-id="cff89-489">拇印が、証明書の暗号化に必要かどうか。</span><span class="sxs-lookup"><span data-stu-id="cff89-489">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="cff89-490">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-490">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="cff89-491">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-491">Optional.</span></span> <span data-ttu-id="cff89-492">必要な場合は、暗号化の証明書のサムプリント アルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="cff89-492">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="cff89-493">その値は、'sha1' に存在する場合があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-493">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="cff89-494">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-494">Optional.</span></span> <span data-ttu-id="cff89-495">この拡張機能を追加で各デプロイに自動的に追加するエンドポイントを宣言します。</span><span class="sxs-lookup"><span data-stu-id="cff89-495">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="cff89-496">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-496">Optional.</span></span> <span data-ttu-id="cff89-497">この拡張機能に必要な入力エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-497">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="cff89-498">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-498">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-499">各入力エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-499">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cff89-500">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-500">Optional.</span></span>
+
+        <span data-ttu-id="cff89-501">この拡張機能に必要な内部エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-501">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="cff89-502">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-502">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-503">各内部エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-503">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="cff89-504">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-504">Optional.</span></span> <span data-ttu-id="cff89-505">この拡張機能に必要なインスタンス入力エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="cff89-505">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="cff89-506">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-506">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="cff89-507">各インスタンス入力エンドポイントは、この拡張機能を利用して、デプロイのサービス定義に自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-507">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cff89-508">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-508">Optional.</span></span> <span data-ttu-id="cff89-509">パブリック構成データの XSD スキーマです。</span><span class="sxs-lookup"><span data-stu-id="cff89-509">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="cff89-510">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-510">Optional.</span></span> <span data-ttu-id="cff89-511">プライベート構成データの XSD スキーマです。</span><span class="sxs-lookup"><span data-stu-id="cff89-511">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="cff89-512">必須。</span><span class="sxs-lookup"><span data-stu-id="cff89-512">Required.</span></span> <span data-ttu-id="cff89-513">拡張機能の詳細な説明。</span><span class="sxs-lookup"><span data-stu-id="cff89-513">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-514">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-514">Optional.</span></span> <span data-ttu-id="cff89-515">パブリッシャー名のテキスト。</span><span class="sxs-lookup"><span data-stu-id="cff89-515">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="cff89-516">パブリッシャーを使用すると、任意の日付に設定でき、表示のためだけになります。</span><span class="sxs-lookup"><span data-stu-id="cff89-516">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="cff89-517">発行元によって指定されていない場合は、Azure は拡張機能の要求を受信した UTC 時刻を自動的に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="cff89-517">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="cff89-518">拡張機能によってゲスト VM 内で使用されるローカルのリソースを宣言します。</span><span class="sxs-lookup"><span data-stu-id="cff89-518">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="cff89-519">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-519">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-520">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-520">Optional.</span></span> <span data-ttu-id="cff89-521">その値には 'true' または 'false' と 'true'、ロールのスタートアップに設定は、拡張機能のインストールが完了するまでブロックされます (大文字)。</span><span class="sxs-lookup"><span data-stu-id="cff89-521">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="cff89-522">このフラグは、インストールされている拡張子のないロールが起動できない場合に 'true' に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-522">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="cff89-523">'False' (既定値) に設定すると、ロールが拡張機能のインストールを完了するを待たず開始します。</span><span class="sxs-lookup"><span data-stu-id="cff89-523">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="cff89-524">サポートされている WebRole または WorkerRole が VmRole に無視されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-524">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-525">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-525">Optional.</span></span> <span data-ttu-id="cff89-526">拡張機能を 'true' に設定されている場合はパブリックの使用、つまり API の一覧から返される、表示されません。</span><span class="sxs-lookup"><span data-stu-id="cff89-526">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="cff89-527">引き続きアクセスできるコンボ ProviderNamespace の型とバージョンを参照しています。</span><span class="sxs-lookup"><span data-stu-id="cff89-527">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="cff89-528">そのため、内部の拡張機能は、テストを目的のみに対するものです。</span><span class="sxs-lookup"><span data-stu-id="cff89-528">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="cff89-529">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-529">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="cff89-530">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-530">Optional.</span></span> <span data-ttu-id="cff89-531">拡張機能のサンプル構成します。</span><span class="sxs-lookup"><span data-stu-id="cff89-531">A sample configuration for the extension.</span></span> <span data-ttu-id="cff89-532">これは、ユーザーがダウンロードして、ユーザーは、カスタマイズされた入力パラメーターを置き換えることができます。</span><span class="sxs-lookup"><span data-stu-id="cff89-532">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="cff89-533">サンプル構成を十分にコメントする必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-533">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="cff89-534">'Configuration' を XML ドキュメント レベルの要素である必要がありますし、構成データが XML 形式である場合は、および省略可能なパブリック構成データが 'PublicConfig' の子要素に対応し、省略可能なプライベート構成データが子に対応しています'PrivateConfig' の要素。</span><span class="sxs-lookup"><span data-stu-id="cff89-534">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="cff89-535">サンプルの構成データは、発行元によって、パブリックとプライベート構成スキーマに対して検証する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-535">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-536">かどうか、このバージョンの拡張機能がすべてのリージョンにレプリケートされるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="cff89-536">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="cff89-537">True の場合、特定の拡張機能のバージョンは作成または更新の展開に使用できます。</span><span class="sxs-lookup"><span data-stu-id="cff89-537">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="cff89-538">それ以外の場合、特定の拡張機能バージョンを作成または更新の展開でエラーが発生可能性があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-538">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="cff89-539">一般的な時刻は、Azure によって完全にレプリケートする、新しく登録されたまたは新しく更新された拡張機能の 20 分です。</span><span class="sxs-lookup"><span data-stu-id="cff89-539">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="cff89-540">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-540">Optional.</span></span> <span data-ttu-id="cff89-541">このバージョンの拡張機能の使用許諾契約書 (エンド ユーザー ライセンス契約) を指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-541">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="cff89-542">これは、Windows Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-542">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="cff89-543">ソフトウェアは、追加の Eula を必要とする場合、使用許諾契約書へのリンクを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-543">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cff89-544">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-544">Optional.</span></span> <span data-ttu-id="cff89-545">このバージョンの拡張機能のプライバシーに関するドキュメントを指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-545">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="cff89-546">これは、Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-546">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="cff89-547">ソフトウェアは、すべてのデータと、ゲスト VM に転送を収集、追加のプライバシー ドキュメントを必要があります。</span><span class="sxs-lookup"><span data-stu-id="cff89-547">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="cff89-548">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-548">Optional.</span></span> <span data-ttu-id="cff89-549">このバージョンの拡張機能のホーム ページを指す URL 文字列。</span><span class="sxs-lookup"><span data-stu-id="cff89-549">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="cff89-550">これは、Azure ではなく拡張機能を公開するサード パーティによって必要に応じて指定します。</span><span class="sxs-lookup"><span data-stu-id="cff89-550">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="cff89-551">ホーム ページは、使用状況に関する情報とカスタマー サポートの連絡先情報が必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-551">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-552">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-552">Optional.</span></span> <span data-ttu-id="cff89-553">拡張機能を 'true' に設定されている場合は、JSON ベースの構成を受け取ると想定されます。</span><span class="sxs-lookup"><span data-stu-id="cff89-553">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="cff89-554">'False' に設定されている場合は、XML ベースの構成を受信する、拡張機能が必要です。</span><span class="sxs-lookup"><span data-stu-id="cff89-554">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="cff89-555">その値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-555">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="cff89-556">省略可能。</span><span class="sxs-lookup"><span data-stu-id="cff89-556">Optional.</span></span> <span data-ttu-id="cff89-557">これは、拡張機能のバージョンは、アクティブな展開で他のメジャー バージョンにアップグレードできません 'true' に設定されます。 場合、</span><span class="sxs-lookup"><span data-stu-id="cff89-557">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="cff89-558">値が 'false' の場合、またはも存在する場合は、その他のバージョンから拡張機能のバージョンにアップグレードできます。</span><span class="sxs-lookup"><span data-stu-id="cff89-558">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="cff89-559">ダウン グレードはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="cff89-559">Downgrade is not supported.</span></span> <span data-ttu-id="cff89-560">値に 'true' または 'false' (大文字小文字を区別) 場合に存在します。</span><span class="sxs-lookup"><span data-stu-id="cff89-560">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="cff89-561">拡張機能をサポートする OS を示す文字列プロパティです。</span><span class="sxs-lookup"><span data-stu-id="cff89-561">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="cff89-562">現在の値は、'Windows' または 'Linux' です。</span><span class="sxs-lookup"><span data-stu-id="cff89-562">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="cff89-563">拡張機能を公開している会社/組織の名前を含む文字列プロパティ。</span><span class="sxs-lookup"><span data-stu-id="cff89-563">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="cff89-564">スライスのために必要な領域の名前を含む文字列プロパティです。</span><span class="sxs-lookup"><span data-stu-id="cff89-564">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="cff89-565">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="cff89-565">The response stream.</span></span>
+    content: function update(parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,1384 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 710b634fa6d51baa927cf736564cb3b38a6c36d9
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064398"
+items:
+- uid: azure-sb.ServiceBusService
+  id: azure-sb.ServiceBusService
+  name: ServiceBusService
+  summary: >-
+    <span data-ttu-id="16156-101">ServiceBusServices、Microsoft Azure Service Bus を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="16156-101">The ServiceBusServices allows you to work with Microsoft Azure Service Bus.</span></span>
+
+    <span data-ttu-id="16156-102">Service Bus では、モバイル デバイスのプッシュ通知と同様に、メッセージの送受信両方のキューを提供します。</span><span class="sxs-lookup"><span data-stu-id="16156-102">Service Bus provides both queues for sending and receiving messages, as well as push notifications for mobile devices.</span></span>
+
+
+    <span data-ttu-id="16156-103">Service Bus キュー両方標準メッセージ キュー機能を提供するだけでなく functioanlity のパブリッシュ/サブスクライブします。</span><span class="sxs-lookup"><span data-stu-id="16156-103">Service Bus queues provide both standard message queue functionality as well as publish/subscribe functioanlity.</span></span>
+
+    <span data-ttu-id="16156-104">Service Bus のキューの詳細についてもようにタスクの Node.js アプリケーションからそれらを使用して集中的な情報を参照してください[Service Bus キューの使用方法](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-queues/)と[方法を使用して Service Bus トピック/サブスクリプション](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-topics/).</span><span class="sxs-lookup"><span data-stu-id="16156-104">For more information on Service Bus queues, as well as task focused information on using them from Node.js applications, see [How to Use Service Bus Queues](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-queues/) and [How to Use Service Bus Topics/Subscriptions](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-topics/).</span></span>
+
+
+    <span data-ttu-id="16156-105">Service Bus は、通知ハブを通じてプッシュ通知を提供します。</span><span class="sxs-lookup"><span data-stu-id="16156-105">Service Bus provides push notifications through the Notification Hub.</span></span>
+
+    <span data-ttu-id="16156-106">使用する必要があります、ServiceBusService を使用して、Notification Hubs を管理することが、<xref:azure-sb.NotificationHubService>モバイル デバイスにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="16156-106">While the ServiceBusService can be used to manage Notification Hubs, you must use the <xref:azure-sb.NotificationHubService> to send messages to mobile devices.</span></span>
+  fullName: azure-sb.ServiceBusService
+  type: Class
+  children:
+  - azure-sb.ServiceBusService.#ctor
+  - azure-sb.ServiceBusService#receiveQueueMessage
+  - azure-sb.ServiceBusService#receiveSubscriptionMessage
+  - azure-sb.ServiceBusService#deleteMessage
+  - azure-sb.ServiceBusService#unlockMessage
+  - azure-sb.ServiceBusService#renewLockForMessage
+  - azure-sb.ServiceBusService#sendQueueMessage
+  - azure-sb.ServiceBusService#sendTopicMessage
+  - azure-sb.ServiceBusService#createQueue
+  - azure-sb.ServiceBusService#createQueueIfNotExists
+  - azure-sb.ServiceBusService#deleteQueue
+  - azure-sb.ServiceBusService#getQueue
+  - azure-sb.ServiceBusService#listQueues
+  - azure-sb.ServiceBusService#createTopic
+  - azure-sb.ServiceBusService#createTopicIfNotExists
+  - azure-sb.ServiceBusService#deleteTopic
+  - azure-sb.ServiceBusService#getTopic
+  - azure-sb.ServiceBusService#listTopics
+  - azure-sb.ServiceBusService#createSubscription
+  - azure-sb.ServiceBusService#deleteSubscription
+  - azure-sb.ServiceBusService#getSubscription
+  - azure-sb.ServiceBusService#listSubscriptions
+  - azure-sb.ServiceBusService#createRule
+  - azure-sb.ServiceBusService#deleteRule
+  - azure-sb.ServiceBusService#getRule
+  - azure-sb.ServiceBusService#listRules
+  - azure-sb.ServiceBusService#createNotificationHub
+  - azure-sb.ServiceBusService#getNotificationHub
+  - azure-sb.ServiceBusService#listNotificationHubs
+  - azure-sb.ServiceBusService#deleteNotificationHub
+  langs:
+  - js
+- id: azure-sb.ServiceBusService.#ctor
+  uid: azure-sb.ServiceBusService.#ctor
+  parent: azure-sb.ServiceBusService
+  name: ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  fullName: azure-sb.ServiceBusService.ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  summary: >-
+    <span data-ttu-id="16156-107">新しい ServiceBusService オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="16156-107">Creates a new ServiceBusService object.</span></span>
+
+
+    <span data-ttu-id="16156-108">Azure モジュールは、Microsoft Azure Service Bus への接続に必要な情報を環境変数 AZURE_SERVICEBUS_NAMESPACE および AZURE_SERVICEBUS_ACCESS_KEY を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="16156-108">The azure module will read the environment variables AZURE_SERVICEBUS_NAMESPACE and AZURE_SERVICEBUS_ACCESS_KEY for information required to connect to your Microsoft Azure Service Bus.</span></span>
+
+    <span data-ttu-id="16156-109">これらの環境変数が設定されていない場合は、ServiceBusService オブジェクトを作成するときに、アカウント情報を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="16156-109">If these environment variables are not set, you must specify the account information when creating a ServiceBusService object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrNamespaceOrConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="16156-110">Service bus 名前空間または接続文字列。</span><span class="sxs-lookup"><span data-stu-id="16156-110">The service bus namespace or the connection string.</span></span>
+      optional: true
+    - id: accessKey
+      type:
+      - string
+      description: <span data-ttu-id="16156-111">パスワードです。</span><span class="sxs-lookup"><span data-stu-id="16156-111">The password.</span></span> <span data-ttu-id="16156-112">接続文字列が渡されない場合にのみ必要です。</span><span class="sxs-lookup"><span data-stu-id="16156-112">Only necessary if no connection string passed.</span></span>
+      optional: true
+    - id: issuer
+      type:
+      - string
+      description: <span data-ttu-id="16156-113">発行者。</span><span class="sxs-lookup"><span data-stu-id="16156-113">The issuer.</span></span>
+      optional: true
+    - id: acsNamespace
+      type:
+      - string
+      description: <span data-ttu-id="16156-114">Acs 名前空間。</span><span class="sxs-lookup"><span data-stu-id="16156-114">The acs namespace.</span></span> <span data-ttu-id="16156-115">Sb 名前空間と、通常は同じ"-sb"サフィックス。</span><span class="sxs-lookup"><span data-stu-id="16156-115">Usually the same as the sb namespace with "-sb" suffix.</span></span>
+      optional: true
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="16156-116">ホスト アドレスです。</span><span class="sxs-lookup"><span data-stu-id="16156-116">The host address.</span></span>
+      optional: true
+    - id: authenticationProvider
+      type:
+      - object
+      description: <span data-ttu-id="16156-117">認証プロバイダー。</span><span class="sxs-lookup"><span data-stu-id="16156-117">The authentication provider.</span></span>
+      optional: true
+    content: new ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#receiveQueueMessage
+  id: azure-sb.ServiceBusService#receiveQueueMessage
+  parent: azure-sb.ServiceBusService
+  name: receiveQueueMessage(queuePath, options, callback)
+  summary: <span data-ttu-id="16156-118">キュー メッセージを受信します。</span><span class="sxs-lookup"><span data-stu-id="16156-118">Receives a queue message.</span></span>
+  fullName: azure-sb.ServiceBusService.receiveQueueMessage(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="16156-119">メッセージの送信先となるキューの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-119">A string object that represents the name of the queue to which the message will be sent.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-120">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-120">The request options.</span></span>
+      optional: true
+    - id: options.isPeekLock
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-121">メッセージをピークまたは受信するかどうかを示すブール値。</span><span class="sxs-lookup"><span data-stu-id="16156-121">Boolean value indicating if the message should be peeked or received.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInS
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-122">タイムアウト間隔 (秒)、要求に使用します。</span><span class="sxs-lookup"><span data-stu-id="16156-122">The timeout interval, in seconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-123">`error` エラーが発生した場合に情報を含むそれ以外の場合`receivequeuemessageresult`メッセージの結果情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-123">`error` will contain information if an error occurs; otherwise `receivequeuemessageresult` will contain the message result information.</span></span>
+                                                                                        <span data-ttu-id="16156-124">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-124">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function receiveQueueMessage(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#receiveSubscriptionMessage
+  id: azure-sb.ServiceBusService#receiveSubscriptionMessage
+  parent: azure-sb.ServiceBusService
+  name: receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  summary: <span data-ttu-id="16156-125">サブスクリプションのメッセージを受信します。</span><span class="sxs-lookup"><span data-stu-id="16156-125">Receives a subscription message.</span></span>
+  fullName: azure-sb.ServiceBusService.receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-126">受信するトピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-126">A string object that represents the name of the topic to receive.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-127">メッセージからサブスクリプションの名前を表す文字列オブジェクトを受信します。</span><span class="sxs-lookup"><span data-stu-id="16156-127">A string object that represents the name of the subscription from the message will be received.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-128">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-128">The request options.</span></span>
+      optional: true
+    - id: options.isPeekLock
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-129">メッセージをピークまたは受信するかどうかを示すブール値。</span><span class="sxs-lookup"><span data-stu-id="16156-129">Boolean value indicating if the message should be peeked or received.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInS
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-130">タイムアウト間隔 (秒)、要求に使用します。</span><span class="sxs-lookup"><span data-stu-id="16156-130">The timeout interval, in seconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-131">`error` エラーが発生した場合に情報を含むそれ以外の場合`receivetopicmessageresult`メッセージの結果情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-131">`error` will contain information if an error occurs; otherwise `receivetopicmessageresult` will contain the message result information.</span></span>
+                                                                                        <span data-ttu-id="16156-132">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-132">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteMessage
+  id: azure-sb.ServiceBusService#deleteMessage
+  parent: azure-sb.ServiceBusService
+  name: deleteMessage(message, callback)
+  summary: <span data-ttu-id="16156-133">メッセージを削除します。</span><span class="sxs-lookup"><span data-stu-id="16156-133">Deletes a message.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="16156-134">メッセージ オブジェクト、またはメッセージの場所を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="16156-134">The message object or a string with the message location.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="16156-135">`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-135">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#unlockMessage
+  id: azure-sb.ServiceBusService#unlockMessage
+  parent: azure-sb.ServiceBusService
+  name: unlockMessage(message, callback)
+  summary: <span data-ttu-id="16156-136">メッセージのロックを解除します。</span><span class="sxs-lookup"><span data-stu-id="16156-136">Unlocks a message.</span></span>
+  fullName: azure-sb.ServiceBusService.unlockMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="16156-137">メッセージ オブジェクト、またはメッセージの場所を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="16156-137">The message object or a string with the message location.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="16156-138">`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-138">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function unlockMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#renewLockForMessage
+  id: azure-sb.ServiceBusService#renewLockForMessage
+  parent: azure-sb.ServiceBusService
+  name: renewLockForMessage(message, callback)
+  summary: <span data-ttu-id="16156-139">ロックを更新するメッセージ。</span><span class="sxs-lookup"><span data-stu-id="16156-139">Renew-lock for message.</span></span>
+  fullName: azure-sb.ServiceBusService.renewLockForMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="16156-140">メッセージ オブジェクト、またはメッセージの場所を含む文字列。</span><span class="sxs-lookup"><span data-stu-id="16156-140">The message object or a string with the message location.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="16156-141">`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-141">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function renewLockForMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#sendQueueMessage
+  id: azure-sb.ServiceBusService#sendQueueMessage
+  parent: azure-sb.ServiceBusService
+  name: sendQueueMessage(queuePath, message, callback)
+  summary: <span data-ttu-id="16156-142">キュー メッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="16156-142">Sends a queue message.</span></span>
+  fullName: azure-sb.ServiceBusService.sendQueueMessage(queuePath, message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="16156-143">メッセージの送信先となるキューの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-143">A string object that represents the name of the queue to which the message will be sent.</span></span>
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="16156-144">送信するメッセージを表すメッセージ オブジェクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-144">A message object that represents the message to send.</span></span>
+    - id: message.body
+      type:
+      - string
+      description: <span data-ttu-id="16156-145">メッセージのテキストです。</span><span class="sxs-lookup"><span data-stu-id="16156-145">The message's text.</span></span>
+      optional: true
+    - id: message.customProperties
+      type:
+      - object
+      description: <span data-ttu-id="16156-146">メッセージのカスタム プロパティです。</span><span class="sxs-lookup"><span data-stu-id="16156-146">The message's custom properties.</span></span>
+      optional: true
+    - id: message.brokerProperties.CorrelationId
+      type:
+      - string
+      description: <span data-ttu-id="16156-147">メッセージの関連付けの識別子です。</span><span class="sxs-lookup"><span data-stu-id="16156-147">The message's correlation identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.SessionId
+      type:
+      - string
+      description: <span data-ttu-id="16156-148">セッションの識別子です。</span><span class="sxs-lookup"><span data-stu-id="16156-148">The session identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.MessageId
+      type:
+      - string
+      description: <span data-ttu-id="16156-149">メッセージの識別子です。</span><span class="sxs-lookup"><span data-stu-id="16156-149">The message's identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.Label
+      type:
+      - string
+      description: <span data-ttu-id="16156-150">メッセージのラベル。</span><span class="sxs-lookup"><span data-stu-id="16156-150">The message's lable.</span></span>
+      optional: true
+    - id: message.brokerProperties.ReplyTo
+      type:
+      - string
+      description: <span data-ttu-id="16156-151">メッセージの返信します。</span><span class="sxs-lookup"><span data-stu-id="16156-151">The message's reply to.</span></span>
+      optional: true
+    - id: message.brokerProperties.TimeToLive
+      type:
+      - string
+      description: <span data-ttu-id="16156-152">メッセージの有効期間。</span><span class="sxs-lookup"><span data-stu-id="16156-152">The message's time to live.</span></span>
+      optional: true
+    - id: message.brokerProperties.To
+      type:
+      - string
+      description: <span data-ttu-id="16156-153">メッセージにします。</span><span class="sxs-lookup"><span data-stu-id="16156-153">The message's to.</span></span>
+      optional: true
+    - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+      type:
+      - string
+      description: <span data-ttu-id="16156-154">メッセージのエンキュー時間 (utc) をスケジュールします。</span><span class="sxs-lookup"><span data-stu-id="16156-154">The message's scheduled enqueue time in UTC.</span></span>
+      optional: true
+    - id: message.brokerProperties.ReplyToSessionId
+      type:
+      - string
+      description: <span data-ttu-id="16156-155">セッション識別子をメッセージの返信します。</span><span class="sxs-lookup"><span data-stu-id="16156-155">The message's reply to session identifier.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="16156-156">`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-156">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendQueueMessage(queuePath, message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#sendTopicMessage
+  id: azure-sb.ServiceBusService#sendTopicMessage
+  parent: azure-sb.ServiceBusService
+  name: sendTopicMessage(topicPath, message, callback)
+  summary: <span data-ttu-id="16156-157">トピックのメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="16156-157">Sends a topic message.</span></span>
+  fullName: azure-sb.ServiceBusService.sendTopicMessage(topicPath, message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-158">メッセージの送信先となるトピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-158">A string object that represents the name of the topic to which the message will be sent.</span></span>
+    - id: message
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="16156-159">送信するメッセージを表すメッセージ オブジェクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-159">A message object that represents the message to send.</span></span>
+    - id: message.body
+      type:
+      - string
+      description: <span data-ttu-id="16156-160">メッセージのテキストです。</span><span class="sxs-lookup"><span data-stu-id="16156-160">The message's text.</span></span>
+      optional: true
+    - id: message.customProperties
+      type:
+      - object
+      description: <span data-ttu-id="16156-161">メッセージのカスタム プロパティです。</span><span class="sxs-lookup"><span data-stu-id="16156-161">The message's custom properties.</span></span>
+      optional: true
+    - id: message.brokerProperties.CorrelationId
+      type:
+      - string
+      description: <span data-ttu-id="16156-162">メッセージの関連付けの識別子です。</span><span class="sxs-lookup"><span data-stu-id="16156-162">The message's correlation identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.SessionId
+      type:
+      - string
+      description: <span data-ttu-id="16156-163">セッションの識別子です。</span><span class="sxs-lookup"><span data-stu-id="16156-163">The session identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.MessageId
+      type:
+      - string
+      description: <span data-ttu-id="16156-164">メッセージの識別子です。</span><span class="sxs-lookup"><span data-stu-id="16156-164">The message's identifier.</span></span>
+      optional: true
+    - id: message.brokerProperties.Label
+      type:
+      - string
+      description: <span data-ttu-id="16156-165">メッセージのラベル。</span><span class="sxs-lookup"><span data-stu-id="16156-165">The message's lable.</span></span>
+      optional: true
+    - id: message.brokerProperties.ReplyTo
+      type:
+      - string
+      description: <span data-ttu-id="16156-166">メッセージの返信します。</span><span class="sxs-lookup"><span data-stu-id="16156-166">The message's reply to.</span></span>
+      optional: true
+    - id: message.brokerProperties.TimeToLive
+      type:
+      - string
+      description: <span data-ttu-id="16156-167">メッセージの有効期間。</span><span class="sxs-lookup"><span data-stu-id="16156-167">The message's time to live.</span></span>
+      optional: true
+    - id: message.brokerProperties.To
+      type:
+      - string
+      description: <span data-ttu-id="16156-168">メッセージにします。</span><span class="sxs-lookup"><span data-stu-id="16156-168">The message's to.</span></span>
+      optional: true
+    - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+      type:
+      - string
+      description: <span data-ttu-id="16156-169">メッセージのエンキュー時間 (utc) をスケジュールします。</span><span class="sxs-lookup"><span data-stu-id="16156-169">The message's scheduled enqueue time in UTC.</span></span>
+      optional: true
+    - id: message.brokerProperties.ReplyToSessionId
+      type:
+      - string
+      description: <span data-ttu-id="16156-170">セッション識別子をメッセージの返信します。</span><span class="sxs-lookup"><span data-stu-id="16156-170">The message's reply to session identifier.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-171">`error` エラーが発生した場合に情報を含むそれ以外の場合`receivetopicmessageresult`メッセージの結果情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-171">`error` will contain information if an error occurs; otherwise `receivetopicmessageresult` will contain the message result information.</span></span>
+                                                                                          <span data-ttu-id="16156-172">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-172">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTopicMessage(topicPath, message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createQueue
+  id: azure-sb.ServiceBusService#createQueue
+  parent: azure-sb.ServiceBusService
+  name: createQueue(queuePath, options, callback)
+  summary: <span data-ttu-id="16156-173">キューを作成します。</span><span class="sxs-lookup"><span data-stu-id="16156-173">Creates a queue.</span></span>
+  fullName: azure-sb.ServiceBusService.createQueue(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="16156-174">作成するキューの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-174">A string object that represents the name of the queue to create.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-175">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-175">The request options.</span></span>
+      optional: true
+    - id: options.MaxSizeInMegaBytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-176">キューの最大サイズをメガバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-176">Specifies the maximum queue size in megabytes.</span></span> <span data-ttu-id="16156-177">この値を超えるキューを原因となるメッセージをエンキューする試みは失敗します。</span><span class="sxs-lookup"><span data-stu-id="16156-177">Any attempt to enqueue a message that will cause the queue to exceed this value will fail.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-178">配信不能が有効かどうかによってメッセージの DeadLetterQueue に移動または削除の指定した時間より長くキューに格納されている場合に自動的にします。</span><span class="sxs-lookup"><span data-stu-id="16156-178">Depending on whether DeadLettering is enabled, a message is automatically moved to the DeadLetterQueue or deleted if it has been stored in the queue for longer than the specified time.</span></span> <span data-ttu-id="16156-179">この値は、メッセージの TTL がキューに設定された TTL より小さい場合にのみ、メッセージで指定された TTL によって上書きされます。</span><span class="sxs-lookup"><span data-stu-id="16156-179">This value is overwritten by a TTL specified on the message if and only if the message TTL is smaller than the TTL set on the queue.</span></span> <span data-ttu-id="16156-180">キューが作成された後、この値は不変です。</span><span class="sxs-lookup"><span data-stu-id="16156-180">This value is immutable after the Queue has been created.</span></span>
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-181">受信者の処理のメッセージのロックを秒単位の時間を決定します。</span><span class="sxs-lookup"><span data-stu-id="16156-181">Determines the amount of time in seconds in which a message should be locked for processing by a receiver.</span></span> <span data-ttu-id="16156-182">この期間の後メッセージは、次の受信者によってはロックを解除し、使用可能。</span><span class="sxs-lookup"><span data-stu-id="16156-182">After this period, the message is unlocked and available for consumption by the next receiver.</span></span> <span data-ttu-id="16156-183">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-183">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-184">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-184">Settable only at queue creation time.</span></span> <span data-ttu-id="16156-185">True の場合、キューに設定する場合は、セッション対応であり、唯一の SessionReceiver がサポートされます。</span><span class="sxs-lookup"><span data-stu-id="16156-185">If set to true, the queue will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="16156-186">セッション対応キューは、残りの部分ではサポートされません。</span><span class="sxs-lookup"><span data-stu-id="16156-186">Session-aware queues are not supported through REST.</span></span>
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-187">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-187">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.DeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-188">このフィールドは、Service Bus が TTL の有効期限が切れたメッセージを処理する方法を制御します。</span><span class="sxs-lookup"><span data-stu-id="16156-188">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id="16156-189">有効になっていると、メッセージの有効期限が切れる、Service Bus では、キューからメッセージをキューの配信不能サブキューに移動します。</span><span class="sxs-lookup"><span data-stu-id="16156-189">If it is enabled and a message expires, the Service Bus moves the message from the queue into the queue’s dead-letter sub-queue.</span></span> <span data-ttu-id="16156-190">無効の場合、キューからメッセージを完全に削除されます。</span><span class="sxs-lookup"><span data-stu-id="16156-190">If disabled, message will be permanently deleted from the queue.</span></span> <span data-ttu-id="16156-191">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-191">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-192">Service Bus がメッセージの重複を検出する期間を指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-192">Specifies the time span during which the Service Bus detects message duplication.</span></span>
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-193">キューをパーティション分割するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-193">Specifies whether the queue should be partitioned.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-194">`error` エラーが発生した場合に情報を含むそれ以外の場合`createqueueresult`新しいキュー情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-194">`error` will contain information if an error occurs; otherwise `createqueueresult` will contain the new queue information.</span></span>
+                                                                                          <span data-ttu-id="16156-195">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-195">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createQueue(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createQueueIfNotExists
+  id: azure-sb.ServiceBusService#createQueueIfNotExists
+  parent: azure-sb.ServiceBusService
+  name: createQueueIfNotExists(queuePath, options, callback)
+  summary: <span data-ttu-id="16156-196">既に存在する場合は、キューを作成します。</span><span class="sxs-lookup"><span data-stu-id="16156-196">Creates a queue if it doesn't already exists.</span></span>
+  fullName: azure-sb.ServiceBusService.createQueueIfNotExists(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="16156-197">削除するキューの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-197">A string object that represents the name of the queue to delete.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-198">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-198">The request options.</span></span>
+      optional: true
+    - id: options.MaxSizeInMegaBytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-199">キューの最大サイズをメガバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-199">Specifies the maximum queue size in megabytes.</span></span> <span data-ttu-id="16156-200">この値を超えるキューを原因となるメッセージをエンキューする試みは失敗します。</span><span class="sxs-lookup"><span data-stu-id="16156-200">Any attempt to enqueue a message that will cause the queue to exceed this value will fail.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-201">配信不能が有効かどうかによってメッセージの DeadLetterQueue に移動または削除の指定した時間より長くキューに格納されている場合に自動的にします。</span><span class="sxs-lookup"><span data-stu-id="16156-201">Depending on whether DeadLettering is enabled, a message is automatically moved to the DeadLetterQueue or deleted if it has been stored in the queue for longer than the specified time.</span></span> <span data-ttu-id="16156-202">この値は、メッセージの TTL がキューに設定された TTL より小さい場合にのみ、メッセージで指定された TTL によって上書きされます。</span><span class="sxs-lookup"><span data-stu-id="16156-202">This value is overwritten by a TTL specified on the message if and only if the message TTL is smaller than the TTL set on the queue.</span></span> <span data-ttu-id="16156-203">キューが作成された後、この値は不変です。</span><span class="sxs-lookup"><span data-stu-id="16156-203">This value is immutable after the Queue has been created.</span></span>
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-204">受信者の処理のメッセージのロックを秒単位の時間を決定します。</span><span class="sxs-lookup"><span data-stu-id="16156-204">Determines the amount of time in seconds in which a message should be locked for processing by a receiver.</span></span> <span data-ttu-id="16156-205">この期間の後メッセージは、次の受信者によってはロックを解除し、使用可能。</span><span class="sxs-lookup"><span data-stu-id="16156-205">After this period, the message is unlocked and available for consumption by the next receiver.</span></span> <span data-ttu-id="16156-206">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-206">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-207">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-207">Settable only at queue creation time.</span></span> <span data-ttu-id="16156-208">True の場合、キューに設定する場合は、セッション対応であり、唯一の SessionReceiver がサポートされます。</span><span class="sxs-lookup"><span data-stu-id="16156-208">If set to true, the queue will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="16156-209">セッション対応キューは、残りの部分ではサポートされません。</span><span class="sxs-lookup"><span data-stu-id="16156-209">Session-aware queues are not supported through REST.</span></span>
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-210">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-210">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.DeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-211">このフィールドは、Service Bus が TTL の有効期限が切れたメッセージを処理する方法を制御します。</span><span class="sxs-lookup"><span data-stu-id="16156-211">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id="16156-212">有効になっていると、メッセージの有効期限が切れる、Service Bus では、キューからメッセージをキューの配信不能サブキューに移動します。</span><span class="sxs-lookup"><span data-stu-id="16156-212">If it is enabled and a message expires, the Service Bus moves the message from the queue into the queue’s dead-letter sub-queue.</span></span> <span data-ttu-id="16156-213">無効の場合、キューからメッセージを完全に削除されます。</span><span class="sxs-lookup"><span data-stu-id="16156-213">If disabled, message will be permanently deleted from the queue.</span></span> <span data-ttu-id="16156-214">キューの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-214">Settable only at queue creation time.</span></span>
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-215">Service Bus がメッセージの重複を検出する期間を指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-215">Specifies the time span during which the Service Bus detects message duplication.</span></span>
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-216">キューをパーティション分割するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-216">Specifies whether the queue should be partitioned.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-217">`error` エラーが発生した場合に情報を含むそれ以外の場合`queueCreated`新しいキュー情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-217">`error` will contain information if an error occurs; otherwise `queueCreated` will contain the new queue information.</span></span>
+                                                                                          <span data-ttu-id="16156-218">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-218">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createQueueIfNotExists(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteQueue
+  id: azure-sb.ServiceBusService#deleteQueue
+  parent: azure-sb.ServiceBusService
+  name: deleteQueue(queuePath, callback)
+  summary: <span data-ttu-id="16156-219">キューを削除します。</span><span class="sxs-lookup"><span data-stu-id="16156-219">Deletes a queue.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteQueue(queuePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="16156-220">削除するキューの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-220">A string object that represents the name of the queue to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="16156-221">`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-221">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteQueue(queuePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getQueue
+  id: azure-sb.ServiceBusService#getQueue
+  parent: azure-sb.ServiceBusService
+  name: getQueue(queuePath, callback)
+  summary: <span data-ttu-id="16156-222">キューを取得します。</span><span class="sxs-lookup"><span data-stu-id="16156-222">Retrieves a queue.</span></span>
+  fullName: azure-sb.ServiceBusService.getQueue(queuePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: <span data-ttu-id="16156-223">取得するキューの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-223">A string object that represents the name of the queue to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-224">`error` エラーが発生した場合に情報を含むそれ以外の場合`queueresult`キュー情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-224">`error` will contain information if an error occurs; otherwise `queueresult` will contain the queue information.</span></span>
+                                                                                          <span data-ttu-id="16156-225">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-225">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getQueue(queuePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listQueues
+  id: azure-sb.ServiceBusService#listQueues
+  parent: azure-sb.ServiceBusService
+  name: listQueues(options, callback)
+  summary: <span data-ttu-id="16156-226">キューの一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="16156-226">Returns a list of queues.</span></span>
+  fullName: azure-sb.ServiceBusService.listQueues(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-227">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-227">The request options.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-228">キューを一覧表示するための top 句。</span><span class="sxs-lookup"><span data-stu-id="16156-228">The top clause for listing queues.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-229">キューを一覧表示するための skip 句。</span><span class="sxs-lookup"><span data-stu-id="16156-229">The skip clause for listing queues.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-230">`error` エラーが発生した場合に情報を含むそれ以外の場合`listqueueresult`キューの一覧が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-230">`error` will contain information if an error occurs; otherwise `listqueueresult` will contain the list of queues.</span></span>
+                                                                              <span data-ttu-id="16156-231">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-231">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listQueues(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createTopic
+  id: azure-sb.ServiceBusService#createTopic
+  parent: azure-sb.ServiceBusService
+  name: createTopic(topic, options, callback)
+  summary: <span data-ttu-id="16156-232">トピックを作成します。</span><span class="sxs-lookup"><span data-stu-id="16156-232">Creates a topic.</span></span>
+  fullName: azure-sb.ServiceBusService.createTopic(topic, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topic
+      type:
+      - azure-sb.TopicInfo
+      description: <span data-ttu-id="16156-233">作成するトピックを表すトピック オブジェクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-233">A Topic object that represents the topic to create.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-234">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-234">The request options.</span></span>
+      optional: true
+    - id: options.MaxSizeInMegabytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-235">トピックの最大サイズをメガバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-235">Specifies the maximum topic size in megabytes.</span></span> <span data-ttu-id="16156-236">この値を超えるトピックを原因となるメッセージをエンキューする試みは失敗します。</span><span class="sxs-lookup"><span data-stu-id="16156-236">Any attempt to enqueue a message that will cause the topic to exceed this value will fail.</span></span> <span data-ttu-id="16156-237">トピックまたはこの値には、そのサブスクリプション数のいずれかに格納されているすべてのメッセージ。</span><span class="sxs-lookup"><span data-stu-id="16156-237">All messages that are stored in the topic or any of its subscriptions count towards this value.</span></span> <span data-ttu-id="16156-238">1 つのメッセージとして 1 つまたは複数のサブスクリプション数内に存在する、メッセージの複数のコピー。</span><span class="sxs-lookup"><span data-stu-id="16156-238">Multiple copies of a message that reside in one or multiple subscriptions count as a single messages.</span></span> <span data-ttu-id="16156-239">たとえば、メッセージの m が 1 回存在するサブスクリプション s1 と s2 のサブスクリプションで 2 回場合、は、m が 1 つのメッセージとしてカウントされます。</span><span class="sxs-lookup"><span data-stu-id="16156-239">For example, if message m exists once in subscription s1 and twice in subscription s2, m is counted as a single message.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-240">メッセージをどのくらいの時間を決定します。 関連付けられているサブスクリプション内に存在します。</span><span class="sxs-lookup"><span data-stu-id="16156-240">Determines how long a message lives in the associated subscriptions.</span></span> <span data-ttu-id="16156-241">短い TTL で明示的に作成されていない限り、サブスクリプションはトピックから TTL を継承します。</span><span class="sxs-lookup"><span data-stu-id="16156-241">Subscriptions inherit the TTL from the topic unless they are created explicitly with a smaller TTL.</span></span> <span data-ttu-id="16156-242">TTL の有効期限が切れたメッセージは、配信不能レタリングが有効になっているかどうかに基づきは、サブスクリプションの関連する DeadLtterQueue に移動するかまたは完全に削除されます。</span><span class="sxs-lookup"><span data-stu-id="16156-242">Based on whether dead-lettering is enabled, a message whose TTL has expired will either be moved to the subscription’s associated DeadLtterQueue or will be permanently deleted.</span></span>
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-243">有効な場合、トピックでは、DuplicateDetectionHistoryTimeWindow プロパティで指定された期間内で重複するメッセージを検出します。</span><span class="sxs-lookup"><span data-stu-id="16156-243">If enabled, the topic will detect duplicate messages within the time span specified by the DuplicateDetectionHistoryTimeWindow property.</span></span> <span data-ttu-id="16156-244">トピックの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-244">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-245">Service Bus がメッセージの重複を検出する期間を指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-245">Specifies the time span during which the Service Bus will detect message duplication.</span></span>
+      optional: true
+    - id: options.EnableBatchedOperations
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-246">バッチ操作を許可するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-246">Specifies if batched operations should be allowed.</span></span>
+      optional: true
+    - id: options.SizeInBytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-247">トピックのサイズをバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-247">Specifies the topic size in bytes.</span></span>
+      optional: true
+    - id: options.SupportOrdering
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-248">トピックにメッセージの順序付けがサポートしているかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-248">Specifies whether the topic supports message ordering.</span></span>
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-249">トピックをパーティション分割するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-249">Specifies whether the topic should be partitioned</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-250">`error` エラーが発生した場合に情報を含むそれ以外の場合`createtopicresult`新しいトピックの情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-250">`error` will contain information if an error occurs; otherwise `createtopicresult` will contain the new topic information.</span></span>
+                                                                                                <span data-ttu-id="16156-251">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-251">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTopic(topic, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createTopicIfNotExists
+  id: azure-sb.ServiceBusService#createTopicIfNotExists
+  parent: azure-sb.ServiceBusService
+  name: createTopicIfNotExists(topic, options, callback)
+  summary: <span data-ttu-id="16156-252">存在しない場合は、トピックを作成します。</span><span class="sxs-lookup"><span data-stu-id="16156-252">Creates a topic if it doesn't exists.</span></span>
+  fullName: azure-sb.ServiceBusService.createTopicIfNotExists(topic, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topic
+      type:
+      - azure-sb.TopicInfo
+      description: <span data-ttu-id="16156-253">作成するトピックを表すトピック オブジェクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-253">A Topic object that represents the topic to create.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-254">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-254">The request options.</span></span>
+      optional: true
+    - id: options.MaxSizeInMegabytes
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-255">トピックの最大サイズをメガバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-255">Specifies the maximum topic size in megabytes.</span></span> <span data-ttu-id="16156-256">この値を超えるトピックを原因となるメッセージをエンキューする試みは失敗します。</span><span class="sxs-lookup"><span data-stu-id="16156-256">Any attempt to enqueue a message that will cause the topic to exceed this value will fail.</span></span> <span data-ttu-id="16156-257">トピックまたはこの値には、そのサブスクリプション数のいずれかに格納されているすべてのメッセージ。</span><span class="sxs-lookup"><span data-stu-id="16156-257">All messages that are stored in the topic or any of its subscriptions count towards this value.</span></span> <span data-ttu-id="16156-258">1 つのメッセージとして 1 つまたは複数のサブスクリプション数内に存在する、メッセージの複数のコピー。</span><span class="sxs-lookup"><span data-stu-id="16156-258">Multiple copies of a message that reside in one or multiple subscriptions count as a single messages.</span></span> <span data-ttu-id="16156-259">たとえば、メッセージの m が 1 回存在するサブスクリプション s1 と s2 のサブスクリプションで 2 回場合、は、m が 1 つのメッセージとしてカウントされます。</span><span class="sxs-lookup"><span data-stu-id="16156-259">For example, if message m exists once in subscription s1 and twice in subscription s2, m is counted as a single message.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-260">メッセージをどのくらいの時間を決定します。 関連付けられているサブスクリプション内に存在します。</span><span class="sxs-lookup"><span data-stu-id="16156-260">Determines how long a message lives in the associated subscriptions.</span></span> <span data-ttu-id="16156-261">短い TTL で明示的に作成されていない限り、サブスクリプションはトピックから TTL を継承します。</span><span class="sxs-lookup"><span data-stu-id="16156-261">Subscriptions inherit the TTL from the topic unless they are created explicitly with a smaller TTL.</span></span> <span data-ttu-id="16156-262">TTL の有効期限が切れたメッセージは、配信不能レタリングが有効になっているかどうかに基づきは、サブスクリプションの関連する DeadLtterQueue に移動するかまたは完全に削除されます。</span><span class="sxs-lookup"><span data-stu-id="16156-262">Based on whether dead-lettering is enabled, a message whose TTL has expired will either be moved to the subscription’s associated DeadLtterQueue or will be permanently deleted.</span></span>
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-263">有効な場合、トピックでは、DuplicateDetectionHistoryTimeWindow プロパティで指定された期間内で重複するメッセージを検出します。</span><span class="sxs-lookup"><span data-stu-id="16156-263">If enabled, the topic will detect duplicate messages within the time span specified by the DuplicateDetectionHistoryTimeWindow property.</span></span> <span data-ttu-id="16156-264">トピックの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-264">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-265">Service Bus がメッセージの重複を検出する期間を指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-265">Specifies the time span during which the Service Bus will detect message duplication.</span></span>
+      optional: true
+    - id: options.MaxSubscriptionsPerTopic
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-266">トピックに関連付けることができるサブスクリプションの最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-266">Specifies the maximum number of subscriptions that can be associated with the topic.</span></span>
+      optional: true
+    - id: options.MaxSqlFiltersPerTopic
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-267">トピックに関連付けられているサブスクリプションに追加できます (合計) の SQL フィルター式の最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-267">Specifies the maximum number of SQL filter expressions (in total) that can be added to the subscriptions associated with the topic.</span></span>
+      optional: true
+    - id: options.MaxCorrelationFiltersPerTopic
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-268">トピックに関連付けられているサブスクリプションに追加できます (合計) の相関関係のフィルター式の最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-268">Specifies the maximum number of correlation filter expressions (in total) that can be added to the subscriptions associated with the topic.</span></span>
+      optional: true
+    - id: options.EnableDeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-269">トピックの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-269">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-270">トピックの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-270">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: options.SupportOrdering
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-271">トピックにメッセージの順序付けがサポートしているかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-271">Specifies whether the topic supports message ordering.</span></span>
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-272">トピックをパーティション分割するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="16156-272">Specifies whether the topic should be partitioned</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-273">`error` エラーが発生した場合に情報を含むそれ以外の場合`topicCreated`新しいトピックの情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-273">`error` will contain information if an error occurs; otherwise `topicCreated` will contain the new topic information.</span></span>
+                                                                                                <span data-ttu-id="16156-274">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-274">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTopicIfNotExists(topic, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteTopic
+  id: azure-sb.ServiceBusService#deleteTopic
+  parent: azure-sb.ServiceBusService
+  name: deleteTopic(topicPath, callback)
+  summary: <span data-ttu-id="16156-275">トピックを削除します。</span><span class="sxs-lookup"><span data-stu-id="16156-275">Deletes a topic.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteTopic(topicPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-276">A<code>String</code>を削除するキューの名前を表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-276">A <code>String</code> object that represents the name of the queue to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="16156-277">`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-277">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteTopic(topicPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getTopic
+  id: azure-sb.ServiceBusService#getTopic
+  parent: azure-sb.ServiceBusService
+  name: getTopic(topicPath, callback)
+  summary: <span data-ttu-id="16156-278">トピックを取得します。</span><span class="sxs-lookup"><span data-stu-id="16156-278">Retrieves a topic.</span></span>
+  fullName: azure-sb.ServiceBusService.getTopic(topicPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-279">A<code>String</code>を取得するトピックの名前を表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-279">A <code>String</code> object that represents the name of the topic to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-280">`error` エラーが発生した場合に情報を含むそれ以外の場合`gettopicresult`トピックの情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-280">`error` will contain information if an error occurs; otherwise `gettopicresult` will contain the topic information.</span></span>
+                                                                         <span data-ttu-id="16156-281">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-281">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getTopic(topicPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listTopics
+  id: azure-sb.ServiceBusService#listTopics
+  parent: azure-sb.ServiceBusService
+  name: listTopics(options, callback)
+  summary: <span data-ttu-id="16156-282">トピックの一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="16156-282">Returns a list of topics.</span></span>
+  fullName: azure-sb.ServiceBusService.listTopics(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-283">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-283">The request options.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-284">フェッチするトピックの数。</span><span class="sxs-lookup"><span data-stu-id="16156-284">The number of topics to fetch.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-285">スキップするトピックの数。</span><span class="sxs-lookup"><span data-stu-id="16156-285">The number of topics to skip.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-286">`error` エラーが発生した場合に情報を含むそれ以外の場合`listtopicsresult`トピックの一覧が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-286">`error` will contain information if an error occurs; otherwise `listtopicsresult` will contain the list of topics.</span></span>
+                                                                              <span data-ttu-id="16156-287">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-287">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listTopics(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createSubscription
+  id: azure-sb.ServiceBusService#createSubscription
+  parent: azure-sb.ServiceBusService
+  name: createSubscription(topicPath, subscriptionPath, options, callback)
+  summary: <span data-ttu-id="16156-288">サブスクリプションを作成します。</span><span class="sxs-lookup"><span data-stu-id="16156-288">Creates a subscription.</span></span>
+  fullName: azure-sb.ServiceBusService.createSubscription(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-289">サブスクリプションのトピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-289">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-290">サブスクリプションの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-290">A string object that represents the name of the subscription.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-291">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-291">The request options.</span></span>
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-292">既定のロック期間は、ロック期間を定義しないサブスクリプションに適用されます。</span><span class="sxs-lookup"><span data-stu-id="16156-292">The default lock duration is applied to subscriptions that do not define a lock duration.</span></span> <span data-ttu-id="16156-293">サブスクリプションの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-293">Settable only at subscription creation time.</span></span>
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-294">サブスクリプションの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-294">Settable only at subscription creation time.</span></span> <span data-ttu-id="16156-295">True の場合、サブスクリプションに設定する場合は、セッション対応であり、唯一の SessionReceiver がサポートされます。</span><span class="sxs-lookup"><span data-stu-id="16156-295">If set to true, the subscription will be session-aware and only SessionReceiver will be supported.</span></span> <span data-ttu-id="16156-296">セッション対応のサブスクリプションは、残りの部分ではサポートされません。</span><span class="sxs-lookup"><span data-stu-id="16156-296">Session-aware subscription are not supported through REST.</span></span>
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: <span data-ttu-id="16156-297">メッセージをどのくらいの時間を決定します。 サブスクリプション内に存在します。</span><span class="sxs-lookup"><span data-stu-id="16156-297">Determines how long a message lives in the subscription.</span></span> <span data-ttu-id="16156-298">配信不能レタリングが有効になっているかどうかに基づき、TTL の有効期限が切れたメッセージがあるサブスクリプションの関連する DeadLtterQueue に移動または完全に削除されます。</span><span class="sxs-lookup"><span data-stu-id="16156-298">Based on whether dead-lettering is enabled, a message whose TTL has expired will either be moved to the subscription’s associated DeadLtterQueue or permanently deleted.</span></span>
+      optional: true
+    - id: options.EnableDeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-299">このフィールドは、Service Bus が TTL の有効期限が切れたメッセージを処理する方法を制御します。</span><span class="sxs-lookup"><span data-stu-id="16156-299">This field controls how the Service Bus handles a message whose TTL has expired.</span></span> <span data-ttu-id="16156-300">有効になって、メッセージの有効期限が切れた場合は、Service Bus はメッセージをキューからサブスクリプションの配信不能サブキューに移動します。</span><span class="sxs-lookup"><span data-stu-id="16156-300">If it is enabled and a message expires, the Service Bus moves the message from the queue into the subscription’s dead-letter sub-queue.</span></span> <span data-ttu-id="16156-301">無効の場合、サブスクリプションのメイン キューからメッセージを完全に削除されます。</span><span class="sxs-lookup"><span data-stu-id="16156-301">If disabled, message will be permanently deleted from the subscription’s main queue.</span></span> <span data-ttu-id="16156-302">サブスクリプションの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-302">Settable only at subscription creation time.</span></span>
+      optional: true
+    - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+      type:
+      - azure-sb.bool
+      description: <span data-ttu-id="16156-303">Service Bus サブスクリプションのフィルターの評価中に例外が発生するメッセージを処理する方法を決定します。</span><span class="sxs-lookup"><span data-stu-id="16156-303">Determines how the Service Bus handles a message that causes an exception during a subscription’s filter evaluation.</span></span> <span data-ttu-id="16156-304">値が設定されている場合は true、例外の原因となったメッセージが移動、サブスクリプションの配信不能キューにします。</span><span class="sxs-lookup"><span data-stu-id="16156-304">If the value is set to true, the message that caused the exception will be moved to the subscription’s dead-letter queue.</span></span> <span data-ttu-id="16156-305">それ以外の場合、破棄されます。</span><span class="sxs-lookup"><span data-stu-id="16156-305">Otherwise, it will be discarded.</span></span> <span data-ttu-id="16156-306">既定は、このパラメーターの設定を true に、例外の原因を調査する機会をユーザーに許可します。</span><span class="sxs-lookup"><span data-stu-id="16156-306">By default this parameter is set to true, allowing the user a chance to investigate the cause of the exception.</span></span> <span data-ttu-id="16156-307">これは、形式が正しくないメッセージまたはメッセージの形式に関するフィルターで行われたいくつかの不適切な想定から発生します。</span><span class="sxs-lookup"><span data-stu-id="16156-307">It can occur from a malformed message or some incorrect assumptions being made in the filter about the form of the message.</span></span> <span data-ttu-id="16156-308">トピックの作成時にのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="16156-308">Settable only at topic creation time.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-309">`error` エラーが発生した場合に情報を含むそれ以外の場合`createsubscriptionresult`新しいサブスクリプション情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-309">`error` will contain information if an error occurs; otherwise `createsubscriptionresult` will contain the new subscription information.</span></span>
+                                                                                          <span data-ttu-id="16156-310">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-310">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createSubscription(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteSubscription
+  id: azure-sb.ServiceBusService#deleteSubscription
+  parent: azure-sb.ServiceBusService
+  name: deleteSubscription(topicPath, subscriptionPath, callback)
+  summary: <span data-ttu-id="16156-311">サブスクリプションを削除します。</span><span class="sxs-lookup"><span data-stu-id="16156-311">Deletes a subscription.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteSubscription(topicPath, subscriptionPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-312">サブスクリプションのトピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-312">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-313">削除するサブスクリプションの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-313">A string object that represents the name of the subscription to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="16156-314">`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-314">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteSubscription(topicPath, subscriptionPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getSubscription
+  id: azure-sb.ServiceBusService#getSubscription
+  parent: azure-sb.ServiceBusService
+  name: getSubscription(topicPath, subscriptionPath, callback)
+  summary: <span data-ttu-id="16156-315">サブスクリプションを取得します。</span><span class="sxs-lookup"><span data-stu-id="16156-315">Retrieves a subscription.</span></span>
+  fullName: azure-sb.ServiceBusService.getSubscription(topicPath, subscriptionPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-316">サブスクリプションのトピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-316">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-317">取得するサブスクリプションの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-317">A string object that represents the name of the subscription to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-318">`error` エラーが発生した場合に情報を含むそれ以外の場合`getsubscriptionresult`サブスクリプション情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-318">`error` will contain information if an error occurs; otherwise `getsubscriptionresult` will contain the subscription information.</span></span>
+                                                                                        <span data-ttu-id="16156-319">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-319">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getSubscription(topicPath, subscriptionPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listSubscriptions
+  id: azure-sb.ServiceBusService#listSubscriptions
+  parent: azure-sb.ServiceBusService
+  name: listSubscriptions(topicPath, options, callback)
+  summary: <span data-ttu-id="16156-320">サブスクリプションの一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="16156-320">Returns a list of subscriptions.</span></span>
+  fullName: azure-sb.ServiceBusService.listSubscriptions(topicPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-321">取得するサブスクリプションについては、トピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-321">A string object that represents the name of the topic for the subscriptions to retrieve.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-322">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-322">The request options.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-323">フェッチするトピックの数。</span><span class="sxs-lookup"><span data-stu-id="16156-323">The number of topics to fetch.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-324">スキップするトピックの数。</span><span class="sxs-lookup"><span data-stu-id="16156-324">The number of topics to skip.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-325">`error` エラーが発生した場合に情報を含むそれ以外の場合`listsubscriptionresult`サブスクリプションの一覧が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-325">`error` will contain information if an error occurs; otherwise `listsubscriptionresult` will contain the list of subscriptions.</span></span>
+                                                                              <span data-ttu-id="16156-326">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-326">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listSubscriptions(topicPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createRule
+  id: azure-sb.ServiceBusService#createRule
+  parent: azure-sb.ServiceBusService
+  name: createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  summary: <span data-ttu-id="16156-327">規則を作成します。</span><span class="sxs-lookup"><span data-stu-id="16156-327">Creates a rule.</span></span>
+  fullName: azure-sb.ServiceBusService.createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-328">サブスクリプションのトピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-328">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-329">ルールの作成対象となるサブスクリプションの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-329">A string object that represents the name of the subscription for which the rule will be created.</span></span>
+    - id: rulePath
+      type:
+      - string
+      description: <span data-ttu-id="16156-330">作成するルールの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-330">A string object that represents the name of the rule to be created.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-331">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-331">The request options.</span></span>
+      optional: true
+    - id: options.trueFilter
+      type:
+      - string
+      description: <span data-ttu-id="16156-332">実際のフィルターとして、ルールが評価される式を定義します。</span><span class="sxs-lookup"><span data-stu-id="16156-332">Defines the expression that the rule evaluates as a true filter.</span></span>
+      optional: true
+    - id: options.falseFilter
+      type:
+      - string
+      description: <span data-ttu-id="16156-333">False のフィルターとして、ルールが評価される式を定義します。</span><span class="sxs-lookup"><span data-stu-id="16156-333">Defines the expression that the rule evaluates as a false filter.</span></span>
+      optional: true
+    - id: options.sqlExpressionFilter
+      type:
+      - string
+      description: <span data-ttu-id="16156-334">ルールが評価される式を定義します。</span><span class="sxs-lookup"><span data-stu-id="16156-334">Defines the expression that the rule evaluates.</span></span> <span data-ttu-id="16156-335">式の文字列は、True または False に評価される必要があります SQL92 式として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="16156-335">The expression string is interpreted as a SQL92 expression which must evaluate to True or False.</span></span> <span data-ttu-id="16156-336">相関関係と、sql 式の 1 つだけを定義することができます。</span><span class="sxs-lookup"><span data-stu-id="16156-336">Only one between a correlation and a sql expression can be defined.</span></span>
+      optional: true
+    - id: options.correlationIdFilter
+      type:
+      - string
+      description: <span data-ttu-id="16156-337">ルールが評価される式を定義します。</span><span class="sxs-lookup"><span data-stu-id="16156-337">Defines the expression that the rule evaluates.</span></span> <span data-ttu-id="16156-338">ある CorrelationId 一致フィルター式で設定した CorrelationId メッセージのみが許可されます。</span><span class="sxs-lookup"><span data-stu-id="16156-338">Only the messages whose CorrelationId match the CorrelationId set in the filter expression are allowed.</span></span> <span data-ttu-id="16156-339">相関関係と、sql 式の 1 つだけを定義することができます。</span><span class="sxs-lookup"><span data-stu-id="16156-339">Only one between a correlation and a sql expression can be defined.</span></span>
+      optional: true
+    - id: options.sqlRuleAction
+      type:
+      - string
+      description: <span data-ttu-id="16156-340">ルールが評価される式を定義します。</span><span class="sxs-lookup"><span data-stu-id="16156-340">Defines the expression that the rule evaluates.</span></span> <span data-ttu-id="16156-341">ルールが SQL 型の場合、式の文字列は、True または False に評価される必要があります SQL92 式として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="16156-341">If the rule is of type SQL, the expression string is interpreted as a SQL92 expression which must evaluate to True or False.</span></span> <span data-ttu-id="16156-342">ルールがある場合は、ある CorrelationId 一致フィルター式で設定した CorrelationId メッセージのみが許可されているし、CorrelationFilterExpression を入力します。</span><span class="sxs-lookup"><span data-stu-id="16156-342">If the rule is of type CorrelationFilterExpression then only the messages whose CorrelationId match the CorrelationId set in the filter expression are allowed.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-343">`error` エラーが発生した場合に情報を含むそれ以外の場合`createruleresults`は新しいルールの情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-343">`error` will contain information if an error occurs; otherwise `createruleresults` will contain the new rule information.</span></span>
+                                                                                    <span data-ttu-id="16156-344">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-344">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteRule
+  id: azure-sb.ServiceBusService#deleteRule
+  parent: azure-sb.ServiceBusService
+  name: deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  summary: <span data-ttu-id="16156-345">規則を削除します。</span><span class="sxs-lookup"><span data-stu-id="16156-345">Deletes a rule.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-346">サブスクリプションのトピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-346">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-347">ルールが削除されるサブスクリプションの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-347">A string object that represents the name of the subscription for which the rule will be deleted.</span></span>
+    - id: rulePath
+      type:
+      - string
+      description: <span data-ttu-id="16156-348">削除する規則の名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-348">A string object that represents the name of the rule to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="16156-349">`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-349">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getRule
+  id: azure-sb.ServiceBusService#getRule
+  parent: azure-sb.ServiceBusService
+  name: getRule(topicPath, subscriptionPath, rulePath, callback)
+  summary: <span data-ttu-id="16156-350">ルールを取得します。</span><span class="sxs-lookup"><span data-stu-id="16156-350">Retrieves a rule.</span></span>
+  fullName: azure-sb.ServiceBusService.getRule(topicPath, subscriptionPath, rulePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-351">サブスクリプションのトピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-351">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-352">ルールを取得するサブスクリプションの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-352">A string object that represents the name of the subscription for which the rule will be retrieved.</span></span>
+    - id: rulePath
+      type:
+      - string
+      description: <span data-ttu-id="16156-353">取得する規則の名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-353">A string object that represents the name of the rule to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-354">`error` エラーが発生した場合に情報を含むそれ以外の場合`getruleresult`ルールの情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-354">`error` will contain information if an error occurs; otherwise `getruleresult` will contain the rule information.</span></span>
+                                                                                        <span data-ttu-id="16156-355">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-355">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getRule(topicPath, subscriptionPath, rulePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listRules
+  id: azure-sb.ServiceBusService#listRules
+  parent: azure-sb.ServiceBusService
+  name: listRules(topicPath, subscriptionPath, options, callback)
+  summary: <span data-ttu-id="16156-356">ルールの一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="16156-356">Returns a list of rules.</span></span>
+  fullName: azure-sb.ServiceBusService.listRules(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-357">サブスクリプションのトピックの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-357">A string object that represents the name of the topic for the subscription.</span></span>
+    - id: subscriptionPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-358">取得するルールを持つサブスクリプションの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-358">A string object that represents the name of the subscription whose rules are being retrieved.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-359">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="16156-359">The request options.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-360">フェッチするトピックの数。</span><span class="sxs-lookup"><span data-stu-id="16156-360">The number of topics to fetch.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-361">スキップするトピックの数。</span><span class="sxs-lookup"><span data-stu-id="16156-361">The number of topics to skip.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-362">`error` エラーが発生した場合に情報を含むそれ以外の場合`listrulesresult`ルールの一覧が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-362">`error` will contain information if an error occurs; otherwise `listrulesresult` will contain the list of rules.</span></span>
+                                                                              <span data-ttu-id="16156-363">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-363">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRules(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createNotificationHub
+  id: azure-sb.ServiceBusService#createNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: createNotificationHub(hubPath, options, callback)
+  summary: <span data-ttu-id="16156-364">通知ハブを作成します。</span><span class="sxs-lookup"><span data-stu-id="16156-364">Creates a notification hub.</span></span>
+  fullName: azure-sb.ServiceBusService.createNotificationHub(hubPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-365">通知ハブの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-365">A string object that represents the name of the notification hub.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-366">要求オプションまたはコールバック関数。</span><span class="sxs-lookup"><span data-stu-id="16156-366">The request options or callback function.</span></span>
+      optional: true
+    - id: options.wns
+      type:
+      - object
+      description: <span data-ttu-id="16156-367">WNS の資格情報のキー値のペアを含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-367">An object with the key value pairs for the WNS credentials.</span></span>
+      optional: true
+    - id: options.apns
+      type:
+      - object
+      description: <span data-ttu-id="16156-368">APNS 資格情報のキー値のペアを含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-368">An object with the key value pairs for the APNS credentials.</span></span>
+      optional: true
+    - id: options.gcm
+      type:
+      - object
+      description: <span data-ttu-id="16156-369">GCM の資格情報のキー値のペアを含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-369">An object with the key value pairs for the GCM credentials.</span></span>
+      optional: true
+    - id: options.mpns
+      type:
+      - object
+      description: <span data-ttu-id="16156-370">MPNS の資格情報のキー値のペアを含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-370">An object with the key value pairs for the MPNS credentials.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-371">`error` エラーが発生した場合に情報を含むそれ以外の場合`result`新しい通知ハブの情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-371">`error` will contain information if an error occurs; otherwise `result` will contain the new notification hub information.</span></span>
+                                                              <span data-ttu-id="16156-372">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-372">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNotificationHub(hubPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getNotificationHub
+  id: azure-sb.ServiceBusService#getNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: getNotificationHub(hubPath, callback)
+  summary: <span data-ttu-id="16156-373">通知ハブを取得します。</span><span class="sxs-lookup"><span data-stu-id="16156-373">Gets a notification hub.</span></span>
+  fullName: azure-sb.ServiceBusService.getNotificationHub(hubPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-374">通知ハブの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-374">A string object that represents the name of the notification hub.</span></span>
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-375">`error` エラーが発生した場合に情報を含むそれ以外の場合`result`通知ハブの情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-375">`error` will contain information if an error occurs; otherwise `result` will contain the notification hub information.</span></span>
+                                                                                    <span data-ttu-id="16156-376">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-376">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getNotificationHub(hubPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listNotificationHubs
+  id: azure-sb.ServiceBusService#listNotificationHubs
+  parent: azure-sb.ServiceBusService
+  name: listNotificationHubs(options, callback)
+  summary: <span data-ttu-id="16156-377">Notification hubs の一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="16156-377">Returns a list of notification hubs.</span></span>
+  fullName: azure-sb.ServiceBusService.listNotificationHubs(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="16156-378">要求オプションまたはコールバック関数。</span><span class="sxs-lookup"><span data-stu-id="16156-378">The request options or callback function.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-379">フェッチするトピックの数。</span><span class="sxs-lookup"><span data-stu-id="16156-379">The number of topics to fetch.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: <span data-ttu-id="16156-380">スキップするトピックの数。</span><span class="sxs-lookup"><span data-stu-id="16156-380">The number of topics to skip.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="16156-381">`error` エラーが発生した場合に情報を含むそれ以外の場合`result`notification hubs の一覧が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-381">`error` will contain information if an error occurs; otherwise `result` will contain the list of notification hubs.</span></span>
+                                                              <span data-ttu-id="16156-382">`response` この操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-382">`response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listNotificationHubs(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteNotificationHub
+  id: azure-sb.ServiceBusService#deleteNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: deleteNotificationHub(hubPath, callback)
+  summary: <span data-ttu-id="16156-383">通知ハブを削除します。</span><span class="sxs-lookup"><span data-stu-id="16156-383">Deletes a notification hub.</span></span>
+  fullName: azure-sb.ServiceBusService.deleteNotificationHub(hubPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: <span data-ttu-id="16156-384">通知ハブの名前を表す文字列オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16156-384">A string object that represents the name of the notification hub.</span></span>
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="16156-385">`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="16156-385">`error` will contain information if an error occurs; otherwise `response` will contain information related to this operation.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteNotificationHub(hubPath, callback)
+  langs:
+  - js

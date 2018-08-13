@@ -1,0 +1,177 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 59656223c5a7cd2be8183dba49eeedd41c8bab1b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064357"
+items:
+- uid: azure-monitoring.RuleOperations~RuleOperations
+  id: azure-monitoring.RuleOperations~RuleOperations
+  name: RuleOperations
+  summary: >-
+    <span data-ttu-id="7be2d-101">アラート ルールを管理するための操作。</span><span class="sxs-lookup"><span data-stu-id="7be2d-101">Operations for managing the alert rules.</span></span>
+
+    <span data-ttu-id="7be2d-102">__注__: [AlertsClient] のインスタンスをこのクラスのインスタンスが自動的に作成<xref:azure-monitoring.AlertsClient~AlertsClient>です。</span><span class="sxs-lookup"><span data-stu-id="7be2d-102">__NOTE__: An instance of this class is automatically created for an instance of the [AlertsClient] <xref:azure-monitoring.AlertsClient~AlertsClient>.</span></span>
+
+    <span data-ttu-id="7be2d-103">[ルール] を参照してください。<xref:azure-monitoring.AlertsClient~AlertsClient%23rules>します。</span><span class="sxs-lookup"><span data-stu-id="7be2d-103">See [rules] <xref:azure-monitoring.AlertsClient~AlertsClient%23rules>.</span></span>
+
+    <span data-ttu-id="7be2d-104">RuleOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="7be2d-104">Initializes a new instance of the RuleOperations class.</span></span>
+  fullName: azure-monitoring.RuleOperations
+  type: Class
+  children:
+  - azure-monitoring.RuleOperations~RuleOperations.#ctor
+  - azure-monitoring.RuleOperations~RuleOperations#createOrUpdate
+  - azure-monitoring.RuleOperations~RuleOperations#deleteMethod
+  - azure-monitoring.RuleOperations~RuleOperations#get
+  - azure-monitoring.RuleOperations~RuleOperations#list
+  langs:
+  - js
+- id: azure-monitoring.RuleOperations~RuleOperations.#ctor
+  uid: azure-monitoring.RuleOperations~RuleOperations.#ctor
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: RuleOperations(client)
+  fullName: azure-monitoring.RuleOperations.RuleOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedAlertsClient
+      description: <span data-ttu-id="7be2d-105">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="7be2d-105">Reference to the service client.</span></span>
+    content: new RuleOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.RuleOperations~RuleOperations#createOrUpdate
+  id: azure-monitoring.RuleOperations~RuleOperations#createOrUpdate
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: createOrUpdate(parameters, callback)
+  summary: ''
+  fullName: azure-monitoring.RuleOperations~RuleOperations.createOrUpdate(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.RuleCreateOrUpdateParameters
+      description: <span data-ttu-id="7be2d-106">作成または更新する規則。</span><span class="sxs-lookup"><span data-stu-id="7be2d-106">The rule to create or update.</span></span>
+    - id: parameters.rule
+      type:
+      - azure-monitoring.Rule
+      description: <span data-ttu-id="7be2d-107">作成または更新する規則。</span><span class="sxs-lookup"><span data-stu-id="7be2d-107">The rule to create or update.</span></span>
+      optional: true
+    - id: parameters.rule.id
+      type:
+      - string
+      description: <span data-ttu-id="7be2d-108">ルールの識別子です。</span><span class="sxs-lookup"><span data-stu-id="7be2d-108">Rule identifier.</span></span>
+      optional: true
+    - id: parameters.rule.name
+      type:
+      - string
+      description: <span data-ttu-id="7be2d-109">規則の名前。</span><span class="sxs-lookup"><span data-stu-id="7be2d-109">Rule name.</span></span>
+      optional: true
+    - id: parameters.rule.description
+      type:
+      - string
+      description: <span data-ttu-id="7be2d-110">ルールの説明。</span><span class="sxs-lookup"><span data-stu-id="7be2d-110">Rule description.</span></span>
+      optional: true
+    - id: parameters.rule.isEnabled
+      type:
+      - boolean
+      description: <span data-ttu-id="7be2d-111">ルールを有効または無効になっているかどうかを決定するフラグ。</span><span class="sxs-lookup"><span data-stu-id="7be2d-111">A flag that determines whether the rule is enabled or disabled.</span></span>
+      optional: true
+    - id: parameters.rule.condition
+      type:
+      - azure-monitoring.RuleCondition
+      description: <span data-ttu-id="7be2d-112">ルールの条件。</span><span class="sxs-lookup"><span data-stu-id="7be2d-112">Rule condition.</span></span>
+      optional: true
+    - id: parameters.rule.actions
+      type:
+      - array
+      description: <span data-ttu-id="7be2d-113">ルールのアクション。</span><span class="sxs-lookup"><span data-stu-id="7be2d-113">Rule actions.</span></span>
+      optional: true
+    - id: parameters.rule.lastUpdatedTime
+      type:
+      - date
+      description: <span data-ttu-id="7be2d-114">ルールの最終更新時刻。</span><span class="sxs-lookup"><span data-stu-id="7be2d-114">Rule last updated time.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="7be2d-115">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="7be2d-115">The response stream.</span></span>
+    content: function createOrUpdate(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.RuleOperations~RuleOperations#deleteMethod
+  id: azure-monitoring.RuleOperations~RuleOperations#deleteMethod
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: deleteMethod(ruleId, callback)
+  summary: ''
+  fullName: azure-monitoring.RuleOperations~RuleOperations.deleteMethod(ruleId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ruleId
+      type:
+      - string
+      description: <span data-ttu-id="7be2d-116">削除するルールの id。</span><span class="sxs-lookup"><span data-stu-id="7be2d-116">The id of the rule to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="7be2d-117">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="7be2d-117">The response stream.</span></span>
+    content: function deleteMethod(ruleId, callback)
+  langs:
+  - js
+- uid: azure-monitoring.RuleOperations~RuleOperations#get
+  id: azure-monitoring.RuleOperations~RuleOperations#get
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: get(ruleId, callback)
+  summary: ''
+  fullName: azure-monitoring.RuleOperations~RuleOperations.get(ruleId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ruleId
+      type:
+      - string
+      description: <span data-ttu-id="7be2d-118">取得するルールの id。</span><span class="sxs-lookup"><span data-stu-id="7be2d-118">The id of the rule to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="7be2d-119">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="7be2d-119">The response stream.</span></span>
+    content: function get(ruleId, callback)
+  langs:
+  - js
+- uid: azure-monitoring.RuleOperations~RuleOperations#list
+  id: azure-monitoring.RuleOperations~RuleOperations#list
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: list(callback)
+  summary: <span data-ttu-id="7be2d-120">サブスクリプション内でアラート ルールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="7be2d-120">List the alert rules within a subscription.</span></span>
+  fullName: azure-monitoring.RuleOperations~RuleOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="7be2d-121">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="7be2d-121">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js

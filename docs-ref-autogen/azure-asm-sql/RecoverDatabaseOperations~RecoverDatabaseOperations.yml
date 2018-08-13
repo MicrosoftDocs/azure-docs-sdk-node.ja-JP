@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 22970fa66e05e7a1cf9212b905a6b01f85e9f393
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064135"
+items:
+- uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: RecoverDatabaseOperations
+  summary: >-
+    <span data-ttu-id="8ab3e-101">Azure SQL データベースの回復要求を作成する操作が含まれています。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-101">Contains the operation to create recovery requests for Azure SQL Databases.</span></span>
+
+    <span data-ttu-id="8ab3e-102">__注__: [SqlManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link SqlManagementClient ~ SqlManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="8ab3e-103">[RecoverDatabaseOperations] を参照してください。 {@link SqlManagementClient ~ SqlManagementClient #recoverDatabaseOperations}。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-103">See [recoverDatabaseOperations] {@link SqlManagementClient~SqlManagementClient#recoverDatabaseOperations}.</span></span>
+
+    <span data-ttu-id="8ab3e-104">RecoverDatabaseOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-104">Initializes a new instance of the RecoverDatabaseOperations class.</span></span>
+  fullName: azure-asm-sql.RecoverDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  - azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  langs:
+  - js
+- id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  parent: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: RecoverDatabaseOperations(client)
+  fullName: azure-asm-sql.RecoverDatabaseOperations.RecoverDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="8ab3e-105">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-105">Reference to the service client.</span></span>
+    content: new RecoverDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  parent: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: create(sourceServerName, parameters, callback)
+  summary: <span data-ttu-id="8ab3e-106">Azure SQL Database の復旧要求を発行します。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-106">Issues a recovery request for an Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.create(sourceServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sourceServerName
+      type:
+      - string
+      description: <span data-ttu-id="8ab3e-107">データベースがホストされている Azure SQL Database サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-107">The name of the Azure SQL Database Server on which the database was hosted.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.RecoverDatabaseOperationCreateParameters
+      description: <span data-ttu-id="8ab3e-108">回復データベース操作の作成要求のパラメーターを追加します。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-108">Additional parameters for the Create Recover Database Operation request.</span></span>
+    - id: parameters.sourceDatabaseName
+      type:
+      - string
+      description: <span data-ttu-id="8ab3e-109">取得またはソース Azure SQL Database の名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-109">Gets or sets the name of the source Azure SQL Database.</span></span>
+    - id: parameters.targetServerName
+      type:
+      - string
+      description: <span data-ttu-id="8ab3e-110">取得またはターゲットの Azure SQL Database サーバーの名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-110">Gets or sets the name of the target Azure SQL Database Server.</span></span>
+      optional: true
+    - id: parameters.targetDatabaseName
+      type:
+      - string
+      description: <span data-ttu-id="8ab3e-111">取得またはターゲットの Azure SQL Database の名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-111">Gets or sets the name of the target Azure SQL Database.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="8ab3e-112">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="8ab3e-112">The response stream.</span></span>
+    content: function create(sourceServerName, parameters, callback)
+  langs:
+  - js

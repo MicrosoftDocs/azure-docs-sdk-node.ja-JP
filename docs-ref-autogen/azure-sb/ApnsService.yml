@@ -1,0 +1,442 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 94474b9236dc6e17df2e02d3d799841deb9f8621
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064387"
+items:
+- uid: azure-sb.ApnsService
+  id: azure-sb.ApnsService
+  name: ApnsService
+  summary: >-
+    <span data-ttu-id="868c2-101">ApnsService クラスは、Apple Push Notification Service (APNS) を使用して通知の送信に使用されます。</span><span class="sxs-lookup"><span data-stu-id="868c2-101">The ApnsService class is used to send notifications using the Apple Push Notification Service (APNS).</span></span>
+
+    <span data-ttu-id="868c2-102">このサービスは、iOS デバイスとの通信に使用されます。</span><span class="sxs-lookup"><span data-stu-id="868c2-102">This service is used to communicate with iOS device.</span></span>
+  fullName: azure-sb.ApnsService
+  type: Class
+  children:
+  - azure-sb.ApnsService.#ctor
+  - azure-sb.ApnsService#send
+  - azure-sb.ApnsService#createNativeRegistration
+  - azure-sb.ApnsService#createOrUpdateNativeRegistration
+  - azure-sb.ApnsService#createTemplateRegistration
+  - azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  - azure-sb.ApnsService#updateTemplateRegistration
+  - azure-sb.ApnsService#listRegistrationsByToken
+  langs:
+  - js
+- id: azure-sb.ApnsService.#ctor
+  uid: azure-sb.ApnsService.#ctor
+  parent: azure-sb.ApnsService
+  name: ApnsService(notificationHubService)
+  fullName: azure-sb.ApnsService.ApnsService(notificationHubService)
+  summary: >-
+    <span data-ttu-id="868c2-103">指定したを使用して新しい ApnsService オブジェクトを作成します<xref:azure-sb.NotificationHubService>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="868c2-103">Creates a new ApnsService object using the specified <xref:azure-sb.NotificationHubService> object.</span></span>
+
+
+
+    <span data-ttu-id="868c2-104">__注__: このオブジェクトのインスタンスと自動的に作成されます、<xref:azure-sb.NotificationHubService>オブジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="868c2-104">__Note__: An instance of this object is created automatically when a <xref:azure-sb.NotificationHubService> object is created.</span></span> <span data-ttu-id="868c2-105"><xref:azure-sb.NotificationHubService%23apns> をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="868c2-105">See <xref:azure-sb.NotificationHubService%23apns>.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: <span data-ttu-id="868c2-106">Notification hubs サービス。</span><span class="sxs-lookup"><span data-stu-id="868c2-106">The notification hub service.</span></span>
+    content: new ApnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#send
+  id: azure-sb.ApnsService#send
+  parent: azure-sb.ApnsService
+  name: send(tags, payload, optionsOrCallback, callback)
+  summary: <span data-ttu-id="868c2-107">APNS 通知を送信します。</span><span class="sxs-lookup"><span data-stu-id="868c2-107">Sends an APNS notification.</span></span>
+  fullName: azure-sb.ApnsService.send(tags, payload, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="868c2-108">1 つのタグまたはタグ式。</span><span class="sxs-lookup"><span data-stu-id="868c2-108">A single tag or tag expression.</span></span>
+
+        <span data-ttu-id="868c2-109">Null の場合は、このハブのすべての登録にブロードキャストには</span><span class="sxs-lookup"><span data-stu-id="868c2-109">If null it will broadcast to all registrations in this hub</span></span>
+    - id: payload
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="868c2-110">メッセージの JSON ペイロードとして指定された以下。</span><span class="sxs-lookup"><span data-stu-id="868c2-110">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="868c2-111">ペイロードが文字列の場合は、次のように APNS 形式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="868c2-111">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: payload.expiry
+      type:
+      - date
+      description: '<span data-ttu-id="868c2-112">有効期限の日付。</span><span class="sxs-lookup"><span data-stu-id="868c2-112">The expiration date.</span></span> <span data-ttu-id="868c2-113">(W3C DTF で-MM-DDThh:mmTZD (例: 1997-07-16T19:20 + 1時 00分))</span><span class="sxs-lookup"><span data-stu-id="868c2-113">(in W3C DTF, YYYY-MM-DDThh:mmTZD (e.g. 1997-07-16T19:20+01:00))</span></span>'
+      optional: true
+    - id: payload.aps
+      type:
+      - object
+      description: <span data-ttu-id="868c2-114">オブジェクトとして APNS に配信されます 'aps' メンバーが指定されている場合、有効期限が処理された後は、します。</span><span class="sxs-lookup"><span data-stu-id="868c2-114">If the 'aps' member is provided, the object is delivered to APNS as-is after expiry is processed.</span></span> <span data-ttu-id="868c2-115">オブジェクトは、APNS 形式であると見なされます https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="868c2-115">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: payload.badge
+      type:
+      - number
+      description: <span data-ttu-id="868c2-116">'Aps' メンバーが指定されていない場合、アプリ アイコンの上に表示する数値。</span><span class="sxs-lookup"><span data-stu-id="868c2-116">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: payload.alert
+      type:
+      - string
+      description: <span data-ttu-id="868c2-117">'Aps' メンバーが指定されていない場合、アラートのテキスト。</span><span class="sxs-lookup"><span data-stu-id="868c2-117">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: payload.sound
+      type:
+      - string
+      description: <span data-ttu-id="868c2-118">'Aps' メンバーが指定されていない場合、サウンド ファイル名を使用します。</span><span class="sxs-lookup"><span data-stu-id="868c2-118">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: payload.payload
+      type:
+      - object
+      description: <span data-ttu-id="868c2-119">'Aps' メンバーが指定されていない場合、通知のテキストを含むペイロード オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="868c2-119">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="868c2-120">要求オプションまたはコールバック関数。</span><span class="sxs-lookup"><span data-stu-id="868c2-120">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="868c2-121">Apns のヘッダー。</span><span class="sxs-lookup"><span data-stu-id="868c2-121">The apns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="868c2-122">`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="868c2-122">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function send(tags, payload, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createNativeRegistration
+  id: azure-sb.ApnsService#createNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createNativeRegistration(token, tags, options, callback)
+  summary: <span data-ttu-id="868c2-123">ネイティブの登録を作成します。</span><span class="sxs-lookup"><span data-stu-id="868c2-123">Creates a native registration.</span></span>
+  fullName: azure-sb.ApnsService.createNativeRegistration(token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="868c2-124">デバイス トークンです。</span><span class="sxs-lookup"><span data-stu-id="868c2-124">The device token.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="868c2-125">タグ (コンマ区切りのリスト、スペースなし)。</span><span class="sxs-lookup"><span data-stu-id="868c2-125">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="868c2-126">要求オプション</span><span class="sxs-lookup"><span data-stu-id="868c2-126">The request options</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="868c2-127">`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="868c2-127">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createNativeRegistration(token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  id: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  summary: <span data-ttu-id="868c2-128">作成またはネイティブの登録を更新します。</span><span class="sxs-lookup"><span data-stu-id="868c2-128">Creates or updates a native registration.</span></span>
+  fullName: azure-sb.ApnsService.createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="868c2-129">登録の識別子です。</span><span class="sxs-lookup"><span data-stu-id="868c2-129">The registration identifier.</span></span>
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="868c2-130">デバイス トークンです。</span><span class="sxs-lookup"><span data-stu-id="868c2-130">The device token.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="868c2-131">タグ (コンマ区切りのリスト、スペースなし)。</span><span class="sxs-lookup"><span data-stu-id="868c2-131">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="868c2-132">要求オプション</span><span class="sxs-lookup"><span data-stu-id="868c2-132">The request options</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="868c2-133">`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="868c2-133">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createTemplateRegistration
+  id: azure-sb.ApnsService#createTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  summary: <span data-ttu-id="868c2-134">テンプレート登録を作成します。</span><span class="sxs-lookup"><span data-stu-id="868c2-134">Creates a template registration.</span></span>
+  fullName: azure-sb.ApnsService.createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="868c2-135">デバイス トークンです。</span><span class="sxs-lookup"><span data-stu-id="868c2-135">The device token.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="868c2-136">タグ。</span><span class="sxs-lookup"><span data-stu-id="868c2-136">The tags.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="868c2-137">メッセージの JSON ペイロードとして指定された以下。</span><span class="sxs-lookup"><span data-stu-id="868c2-137">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="868c2-138">ペイロードが文字列の場合は、次のように APNS 形式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="868c2-138">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: template.expiry
+      type:
+      - date
+      description: <span data-ttu-id="868c2-139">有効期限の日付。</span><span class="sxs-lookup"><span data-stu-id="868c2-139">The expiration date.</span></span>
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: <span data-ttu-id="868c2-140">登録として NotifcationHub に配信されます 'aps' メンバーが指定されている場合、有効期限が処理された後は、します。</span><span class="sxs-lookup"><span data-stu-id="868c2-140">If the 'aps' member is provided, the registration is delivered to NotifcationHub as-is after expiry is processed.</span></span> <span data-ttu-id="868c2-141">オブジェクトは、APNS 形式であると見なされます https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="868c2-141">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: <span data-ttu-id="868c2-142">'Aps' メンバーが指定されていない場合、アプリ アイコンの上に表示する数値。</span><span class="sxs-lookup"><span data-stu-id="868c2-142">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: <span data-ttu-id="868c2-143">'Aps' メンバーが指定されていない場合、アラートのテキスト。</span><span class="sxs-lookup"><span data-stu-id="868c2-143">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: <span data-ttu-id="868c2-144">'Aps' メンバーが指定されていない場合、サウンド ファイル名を使用します。</span><span class="sxs-lookup"><span data-stu-id="868c2-144">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: <span data-ttu-id="868c2-145">'Aps' メンバーが指定されていない場合、通知のテキストを含むペイロード オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="868c2-145">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="868c2-146">要求オプションまたはコールバック関数。</span><span class="sxs-lookup"><span data-stu-id="868c2-146">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="868c2-147">含める apns ヘッダー。</span><span class="sxs-lookup"><span data-stu-id="868c2-147">The apns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="868c2-148">`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="868c2-148">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  id: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  summary: <span data-ttu-id="868c2-149">作成またはテンプレート登録を更新します。</span><span class="sxs-lookup"><span data-stu-id="868c2-149">Creates or updates a template registration.</span></span>
+  fullName: azure-sb.ApnsService.createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="868c2-150">登録の識別子です。</span><span class="sxs-lookup"><span data-stu-id="868c2-150">The registration identifier.</span></span>
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="868c2-151">デバイス トークンです。</span><span class="sxs-lookup"><span data-stu-id="868c2-151">The device token.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="868c2-152">メッセージの JSON ペイロードとして指定された以下。</span><span class="sxs-lookup"><span data-stu-id="868c2-152">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="868c2-153">ペイロードが文字列の場合は、次のように APNS 形式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="868c2-153">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: template.expiry
+      type:
+      - date
+      description: <span data-ttu-id="868c2-154">有効期限の日付。</span><span class="sxs-lookup"><span data-stu-id="868c2-154">The expiration date.</span></span>
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: <span data-ttu-id="868c2-155">登録として NotifcationHub に配信されます 'aps' メンバーが指定されている場合、有効期限が処理された後は、します。</span><span class="sxs-lookup"><span data-stu-id="868c2-155">If the 'aps' member is provided, the registration is delivered to NotifcationHub as-is after expiry is processed.</span></span> <span data-ttu-id="868c2-156">オブジェクトは、APNS 形式であると見なされます https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="868c2-156">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: <span data-ttu-id="868c2-157">'Aps' メンバーが指定されていない場合、アプリ アイコンの上に表示する数値。</span><span class="sxs-lookup"><span data-stu-id="868c2-157">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: <span data-ttu-id="868c2-158">'Aps' メンバーが指定されていない場合、アラートのテキスト。</span><span class="sxs-lookup"><span data-stu-id="868c2-158">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: <span data-ttu-id="868c2-159">'Aps' メンバーが指定されていない場合、サウンド ファイル名を使用します。</span><span class="sxs-lookup"><span data-stu-id="868c2-159">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: <span data-ttu-id="868c2-160">'Aps' メンバーが指定されていない場合、通知のテキストを含むペイロード オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="868c2-160">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="868c2-161">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="868c2-161">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="868c2-162">含める apns ヘッダー。</span><span class="sxs-lookup"><span data-stu-id="868c2-162">The apns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="868c2-163">`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="868c2-163">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#updateTemplateRegistration
+  id: azure-sb.ApnsService#updateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  summary: <span data-ttu-id="868c2-164">テンプレート登録を更新します。</span><span class="sxs-lookup"><span data-stu-id="868c2-164">Updates a template registration.</span></span>
+  fullName: azure-sb.ApnsService.updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="868c2-165">登録の識別子です。</span><span class="sxs-lookup"><span data-stu-id="868c2-165">The registration identifier.</span></span>
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="868c2-166">デバイス トークンです。</span><span class="sxs-lookup"><span data-stu-id="868c2-166">The device token.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="868c2-167">メッセージの JSON ペイロードとして指定された以下。</span><span class="sxs-lookup"><span data-stu-id="868c2-167">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="868c2-168">ペイロードが文字列の場合は、次のように APNS 形式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="868c2-168">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: template.expiry
+      type:
+      - date
+      description: <span data-ttu-id="868c2-169">有効期限の日付。</span><span class="sxs-lookup"><span data-stu-id="868c2-169">The expiration date.</span></span>
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: <span data-ttu-id="868c2-170">登録として NotifcationHub に配信されます 'aps' メンバーが指定されている場合、有効期限が処理された後は、します。</span><span class="sxs-lookup"><span data-stu-id="868c2-170">If the 'aps' member is provided, the registration is delivered to NotifcationHub as-is after expiry is processed.</span></span> <span data-ttu-id="868c2-171">オブジェクトは、APNS 形式であると見なされます https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="868c2-171">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: <span data-ttu-id="868c2-172">'Aps' メンバーが指定されていない場合、アプリ アイコンの上に表示する数値。</span><span class="sxs-lookup"><span data-stu-id="868c2-172">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: <span data-ttu-id="868c2-173">'Aps' メンバーが指定されていない場合、アラートのテキスト。</span><span class="sxs-lookup"><span data-stu-id="868c2-173">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: <span data-ttu-id="868c2-174">'Aps' メンバーが指定されていない場合、サウンド ファイル名を使用します。</span><span class="sxs-lookup"><span data-stu-id="868c2-174">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: <span data-ttu-id="868c2-175">'Aps' メンバーが指定されていない場合、通知のテキストを含むペイロード オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="868c2-175">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="868c2-176">要求オプションまたはコールバック関数。</span><span class="sxs-lookup"><span data-stu-id="868c2-176">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="868c2-177">含める apns ヘッダー。</span><span class="sxs-lookup"><span data-stu-id="868c2-177">The apns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="868c2-178">`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="868c2-178">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#listRegistrationsByToken
+  id: azure-sb.ApnsService#listRegistrationsByToken
+  parent: azure-sb.ApnsService
+  name: listRegistrationsByToken(token, options, callback)
+  summary: <span data-ttu-id="868c2-179">デバイス トークンにより登録を取得します。</span><span class="sxs-lookup"><span data-stu-id="868c2-179">Retrieves a registration by device token.</span></span>
+  fullName: azure-sb.ApnsService.listRegistrationsByToken(token, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="868c2-180">デバイス トークンです。</span><span class="sxs-lookup"><span data-stu-id="868c2-180">The device token.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="868c2-181">要求オプションです。</span><span class="sxs-lookup"><span data-stu-id="868c2-181">The request options.</span></span> <span data-ttu-id="868c2-182">追加のプロパティは、ヘッダーとして渡されます。</span><span class="sxs-lookup"><span data-stu-id="868c2-182">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: <span data-ttu-id="868c2-183">呼び出しから取得する登録の最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="868c2-183">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: <span data-ttu-id="868c2-184">呼び出しでスキップする登録の数を指定します。</span><span class="sxs-lookup"><span data-stu-id="868c2-184">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="868c2-185">`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="868c2-185">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function listRegistrationsByToken(token, options, callback)
+  langs:
+  - js

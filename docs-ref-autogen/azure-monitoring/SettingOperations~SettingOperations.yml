@@ -1,0 +1,135 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b8cceab086dcfa363f06b0fe320cc5b867deb91a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064363"
+items:
+- uid: azure-monitoring.SettingOperations~SettingOperations
+  id: azure-monitoring.SettingOperations~SettingOperations
+  name: SettingOperations
+  summary: >-
+    <span data-ttu-id="970cb-101">自動スケール設定を管理するための操作。</span><span class="sxs-lookup"><span data-stu-id="970cb-101">Operations for managing the autoscale settings.</span></span>
+
+    <span data-ttu-id="970cb-102">__注__: [AutoscaleClient] のインスタンスをこのクラスのインスタンスが自動的に作成<xref:azure-monitoring.AutoscaleClient~AutoscaleClient>です。</span><span class="sxs-lookup"><span data-stu-id="970cb-102">__NOTE__: An instance of this class is automatically created for an instance of the [AutoscaleClient] <xref:azure-monitoring.AutoscaleClient~AutoscaleClient>.</span></span>
+
+    <span data-ttu-id="970cb-103">[設定] を参照してください。<xref:azure-monitoring.AutoscaleClient~AutoscaleClient%23settings>します。</span><span class="sxs-lookup"><span data-stu-id="970cb-103">See [settings] <xref:azure-monitoring.AutoscaleClient~AutoscaleClient%23settings>.</span></span>
+
+    <span data-ttu-id="970cb-104">SettingOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="970cb-104">Initializes a new instance of the SettingOperations class.</span></span>
+  fullName: azure-monitoring.SettingOperations
+  type: Class
+  children:
+  - azure-monitoring.SettingOperations~SettingOperations.#ctor
+  - azure-monitoring.SettingOperations~SettingOperations#createOrUpdate
+  - azure-monitoring.SettingOperations~SettingOperations#deleteMethod
+  - azure-monitoring.SettingOperations~SettingOperations#get
+  langs:
+  - js
+- id: azure-monitoring.SettingOperations~SettingOperations.#ctor
+  uid: azure-monitoring.SettingOperations~SettingOperations.#ctor
+  parent: azure-monitoring.SettingOperations~SettingOperations
+  name: SettingOperations(client)
+  fullName: azure-monitoring.SettingOperations.SettingOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedAutoscaleClient
+      description: <span data-ttu-id="970cb-105">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="970cb-105">Reference to the service client.</span></span>
+    content: new SettingOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.SettingOperations~SettingOperations#createOrUpdate
+  id: azure-monitoring.SettingOperations~SettingOperations#createOrUpdate
+  parent: azure-monitoring.SettingOperations~SettingOperations
+  name: createOrUpdate(resourceId, parameters, callback)
+  summary: ''
+  fullName: azure-monitoring.SettingOperations~SettingOperations.createOrUpdate(resourceId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: <span data-ttu-id="970cb-106">リソース id です。</span><span class="sxs-lookup"><span data-stu-id="970cb-106">The resource ID.</span></span>
+    - id: parameters
+      type:
+      - azure-monitoring.AutoscaleSettingCreateOrUpdateParameters
+      description: <span data-ttu-id="970cb-107">操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="970cb-107">Parameters supplied to the operation.</span></span>
+    - id: parameters.setting
+      type:
+      - azure-monitoring.AutoscaleSetting
+      description: <span data-ttu-id="970cb-108">作成または更新する設定です。</span><span class="sxs-lookup"><span data-stu-id="970cb-108">The setting to create or update.</span></span>
+      optional: true
+    - id: parameters.setting.profiles
+      type:
+      - array
+      description: ''
+      optional: true
+    - id: parameters.setting.enabled
+      type:
+      - boolean
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="970cb-109">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="970cb-109">The response stream.</span></span>
+    content: function createOrUpdate(resourceId, parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.SettingOperations~SettingOperations#deleteMethod
+  id: azure-monitoring.SettingOperations~SettingOperations#deleteMethod
+  parent: azure-monitoring.SettingOperations~SettingOperations
+  name: deleteMethod(resourceId, callback)
+  summary: ''
+  fullName: azure-monitoring.SettingOperations~SettingOperations.deleteMethod(resourceId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: <span data-ttu-id="970cb-110">リソース id です。</span><span class="sxs-lookup"><span data-stu-id="970cb-110">The resource ID.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="970cb-111">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="970cb-111">The response stream.</span></span>
+    content: function deleteMethod(resourceId, callback)
+  langs:
+  - js
+- uid: azure-monitoring.SettingOperations~SettingOperations#get
+  id: azure-monitoring.SettingOperations~SettingOperations#get
+  parent: azure-monitoring.SettingOperations~SettingOperations
+  name: get(resourceId, callback)
+  summary: ''
+  fullName: azure-monitoring.SettingOperations~SettingOperations.get(resourceId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: <span data-ttu-id="970cb-112">リソース id です。</span><span class="sxs-lookup"><span data-stu-id="970cb-112">The resource ID.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="970cb-113">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="970cb-113">The response stream.</span></span>
+    content: function get(resourceId, callback)
+  langs:
+  - js

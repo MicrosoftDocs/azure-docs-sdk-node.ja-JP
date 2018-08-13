@@ -1,0 +1,287 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 63f6d420f14e145be93264194c93b21fbf5288eb
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063895"
+items:
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: DNSServerOperations
+  summary: >-
+    <span data-ttu-id="10fea-101">コンピューティングの管理 API には、サブスクリプションの dns サーバーを管理するための操作が含まれます。</span><span class="sxs-lookup"><span data-stu-id="10fea-101">The Compute Management API includes operations for managing the dns servers for your subscription.</span></span>
+
+    <span data-ttu-id="10fea-102">__注__: [ComputeManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link ComputeManagementClient ~ ComputeManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="10fea-102">__NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="10fea-103">[Dns サーバー] を参照してください。 {@link ComputeManagementClient ~ ComputeManagementClient #dnsServer}。</span><span class="sxs-lookup"><span data-stu-id="10fea-103">See [dnsServer] {@link ComputeManagementClient~ComputeManagementClient#dnsServer}.</span></span>
+
+    <span data-ttu-id="10fea-104">DNSServerOperations クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="10fea-104">Initializes a new instance of the DNSServerOperations class.</span></span>
+  fullName: azure-asm-compute.DNSServerOperations
+  type: Class
+  children:
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  langs:
+  - js
+- id: azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  uid: azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: DNSServerOperations(client)
+  fullName: azure-asm-compute.DNSServerOperations.DNSServerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="10fea-105">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="10fea-105">Reference to the service client.</span></span>
+    content: new DNSServerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: addDNSServer(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="10fea-106">既存の展開には、DNS サーバーの定義を追加します。</span><span class="sxs-lookup"><span data-stu-id="10fea-106">Add a definition for a DNS server to an existing deployment.</span></span> <span data-ttu-id="10fea-107">この展開内の VM は、すべての DNS 解決のため、この DNS サーバーを使用するようにプログラミング</span><span class="sxs-lookup"><span data-stu-id="10fea-107">VM's in this deployment will be programmed to use this DNS server for all DNS resolutions</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.addDNSServer(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-108">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-108">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-109">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-109">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSAddParameters
+      description: <span data-ttu-id="10fea-110">DNS サーバーの追加操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="10fea-110">Parameters supplied to the Add DNS Server operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="10fea-111">DNS サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-111">Name of the DNS server.</span></span>
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: <span data-ttu-id="10fea-112">DNS サーバーの IP アドレス</span><span class="sxs-lookup"><span data-stu-id="10fea-112">IP Address of the DNS server</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="10fea-113">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="10fea-113">The response stream.</span></span>
+    content: function addDNSServer(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="10fea-114">既存の展開には、DNS サーバーの定義を追加します。</span><span class="sxs-lookup"><span data-stu-id="10fea-114">Add a definition for a DNS server to an existing deployment.</span></span> <span data-ttu-id="10fea-115">この展開内の VM は、すべての DNS 解決のため、この DNS サーバーを使用するようにプログラミング</span><span class="sxs-lookup"><span data-stu-id="10fea-115">VM's in this deployment will be programmed to use this DNS server for all DNS resolutions</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-116">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-116">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-117">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-117">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSAddParameters
+      description: <span data-ttu-id="10fea-118">DNS サーバーの追加操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="10fea-118">Parameters supplied to the Add DNS Server operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="10fea-119">DNS サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-119">Name of the DNS server.</span></span>
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: <span data-ttu-id="10fea-120">DNS サーバーの IP アドレス</span><span class="sxs-lookup"><span data-stu-id="10fea-120">IP Address of the DNS server</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="10fea-121">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="10fea-121">The response stream.</span></span>
+    content: function beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  summary: <span data-ttu-id="10fea-122">展開から既存の DNS サーバーの定義を削除します。</span><span class="sxs-lookup"><span data-stu-id="10fea-122">Deletes a definition for an existing DNS server from the deployment</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-123">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-123">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-124">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-124">The name of the deployment.</span></span>
+    - id: dnsServerName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-125">Dns サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-125">The name of the dns server.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="10fea-126">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="10fea-126">The response stream.</span></span>
+    content: function beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  summary: <span data-ttu-id="10fea-127">既存の DNS サーバーの定義を更新します。</span><span class="sxs-lookup"><span data-stu-id="10fea-127">Updates a definition for an existing DNS server.</span></span> <span data-ttu-id="10fea-128">アドレスに更新プログラムは、唯一の変更は許可します。</span><span class="sxs-lookup"><span data-stu-id="10fea-128">Updates to address is the only change allowed.</span></span> <span data-ttu-id="10fea-129">DNS サーバー名を変更することはできません。</span><span class="sxs-lookup"><span data-stu-id="10fea-129">DNS server name cannot be changed</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-130">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-130">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-131">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-131">The name of the deployment.</span></span>
+    - id: dnsServerName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-132">Dns サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-132">The name of the dns server.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSUpdateParameters
+      description: <span data-ttu-id="10fea-133">DNS サーバーの更新操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="10fea-133">Parameters supplied to the Update DNS Server operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="10fea-134">DNS サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-134">Name of the DNS server.</span></span>
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: <span data-ttu-id="10fea-135">DNS サーバーの IP アドレス</span><span class="sxs-lookup"><span data-stu-id="10fea-135">IP Address of the DNS server</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="10fea-136">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="10fea-136">The response stream.</span></span>
+    content: function beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  summary: <span data-ttu-id="10fea-137">展開から既存の DNS サーバーの定義を削除します。</span><span class="sxs-lookup"><span data-stu-id="10fea-137">Deletes a definition for an existing DNS server from the deployment</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-138">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-138">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-139">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-139">The name of the deployment.</span></span>
+    - id: dnsServerName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-140">Dns サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-140">The name of the dns server.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="10fea-141">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="10fea-141">The response stream.</span></span>
+    content: function deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  summary: <span data-ttu-id="10fea-142">既存の DNS サーバーの定義を更新します。</span><span class="sxs-lookup"><span data-stu-id="10fea-142">Updates a definition for an existing DNS server.</span></span> <span data-ttu-id="10fea-143">アドレスに更新プログラムは、唯一の変更は許可します。</span><span class="sxs-lookup"><span data-stu-id="10fea-143">Updates to address is the only change allowed.</span></span> <span data-ttu-id="10fea-144">DNS サーバー名を変更することはできません。</span><span class="sxs-lookup"><span data-stu-id="10fea-144">DNS server name cannot be changed</span></span>
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-145">サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-145">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-146">デプロイの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-146">The name of the deployment.</span></span>
+    - id: dnsServerName
+      type:
+      - string
+      description: <span data-ttu-id="10fea-147">Dns サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-147">The name of the dns server.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSUpdateParameters
+      description: <span data-ttu-id="10fea-148">DNS サーバーの更新操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="10fea-148">Parameters supplied to the Update DNS Server operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="10fea-149">DNS サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="10fea-149">Name of the DNS server.</span></span>
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: <span data-ttu-id="10fea-150">DNS サーバーの IP アドレス</span><span class="sxs-lookup"><span data-stu-id="10fea-150">IP Address of the DNS server</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="10fea-151">応答ストリーム。</span><span class="sxs-lookup"><span data-stu-id="10fea-151">The response stream.</span></span>
+    content: function updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  langs:
+  - js
