@@ -1,0 +1,366 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 903c391913659600a4f98ef1b3541f52745d7dfe
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40070805"
+items:
+- uid: azure-event-processor-host.EventProcessorHost
+  name: EventProcessorHost
+  fullName: EventProcessorHost
+  children:
+  - azure-event-processor-host.EventProcessorHost.autoCheckpoint
+  - azure-event-processor-host.EventProcessorHost.closed
+  - azure-event-processor-host.EventProcessorHost.consumerGroup
+  - azure-event-processor-host.EventProcessorHost.createFromAadTokenCredentials
+  - azure-event-processor-host.EventProcessorHost.createFromConnectionString
+  - azure-event-processor-host.EventProcessorHost.createHostName
+  - azure-event-processor-host.EventProcessorHost.error
+  - azure-event-processor-host.EventProcessorHost.constructor
+  - azure-event-processor-host.EventProcessorHost.getHubRuntimeInformation
+  - azure-event-processor-host.EventProcessorHost.getPartitionIds
+  - azure-event-processor-host.EventProcessorHost.getPartitionInformation
+  - azure-event-processor-host.EventProcessorHost.hostName
+  - azure-event-processor-host.EventProcessorHost.message
+  - azure-event-processor-host.EventProcessorHost.opened
+  - azure-event-processor-host.EventProcessorHost.start
+  - azure-event-processor-host.EventProcessorHost.stop
+  langs:
+  - typeScript
+  type: class
+  summary: EventHub からイベントを処理するイベント プロセッサ ホストについて説明します。
+  extends:
+    name: EventEmitter
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.autoCheckpoint
+  name: autoCheckpoint
+  fullName: autoCheckpoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'autoCheckpoint: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.closed
+  name: closed
+  fullName: closed
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 終了:、パーティションのリースを失うしの受信を停止する必要がありますか、ホストがシャット ダウンがトリガーされます。 PartitionContext と終了の理由は、イベント リスナーに渡されます。
+  syntax:
+    content: 'static closed: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.consumerGroup
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: イベント プロセッサ ホストのグループ名をコンシューマーに提供します。
+  syntax:
+    content: 'consumerGroup: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createFromAadTokenCredentials
+  name: createFromAadTokenCredentials
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: イベント ハブからイベントを処理する新しいホストを作成します。
+  syntax:
+    content: 'static function createFromAadTokenCredentials(hostName: string, storageConnectionString: string, namespace: string, eventHubPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: EventProcessorOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        プロセッサ ホストの名前です。 一意である必要があります。
+
+        一意性を確保するには、Guid または guid を持つプレフィックスを含むを強くお勧めします。 使用することができます`EventProcessorHost.createHostName("your-prefix")`;既定値:`js-host-${uuid()}`します。
+    - id: storageConnectionString
+      type:
+      - string
+      description: リースと、チェックポイントに使用される Azure Storage アカウントへの接続文字列。 例 DefaultEndpointsProtocol = https;AccountName = < アカウント名 >;AccountKey = < アカウント キー >;EndpointSuffix=core.windows.net
+    - id: namespace
+      type:
+      - string
+      description: >-
+        Event Hubs の完全修飾ドメイン名。
+
+        例:"{your-sb-名前空間}. &#42;.servicebus.windows.net"
+    - id: eventHubPath
+      type:
+      - string
+      description: イベント ハブの名前。
+    - id: credentials
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+      description: 'AAD トークン資格情報。 次のいずれか: ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials します。'
+    - id: options
+      type:
+      - azure-event-processor-host.EventProcessorOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-processor-host.EventProcessorHost
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createFromConnectionString
+  name: createFromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: イベント ハブからイベントを処理する新しいホストを作成します。
+  syntax:
+    content: 'static function createFromConnectionString(hostName: string, storageConnectionString: string, eventHubConnectionString: string, options?: ConnectionStringBasedOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        プロセッサ ホストの名前です。 一意である必要があります。
+
+        一意性を確保するには、Guid または guid を持つプレフィックスを含むを強くお勧めします。 使用することができます`EventProcessorHost.createHostName("your-prefix")`;既定値:`js-host-${uuid()}`します。
+    - id: storageConnectionString
+      type:
+      - string
+      description: リースと、チェックポイントに使用される Azure Storage アカウントへの接続文字列。 例 DefaultEndpointsProtocol = https;AccountName = < アカウント名 >;AccountKey = < アカウント キー >;EndpointSuffix=core.windows.net
+    - id: eventHubConnectionString
+      type:
+      - string
+      description: >-
+        受信する Event Hub の接続文字列。
+
+        例: ' Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = my、SA の名前。SharedAccessKey マイ SA のキーを ='
+    - id: options
+      type:
+      - azure-event-processor-host.ConnectionStringBasedOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-processor-host.EventProcessorHost
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createHostName
+  name: createHostName
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 一意のホスト名を生成するための便利なメソッド。
+  syntax:
+    content: 'static function createHostName(prefix?: string)'
+    parameters:
+    - id: prefix
+      type:
+      - string
+      description: ''
+      optional: true
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.error
+  name: error
+  fullName: error
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'エラー: は、特定の受信でエラーが発生したときにトリガーされます。 EventHubsError または汎用エラー オブジェクトには、イベント リスナーが渡されます。'
+  syntax:
+    content: 'static error: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.constructor
+  name: EventProcessorHost
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: イベント ハブからイベントを処理する新しいホストを作成します。
+  syntax:
+    content: 'new EventProcessorHost(hostName: string, storageConnectionString: string, eventHubClient: EventHubClient, options?: EventProcessorOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        プロセッサ ホストの名前です。 一意である必要があります。
+
+        一意性を確保するには、Guid または guid を持つプレフィックスを含むを強くお勧めします。 使用することができます`EventProcessorHost.createHostName("your-prefix")`;既定値:`js-host-${uuid()}`します。
+    - id: storageConnectionString
+      type:
+      - string
+      description: リースと、チェックポイントに使用される Azure Storage アカウントへの接続文字列。 例 DefaultEndpointsProtocol = https;AccountName = < アカウント名 >;AccountKey = < アカウント キー >;EndpointSuffix=core.windows.net
+    - id: eventHubClient
+      type:
+      - EventHubClient
+      description: EventHub クライアント
+    - id: options
+      type:
+      - azure-event-processor-host.EventProcessorOptions
+      description: ''
+      optional: true
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getHubRuntimeInformation
+  name: getHubRuntimeInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Eventhub のランタイム情報を提供します。
+  syntax:
+    content: function getHubRuntimeInformation()
+    parameters: []
+    return:
+      type:
+      - Promise<EventHubRuntimeInformation>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getPartitionIds
+  name: getPartitionIds
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: PartitionIds の配列を提供します。
+  syntax:
+    content: function getPartitionIds()
+    parameters: []
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getPartitionInformation
+  name: getPartitionInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 指定したパーティションに関する情報を提供します。
+  syntax:
+    content: 'function getPartitionInformation(partitionId: string | number)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: >
+        パーティション ID がパーティションの情報が必要です。
+    return:
+      type:
+      - Promise<EventHubPartitionRuntimeInformation>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.hostName
+  name: hostName
+  fullName: hostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: イベント プロセッサ ホストのホスト名を提供します。
+  syntax:
+    content: 'hostName: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.message
+  name: message
+  fullName: message
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'メッセージ: は、特定のパーティションで、メッセージが到着するたびにトリガーされます。 PartitionContext と EventData は、イベント リスナーに渡されます。'
+  syntax:
+    content: 'static message: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.opened
+  name: opened
+  fullName: opened
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 開かれます。 は、パーティションがリースを取得するたびにトリガーされます。 PartitionContext は、イベント リスナーに渡されます。
+  syntax:
+    content: 'static opened: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.start
+  name: start
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: パーティションの一覧をフェッチしています (必要に応じて)、フィルター処理すること、および (フィルター処理された) のセット上のリースを取得しようとして、イベント プロセッサ ホストを開始します。 各成功のリースのは blob から詳細を取得し、箇所から以前の時点での受信を開始します。
+  syntax:
+    content: 'function start(options?: StartEPHOptions)'
+    parameters:
+    - id: options
+      type:
+      - azure-event-processor-host.StartEPHOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.stop
+  name: stop
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: メッセージの処理から EventProcessorHost を停止します。
+  syntax:
+    content: function stop()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-processor-host
+references:
+- uid: azure-event-processor-host.EventProcessorOptions
+  spec.typeScript:
+  - name: EventProcessorOptions
+    fullName: EventProcessorOptions
+    uid: azure-event-processor-host.EventProcessorOptions
+- uid: azure-event-processor-host.StartEPHOptions
+  spec.typeScript:
+  - name: StartEPHOptions
+    fullName: StartEPHOptions
+    uid: azure-event-processor-host.StartEPHOptions
+- uid: azure-event-processor-host.EventProcessorHost
+  spec.typeScript:
+  - name: EventProcessorHost
+    fullName: EventProcessorHost
+    uid: azure-event-processor-host.EventProcessorHost
+- uid: azure-event-processor-host.ConnectionStringBasedOptions
+  spec.typeScript:
+  - name: ConnectionStringBasedOptions
+    fullName: ConnectionStringBasedOptions
+    uid: azure-event-processor-host.ConnectionStringBasedOptions
