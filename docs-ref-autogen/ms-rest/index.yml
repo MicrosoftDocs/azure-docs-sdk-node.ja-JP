@@ -1,0 +1,482 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b4e03fb52861a9bc6680bace6ed9e9af650863db
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40065074"
+items:
+- uid: ms-rest
+  name: ms-rest
+  langs:
+  - js
+  type: package
+  summary: ''
+  children:
+  - ms-rest.WebResource
+  - ms-rest.ServiceClient
+  - ms-rest.HttpOperationResponse
+  - ms-rest.SystemErrorRetryPolicyFilter
+  - ms-rest.ExponentialRetryPolicyFilter
+  - ms-rest.TokenCredentials
+  - ms-rest.BasicAuthenticationCredentials
+  - ms-rest.ApiKeyCredentials
+  - ms-rest.create
+  - ms-rest.setAgent
+  - ms-rest.checkRPNotRegisteredError
+  - ms-rest.extractSubscriptionUrl
+  - ms-rest.registerRP
+  - ms-rest.getRegistrationStatus
+  - ms-rest.createWithSink
+  - ms-rest.createCompositeFilter
+  - ms-rest.interimStream
+  - ms-rest.serializeObject
+  - ms-rest.serialize
+  - ms-rest.deserialize
+  - ms-rest.urlIsHTTPS
+  - ms-rest.objectIsNull
+  - ms-rest.encodeUri
+  - ms-rest.stripResponse
+  - ms-rest.stripRequest
+  - ms-rest.isValidUuid
+  - ms-rest.objectValues
+  - ms-rest.generateUuid
+  - ms-rest.homeDir
+- uid: ms-rest.create
+  id: ms-rest.create
+  name: create()
+  summary: formDataFilter - このフィルターは、ヘッダーの場合、コンテンツの種類 ' アプリケーション/x-www-form-urlencoded'、要求オブジェクトにフォームのプロパティを設定するための resposnsible
+  fullName: ms-rest.create()
+  type: Function
+  syntax:
+    content: function create()
+  langs:
+  - js
+- uid: ms-rest.setAgent
+  id: ms-rest.setAgent
+  name: setAgent(resouce, proxy)
+  summary: 要求の結果に使用するエージェントのセットは、プロキシ設定とプロトコルによって異なります。
+  fullName: ms-rest.setAgent(resouce, proxy)
+  type: Function
+  syntax:
+    parameters:
+    - id: resouce
+      type:
+      - object
+      description: 要求の要求オプションです。
+    - id: proxy
+      type:
+      - object
+      description: プロキシの url を解析済みです。
+    content: function setAgent(resouce, proxy)
+  langs:
+  - js
+- uid: ms-rest.checkRPNotRegisteredError
+  id: ms-rest.checkRPNotRegisteredError
+  name: checkRPNotRegisteredError(body)
+  summary: エラー コードと 409 の応答状態コードに関連付けられたメッセージを検証します。 RP に登録されていないのと一致する場合、RP の他の名前は undefined を返しますを返します。
+  fullName: ms-rest.checkRPNotRegisteredError(body)
+  type: Function
+  syntax:
+    parameters:
+    - id: body
+      type:
+      - string
+      description: 元の要求を行った後に受信した応答本文です。
+    return:
+      type:
+      - string
+      description: それ以外の場合に条件が満たされる場合、RP の名前の結果は未定義です。
+    content: function checkRPNotRegisteredError(body)
+  langs:
+  - js
+- uid: ms-rest.extractSubscriptionUrl
+  id: ms-rest.extractSubscriptionUrl
+  name: extractSubscriptionUrl(url)
+  summary: サブスクリプションの直後に、URL の最初の部分を抽出します。 https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/
+  fullName: ms-rest.extractSubscriptionUrl(url)
+  type: Function
+  syntax:
+    parameters:
+    - id: url
+      type:
+      - string
+      description: 元の要求 url
+    return:
+      type:
+      - string
+      description: urlPrefix 前述のように、url プレフィックス。
+    content: function extractSubscriptionUrl(url)
+  langs:
+  - js
+- uid: ms-rest.registerRP
+  id: ms-rest.registerRP
+  name: registerRP(urlPrefix, provider, originalRequest, callback)
+  summary: 指定したプロバイダーを登録します。
+  fullName: ms-rest.registerRP(urlPrefix, provider, originalRequest, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: urlPrefix
+      type:
+      - string
+      description: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/
+    - id: provider
+      type:
+      - string
+      description: 登録するプロバイダーの名前。
+    - id: originalRequest
+      type:
+      - object
+      description: メッセージは、プロバイダーが登録されていないことを含む応答を 409 が返されるユーザーによって送信された元の要求。
+    - id: callback
+      type:
+      - ms-rest.registrationCallback
+      description: RP 登録を処理するコールバック
+    content: function registerRP(urlPrefix, provider, originalRequest, callback)
+  langs:
+  - js
+- uid: ms-rest.getRegistrationStatus
+  id: ms-rest.getRegistrationStatus
+  name: getRegistrationStatus(url, originalRequest, callback)
+  summary: >-
+    登録されたプロバイダーの登録状態をポーリングします。 30 秒間隔でポーリングが発生します。
+
+    ポーリングは、応答本文の registrationState プロパティが '登録済み' になるまでに発生します。
+  fullName: ms-rest.getRegistrationStatus(url, originalRequest, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: url
+      type:
+      - string
+      description: 要求 url のポーリング
+    - id: originalRequest
+      type:
+      - object
+      description: メッセージは、プロバイダーが登録されていないことを含む応答を 409 が返されるユーザーによって送信された元の要求。
+    - id: callback
+      type:
+      - ms-rest.registrationCallback
+      description: RP 登録を処理するコールバック。
+    content: function getRegistrationStatus(url, originalRequest, callback)
+  langs:
+  - js
+- uid: ms-rest.createWithSink
+  id: ms-rest.createWithSink
+  name: createWithSink()
+  summary: 実際には、http 要求を作成する、指定されたシンク関数を使用して要求ライブラリへの呼び出しで終了する、新しいクライアントの http パイプラインを作成します。
+  fullName: ms-rest.createWithSink()
+  type: Function
+  syntax:
+    return:
+      description: (要求、コールバック) の関数は、要求を作成する機能します。
+    content: function createWithSink()
+  langs:
+  - js
+- uid: ms-rest.createCompositeFilter
+  id: ms-rest.createCompositeFilter
+  name: createCompositeFilter(filters)
+  summary: 引数リストで指定されたすべてのフィルターの組み合わせである新しいフィルターを作成します。
+  fullName: ms-rest.createCompositeFilter(filters)
+  type: Function
+  syntax:
+    parameters:
+    - id: filters
+      type:
+      - ms-rest.varargs
+      description: '実行します。 一覧の最初のフィルターは、シンクに最も近いため、応答で実行するには、まず、要求の前に実行するには、最後: 同じ pipeline.add と呼ばれるまたは一覧を pipeline.create に渡される場合。'
+    return:
+      description: 新しいフィルター。
+    content: function createCompositeFilter(filters)
+  langs:
+  - js
+- uid: ms-rest.interimStream
+  id: ms-rest.interimStream
+  name: interimStream(setPipe)
+  summary: 非同期操作できますもフック ストリーミング出力を後で同期的に、呼び出し元に返される中間のストリームを作成します。 フィルターは、パイプラインの残りの部分を呼び出すことによって前に、非同期作業を実行する必要がある場合に使用されます。
+  fullName: ms-rest.interimStream(setPipe)
+  type: Function
+  syntax:
+    parameters:
+    - id: setPipe
+      description: >-
+        関数 (入力、出力) この関数は 2 つの基になるストリームを渡す同期的に呼び出されます。 次のフィルターの結果には、入力をパイプ処理する必要があります。 次の結果をパイプする必要がありますを出力します。
+
+        実際にフックする実際のストリームを返す前にデータの損失を防ぐために、入力ストリームを一時停止するのには一般的です。
+    return:
+      description: 双方向のストリームを入力ストリームに書き込み、出力ストリームからデータを生成します。
+    content: function interimStream(setPipe)
+  langs:
+  - js
+- uid: ms-rest.serializeObject
+  id: ms-rest.serializeObject
+  name: serializeObject(toSerialize)
+  summary: JSON オブジェクトをシリアル化します。 バッファー オブジェクトを 'base64' でエンコードされた文字列と ISO8601 形式に準拠して文字列を日付オブジェクトがシリアル化します。
+  fullName: ms-rest.serializeObject(toSerialize)
+  type: Function
+  syntax:
+    parameters:
+    - id: toSerialize
+      type:
+      - Object
+      description: ''
+    return:
+      type:
+      - Object
+      description: serializedObject
+    content: function serializeObject(toSerialize)
+  langs:
+  - js
+- uid: ms-rest.serialize
+  id: ms-rest.serialize
+  name: serialize(mapper, object, objectName)
+  summary: マッパーで定義されているそのメタデータに基づき、指定したオブジェクトをシリアル化します。
+  fullName: ms-rest.serialize(mapper, object, objectName)
+  type: Function
+  syntax:
+    parameters:
+    - id: mapper
+      type:
+      - object
+      description: シリアル化可能なオブジェクトのメタデータを定義するマッパー
+    - id: object
+      type:
+      - object
+      - string
+      - Array
+      - number
+      - boolean
+      - Date
+      - ms-rest.stream
+      description: シリアル化する有効な Javascript オブジェクト
+    - id: objectName
+      type:
+      - string
+      description: シリアル化されたオブジェクトの名前
+    return:
+      type:
+      - object
+      - string
+      - Array
+      - number
+      - boolean
+      - Date
+      - ms-rest.stream
+      description: 有効なシリアル化された Javascript オブジェクト
+    content: function serialize(mapper, object, objectName)
+  langs:
+  - js
+- uid: ms-rest.deserialize
+  id: ms-rest.deserialize
+  name: deserialize(mapper, responseBody, objectName)
+  summary: マッパーで定義されているそのメタデータに基づき、指定したオブジェクトを逆シリアル化します。
+  fullName: ms-rest.deserialize(mapper, responseBody, objectName)
+  type: Function
+  syntax:
+    parameters:
+    - id: mapper
+      type:
+      - object
+      description: シリアル化可能なオブジェクトのメタデータを定義するマッパー
+    - id: responseBody
+      type:
+      - object
+      - string
+      - Array
+      - number
+      - boolean
+      - Date
+      - ms-rest.stream
+      description: 逆シリアル化する有効な Javascript エンティティ
+    - id: objectName
+      type:
+      - string
+      description: 逆シリアル化されたオブジェクトの名前
+    return:
+      type:
+      - object
+      - string
+      - Array
+      - number
+      - boolean
+      - Date
+      - ms-rest.stream
+      description: 有効な Javascript オブジェクトを逆シリアル化
+    content: function deserialize(mapper, responseBody, objectName)
+  langs:
+  - js
+- uid: ms-rest.urlIsHTTPS
+  id: ms-rest.urlIsHTTPS
+  name: urlIsHTTPS(urlToCheck)
+  summary: 解析された URL が HTTPS であるかをチェックします。
+  fullName: ms-rest.urlIsHTTPS(urlToCheck)
+  type: Function
+  syntax:
+    parameters:
+    - id: urlToCheck
+      type:
+      - object
+      description: 確認する url
+    return:
+      type:
+      - ms-rest.bool
+      description: URL が HTTPS 以外の場合は true。false それ以外の場合。
+    content: function urlIsHTTPS(urlToCheck)
+  langs:
+  - js
+- uid: ms-rest.objectIsNull
+  id: ms-rest.objectIsNull
+  name: objectIsNull(value)
+  summary: 値が null または未定義かを確認します。
+  fullName: ms-rest.objectIsNull(value)
+  type: Function
+  syntax:
+    parameters:
+    - id: value
+      type:
+      - object
+      description: Null または未定義に確認する値。
+    return:
+      type:
+      - ms-rest.bool
+      description: True の場合、値は null または未定義、false をそれ以外の場合は。
+    content: function objectIsNull(value)
+  langs:
+  - js
+- uid: ms-rest.encodeUri
+  id: ms-rest.encodeUri
+  name: encodeUri(uri)
+  summary: URI をエンコードします。
+  fullName: ms-rest.encodeUri(uri)
+  type: Function
+  syntax:
+    parameters:
+    - id: uri
+      type:
+      - string
+      description: エンコードする URI。
+    return:
+      type:
+      - string
+      description: エンコードされた URI。
+    content: function encodeUri(uri)
+  langs:
+  - js
+- uid: ms-rest.stripResponse
+  id: ms-rest.stripResponse
+  name: stripResponse(response)
+  summary: 本文、ヘッダー、および、statusCode がのみが含まれる Http 応答の削除されたバージョンを返します。
+  fullName: ms-rest.stripResponse(response)
+  type: Function
+  syntax:
+    parameters:
+    - id: response
+      type:
+      - ms-rest.stream
+      description: Http 応答
+    return:
+      type:
+      - object
+      description: strippedResponse - Http 応答の削除されたバージョン。
+    content: function stripResponse(response)
+  langs:
+  - js
+- uid: ms-rest.stripRequest
+  id: ms-rest.stripRequest
+  name: stripRequest(request)
+  summary: Authorization ヘッダーを含まない、Http 要求の削除されたバージョンを返します。
+  fullName: ms-rest.stripRequest(request)
+  type: Function
+  syntax:
+    parameters:
+    - id: request
+      type:
+      - object
+      description: Http 要求オブジェクト
+    return:
+      type:
+      - object
+      description: strippedRequest - Http 要求の削除されたバージョン。
+    content: function stripRequest(request)
+  langs:
+  - js
+- uid: ms-rest.isValidUuid
+  id: ms-rest.isValidUuid
+  name: isValidUuid(uuid)
+  summary: 文字列として指定された uuid を検証します。
+  fullName: ms-rest.isValidUuid(uuid)
+  type: Function
+  syntax:
+    parameters:
+    - id: uuid
+      type:
+      - string
+      description: 検証する必要がある文字列としての uuid
+    return:
+      type:
+      - boolean
+      description: uuid が無効である場合 True - 結果します。false それ以外の場合。
+    content: function isValidUuid(uuid)
+  langs:
+  - js
+- uid: ms-rest.objectValues
+  id: ms-rest.objectValues
+  name: objectValues(obj)
+  summary: "オブジェクトの値の配列を提供します。 たとえば、特定のオブジェクトの {'a': 'foo' 'b': 'bar'}、['foo', 'bar'] に返されます。"
+  fullName: ms-rest.objectValues(obj)
+  type: Function
+  syntax:
+    parameters:
+    - id: obj
+      type:
+      - object
+      description: 列挙値にできるようにする必要があるプロパティを持つオブジェクトを配列として指定できます。
+    return:
+      type:
+      - array
+      description: 結果 - 指定したオブジェクトの値の配列。
+    content: function objectValues(obj)
+  langs:
+  - js
+- uid: ms-rest.generateUuid
+  id: ms-rest.generateUuid
+  name: generateUuid()
+  summary: 生成された UUID
+  fullName: ms-rest.generateUuid()
+  type: Function
+  syntax:
+    return:
+      type:
+      - string
+      description: RFC4122 v4 の UUID。
+    content: function generateUuid()
+  langs:
+  - js
+- uid: ms-rest.homeDir
+  id: ms-rest.homeDir
+  name: homeDir()
+  summary: ホーム ディレクトリへのパスを提供します。
+  fullName: ms-rest.homeDir()
+  type: Function
+  syntax:
+    content: function homeDir()
+  langs:
+  - js
+references:
+- uid: ms-rest.WebResource
+  name: WebResource
+- uid: ms-rest.ServiceClient
+  name: ServiceClient
+- uid: ms-rest.HttpOperationResponse
+  name: HttpOperationResponse
+- uid: ms-rest.SystemErrorRetryPolicyFilter
+  name: SystemErrorRetryPolicyFilter
+- uid: ms-rest.ExponentialRetryPolicyFilter
+  name: ExponentialRetryPolicyFilter
+- uid: ms-rest.TokenCredentials
+  name: TokenCredentials
+- uid: ms-rest.BasicAuthenticationCredentials
+  name: BasicAuthenticationCredentials
+- uid: ms-rest.ApiKeyCredentials
+  name: ApiKeyCredentials

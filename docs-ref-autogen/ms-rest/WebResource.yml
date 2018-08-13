@@ -1,0 +1,178 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4cde1b335a77464fabbc18e725bb879fd916b927
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40065075"
+items:
+- uid: ms-rest.WebResource
+  id: ms-rest.WebResource
+  name: WebResource
+  summary: >-
+    新しい WebResource オブジェクトを作成します。
+
+
+    このクラスは、ライブラリ、REST 呼び出しを抽象化を提供または要求を開始する実装に依存しないと、必要なプロパティをラップします。
+  fullName: ms-rest.WebResource
+  type: Class
+  children:
+  - ms-rest.WebResource.#ctor
+  - ms-rest.WebResource#pipeInput
+  - ms-rest.WebResource#validateRequestProperties
+  - ms-rest.WebResource#prepare
+  langs:
+  - js
+- id: ms-rest.WebResource.#ctor
+  uid: ms-rest.WebResource.#ctor
+  parent: ms-rest.WebResource
+  name: WebResource()
+  fullName: ms-rest.WebResource.WebResource()
+  summary: ''
+  type: Constructor
+  syntax:
+    content: new WebResource()
+  langs:
+  - js
+- uid: ms-rest.WebResource#pipeInput
+  id: ms-rest.WebResource#pipeInput
+  parent: ms-rest.WebResource
+  name: pipeInput(inputStream, outputStream)
+  summary: WebResource メソッドが要求本文を必要とし、本文が既に設定されていない場合、変換先の出力ストリームに指定した入力ストリームをフックします。
+  fullName: ms-rest.WebResource.pipeInput(inputStream, outputStream)
+  type: Function
+  syntax:
+    parameters:
+    - id: inputStream
+      type:
+      - ms-rest.Stream
+      description: パイプからのストリーム
+    - id: outputStream
+      type:
+      - ms-rest.Stream
+      description: パイプのストリーム
+    return:
+      description: destStream
+    content: function pipeInput(inputStream, outputStream)
+  langs:
+  - js
+- uid: ms-rest.WebResource#validateRequestProperties
+  id: ms-rest.WebResource#validateRequestProperties
+  parent: ms-rest.WebResource
+  name: validateRequestProperties()
+  summary: メソッド、url、ヘッダー ['']、Content-type ヘッダー [' ブラウザーの言語 '] などの必要なプロパティが定義されていることを検証します。 上記のプロパティのいずれかが定義されていない場合、エラーがスローされます。
+  fullName: ms-rest.WebResource.validateRequestProperties()
+  type: Function
+  syntax:
+    content: function validateRequestProperties()
+  langs:
+  - js
+- uid: ms-rest.WebResource#prepare
+  id: ms-rest.WebResource#prepare
+  parent: ms-rest.WebResource
+  name: prepare(options)
+  summary: 要求を準備します。
+  fullName: ms-rest.WebResource.prepare(options)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: 要求を正常に送信する提供される要求のオプション
+    - id: options.method
+      type:
+      - string
+      description: HTTP 要求メソッド。 有効な値は、'GET'、'PUT'、'ヘッド'、'DELETE'、'OPTIONS'、'POST'、'PATCH' には。
+    - id: options.url
+      type:
+      - string
+      description: 要求 url。 これは、その中のクエリ パラメーターがない可能性がありますもかまいません。 'Url' を指定するか、オプションのオブジェクトに 'pathTemplate' を指定します。 どちらのオプションは相互に排他的です。
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "'Key' が、' クエリのパラメーター名 'と 'value'、url に付加するクエリ パラメーターの辞書は、' クエリ パラメーターの値' です。 型は 'string'、' クエリ パラメーターの値 ' 指定できますか、'object' 型のことができます。 Url エンコードをスキップする場合に、'object' の形式を使用してください。 オブジェクトの形式を使用しているときに、オブジェクトは、' クエリ パラメーターの値 ' を提供する値をという名前のプロパティが必要です。\n例: \n   - クエリ パラメーターの値 'object' の形式: {'クエリ パラメーター名 ': {値:' クエリのパラメーターの値 '、skipUrlEncoding: true}}\n   - クエリ パラメーターの値 'string' の形式: {'クエリ パラメーター名 ':' クエリ パラメーター値 '}。\n注: ' options.url が既にいくつかのクエリ パラメーターとしている場合、options.queryParameters で指定された値は、url に追加されます。"
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        要求のパス テンプレートの url。 'Url' を指定するか、オプションのオブジェクトに 'pathTemplate' を指定します。 どちらのオプションは相互に排他的です。
+
+        例: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: "要求のベース url。 既定値: 'https://management.azure.com'。 これは、options.pathTemplate でのみ適用されます。 Options.url を提供する、完全な url を指定することが必要だ場合。"
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "PathTemplate の実際の値に置き換える必要があるパス パラメーターのディクショナリ。\nここで、キー 'パス-パラメーターの名前' であり、値は、' パスのパラメーターの値 '。 'パス-パラメーター-値' は 'string' 型または 'object' 型のことができます。\nUrl エンコードをスキップする場合に、'object' の形式を使用してください。 オブジェクトの形式を使用しているときに、オブジェクトは、' パス パラメーターの値 ' を提供する値をという名前のプロパティが必要です。\n例: \n   - 'object' の形式でパスとパラメーターの値: {'パス パラメーター名 ': {値:' のパスとパラメーターの値 '、skipUrlEncoding: true}}\n   - 'string' の形式でパスとパラメーターの値: {'パス パラメーター名 ':' パス-パラメーター-value'}。"
+      optional: true
+    - id: options.formData
+      type:
+      - object
+      description: >-
+        フォーム データ オブジェクトのキー値のペアのディクショナリ。
+
+        場合は、予想される 'Content-type' に設定するのには 'アプリケーション/x-www-form-urlencoded' しで設定してください' マルチパート/フォーム データ 'を' Content-type ' ヘッダーが設定される他 options.headers オブジェクト。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        要求ヘッダー、要求に適用する必要があるのディクショナリ。
+
+        ここで、キーは、' ヘッダーの名前 ' と、値は、' ヘッダー値 '。 ヘッダー値は、文字列型にする必要があります。
+         - ContentType は、キー名で 'Content-type' として指定する必要があります。 既定値 ' application/json;charset = utf-8 '。
+         - 'Transfer-encoding' に設定されている 'チャンク' 既定 'options.bodyIsStream' に設定されている場合は true。
+         - 'Content-type' は、既定で 'options.bodyIsStream' が設定されている場合で、' アプリケーションまたはオクテット ストリーム ' に設定が true に設定します。
+         - 'ブラウザーの言語' 既定が 'EN-US' に設定されています。
+         - ' x-ms-クライアント要求 id' 既定では、新しい Guid に設定されます。 True に options.disableClientRequestId に設定してください、要求の guid を生成できません。
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: True に設定する、新しい Guid() に設定されていない ' x-ms-クライアント要求 id' ヘッダーをクライアントに指示します。
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: 要求本文。 任意の型のことができます。 このメソッドは、要求本文を JSON.stringify() になります。
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: 要求本文をシリアル化する方法についてを説明します。
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: 応答本文を逆シリアル化する方法についてを説明します。
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: 'このメソッドが JSON.stringify() 要求本文をかどうかを示します。 既定値: false。'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: 要求本文がストリーム (ファイルのアップロード シナリオに便利です) であるかどうかを示します。
+      optional: true
+    return:
+      type:
+      - object
+      description: WebResource では、要求パイプラインを指定する必要がある準備 WebResource (HTTP 要求) オブジェクトを返します。
+    content: function prepare(options)
+  langs:
+  - js

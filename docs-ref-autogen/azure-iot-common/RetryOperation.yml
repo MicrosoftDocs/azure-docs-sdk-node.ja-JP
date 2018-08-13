@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c243adc0c4629aeae4e673c28644ca2761fd80f2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40067361"
+items:
+- uid: azure-iot-common.RetryOperation
+  name: RetryOperation
+  fullName: RetryOperation
+  children:
+  - azure-iot-common.RetryOperation.retry
+  - azure-iot-common.RetryOperation.constructor
+  langs:
+  - typeScript
+  type: class
+  summary: 接続、C2D メッセージの受信、テレメトリ、ツインの更新などの送信などの操作を再試行するために必要なロジックを実装します。
+  package: azure-iot-common
+- uid: azure-iot-common.RetryOperation.retry
+  name: retry
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 操作を実行し、失敗した場合、再試行ポリシーで許可される場合に再試行します。
+  syntax:
+    content: 'function retry(operation: (opCallback: (err?: Error, result?: any, response?: any) => void) => void, finalCallback: (err?: Error, result?: any, response?: any) => void)'
+    parameters:
+    - id: operation
+      type:
+      - '(opCallback: (err?: Error, result?: any, response?: any) => void) => void'
+      description: 実行する操作です。
+    - id: finalCallback
+      type:
+      - '(err?: Error, result?: any, response?: any) => void'
+      description: >
+        必要な場合は、再試行の後に最終的なエラーまたは結果に呼び出しにコールバックします。
+  package: azure-iot-common
+- uid: azure-iot-common.RetryOperation.constructor
+  name: RetryOperation
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: インスタンスを作成します <xref:azure-iot-common.RetryOperation.>
+  syntax:
+    content: 'new RetryOperation(policy: RetryPolicy, maxTimeout: number)'
+    parameters:
+    - id: policy
+      type:
+      - azure-iot-common.RetryPolicy
+      description: この操作は、どのようなエラーが「再試行可能な」であるかを決定するのに使用される速度を再試行するされるようにするための再試行ポリシーです。
+    - id: maxTimeout
+      type:
+      - number
+      description: >
+        その後再試行は行われません、この操作の最大タイムアウト。
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.RetryPolicy
+  spec.typeScript:
+  - name: RetryPolicy
+    fullName: RetryPolicy
+    uid: azure-iot-common.RetryPolicy

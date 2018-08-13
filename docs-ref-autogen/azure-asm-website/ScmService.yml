@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8bff819eb4af3d06c65d4dd4ecc13349835e08f0
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40065058"
+items:
+- uid: azure-asm-website.ScmService
+  id: azure-asm-website.ScmService
+  name: ScmService
+  summary: ScmService オブジェクトでは、Microsoft Azure の Web サイト リポジトリの管理操作を実行できます。
+  fullName: azure-asm-website.ScmService
+  type: Class
+  children:
+  - azure-asm-website.ScmService.#ctor
+  - azure-asm-website.ScmService#getDumpToStream
+  - azure-asm-website.ScmService#getLogStream
+  langs:
+  - js
+- id: azure-asm-website.ScmService.#ctor
+  uid: azure-asm-website.ScmService.#ctor
+  parent: azure-asm-website.ScmService
+  name: ScmService(authentication, hostOptions)
+  fullName: azure-asm-website.ScmService.ScmService(authentication, hostOptions)
+  summary: 新しい ScmService オブジェクトを作成します。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: authentication
+      type:
+      - object
+      description: >-
+        クライアントの認証オブジェクト。
+
+        基本認証の認証/パスワードを使用する必要があります。
+    - id: authentication.user
+      type:
+      - string
+      description: 基本認証ユーザー名。
+      optional: true
+    - id: authentication.pass
+      type:
+      - string
+      description: 基本認証パスワードです。
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: 既定値を上書きするホスト オプション。
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: リポジトリの SCM エンドポイント。
+      optional: true
+    content: new ScmService(authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-website.ScmService#getDumpToStream
+  id: azure-asm-website.ScmService#getDumpToStream
+  parent: azure-asm-website.ScmService
+  name: getDumpToStream(callback)
+  summary: ログのダンプを取得します。
+  fullName: azure-asm-website.ScmService.getDumpToStream(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` エラーが発生した場合に情報を含むそれ以外の場合`results`web スペースの一覧が含まれます。
+                                                              `response` この操作に関連する情報が含まれます。
+    content: function getDumpToStream(callback)
+  langs:
+  - js
+- uid: azure-asm-website.ScmService#getLogStream
+  id: azure-asm-website.ScmService#getLogStream
+  parent: azure-asm-website.ScmService
+  name: getLogStream(path, options, callback)
+  summary: ログ ストリームを取得します。
+  fullName: azure-asm-website.ScmService.getLogStream(path, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: path
+      type:
+      - object
+      description: ログ ストリームのパス。
+    - id: options
+      type:
+      - object
+      description: 要求オプションです。
+      optional: true
+    - id: options.filter
+      type:
+      - azure-asm-website.int
+      description: ログ ストリームを返すフィルター。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` エラーが発生した場合に情報を含むそれ以外の場合`results`web スペースの一覧が含まれます。
+                                                              `response` この操作に関連する情報が含まれます。
+    content: function getLogStream(path, options, callback)
+  langs:
+  - js
