@@ -1,0 +1,812 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6fa2e2901b7265c9426541584abde0d99339d194
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40065082"
+items:
+- uid: azure-scheduler.JobOperations~JobOperations
+  id: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations
+  summary: >-
+    __注__: [SchedulerClient] のインスタンスをこのクラスのインスタンスが自動的に作成<xref:azure-scheduler.SchedulerClient~SchedulerClient>です。
+
+    [ジョブ] を参照してください。<xref:azure-scheduler.SchedulerClient~SchedulerClient%23jobs>します。
+
+    JobOperations クラスの新しいインスタンスを初期化します。
+  fullName: azure-scheduler.JobOperations
+  type: Class
+  children:
+  - azure-scheduler.JobOperations~JobOperations.#ctor
+  - azure-scheduler.JobOperations~JobOperations#create
+  - azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  - azure-scheduler.JobOperations~JobOperations#deleteMethod
+  - azure-scheduler.JobOperations~JobOperations#get
+  - azure-scheduler.JobOperations~JobOperations#getHistory
+  - azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  - azure-scheduler.JobOperations~JobOperations#list
+  - azure-scheduler.JobOperations~JobOperations#listWithFilter
+  - azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  - azure-scheduler.JobOperations~JobOperations#updateState
+  langs:
+  - js
+- id: azure-scheduler.JobOperations~JobOperations.#ctor
+  uid: azure-scheduler.JobOperations~JobOperations.#ctor
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations(client)
+  fullName: azure-scheduler.JobOperations.JobOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSchedulerClient
+      description: サービス クライアントへの参照。
+    content: new JobOperations(client)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#create
+  id: azure-scheduler.JobOperations~JobOperations#create
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: create(parameters, callback)
+  summary: これにより、サービス ジョブ id を生成する、新しいジョブを作成します。ユーザーが選択したジョブ id が必要な場合は、CreateOrUpdate を使用します。
+  fullName: azure-scheduler.JobOperations~JobOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateParameters
+      description: ジョブの作成操作のジョブ定義を指定するパラメーター。
+    - id: parameters.startTime
+      type:
+      - date
+      description: ジョブの開始時刻。  ISO 8601 として定義されます。
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: ジョブを呼び出すアクション。
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: アクションの種類。 Http、https、storageQueue のいずれかを指定できます。
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: このジョブ操作の再試行ポリシーです。
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: 再試行ポリシーの再試行の種類。 'Fixed' または 'none' を指定できます。
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: 再試行の間隔。
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: 再試行回数を試行する必要があります。
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: ジョブのエラー アクション。
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: アクションの種類。 Http、https、storageQueue のいずれかを指定できます。
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Http または https アクションの種類の要求。
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: 取得または設定を呼び出すエンドポイントの Uri。
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: '取得または Http メソッド例: GET、PUT、POST、DELETE を設定します。'
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: 取得または http または https アクションを指定するヘッダーの名前値のペアを設定します。
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: 取得または要求本文を設定します。
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: 取得または要求の認証を設定します。
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: 認証の種類を指定します
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: キューおよびキュー メッセージのアクションの内容を入力します。
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: キューのストレージ アカウントの名前。
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: 送信するキューの名前。
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: キューにメッセージを送信するストレージ アカウントの SAS キーです。
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: キューに送信するメッセージの内容。
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Http または https アクションの種類の要求。
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: 取得または設定を呼び出すエンドポイントの Uri。
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: '取得または Http メソッド例: GET、PUT、POST、DELETE を設定します。'
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: 取得または http または https アクションを指定するヘッダーの名前値のペアを設定します。
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: 取得または要求本文を設定します。
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: 取得または要求の認証を設定します。
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: 認証の種類を指定します
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: キューおよびキュー メッセージのアクションの内容を入力します。
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: キューのストレージ アカウントの名前。
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: 送信するキューの名前。
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: キューにメッセージを送信するストレージ アカウントの SAS キーです。
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: キューに送信するメッセージの内容。
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: ジョブの繰り返しのスケジュール。
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: 定期実行の頻度。
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: 指定した頻度で繰り返しの間隔。
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: 実行する回数。 省略可能。 既定値を無限に繰り返す
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: ISO 8601 形式がこれ以上を実行するまでの時間。
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: ジョブの繰り返しのスケジュール。
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: ジョブで実行される時間の分。
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: 1 日の時間にジョブを実行する必要があります。
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: 週の日でジョブを実行する必要があります。
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: ジョブで実行されるか月です。  1 ~ 12 である必要があります。
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: 月の日数でジョブを実行する必要があります。  1 から 31 までの間である必要があります。
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: 1 か月の日の出現回数。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  id: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: createOrUpdate(jobId, parameters, callback)
+  summary: ユーザーが指定したジョブ id では、新しいジョブを作成します。 または、指定の定義に置き換えて、既存のジョブを更新します。
+  fullName: azure-scheduler.JobOperations~JobOperations.createOrUpdate(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: 作成または更新するジョブの id。
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateOrUpdateParameters
+      description: CreateOrUpdate ジョブ操作のジョブ定義を指定するパラメーター。
+    - id: parameters.startTime
+      type:
+      - date
+      description: ジョブの開始時刻。 ISO 8601 として定義されます。
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: ジョブを呼び出すアクション。
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: アクションの種類。 Http、https、storageQueue のいずれかを指定できます。
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: このジョブ操作の再試行ポリシーです。
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: 再試行ポリシーの再試行の種類。 'Fixed' または 'none' を指定できます。
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: 再試行の間隔。
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: 再試行回数を試行する必要があります。
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: ジョブのエラー アクション。
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: アクションの種類。 Http、https、storageQueue のいずれかを指定できます。
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Http または https アクションの種類の要求。
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: 取得または設定を呼び出すエンドポイントの Uri。
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: '取得または Http メソッド例: GET、PUT、POST、DELETE を設定します。'
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: 取得または http または https アクションを指定するヘッダーの名前値のペアを設定します。
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: 取得または要求本文を設定します。
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: 取得または要求の認証を設定します。
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: 認証の種類を指定します
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: キューおよびキュー メッセージのアクションの内容を入力します。
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: キューのストレージ アカウントの名前。
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: 送信するキューの名前。
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: キューにメッセージを送信するストレージ アカウントの SAS キーです。
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: キューに送信するメッセージの内容。
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Http または https アクションの種類の要求。
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: 取得または設定を呼び出すエンドポイントの Uri。
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: '取得または Http メソッド例: GET、PUT、POST、DELETE を設定します。'
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: 取得または http または https アクションを指定するヘッダーの名前値のペアを設定します。
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: 取得または要求本文を設定します。
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: 取得または要求の認証を設定します。
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: 認証の種類を指定します
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: キューおよびキュー メッセージのアクションの内容を入力します。
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: キューのストレージ アカウントの名前。
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: 送信するキューの名前。
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: キューにメッセージを送信するストレージ アカウントの SAS キーです。
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: キューに送信するメッセージの内容。
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: ジョブの繰り返しのスケジュール。
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: 定期実行の頻度。
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: 指定した頻度で繰り返しの間隔。
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: 実行する回数。 省略可能。 既定値を無限に繰り返す
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: ISO 8601 形式がこれ以上を実行するまでの時間。
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: ジョブの繰り返しのスケジュール。
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: ジョブで実行される時間の分。
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: 1 日の時間にジョブを実行する必要があります。
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: 週の日でジョブを実行する必要があります。
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: ジョブで実行されるか月です。  1 ~ 12 である必要があります。
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: 月の日数でジョブを実行する必要があります。  1 から 31 までの間である必要があります。
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: 1 か月の日の出現回数。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function createOrUpdate(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  id: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: deleteMethod(jobId, callback)
+  summary: ジョブを削除します。
+  fullName: azure-scheduler.JobOperations~JobOperations.deleteMethod(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: 削除するジョブの id。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function deleteMethod(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#get
+  id: azure-scheduler.JobOperations~JobOperations#get
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: get(jobId, callback)
+  summary: 定義とジョブの状態を取得します。
+  fullName: azure-scheduler.JobOperations~JobOperations.get(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: 取得するジョブの id。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function get(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistory
+  id: azure-scheduler.JobOperations~JobOperations#getHistory
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistory(jobId, parameters, callback)
+  summary: ジョブの実行履歴を取得します。
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistory(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: 履歴を取得するジョブの id。
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryParameters
+      description: ジョブ履歴の取得 操作に指定されたパラメーター。
+    - id: parameters.skip
+      type:
+      - number
+      description: エントリを要求する開始位置を示す履歴リストの (0 から始まる) インデックスを指定します。
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: 要求の履歴エントリの数を指定、範囲 [1..100]。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function getHistory(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistoryWithFilter(jobId, parameters, callback)
+  summary: ジョブの状態でフィルターを使用して、ジョブの実行履歴を取得します。
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistoryWithFilter(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: 履歴を取得するジョブの id。
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryWithFilterParameters
+      description: フィルターとジョブ履歴の取得操作に指定されたパラメーター。
+    - id: parameters.status
+      type:
+      - azure-scheduler.JobHistoryStatus
+      description: 戻り値のジョブ実行の試行が持つ特定の状態で、'完了' または '失敗' のみにジョブ履歴をフィルター処理します。
+    - id: parameters.skip
+      type:
+      - number
+      description: エントリを要求する開始位置を示す履歴リストの (0 から始まる) インデックスを指定します。
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: 要求の履歴エントリの数を指定、範囲 [1..100]。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function getHistoryWithFilter(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#list
+  id: azure-scheduler.JobOperations~JobOperations#list
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: list(parameters, callback)
+  summary: ジョブ コレクション内のすべてのジョブの一覧を取得します。
+  fullName: azure-scheduler.JobOperations~JobOperations.list(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListParameters
+      description: ジョブを一覧表示操作に指定されたパラメーター。
+    - id: parameters.skip
+      type:
+      - number
+      description: エントリを要求する開始位置を示すジョブの一覧の (0 から始まる) インデックスを指定します。
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: 要求で、ジョブの数を指定、範囲 [1..100]。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function list(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: listWithFilter(parameters, callback)
+  summary: ジョブの状態でのフィルターに一致するジョブ コレクション内のジョブの一覧を取得します。
+  fullName: azure-scheduler.JobOperations~JobOperations.listWithFilter(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListWithFilterParameters
+      description: フィルター操作をジョブの一覧に指定されたパラメーター。
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: 特定の状態を有効になっているか、無効に、障害が発生して、完了したことだけを返すジョブの実行の試行がジョブ履歴をフィルター処理します。
+    - id: parameters.skip
+      type:
+      - number
+      description: エントリを要求する開始位置を示すジョブの一覧の (0 から始まる) インデックスを指定します。
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: 要求で、ジョブの数を指定、範囲 [1..100]。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function listWithFilter(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  id: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateJobCollectionState(parameters, callback)
+  summary: ジョブ コレクション内のすべてのジョブの状態を更新します。
+  fullName: azure-scheduler.JobOperations~JobOperations.updateJobCollectionState(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCollectionJobsUpdateStateParameters
+      description: 更新ジョブの状態の操作に指定されたパラメーター。
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: "新しい状態に更新する: 'enabled' または 'disabled' です。"
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function updateJobCollectionState(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateState
+  id: azure-scheduler.JobOperations~JobOperations#updateState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateState(jobId, parameters, callback)
+  summary: ジョブの状態を更新します。
+  fullName: azure-scheduler.JobOperations~JobOperations.updateState(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: 更新するジョブの id。
+    - id: parameters
+      type:
+      - azure-scheduler.JobUpdateStateParameters
+      description: 更新ジョブの状態の操作に指定されたパラメーター。
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: "新しい状態に更新する: 'enabled' または 'disabled' です。"
+    - id: parameters.updateStateReason
+      type:
+      - string
+      description: このジョブの状態の更新プログラムに関連付けられている状況の説明。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: 応答ストリーム。
+    content: function updateState(jobId, parameters, callback)
+  langs:
+  - js

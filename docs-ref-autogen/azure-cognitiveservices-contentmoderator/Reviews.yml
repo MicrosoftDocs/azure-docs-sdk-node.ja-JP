@@ -1,0 +1,2875 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: afa6fb747e4e5b55f8e84107a854615c3c631e24
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40069724"
+items:
+- uid: azure-cognitiveservices-contentmoderator.Reviews
+  name: Reviews
+  fullName: Reviews
+  children:
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStreamWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrlWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResultWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.createJob
+  - azure-cognitiveservices-contentmoderator.Reviews.createJob_1
+  - azure-cognitiveservices-contentmoderator.Reviews.createJob_2
+  - azure-cognitiveservices-contentmoderator.Reviews.createJobWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.createReviews
+  - azure-cognitiveservices-contentmoderator.Reviews.createReviews_1
+  - azure-cognitiveservices-contentmoderator.Reviews.createReviews_2
+  - azure-cognitiveservices-contentmoderator.Reviews.createReviewsWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews_1
+  - azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews_2
+  - azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews
+  - azure-cognitiveservices-contentmoderator.Reviews.createVideoReviewsWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.getJobDetails
+  - azure-cognitiveservices-contentmoderator.Reviews.getJobDetails_1
+  - azure-cognitiveservices-contentmoderator.Reviews.getJobDetails_2
+  - azure-cognitiveservices-contentmoderator.Reviews.getJobDetailsWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.getReview
+  - azure-cognitiveservices-contentmoderator.Reviews.getReview_1
+  - azure-cognitiveservices-contentmoderator.Reviews.getReview_2
+  - azure-cognitiveservices-contentmoderator.Reviews.getReviewWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames
+  - azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames_1
+  - azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames_2
+  - azure-cognitiveservices-contentmoderator.Reviews.getVideoFramesWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview
+  - azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview_1
+  - azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview_2
+  - azure-cognitiveservices-contentmoderator.Reviews.publishVideoReviewWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame
+  name: addVideoFrame
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function addVideoFrame(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame_1
+  name: addVideoFrame
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function addVideoFrame(teamName: string, reviewId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame_2
+  name: addVideoFrame
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function addVideoFrame(teamName: string, reviewId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_1
+  name: addVideoFrameStream
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'ビデオのレビューのためのフレームを追加するのにには、このメソッドを使用します。スケール: このパラメーターは、フレームのタイムスタンプ (ミリ秒) に変換するために使用される係数です。 タイム スケールは、Azure Media Services プラットフォームで、Content Moderator のビデオ メディア プロセッサの出力で提供されます。ビデオのモデレート出力のタイム スケールのティック/秒です。'
+  syntax:
+    content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: stream.Readable, frameMetadata: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: frameImageZip
+      type:
+      - stream.Readable
+      description: ''
+    - id: frameMetadata
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream
+  name: addVideoFrameStream
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'ビデオのレビューのためのフレームを追加するのにには、このメソッドを使用します。スケール: このパラメーターは、フレームのタイムスタンプ (ミリ秒) に変換するために使用される係数です。 タイム スケールは、Azure Media Services プラットフォームで、Content Moderator のビデオ メディア プロセッサの出力で提供されます。ビデオのモデレート出力のタイム スケールのティック/秒です。'
+  syntax:
+    content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: stream.Readable, frameMetadata: string, options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: frameImageZip
+      type:
+      - stream.Readable
+      description: >
+        フレームのイメージを含む zip ファイルです。
+    - id: frameMetadata
+      type:
+      - string
+      description: >
+        フレームのメタデータ。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_2
+  name: addVideoFrameStream
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'ビデオのレビューのためのフレームを追加するのにには、このメソッドを使用します。スケール: このパラメーターは、フレームのタイムスタンプ (ミリ秒) に変換するために使用される係数です。 タイム スケールは、Azure Media Services プラットフォームで、Content Moderator のビデオ メディア プロセッサの出力で提供されます。ビデオのモデレート出力のタイム スケールのティック/秒です。'
+  syntax:
+    content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: stream.Readable, frameMetadata: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: frameImageZip
+      type:
+      - stream.Readable
+      description: ''
+    - id: frameMetadata
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStreamWithHttpOperationResponse
+  name: addVideoFrameStreamWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'ビデオのレビューのためのフレームを追加するのにには、このメソッドを使用します。スケール: このパラメーターは、フレームのタイムスタンプ (ミリ秒) に変換するために使用される係数です。 タイム スケールは、Azure Media Services プラットフォームで、Content Moderator のビデオ メディア プロセッサの出力で提供されます。ビデオのモデレート出力のタイム スケールのティック/秒です。'
+  syntax:
+    content: 'function addVideoFrameStreamWithHttpOperationResponse(contentType: string, teamName: string, reviewId: string, frameImageZip: stream.Readable, frameMetadata: string, options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: frameImageZip
+      type:
+      - stream.Readable
+      description: >
+        フレームのイメージを含む zip ファイルです。
+    - id: frameMetadata
+      type:
+      - string
+      description: >
+        フレームのメタデータ。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl
+  name: addVideoFrameUrl
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'ビデオのレビューのためのフレームを追加するのにには、このメソッドを使用します。スケール: このパラメーターは、フレームのタイムスタンプ (ミリ秒) に変換するために使用される係数です。 タイム スケールは、Azure Media Services プラットフォームで、Content Moderator のビデオ メディア プロセッサの出力で提供されます。ビデオのモデレート出力のタイム スケールのティック/秒です。'
+  syntax:
+    content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: videoFrameBody
+      type:
+      - azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+      description: >
+        本文のビデオ フレーム API を追加します。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_1
+  name: addVideoFrameUrl
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'ビデオのレビューのためのフレームを追加するのにには、このメソッドを使用します。スケール: このパラメーターは、フレームのタイムスタンプ (ミリ秒) に変換するために使用される係数です。 タイム スケールは、Azure Media Services プラットフォームで、Content Moderator のビデオ メディア プロセッサの出力で提供されます。ビデオのモデレート出力のタイム スケールのティック/秒です。'
+  syntax:
+    content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: videoFrameBody
+      type:
+      - azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_2
+  name: addVideoFrameUrl
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'ビデオのレビューのためのフレームを追加するのにには、このメソッドを使用します。スケール: このパラメーターは、フレームのタイムスタンプ (ミリ秒) に変換するために使用される係数です。 タイム スケールは、Azure Media Services プラットフォームで、Content Moderator のビデオ メディア プロセッサの出力で提供されます。ビデオのモデレート出力のタイム スケールのティック/秒です。'
+  syntax:
+    content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: videoFrameBody
+      type:
+      - azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrlWithHttpOperationResponse
+  name: addVideoFrameUrlWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'ビデオのレビューのためのフレームを追加するのにには、このメソッドを使用します。スケール: このパラメーターは、フレームのタイムスタンプ (ミリ秒) に変換するために使用される係数です。 タイム スケールは、Azure Media Services プラットフォームで、Content Moderator のビデオ メディア プロセッサの出力で提供されます。ビデオのモデレート出力のタイム スケールのティック/秒です。'
+  syntax:
+    content: 'function addVideoFrameUrlWithHttpOperationResponse(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: videoFrameBody
+      type:
+      - azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+      description: >
+        本文のビデオ フレーム API を追加します。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameWithHttpOperationResponse
+  name: addVideoFrameWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function addVideoFrameWithHttpOperationResponse(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript_1
+  name: addVideoTranscript
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: この API は、ビデオのレビューにトラン スクリプト ファイル (ビデオで話されるすべての語のテキスト バージョン) を追加します。 ファイルは、有効な WebVTT 形式にあります。
+  syntax:
+    content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: stream.Readable, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: vTTfile
+      type:
+      - stream.Readable
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript
+  name: addVideoTranscript
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: この API は、ビデオのレビューにトラン スクリプト ファイル (ビデオで話されるすべての語のテキスト バージョン) を追加します。 ファイルは、有効な WebVTT 形式にあります。
+  syntax:
+    content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: stream.Readable, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: vTTfile
+      type:
+      - stream.Readable
+      description: >
+        ビデオのトラン スクリプト ファイル。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript_2
+  name: addVideoTranscript
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: この API は、ビデオのレビューにトラン スクリプト ファイル (ビデオで話されるすべての語のテキスト バージョン) を追加します。 ファイルは、有効な WebVTT 形式にあります。
+  syntax:
+    content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: stream.Readable, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: vTTfile
+      type:
+      - stream.Readable
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult
+  name: addVideoTranscriptModerationResult
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    この API は、ビデオのレビューのトラン スクリプト スクリーン テキスト結果ファイルを追加します。
+
+    トラン スクリプト画面のテキストの結果ファイルは、画面のテキストの API の結果です。 トラン スクリプト画面のテキストの結果ファイルを生成するためにトラン スクリプト ファイルが、画面のテキストの API を使用して不適切な単語をスクリーニングします。
+  syntax:
+    content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: transcriptModerationBody
+      type:
+      - azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+      description: >
+        本文のビデオのトラン スクリプトのモデレート結果 API を追加します。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_1
+  name: addVideoTranscriptModerationResult
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    この API は、ビデオのレビューのトラン スクリプト スクリーン テキスト結果ファイルを追加します。
+
+    トラン スクリプト画面のテキストの結果ファイルは、画面のテキストの API の結果です。 トラン スクリプト画面のテキストの結果ファイルを生成するためにトラン スクリプト ファイルが、画面のテキストの API を使用して不適切な単語をスクリーニングします。
+  syntax:
+    content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: transcriptModerationBody
+      type:
+      - azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_2
+  name: addVideoTranscriptModerationResult
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    この API は、ビデオのレビューのトラン スクリプト スクリーン テキスト結果ファイルを追加します。
+
+    トラン スクリプト画面のテキストの結果ファイルは、画面のテキストの API の結果です。 トラン スクリプト画面のテキストの結果ファイルを生成するためにトラン スクリプト ファイルが、画面のテキストの API を使用して不適切な単語をスクリーニングします。
+  syntax:
+    content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: transcriptModerationBody
+      type:
+      - azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResultWithHttpOperationResponse
+  name: addVideoTranscriptModerationResultWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    この API は、ビデオのレビューのトラン スクリプト スクリーン テキスト結果ファイルを追加します。
+
+    トラン スクリプト画面のテキストの結果ファイルは、画面のテキストの API の結果です。 トラン スクリプト画面のテキストの結果ファイルを生成するためにトラン スクリプト ファイルが、画面のテキストの API を使用して不適切な単語をスクリーニングします。
+  syntax:
+    content: 'function addVideoTranscriptModerationResultWithHttpOperationResponse(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: transcriptModerationBody
+      type:
+      - azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+      description: >
+        本文のビデオのトラン スクリプトのモデレート結果 API を追加します。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptWithHttpOperationResponse
+  name: addVideoTranscriptWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: この API は、ビデオのレビューにトラン スクリプト ファイル (ビデオで話されるすべての語のテキスト バージョン) を追加します。 ファイルは、有効な WebVTT 形式にあります。
+  syntax:
+    content: 'function addVideoTranscriptWithHttpOperationResponse(teamName: string, reviewId: string, vTTfile: stream.Readable, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: vTTfile
+      type:
+      - stream.Readable
+      description: >
+        ビデオのトラン スクリプト ファイル。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createJob
+  name: createJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    ジョブをこのエンドポイントに投稿されたコンテンツの Id が返されます。
+
+    コンテンツが評価されると、ワークフロー、レビューを作成または無視が提供される式に基づくワークフロー。
+
+
+    <h3>コールバックのスキーマ </h3>
+
+
+    <p>
+
+    <h4>ジョブの完了コールバックのサンプル</h4><br/>
+
+
+    {<br/>
+
+    "JobId":"<Job Id>、<br/>
+
+    "ReviewId":"< レビュー Id、ジョブの結果をレビューを作成する場合 >",<br/>
+
+    "WorkFlowId":「既定」<br/>
+
+    "Status":「< これは、完了、処理中、エラーのいずれかの >」<br/>
+
+    "ContentType":「イメージ」<br/>
+
+    "ContentId":"<This is the ContentId that was specified on input>"、<br/>
+
+    "CallBackType":「ジョブ」<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>
+
+    <p>
+
+    <h4>レビュー完了コールバックのサンプル</h4><br/>
+
+
+    {"ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"、"a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createJob(teamName: string, contentType: string, contentId: string, workflowName: string, jobContentType: string, content: Content, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: contentType
+      type:
+      - string
+      description: >
+        Image、Text、またはビデオ。 使用可能な値が含まれます: 'イメージ'、'Text'、'ビデオ'
+    - id: contentId
+      type:
+      - string
+      description: >
+        送信されたコンテンツを識別する id/名前。
+    - id: workflowName
+      type:
+      - string
+      description: >
+        起動するワークフローの名前。
+    - id: jobContentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。 使用可能な値が含まれます: 'application/json' に ' イメージ/jpeg '
+    - id: content
+      type:
+      - azure-cognitiveservices-contentmoderator.Content
+      description: >
+        評価するコンテンツ。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.JobId>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createJob_1
+  name: createJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    ジョブをこのエンドポイントに投稿されたコンテンツの Id が返されます。
+
+    コンテンツが評価されると、ワークフロー、レビューを作成または無視が提供される式に基づくワークフロー。
+
+
+    <h3>コールバックのスキーマ </h3>
+
+
+    <p>
+
+    <h4>ジョブの完了コールバックのサンプル</h4><br/>
+
+
+    {<br/>
+
+    "JobId":"<Job Id>、<br/>
+
+    "ReviewId":"< レビュー Id、ジョブの結果をレビューを作成する場合 >",<br/>
+
+    "WorkFlowId":「既定」<br/>
+
+    "Status":「< これは、完了、処理中、エラーのいずれかの >」<br/>
+
+    "ContentType":「イメージ」<br/>
+
+    "ContentId":"<This is the ContentId that was specified on input>"、<br/>
+
+    "CallBackType":「ジョブ」<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>
+
+    <p>
+
+    <h4>レビュー完了コールバックのサンプル</h4><br/>
+
+
+    {"ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"、"a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createJob(teamName: string, contentType: string, contentId: string, workflowName: string, jobContentType: string, content: Content, callback: ServiceCallback<JobId>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: contentId
+      type:
+      - string
+      description: ''
+    - id: workflowName
+      type:
+      - string
+      description: ''
+    - id: jobContentType
+      type:
+      - string
+      description: ''
+    - id: content
+      type:
+      - azure-cognitiveservices-contentmoderator.Content
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.JobId>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.JobId>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createJob_2
+  name: createJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    ジョブをこのエンドポイントに投稿されたコンテンツの Id が返されます。
+
+    コンテンツが評価されると、ワークフロー、レビューを作成または無視が提供される式に基づくワークフロー。
+
+
+    <h3>コールバックのスキーマ </h3>
+
+
+    <p>
+
+    <h4>ジョブの完了コールバックのサンプル</h4><br/>
+
+
+    {<br/>
+
+    "JobId":"<Job Id>、<br/>
+
+    "ReviewId":"< レビュー Id、ジョブの結果をレビューを作成する場合 >",<br/>
+
+    "WorkFlowId":「既定」<br/>
+
+    "Status":「< これは、完了、処理中、エラーのいずれかの >」<br/>
+
+    "ContentType":「イメージ」<br/>
+
+    "ContentId":"<This is the ContentId that was specified on input>"、<br/>
+
+    "CallBackType":「ジョブ」<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>
+
+    <p>
+
+    <h4>レビュー完了コールバックのサンプル</h4><br/>
+
+
+    {"ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"、"a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createJob(teamName: string, contentType: string, contentId: string, workflowName: string, jobContentType: string, content: Content, options: function, callback: ServiceCallback<JobId>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: contentId
+      type:
+      - string
+      description: ''
+    - id: workflowName
+      type:
+      - string
+      description: ''
+    - id: jobContentType
+      type:
+      - string
+      description: ''
+    - id: content
+      type:
+      - azure-cognitiveservices-contentmoderator.Content
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.JobId>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.JobId>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createJobWithHttpOperationResponse
+  name: createJobWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    ジョブをこのエンドポイントに投稿されたコンテンツの Id が返されます。
+
+    コンテンツが評価されると、ワークフロー、レビューを作成または無視が提供される式に基づくワークフロー。
+
+
+    <h3>コールバックのスキーマ </h3>
+
+
+    <p>
+
+    <h4>ジョブの完了コールバックのサンプル</h4><br/>
+
+
+    {<br/>
+
+    "JobId":"<Job Id>、<br/>
+
+    "ReviewId":"< レビュー Id、ジョブの結果をレビューを作成する場合 >",<br/>
+
+    "WorkFlowId":「既定」<br/>
+
+    "Status":「< これは、完了、処理中、エラーのいずれかの >」<br/>
+
+    "ContentType":「イメージ」<br/>
+
+    "ContentId":"<This is the ContentId that was specified on input>"、<br/>
+
+    "CallBackType":「ジョブ」<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>
+
+    <p>
+
+    <h4>レビュー完了コールバックのサンプル</h4><br/>
+
+
+    {"ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"、"a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createJobWithHttpOperationResponse(teamName: string, contentType: string, contentId: string, workflowName: string, jobContentType: string, content: Content, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: contentType
+      type:
+      - string
+      description: >
+        Image、Text、またはビデオ。 使用可能な値が含まれます: 'イメージ'、'Text'、'ビデオ'
+    - id: contentId
+      type:
+      - string
+      description: >
+        送信されたコンテンツを識別する id/名前。
+    - id: workflowName
+      type:
+      - string
+      description: >
+        起動するワークフローの名前。
+    - id: jobContentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。 使用可能な値が含まれます: 'application/json' に ' イメージ/jpeg '
+    - id: content
+      type:
+      - azure-cognitiveservices-contentmoderator.Content
+      description: >
+        評価するコンテンツ。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.JobId>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createReviews
+  name: createReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options?: function)'
+    parameters:
+    - id: urlContentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: createReviewBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+      description: >
+        作成レビュー API の本文
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createReviews_1
+  name: createReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], callback: ServiceCallback<string[]>)'
+    parameters:
+    - id: urlContentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: createReviewBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<string[]>
+      description: ''
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createReviews_2
+  name: createReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options: function, callback: ServiceCallback<string[]>)'
+    parameters:
+    - id: urlContentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: createReviewBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<string[]>
+      description: ''
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createReviewsWithHttpOperationResponse
+  name: createReviewsWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createReviewsWithHttpOperationResponse(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options?: function)'
+    parameters:
+    - id: urlContentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: createReviewBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+      description: >
+        作成レビュー API の本文
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<string[]>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews_1
+  name: createVideoReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], callback: ServiceCallback<string[]>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: createVideoReviewsBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<string[]>
+      description: ''
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews_2
+  name: createVideoReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options: function, callback: ServiceCallback<string[]>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: createVideoReviewsBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<string[]>
+      description: ''
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews
+  name: createVideoReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: createVideoReviewsBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+      description: >
+        作成レビュー API の本文
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createVideoReviewsWithHttpOperationResponse
+  name: createVideoReviewsWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createVideoReviewsWithHttpOperationResponse(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        コンテンツの種類。
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: createVideoReviewsBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+      description: >
+        作成レビュー API の本文
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<string[]>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getJobDetails
+  name: getJobDetails
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ジョブ id のジョブの詳細を取得します。
+  syntax:
+    content: 'function getJobDetails(teamName: string, jobId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: jobId
+      type:
+      - string
+      description: >
+        ジョブの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Job>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getJobDetails_1
+  name: getJobDetails
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ジョブ id のジョブの詳細を取得します。
+  syntax:
+    content: 'function getJobDetails(teamName: string, jobId: string, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Job>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getJobDetails_2
+  name: getJobDetails
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ジョブ id のジョブの詳細を取得します。
+  syntax:
+    content: 'function getJobDetails(teamName: string, jobId: string, options: function, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Job>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getJobDetailsWithHttpOperationResponse
+  name: getJobDetailsWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ジョブ id のジョブの詳細を取得します。
+  syntax:
+    content: 'function getJobDetailsWithHttpOperationResponse(teamName: string, jobId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: jobId
+      type:
+      - string
+      description: >
+        ジョブの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Job>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getReview
+  name: getReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返しますでは、渡された Id 確認のための詳細を確認します。
+  syntax:
+    content: 'function getReview(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Review>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getReview_1
+  name: getReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返しますでは、渡された Id 確認のための詳細を確認します。
+  syntax:
+    content: 'function getReview(teamName: string, reviewId: string, callback: ServiceCallback<Review>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Review>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Review>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getReview_2
+  name: getReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返しますでは、渡された Id 確認のための詳細を確認します。
+  syntax:
+    content: 'function getReview(teamName: string, reviewId: string, options: function, callback: ServiceCallback<Review>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Review>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Review>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getReviewWithHttpOperationResponse
+  name: getReviewWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返しますでは、渡された Id 確認のための詳細を確認します。
+  syntax:
+    content: 'function getReviewWithHttpOperationResponse(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Review>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames
+  name: getVideoFrames
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function getVideoFrames(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Frames>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames_1
+  name: getVideoFrames
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function getVideoFrames(teamName: string, reviewId: string, callback: ServiceCallback<Frames>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Frames>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Frames>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames_2
+  name: getVideoFrames
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function getVideoFrames(teamName: string, reviewId: string, options: function, callback: ServiceCallback<Frames>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Frames>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Frames>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getVideoFramesWithHttpOperationResponse
+  name: getVideoFramesWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    レビューの作成は、チームのレビュー担当者の表示。 レビュー担当者は、レビューを完了すると、レビューの結果が通知されます (つまり、HTTP POST) 指定 CallBackEndpoint でします。
+
+    <h3>コールバックのスキーマ </h3>
+
+    <h4>レビュー完了コールバックのサンプル</h4>
+
+    <p>
+
+    {<br/>
+
+    "ReviewId":"<Review Id>"、<br/>
+
+    "ModifiedOn":"2016-10-11T22:36:32.9934851Z"、<br/>
+
+    "ModifiedBy":"<Name of the Reviewer>"、<br/>
+
+    "CallBackType":"Review"<br/>
+
+    "ContentId":"<The ContentId that was specified input>"、<br/>
+
+    「メタデータ」: {<br/>
+
+    "adultscore":"0.xxx"<br/>
+
+    "a":"False"<br/>
+
+    「または」:"0.xxx"<br/>
+
+    "r":"True"<br/>
+
+    },<br/>
+
+    "ReviewerResultTags": {<br/>
+
+    "a":"False"<br/>
+
+    "r":"True"<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function getVideoFramesWithHttpOperationResponse(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Frames>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview
+  name: publishVideoReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 確認のために使用できるようにするビデオのレビューを発行します。
+  syntax:
+    content: 'function publishVideoReview(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview_1
+  name: publishVideoReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 確認のために使用できるようにするビデオのレビューを発行します。
+  syntax:
+    content: 'function publishVideoReview(teamName: string, reviewId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview_2
+  name: publishVideoReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 確認のために使用できるようにするビデオのレビューを発行します。
+  syntax:
+    content: 'function publishVideoReview(teamName: string, reviewId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.publishVideoReviewWithHttpOperationResponse
+  name: publishVideoReviewWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 確認のために使用できるようにするビデオのレビューを発行します。
+  syntax:
+    content: 'function publishVideoReviewWithHttpOperationResponse(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        チーム名。
+    - id: reviewId
+      type:
+      - string
+      description: >
+        レビューの id。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+references:
+- uid: azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+  spec.typeScript:
+  - name: VideoFrameBodyItem
+    fullName: VideoFrameBodyItem
+    uid: azure-cognitiveservices-contentmoderator.VideoFrameBodyItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+  spec.typeScript:
+  - name: TranscriptModerationBodyItem
+    fullName: TranscriptModerationBodyItem
+    uid: azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-cognitiveservices-contentmoderator.Content
+  spec.typeScript:
+  - name: Content
+    fullName: Content
+    uid: azure-cognitiveservices-contentmoderator.Content
+- uid: Promise<azure-cognitiveservices-contentmoderator.JobId>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: JobId
+    fullName: JobId
+    uid: azure-cognitiveservices-contentmoderator.JobId
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-contentmoderator.JobId>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: JobId
+    fullName: JobId
+    uid: azure-cognitiveservices-contentmoderator.JobId
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.JobId>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: JobId
+    fullName: JobId
+    uid: azure-cognitiveservices-contentmoderator.JobId
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+  spec.typeScript:
+  - name: CreateReviewBodyItem
+    fullName: CreateReviewBodyItem
+    uid: azure-cognitiveservices-contentmoderator.CreateReviewBodyItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+  spec.typeScript:
+  - name: CreateVideoReviewsBodyItem
+    fullName: CreateVideoReviewsBodyItem
+    uid: azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem
+  - name: '[]'
+    fullName: '[]'
+- uid: Promise<azure-cognitiveservices-contentmoderator.Job>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Job
+    fullName: Job
+    uid: azure-cognitiveservices-contentmoderator.Job
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-contentmoderator.Job>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Job
+    fullName: Job
+    uid: azure-cognitiveservices-contentmoderator.Job
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Job>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Job
+    fullName: Job
+    uid: azure-cognitiveservices-contentmoderator.Job
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-cognitiveservices-contentmoderator.Review>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Review
+    fullName: Review
+    uid: azure-cognitiveservices-contentmoderator.Review
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-contentmoderator.Review>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Review
+    fullName: Review
+    uid: azure-cognitiveservices-contentmoderator.Review
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Review>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Review
+    fullName: Review
+    uid: azure-cognitiveservices-contentmoderator.Review
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-cognitiveservices-contentmoderator.Frames>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Frames
+    fullName: Frames
+    uid: azure-cognitiveservices-contentmoderator.Frames
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-contentmoderator.Frames>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Frames
+    fullName: Frames
+    uid: azure-cognitiveservices-contentmoderator.Frames
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Frames>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Frames
+    fullName: Frames
+    uid: azure-cognitiveservices-contentmoderator.Frames
+  - name: '>>'
+    fullName: '>>'
