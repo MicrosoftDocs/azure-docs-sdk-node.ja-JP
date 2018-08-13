@@ -1,0 +1,283 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 835bcd8155995b68ec858110637230050a0cdec2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064194"
+items:
+- uid: azure-asm-sql.DacOperations~DacOperations
+  id: azure-asm-sql.DacOperations~DacOperations
+  name: DacOperations
+  summary: >-
+    インポートとに、および Azure blob storage から Azure SQL Database をエクスポートするための操作が含まれています。
+
+    __注__: [SqlManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link SqlManagementClient ~ SqlManagementClient}。
+
+    [Dac] を参照してください。<xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23dac>します。
+
+    DacOperations クラスの新しいインスタンスを初期化します。
+  fullName: azure-asm-sql.DacOperations
+  type: Class
+  children:
+  - azure-asm-sql.DacOperations~DacOperations.#ctor
+  - azure-asm-sql.DacOperations~DacOperations#exportMethod
+  - azure-asm-sql.DacOperations~DacOperations#getStatus
+  - azure-asm-sql.DacOperations~DacOperations#getStatusPost
+  - azure-asm-sql.DacOperations~DacOperations#importMethod
+  langs:
+  - js
+- id: azure-asm-sql.DacOperations~DacOperations.#ctor
+  uid: azure-asm-sql.DacOperations~DacOperations.#ctor
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: DacOperations(client)
+  fullName: azure-asm-sql.DacOperations.DacOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: サービス クライアントへの参照。
+    content: new DacOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#exportMethod
+  id: azure-asm-sql.DacOperations~DacOperations#exportMethod
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: exportMethod(serverName, parametersOrCallback, callback)
+  summary: Azure Blob Storage 内の DACPAC ファイルには、Azure SQL Database をエクスポートします。
+  fullName: azure-asm-sql.DacOperations~DacOperations.exportMethod(serverName, parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: エクスポートするデータベースが存在する Azure SQL Database サーバーの名前。
+    - id: parametersOrCallback
+      type:
+      - azure-asm-sql.DacExportParameters
+      description: エクスポート要求を開始するために必要なパラメーターです。
+      optional: true
+    - id: parametersOrCallback.blobCredentials
+      type:
+      - azure-asm-sql.BlobCredentialsParameter
+      description: 取得または DACPAC ファイルのエクスポート先に Azure Blob Storage 内の設定に必要な資格情報を設定します。
+      optional: true
+    - id: parametersOrCallback.blobCredentials.uri
+      type:
+      - string
+      description: 取得または Azure Blob Storage 内の DACPAC ファイルの保存の URI を設定します。
+      optional: true
+    - id: parametersOrCallback.blobCredentials.storageAccessKey
+      type:
+      - string
+      description: 取得または Azure Storage アカウントのアクセス キーを設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo
+      type:
+      - azure-asm-sql.ConnectionInfoParameter
+      description: 取得または Azure SQL Database に必要な接続情報を設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo.databaseName
+      type:
+      - string
+      description: 取得またはエクスポートするデータベースの名前を設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo.password
+      type:
+      - string
+      description: 取得またはデータベース管理者のユーザーのパスワードを設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo.serverName
+      type:
+      - string
+      description: 取得または Azure SQL Database サーバー名、データベースが存在する場所を設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo.userName
+      type:
+      - string
+      description: 取得またはデータベース管理者のユーザーのユーザー名を設定します。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function exportMethod(serverName, parametersOrCallback, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#getStatus
+  id: azure-asm-sql.DacOperations~DacOperations#getStatus
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: getStatus(serverName, fullyQualifiedServerName, username, password, requestId, callback)
+  summary: 対応する要求 ID を持つ、指定したサーバーでインポートまたはエクスポート操作の状態を取得します。  要求 ID は、インポートまたはエクスポート操作の応答で提供されます。
+  fullName: azure-asm-sql.DacOperations~DacOperations.getStatus(serverName, fullyQualifiedServerName, username, password, requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: インポートまたはエクスポート操作が行われるサーバーの名前。
+    - id: fullyQualifiedServerName
+      type:
+      - string
+      description: >-
+        Azure SQL Database サーバーが、動作の実行場所の完全修飾ドメイン名。
+
+        例: a9s7f7s9d3.database.windows.net
+    - id: username
+      type:
+      - string
+      description: Azure SQL Database のサーバー管理者のユーザー名。
+    - id: password
+      type:
+      - string
+      description: Azure SQL Database サーバーの管理者パスワード。
+    - id: requestId
+      type:
+      - string
+      description: >-
+        クエリ対象の操作の要求 ID。
+
+        要求 ID は、インポートおよびエクスポート操作の応答から取得されます。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function getStatus(serverName, fullyQualifiedServerName, username, password, requestId, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#getStatusPost
+  id: azure-asm-sql.DacOperations~DacOperations#getStatusPost
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: getStatusPost(serverName, parameters, callback)
+  summary: 対応する要求 ID を持つ、指定したサーバーでインポートまたはエクスポート操作の状態を取得します。  要求 ID は、インポートまたはエクスポート操作の応答で提供されます。
+  fullName: azure-asm-sql.DacOperations~DacOperations.getStatusPost(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: インポートまたはエクスポート操作が行われるサーバーの名前。
+    - id: parameters
+      type:
+      - azure-asm-sql.DacGetStatusParameters
+      description: インポートの状態を取得またはエクスポート操作に必要なパラメーター。
+    - id: parameters.serverName
+      type:
+      - string
+      description: 取得またはインポートまたはエクスポート操作が発生している Azure SQL Database サーバーの完全修飾名を設定します。
+    - id: parameters.userName
+      type:
+      - string
+      description: 取得またはインポートまたはエクスポート操作が発生している Azure SQL Database サーバーのユーザー名を設定します。
+    - id: parameters.password
+      type:
+      - string
+      description: 取得またはインポートまたはエクスポート操作が発生している Azure SQL Database サーバーのパスワードを設定します。
+    - id: parameters.requestId
+      type:
+      - string
+      description: 取得または状態を照会する対象のインポートまたはエクスポート操作の Id を設定します。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function getStatusPost(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#importMethod
+  id: azure-asm-sql.DacOperations~DacOperations#importMethod
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: importMethod(serverName, parametersOrCallback, callback)
+  summary: Azure SQL データベースに、Azure Blob Storage からの DACPAC ファイルのインポートを開始します。
+  fullName: azure-asm-sql.DacOperations~DacOperations.importMethod(serverName, parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: データベースのインポート先の Azure SQL Database サーバーの名前。
+    - id: parametersOrCallback
+      type:
+      - azure-asm-sql.DacImportParameters
+      description: インポート要求を開始するために必要なパラメーターです。
+      optional: true
+    - id: parametersOrCallback.azureEdition
+      type:
+      - string
+      description: 取得または設定のインポート時に作成されるデータベースのエディション。
+      optional: true
+    - id: parametersOrCallback.blobCredentials
+      type:
+      - azure-asm-sql.BlobCredentialsParameter
+      description: 取得または Azure Blob Storage から DACPAC を取得するための資格情報を設定します。
+      optional: true
+    - id: parametersOrCallback.blobCredentials.uri
+      type:
+      - string
+      description: 取得またはインポートする Azure Blob Storage に格納されている DACPAC ファイルの URI を設定します。
+      optional: true
+    - id: parametersOrCallback.blobCredentials.storageAccessKey
+      type:
+      - string
+      description: 取得または DACPAC ファイルが格納されている Azure Blob Storage アカウントのアクセス キーを設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo
+      type:
+      - azure-asm-sql.ConnectionInfoParameter
+      description: 取得または SQL Azure に接続し、データベースを作成するためにインポートするために必要な接続情報を設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo.databaseName
+      type:
+      - string
+      description: 取得または DACPAC ファイルのインポート先のデータベースの名前を設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo.password
+      type:
+      - string
+      description: 取得またはサーバー管理者のパスワードを設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo.serverName
+      type:
+      - string
+      description: 取得またはインポートされたデータベースを作成する Azure SQL Database サーバー名を設定します。
+      optional: true
+    - id: parametersOrCallback.connectionInfo.userName
+      type:
+      - string
+      description: 取得またはサーバーの管理のユーザー名を設定します。
+      optional: true
+    - id: parametersOrCallback.databaseSizeInGB
+      type:
+      - number
+      description: 取得またはインポート時に作成されるデータベースのサイズを設定します。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function importMethod(serverName, parametersOrCallback, callback)
+  langs:
+  - js

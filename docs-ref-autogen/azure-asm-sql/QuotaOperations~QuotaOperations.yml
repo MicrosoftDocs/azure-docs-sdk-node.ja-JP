@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e2c2a2dff10d9f4982076baa53a89601bba97741
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064146"
+items:
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations
+  id: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: QuotaOperations
+  summary: >-
+    Azure SQL Database Management API には、Azure SQL Database サーバーのクォータを取得するための操作が含まれます。 具体的には、Api を使用して取得できます固有のクォータまたはリストをすべてのクォータ Azure SQL Database のサーバー。
+
+    __注__: [SqlManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link SqlManagementClient ~ SqlManagementClient}。
+
+    [クォータ] を参照してください。<xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23quotas>します。
+
+    QuotaOperations クラスの新しいインスタンスを初期化します。
+  fullName: azure-asm-sql.QuotaOperations
+  type: Class
+  children:
+  - azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  - azure-asm-sql.QuotaOperations~QuotaOperations#get
+  - azure-asm-sql.QuotaOperations~QuotaOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  uid: azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: QuotaOperations(client)
+  fullName: azure-asm-sql.QuotaOperations.QuotaOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: サービス クライアントへの参照。
+    content: new QuotaOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations#get
+  id: azure-asm-sql.QuotaOperations~QuotaOperations#get
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: get(serverName, quotaName, callback)
+  summary: サーバーから指定したクォータを取得します。
+  fullName: azure-asm-sql.QuotaOperations~QuotaOperations.get(serverName, quotaName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: クォータの取得元となる Azure SQL Database サーバーの名前。
+    - id: quotaName
+      type:
+      - string
+      description: 取得するクォータの名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function get(serverName, quotaName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations#list
+  id: azure-asm-sql.QuotaOperations~QuotaOperations#list
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: list(serverName, callback)
+  summary: サーバーからのクォータの一覧を返します。
+  fullName: azure-asm-sql.QuotaOperations~QuotaOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: クォータの取得元となる Azure SQL Database サーバーの名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function list(serverName, callback)
+  langs:
+  - js

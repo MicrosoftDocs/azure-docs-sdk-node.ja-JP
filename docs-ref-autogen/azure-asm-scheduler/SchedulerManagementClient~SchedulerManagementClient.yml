@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3328f766984be0a15424004f1eada8a5cfeac32b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064159"
+items:
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: SchedulerManagementClient
+  summary: SchedulerManagementClient クラスの新しいインスタンスを初期化します。
+  fullName: azure-asm-scheduler.SchedulerManagementClient
+  type: Class
+  children:
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.#ctor
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#jobCollections
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getOperationStatus
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getResourceProviderProperties
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#registerResourceProvider
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#unregisterResourceProvider
+  langs:
+  - js
+- id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.#ctor
+  uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.#ctor
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: SchedulerManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-scheduler.SchedulerManagementClient.SchedulerManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: Microsoft Azure サブスクリプションを一意に識別するサブスクリプションの資格情報を取得します。 サブスクリプション ID は、すべてのサービス呼び出しの URI の一部を形成します。
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: すべてのクラウド サービスの要求のベースとして使用する URI を取得します。
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new SchedulerManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#jobCollections
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#jobCollections
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: jobCollections
+  summary: インスタンスを提供、 [JobCollectionOperations](-JobCollectionOperations.html)オブジェクト。
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.jobCollections
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: jobCollections
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getOperationStatus
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getOperationStatus
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: Get Operation Status 操作は、指定された操作の状態を返します。 非同期操作を呼び出した後は、失敗した操作が成功したかどうかを判断する Get Operation Status を呼び出すことができます。 または進行中です。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx詳細)
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: 要求の要求の ID を追跡します。要求 ID は、すべての要求に対して x ms 要求 id の応答ヘッダーで返されます。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 応答ストリーム。
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getResourceProviderProperties
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getResourceProviderProperties
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: getResourceProviderProperties(callback)
+  summary: などのリソース プロバイダーのプロパティがサポートされているリージョンとプランの一覧を取得します。
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.getResourceProviderProperties(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 応答ストリーム。
+    content: function getResourceProviderProperties(callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#registerResourceProvider
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#registerResourceProvider
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: registerResourceProvider(callback)
+  summary: サブスクリプションには、スケジューラ リソース プロバイダーを登録します。
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.registerResourceProvider(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 応答ストリーム。
+    content: function registerResourceProvider(callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#unregisterResourceProvider
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#unregisterResourceProvider
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: unregisterResourceProvider(callback)
+  summary: サブスクリプションを使用してスケジューラ リソース プロバイダーの登録を解除します。
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.unregisterResourceProvider(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 応答ストリーム。
+    content: function unregisterResourceProvider(callback)
+  langs:
+  - js

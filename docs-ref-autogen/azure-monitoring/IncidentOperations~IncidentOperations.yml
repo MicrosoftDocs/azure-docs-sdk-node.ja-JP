@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ebb7d1516cf3cb499347a00a6c6df67fde478c3a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064351"
+items:
+- uid: azure-monitoring.IncidentOperations~IncidentOperations
+  id: azure-monitoring.IncidentOperations~IncidentOperations
+  name: IncidentOperations
+  summary: >-
+    アラートのインシデントを管理するための操作。
+
+    __注__: [AlertsClient] のインスタンスをこのクラスのインスタンスが自動的に作成<xref:azure-monitoring.AlertsClient~AlertsClient>です。
+
+    [インシデント] を参照してください。<xref:azure-monitoring.AlertsClient~AlertsClient%23incidents>します。
+
+    IncidentOperations クラスの新しいインスタンスを初期化します。
+  fullName: azure-monitoring.IncidentOperations
+  type: Class
+  children:
+  - azure-monitoring.IncidentOperations~IncidentOperations.#ctor
+  - azure-monitoring.IncidentOperations~IncidentOperations#get
+  - azure-monitoring.IncidentOperations~IncidentOperations#listActiveForSubscription
+  - azure-monitoring.IncidentOperations~IncidentOperations#listForRule
+  langs:
+  - js
+- id: azure-monitoring.IncidentOperations~IncidentOperations.#ctor
+  uid: azure-monitoring.IncidentOperations~IncidentOperations.#ctor
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: IncidentOperations(client)
+  fullName: azure-monitoring.IncidentOperations.IncidentOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedAlertsClient
+      description: サービス クライアントへの参照。
+    content: new IncidentOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.IncidentOperations~IncidentOperations#get
+  id: azure-monitoring.IncidentOperations~IncidentOperations#get
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: get(incidentId, callback)
+  summary: ''
+  fullName: azure-monitoring.IncidentOperations~IncidentOperations.get(incidentId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: incidentId
+      type:
+      - string
+      description: 取得するインシデントの id。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 応答ストリーム。
+    content: function get(incidentId, callback)
+  langs:
+  - js
+- uid: azure-monitoring.IncidentOperations~IncidentOperations#listActiveForSubscription
+  id: azure-monitoring.IncidentOperations~IncidentOperations#listActiveForSubscription
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: listActiveForSubscription(callback)
+  summary: ''
+  fullName: azure-monitoring.IncidentOperations~IncidentOperations.listActiveForSubscription(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 応答ストリーム。
+    content: function listActiveForSubscription(callback)
+  langs:
+  - js
+- uid: azure-monitoring.IncidentOperations~IncidentOperations#listForRule
+  id: azure-monitoring.IncidentOperations~IncidentOperations#listForRule
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: listForRule(ruleId, isActive, callback)
+  summary: ''
+  fullName: azure-monitoring.IncidentOperations~IncidentOperations.listForRule(ruleId, isActive, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ruleId
+      type:
+      - string
+      description: ルール id。
+    - id: isActive
+      type:
+      - boolean
+      description: のみアクティブまたは解決済みインシデントを取得するブール値。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 応答ストリーム。
+    content: function listForRule(ruleId, isActive, callback)
+  langs:
+  - js

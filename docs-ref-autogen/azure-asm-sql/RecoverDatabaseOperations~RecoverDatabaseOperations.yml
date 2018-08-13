@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 22970fa66e05e7a1cf9212b905a6b01f85e9f393
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064135"
+items:
+- uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: RecoverDatabaseOperations
+  summary: >-
+    Azure SQL データベースの回復要求を作成する操作が含まれています。
+
+    __注__: [SqlManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link SqlManagementClient ~ SqlManagementClient}。
+
+    [RecoverDatabaseOperations] を参照してください。 {@link SqlManagementClient ~ SqlManagementClient #recoverDatabaseOperations}。
+
+    RecoverDatabaseOperations クラスの新しいインスタンスを初期化します。
+  fullName: azure-asm-sql.RecoverDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  - azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  langs:
+  - js
+- id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  parent: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: RecoverDatabaseOperations(client)
+  fullName: azure-asm-sql.RecoverDatabaseOperations.RecoverDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: サービス クライアントへの参照。
+    content: new RecoverDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  parent: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: create(sourceServerName, parameters, callback)
+  summary: Azure SQL Database の復旧要求を発行します。
+  fullName: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.create(sourceServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sourceServerName
+      type:
+      - string
+      description: データベースがホストされている Azure SQL Database サーバーの名前。
+    - id: parameters
+      type:
+      - azure-asm-sql.RecoverDatabaseOperationCreateParameters
+      description: 回復データベース操作の作成要求のパラメーターを追加します。
+    - id: parameters.sourceDatabaseName
+      type:
+      - string
+      description: 取得またはソース Azure SQL Database の名前を設定します。
+    - id: parameters.targetServerName
+      type:
+      - string
+      description: 取得またはターゲットの Azure SQL Database サーバーの名前を設定します。
+      optional: true
+    - id: parameters.targetDatabaseName
+      type:
+      - string
+      description: 取得またはターゲットの Azure SQL Database の名前を設定します。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function create(sourceServerName, parameters, callback)
+  langs:
+  - js

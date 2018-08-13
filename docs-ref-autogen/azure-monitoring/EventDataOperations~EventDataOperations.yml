@@ -1,0 +1,325 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 15806f9b6bce4e4a7f5767f4db990555ca44ceb3
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064380"
+items:
+- uid: azure-monitoring.EventDataOperations~EventDataOperations
+  id: azure-monitoring.EventDataOperations~EventDataOperations
+  name: EventDataOperations
+  summary: >-
+    イベント データを操作します。
+
+    __注__: [EventsClient] のインスタンスをこのクラスのインスタンスが自動的に作成<xref:azure-monitoring.EventsClient~EventsClient>です。
+
+    [EventData] を参照してください。<xref:azure-monitoring.EventsClient~EventsClient%23eventData>します。
+
+    EventDataOperations クラスの新しいインスタンスを初期化します。
+  fullName: azure-monitoring.EventDataOperations
+  type: Class
+  children:
+  - azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  langs:
+  - js
+- id: azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  uid: azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: EventDataOperations(client)
+  fullName: azure-monitoring.EventDataOperations.EventDataOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedEventsClient
+      description: サービス クライアントへの参照。
+    content: new EventDataOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEvents(parameters, callback)
+  summary: イベント値の一覧操作では、イベントが一覧表示します。
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEvents(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsParameters
+      description: ''
+    - id: parameters.startTime
+      type:
+      - date
+      description: イベントの開始時刻。
+    - id: parameters.endTime
+      type:
+      - date
+      description: イベントの終了時刻。
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: イベント チャネル。
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: '[次へ] のリンク トークンです。'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 応答ストリーム。
+    content: function listEvents(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForCorrelationId(parameters, callback)
+  summary: イベント値の一覧操作では、イベントが一覧表示します。
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForCorrelationId(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForCorrelationIdParameters
+      description: ''
+    - id: parameters.correlationId
+      type:
+      - string
+      description: イベントの相関関係 id。
+    - id: parameters.startTime
+      type:
+      - date
+      description: イベントの開始時刻。
+    - id: parameters.endTime
+      type:
+      - date
+      description: イベントの終了時刻。
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: イベント チャネル。
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: '[次へ] のリンク トークンです。'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 応答ストリーム。
+    content: function listEventsForCorrelationId(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForEventSource(parameters, callback)
+  summary: イベント値の一覧操作では、イベントが一覧表示します。
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForEventSource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForEventSourceParameters
+      description: ''
+    - id: parameters.eventSource
+      type:
+      - string
+      description: イベント ソース。
+    - id: parameters.startTime
+      type:
+      - date
+      description: イベントの開始時刻。
+    - id: parameters.endTime
+      type:
+      - date
+      description: イベントの終了時刻。
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: イベント チャネル。
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: '[次へ] のリンク トークンです。'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 応答ストリーム。
+    content: function listEventsForEventSource(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResource(parameters, callback)
+  summary: イベント値の一覧操作では、イベントが一覧表示します。
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceParameters
+      description: ''
+    - id: parameters.resourceUri
+      type:
+      - string
+      description: リソースの id。
+    - id: parameters.startTime
+      type:
+      - date
+      description: イベントの開始時刻。
+    - id: parameters.endTime
+      type:
+      - date
+      description: イベントの終了時刻。
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: イベント チャネル。
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: '[次へ] のリンク トークンです。'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 応答ストリーム。
+    content: function listEventsForResource(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResourceGroup(parameters, callback)
+  summary: イベント値の一覧操作では、イベントが一覧表示します。
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResourceGroup(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceGroupParameters
+      description: ''
+    - id: parameters.resourceGroupName
+      type:
+      - string
+      description: リソース グループ名。
+    - id: parameters.startTime
+      type:
+      - date
+      description: イベントの開始時刻。
+    - id: parameters.endTime
+      type:
+      - date
+      description: イベントの終了時刻。
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: イベント チャネル。
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: '[次へ] のリンク トークンです。'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 応答ストリーム。
+    content: function listEventsForResourceGroup(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResourceProvider(parameters, callback)
+  summary: イベント値の一覧操作では、イベントが一覧表示します。
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResourceProvider(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceProviderParameters
+      description: ''
+    - id: parameters.resourceProvider
+      type:
+      - string
+      description: リソース プロバイダーです。
+    - id: parameters.startTime
+      type:
+      - date
+      description: イベントの開始時刻。
+    - id: parameters.endTime
+      type:
+      - date
+      description: イベントの終了時刻。
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: イベント チャネル。
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: '[次へ] のリンク トークンです。'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 応答ストリーム。
+    content: function listEventsForResourceProvider(parameters, callback)
+  langs:
+  - js

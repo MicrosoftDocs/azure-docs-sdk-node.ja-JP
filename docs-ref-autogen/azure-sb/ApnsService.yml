@@ -1,0 +1,442 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 94474b9236dc6e17df2e02d3d799841deb9f8621
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064387"
+items:
+- uid: azure-sb.ApnsService
+  id: azure-sb.ApnsService
+  name: ApnsService
+  summary: >-
+    ApnsService クラスは、Apple Push Notification Service (APNS) を使用して通知の送信に使用されます。
+
+    このサービスは、iOS デバイスとの通信に使用されます。
+  fullName: azure-sb.ApnsService
+  type: Class
+  children:
+  - azure-sb.ApnsService.#ctor
+  - azure-sb.ApnsService#send
+  - azure-sb.ApnsService#createNativeRegistration
+  - azure-sb.ApnsService#createOrUpdateNativeRegistration
+  - azure-sb.ApnsService#createTemplateRegistration
+  - azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  - azure-sb.ApnsService#updateTemplateRegistration
+  - azure-sb.ApnsService#listRegistrationsByToken
+  langs:
+  - js
+- id: azure-sb.ApnsService.#ctor
+  uid: azure-sb.ApnsService.#ctor
+  parent: azure-sb.ApnsService
+  name: ApnsService(notificationHubService)
+  fullName: azure-sb.ApnsService.ApnsService(notificationHubService)
+  summary: >-
+    指定したを使用して新しい ApnsService オブジェクトを作成します<xref:azure-sb.NotificationHubService>オブジェクト。
+
+
+
+    __注__: このオブジェクトのインスタンスと自動的に作成されます、<xref:azure-sb.NotificationHubService>オブジェクトが作成されます。 <xref:azure-sb.NotificationHubService%23apns> をご覧ください。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: Notification hubs サービス。
+    content: new ApnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#send
+  id: azure-sb.ApnsService#send
+  parent: azure-sb.ApnsService
+  name: send(tags, payload, optionsOrCallback, callback)
+  summary: APNS 通知を送信します。
+  fullName: azure-sb.ApnsService.send(tags, payload, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: >-
+        1 つのタグまたはタグ式。
+
+        Null の場合は、このハブのすべての登録にブロードキャストには
+    - id: payload
+      type:
+      - object
+      - string
+      description: >-
+        メッセージの JSON ペイロードとして指定された以下。
+
+        ペイロードが文字列の場合は、次のように APNS 形式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: payload.expiry
+      type:
+      - date
+      description: '有効期限の日付。 (W3C DTF で-MM-DDThh:mmTZD (例: 1997-07-16T19:20 + 1時 00分))'
+      optional: true
+    - id: payload.aps
+      type:
+      - object
+      description: オブジェクトとして APNS に配信されます 'aps' メンバーが指定されている場合、有効期限が処理された後は、します。 オブジェクトは、APNS 形式であると見なされます https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: payload.badge
+      type:
+      - number
+      description: "'Aps' メンバーが指定されていない場合、アプリ アイコンの上に表示する数値。"
+      optional: true
+    - id: payload.alert
+      type:
+      - string
+      description: "'Aps' メンバーが指定されていない場合、アラートのテキスト。"
+      optional: true
+    - id: payload.sound
+      type:
+      - string
+      description: "'Aps' メンバーが指定されていない場合、サウンド ファイル名を使用します。"
+      optional: true
+    - id: payload.payload
+      type:
+      - object
+      description: "'Aps' メンバーが指定されていない場合、通知のテキストを含むペイロード オブジェクト。"
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: 要求オプションまたはコールバック関数。
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Apns のヘッダー。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function send(tags, payload, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createNativeRegistration
+  id: azure-sb.ApnsService#createNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createNativeRegistration(token, tags, options, callback)
+  summary: ネイティブの登録を作成します。
+  fullName: azure-sb.ApnsService.createNativeRegistration(token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: デバイス トークンです。
+    - id: tags
+      type:
+      - string
+      - array
+      description: タグ (コンマ区切りのリスト、スペースなし)。
+    - id: options
+      type:
+      - object
+      description: 要求オプション
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function createNativeRegistration(token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  id: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  summary: 作成またはネイティブの登録を更新します。
+  fullName: azure-sb.ApnsService.createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 登録の識別子です。
+    - id: token
+      type:
+      - string
+      description: デバイス トークンです。
+    - id: tags
+      type:
+      - string
+      - array
+      description: タグ (コンマ区切りのリスト、スペースなし)。
+    - id: options
+      type:
+      - object
+      description: 要求オプション
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createTemplateRegistration
+  id: azure-sb.ApnsService#createTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  summary: テンプレート登録を作成します。
+  fullName: azure-sb.ApnsService.createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: デバイス トークンです。
+    - id: tags
+      type:
+      - string
+      - array
+      description: タグ。
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        メッセージの JSON ペイロードとして指定された以下。
+
+        ペイロードが文字列の場合は、次のように APNS 形式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: template.expiry
+      type:
+      - date
+      description: 有効期限の日付。
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: 登録として NotifcationHub に配信されます 'aps' メンバーが指定されている場合、有効期限が処理された後は、します。 オブジェクトは、APNS 形式であると見なされます https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: "'Aps' メンバーが指定されていない場合、アプリ アイコンの上に表示する数値。"
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: "'Aps' メンバーが指定されていない場合、アラートのテキスト。"
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: "'Aps' メンバーが指定されていない場合、サウンド ファイル名を使用します。"
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: "'Aps' メンバーが指定されていない場合、通知のテキストを含むペイロード オブジェクト。"
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: 要求オプションまたはコールバック関数。
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: 含める apns ヘッダー。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  id: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  summary: 作成またはテンプレート登録を更新します。
+  fullName: azure-sb.ApnsService.createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 登録の識別子です。
+    - id: token
+      type:
+      - string
+      description: デバイス トークンです。
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        メッセージの JSON ペイロードとして指定された以下。
+
+        ペイロードが文字列の場合は、次のように APNS 形式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: template.expiry
+      type:
+      - date
+      description: 有効期限の日付。
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: 登録として NotifcationHub に配信されます 'aps' メンバーが指定されている場合、有効期限が処理された後は、します。 オブジェクトは、APNS 形式であると見なされます https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: "'Aps' メンバーが指定されていない場合、アプリ アイコンの上に表示する数値。"
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: "'Aps' メンバーが指定されていない場合、アラートのテキスト。"
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: "'Aps' メンバーが指定されていない場合、サウンド ファイル名を使用します。"
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: "'Aps' メンバーが指定されていない場合、通知のテキストを含むペイロード オブジェクト。"
+      optional: true
+    - id: options
+      type:
+      - object
+      description: 要求オプションです。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: 含める apns ヘッダー。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#updateTemplateRegistration
+  id: azure-sb.ApnsService#updateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  summary: テンプレート登録を更新します。
+  fullName: azure-sb.ApnsService.updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 登録の識別子です。
+    - id: token
+      type:
+      - string
+      description: デバイス トークンです。
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        メッセージの JSON ペイロードとして指定された以下。
+
+        ペイロードが文字列の場合は、次のように APNS 形式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: template.expiry
+      type:
+      - date
+      description: 有効期限の日付。
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: 登録として NotifcationHub に配信されます 'aps' メンバーが指定されている場合、有効期限が処理された後は、します。 オブジェクトは、APNS 形式であると見なされます https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: "'Aps' メンバーが指定されていない場合、アプリ アイコンの上に表示する数値。"
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: "'Aps' メンバーが指定されていない場合、アラートのテキスト。"
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: "'Aps' メンバーが指定されていない場合、サウンド ファイル名を使用します。"
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: "'Aps' メンバーが指定されていない場合、通知のテキストを含むペイロード オブジェクト。"
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: 要求オプションまたはコールバック関数。
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: 含める apns ヘッダー。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#listRegistrationsByToken
+  id: azure-sb.ApnsService#listRegistrationsByToken
+  parent: azure-sb.ApnsService
+  name: listRegistrationsByToken(token, options, callback)
+  summary: デバイス トークンにより登録を取得します。
+  fullName: azure-sb.ApnsService.listRegistrationsByToken(token, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: デバイス トークンです。
+    - id: options
+      type:
+      - object
+      description: 要求オプションです。 追加のプロパティは、ヘッダーとして渡されます。
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: 呼び出しから取得する登録の最大数を指定します。
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: 呼び出しでスキップする登録の数を指定します。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function listRegistrationsByToken(token, options, callback)
+  langs:
+  - js

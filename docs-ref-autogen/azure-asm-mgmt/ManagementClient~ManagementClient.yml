@@ -1,0 +1,148 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4be253aec431b8ac2fcbd32b5734be951e96255d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063828"
+items:
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient
+  id: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: ManagementClient
+  summary: サービス管理 API は、管理ポータルを利用できる機能の多くにプログラムによるアクセスを提供します。 サービス管理 API は、REST API です。 すべての API 操作は SSL 経由で実行され、X.509 v3 証明書を使用して相互に認証します。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx詳細については) ManagementClient クラスの新しいインスタンスを初期化します。
+  fullName: azure-asm-mgmt.ManagementClient
+  type: Class
+  children:
+  - azure-asm-mgmt.ManagementClient~ManagementClient.#ctor
+  - azure-asm-mgmt.ManagementClient~ManagementClient#affinityGroups
+  - azure-asm-mgmt.ManagementClient~ManagementClient#locations
+  - azure-asm-mgmt.ManagementClient~ManagementClient#managementCertificates
+  - azure-asm-mgmt.ManagementClient~ManagementClient#roleSizes
+  - azure-asm-mgmt.ManagementClient~ManagementClient#subscriptions
+  - azure-asm-mgmt.ManagementClient~ManagementClient#getOperationStatus
+  langs:
+  - js
+- id: azure-asm-mgmt.ManagementClient~ManagementClient.#ctor
+  uid: azure-asm-mgmt.ManagementClient~ManagementClient.#ctor
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: ManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-mgmt.ManagementClient.ManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: Microsoft Azure サブスクリプションを一意に識別するサブスクリプションの資格情報を取得します。 サブスクリプション ID は、すべてのサービス呼び出しの URI の一部を形成します。
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: すべてのクラウド サービスの要求のベースとして使用する URI を取得します。
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new ManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#affinityGroups
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#affinityGroups
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: affinityGroups
+  summary: インスタンスを提供、 [AffinityGroupOperations](-AffinityGroupOperations.html)オブジェクト。
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.affinityGroups
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: affinityGroups
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#locations
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#locations
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: locations
+  summary: インスタンスを提供、 [LocationOperations](-LocationOperations.html)オブジェクト。
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.locations
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: locations
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#managementCertificates
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#managementCertificates
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: managementCertificates
+  summary: インスタンスを提供、 [ManagementCertificateOperations](-ManagementCertificateOperations.html)オブジェクト。
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.managementCertificates
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: managementCertificates
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#roleSizes
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#roleSizes
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: roleSizes
+  summary: インスタンスを提供、 [RoleSizeOperations](-RoleSizeOperations.html)オブジェクト。
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.roleSizes
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: roleSizes
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#subscriptions
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#subscriptions
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: subscriptions
+  summary: インスタンスを提供、 [SubscriptionOperations](-SubscriptionOperations.html)オブジェクト。
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.subscriptions
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: subscriptions
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#getOperationStatus
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#getOperationStatus
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: Get Operation Status 操作は、指定された操作の状態を返します。 非同期操作を呼び出した後は、失敗した操作が成功したかどうかを判断する Get Operation Status を呼び出すことができます。 または進行中です。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx詳細)
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: 要求の要求の ID を追跡します。要求 ID は、すべての要求に対して x ms 要求 id の応答ヘッダーで返されます。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 応答ストリーム。
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js

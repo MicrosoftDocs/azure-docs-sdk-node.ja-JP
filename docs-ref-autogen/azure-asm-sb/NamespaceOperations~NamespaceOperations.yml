@@ -1,0 +1,466 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f8d4332e8e550322acec13e55dc8b09a55d188ab
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063894"
+items:
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations
+  summary: >-
+    Service Bus の管理 API には、Service Bus 名前空間を管理するための操作が含まれます。
+
+    __注__: [ServiceBusManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link ServiceBusManagementClient ~ ServiceBusManagementClient}。
+
+    [名前空間] を参照してください。 {@link ServiceBusManagementClient ~ ServiceBusManagementClient #namespaces}。
+
+    NamespaceOperations クラスの新しいインスタンスを初期化します。
+  fullName: azure-asm-sb.NamespaceOperations
+  type: Class
+  children:
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  langs:
+  - js
+- id: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  uid: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations(client)
+  fullName: azure-asm-sb.NamespaceOperations.NamespaceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: サービス クライアントへの参照。
+    content: new NamespaceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: checkAvailability(namespaceName, callback)
+  summary: すべての Windows Azure サブスクリプションでは、特定のサービス名前空間の可用性を確認します。 これは、機能は、ドメイン名がサービス名前空間の名前に基づいて作成されるため便利です。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj870968.aspx詳細)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.checkAvailability(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function checkAvailability(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: create(namespaceName, region, callback)
+  summary: 新しいサービス名前空間を作成します。 作成されると、この名前空間のリソース マニフェストは不変です。 この操作は、べき等です。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx詳細)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.create(namespaceName, region, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: region
+      type:
+      - string
+      description: 名前空間となる領域。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function create(namespaceName, region, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createAuthorizationRule(namespaceName, rule, callback)
+  summary: 作成する名前空間の承認規則の操作は、名前空間の承認規則を作成します。
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: 共有アクセス承認規則。
+    - id: rule.keyName
+      type:
+      - string
+      description: 使用されたキーの名前。
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: 使用された主キー。
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: サポートされているセカンダリ キー。
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: 要求の種類。
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: 要求の値。
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: ルールに関連付けられている権限。
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: 承認規則が作成された時刻。
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: ルールが更新された最新の日時。
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: ルールのリビジョン番号。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function createAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createNamespace(namespaceName, namespaceEntity, callback)
+  summary: 新しいサービス名前空間を作成します。 作成されると、この名前空間のリソース マニフェストは不変です。 この操作は、べき等です。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx詳細)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createNamespace(namespaceName, namespaceEntity, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: namespaceEntity
+      type:
+      - azure-asm-sb.ServiceBusNamespaceCreateParameters
+      description: Service bus 名前空間にします。
+    - id: namespaceEntity.region
+      type:
+      - string
+      description: 名前空間となる領域。
+    - id: namespaceEntity.createACSNamespace
+      type:
+      - boolean
+      description: かどうか ServiceBus の ACS 認証を必要とします。
+      optional: true
+    - id: namespaceEntity.namespaceType
+      type:
+      - azure-asm-sb.NamespaceType
+      description: 取得または名前空間の種類を設定します。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function createNamespace(namespaceName, namespaceEntity, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteMethod(namespaceName, callback)
+  summary: 既存の名前空間を削除します。 この操作には、キュー、トピック、リレー ポイント、および名前空間に格納されているメッセージを含むすべての関連エンティティも削除されます。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj856296.aspx詳細)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteMethod(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function deleteMethod(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteAuthorizationRule(namespaceName, ruleName, callback)
+  summary: 名前空間の承認規則の削除操作は、名前空間の承認規則を削除します。
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteAuthorizationRule(namespaceName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: ruleName
+      type:
+      - string
+      description: 規則の名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function deleteAuthorizationRule(namespaceName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: get(namespaceName, callback)
+  summary: 指定した名前空間の説明を返します。  (を参照してくださいhttp://msdn.microsoft.com/library/azure/dn140232.aspx詳細)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.get(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function get(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getAuthorizationRule(namespaceName, entityName, callback)
+  summary: 承認規則の取得操作では、名前で名前空間の承認規則を取得します。
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getAuthorizationRule(namespaceName, entityName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の承認規則を取得します。
+    - id: entityName
+      type:
+      - string
+      description: 承認規則を取得するエンティティの名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function getAuthorizationRule(namespaceName, entityName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getNamespaceDescription(namespaceName, callback)
+  summary: 名前空間の説明は、サービス名前空間の目的のセマンティクスを定義する XML AtomPub ドキュメントです。 名前空間の説明には、次のプロパティが含まれています。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj873988.aspx詳細)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getNamespaceDescription(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function getNamespaceDescription(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: list(callback)
+  summary: 使用可能な名前空間の一覧を表示します。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/azure/hh780759.aspx詳細)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: listAuthorizationRules(namespaceName, callback)
+  summary: 承認規則の取得操作では、名前空間の承認規則を取得します。
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.listAuthorizationRules(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の承認規則を取得します。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function listAuthorizationRules(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: updateAuthorizationRule(namespaceName, rule, callback)
+  summary: 更新プログラムの承認規則の操作では、名前空間の承認規則を更新します。
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.updateAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: 更新されたアクセスの承認規則。
+      optional: true
+    - id: rule.keyName
+      type:
+      - string
+      description: 使用されたキーの名前。
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: 使用された主キー。
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: サポートされているセカンダリ キー。
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: 要求の種類。
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: 要求の値。
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: ルールに関連付けられている権限。
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: 承認規則が作成された時刻。
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: ルールが更新された最新の日時。
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: ルールのリビジョン番号。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function updateAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js

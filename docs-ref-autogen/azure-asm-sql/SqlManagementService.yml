@@ -1,0 +1,312 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 77aef5d0743a622fd3d80f0c573f3b211f9e89f8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064200"
+items:
+- uid: azure-asm-sql.SqlManagementService
+  id: azure-asm-sql.SqlManagementService
+  name: SqlManagementService
+  summary: SqlManagementService オブジェクトでは、Microsoft Azure SQL データベース サーバーの管理操作を実行できます。
+  fullName: azure-asm-sql.SqlManagementService
+  type: Class
+  children:
+  - azure-asm-sql.SqlManagementService.#ctor
+  - azure-asm-sql.SqlManagementService#listServers
+  - azure-asm-sql.SqlManagementService#deleteServer
+  - azure-asm-sql.SqlManagementService#createServer
+  - azure-asm-sql.SqlManagementService#listServerFirewallRules
+  - azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createServerFirewallRule
+  - azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createDatabase
+  langs:
+  - js
+- id: azure-asm-sql.SqlManagementService.#ctor
+  uid: azure-asm-sql.SqlManagementService.#ctor
+  parent: azure-asm-sql.SqlManagementService
+  name: SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-sql.SqlManagementService.SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  summary: 新しい SqlManagementService オブジェクトを作成します。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: サブスクリプション ID、アカウントまたは接続文字列の構成
+    - id: authentication
+      type:
+      - object
+      description: >-
+        クライアントの認証オブジェクト。
+
+        Keyfile/certfile または keyvalue/certvalue のいずれかを使用して、サービス要求を認証する管理証明書を指定する必要があります。
+    - id: authentication.keyfile
+      type:
+      - string
+      description: エンコードされたキーを含む PEM ファイルへのパス
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: エンコードされた証明書を PEM を含むファイルへのパス
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: 文字列を含む、PEM でエンコードされたキー
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: エンコードされた証明書を PEM を含む文字列
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: 既定値を上書きするホスト オプション。
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: 管理エンドポイント。
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: 使用する API バージョン。
+      optional: true
+    content: new SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServers
+  id: azure-asm-sql.SqlManagementService#listServers
+  parent: azure-asm-sql.SqlManagementService
+  name: listServers(callback)
+  summary: SQL Database サーバーの一覧を表示します。
+  fullName: azure-asm-sql.SqlManagementService.listServers(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` エラーが発生した場合に情報を含むそれ以外の場合`results`利用可能な SQL データベース サーバー情報の一覧が含まれます。
+                                                               `response` この操作に関連する情報が含まれます。
+    content: function listServers(callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServer
+  id: azure-asm-sql.SqlManagementService#deleteServer
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServer(name, callback)
+  summary: SQL Database サーバーを削除します。
+  fullName: azure-asm-sql.SqlManagementService.deleteServer(name, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: SQL Server 名。
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。'
+    content: function deleteServer(name, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServer
+  id: azure-asm-sql.SqlManagementService#createServer
+  parent: azure-asm-sql.SqlManagementService
+  name: createServer(administratorLogin, administratorLoginPassword, location, callback)
+  summary: SQL Database サーバーを作成します。
+  fullName: azure-asm-sql.SqlManagementService.createServer(administratorLogin, administratorLoginPassword, location, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: administratorLogin
+      type:
+      - string
+      description: 管理者のログインします。
+    - id: administratorLoginPassword
+      type:
+      - string
+      description: 管理者のパスワードを入力します。
+    - id: location
+      type:
+      - string
+      description: サーバーの場所。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` エラーが発生した場合に情報を含むそれ以外の場合`server`は新しいサーバーの情報が含まれます。
+                                                                   `response` この操作に関連する情報が含まれます。
+    content: function createServer(administratorLogin, administratorLoginPassword, location, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  id: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  parent: azure-asm-sql.SqlManagementService
+  name: listServerFirewallRules(serverName, callback)
+  summary: SQL Database サーバーのファイアウォール規則を一覧表示します。
+  fullName: azure-asm-sql.SqlManagementService.listServerFirewallRules(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: サーバーの名前。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` エラーが発生した場合に情報を含むそれ以外の場合`results`はファイアウォールの規則が含まれます。
+                                                                  `response` この操作に関連する情報が含まれます。
+    content: function listServerFirewallRules(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServerFirewallRule(serverName, ruleName, callback)
+  summary: SQL Database サーバーのファイアウォール規則を削除します。
+  fullName: azure-asm-sql.SqlManagementService.deleteServerFirewallRule(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: サーバーの名前。
+    - id: ruleName
+      type:
+      - string
+      description: 規則の名前。
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合`response`はこの操作に関連する情報が含まれます。'
+    content: function deleteServerFirewallRule(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: SQL Database サーバーのファイアウォール規則を作成します。
+  fullName: azure-asm-sql.SqlManagementService.createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: サーバーの名前。
+    - id: ruleName
+      type:
+      - string
+      description: 規則の名前。
+    - id: startIPAddress
+      type:
+      - string
+      description: ルールの開始 IP アドレス。
+    - id: endIPAddress
+      type:
+      - string
+      description: 規則の終了 IP アドレス。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` エラーが発生した場合に情報を含むそれ以外の場合`rule`は新しいルールの情報が含まれます。
+                                                               `response` この操作に関連する情報が含まれます。
+    content: function createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: SQL Database サーバーのファイアウォール規則を更新します。
+  fullName: azure-asm-sql.SqlManagementService.updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: サーバーの名前。
+    - id: ruleName
+      type:
+      - string
+      description: 規則の名前。
+    - id: startIPAddress
+      type:
+      - string
+      description: ルールの開始 IP アドレス。
+    - id: endIPAddress
+      type:
+      - string
+      description: 規則の終了 IP アドレス。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` エラーが発生した場合に情報を含むそれ以外の場合`rule`更新された規則情報が含まれます。
+                                                               `response` この操作に関連する情報が含まれます。
+    content: function updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createDatabase
+  id: azure-asm-sql.SqlManagementService#createDatabase
+  parent: azure-asm-sql.SqlManagementService
+  name: createDatabase(serverName, databaseName, options, callback)
+  summary: 新しいデータベースを作成します。
+  fullName: azure-asm-sql.SqlManagementService.createDatabase(serverName, databaseName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: サーバー名
+    - id: databaseName
+      type:
+      - string
+      description: 作成するデータベースの名前
+    - id: options
+      type:
+      - object
+      description: 作成オプション。
+      optional: true
+    - id: options.edition
+      type:
+      - string
+      description: "'Web' または 'Business'。"
+      optional: true
+    - id: options.maxsize
+      type:
+      - number
+      description: Web の 1、ビジネスの 10 gb 単位の最大 DB サイズが既定で、特定の値のみが有効
+      optional: true
+    - id: options.collation
+      type:
+      - string
+      description: sql 照合順序名
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` エラーが発生した場合に情報を含むそれ以外の場合`createResult`は新しいデータベースの情報が含まれます。
+                                                                                       `response` この操作に関連する情報が含まれます。
+    content: function createDatabase(serverName, databaseName, options, callback)
+  langs:
+  - js

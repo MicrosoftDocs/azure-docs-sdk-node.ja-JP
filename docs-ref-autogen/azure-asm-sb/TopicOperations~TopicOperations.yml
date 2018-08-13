@@ -1,0 +1,457 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 234c7d4787f94e746b51b21ae9c34f399226b55e
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063913"
+items:
+- uid: azure-asm-sb.TopicOperations~TopicOperations
+  id: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations
+  summary: >-
+    Service Bus の管理 API には、名前空間の Service Bus のトピックを管理するための操作が含まれます。
+
+    __注__: [ServiceBusManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link ServiceBusManagementClient ~ ServiceBusManagementClient}。
+
+    [トピック] を参照してください。 {@link ServiceBusManagementClient ~ ServiceBusManagementClient #topics}。
+
+    TopicOperations クラスの新しいインスタンスを初期化します。
+  fullName: azure-asm-sb.TopicOperations
+  type: Class
+  children:
+  - azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  - azure-asm-sb.TopicOperations~TopicOperations#create
+  - azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  - azure-asm-sb.TopicOperations~TopicOperations#get
+  - azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  - azure-asm-sb.TopicOperations~TopicOperations#list
+  - azure-asm-sb.TopicOperations~TopicOperations#update
+  langs:
+  - js
+- id: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  uid: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations(client)
+  fullName: azure-asm-sb.TopicOperations.TopicOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: サービス クライアントへの参照。
+    content: new TopicOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#create
+  id: azure-asm-sb.TopicOperations~TopicOperations#create
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: create(namespaceName, topic, callback)
+  summary: 新しいトピックを作成します。 作成されると、このトピックのリソース マニフェストは変更されません。 この操作はべき等ではありません。 同じ名前のトピックが正常に作成された後に作成の呼び出しを繰り返すと、409 競合エラー メッセージが発生します。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780728.aspx詳細)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.create(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: Service Bus のトピックです。
+    - id: topic.name
+      type:
+      - string
+      description: トピックの名前。
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        メッセージをどのくらいの時間を決定します。 関連付けられているサブスクリプション内に存在します。 短い TTL で明示的に作成されていない限り、サブスクリプションはトピックから TTL を継承します。
+
+        TTL の有効期限が切れたメッセージは、配信不能レタリングが有効になっているかどうかに基づきは、サブスクリプションの関連する DeadLtterQueue に移動するかまたは完全に削除されます。 トピックの作成時に、次の値が設定可能な: * 範囲: 1 秒の既定の TimeSpan.MaxValue*: TimeSpan.MaxValue
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: 'トピックの最大サイズをメガバイト単位で指定します。 この値を超えるトピックを原因となるメッセージをエンキューする試みは失敗します。 トピックまたはこの値には、そのサブスクリプション数のいずれかに格納されているすべてのメッセージ。 1 つのメッセージとして 1 つまたは複数のサブスクリプション数内に存在する、メッセージの複数のコピー。 たとえば、メッセージの m が 1 回存在するサブスクリプション s1 と s2 のサブスクリプションで 2 回場合、は、m が 1 つのメッセージとしてカウントされます。 このパラメーターは、次の値を使用してトピック作成時にのみ設定できます * 範囲: 1. ~ 5.*1024 MB*既定: 1 * 1024。'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: '有効な場合、トピックでは、DuplicateDetectionHistoryTimeWindow プロパティで指定された期間内で重複するメッセージを検出します。 トピックの「作成良く既定値にのみ設定可能: false'
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Service Bus がメッセージ duplication.* 範囲を検出する期間を指定します: 1 秒、7 日間 * 既定: 10 分'
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: 有効またはサービス側での特定のキューに操作を実行するときに、バッチ動作を無効にします。 有効な場合、service bus は収集/バッチ接続の効率をバックエンドに複数の操作。 ユーザーが操作の待機時間の短縮を希望する場合は、この機能を無効することができます。
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: '現在使用しているトピックのメッセージをトピック クォータに対して実際のバイト数を反映します。 (読み取り専用) * 範囲: 0 MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: 取得またはパブリッシュする前に、メッセージをフィルター処理する必要かどうかを設定します。
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: 匿名アクセスが許可されているかどうかを取得します。
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: 説明の承認規則を取得します。
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: 取得または設定 (有効または無効になっている) トピックの現在の状態。 トピックを無効にすると、そのトピックが送信またはメッセージを受信できません。
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: キューが作成された時刻。
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: キューが最後に更新された時刻。
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: キューの最終アクセス時刻。
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: 取得またはトピックを注文するかどうかを設定します。
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: 現在のキューの統計情報です。
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: 現在アクティブなメッセージ数。
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: 配信不能メッセージの現在数。
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: スケジュールされたメッセージの現在数。
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: 現在転送配信不能メッセージ数。
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: 転送メッセージの現在数。
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: トピックにサブスクリプションの現在数。
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: 実装されています。
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: トピックの現在の可用性の状態。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function create(namespaceName, topic, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  id: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: deleteMethod(namespaceName, topicName, callback)
+  summary: 既存のトピックを削除します。 この操作では、関連付けられているサブスクリプションを含むすべての関連付けられた状態も削除されます。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/hh780721.aspx詳細)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.deleteMethod(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: topicName
+      type:
+      - string
+      description: トピックです。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function deleteMethod(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#get
+  id: azure-asm-sb.TopicOperations~TopicOperations#get
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: get(namespaceName, topicName, callback)
+  summary: トピックの説明は、トピックの目的のセマンティクスを定義する XML AtomPub ドキュメントです。 トピックの説明には、次のプロパティが含まれています。 詳細については、TopicDescription プロパティのトピックを参照してください。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780749.aspx詳細)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.get(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: topicName
+      type:
+      - string
+      description: トピックです。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function get(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  id: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: getConnectionDetails(namespaceName, topicName, callback)
+  summary: トピックには、接続文字列のセットを取得します。
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.getConnectionDetails(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: topicName
+      type:
+      - string
+      description: トピックです。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function getConnectionDetails(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#list
+  id: azure-asm-sb.TopicOperations~TopicOperations#list
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: list(namespaceName, callback)
+  summary: サービス名前空間のトピックを列挙します。 サービス名前空間にトピックが存在しない場合は、空のフィードが返されます。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/hh780744.aspx詳細)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.list(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function list(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#update
+  id: azure-asm-sb.TopicOperations~TopicOperations#update
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: update(namespaceName, topic, callback)
+  summary: トピックを更新します。  (を参照してくださいhttp://msdn.microsoft.com/en-us/library/windowsazure/jj839740.aspx詳細)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.update(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 名前空間の名前。
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: Service Bus のトピックです。
+    - id: topic.name
+      type:
+      - string
+      description: トピックの名前。
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        メッセージをどのくらいの時間を決定します。 関連付けられているサブスクリプション内に存在します。 短い TTL で明示的に作成されていない限り、サブスクリプションはトピックから TTL を継承します。
+
+        TTL の有効期限が切れたメッセージは、配信不能レタリングが有効になっているかどうかに基づきは、サブスクリプションの関連する DeadLtterQueue に移動するかまたは完全に削除されます。 トピックの作成時に、次の値が設定可能な: * 範囲: 1 秒の既定の TimeSpan.MaxValue*: TimeSpan.MaxValue
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: 'トピックの最大サイズをメガバイト単位で指定します。 この値を超えるトピックを原因となるメッセージをエンキューする試みは失敗します。 トピックまたはこの値には、そのサブスクリプション数のいずれかに格納されているすべてのメッセージ。 1 つのメッセージとして 1 つまたは複数のサブスクリプション数内に存在する、メッセージの複数のコピー。 たとえば、メッセージの m が 1 回存在するサブスクリプション s1 と s2 のサブスクリプションで 2 回場合、は、m が 1 つのメッセージとしてカウントされます。 このパラメーターは、次の値を使用してトピック作成時にのみ設定できます * 範囲: 1. ~ 5.*1024 MB*既定: 1 * 1024。'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: '有効な場合、トピックでは、DuplicateDetectionHistoryTimeWindow プロパティで指定された期間内で重複するメッセージを検出します。 トピックの「作成良く既定値にのみ設定可能: false'
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Service Bus がメッセージ duplication.* 範囲を検出する期間を指定します: 1 秒、7 日間 * 既定: 10 分'
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: 有効またはサービス側での特定のキューに操作を実行するときに、バッチ動作を無効にします。 有効な場合、service bus は収集/バッチ接続の効率をバックエンドに複数の操作。 ユーザーが操作の待機時間の短縮を希望する場合は、この機能を無効することができます。
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: '現在使用しているトピックのメッセージをトピック クォータに対して実際のバイト数を反映します。 (読み取り専用) * 範囲: 0 MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: 取得またはパブリッシュする前に、メッセージをフィルター処理する必要かどうかを設定します。
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: 匿名アクセスが許可されているかどうかを取得します。
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: 説明の承認規則を取得します。
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: 取得または設定 (有効または無効になっている) トピックの現在の状態。 トピックを無効にすると、そのトピックが送信またはメッセージを受信できません。
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: キューが作成された時刻。
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: キューが最後に更新された時刻。
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: キューの最終アクセス時刻。
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: 取得またはトピックを注文するかどうかを設定します。
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: 現在のキューの統計情報です。
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: 現在アクティブなメッセージ数。
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: 配信不能メッセージの現在数。
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: スケジュールされたメッセージの現在数。
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: 現在転送配信不能メッセージ数。
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: 転送メッセージの現在数。
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: トピックにサブスクリプションの現在数。
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: 実装されています。
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: トピックの現在の可用性の状態。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 応答ストリーム。
+    content: function update(namespaceName, topic, callback)
+  langs:
+  - js

@@ -1,0 +1,341 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: de75df4066cec224dd433906c125d5d5831dec66
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063900"
+items:
+- uid: azure-asm-hdinsight.HDInsightService
+  id: azure-asm-hdinsight.HDInsightService
+  name: HDInsightService
+  summary: HDInsightService クラスは、Microsoft Azure HDInsight サービスで操作を実行に使用されます。
+  fullName: azure-asm-hdinsight.HDInsightService
+  type: Class
+  children:
+  - azure-asm-hdinsight.HDInsightService.#ctor
+  - azure-asm-hdinsight.HDInsightService#convertCreationObject
+  - azure-asm-hdinsight.HDInsightService#deleteCluster
+  - azure-asm-hdinsight.HDInsightService#createCluster
+  - azure-asm-hdinsight.HDInsightService#listClusters
+  langs:
+  - js
+- id: azure-asm-hdinsight.HDInsightService.#ctor
+  uid: azure-asm-hdinsight.HDInsightService.#ctor
+  parent: azure-asm-hdinsight.HDInsightService
+  name: HDInsightService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-hdinsight.HDInsightService.HDInsightService(configOrSubscriptionId, authentication, hostOptions)
+  summary: 新しい HDInsightService オブジェクトを作成します。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: 構成ストアまたはサブスクリプションの ID、アカウントまたは接続文字列
+    - id: authentication
+      type:
+      - object
+      description: >-
+        クライアントの認証オブジェクト。
+
+
+        Keyfile/certfile または keyvalue/certvalue のいずれかを使用して、サービス要求を認証する管理証明書を指定する必要があります。
+    - id: authentication.keyfile
+      type:
+      - string
+      description: エンコードされたキーを含む PEM ファイルへのパス
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: エンコードされた証明書を PEM を含むファイルへのパス
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: 文字列を含む、PEM でエンコードされたキー
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: エンコードされた証明書を PEM を含む文字列
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: 既定値を上書きするホスト オプション。
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: 管理エンドポイント。
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: 使用する API バージョン。
+      optional: true
+    content: new HDInsightService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#convertCreationObject
+  id: azure-asm-hdinsight.HDInsightService#convertCreationObject
+  parent: azure-asm-hdinsight.HDInsightService
+  name: convertCreationObject(clusterCreationObject)
+  summary: 実際には、クラスターを作成するサーバーに送信される playload、クラスターを作成するオブジェクトに変換します。
+  fullName: azure-asm-hdinsight.HDInsightService.convertCreationObject(clusterCreationObject)
+  type: Function
+  syntax:
+    parameters:
+    - id: clusterCreationObject
+      type:
+      - object
+      description: クラスターを作成するために必要なすべてのパラメーターを指定するために使用するオブジェクト。
+    - id: clusterCreationObject.name
+      type:
+      - string
+      description: (Dns 名) クラスターの名前すべて小文字に変換
+    - id: clusterCreationObject.location
+      type:
+      - string
+      description: クラスターが作成される Azure データ センター
+    - id: clusterCreationObject.defaultStorageAccountName
+      type:
+      - string
+      description: 既定の Azure ストレージ アカウントの名前
+    - id: clusterCreationObject.defaultStorageAccountKey
+      type:
+      - string
+      description: 既定の Azure ストレージ アカウントの秘密鍵
+    - id: clusterCreationObject.defaultStorageContainer
+      type:
+      - string
+      description: 既定の Azure ストレージ アカウントのコンテナー
+    - id: clusterCreationObject.user
+      type:
+      - string
+      description: クラスターに使用するユーザー名
+    - id: clusterCreationObject.password
+      type:
+      - string
+      description: クラスターに使用するパスワード
+    - id: clusterCreationObject.nodes
+      type:
+      - azure-asm-hdinsight.int
+      description: 使用するノードの数
+    - id: clusterCreationObject.additionalStorageAccounts
+      type:
+      - array
+      description: 追加のストレージ アカウント情報を提供するために使用するオブジェクトの配列
+      optional: true
+    - id: clusterCreationObject.additionalStorageAccounts.name
+      type:
+      - string
+      description: ストレージ アカウントの名前
+    - id: clusterCreationObject.additionalStorageAccounts.key
+      type:
+      - string
+      description: ストレージ アカウントのキー
+    - id: clusterCreationObject.oozieMetastore
+      type:
+      - object
+      description: Oozie メタストアにパラメーターを指定するために使用するオブジェクト
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.server
+      type:
+      - string
+      description: 使用する SQL データベース サーバーの名前
+    - id: clusterCreationObject.oozieMetastore.database
+      type:
+      - string
+      description: 使用するデータベースの名前
+    - id: clusterCreationObject.oozieMetastore.user
+      type:
+      - string
+      description: データベース サーバーへの認証時に使用するユーザー名
+    - id: clusterCreationObject.oozieMetastore.password
+      type:
+      - string
+      description: ユーザーのパスワード
+    - id: clusterCreationObject.hiveMetastore
+      type:
+      - object
+      description: Hive metastore のパラメーターを指定するために使用するオブジェクト
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.server
+      type:
+      - string
+      description: 使用する SQL データベース サーバーの名前
+    - id: clusterCreationObject.hiveMetastore.database
+      type:
+      - string
+      description: 使用するデータベースの名前
+    - id: clusterCreationObject.hiveMetastore.user
+      type:
+      - string
+      description: データベース サーバーへの認証時に使用するユーザー名
+    - id: clusterCreationObject.hiveMetastore.password
+      type:
+      - string
+      description: ユーザーのパスワード
+    content: function convertCreationObject(clusterCreationObject)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#deleteCluster
+  id: azure-asm-hdinsight.HDInsightService#deleteCluster
+  parent: azure-asm-hdinsight.HDInsightService
+  name: deleteCluster(name, location, callback)
+  summary: HDInsight クラスターを削除します
+  fullName: azure-asm-hdinsight.HDInsightService.deleteCluster(name, location, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: location
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function deleteCluster(name, location, callback)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#createCluster
+  id: azure-asm-hdinsight.HDInsightService#createCluster
+  parent: azure-asm-hdinsight.HDInsightService
+  name: createCluster(clusterCreationObject, callback)
+  summary: 新しい HDInsight クラスターを作成します。
+  fullName: azure-asm-hdinsight.HDInsightService.createCluster(clusterCreationObject, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: clusterCreationObject
+      type:
+      - object
+      description: 作成するクラスターの詳細。
+    - id: clusterCreationObject.name
+      type:
+      - string
+      description: (Dns 名) クラスターの名前すべて小文字に変換
+    - id: clusterCreationObject.location
+      type:
+      - string
+      description: クラスターが作成される Azure データ センター
+    - id: clusterCreationObject.defaultStorageAccountName
+      type:
+      - string
+      description: 既定の Azure ストレージ アカウントの名前
+    - id: clusterCreationObject.defaultStorageAccountKey
+      type:
+      - string
+      description: 既定の Azure ストレージ アカウントの秘密鍵
+    - id: clusterCreationObject.defaultStorageContainer
+      type:
+      - string
+      description: 既定の Azure ストレージ アカウントのコンテナー
+    - id: clusterCreationObject.user
+      type:
+      - string
+      description: クラスターに使用するユーザー名
+    - id: clusterCreationObject.password
+      type:
+      - string
+      description: クラスターに使用するパスワード
+    - id: clusterCreationObject.nodes
+      type:
+      - number
+      description: 使用するノードの数
+    - id: clusterCreationObject.additionalStorageAccounts
+      type:
+      - array
+      description: 追加のストレージ アカウント
+      optional: true
+    - id: clusterCreationObject.additionalStorageAccounts.name
+      type:
+      - string
+      description: ストレージ アカウントの名前
+      optional: true
+    - id: clusterCreationObject.additionalStorageAccounts.key
+      type:
+      - string
+      description: ストレージ アカウントの秘密鍵
+      optional: true
+    - id: clusterCreationObject.oozieMetastore
+      type:
+      - object
+      description: Oozie のメタストア情報
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.server
+      type:
+      - string
+      description: 使用する sql server の名前
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.database
+      type:
+      - string
+      description: 使用する sql データベース
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.user
+      type:
+      - string
+      description: データベースにログインするときに使用するユーザー名
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.password
+      type:
+      - string
+      description: データベースにログインするときに使用するパスワード
+      optional: true
+    - id: clusterCreationObject.hiveMetastore
+      type:
+      - object
+      description: Hive metastore の情報
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.server
+      type:
+      - string
+      description: 使用する sql server の名前
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.database
+      type:
+      - string
+      description: 使用する sql データベース
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.user
+      type:
+      - string
+      description: データベースにログインするときに使用するユーザー名
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.password
+      type:
+      - string
+      description: データベースにログインするときに使用するパスワード
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function createCluster(clusterCreationObject, callback)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#listClusters
+  id: azure-asm-hdinsight.HDInsightService#listClusters
+  parent: azure-asm-hdinsight.HDInsightService
+  name: listClusters(callback)
+  summary: 現在のサブスクリプションの既存のすべての HDInsight クラスターを一覧表示します。
+  fullName: azure-asm-hdinsight.HDInsightService.listClusters(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: '`error` エラーが発生した場合に情報を含むそれ以外の場合、`response`はこの操作に関連する情報が含まれます。'
+    content: function listClusters(callback)
+  langs:
+  - js

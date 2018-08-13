@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5c821692ec408af0a872de276d63a516edf2f3ac
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064183"
+items:
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations
+  summary: >-
+    Azure SQL Database Management API には、Azure SQL データベース サーバーのサーバー レベルのファイアウォール規則を管理するための操作が含まれます。 Azure SQL Database Management API では; を使用してデータベース レベルのファイアウォール ルールを管理することはできません。また、マスターまたは個々 のユーザー データベースに対して TRANSACT-SQL ステートメントを実行してのみ管理できます。
+
+    __注__: [SqlManagementClient] のインスタンスをこのクラスのインスタンスが自動的に作成 {@link SqlManagementClient ~ SqlManagementClient}。
+
+    [FirewallRules] を参照してください。 {@link SqlManagementClient ~ SqlManagementClient #firewallRules}。
+
+    FirewallRuleOperations クラスの新しいインスタンスを初期化します。
+  fullName: azure-asm-sql.FirewallRuleOperations
+  type: Class
+  children:
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.#ctor
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations(client)
+  fullName: azure-asm-sql.FirewallRuleOperations.FirewallRuleOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: サービス クライアントへの参照。
+    content: new FirewallRuleOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#create
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: create(serverName, parameters, callback)
+  summary: Azure SQL Database サーバーの新しいサーバー レベルのファイアウォール規則を追加します。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.create(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: このルールを適用する Azure SQL Database サーバーの名前。
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleCreateParameters
+      description: ファイアウォール規則の作成操作のパラメーター。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得または新しいファイアウォール ルールの名前を設定します。
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: 取得または新しいファイアウォール ルールの開始 IP アドレスを設定します。
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: 取得または新しいファイアウォール ルールの終了 IP アドレスを設定します。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function create(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#deleteMethod
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: deleteMethod(serverName, ruleName, callback)
+  summary: Azure SQL Database サーバーからサーバー レベルのファイアウォール規則を削除します。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.deleteMethod(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 時は、削除されることのファイアウォール ルールがある Azure SQL Database サーバーの名前。
+    - id: ruleName
+      type:
+      - string
+      description: 削除時のファイアウォール ルールの名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function deleteMethod(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#get
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: get(serverName, ruleName, callback)
+  summary: 名前が一致する Azure SQL Database サーバーのファイアウォール規則を返します。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.get(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: ファイアウォール規則のクエリを Azure SQL Database サーバーの名前。
+    - id: ruleName
+      type:
+      - string
+      description: 取得する規則の名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function get(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#list
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: list(serverName, callback)
+  summary: Azure SQL Database サーバーのサーバー レベルのファイアウォール規則の一覧を返します。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: ファイアウォール規則を一覧から Azure SQL Database サーバーの名前。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function list(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  id: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations#update
+  parent: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: update(serverName, ruleName, parameters, callback)
+  summary: Azure SQL Database サーバーの既存のサーバー レベルのファイアウォール規則を更新します。
+  fullName: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations.update(serverName, ruleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 更新するファイアウォール規則を持つ Azure SQL Database サーバーの名前。
+    - id: ruleName
+      type:
+      - string
+      description: 更新するファイアウォール規則の名前。
+    - id: parameters
+      type:
+      - azure-asm-sql.FirewallRuleUpdateParameters
+      description: ファイアウォール規則の更新操作のパラメーター。
+    - id: parameters.name
+      type:
+      - string
+      description: 取得またはファイアウォール ルールの新しい名前を設定します。
+    - id: parameters.startIPAddress
+      type:
+      - string
+      description: 取得またはこのファイアウォール規則の新しい開始 IP アドレスを設定します。
+    - id: parameters.endIPAddress
+      type:
+      - string
+      description: 取得またはこのファイアウォール規則の新しい終了 IP アドレスを設定します。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 応答ストリーム。
+    content: function update(serverName, ruleName, parameters, callback)
+  langs:
+  - js
