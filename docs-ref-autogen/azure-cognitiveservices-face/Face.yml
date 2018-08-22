@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: bed954b4ad093b9d7b51214336247d9673cd8b5a
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 470cfbc0b4033164719779f553927946a2544cde
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40068980"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41692611"
 items:
 - uid: azure-cognitiveservices-face.Face
   name: Face
@@ -51,7 +51,7 @@ items:
   - typeScript
   summary: イメージと返します顔などの場所には、必要に応じて faceIds、ランドマーク、および属性を使用して、人間の顔を検出します。
   syntax:
-    content: 'function detect(url: string, options?: function)'
+    content: 'function detect(url: string, options?: Object)'
     parameters:
     - id: url
       type:
@@ -59,7 +59,7 @@ items:
       description: "\n"
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -96,7 +96,7 @@ items:
   - typeScript
   summary: イメージと返します顔などの場所には、必要に応じて faceIds、ランドマーク、および属性を使用して、人間の顔を検出します。
   syntax:
-    content: 'function detect(url: string, options: function, callback: ServiceCallback<DetectedFace[]>)'
+    content: 'function detect(url: string, options: Object, callback: ServiceCallback<DetectedFace[]>)'
     parameters:
     - id: url
       type:
@@ -104,7 +104,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -144,7 +144,7 @@ items:
   - typeScript
   summary: イメージと返します顔などの場所には、必要に応じて faceIds、ランドマーク、および属性を使用して、人間の顔を検出します。
   syntax:
-    content: 'function detectInStream(image: stream.Readable, options: function, callback: ServiceCallback<DetectedFace[]>)'
+    content: 'function detectInStream(image: stream.Readable, options: Object, callback: ServiceCallback<DetectedFace[]>)'
     parameters:
     - id: image
       type:
@@ -152,7 +152,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -170,7 +170,7 @@ items:
   - typeScript
   summary: イメージと返します顔などの場所には、必要に応じて faceIds、ランドマーク、および属性を使用して、人間の顔を検出します。
   syntax:
-    content: 'function detectInStream(image: stream.Readable, options?: function)'
+    content: 'function detectInStream(image: stream.Readable, options?: Object)'
     parameters:
     - id: image
       type:
@@ -179,7 +179,7 @@ items:
         イメージ ストリーム。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -194,7 +194,7 @@ items:
   - typeScript
   summary: イメージと返します顔などの場所には、必要に応じて faceIds、ランドマーク、および属性を使用して、人間の顔を検出します。
   syntax:
-    content: 'function detectInStreamWithHttpOperationResponse(image: stream.Readable, options?: function)'
+    content: 'function detectInStreamWithHttpOperationResponse(image: stream.Readable, options?: Object)'
     parameters:
     - id: image
       type:
@@ -203,7 +203,7 @@ items:
         イメージ ストリーム。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -218,7 +218,7 @@ items:
   - typeScript
   summary: イメージと返します顔などの場所には、必要に応じて faceIds、ランドマーク、および属性を使用して、人間の顔を検出します。
   syntax:
-    content: 'function detectWithHttpOperationResponse(url: string, options?: function)'
+    content: 'function detectWithHttpOperationResponse(url: string, options?: Object)'
     parameters:
     - id: url
       type:
@@ -226,7 +226,7 @@ items:
       description: "\n"
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -241,7 +241,7 @@ items:
   - typeScript
   summary: 顔の faceId を指定するには、faceId 配列または、faceListId から似ている顔を検索します。
   syntax:
-    content: 'function findSimilar(faceId: string, options?: function)'
+    content: 'function findSimilar(faceId: string, options?: Object)'
     parameters:
     - id: faceId
       type:
@@ -250,7 +250,7 @@ items:
         クエリの表面の FaceId します。 ユーザーは、顔を呼び出す - 有効な faceId を取得するには、1 つ目を検出する必要があります。 この faceId が永続化されていないと、検出の呼び出しの後 24 時間の有効期限が切れることに注意してください。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -287,7 +287,7 @@ items:
   - typeScript
   summary: 顔の faceId を指定するには、faceId 配列または、faceListId から似ている顔を検索します。
   syntax:
-    content: 'function findSimilar(faceId: string, options: function, callback: ServiceCallback<SimilarFaceResult[]>)'
+    content: 'function findSimilar(faceId: string, options: Object, callback: ServiceCallback<SimilarFaceResult[]>)'
     parameters:
     - id: faceId
       type:
@@ -295,7 +295,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -313,7 +313,7 @@ items:
   - typeScript
   summary: 顔の faceId を指定するには、faceId 配列または、faceListId から似ている顔を検索します。
   syntax:
-    content: 'function findSimilarWithHttpOperationResponse(faceId: string, options?: function)'
+    content: 'function findSimilarWithHttpOperationResponse(faceId: string, options?: Object)'
     parameters:
     - id: faceId
       type:
@@ -322,7 +322,7 @@ items:
         クエリの表面の FaceId します。 ユーザーは、顔を呼び出す - 有効な faceId を取得するには、1 つ目を検出する必要があります。 この faceId が永続化されていないと、検出の呼び出しの後 24 時間の有効期限が切れることに注意してください。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -337,7 +337,7 @@ items:
   - typeScript
   summary: 候補の面を face の類似性に基づいてグループに分割します。
   syntax:
-    content: 'function group(faceIds: string[], options?: function)'
+    content: 'function group(faceIds: string[], options?: Object)'
     parameters:
     - id: faceIds
       type:
@@ -348,7 +348,7 @@ items:
         最大値は、顔 1000 個です。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -385,7 +385,7 @@ items:
   - typeScript
   summary: 候補の面を face の類似性に基づいてグループに分割します。
   syntax:
-    content: 'function group(faceIds: string[], options: function, callback: ServiceCallback<GroupResponse>)'
+    content: 'function group(faceIds: string[], options: Object, callback: ServiceCallback<GroupResponse>)'
     parameters:
     - id: faceIds
       type:
@@ -393,7 +393,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -411,7 +411,7 @@ items:
   - typeScript
   summary: 候補の面を face の類似性に基づいてグループに分割します。
   syntax:
-    content: 'function groupWithHttpOperationResponse(faceIds: string[], options?: function)'
+    content: 'function groupWithHttpOperationResponse(faceIds: string[], options?: Object)'
     parameters:
     - id: faceIds
       type:
@@ -422,7 +422,7 @@ items:
         最大値は、顔 1000 個です。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -463,7 +463,7 @@ items:
   - typeScript
   summary: ユーザー グループからの不明な顔を識別します。
   syntax:
-    content: 'function identify(personGroupId: string, faceIds: string[], options: function, callback: ServiceCallback<IdentifyResultItem[]>)'
+    content: 'function identify(personGroupId: string, faceIds: string[], options: Object, callback: ServiceCallback<IdentifyResultItem[]>)'
     parameters:
     - id: personGroupId
       type:
@@ -475,7 +475,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -493,7 +493,7 @@ items:
   - typeScript
   summary: ユーザー グループからの不明な顔を識別します。
   syntax:
-    content: 'function identify(personGroupId: string, faceIds: string[], options?: function)'
+    content: 'function identify(personGroupId: string, faceIds: string[], options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -507,7 +507,7 @@ items:
         候補 faceId の配列を作成して顔 - を検出します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -522,7 +522,7 @@ items:
   - typeScript
   summary: ユーザー グループからの不明な顔を識別します。
   syntax:
-    content: 'function identifyWithHttpOperationResponse(personGroupId: string, faceIds: string[], options?: function)'
+    content: 'function identifyWithHttpOperationResponse(personGroupId: string, faceIds: string[], options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -536,7 +536,7 @@ items:
         候補 faceId の配列を作成して顔 - を検出します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -551,7 +551,7 @@ items:
   - typeScript
   summary: 2 つの顔が同一人物に属しているかどうか、または 1 つの面がユーザーに属しているかどうかを確認します。
   syntax:
-    content: 'function verify(faceId1: string, faceId2: string, options?: function)'
+    content: 'function verify(faceId1: string, faceId2: string, options?: Object)'
     parameters:
     - id: faceId1
       type:
@@ -565,7 +565,7 @@ items:
         2 番目の顔の faceId 顔に由来 - 検出
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -606,7 +606,7 @@ items:
   - typeScript
   summary: 2 つの顔が同一人物に属しているかどうか、または 1 つの面がユーザーに属しているかどうかを確認します。
   syntax:
-    content: 'function verify(faceId1: string, faceId2: string, options: function, callback: ServiceCallback<VerifyResult>)'
+    content: 'function verify(faceId1: string, faceId2: string, options: Object, callback: ServiceCallback<VerifyResult>)'
     parameters:
     - id: faceId1
       type:
@@ -618,7 +618,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -636,7 +636,7 @@ items:
   - typeScript
   summary: 2 つの顔が同一人物に属しているかどうか、または 1 つの面がユーザーに属しているかどうかを確認します。
   syntax:
-    content: 'function verifyWithHttpOperationResponse(faceId1: string, faceId2: string, options?: function)'
+    content: 'function verifyWithHttpOperationResponse(faceId1: string, faceId2: string, options?: Object)'
     parameters:
     - id: faceId1
       type:
@@ -650,7 +650,7 @@ items:
         2 番目の顔の faceId 顔に由来 - 検出
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -665,7 +665,7 @@ items:
   - typeScript
   summary: 2 つの顔が同一人物に属しているかどうかを確認します。 Face Id とユーザー Id を比較します。
   syntax:
-    content: 'function verifyWithPersonGroup(faceId: string, personId: string, personGroupId: string, options?: function)'
+    content: 'function verifyWithPersonGroup(faceId: string, personId: string, personGroupId: string, options?: Object)'
     parameters:
     - id: faceId
       type:
@@ -686,7 +686,7 @@ items:
         高速読み込み、指定したユーザーの既存の personGroupId と personId を使用します。 personGroupId は Person Groups.Create に作成されます。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -731,7 +731,7 @@ items:
   - typeScript
   summary: 2 つの顔が同一人物に属しているかどうかを確認します。 Face Id とユーザー Id を比較します。
   syntax:
-    content: 'function verifyWithPersonGroup(faceId: string, personId: string, personGroupId: string, options: function, callback: ServiceCallback<VerifyResult>)'
+    content: 'function verifyWithPersonGroup(faceId: string, personId: string, personGroupId: string, options: Object, callback: ServiceCallback<VerifyResult>)'
     parameters:
     - id: faceId
       type:
@@ -747,7 +747,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -765,7 +765,7 @@ items:
   - typeScript
   summary: 2 つの顔が同一人物に属しているかどうかを確認します。 Face Id とユーザー Id を比較します。
   syntax:
-    content: 'function verifyWithPersonGroupWithHttpOperationResponse(faceId: string, personId: string, personGroupId: string, options?: function)'
+    content: 'function verifyWithPersonGroupWithHttpOperationResponse(faceId: string, personId: string, personGroupId: string, options?: Object)'
     parameters:
     - id: faceId
       type:
@@ -786,7 +786,7 @@ items:
         高速読み込み、指定したユーザーの既存の personGroupId と personId を使用します。 personGroupId は Person Groups.Create に作成されます。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 7f4d3cfd884f2e2050143ca02682699dc3e7b2b5
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: a07a1b7c53f33268859a8a46065911d4f6f4263e
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40067661"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41696511"
 items:
 - uid: azure-arm-datalake-store.FirewallRules
   name: FirewallRules
@@ -47,7 +47,7 @@ items:
   - typeScript
   summary: 作成または指定されたファイアウォール規則を更新します。 更新中に、この新しいファイアウォール規則で指定した名前のファイアウォール規則は置き換えられます。
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, accountName: string, firewallRuleName: string, parameters: FirewallRule, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, accountName: string, firewallRuleName: string, parameters: FirewallRule, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -71,7 +71,7 @@ items:
         作成または更新のファイアウォール規則に指定されたパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -120,7 +120,7 @@ items:
   - typeScript
   summary: 作成または指定されたファイアウォール規則を更新します。 更新中に、この新しいファイアウォール規則で指定した名前のファイアウォール規則は置き換えられます。
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, accountName: string, firewallRuleName: string, parameters: FirewallRule, options: function, callback: ServiceCallback<FirewallRule>)'
+    content: 'function createOrUpdate(resourceGroupName: string, accountName: string, firewallRuleName: string, parameters: FirewallRule, options: Object, callback: ServiceCallback<FirewallRule>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -140,7 +140,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -158,7 +158,7 @@ items:
   - typeScript
   summary: 作成または指定されたファイアウォール規則を更新します。 更新中に、この新しいファイアウォール規則で指定した名前のファイアウォール規則は置き換えられます。
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, accountName: string, firewallRuleName: string, parameters: FirewallRule, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, accountName: string, firewallRuleName: string, parameters: FirewallRule, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -182,7 +182,7 @@ items:
         作成または更新のファイアウォール規則に指定されたパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -197,7 +197,7 @@ items:
   - typeScript
   summary: 指定された Data Lake Store アカウントから、指定したファイアウォール規則を削除します。
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -216,7 +216,7 @@ items:
         削除するファイアウォール規則の名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -261,7 +261,7 @@ items:
   - typeScript
   summary: 指定された Data Lake Store アカウントから、指定したファイアウォール規則を削除します。
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, firewallRuleName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, firewallRuleName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -277,7 +277,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -295,7 +295,7 @@ items:
   - typeScript
   summary: 指定された Data Lake Store アカウントから、指定したファイアウォール規則を削除します。
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -314,7 +314,7 @@ items:
         削除するファイアウォール規則の名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -329,7 +329,7 @@ items:
   - typeScript
   summary: 指定した Data Lake Store のファイアウォール規則を取得します。
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -348,7 +348,7 @@ items:
         取得するファイアウォール規則の名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -393,7 +393,7 @@ items:
   - typeScript
   summary: 指定した Data Lake Store のファイアウォール規則を取得します。
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, firewallRuleName: string, options: function, callback: ServiceCallback<FirewallRule>)'
+    content: 'function get(resourceGroupName: string, accountName: string, firewallRuleName: string, options: Object, callback: ServiceCallback<FirewallRule>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -409,7 +409,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -427,7 +427,7 @@ items:
   - typeScript
   summary: 指定した Data Lake Store のファイアウォール規則を取得します。
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -446,7 +446,7 @@ items:
         取得するファイアウォール規則の名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -461,7 +461,7 @@ items:
   - typeScript
   summary: 指定された Data Lake Store アカウント内で Data Lake Store のファイアウォール規則を一覧表示します。
   syntax:
-    content: 'function listByAccount(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function listByAccount(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -475,7 +475,7 @@ items:
         ファイアウォール規則の取得元となる Data Lake Store アカウントの名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -516,7 +516,7 @@ items:
   - typeScript
   summary: 指定された Data Lake Store アカウント内で Data Lake Store のファイアウォール規則を一覧表示します。
   syntax:
-    content: 'function listByAccount(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<DataLakeStoreFirewallRuleListResult>)'
+    content: 'function listByAccount(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<DataLakeStoreFirewallRuleListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -528,7 +528,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -546,7 +546,7 @@ items:
   - typeScript
   summary: 指定された Data Lake Store アカウント内で Data Lake Store のファイアウォール規則を一覧表示します。
   syntax:
-    content: 'function listByAccountNext(nextPageLink: string, options?: function)'
+    content: 'function listByAccountNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -555,7 +555,7 @@ items:
         リスト操作に成功した前回の呼び出しからの NextLink です。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -592,7 +592,7 @@ items:
   - typeScript
   summary: 指定された Data Lake Store アカウント内で Data Lake Store のファイアウォール規則を一覧表示します。
   syntax:
-    content: 'function listByAccountNext(nextPageLink: string, options: function, callback: ServiceCallback<DataLakeStoreFirewallRuleListResult>)'
+    content: 'function listByAccountNext(nextPageLink: string, options: Object, callback: ServiceCallback<DataLakeStoreFirewallRuleListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -600,7 +600,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -618,7 +618,7 @@ items:
   - typeScript
   summary: 指定された Data Lake Store アカウント内で Data Lake Store のファイアウォール規則を一覧表示します。
   syntax:
-    content: 'function listByAccountNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByAccountNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -627,7 +627,7 @@ items:
         リスト操作に成功した前回の呼び出しからの NextLink です。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -642,7 +642,7 @@ items:
   - typeScript
   summary: 指定された Data Lake Store アカウント内で Data Lake Store のファイアウォール規則を一覧表示します。
   syntax:
-    content: 'function listByAccountWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function listByAccountWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -656,7 +656,7 @@ items:
         ファイアウォール規則の取得元となる Data Lake Store アカウントの名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -671,7 +671,7 @@ items:
   - typeScript
   summary: 指定されたファイアウォール規則を更新します。
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: function)'
+    content: 'function update(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -690,7 +690,7 @@ items:
         更新するファイアウォール規則の名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -735,7 +735,7 @@ items:
   - typeScript
   summary: 指定されたファイアウォール規則を更新します。
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, firewallRuleName: string, options: function, callback: ServiceCallback<FirewallRule>)'
+    content: 'function update(resourceGroupName: string, accountName: string, firewallRuleName: string, options: Object, callback: ServiceCallback<FirewallRule>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -751,7 +751,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -769,7 +769,7 @@ items:
   - typeScript
   summary: 指定されたファイアウォール規則を更新します。
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, firewallRuleName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -788,7 +788,7 @@ items:
         更新するファイアウォール規則の名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

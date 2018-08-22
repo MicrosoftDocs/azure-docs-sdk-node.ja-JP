@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: b61fbf96f61b35fbd71a672b386bf1d53b5253d4
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 683b4c75d1ecbf8045bd73d513ac88bf274e7305
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40066821"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41690851"
 items:
 - uid: azure-arm-containerregistry.BuildSteps
   name: BuildSteps
@@ -67,7 +67,7 @@ items:
   - typeScript
   summary: ビルド タスク用のビルド手順を作成します。
   syntax:
-    content: 'function beginCreate(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options?: function)'
+    content: 'function beginCreate(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -96,7 +96,7 @@ items:
         ビルド ステップを作成するためのパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -149,7 +149,7 @@ items:
   - typeScript
   summary: ビルド タスク用のビルド手順を作成します。
   syntax:
-    content: 'function beginCreate(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options: function, callback: ServiceCallback<BuildStep>)'
+    content: 'function beginCreate(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options: Object, callback: ServiceCallback<BuildStep>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -173,7 +173,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -191,7 +191,7 @@ items:
   - typeScript
   summary: ビルド タスク用のビルド手順を作成します。
   syntax:
-    content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options?: function)'
+    content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -220,7 +220,7 @@ items:
         ビルド ステップを作成するためのパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -235,7 +235,7 @@ items:
   - typeScript
   summary: ビルド タスクからのビルド ステップを削除します。
   syntax:
-    content: 'function beginDeleteMethod(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: function)'
+    content: 'function beginDeleteMethod(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -259,7 +259,7 @@ items:
         コンテナー レジストリのビルド ステップの名前は、タスクを作成します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -274,7 +274,7 @@ items:
   - typeScript
   summary: ビルド タスクからのビルド ステップを削除します。
   syntax:
-    content: 'function beginDeleteMethod(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginDeleteMethod(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -294,7 +294,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -346,7 +346,7 @@ items:
   - typeScript
   summary: ビルド タスクからのビルド ステップを削除します。
   syntax:
-    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: function)'
+    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -370,7 +370,7 @@ items:
         コンテナー レジストリのビルド ステップの名前は、タスクを作成します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -385,7 +385,7 @@ items:
   - typeScript
   summary: ビルド タスクでビルド ステップを更新します。
   syntax:
-    content: 'function beginUpdate(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options?: function)'
+    content: 'function beginUpdate(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -414,7 +414,7 @@ items:
         ビルド ステップを更新するためのパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -467,7 +467,7 @@ items:
   - typeScript
   summary: ビルド タスクでビルド ステップを更新します。
   syntax:
-    content: 'function beginUpdate(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options: function, callback: ServiceCallback<BuildStep>)'
+    content: 'function beginUpdate(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options: Object, callback: ServiceCallback<BuildStep>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -491,7 +491,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -509,7 +509,7 @@ items:
   - typeScript
   summary: ビルド タスクでビルド ステップを更新します。
   syntax:
-    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options?: function)'
+    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -538,7 +538,7 @@ items:
         ビルド ステップを更新するためのパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -591,7 +591,7 @@ items:
   - typeScript
   summary: ビルド タスク用のビルド手順を作成します。
   syntax:
-    content: 'function create(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options: function, callback: ServiceCallback<BuildStep>)'
+    content: 'function create(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options: Object, callback: ServiceCallback<BuildStep>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -615,7 +615,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -633,7 +633,7 @@ items:
   - typeScript
   summary: ビルド タスク用のビルド手順を作成します。
   syntax:
-    content: 'function create(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options?: function)'
+    content: 'function create(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -662,7 +662,7 @@ items:
         ビルド ステップを作成するためのパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -677,7 +677,7 @@ items:
   - typeScript
   summary: ビルド タスク用のビルド手順を作成します。
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options?: function)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepCreateParameters: BuildStep, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -706,7 +706,7 @@ items:
         ビルド ステップを作成するためのパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -721,7 +721,7 @@ items:
   - typeScript
   summary: ビルド タスクからのビルド ステップを削除します。
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -745,7 +745,7 @@ items:
         コンテナー レジストリのビルド ステップの名前は、タスクを作成します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -794,7 +794,7 @@ items:
   - typeScript
   summary: ビルド タスクからのビルド ステップを削除します。
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -814,7 +814,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -832,7 +832,7 @@ items:
   - typeScript
   summary: ビルド タスクからのビルド ステップを削除します。
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -856,7 +856,7 @@ items:
         コンテナー レジストリのビルド ステップの名前は、タスクを作成します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -871,7 +871,7 @@ items:
   - typeScript
   summary: ビルド タスクのビルド ステップを取得します。
   syntax:
-    content: 'function get(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -895,7 +895,7 @@ items:
         コンテナー レジストリのビルド ステップの名前は、タスクを作成します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -944,7 +944,7 @@ items:
   - typeScript
   summary: ビルド タスクのビルド ステップを取得します。
   syntax:
-    content: 'function get(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options: function, callback: ServiceCallback<BuildStep>)'
+    content: 'function get(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options: Object, callback: ServiceCallback<BuildStep>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -964,7 +964,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -982,7 +982,7 @@ items:
   - typeScript
   summary: ビルド タスクのビルド ステップを取得します。
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1006,7 +1006,7 @@ items:
         コンテナー レジストリのビルド ステップの名前は、タスクを作成します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1051,7 +1051,7 @@ items:
   - typeScript
   summary: 特定のビルド タスクのすべてのビルド ステップの一覧を表示します。
   syntax:
-    content: 'function list(resourceGroupName: string, registryName: string, buildTaskName: string, options: function, callback: ServiceCallback<BuildStepList>)'
+    content: 'function list(resourceGroupName: string, registryName: string, buildTaskName: string, options: Object, callback: ServiceCallback<BuildStepList>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1067,7 +1067,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1085,7 +1085,7 @@ items:
   - typeScript
   summary: 特定のビルド タスクのすべてのビルド ステップの一覧を表示します。
   syntax:
-    content: 'function list(resourceGroupName: string, registryName: string, buildTaskName: string, options?: function)'
+    content: 'function list(resourceGroupName: string, registryName: string, buildTaskName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1104,7 +1104,7 @@ items:
         コンテナー レジストリのビルド タスクの名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1119,7 +1119,7 @@ items:
   - typeScript
   summary: シークレットの引数を含むステップのビルド引数を一覧表示します。
   syntax:
-    content: 'function listBuildArguments(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: function)'
+    content: 'function listBuildArguments(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1143,7 +1143,7 @@ items:
         コンテナー レジストリのビルド ステップの名前は、タスクを作成します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1192,7 +1192,7 @@ items:
   - typeScript
   summary: シークレットの引数を含むステップのビルド引数を一覧表示します。
   syntax:
-    content: 'function listBuildArguments(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options: function, callback: ServiceCallback<BuildArgumentList>)'
+    content: 'function listBuildArguments(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options: Object, callback: ServiceCallback<BuildArgumentList>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1212,7 +1212,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1230,7 +1230,7 @@ items:
   - typeScript
   summary: シークレットの引数を含むステップのビルド引数を一覧表示します。
   syntax:
-    content: 'function listBuildArgumentsNext(nextPageLink: string, options?: function)'
+    content: 'function listBuildArgumentsNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -1239,7 +1239,7 @@ items:
         リスト操作に成功した前回の呼び出しからの NextLink です。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1276,7 +1276,7 @@ items:
   - typeScript
   summary: シークレットの引数を含むステップのビルド引数を一覧表示します。
   syntax:
-    content: 'function listBuildArgumentsNext(nextPageLink: string, options: function, callback: ServiceCallback<BuildArgumentList>)'
+    content: 'function listBuildArgumentsNext(nextPageLink: string, options: Object, callback: ServiceCallback<BuildArgumentList>)'
     parameters:
     - id: nextPageLink
       type:
@@ -1284,7 +1284,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1302,7 +1302,7 @@ items:
   - typeScript
   summary: シークレットの引数を含むステップのビルド引数を一覧表示します。
   syntax:
-    content: 'function listBuildArgumentsNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listBuildArgumentsNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -1311,7 +1311,7 @@ items:
         リスト操作に成功した前回の呼び出しからの NextLink です。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1326,7 +1326,7 @@ items:
   - typeScript
   summary: シークレットの引数を含むステップのビルド引数を一覧表示します。
   syntax:
-    content: 'function listBuildArgumentsWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: function)'
+    content: 'function listBuildArgumentsWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1350,7 +1350,7 @@ items:
         コンテナー レジストリのビルド ステップの名前は、タスクを作成します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1365,7 +1365,7 @@ items:
   - typeScript
   summary: 特定のビルド タスクのすべてのビルド ステップの一覧を表示します。
   syntax:
-    content: 'function listNext(nextPageLink: string, options?: function)'
+    content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -1374,7 +1374,7 @@ items:
         リスト操作に成功した前回の呼び出しからの NextLink です。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1411,7 +1411,7 @@ items:
   - typeScript
   summary: 特定のビルド タスクのすべてのビルド ステップの一覧を表示します。
   syntax:
-    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<BuildStepList>)'
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<BuildStepList>)'
     parameters:
     - id: nextPageLink
       type:
@@ -1419,7 +1419,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1437,7 +1437,7 @@ items:
   - typeScript
   summary: 特定のビルド タスクのすべてのビルド ステップの一覧を表示します。
   syntax:
-    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -1446,7 +1446,7 @@ items:
         リスト操作に成功した前回の呼び出しからの NextLink です。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1461,7 +1461,7 @@ items:
   - typeScript
   summary: 特定のビルド タスクのすべてのビルド ステップの一覧を表示します。
   syntax:
-    content: 'function listWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, options?: function)'
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1480,7 +1480,7 @@ items:
         コンテナー レジストリのビルド タスクの名前。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1495,7 +1495,7 @@ items:
   - typeScript
   summary: ビルド タスクでビルド ステップを更新します。
   syntax:
-    content: 'function update(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options?: function)'
+    content: 'function update(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1524,7 +1524,7 @@ items:
         ビルド ステップを更新するためのパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1577,7 +1577,7 @@ items:
   - typeScript
   summary: ビルド タスクでビルド ステップを更新します。
   syntax:
-    content: 'function update(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options: function, callback: ServiceCallback<BuildStep>)'
+    content: 'function update(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options: Object, callback: ServiceCallback<BuildStep>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1601,7 +1601,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1619,7 +1619,7 @@ items:
   - typeScript
   summary: ビルド タスクでビルド ステップを更新します。
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, registryName: string, buildTaskName: string, stepName: string, buildStepUpdateParameters: BuildStepUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1648,7 +1648,7 @@ items:
         ビルド ステップを更新するためのパラメーター。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
