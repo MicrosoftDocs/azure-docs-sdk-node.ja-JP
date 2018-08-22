@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: ac59113a4e21ca00c9b26de26ebb08038ca0645a
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: dab566a0e1b543e4528265e36fdefcba4f8ddc08
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40069851"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41689431"
 items:
 - uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses
   name: ProtectedItemOperationStatuses
@@ -27,7 +27,7 @@ items:
   - typeScript
   summary: フェッチの状態のバックアップをトリガーするなどの操作、復元します。 進行中、完了または失敗の状態を指定できます。 操作のすべての可能な状態の OperationStatus 列挙型を参照することができます。 一部の操作では、ジョブを作成します。 このメソッドは、操作に関連付けられているジョブの一覧を返します。
   syntax:
-    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options?: function)'
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -61,7 +61,7 @@ items:
         OperationID は、フェッチする必要がある状態の操作を表します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -118,7 +118,7 @@ items:
   - typeScript
   summary: フェッチの状態のバックアップをトリガーするなどの操作、復元します。 進行中、完了または失敗の状態を指定できます。 操作のすべての可能な状態の OperationStatus 列挙型を参照することができます。 一部の操作では、ジョブを作成します。 このメソッドは、操作に関連付けられているジョブの一覧を返します。
   syntax:
-    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options: function, callback: ServiceCallback<OperationStatus>)'
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options: Object, callback: ServiceCallback<OperationStatus>)'
     parameters:
     - id: vaultName
       type:
@@ -146,7 +146,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -164,7 +164,7 @@ items:
   - typeScript
   summary: フェッチの状態のバックアップをトリガーするなどの操作、復元します。 進行中、完了または失敗の状態を指定できます。 操作のすべての可能な状態の OperationStatus 列挙型を参照することができます。 一部の操作では、ジョブを作成します。 このメソッドは、操作に関連付けられているジョブの一覧を返します。
   syntax:
-    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -198,7 +198,7 @@ items:
         OperationID は、フェッチする必要がある状態の操作を表します。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

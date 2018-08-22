@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 035e17da81dcd1e5d3f9a36cf17c3299af844086
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 0b2ea7e87c01e0a018d744a8a2c8dbcd6388c97a
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40067870"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41686761"
 items:
 - uid: azure-arm-recoveryservicesbackup.ProtectionPolicies
   name: ProtectionPolicies
@@ -38,7 +38,7 @@ items:
 
     GetPolicyOperationResult API を使用して、操作の状態を取得できます。
   syntax:
-    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, policyName: string, parameters: ProtectionPolicyResource, options?: function)'
+    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, policyName: string, parameters: ProtectionPolicyResource, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -62,7 +62,7 @@ items:
         リソースのバックアップ ポリシー
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -80,7 +80,7 @@ items:
 
     GetPolicyOperationResult API を使用して、操作の状態を取得できます。
   syntax:
-    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, policyName: string, parameters: ProtectionPolicyResource, options: function, callback: ServiceCallback<ProtectionPolicyResource>)'
+    content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, policyName: string, parameters: ProtectionPolicyResource, options: Object, callback: ServiceCallback<ProtectionPolicyResource>)'
     parameters:
     - id: vaultName
       type:
@@ -100,7 +100,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -158,7 +158,7 @@ items:
 
     GetPolicyOperationResult API を使用して、操作の状態を取得できます。
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(vaultName: string, resourceGroupName: string, policyName: string, parameters: ProtectionPolicyResource, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(vaultName: string, resourceGroupName: string, policyName: string, parameters: ProtectionPolicyResource, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -182,7 +182,7 @@ items:
         リソースのバックアップ ポリシー
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -197,7 +197,7 @@ items:
   - typeScript
   summary: 指定された、Recovery Services コンテナーからバックアップ ポリシーを削除します。 これは、非同期操作です。 GetPolicyOperationResult API を使用して、操作の状態を取得できます。
   syntax:
-    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, policyName: string, options?: function)'
+    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, policyName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -216,7 +216,7 @@ items:
         削除するバックアップ ポリシー。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -261,7 +261,7 @@ items:
   - typeScript
   summary: 指定された、Recovery Services コンテナーからバックアップ ポリシーを削除します。 これは、非同期操作です。 GetPolicyOperationResult API を使用して、操作の状態を取得できます。
   syntax:
-    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, policyName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(vaultName: string, resourceGroupName: string, policyName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: vaultName
       type:
@@ -277,7 +277,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -295,7 +295,7 @@ items:
   - typeScript
   summary: 指定された、Recovery Services コンテナーからバックアップ ポリシーを削除します。 これは、非同期操作です。 GetPolicyOperationResult API を使用して、操作の状態を取得できます。
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(vaultName: string, resourceGroupName: string, policyName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(vaultName: string, resourceGroupName: string, policyName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -314,7 +314,7 @@ items:
         削除するバックアップ ポリシー。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -329,7 +329,7 @@ items:
   - typeScript
   summary: Recovery Services コンテナーに関連付けられているバックアップ ポリシーの詳細を提供します。 これは、非同期操作です。 GetPolicyOperationResult API を使用して、操作の状態を取得できます。
   syntax:
-    content: 'function get(vaultName: string, resourceGroupName: string, policyName: string, options?: function)'
+    content: 'function get(vaultName: string, resourceGroupName: string, policyName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -348,7 +348,7 @@ items:
         フェッチするバックアップ ポリシー情報。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -393,7 +393,7 @@ items:
   - typeScript
   summary: Recovery Services コンテナーに関連付けられているバックアップ ポリシーの詳細を提供します。 これは、非同期操作です。 GetPolicyOperationResult API を使用して、操作の状態を取得できます。
   syntax:
-    content: 'function get(vaultName: string, resourceGroupName: string, policyName: string, options: function, callback: ServiceCallback<ProtectionPolicyResource>)'
+    content: 'function get(vaultName: string, resourceGroupName: string, policyName: string, options: Object, callback: ServiceCallback<ProtectionPolicyResource>)'
     parameters:
     - id: vaultName
       type:
@@ -409,7 +409,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -427,7 +427,7 @@ items:
   - typeScript
   summary: Recovery Services コンテナーに関連付けられているバックアップ ポリシーの詳細を提供します。 これは、非同期操作です。 GetPolicyOperationResult API を使用して、操作の状態を取得できます。
   syntax:
-    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, policyName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, policyName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -446,7 +446,7 @@ items:
         フェッチするバックアップ ポリシー情報。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
