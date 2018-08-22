@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3bd62c36d2871717e904aded23738768a2fd4a06
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 2a3034047fcc887876467b45d0966ce744dec982
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40069448"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41697136"
 items:
 - uid: azure-event-hubs.AadTokenProvider
   name: AadTokenProvider
@@ -18,7 +18,7 @@ items:
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="7a46d-101">AAD (Azure active Directory) TokenProvider を定義します。</span><span class="sxs-lookup"><span data-stu-id="7a46d-101">Defines the AAD (Azure ActiveDirectory) TokenProvider.</span></span>
+  summary: <span data-ttu-id="4fd5a-101">AAD (Azure active Directory) TokenProvider を定義します。</span><span class="sxs-lookup"><span data-stu-id="4fd5a-101">Defines the AAD (Azure ActiveDirectory) TokenProvider.</span></span>
   package: azure-event-hubs
 - uid: azure-event-hubs.AadTokenProvider.constructor
   name: AadTokenProvider
@@ -42,7 +42,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="4fd5a-102">{(ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |AAD で認証が成功した後、資格情報オブジェクトを MSITokenCredentials)} の資格情報です。</span><span class="sxs-lookup"><span data-stu-id="4fd5a-102">{(ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials)} credentials - The credentials object after successful authentication with AAD.</span></span>
   syntax:
     content: 'credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials'
     return:
@@ -55,7 +55,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="7a46d-102">指定された対象の jwt トークンの取得します。</span><span class="sxs-lookup"><span data-stu-id="7a46d-102">Gets the jwt token for the specified audience</span></span>
+  summary: <span data-ttu-id="4fd5a-103">指定された対象の jwt トークンの取得します。</span><span class="sxs-lookup"><span data-stu-id="4fd5a-103">Gets the jwt token for the specified audience</span></span>
   syntax:
     content: 'function getToken(audience?: string)'
     parameters:
@@ -75,7 +75,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="4fd5a-104">{number} tokenRenewalMarginInSeconds - は、トークンを更新する適切な秒数。</span><span class="sxs-lookup"><span data-stu-id="4fd5a-104">{number} tokenRenewalMarginInSeconds - The number of seconds within which it is good to renew the token.</span></span> <span data-ttu-id="4fd5a-105">定数は 270 秒 (4.5 分) に設定します。</span><span class="sxs-lookup"><span data-stu-id="4fd5a-105">A constant set to 270 seconds (4.5 minutes).</span></span> <span data-ttu-id="4fd5a-106">Adal では、そのトークンのキャッシュからトークンの情報を更新するときに 5 分間の設定 ウィンドウがあります。</span><span class="sxs-lookup"><span data-stu-id="4fd5a-106">Adal has a set window of 5 minutes when it refreshes the token from its token cache.</span></span>
   syntax:
     content: 'tokenRenewalMarginInSeconds: number'
     return:
@@ -89,7 +89,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="4fd5a-107">{number} tokenValidTimeInSeconds - トークンの有効秒数。</span><span class="sxs-lookup"><span data-stu-id="4fd5a-107">{number} tokenValidTimeInSeconds - The number of seconds for which the token is valid.</span></span> <span data-ttu-id="4fd5a-108">定数は、3599 秒 (約 1 時間) に設定します。</span><span class="sxs-lookup"><span data-stu-id="4fd5a-108">A constant set to 3599 seconds (~1 hour).</span></span> <span data-ttu-id="4fd5a-109">Adal が 1 の時間 (3,600 秒) の場合は、アクセス トークンを更新の設定の有効な時刻です。</span><span class="sxs-lookup"><span data-stu-id="4fd5a-109">Adal has a set valid time of 1 hour (3600 seconds) when it refreshes the access token.</span></span>
   syntax:
     content: 'tokenValidTimeInSeconds: number'
     return:
