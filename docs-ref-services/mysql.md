@@ -3,19 +3,16 @@ title: Node.js 用 Azure MySQL モジュール
 description: Node.js 用 Azure MySQL モジュールのリファレンス
 author: ajlam
 ms.author: andrela
-manager: sukamat
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: nodejs
 ms.service: mysql
-ms.openlocfilehash: 293922c892722ed68a13fc36a80f7675450b2b54
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 557645774ecb0ea5e774f99d03251a303ad19660
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34261812"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "41691772"
 ---
 # <a name="azure-mysql-modules-for-nodejs"></a>Node.js 用 Azure MySQL モジュール
 
