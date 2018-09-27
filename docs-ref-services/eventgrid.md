@@ -12,33 +12,33 @@ ms.devlang: nodejs
 ms.service: event-grid
 ms.custom: devcenter
 ms.openlocfilehash: bddf4efc1eda186aee92d30af24125823c7a8f7b
-ms.sourcegitcommit: f830f2f37429b32bbcfa856ad82a817ae2658341
+ms.sourcegitcommit: da60ea91d4215d738b1e0df82066f0fc337ad85a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46275723"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47347141"
 ---
-# <a name="azure-event-grid-libraries-for-nodejs"></a><span data-ttu-id="02672-103">Node.js 用 Azure Event Grid ライブラリ</span><span class="sxs-lookup"><span data-stu-id="02672-103">Azure Event Grid libraries for Node.js</span></span>
+# <a name="azure-event-grid-libraries-for-nodejs"></a><span data-ttu-id="0266d-103">Node.js 用 Azure Event Grid ライブラリ</span><span class="sxs-lookup"><span data-stu-id="0266d-103">Azure Event Grid libraries for Node.js</span></span>
 
-<span data-ttu-id="02672-104">Azure Event Grid で簡単な HTTP ベースのイベント処理を使用して、Azure サービスやカスタム ソースのイベントをリッスンして対応するイベント ドリブン アプリケーションを構築します。</span><span class="sxs-lookup"><span data-stu-id="02672-104">Build event-driven applications that listen and react to events from Azure services and custom sources using simple HTTP-based event handling with Azure Event Grid.</span></span>
+<span data-ttu-id="0266d-104">Azure Event Grid で簡単な HTTP ベースのイベント処理を使用して、Azure サービスやカスタム ソースのイベントをリッスンして対応するイベント ドリブン アプリケーションを構築します。</span><span class="sxs-lookup"><span data-stu-id="0266d-104">Build event-driven applications that listen and react to events from Azure services and custom sources using simple HTTP-based event handling with Azure Event Grid.</span></span>
 
-<span data-ttu-id="02672-105">Azure Event Grid の[詳細を確認](/azure/event-grid/overview)し、[Azure Blob Storage イベントのチュートリアル](/azure/storage/blobs/storage-blob-event-quickstart)を開始してください。</span><span class="sxs-lookup"><span data-stu-id="02672-105">[Learn more](/azure/event-grid/overview) about Azure Event Grid and get started with the [Azure Blob storage event tutorial](/azure/storage/blobs/storage-blob-event-quickstart).</span></span> 
+<span data-ttu-id="0266d-105">Azure Event Grid の[詳細を確認](/azure/event-grid/overview)し、[Azure Blob Storage イベントのチュートリアル](/azure/storage/blobs/storage-blob-event-quickstart)を開始してください。</span><span class="sxs-lookup"><span data-stu-id="0266d-105">[Learn more](/azure/event-grid/overview) about Azure Event Grid and get started with the [Azure Blob storage event tutorial](/azure/storage/blobs/storage-blob-event-quickstart).</span></span> 
 
-## <a name="publish-sdk"></a><span data-ttu-id="02672-106">発行 SDK</span><span class="sxs-lookup"><span data-stu-id="02672-106">Publish SDK</span></span>
+## <a name="publish-sdk"></a><span data-ttu-id="0266d-106">発行 SDK</span><span class="sxs-lookup"><span data-stu-id="0266d-106">Publish SDK</span></span>
 
-<span data-ttu-id="02672-107">Azure Event Grid 発行 SDK を使用して、イベントの作成、認証、トピックへの投稿を行います。</span><span class="sxs-lookup"><span data-stu-id="02672-107">Create events, authenticate, and post to topics using the Azure Event Grid publish SDK.</span></span>
+<span data-ttu-id="0266d-107">Azure Event Grid 発行 SDK を使用して、イベントの作成、認証、トピックへの投稿を行います。</span><span class="sxs-lookup"><span data-stu-id="0266d-107">Create events, authenticate, and post to topics using the Azure Event Grid publish SDK.</span></span>
 
-### <a name="installation"></a><span data-ttu-id="02672-108">インストール</span><span class="sxs-lookup"><span data-stu-id="02672-108">Installation</span></span>
+### <a name="installation"></a><span data-ttu-id="0266d-108">インストール</span><span class="sxs-lookup"><span data-stu-id="0266d-108">Installation</span></span>
 
-<span data-ttu-id="02672-109">npm を使用して、モジュールをプロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="02672-109">Add the module to your project with npm:</span></span>
+<span data-ttu-id="0266d-109">npm を使用して、モジュールをプロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="0266d-109">Add the module to your project with npm:</span></span>
 
 ```bash
 npm install azure-eventgrid
 ```
 
-### <a name="example-code"></a><span data-ttu-id="02672-110">コード例</span><span class="sxs-lookup"><span data-stu-id="02672-110">Example code</span></span>
+### <a name="example-code"></a><span data-ttu-id="0266d-110">コード例</span><span class="sxs-lookup"><span data-stu-id="0266d-110">Example code</span></span>
 
-<span data-ttu-id="02672-111">次のコード セグメントでは、モック イベントを Event Grid トピックに発行します。</span><span class="sxs-lookup"><span data-stu-id="02672-111">The following code segment publishes a mock event to a Event Grid topic.</span></span> <span data-ttu-id="02672-112">エンドポイントとトピックのアクセス キーは、Azure Portal または Azure CLI を使用して取得できます。</span><span class="sxs-lookup"><span data-stu-id="02672-112">You can retrieve the endpoint and topic access keys from the Azure Portal or through the Azure CLI:</span></span>
+<span data-ttu-id="0266d-111">次のコード セグメントでは、モック イベントを Event Grid トピックに発行します。</span><span class="sxs-lookup"><span data-stu-id="0266d-111">The following code segment publishes a mock event to a Event Grid topic.</span></span> <span data-ttu-id="0266d-112">エンドポイントとトピックのアクセス キーは、Azure Portal または Azure CLI を使用して取得できます。</span><span class="sxs-lookup"><span data-stu-id="0266d-112">You can retrieve the endpoint and topic access keys from the Azure Portal or through the Azure CLI:</span></span>
 
 ```azurecli-interactive
 endpoint=$(az eventgrid topic show --name <topic_name> -g gridResourceGroup --query "endpoint" --output tsv)
@@ -73,7 +73,7 @@ return EGClient.publishEvents(topicHostName, events).then((result) => {
 });
 ```
 
-<span data-ttu-id="02672-113">次のサンプルは、Azure Storage のイベントを処理する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="02672-113">This sample shows how to handle an event from Azure Storage:</span></span>
+<span data-ttu-id="0266d-113">次のサンプルは、Azure Storage のイベントを処理する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="0266d-113">This sample shows how to handle an event from Azure Storage:</span></span>
 
 ```javascript
 var http = require('http');
@@ -104,21 +104,21 @@ module.exports = function (context, req) {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="02672-114">クライアント API を探す</span><span class="sxs-lookup"><span data-stu-id="02672-114">Explore the client APIs</span></span>](/javascript/api/overview/azure/eventgrid/client)
+> [<span data-ttu-id="0266d-114">クライアント API を探す</span><span class="sxs-lookup"><span data-stu-id="0266d-114">Explore the client APIs</span></span>](/javascript/api/overview/azure/eventgrid/client)
 
-## <a name="management-sdk"></a><span data-ttu-id="02672-115">管理 SDK</span><span class="sxs-lookup"><span data-stu-id="02672-115">Management SDK</span></span>
+## <a name="management-sdk"></a><span data-ttu-id="0266d-115">管理 SDK</span><span class="sxs-lookup"><span data-stu-id="0266d-115">Management SDK</span></span>
 
-<span data-ttu-id="02672-116">管理 SDK を使用して、Event Grid のインスタンス、トピック、サブスクリプションを作成、更新、削除します。</span><span class="sxs-lookup"><span data-stu-id="02672-116">Create, update, or delete Event Grid instances, topics, and subscriptions with the management SDK.</span></span>
+<span data-ttu-id="0266d-116">管理 SDK を使用して、Event Grid のインスタンス、トピック、サブスクリプションを作成、更新、削除します。</span><span class="sxs-lookup"><span data-stu-id="0266d-116">Create, update, or delete Event Grid instances, topics, and subscriptions with the management SDK.</span></span>
 
-### <a name="installation"></a><span data-ttu-id="02672-117">インストール</span><span class="sxs-lookup"><span data-stu-id="02672-117">Installation</span></span>
+### <a name="installation"></a><span data-ttu-id="0266d-117">インストール</span><span class="sxs-lookup"><span data-stu-id="0266d-117">Installation</span></span>
 
 ```
 npm install azure-arm-eventgrid
 ```
 
-### <a name="example-code"></a><span data-ttu-id="02672-118">コード例</span><span class="sxs-lookup"><span data-stu-id="02672-118">Example code</span></span>
+### <a name="example-code"></a><span data-ttu-id="0266d-118">コード例</span><span class="sxs-lookup"><span data-stu-id="0266d-118">Example code</span></span>
 
-<span data-ttu-id="02672-119">次のコードでは、Event Grid トピック `topic1` を作成し、新しく作成されたトピックに関連付けられたアクセス キーを返します。</span><span class="sxs-lookup"><span data-stu-id="02672-119">The following code creates an Event Grid topic `topic1` and returns the access keys associated with the newly created topic.</span></span>
+<span data-ttu-id="0266d-119">次のコードでは、Event Grid トピック `topic1` を作成し、新しく作成されたトピックに関連付けられたアクセス キーを返します。</span><span class="sxs-lookup"><span data-stu-id="0266d-119">The following code creates an Event Grid topic `topic1` and returns the access keys associated with the newly created topic.</span></span>
 
 ```javascript
 var msRestAzure = require('ms-rest-azure');
@@ -138,8 +138,8 @@ msRestAzure.interactiveLogin(function(err, credentials) {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="02672-120">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="02672-120">Explore the management APIs</span></span>](/javascript/api/overview/azure/eventgrid/management)
+> [<span data-ttu-id="0266d-120">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="0266d-120">Explore the management APIs</span></span>](/javascript/api/overview/azure/eventgrid/management)
 
-## <a name="learn-more"></a><span data-ttu-id="02672-121">詳細情報</span><span class="sxs-lookup"><span data-stu-id="02672-121">Learn more</span></span>
+## <a name="learn-more"></a><span data-ttu-id="0266d-121">詳細情報</span><span class="sxs-lookup"><span data-stu-id="0266d-121">Learn more</span></span>
 
-- [<span data-ttu-id="02672-122">Event Grid SDK を使用してイベントを受信する</span><span class="sxs-lookup"><span data-stu-id="02672-122">Receive events using the Event Grid SDK</span></span>](/azure/event-grid/receive-events)
+- [<span data-ttu-id="0266d-122">Event Grid SDK を使用してイベントを受信する</span><span class="sxs-lookup"><span data-stu-id="0266d-122">Receive events using the Event Grid SDK</span></span>](/azure/event-grid/receive-events)
