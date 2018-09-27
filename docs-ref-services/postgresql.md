@@ -9,11 +9,11 @@ ms.topic: article
 ms.devlang: nodejs
 ms.service: postgresql
 ms.openlocfilehash: ed9373b767684e4893ca84de1030d062178b7ea4
-ms.sourcegitcommit: f830f2f37429b32bbcfa856ad82a817ae2658341
+ms.sourcegitcommit: da60ea91d4215d738b1e0df82066f0fc337ad85a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46275913"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47359050"
 ---
 # <a name="azure-postgresql-modules-for-nodejs"></a>Node.js 用 Azure PostgreSQL モジュール
 
