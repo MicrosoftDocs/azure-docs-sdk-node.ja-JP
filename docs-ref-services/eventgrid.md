@@ -12,11 +12,11 @@ ms.devlang: nodejs
 ms.service: event-grid
 ms.custom: devcenter
 ms.openlocfilehash: bddf4efc1eda186aee92d30af24125823c7a8f7b
-ms.sourcegitcommit: da60ea91d4215d738b1e0df82066f0fc337ad85a
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47347141"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48425750"
 ---
 # <a name="azure-event-grid-libraries-for-nodejs"></a>Node.js 用 Azure Event Grid ライブラリ
 
