@@ -5,11 +5,11 @@ title: Node.js デベロッパー センター | Microsoft Docs
 description: Azure を使用してクラウドで Node.js アプリケーションを開発およびデプロイする方法を説明します。
 ms.topic: hub-page
 ms.openlocfilehash: e2959c6ec20f07bc672cae05aebd7be039ca641e
-ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48488551"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "48981776"
 ---
 <div id="main" class="v2">
     <div class="container">
