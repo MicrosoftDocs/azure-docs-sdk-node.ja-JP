@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Server Management
-ms.openlocfilehash: bd9577bf758552227a98a81b756a81ce05239be2
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: e712bf500bef94327f49a05e4ae31e5d3eb0400d
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49674267"
 ---
 # <a name="azure-server-management-modules-for-nodejs"></a>Node.js 用 Azure Server Management モジュール
 
@@ -34,8 +34,8 @@ Node.js 用 Azure Server Management モジュールをインストールする�
 npm install azure-arm-servermanagement
 ```
 
-##<a name="example"></a>例
+## <a name="example"></a>例
 
-##<a name="samples"></a>サンプル
+## <a name="samples"></a>サンプル
 
 アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。

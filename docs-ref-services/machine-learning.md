@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Machine Learning
-ms.openlocfilehash: 7dfa6d8fa633863fe834ce73462584e79c312c5d
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7e39084c65a40e47ed61cc01daf994aff447690e
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259891"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49677899"
 ---
 # <a name="azure-machine-learning-modules-for-nodejs"></a>Node.js 用 Azure Machine Learning モジュール
 

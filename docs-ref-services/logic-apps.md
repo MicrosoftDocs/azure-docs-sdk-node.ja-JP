@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Logic Apps
-ms.openlocfilehash: 2de867fdd0aa31b63b9680cc3f0c2e7f6301e632
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 021f57c7f4f1b86a3c0e97f345d2f934351669b8
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34261553"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49771067"
 ---
 # <a name="azure-logic-apps-modules-for-nodejs"></a>Node.js 用 Azure Logic Apps モジュール
 
@@ -29,7 +29,7 @@ Logic Apps を使用する利点は次のとおりです。
 - オンプレミスとクラウドにまたがる異なるシステム間で接続や同期ができる
 - BizTalk Server、API Management、Azure Functions、Azure Service Bus を基に作成でき、最上級の統合サポートが得られる
 
-Logic Apps は完全に管理された iPaaS (サービスとしての統合プラットフォーム) であり、開発者はホスティング、スケーラビリティ、可用性、管理能力の構築について頭を悩ます必要がなくなります。 Logic Apps は需要に合わせて自動的にスケールアップします。
+Logic Apps はフル マネージドの iPaaS (サービスとしての統合プラットフォーム) であり、開発者はホスティング、スケーラビリティ、可用性、管理能力の構築について頭を悩ます必要がなくなります。 Logic Apps は需要に合わせて自動的にスケールアップします。
 
 ## <a name="management-package"></a>管理パッケージ
 

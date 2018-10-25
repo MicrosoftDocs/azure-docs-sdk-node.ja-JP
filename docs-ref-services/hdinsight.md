@@ -8,12 +8,12 @@ manager: kfile
 ms.topic: article
 ms.devlang: nodejs
 ms.date: 07/18/2017
-ms.openlocfilehash: 9a40830e7c5330d4e258840b1b1b2210acf891c5
-ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
+ms.openlocfilehash: e35e0d487efce2a591130403f8b72a43c638fdec
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "48956276"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49752287"
 ---
 # <a name="azure-hdinsight-modules-for-nodejs"></a>Node.js 用 Azure HDInsight モジュール
 
