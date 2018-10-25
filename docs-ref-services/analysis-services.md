@@ -10,31 +10,31 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Analysis Services
-ms.openlocfilehash: 166d0450ac9b2d005f3ce4ecba5ce36e1786ae09
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 5214cd2f171074ba330bc639643dfba490540856
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49702685"
 ---
-# <a name="azure-analysis-services-modules-for-nodejs"></a><span data-ttu-id="623b2-103">Node.js 用 Azure Analysis Services モジュール</span><span class="sxs-lookup"><span data-stu-id="623b2-103">Azure Analysis Services modules for Node.js</span></span>
+# <a name="azure-analysis-services-modules-for-nodejs"></a><span data-ttu-id="0f8bf-103">Node.js 用 Azure Analysis Services モジュール</span><span class="sxs-lookup"><span data-stu-id="0f8bf-103">Azure Analysis Services modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="623b2-104">概要</span><span class="sxs-lookup"><span data-stu-id="623b2-104">Overview</span></span>
-<span data-ttu-id="623b2-105">このパッケージには、Microsoft Azure Analysis Services の管理を省力化する Node.js モジュールが備わっています。</span><span class="sxs-lookup"><span data-stu-id="623b2-105">This package provides a Node.js module that makes it easy to manage Microsoft Azure Analysis Services.</span></span>
+## <a name="overview"></a><span data-ttu-id="0f8bf-104">概要</span><span class="sxs-lookup"><span data-stu-id="0f8bf-104">Overview</span></span>
+<span data-ttu-id="0f8bf-105">このパッケージには、Microsoft Azure Analysis Services の管理を省力化する Node.js モジュールが備わっています。</span><span class="sxs-lookup"><span data-stu-id="0f8bf-105">This package provides a Node.js module that makes it easy to manage Microsoft Azure Analysis Services.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="623b2-106">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="623b2-106">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="0f8bf-106">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="0f8bf-106">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="623b2-107">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="623b2-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="0f8bf-107">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="0f8bf-107">Install the npm module</span></span>
 
-<span data-ttu-id="623b2-108">Azure Analysis Services の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="623b2-108">Install the Azure Analysis Services npm module</span></span>
+<span data-ttu-id="0f8bf-108">Azure Analysis Services の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="0f8bf-108">Install the Azure Analysis Services npm module</span></span>
 
 ```bash
 npm install azure-arm-analysisservices
 ```
 
-### <a name="example"></a><span data-ttu-id="623b2-109">例</span><span class="sxs-lookup"><span data-stu-id="623b2-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="0f8bf-109">例</span><span class="sxs-lookup"><span data-stu-id="0f8bf-109">Example</span></span>
 
-<span data-ttu-id="623b2-110">この例では、利用可能なすべての Analysis Services サーバーを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="623b2-110">This example lists all available Analysis Service servers.</span></span>
+<span data-ttu-id="0f8bf-110">この例では、利用可能なすべての Analysis Services サーバーを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="0f8bf-110">This example lists all available Analysis Service servers.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -52,6 +52,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="623b2-111">サンプル</span><span class="sxs-lookup"><span data-stu-id="623b2-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="0f8bf-111">サンプル</span><span class="sxs-lookup"><span data-stu-id="0f8bf-111">Samples</span></span>
 
-<span data-ttu-id="623b2-112">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="623b2-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="0f8bf-112">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="0f8bf-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
