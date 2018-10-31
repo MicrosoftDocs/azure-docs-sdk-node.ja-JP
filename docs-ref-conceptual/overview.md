@@ -1,6 +1,6 @@
 ---
-title: Node.js 用 Azure モジュール
-description: Node.js 用 Azure 管理/サービス モジュールの概要
+title: JavaScript 用 Azure モジュール
+description: JavaScript 用 Azure 管理/サービス モジュールの概要
 author: rloutlaw
 ms.author: routlaw
 manager: routlaw
@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 165e1580e408b71b6147e51c41e22bc8fe7277a1
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220534"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49672997"
 ---
-# <a name="azure-modules-for-nodejs"></a>Node.js 用 Azure モジュール
+# <a name="azure-modules-for-javascript"></a>JavaScript 用 Azure モジュール
 
-Node.js アプリケーションから Node.js 用 Azure モジュールを使用して Azure リソースを管理し、サービスに接続します。 このコードは、プロジェクト内で [npm モジュール](node-sdk-azure-install.md)として使用することができます。 
+JavaScript アプリケーションから JavaScript 用 Azure モジュールを使用して Azure リソースを管理し、サービスに接続します。 このコードは、プロジェクト内で [npm モジュール](node-sdk-azure-install.md)として使用することができます。 
 
 ## <a name="manage-azure-resources"></a>Azure のリソースを管理する
 
@@ -85,7 +85,7 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 
 ## <a name="connect-to-azure-services"></a>Azure サービスへの接続
 
-Azure モジュールを使用して Azure 内のリソースを作成したり管理したりするだけでなく、パッケージを使用して、アプリで Azure クラウド サービスに接続して利用することもできます。 たとえば、SQL Database のテーブルを更新したり、Azure Storage にファイルをアップロードしたりすることもできます。 特定のサービスに必要なパッケージを[全一覧](node-sdk-azure-install.md)からお選びください。また、それらのモジュールをアプリ内で使用する方法について紹介したチュートリアルやサンプル コードは、[Node.js デベロッパー センター](https://azure.microsoft.com/develop/nodejs/)から入手できます。
+Azure モジュールを使用して Azure 内のリソースを作成したり管理したりするだけでなく、パッケージを使用して、アプリで Azure クラウド サービスに接続して利用することもできます。 たとえば、SQL Database のテーブルを更新したり、Azure Storage にファイルをアップロードしたりすることもできます。 特定のサービスに必要なパッケージを[全一覧](node-sdk-azure-install.md)からお選びください。また、それらのモジュールをアプリ内で使用する方法について紹介したチュートリアルやサンプル コードは、[JavaScript デベロッパー センター](https://azure.microsoft.com/develop/nodejs/)から入手できます。
 
 たとえば、Azure ストレージ コンテナーに格納されているすべての BLOB のコンテンツを印刷するには、次のコードを使用します。
 
