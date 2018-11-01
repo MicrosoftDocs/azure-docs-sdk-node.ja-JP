@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Fabric
 ms.openlocfilehash: 3fd2f73bc6fddf01548bbb92cce540775d4c7c76
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49769797"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50340250"
 ---
 # <a name="azure-service-fabric-modules-for-nodejs"></a>Node.js 用 Azure Service Fabric モジュール
 
