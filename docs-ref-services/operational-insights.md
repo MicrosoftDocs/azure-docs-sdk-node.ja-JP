@@ -11,23 +11,23 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Operational Insights
 ms.openlocfilehash: c8a137c4759982e0551d9048ac271780e6a68afe
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49801232"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50270975"
 ---
-# <a name="azure-operational-insights-modules-for-nodejs"></a><span data-ttu-id="d87b4-103">Node.js 用 Azure Operational Insights モジュール</span><span class="sxs-lookup"><span data-stu-id="d87b4-103">Azure Operational Insights Modules for Node.js</span></span>
+# <a name="azure-operational-insights-modules-for-nodejs"></a><span data-ttu-id="bcf94-103">Node.js 用 Azure Operational Insights モジュール</span><span class="sxs-lookup"><span data-stu-id="bcf94-103">Azure Operational Insights Modules for Node.js</span></span>
 
-<span data-ttu-id="d87b4-104">Node.js 用 Azure Operational Insights モジュールをインストールするには npm を使用します。</span><span class="sxs-lookup"><span data-stu-id="d87b4-104">Use npm to install the Azure Operational Insights module for Node.js</span></span>
+<span data-ttu-id="bcf94-104">Node.js 用 Azure Operational Insights モジュールをインストールするには npm を使用します。</span><span class="sxs-lookup"><span data-stu-id="bcf94-104">Use npm to install the Azure Operational Insights module for Node.js</span></span>
 
 ```bash
 npm install azure-arm-operationalinsights
 ```
 
-### <a name="example"></a><span data-ttu-id="d87b4-105">例</span><span class="sxs-lookup"><span data-stu-id="d87b4-105">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="bcf94-105">例</span><span class="sxs-lookup"><span data-stu-id="bcf94-105">Example</span></span> 
 
-<span data-ttu-id="d87b4-106">この例では、クライアントを作成して Operational Insights に接続し、指定したリソース グループの一連のワークスペースを取得しています。</span><span class="sxs-lookup"><span data-stu-id="d87b4-106">This example creates a client, connects to Operational Insights and retreives a list of workspaces by a specified resource group.</span></span>
+<span data-ttu-id="bcf94-106">この例では、クライアントを作成して Operational Insights に接続し、指定したリソース グループの一連のワークスペースを取得しています。</span><span class="sxs-lookup"><span data-stu-id="bcf94-106">This example creates a client, connects to Operational Insights and retreives a list of workspaces by a specified resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -47,6 +47,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ``` 
 
-## <a name="samples"></a><span data-ttu-id="d87b4-107">サンプル</span><span class="sxs-lookup"><span data-stu-id="d87b4-107">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="bcf94-107">サンプル</span><span class="sxs-lookup"><span data-stu-id="bcf94-107">Samples</span></span>
 
-<span data-ttu-id="d87b4-108">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="d87b4-108">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="bcf94-108">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="bcf94-108">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

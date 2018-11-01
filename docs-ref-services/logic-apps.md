@@ -11,37 +11,37 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Logic Apps
 ms.openlocfilehash: 021f57c7f4f1b86a3c0e97f345d2f934351669b8
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49771067"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50281535"
 ---
-# <a name="azure-logic-apps-modules-for-nodejs"></a><span data-ttu-id="f92c4-103">Node.js 用 Azure Logic Apps モジュール</span><span class="sxs-lookup"><span data-stu-id="f92c4-103">Azure Logic Apps modules for Node.js</span></span>
+# <a name="azure-logic-apps-modules-for-nodejs"></a><span data-ttu-id="908f2-103">Node.js 用 Azure Logic Apps モジュール</span><span class="sxs-lookup"><span data-stu-id="908f2-103">Azure Logic Apps modules for Node.js</span></span>
 
-<span data-ttu-id="f92c4-104">Logic Apps では、クラウド上でのスケーラブルな統合やワークフローを簡略化し、実装するための手段を提供します。</span><span class="sxs-lookup"><span data-stu-id="f92c4-104">Logic Apps provide a way to simplify and implement scalable integrations and workflows in the cloud.</span></span> <span data-ttu-id="f92c4-105">また、ワークフローと呼ばれる一連のステップとしてプロセスをモデル化し、自動化するためのビジュアル デザイナーが用意されています。</span><span class="sxs-lookup"><span data-stu-id="f92c4-105">It provides a visual designer to model and automate your process as a series of steps known as a workflow.</span></span> <span data-ttu-id="f92c4-106">サービスとプロトコルをまたいだ迅速な統合のために、クラウドとオンプレミスの両方で数多くのコネクタが提供されています。</span><span class="sxs-lookup"><span data-stu-id="f92c4-106">There are many connectors across the cloud and on-premises to quickly integrate across services and protocols.</span></span> <span data-ttu-id="f92c4-107">ロジック アプリはトリガー ("Dynamics CRM にアカウントが追加されたとき" など) によって起動することができ、その後も数多くのアクション、変換、条件ロジックを組み合わせて開始することができます。</span><span class="sxs-lookup"><span data-stu-id="f92c4-107">A logic app begins with a trigger (like 'When an account is added to Dynamics CRM') and after firing can begin many combinations of actions, conversions, and condition logic.</span></span>
+<span data-ttu-id="908f2-104">Logic Apps では、クラウド上でのスケーラブルな統合やワークフローを簡略化し、実装するための手段を提供します。</span><span class="sxs-lookup"><span data-stu-id="908f2-104">Logic Apps provide a way to simplify and implement scalable integrations and workflows in the cloud.</span></span> <span data-ttu-id="908f2-105">また、ワークフローと呼ばれる一連のステップとしてプロセスをモデル化し、自動化するためのビジュアル デザイナーが用意されています。</span><span class="sxs-lookup"><span data-stu-id="908f2-105">It provides a visual designer to model and automate your process as a series of steps known as a workflow.</span></span> <span data-ttu-id="908f2-106">サービスとプロトコルをまたいだ迅速な統合のために、クラウドとオンプレミスの両方で数多くのコネクタが提供されています。</span><span class="sxs-lookup"><span data-stu-id="908f2-106">There are many connectors across the cloud and on-premises to quickly integrate across services and protocols.</span></span> <span data-ttu-id="908f2-107">ロジック アプリはトリガー ("Dynamics CRM にアカウントが追加されたとき" など) によって起動することができ、その後も数多くのアクション、変換、条件ロジックを組み合わせて開始することができます。</span><span class="sxs-lookup"><span data-stu-id="908f2-107">A logic app begins with a trigger (like 'When an account is added to Dynamics CRM') and after firing can begin many combinations of actions, conversions, and condition logic.</span></span>
 
-<span data-ttu-id="f92c4-108">Logic Apps を使用する利点は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="f92c4-108">The advantages of using Logic Apps include the following:</span></span>
-- <span data-ttu-id="f92c4-109">わかりやすい設計ツールを使って複雑なプロセスを設計できるため、時間を節約できる</span><span class="sxs-lookup"><span data-stu-id="f92c4-109">Saving time by designing complex processes using easy to understand design tools</span></span>
-- <span data-ttu-id="f92c4-110">コードでは実装が難しいパターンやワークフローをシームレスに実装できる</span><span class="sxs-lookup"><span data-stu-id="f92c4-110">Implementing patterns and workflows seamlessly, that would otherwise be difficult to implement in code</span></span>
-- <span data-ttu-id="f92c4-111">テンプレートを基に簡単に設計を開始できる</span><span class="sxs-lookup"><span data-stu-id="f92c4-111">Getting started quickly from templates</span></span>
-- <span data-ttu-id="f92c4-112">独自のカスタム API、コード、アクションでロジック アプリをカスタマイズできる</span><span class="sxs-lookup"><span data-stu-id="f92c4-112">Customizing your logic app with your own custom APIs, code, and actions</span></span>
-- <span data-ttu-id="f92c4-113">オンプレミスとクラウドにまたがる異なるシステム間で接続や同期ができる</span><span class="sxs-lookup"><span data-stu-id="f92c4-113">Connect and synchronise disparate systems across on-premises and the cloud</span></span>
-- <span data-ttu-id="f92c4-114">BizTalk Server、API Management、Azure Functions、Azure Service Bus を基に作成でき、最上級の統合サポートが得られる</span><span class="sxs-lookup"><span data-stu-id="f92c4-114">Build off of BizTalk server, API Management, Azure Functions, and Azure Service Bus with first-class integration support</span></span>
+<span data-ttu-id="908f2-108">Logic Apps を使用する利点は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="908f2-108">The advantages of using Logic Apps include the following:</span></span>
+- <span data-ttu-id="908f2-109">わかりやすい設計ツールを使って複雑なプロセスを設計できるため、時間を節約できる</span><span class="sxs-lookup"><span data-stu-id="908f2-109">Saving time by designing complex processes using easy to understand design tools</span></span>
+- <span data-ttu-id="908f2-110">コードでは実装が難しいパターンやワークフローをシームレスに実装できる</span><span class="sxs-lookup"><span data-stu-id="908f2-110">Implementing patterns and workflows seamlessly, that would otherwise be difficult to implement in code</span></span>
+- <span data-ttu-id="908f2-111">テンプレートを基に簡単に設計を開始できる</span><span class="sxs-lookup"><span data-stu-id="908f2-111">Getting started quickly from templates</span></span>
+- <span data-ttu-id="908f2-112">独自のカスタム API、コード、アクションでロジック アプリをカスタマイズできる</span><span class="sxs-lookup"><span data-stu-id="908f2-112">Customizing your logic app with your own custom APIs, code, and actions</span></span>
+- <span data-ttu-id="908f2-113">オンプレミスとクラウドにまたがる異なるシステム間で接続や同期ができる</span><span class="sxs-lookup"><span data-stu-id="908f2-113">Connect and synchronise disparate systems across on-premises and the cloud</span></span>
+- <span data-ttu-id="908f2-114">BizTalk Server、API Management、Azure Functions、Azure Service Bus を基に作成でき、最上級の統合サポートが得られる</span><span class="sxs-lookup"><span data-stu-id="908f2-114">Build off of BizTalk server, API Management, Azure Functions, and Azure Service Bus with first-class integration support</span></span>
 
-<span data-ttu-id="f92c4-115">Logic Apps はフル マネージドの iPaaS (サービスとしての統合プラットフォーム) であり、開発者はホスティング、スケーラビリティ、可用性、管理能力の構築について頭を悩ます必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="f92c4-115">Logic Apps is a fully managed iPaaS (integration Platform as a Service) allowing developers not to have to worry about building hosting, scalability, availability and management.</span></span> <span data-ttu-id="f92c4-116">Logic Apps は需要に合わせて自動的にスケールアップします。</span><span class="sxs-lookup"><span data-stu-id="f92c4-116">Logic Apps will scale up automatically to meet demand.</span></span>
+<span data-ttu-id="908f2-115">Logic Apps はフル マネージドの iPaaS (サービスとしての統合プラットフォーム) であり、開発者はホスティング、スケーラビリティ、可用性、管理能力の構築について頭を悩ます必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="908f2-115">Logic Apps is a fully managed iPaaS (integration Platform as a Service) allowing developers not to have to worry about building hosting, scalability, availability and management.</span></span> <span data-ttu-id="908f2-116">Logic Apps は需要に合わせて自動的にスケールアップします。</span><span class="sxs-lookup"><span data-stu-id="908f2-116">Logic Apps will scale up automatically to meet demand.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="f92c4-117">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="f92c4-117">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="908f2-117">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="908f2-117">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="f92c4-118">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="f92c4-118">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="908f2-118">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="908f2-118">Install the npm module</span></span>
 
-<span data-ttu-id="f92c4-119">Node.js 用 Azure ロジック モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="f92c4-119">Install the Azure logic module for Node.js</span></span>
+<span data-ttu-id="908f2-119">Node.js 用 Azure ロジック モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="908f2-119">Install the Azure logic module for Node.js</span></span>
 
 ```bash
 npm install azure-arm-logic
 ```
 
-### <a name="example"></a><span data-ttu-id="f92c4-120">例</span><span class="sxs-lookup"><span data-stu-id="f92c4-120">Example</span></span>
+### <a name="example"></a><span data-ttu-id="908f2-120">例</span><span class="sxs-lookup"><span data-stu-id="908f2-120">Example</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -57,6 +57,6 @@ msRestAzure
   .then(workflows => console.log(workflows));
 ```
 
-### <a name="samples"></a><span data-ttu-id="f92c4-121">サンプル</span><span class="sxs-lookup"><span data-stu-id="f92c4-121">Samples</span></span>
+### <a name="samples"></a><span data-ttu-id="908f2-121">サンプル</span><span class="sxs-lookup"><span data-stu-id="908f2-121">Samples</span></span>
 
-<span data-ttu-id="f92c4-122">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="f92c4-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="908f2-122">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="908f2-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
