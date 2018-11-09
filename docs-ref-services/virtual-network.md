@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Virtual Network
 ms.openlocfilehash: 11341fdff5df3b7521319d841707493db1d07732
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50406448"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51062051"
 ---
-# <a name="azure-virtual-network-modules-for-nodejs"></a><span data-ttu-id="d380c-103">Node.js 用 Azure Virtual Network モジュール</span><span class="sxs-lookup"><span data-stu-id="d380c-103">Azure Virtual Network modules for Node.js</span></span>
+# <a name="azure-virtual-network-modules-for-nodejs"></a><span data-ttu-id="87534-103">Node.js 用 Azure Virtual Network モジュール</span><span class="sxs-lookup"><span data-stu-id="87534-103">Azure Virtual Network modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="d380c-104">概要</span><span class="sxs-lookup"><span data-stu-id="d380c-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="87534-104">概要</span><span class="sxs-lookup"><span data-stu-id="87534-104">Overview</span></span>
 
-<span data-ttu-id="d380c-105">Azure Virtual Network サービスでは、仮想ネットワーク (VNet) を使用して Azure リソースを安全に相互接続することができます。</span><span class="sxs-lookup"><span data-stu-id="d380c-105">The Azure Virtual Network service enables you to securely connect Azure resources to each other with virtual networks (VNets).</span></span> <span data-ttu-id="d380c-106">VNet とは、クラウド内のユーザー独自のネットワークを表したものです。</span><span class="sxs-lookup"><span data-stu-id="d380c-106">A VNet is a representation of your own network in the cloud.</span></span> <span data-ttu-id="d380c-107">サブスクリプション専用に Azure クラウドが論理的に分離されています。</span><span class="sxs-lookup"><span data-stu-id="d380c-107">A VNet is a logical isolation of the Azure cloud dedicated to your subscription.</span></span> <span data-ttu-id="d380c-108">VNet は、オンプレミス ネットワークに接続することもできます。</span><span class="sxs-lookup"><span data-stu-id="d380c-108">You can also connect VNets to your on-premises network.</span></span>
+<span data-ttu-id="87534-105">Azure Virtual Network サービスでは、仮想ネットワーク (VNet) を使用して Azure リソースを安全に相互接続することができます。</span><span class="sxs-lookup"><span data-stu-id="87534-105">The Azure Virtual Network service enables you to securely connect Azure resources to each other with virtual networks (VNets).</span></span> <span data-ttu-id="87534-106">VNet とは、クラウド内のユーザー独自のネットワークを表したものです。</span><span class="sxs-lookup"><span data-stu-id="87534-106">A VNet is a representation of your own network in the cloud.</span></span> <span data-ttu-id="87534-107">サブスクリプション専用に Azure クラウドが論理的に分離されています。</span><span class="sxs-lookup"><span data-stu-id="87534-107">A VNet is a logical isolation of the Azure cloud dedicated to your subscription.</span></span> <span data-ttu-id="87534-108">VNet は、オンプレミス ネットワークに接続することもできます。</span><span class="sxs-lookup"><span data-stu-id="87534-108">You can also connect VNets to your on-premises network.</span></span>
 
-<span data-ttu-id="d380c-109">Azure Virtual Network の詳細については、[こちら](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d380c-109">Learn more about [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).</span></span>
+<span data-ttu-id="87534-109">Azure Virtual Network の詳細については、[こちら](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="87534-109">Learn more about [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="d380c-110">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="d380c-110">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="87534-110">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="87534-110">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="d380c-111">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="d380c-111">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="87534-111">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="87534-111">Install the npm module</span></span>
 
-<span data-ttu-id="d380c-112">Azure Virtual Network の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="d380c-112">Install the Azure Virtual Network npm module</span></span>
+<span data-ttu-id="87534-112">Azure Virtual Network の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="87534-112">Install the Azure Virtual Network npm module</span></span>
 
 ```bash
 npm install azure-arm-network
 ```
 
-### <a name="example"></a><span data-ttu-id="d380c-113">例</span><span class="sxs-lookup"><span data-stu-id="d380c-113">Example</span></span>
+### <a name="example"></a><span data-ttu-id="87534-113">例</span><span class="sxs-lookup"><span data-stu-id="87534-113">Example</span></span>
 
-<span data-ttu-id="d380c-114">この例では、仮想ネットワークの一覧を取得して出力します。</span><span class="sxs-lookup"><span data-stu-id="d380c-114">This example gets and prints the list of virtual networks</span></span>
+<span data-ttu-id="87534-114">この例では、仮想ネットワークの一覧を取得して出力します。</span><span class="sxs-lookup"><span data-stu-id="87534-114">This example gets and prints the list of virtual networks</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -58,6 +58,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="d380c-115">サンプル</span><span class="sxs-lookup"><span data-stu-id="d380c-115">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="87534-115">サンプル</span><span class="sxs-lookup"><span data-stu-id="87534-115">Samples</span></span>
 
-<span data-ttu-id="d380c-116">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="d380c-116">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="87534-116">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="87534-116">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

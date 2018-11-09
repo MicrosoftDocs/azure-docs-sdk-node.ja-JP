@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Relay
 ms.openlocfilehash: e0bb24ac422d71bd8c957e94cceffd57bf121e48
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50406378"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51062071"
 ---
-# <a name="azure-relay-modules-for-nodejs"></a><span data-ttu-id="528bd-103">Node.js 用 Azure Relay モジュール</span><span class="sxs-lookup"><span data-stu-id="528bd-103">Azure Relay modules for Node.js</span></span>
+# <a name="azure-relay-modules-for-nodejs"></a><span data-ttu-id="03988-103">Node.js 用 Azure Relay モジュール</span><span class="sxs-lookup"><span data-stu-id="03988-103">Azure Relay modules for Node.js</span></span>
 
-<span data-ttu-id="528bd-104">Azure Relay サービスでは、ファイアウォール接続の開放や企業ネットワーク インフラストラクチャの煩わしい変更を必要とせずに、企業のエンタープライズ ネットワーク内にあるサービスをパブリック クラウドに安全に公開できるハイブリッド アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="528bd-104">The Azure Relay service creates hybrid applications by enabling you to securely expose services that reside within a corporate enterprise network to the public cloud, without having to open a firewall connection, or require intrusive changes to a corporate network infrastructure.</span></span> <span data-ttu-id="528bd-105">Relay では、多様なトランスポート プロトコルと Web サービス標準がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="528bd-105">Relay supports a variety of different transport protocols and web services standards.</span></span>
+<span data-ttu-id="03988-104">Azure Relay サービスでは、ファイアウォール接続の開放や企業ネットワーク インフラストラクチャの煩わしい変更を必要とせずに、企業のエンタープライズ ネットワーク内にあるサービスをパブリック クラウドに安全に公開できるハイブリッド アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="03988-104">The Azure Relay service creates hybrid applications by enabling you to securely expose services that reside within a corporate enterprise network to the public cloud, without having to open a firewall connection, or require intrusive changes to a corporate network infrastructure.</span></span> <span data-ttu-id="03988-105">Relay では、多様なトランスポート プロトコルと Web サービス標準がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="03988-105">Relay supports a variety of different transport protocols and web services standards.</span></span>
 
-<span data-ttu-id="528bd-106">Azure Relay の詳細については、[こちら](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="528bd-106">Learn more about [Azure Relay](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it).</span></span>
+<span data-ttu-id="03988-106">Azure Relay の詳細については、[こちら](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="03988-106">Learn more about [Azure Relay](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="528bd-107">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="528bd-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="03988-107">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="03988-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="528bd-108">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="528bd-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="03988-108">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="03988-108">Install the npm module</span></span>
 
-<span data-ttu-id="528bd-109">Azure Relay の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="528bd-109">Install the Azure Relay npm module</span></span>
+<span data-ttu-id="03988-109">Azure Relay の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="03988-109">Install the Azure Relay npm module</span></span>
 
 ```bash
 npm install azure-arm-relay
 ```
 
-### <a name="example"></a><span data-ttu-id="528bd-110">例</span><span class="sxs-lookup"><span data-stu-id="528bd-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="03988-110">例</span><span class="sxs-lookup"><span data-stu-id="03988-110">Example</span></span>
 
-<span data-ttu-id="528bd-111">この例では、Relay クライアントの名前空間をリストします。</span><span class="sxs-lookup"><span data-stu-id="528bd-111">This example lists the namespaces for a Relay client.</span></span>
+<span data-ttu-id="03988-111">この例では、Relay クライアントの名前空間をリストします。</span><span class="sxs-lookup"><span data-stu-id="03988-111">This example lists the namespaces for a Relay client.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -55,6 +55,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="528bd-112">サンプル</span><span class="sxs-lookup"><span data-stu-id="528bd-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="03988-112">サンプル</span><span class="sxs-lookup"><span data-stu-id="03988-112">Samples</span></span>
 
-<span data-ttu-id="528bd-113">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="528bd-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="03988-113">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="03988-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

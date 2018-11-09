@@ -12,36 +12,36 @@ ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
 ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50402388"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51134236"
 ---
-# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="b2c3a-103">JavaScript 用 Cognitive Services Speech SDK</span><span class="sxs-lookup"><span data-stu-id="b2c3a-103">Cognitive Services Speech SDK for JavaScript</span></span>
+# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="8c8b5-103">JavaScript 用 Cognitive Services Speech SDK</span><span class="sxs-lookup"><span data-stu-id="8c8b5-103">Cognitive Services Speech SDK for JavaScript</span></span>
 
-## <a name="overview"></a><span data-ttu-id="b2c3a-104">概要</span><span class="sxs-lookup"><span data-stu-id="b2c3a-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="8c8b5-104">概要</span><span class="sxs-lookup"><span data-stu-id="8c8b5-104">Overview</span></span>
 
-<span data-ttu-id="b2c3a-105">Microsoft では、音声対応アプリケーションの開発を簡素化するために、[Speech Service](https://aka.ms/csspeech) で使用する Speech SDK を提供しています。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
-<span data-ttu-id="b2c3a-106">Speech SDK には、一貫性のあるネイティブな Speech-to-Text API と Speech Translation API が提供されています。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
+<span data-ttu-id="8c8b5-105">Microsoft では、音声対応アプリケーションの開発を簡素化するために、[Speech Service](https://aka.ms/csspeech) で使用する Speech SDK を提供しています。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
+<span data-ttu-id="8c8b5-106">Speech SDK には、一貫性のあるネイティブな Speech-to-Text API と Speech Translation API が提供されています。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b2c3a-107">Cognitive Services Speech SDK は、現在ブラウザーでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-107">The Cognitive Services Speech SDK is currently available only for browsers.</span></span>
-> <span data-ttu-id="b2c3a-108">NPM パッケージは追って利用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-108">An NPM package will follow soon.</span></span>
+> <span data-ttu-id="8c8b5-107">Cognitive Services Speech SDK は、現在ブラウザーでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-107">The Cognitive Services Speech SDK is currently available only for browsers.</span></span>
+> <span data-ttu-id="8c8b5-108">NPM パッケージは追って利用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-108">An NPM package will follow soon.</span></span>
 
-### <a name="install-the-speech-sdk"></a><span data-ttu-id="b2c3a-109">Speech SDK のインストール</span><span class="sxs-lookup"><span data-stu-id="b2c3a-109">Install the Speech SDK</span></span>
+### <a name="install-the-speech-sdk"></a><span data-ttu-id="8c8b5-109">Speech SDK のインストール</span><span class="sxs-lookup"><span data-stu-id="8c8b5-109">Install the Speech SDK</span></span>
 
-<span data-ttu-id="b2c3a-110">Speech SDK を [.zip パッケージ](https://aka.ms/csspeech/jsbrowserpackage)としてダウンロードし、展開します。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-110">Download the Speech SDK as a [.zip package](https://aka.ms/csspeech/jsbrowserpackage) and unpack it.</span></span>
-<span data-ttu-id="b2c3a-111">これにより `microsoft.cognitiveservices.speech.sdk.bundle.js` という名前のファイルを含め、複数のファイルが展開されます。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-111">This should result in a number of files being unpacked including a file named `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span></span>
-<span data-ttu-id="b2c3a-112">Speech SDK の使用を開始するには、このファイルをスクリプト リソースとして Web ページに読み込みます。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-112">Load this file as a script resource in your web page to start using the Speech SDK:</span></span>
+<span data-ttu-id="8c8b5-110">Speech SDK を [.zip パッケージ](https://aka.ms/csspeech/jsbrowserpackage)としてダウンロードし、展開します。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-110">Download the Speech SDK as a [.zip package](https://aka.ms/csspeech/jsbrowserpackage) and unpack it.</span></span>
+<span data-ttu-id="8c8b5-111">これにより `microsoft.cognitiveservices.speech.sdk.bundle.js` という名前のファイルを含め、複数のファイルが展開されます。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-111">This should result in a number of files being unpacked including a file named `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span></span>
+<span data-ttu-id="8c8b5-112">Speech SDK の使用を開始するには、このファイルをスクリプト リソースとして Web ページに読み込みます。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-112">Load this file as a script resource in your web page to start using the Speech SDK:</span></span>
 
 ```html
 <script src="microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
 ```
 
-### <a name="example"></a><span data-ttu-id="b2c3a-113">例</span><span class="sxs-lookup"><span data-stu-id="b2c3a-113">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="8c8b5-113">例</span><span class="sxs-lookup"><span data-stu-id="8c8b5-113">Example</span></span> 
 
-<span data-ttu-id="b2c3a-114">次のコード スニペットは、お使いのブラウザーからシンプルな音声認識を実行する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-114">The following code snippets illustrates how to do simple speech recognition from your browser:</span></span>
+<span data-ttu-id="8c8b5-114">次のコード スニペットは、お使いのブラウザーからシンプルな音声認識を実行する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-114">The following code snippets illustrates how to do simple speech recognition from your browser:</span></span>
 
 ```javascript 
 var SpeechSDK = window.SpeechSDK;
@@ -62,8 +62,8 @@ recognizer.recognizeOnceAsync(
 );
 ``` 
 
-<span data-ttu-id="b2c3a-115">[詳細なクイック スタート](/azure/cognitive-services/speech-service/quickstart-js-browser)をご確認ください。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-115">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
+<span data-ttu-id="8c8b5-115">[詳細なクイック スタート](/azure/cognitive-services/speech-service/quickstart-js-browser)をご確認ください。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-115">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
 
-## <a name="samples"></a><span data-ttu-id="b2c3a-116">サンプル</span><span class="sxs-lookup"><span data-stu-id="b2c3a-116">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="8c8b5-116">サンプル</span><span class="sxs-lookup"><span data-stu-id="8c8b5-116">Samples</span></span>
 
-<span data-ttu-id="b2c3a-117">その他のサンプルについては、[Speech SDK サンプル リポジトリ](https://aka.ms/csspeech/samples)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="b2c3a-117">Explore more samples in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>
+<span data-ttu-id="8c8b5-117">その他のサンプルについては、[Speech SDK サンプル リポジトリ](https://aka.ms/csspeech/samples)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="8c8b5-117">Explore more samples in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>
