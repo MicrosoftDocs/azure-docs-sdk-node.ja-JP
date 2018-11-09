@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cosmos DB
 ms.openlocfilehash: 2e2813bb3b213de4066b2a3bc971586667a83f68
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50334340"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51062081"
 ---
 # <a name="azure-cosmos-db-modules-for-nodejs"></a>Node.js 用 Azure Cosmos DB モジュール
 

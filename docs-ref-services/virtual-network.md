@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Virtual Network
 ms.openlocfilehash: 11341fdff5df3b7521319d841707493db1d07732
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50406448"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51062051"
 ---
 # <a name="azure-virtual-network-modules-for-nodejs"></a>Node.js 用 Azure Virtual Network モジュール
 
