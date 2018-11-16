@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: CDN
 ms.openlocfilehash: 1117f8fabfe364d3e5602ee89f652fe98851fef4
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51178881"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51440066"
 ---
 # <a name="azure-cdn-modules-for-nodejs"></a>Node.js 用 Azure CDN モジュール
 

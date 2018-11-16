@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Store
 ms.openlocfilehash: da7e71a9ee1f6936924b1ec966b441756e9b0dfe
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51185141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51453386"
 ---
 # <a name="azure-data-lake-store-modules-for-nodejs"></a>Node.js 用 Azure Data Lake Store モジュール
 

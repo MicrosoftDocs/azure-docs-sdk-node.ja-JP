@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 11/07/2017
 ms.author: routlaw
 ms.openlocfilehash: 1c676b1f31fde7b14a16031b78f767a2c59edd5a
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51191141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51502036"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>JavaScript 開発者向け Azure ツール
 Azure での JavaScript アプリの開発には、次のツールが推奨されます。
