@@ -11,29 +11,29 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Store
 ms.openlocfilehash: da7e71a9ee1f6936924b1ec966b441756e9b0dfe
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51185141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51453386"
 ---
-# <a name="azure-data-lake-store-modules-for-nodejs"></a><span data-ttu-id="b7493-103">Node.js 用 Azure Data Lake Store モジュール</span><span class="sxs-lookup"><span data-stu-id="b7493-103">Azure Data Lake Store modules for Node.js</span></span>
+# <a name="azure-data-lake-store-modules-for-nodejs"></a><span data-ttu-id="d44c7-103">Node.js 用 Azure Data Lake Store モジュール</span><span class="sxs-lookup"><span data-stu-id="d44c7-103">Azure Data Lake Store modules for Node.js</span></span>
 
-<span data-ttu-id="b7493-104">Azure Data Lake Store は、ビッグ データの分析ワークロードに対応するエンタープライズ規模のハイパースケール リポジトリです。</span><span class="sxs-lookup"><span data-stu-id="b7493-104">Azure Data Lake Store is an enterprise-wide hyper-scale repository for big data analytic workloads.</span></span> <span data-ttu-id="b7493-105">Azure Data Lake を使用すると、運用分析や調査分析を目的として任意のサイズ、種類、および取り込み速度のデータを 1 か所でキャプチャすることができます。</span><span class="sxs-lookup"><span data-stu-id="b7493-105">Azure Data Lake enables you to capture data of any size, type, and ingestion speed in one single place for operational and exploratory analytics.</span></span>
+<span data-ttu-id="d44c7-104">Azure Data Lake Store は、ビッグ データの分析ワークロードに対応するエンタープライズ規模のハイパースケール リポジトリです。</span><span class="sxs-lookup"><span data-stu-id="d44c7-104">Azure Data Lake Store is an enterprise-wide hyper-scale repository for big data analytic workloads.</span></span> <span data-ttu-id="d44c7-105">Azure Data Lake を使用すると、運用分析や調査分析を目的として任意のサイズ、種類、および取り込み速度のデータを 1 か所でキャプチャすることができます。</span><span class="sxs-lookup"><span data-stu-id="d44c7-105">Azure Data Lake enables you to capture data of any size, type, and ingestion speed in one single place for operational and exploratory analytics.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="b7493-106">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="b7493-106">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="d44c7-106">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="d44c7-106">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="b7493-107">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="b7493-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="d44c7-107">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="d44c7-107">Install the npm module</span></span>
 
-<span data-ttu-id="b7493-108">Node.js 用 Azure Data Lake Store モジュールをインストールするには npm を使用します。</span><span class="sxs-lookup"><span data-stu-id="b7493-108">Use npm to install the Azure Data Lake Store modules for Node.js</span></span>
+<span data-ttu-id="d44c7-108">Node.js 用 Azure Data Lake Store モジュールをインストールするには npm を使用します。</span><span class="sxs-lookup"><span data-stu-id="d44c7-108">Use npm to install the Azure Data Lake Store modules for Node.js</span></span>
 
 ```bash
 npm install azure-arm-datalake-store
 ```
 
-### <a name="example"></a><span data-ttu-id="b7493-109">例</span><span class="sxs-lookup"><span data-stu-id="b7493-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="d44c7-109">例</span><span class="sxs-lookup"><span data-stu-id="d44c7-109">Example</span></span>
 
-<span data-ttu-id="b7493-110">この例では、特定の Azure サブスクリプション内のすべての Data Lake Store アカウントを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="b7493-110">This example lists all Data Lake Store accounts within a given Azure subscription</span></span>
+<span data-ttu-id="d44c7-110">この例では、特定の Azure サブスクリプション内のすべての Data Lake Store アカウントを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="d44c7-110">This example lists all Data Lake Store accounts within a given Azure subscription</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -52,6 +52,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="b7493-111">サンプル</span><span class="sxs-lookup"><span data-stu-id="b7493-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="d44c7-111">サンプル</span><span class="sxs-lookup"><span data-stu-id="d44c7-111">Samples</span></span>
 
-<span data-ttu-id="b7493-112">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="b7493-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="d44c7-112">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="d44c7-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

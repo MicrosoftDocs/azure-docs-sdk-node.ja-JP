@@ -10,21 +10,21 @@ ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
 ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51173091"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51394916"
 ---
-# <a name="azure-modules-for-javascript"></a><span data-ttu-id="a9a06-103">JavaScript 用 Azure モジュール</span><span class="sxs-lookup"><span data-stu-id="a9a06-103">Azure modules for JavaScript</span></span>
+# <a name="azure-modules-for-javascript"></a><span data-ttu-id="1eed4-103">JavaScript 用 Azure モジュール</span><span class="sxs-lookup"><span data-stu-id="1eed4-103">Azure modules for JavaScript</span></span>
 
-<span data-ttu-id="a9a06-104">JavaScript アプリケーションから JavaScript 用 Azure モジュールを使用して Azure リソースを管理し、サービスに接続します。</span><span class="sxs-lookup"><span data-stu-id="a9a06-104">Manage Azure resources and connect to services from your JavaScript applications with the Azure modules for JavaScript.</span></span> <span data-ttu-id="a9a06-105">このコードは、プロジェクト内で [npm モジュール](node-sdk-azure-install.md)として使用することができます。</span><span class="sxs-lookup"><span data-stu-id="a9a06-105">The code is available as [npm modules](node-sdk-azure-install.md) for use in your projects.</span></span> 
+<span data-ttu-id="1eed4-104">JavaScript アプリケーションから JavaScript 用 Azure モジュールを使用して Azure リソースを管理し、サービスに接続します。</span><span class="sxs-lookup"><span data-stu-id="1eed4-104">Manage Azure resources and connect to services from your JavaScript applications with the Azure modules for JavaScript.</span></span> <span data-ttu-id="1eed4-105">このコードは、プロジェクト内で [npm モジュール](node-sdk-azure-install.md)として使用することができます。</span><span class="sxs-lookup"><span data-stu-id="1eed4-105">The code is available as [npm modules](node-sdk-azure-install.md) for use in your projects.</span></span> 
 
-## <a name="manage-azure-resources"></a><span data-ttu-id="a9a06-106">Azure のリソースを管理する</span><span class="sxs-lookup"><span data-stu-id="a9a06-106">Manage Azure resources</span></span>
+## <a name="manage-azure-resources"></a><span data-ttu-id="1eed4-106">Azure のリソースを管理する</span><span class="sxs-lookup"><span data-stu-id="1eed4-106">Manage Azure resources</span></span>
 
-<span data-ttu-id="a9a06-107">アプリからリソースを作成、照会したり、独自の Azure オートメーション ツールを作成したりするには、管理モジュールを使用します。</span><span class="sxs-lookup"><span data-stu-id="a9a06-107">Use management modules to create and query resources from your apps or to build your own Azure automation tools.</span></span> 
+<span data-ttu-id="1eed4-107">アプリからリソースを作成、照会したり、独自の Azure オートメーション ツールを作成したりするには、管理モジュールを使用します。</span><span class="sxs-lookup"><span data-stu-id="1eed4-107">Use management modules to create and query resources from your apps or to build your own Azure automation tools.</span></span> 
 
-<span data-ttu-id="a9a06-108">たとえば既存のネットワーク インターフェイスを使って Linux VM を作成するコードは、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="a9a06-108">For example, to create a Linux VM using an existing network interface, you would write the following code:</span></span>
+<span data-ttu-id="1eed4-108">たとえば既存のネットワーク インターフェイスを使って Linux VM を作成するコードは、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="1eed4-108">For example, to create a Linux VM using an existing network interface, you would write the following code:</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -81,13 +81,13 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 });
 ```
 
-<span data-ttu-id="a9a06-109">モジュールの全一覧については[インストール手順](node-sdk-azure-install.md)を参照してください。また、自分の Azure サブスクリプションに対して認証を設定したり、リソースの作成や更新を行うサンプル コードを実行したりする方法については、[概要の記事](node-sdk-azure-get-started.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a9a06-109">Review the [install instructions](node-sdk-azure-install.md) for a full list of the modules and the [get started article](node-sdk-azure-get-started.md) to set up authentication and run sample code to create and update resources against your own Azure subscription.</span></span> 
+<span data-ttu-id="1eed4-109">モジュールの全一覧については[インストール手順](node-sdk-azure-install.md)を参照してください。また、自分の Azure サブスクリプションに対して認証を設定したり、リソースの作成や更新を行うサンプル コードを実行したりする方法については、[概要の記事](node-sdk-azure-get-started.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1eed4-109">Review the [install instructions](node-sdk-azure-install.md) for a full list of the modules and the [get started article](node-sdk-azure-get-started.md) to set up authentication and run sample code to create and update resources against your own Azure subscription.</span></span> 
 
-## <a name="connect-to-azure-services"></a><span data-ttu-id="a9a06-110">Azure サービスへの接続</span><span class="sxs-lookup"><span data-stu-id="a9a06-110">Connect to Azure services</span></span>
+## <a name="connect-to-azure-services"></a><span data-ttu-id="1eed4-110">Azure サービスへの接続</span><span class="sxs-lookup"><span data-stu-id="1eed4-110">Connect to Azure services</span></span>
 
-<span data-ttu-id="a9a06-111">Azure モジュールを使用して Azure 内のリソースを作成したり管理したりするだけでなく、パッケージを使用して、アプリで Azure クラウド サービスに接続して利用することもできます。</span><span class="sxs-lookup"><span data-stu-id="a9a06-111">In addition to using the Azure modules to create and manage resources within Azure, you can also use packages to connect and use Azure cloud services in your apps.</span></span> <span data-ttu-id="a9a06-112">たとえば、SQL Database のテーブルを更新したり、Azure Storage にファイルをアップロードしたりすることもできます。</span><span class="sxs-lookup"><span data-stu-id="a9a06-112">For example, you might update a table SQL Database or upload files to Azure Storage.</span></span> <span data-ttu-id="a9a06-113">特定のサービスに必要なパッケージを[全一覧](node-sdk-azure-install.md)からお選びください。また、それらのモジュールをアプリ内で使用する方法について紹介したチュートリアルやサンプル コードは、[JavaScript デベロッパー センター](https://azure.microsoft.com/develop/nodejs/)から入手できます。</span><span class="sxs-lookup"><span data-stu-id="a9a06-113">Select the package you need for a particular service from the [complete list](node-sdk-azure-install.md) and visit the [JavaScript developer center](https://azure.microsoft.com/develop/nodejs/) for tutorials and sample code to learn how to use the modules in your apps.</span></span>
+<span data-ttu-id="1eed4-111">Azure モジュールを使用して Azure 内のリソースを作成したり管理したりするだけでなく、パッケージを使用して、アプリで Azure クラウド サービスに接続して利用することもできます。</span><span class="sxs-lookup"><span data-stu-id="1eed4-111">In addition to using the Azure modules to create and manage resources within Azure, you can also use packages to connect and use Azure cloud services in your apps.</span></span> <span data-ttu-id="1eed4-112">たとえば、SQL Database のテーブルを更新したり、Azure Storage にファイルをアップロードしたりすることもできます。</span><span class="sxs-lookup"><span data-stu-id="1eed4-112">For example, you might update a table SQL Database or upload files to Azure Storage.</span></span> <span data-ttu-id="1eed4-113">特定のサービスに必要なパッケージを[全一覧](node-sdk-azure-install.md)からお選びください。また、それらのモジュールをアプリ内で使用する方法について紹介したチュートリアルやサンプル コードは、[JavaScript デベロッパー センター](https://azure.microsoft.com/develop/nodejs/)から入手できます。</span><span class="sxs-lookup"><span data-stu-id="1eed4-113">Select the package you need for a particular service from the [complete list](node-sdk-azure-install.md) and visit the [JavaScript developer center](https://azure.microsoft.com/develop/nodejs/) for tutorials and sample code to learn how to use the modules in your apps.</span></span>
 
-<span data-ttu-id="a9a06-114">たとえば、Azure ストレージ コンテナーに格納されているすべての BLOB のコンテンツを印刷するには、次のコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="a9a06-114">For example, to print out the contents of every blob in an Azure storage container:</span></span>
+<span data-ttu-id="1eed4-114">たとえば、Azure ストレージ コンテナーに格納されているすべての BLOB のコンテンツを印刷するには、次のコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="1eed4-114">For example, to print out the contents of every blob in an Azure storage container:</span></span>
 
 ```javascript
 var azure = require('azure-storage');
@@ -98,12 +98,12 @@ blobService.listBlobsSegmented('testcontainer', null, function(error, result, re
 });
 ```
 
-## <a name="sample-code-and-reference"></a><span data-ttu-id="a9a06-115">サンプル コードとリファレンス</span><span class="sxs-lookup"><span data-stu-id="a9a06-115">Sample code and reference</span></span>
+## <a name="sample-code-and-reference"></a><span data-ttu-id="1eed4-115">サンプル コードとリファレンス</span><span class="sxs-lookup"><span data-stu-id="1eed4-115">Sample code and reference</span></span>
 
-<span data-ttu-id="a9a06-116">以下のサンプルには、Azure 管理モジュールを使った一般的なタスクが紹介されており、また、独自のアプリですぐに利用できるコードも用意されています。</span><span class="sxs-lookup"><span data-stu-id="a9a06-116">The following samples cover common tasks with the Azure management modules and have code ready to use in your own apps:</span></span>
+<span data-ttu-id="1eed4-116">以下のサンプルには、Azure 管理モジュールを使った一般的なタスクが紹介されており、また、独自のアプリですぐに利用できるコードも用意されています。</span><span class="sxs-lookup"><span data-stu-id="1eed4-116">The following samples cover common tasks with the Azure management modules and have code ready to use in your own apps:</span></span>
 
-- [<span data-ttu-id="a9a06-117">仮想マシン</span><span class="sxs-lookup"><span data-stu-id="a9a06-117">Virtual machines</span></span>](node-samples-services-compute.md)
-- [<span data-ttu-id="a9a06-118">Web アプリ</span><span class="sxs-lookup"><span data-stu-id="a9a06-118">Web apps</span></span>](node-samples-services-web-and-mobile.md)
-- [<span data-ttu-id="a9a06-119">SQL Database</span><span class="sxs-lookup"><span data-stu-id="a9a06-119">SQL Database</span></span>](node-samples-services-database.md)
+- [<span data-ttu-id="1eed4-117">仮想マシン</span><span class="sxs-lookup"><span data-stu-id="1eed4-117">Virtual machines</span></span>](node-samples-services-compute.md)
+- [<span data-ttu-id="1eed4-118">Web アプリ</span><span class="sxs-lookup"><span data-stu-id="1eed4-118">Web apps</span></span>](node-samples-services-web-and-mobile.md)
+- [<span data-ttu-id="1eed4-119">SQL Database</span><span class="sxs-lookup"><span data-stu-id="1eed4-119">SQL Database</span></span>](node-samples-services-database.md)
    
-<span data-ttu-id="a9a06-120">サービス モジュールと管理モジュールの全モジュールについて[リファレンス](https://docs.microsoft.com/javascript/api)が公開されています。</span><span class="sxs-lookup"><span data-stu-id="a9a06-120">A [reference](https://docs.microsoft.com/javascript/api) is available for all modules in both the service and management modules.</span></span> <span data-ttu-id="a9a06-121">新機能、重大な変更、以前のバージョンからの移行手順については、[リリース ノート](https://github.com/Azure/azure-sdk-for-node/releases)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a9a06-121">New features, breaking changes, and migration instructions from previous versions are available in the [release notes](https://github.com/Azure/azure-sdk-for-node/releases).</span></span>
+<span data-ttu-id="1eed4-120">サービス モジュールと管理モジュールの全モジュールについて[リファレンス](https://docs.microsoft.com/javascript/api)が公開されています。</span><span class="sxs-lookup"><span data-stu-id="1eed4-120">A [reference](https://docs.microsoft.com/javascript/api) is available for all modules in both the service and management modules.</span></span> <span data-ttu-id="1eed4-121">新機能、重大な変更、以前のバージョンからの移行手順については、[リリース ノート](https://github.com/Azure/azure-sdk-for-node/releases)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1eed4-121">New features, breaking changes, and migration instructions from previous versions are available in the [release notes](https://github.com/Azure/azure-sdk-for-node/releases).</span></span>

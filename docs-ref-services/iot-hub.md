@@ -11,37 +11,37 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
 ms.openlocfilehash: 1f83e016023722f149384ac015726e9257a9f3af
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51121881"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51410416"
 ---
-# <a name="azure-iot-hub-modules-for-nodejs"></a><span data-ttu-id="61a44-103">Node.js 用 Azure IoT Hub モジュール</span><span class="sxs-lookup"><span data-stu-id="61a44-103">Azure IoT Hub modules for Node.js</span></span>
+# <a name="azure-iot-hub-modules-for-nodejs"></a><span data-ttu-id="41d0c-103">Node.js 用 Azure IoT Hub モジュール</span><span class="sxs-lookup"><span data-stu-id="41d0c-103">Azure IoT Hub modules for Node.js</span></span>
 
-<span data-ttu-id="61a44-104">Azure IoT Hub は、何百万もの IoT デバイスとソリューション バックエンド間で、セキュリティで保護された信頼性のある双方向通信を実現する、フル マネージドのサービスです。</span><span class="sxs-lookup"><span data-stu-id="61a44-104">Azure IoT Hub is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a solution back end.</span></span> <span data-ttu-id="61a44-105">Azure IoT Hub の特長は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="61a44-105">Azure IoT Hub:</span></span>
-- <span data-ttu-id="61a44-106">一方向メッセージング、ファイル転送、要求/応答メソッドなど、デバイスからクラウドとクラウドからデバイスの複数の通信オプションを提供します。</span><span class="sxs-lookup"><span data-stu-id="61a44-106">Provides multiple device-to-cloud and cloud-to-device communication options, including one-way messaging, file transfer, and request-reply methods.</span></span>
-- <span data-ttu-id="61a44-107">組み込みの宣言型メッセージ ルーティングを他の Azure サービスに提供します。</span><span class="sxs-lookup"><span data-stu-id="61a44-107">Provides built-in declarative message routing to other Azure services.</span></span>
-- <span data-ttu-id="61a44-108">デバイス メタデータと同期状態情報用にクエリ実行可能なストアを提供します。</span><span class="sxs-lookup"><span data-stu-id="61a44-108">Provides a queryable store for device metadata and synchronized state information.</span></span>
-- <span data-ttu-id="61a44-109">デバイスごとのセキュリティ キーまたは X.509 証明書を使用して、セキュリティ保護された通信とアクセス制御を実現します。</span><span class="sxs-lookup"><span data-stu-id="61a44-109">Enables secure communications and access control using per-device security keys or X.509 certificates.</span></span>
-- <span data-ttu-id="61a44-110">デバイス接続イベントおよびデバイス ID 管理イベントの詳細な監視を実現します。</span><span class="sxs-lookup"><span data-stu-id="61a44-110">Provides extensive monitoring for device connectivity and device identity management events.</span></span>
-- <span data-ttu-id="61a44-111">最も一般的な言語とプラットフォームのデバイスのライブラリが含まれます。</span><span class="sxs-lookup"><span data-stu-id="61a44-111">Includes device libraries for the most popular languages and platforms.</span></span>
+<span data-ttu-id="41d0c-104">Azure IoT Hub は、何百万もの IoT デバイスとソリューション バックエンド間で、セキュリティで保護された信頼性のある双方向通信を実現する、フル マネージドのサービスです。</span><span class="sxs-lookup"><span data-stu-id="41d0c-104">Azure IoT Hub is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a solution back end.</span></span> <span data-ttu-id="41d0c-105">Azure IoT Hub の特長は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="41d0c-105">Azure IoT Hub:</span></span>
+- <span data-ttu-id="41d0c-106">一方向メッセージング、ファイル転送、要求/応答メソッドなど、デバイスからクラウドとクラウドからデバイスの複数の通信オプションを提供します。</span><span class="sxs-lookup"><span data-stu-id="41d0c-106">Provides multiple device-to-cloud and cloud-to-device communication options, including one-way messaging, file transfer, and request-reply methods.</span></span>
+- <span data-ttu-id="41d0c-107">組み込みの宣言型メッセージ ルーティングを他の Azure サービスに提供します。</span><span class="sxs-lookup"><span data-stu-id="41d0c-107">Provides built-in declarative message routing to other Azure services.</span></span>
+- <span data-ttu-id="41d0c-108">デバイス メタデータと同期状態情報用にクエリ実行可能なストアを提供します。</span><span class="sxs-lookup"><span data-stu-id="41d0c-108">Provides a queryable store for device metadata and synchronized state information.</span></span>
+- <span data-ttu-id="41d0c-109">デバイスごとのセキュリティ キーまたは X.509 証明書を使用して、セキュリティ保護された通信とアクセス制御を実現します。</span><span class="sxs-lookup"><span data-stu-id="41d0c-109">Enables secure communications and access control using per-device security keys or X.509 certificates.</span></span>
+- <span data-ttu-id="41d0c-110">デバイス接続イベントおよびデバイス ID 管理イベントの詳細な監視を実現します。</span><span class="sxs-lookup"><span data-stu-id="41d0c-110">Provides extensive monitoring for device connectivity and device identity management events.</span></span>
+- <span data-ttu-id="41d0c-111">最も一般的な言語とプラットフォームのデバイスのライブラリが含まれます。</span><span class="sxs-lookup"><span data-stu-id="41d0c-111">Includes device libraries for the most popular languages and platforms.</span></span>
 
-<span data-ttu-id="61a44-112">Node.js 用 Azure IoT Hub モジュールをインストールするには npm を使用します。</span><span class="sxs-lookup"><span data-stu-id="61a44-112">Use npm to install the Azure IoT Hub modules for Node.js</span></span>
+<span data-ttu-id="41d0c-112">Node.js 用 Azure IoT Hub モジュールをインストールするには npm を使用します。</span><span class="sxs-lookup"><span data-stu-id="41d0c-112">Use npm to install the Azure IoT Hub modules for Node.js</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="61a44-113">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="61a44-113">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="41d0c-113">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="41d0c-113">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="61a44-114">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="61a44-114">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="41d0c-114">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="41d0c-114">Install the npm module</span></span>
 
-<span data-ttu-id="61a44-115">Azure IoT Hub の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="61a44-115">Install the Azure IoT Hub npm module</span></span>
+<span data-ttu-id="41d0c-115">Azure IoT Hub の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="41d0c-115">Install the Azure IoT Hub npm module</span></span>
 
 ```bash
 npm install azure-arm-iothub
 ```
 
-### <a name="example"></a><span data-ttu-id="61a44-116">例</span><span class="sxs-lookup"><span data-stu-id="61a44-116">Example</span></span>
+### <a name="example"></a><span data-ttu-id="41d0c-116">例</span><span class="sxs-lookup"><span data-stu-id="41d0c-116">Example</span></span>
 
-<span data-ttu-id="61a44-117">この例では、IoT ハブを作成して名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="61a44-117">This example creates and names an IoT hub.</span></span>
+<span data-ttu-id="41d0c-117">この例では、IoT ハブを作成して名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="41d0c-117">This example creates and names an IoT hub.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -84,7 +84,7 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-<span data-ttu-id="61a44-118">この例では、既存の IoT ハブを名前で取得します。</span><span class="sxs-lookup"><span data-stu-id="61a44-118">This example gets the existing IoT hub, by name.</span></span>
+<span data-ttu-id="41d0c-118">この例では、既存の IoT ハブを名前で取得します。</span><span class="sxs-lookup"><span data-stu-id="41d0c-118">This example gets the existing IoT hub, by name.</span></span>
 
 ```javascript
 const subscriptionId = 'your-subscription-id';
@@ -101,9 +101,9 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="61a44-119">サンプル</span><span class="sxs-lookup"><span data-stu-id="61a44-119">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="41d0c-119">サンプル</span><span class="sxs-lookup"><span data-stu-id="41d0c-119">Samples</span></span>
 
-- [<span data-ttu-id="61a44-120">Raspberry Pi Azure IoT スタート キットの概要</span><span class="sxs-lookup"><span data-stu-id="61a44-120">Get started with the Raspberry Pi Azure IoT Starter Kit</span></span>](https://azure.microsoft.com/resources/samples/iot-remote-monitoring-node-raspberrypi-getstartedkit/)
-- [<span data-ttu-id="61a44-121">Node.js を実行する Intel Edison からのデータに関して Azure IoT サービスが検出した振動の異常をツイートする</span><span class="sxs-lookup"><span data-stu-id="61a44-121">Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js</span></span>](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)
+- [<span data-ttu-id="41d0c-120">Raspberry Pi Azure IoT スタート キットの概要</span><span class="sxs-lookup"><span data-stu-id="41d0c-120">Get started with the Raspberry Pi Azure IoT Starter Kit</span></span>](https://azure.microsoft.com/resources/samples/iot-remote-monitoring-node-raspberrypi-getstartedkit/)
+- [<span data-ttu-id="41d0c-121">Node.js を実行する Intel Edison からのデータに関して Azure IoT サービスが検出した振動の異常をツイートする</span><span class="sxs-lookup"><span data-stu-id="41d0c-121">Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js</span></span>](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)
 
-<span data-ttu-id="61a44-122">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="61a44-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="41d0c-122">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="41d0c-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

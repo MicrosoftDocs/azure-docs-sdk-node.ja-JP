@@ -11,27 +11,27 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
 ms.openlocfilehash: fb2cc5ba927fe03fb5fe3114919ed1b0b6e969ae
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51141311"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51424746"
 ---
-# <a name="azure-monitor-modules-for-nodejs"></a><span data-ttu-id="050a3-103">Node.js 用 Azure Monitor モジュール</span><span class="sxs-lookup"><span data-stu-id="050a3-103">Azure Monitor modules for Node.js</span></span>
+# <a name="azure-monitor-modules-for-nodejs"></a><span data-ttu-id="6f536-103">Node.js 用 Azure Monitor モジュール</span><span class="sxs-lookup"><span data-stu-id="6f536-103">Azure Monitor modules for Node.js</span></span>
 
-<span data-ttu-id="050a3-104">クラウド アプリケーションは、動的なパーツを多数使った複雑な構成になっています。</span><span class="sxs-lookup"><span data-stu-id="050a3-104">Cloud applications are complex with many moving parts.</span></span> <span data-ttu-id="050a3-105">監視では、アプリケーションを正常な状態で稼働させ続けるためのデータを取得できます。</span><span class="sxs-lookup"><span data-stu-id="050a3-105">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="050a3-106">また、潜在的な問題を防止したり、発生した問題をトラブルシューティングするのにも役立ちます。</span><span class="sxs-lookup"><span data-stu-id="050a3-106">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="050a3-107">さらに、監視データを使用して、アプリケーションに関する深い洞察を得ることもできます。</span><span class="sxs-lookup"><span data-stu-id="050a3-107">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="050a3-108">そのような知識は、アプリケーションのパフォーマンスや保守容易性を向上させたり、手作業での介入が必要な操作を自動化したりするうえで役立ちます。</span><span class="sxs-lookup"><span data-stu-id="050a3-108">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
+<span data-ttu-id="6f536-104">クラウド アプリケーションは、動的なパーツを多数使った複雑な構成になっています。</span><span class="sxs-lookup"><span data-stu-id="6f536-104">Cloud applications are complex with many moving parts.</span></span> <span data-ttu-id="6f536-105">監視では、アプリケーションを正常な状態で稼働させ続けるためのデータを取得できます。</span><span class="sxs-lookup"><span data-stu-id="6f536-105">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="6f536-106">また、潜在的な問題を防止したり、発生した問題をトラブルシューティングするのにも役立ちます。</span><span class="sxs-lookup"><span data-stu-id="6f536-106">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="6f536-107">さらに、監視データを使用して、アプリケーションに関する深い洞察を得ることもできます。</span><span class="sxs-lookup"><span data-stu-id="6f536-107">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="6f536-108">そのような知識は、アプリケーションのパフォーマンスや保守容易性を向上させたり、手作業での介入が必要な操作を自動化したりするうえで役立ちます。</span><span class="sxs-lookup"><span data-stu-id="6f536-108">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="050a3-109">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="050a3-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="6f536-109">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="6f536-109">Management Package</span></span>
 
-### <a name="install-npm-module"></a><span data-ttu-id="050a3-110">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="050a3-110">Install npm module</span></span>
+### <a name="install-npm-module"></a><span data-ttu-id="6f536-110">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="6f536-110">Install npm module</span></span>
 
 ```bash
 npm install azure-arm-monitor
 ```
 
-### <a name="example"></a><span data-ttu-id="050a3-111">例</span><span class="sxs-lookup"><span data-stu-id="050a3-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="6f536-111">例</span><span class="sxs-lookup"><span data-stu-id="6f536-111">Example</span></span>
 
-<span data-ttu-id="050a3-112">このコード例では、リソース グループに関連付けられているすべてのアラート ルールを出力します。</span><span class="sxs-lookup"><span data-stu-id="050a3-112">This code example prints all the alerting rules associated with a resource group.</span></span>
+<span data-ttu-id="6f536-112">このコード例では、リソース グループに関連付けられているすべてのアラート ルールを出力します。</span><span class="sxs-lookup"><span data-stu-id="6f536-112">This code example prints all the alerting rules associated with a resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -51,6 +51,6 @@ msRestAzure
   });
 ```
 
-### <a name="samples"></a><span data-ttu-id="050a3-113">サンプル</span><span class="sxs-lookup"><span data-stu-id="050a3-113">Samples</span></span>
+### <a name="samples"></a><span data-ttu-id="6f536-113">サンプル</span><span class="sxs-lookup"><span data-stu-id="6f536-113">Samples</span></span>
 
-<span data-ttu-id="050a3-114">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="050a3-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="6f536-114">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="6f536-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

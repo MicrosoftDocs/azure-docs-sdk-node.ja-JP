@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Scheduler
 ms.openlocfilehash: 9a842919fddb3d6448d5a4e951dc58dd0d3211e0
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51122081"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51399036"
 ---
-# <a name="azure-scheduler-modules-for-nodejs"></a><span data-ttu-id="16eba-103">Node.js 用 Azure Scheduler モジュール</span><span class="sxs-lookup"><span data-stu-id="16eba-103">Azure Scheduler modules for Node.js</span></span>
+# <a name="azure-scheduler-modules-for-nodejs"></a><span data-ttu-id="05241-103">Node.js 用 Azure Scheduler モジュール</span><span class="sxs-lookup"><span data-stu-id="05241-103">Azure Scheduler modules for Node.js</span></span>
 
-<span data-ttu-id="16eba-104">Azure Scheduler は、スケジュール設定された作業を作成、保守し、HTTP、HTTPS、ストレージ キュー、[Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) のいずれかを介して呼び出します。</span><span class="sxs-lookup"><span data-stu-id="16eba-104">Azure Scheduler creates, maintains, and invokes scheduled work via HTTP, HTTPS, a storage queue, or the [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview).</span></span>
+<span data-ttu-id="05241-104">Azure Scheduler は、スケジュール設定された作業を作成、保守し、HTTP、HTTPS、ストレージ キュー、[Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) のいずれかを介して呼び出します。</span><span class="sxs-lookup"><span data-stu-id="05241-104">Azure Scheduler creates, maintains, and invokes scheduled work via HTTP, HTTPS, a storage queue, or the [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview).</span></span>
 
-<span data-ttu-id="16eba-105">Azure Scheduler の詳細については、[こちら](/azure/scheduler/scheduler-intro)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="16eba-105">Learn more about [Azure Scheduler](/azure/scheduler/scheduler-intro).</span></span>
+<span data-ttu-id="05241-105">Azure Scheduler の詳細については、[こちら](/azure/scheduler/scheduler-intro)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="05241-105">Learn more about [Azure Scheduler](/azure/scheduler/scheduler-intro).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="16eba-106">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="16eba-106">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="05241-106">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="05241-106">Management package</span></span>
 
-<span data-ttu-id="16eba-107">Management API を使って、スケジュール設定された作業を作成、保守し、さまざまな通信チャネルを介して呼び出します。</span><span class="sxs-lookup"><span data-stu-id="16eba-107">Create, maintain, and invoke scheduled work across various communication channels with the management API.</span></span>
+<span data-ttu-id="05241-107">Management API を使って、スケジュール設定された作業を作成、保守し、さまざまな通信チャネルを介して呼び出します。</span><span class="sxs-lookup"><span data-stu-id="05241-107">Create, maintain, and invoke scheduled work across various communication channels with the management API.</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="16eba-108">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="16eba-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="05241-108">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="05241-108">Install the npm module</span></span>
 
-<span data-ttu-id="16eba-109">Azure Scheduler の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="16eba-109">Install the Azure Scheduler npm module</span></span>
+<span data-ttu-id="05241-109">Azure Scheduler の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="05241-109">Install the Azure Scheduler npm module</span></span>
 
 ```bash
 npm install azure-arm-scheduler
 ```
 
-### <a name="example"></a><span data-ttu-id="16eba-110">例</span><span class="sxs-lookup"><span data-stu-id="16eba-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="05241-110">例</span><span class="sxs-lookup"><span data-stu-id="05241-110">Example</span></span>
 
-<span data-ttu-id="16eba-111">この例では、現在のスケジューラを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="16eba-111">This examples lists the current schedulers.</span></span>
+<span data-ttu-id="05241-111">この例では、現在のスケジューラを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="05241-111">This examples lists the current schedulers.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure')
@@ -57,6 +57,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 })
 ```
 
-## <a name="samples"></a><span data-ttu-id="16eba-112">サンプル</span><span class="sxs-lookup"><span data-stu-id="16eba-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="05241-112">サンプル</span><span class="sxs-lookup"><span data-stu-id="05241-112">Samples</span></span>
 
-<span data-ttu-id="16eba-113">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="16eba-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="05241-113">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="05241-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

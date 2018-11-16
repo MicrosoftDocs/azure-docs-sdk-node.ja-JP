@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Map
 ms.openlocfilehash: 494d948896d65dd67b06f455386f500346862beb
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51190921"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51396056"
 ---
-# <a name="azure-service-map-modules-for-nodejs"></a><span data-ttu-id="0955d-103">Node.js 用 Azure Service Map モジュール</span><span class="sxs-lookup"><span data-stu-id="0955d-103">Azure Service Map modules for Node.js</span></span>
+# <a name="azure-service-map-modules-for-nodejs"></a><span data-ttu-id="c1294-103">Node.js 用 Azure Service Map モジュール</span><span class="sxs-lookup"><span data-stu-id="c1294-103">Azure Service Map modules for Node.js</span></span>
 
-<span data-ttu-id="0955d-104">サービス マップは、Windows および Linux システムのアプリケーション コンポーネントを自動的に検出し、サービス間の通信をマップします。</span><span class="sxs-lookup"><span data-stu-id="0955d-104">Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services.</span></span> <span data-ttu-id="0955d-105">Service Map は、TCP 接続アーキテクチャ全体におけるサーバー、プロセス、ポートの間の接続を表示します。エージェントのインストール以外の構成は必要ありません。</span><span class="sxs-lookup"><span data-stu-id="0955d-105">Service Map shows connections between servers, processes, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.</span></span>
+<span data-ttu-id="c1294-104">サービス マップは、Windows および Linux システムのアプリケーション コンポーネントを自動的に検出し、サービス間の通信をマップします。</span><span class="sxs-lookup"><span data-stu-id="c1294-104">Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services.</span></span> <span data-ttu-id="c1294-105">Service Map は、TCP 接続アーキテクチャ全体におけるサーバー、プロセス、ポートの間の接続を表示します。エージェントのインストール以外の構成は必要ありません。</span><span class="sxs-lookup"><span data-stu-id="c1294-105">Service Map shows connections between servers, processes, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.</span></span>
 
-<span data-ttu-id="0955d-106">Azure Service Map の詳細については、[こちら](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0955d-106">Learn more about [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span></span>
+<span data-ttu-id="c1294-106">Azure Service Map の詳細については、[こちら](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c1294-106">Learn more about [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="0955d-107">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="0955d-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="c1294-107">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="c1294-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="0955d-108">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="0955d-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="c1294-108">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="c1294-108">Install the npm module</span></span>
 
-<span data-ttu-id="0955d-109">Azure Service Map の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="0955d-109">Install the Azure Service Map npm module</span></span>
+<span data-ttu-id="c1294-109">Azure Service Map の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="c1294-109">Install the Azure Service Map npm module</span></span>
 
 ```bash
 npm install azure-arm-servicemap
 ```
 
-### <a name="example"></a><span data-ttu-id="0955d-110">例</span><span class="sxs-lookup"><span data-stu-id="0955d-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="c1294-110">例</span><span class="sxs-lookup"><span data-stu-id="c1294-110">Example</span></span>
 
-<span data-ttu-id="0955d-111">この例では、指定したリソース グループおよびワークスペースのすべてのサービス マップを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="0955d-111">This example lists all service maps for the specified resource group and workspace.</span></span>
+<span data-ttu-id="c1294-111">この例では、指定したリソース グループおよびワークスペースのすべてのサービス マップを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="c1294-111">This example lists all service maps for the specified resource group and workspace.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -54,6 +54,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="0955d-112">サンプル</span><span class="sxs-lookup"><span data-stu-id="0955d-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="c1294-112">サンプル</span><span class="sxs-lookup"><span data-stu-id="c1294-112">Samples</span></span>
 
-<span data-ttu-id="0955d-113">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="0955d-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="c1294-113">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="c1294-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
