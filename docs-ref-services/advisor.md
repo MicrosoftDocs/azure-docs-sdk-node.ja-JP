@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Advisor
 ms.openlocfilehash: 54686220006d27341dbb50a249d0b2f44411b112
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51481556"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52116548"
 ---
 # <a name="azure-advisor-modules-for-nodejs"></a>Node.js 用 Azure Advisor モジュール
 

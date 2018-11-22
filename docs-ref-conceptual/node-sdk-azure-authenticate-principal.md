@@ -10,11 +10,11 @@ ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
 ms.openlocfilehash: 98d52e21332138512d40ff2de9f5d3388fa596e4
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51364906"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52140827"
 ---
 # <a name="create-an-azure-service-principal-with-nodejs"></a>Node.js を使った Azure サービス プリンシパルの作成 
 
