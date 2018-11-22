@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Fabric
 ms.openlocfilehash: 3fd2f73bc6fddf01548bbb92cce540775d4c7c76
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51438406"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52110065"
 ---
-# <a name="azure-service-fabric-modules-for-nodejs"></a><span data-ttu-id="0f49f-103">Node.js 用 Azure Service Fabric モジュール</span><span class="sxs-lookup"><span data-stu-id="0f49f-103">Azure Service Fabric modules for Node.js</span></span>
+# <a name="azure-service-fabric-modules-for-nodejs"></a><span data-ttu-id="ad2b6-103">Node.js 用 Azure Service Fabric モジュール</span><span class="sxs-lookup"><span data-stu-id="ad2b6-103">Azure Service Fabric modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="0f49f-104">概要</span><span class="sxs-lookup"><span data-stu-id="0f49f-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="ad2b6-104">概要</span><span class="sxs-lookup"><span data-stu-id="ad2b6-104">Overview</span></span>
 
-<span data-ttu-id="0f49f-105">Azure Service Fabric は、スケーラブルで信頼性に優れたマイクロサービスとコンテナーのパッケージ化とデプロイ、管理を簡単に行うことができる分散システム プラットフォームです。</span><span class="sxs-lookup"><span data-stu-id="0f49f-105">Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.</span></span>
+<span data-ttu-id="ad2b6-105">Azure Service Fabric は、スケーラブルで信頼性に優れたマイクロサービスとコンテナーのパッケージ化とデプロイ、管理を簡単に行うことができる分散システム プラットフォームです。</span><span class="sxs-lookup"><span data-stu-id="ad2b6-105">Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.</span></span>
 
-<span data-ttu-id="0f49f-106">Azure Service Fabric の詳細については、[こちら](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0f49f-106">Learn more about [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).</span></span>
+<span data-ttu-id="ad2b6-106">Azure Service Fabric の詳細については、[こちら](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ad2b6-106">Learn more about [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="0f49f-107">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="0f49f-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="ad2b6-107">管理パッケージ</span><span class="sxs-lookup"><span data-stu-id="ad2b6-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="0f49f-108">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="0f49f-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="ad2b6-108">npm モジュールのインストール</span><span class="sxs-lookup"><span data-stu-id="ad2b6-108">Install the npm module</span></span>
 
-<span data-ttu-id="0f49f-109">Azure Service Fabric の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="0f49f-109">Install the Azure Service Fabric npm module</span></span>
+<span data-ttu-id="ad2b6-109">Azure Service Fabric の npm モジュールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="ad2b6-109">Install the Azure Service Fabric npm module</span></span>
 
 ```bash
 npm install azure-arm-servicefabric
 ```
 
-### <a name="example"></a><span data-ttu-id="0f49f-110">例</span><span class="sxs-lookup"><span data-stu-id="0f49f-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="ad2b6-110">例</span><span class="sxs-lookup"><span data-stu-id="ad2b6-110">Example</span></span>
 
-<span data-ttu-id="0f49f-111">この例では、Azure サブスクリプションのクラスターを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="0f49f-111">This example shows how you can list the clusters for an Azure subscription.</span></span>
+<span data-ttu-id="ad2b6-111">この例では、Azure サブスクリプションのクラスターを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ad2b6-111">This example shows how you can list the clusters for an Azure subscription.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -60,6 +60,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="0f49f-112">サンプル</span><span class="sxs-lookup"><span data-stu-id="0f49f-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="ad2b6-112">サンプル</span><span class="sxs-lookup"><span data-stu-id="ad2b6-112">Samples</span></span>
 
-<span data-ttu-id="0f49f-113">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="0f49f-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="ad2b6-113">アプリで使用できるその他の[サンプル Node.js コード](https://azure.microsoft.com/resources/samples/?platform=nodejs)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="ad2b6-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
