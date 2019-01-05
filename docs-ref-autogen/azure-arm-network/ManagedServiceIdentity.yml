@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 27aa7ac790ed163cb9af51ea0d9634b7c3d55c53
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53697790"
+items:
+- uid: azure-arm-network.ManagedServiceIdentity
+  name: ManagedServiceIdentity
+  fullName: ManagedServiceIdentity
+  children:
+  - azure-arm-network.ManagedServiceIdentity.principalId
+  - azure-arm-network.ManagedServiceIdentity.tenantId
+  - azure-arm-network.ManagedServiceIdentity.type
+  - azure-arm-network.ManagedServiceIdentity.userAssignedIdentities
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="e603e-101">リソースの id です。</span><span class="sxs-lookup"><span data-stu-id="e603e-101">Identity for the resource.</span></span>
+  package: azure-arm-network
+- uid: azure-arm-network.ManagedServiceIdentity.principalId
+  name: principalId
+  fullName: principalId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="e603e-102">システムによって割り当てられた id のプリンシパル id。</span><span class="sxs-lookup"><span data-stu-id="e603e-102">The principal id of the system assigned identity.</span></span> <span data-ttu-id="e603e-103">このプロパティは、割り当て id システムにのみ提供されます。</span><span class="sxs-lookup"><span data-stu-id="e603e-103">This property will only be provided for a system assigned identity.</span></span>
+  optional: true
+  syntax:
+    content: 'principalId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.ManagedServiceIdentity.tenantId
+  name: tenantId
+  fullName: tenantId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="e603e-104">システムによって割り当てられた id のテナント id。</span><span class="sxs-lookup"><span data-stu-id="e603e-104">The tenant id of the system assigned identity.</span></span> <span data-ttu-id="e603e-105">このプロパティは、割り当て id システムにのみ提供されます。</span><span class="sxs-lookup"><span data-stu-id="e603e-105">This property will only be provided for a system assigned identity.</span></span>
+  optional: true
+  syntax:
+    content: 'tenantId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.ManagedServiceIdentity.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"e603e-106\">リソースに使用される id の型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"e603e-106\">The type of identity used for the resource.</span></span> <span data-ttu-id=\"e603e-107\">型 'SystemAssigned UserAssigned' には、暗黙的に作成された id とユーザー割り当て id のセットの両方が含まれています。</span><span class=\"sxs-lookup\"><span data-stu-id=\"e603e-107\">The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.</span></span> <span data-ttu-id=\"e603e-108\">型 'None'、仮想マシンから任意の id が削除されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"e603e-108\">The type 'None' will remove any identities from the virtual machine.</span></span> <span data-ttu-id=\"e603e-109\">指定できる値は、次のとおりです。'SystemAssigned'、'UserAssigned'、'SystemAssigned、UserAssigned'、'None'</span><span class=\"sxs-lookup\"><span data-stu-id=\"e603e-109\">Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'</span></span>"
+  optional: true
+  syntax:
+    content: 'type?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.ManagedServiceIdentity.userAssignedIdentities
+  name: userAssignedIdentities
+  fullName: userAssignedIdentities
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"e603e-110\">リソースに関連付けられたユーザー id の一覧。</span><span class=\"sxs-lookup\"><span data-stu-id=\"e603e-110\">The list of user identities associated with resource.</span></span> <span data-ttu-id=\"e603e-111\">ユーザーの id のディクショナリ キーの参照は、フォームでの ARM リソース id になります。 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"e603e-111\">The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.</span></span>"
+  optional: true
+  syntax:
+    content: 'userAssignedIdentities?: [key: string]: ManagedServiceIdentityUserAssignedIdentitiesValue'
+    return:
+      type:
+      - '[key: string]: azure-arm-network.ManagedServiceIdentityUserAssignedIdentitiesValue'
+  package: azure-arm-network
+references:
+- uid: '[key: string]: azure-arm-network.ManagedServiceIdentityUserAssignedIdentitiesValue'
+  name: ManagedServiceIdentityUserAssignedIdentitiesValue
+  spec.typeScript:
+  - name: '[key: string]: '
+    fullName: '[key: string]: '
+  - name: ManagedServiceIdentityUserAssignedIdentitiesValue
+    fullName: ManagedServiceIdentityUserAssignedIdentitiesValue
+    uid: azure-arm-network.ManagedServiceIdentityUserAssignedIdentitiesValue

@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4277010b2babd7dd5c15af4eb4ef2eff99c846b5
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53677266"
+items:
+- uid: azure-batch.JobScheduleExecutionInformation
+  name: JobScheduleExecutionInformation
+  fullName: JobScheduleExecutionInformation
+  children:
+  - azure-batch.JobScheduleExecutionInformation.endTime
+  - azure-batch.JobScheduleExecutionInformation.nextRunTime
+  - azure-batch.JobScheduleExecutionInformation.recentJob
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobScheduleExecutionInformation.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="9468d-101">このプロパティは、ジョブのスケジュールが完了した状態である場合にのみに設定されます。</span><span class="sxs-lookup"><span data-stu-id="9468d-101">This property is set only if the job schedule is in the completed state.</span></span>
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobScheduleExecutionInformation.nextRunTime
+  name: nextRunTime
+  fullName: nextRunTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="9468d-102">このプロパティは、スケジュールは、時間になるときにアクティブな状態では場合にのみ意味を持ちます。</span><span class="sxs-lookup"><span data-stu-id="9468d-102">This property is meaningful only if the schedule is in the active state when the time comes around.</span></span> <span data-ttu-id="9468d-103">たとえば、スケジュールが無効になっている場合ジョブは作成されません nextRunTime にその前に、ジョブが有効になっていません。</span><span class="sxs-lookup"><span data-stu-id="9468d-103">For example, if the schedule is disabled, no job will be created at nextRunTime unless the job is enabled before then.</span></span>
+  optional: true
+  syntax:
+    content: 'nextRunTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobScheduleExecutionInformation.recentJob
+  name: recentJob
+  fullName: recentJob
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="9468d-104">このプロパティは、少なくとも 1 つのジョブが、スケジュールで実行する場合にのみ存在します。</span><span class="sxs-lookup"><span data-stu-id="9468d-104">This property is present only if the at least one job has run under the schedule.</span></span>
+  optional: true
+  syntax:
+    content: 'recentJob?: RecentJob'
+    return:
+      type:
+      - azure-batch.RecentJob
+  package: azure-batch
+references:
+- uid: azure-batch.RecentJob
+  name: RecentJob
+  spec.typeScript:
+  - name: RecentJob
+    fullName: RecentJob
+    uid: azure-batch.RecentJob

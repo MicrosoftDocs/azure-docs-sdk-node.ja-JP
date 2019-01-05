@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 168e246d26dc808129ce099efe570ac78fa0c999
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53672626"
+items:
+- uid: azure-batch.MultiInstanceSettings
+  name: MultiInstanceSettings
+  fullName: MultiInstanceSettings
+  children:
+  - azure-batch.MultiInstanceSettings.commonResourceFiles
+  - azure-batch.MultiInstanceSettings.coordinationCommandLine
+  - azure-batch.MultiInstanceSettings.numberOfInstances
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="d8860-101">マルチ インスタンス タスクは、MPI タスクをサポートするためによく使用されます。</span><span class="sxs-lookup"><span data-stu-id="d8860-101">Multi-instance tasks are commonly used to support MPI tasks.</span></span>
+  package: azure-batch
+- uid: azure-batch.MultiInstanceSettings.commonResourceFiles
+  name: commonResourceFiles
+  fullName: commonResourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d8860-102">共通リソース ファイルとタスク リソース ファイルの違いは、タスク リソース ファイルはプライマリに関してのみダウンロードされますが、プライマリを含むすべてのサブタスクの共通リソース ファイルにダウンロードされます。</span><span class="sxs-lookup"><span data-stu-id="d8860-102">The difference between common resource files and task resource files is that common resource files are downloaded for all subtasks including the primary, whereas task resource files are downloaded only for the primary.</span></span> <span data-ttu-id="d8860-103">これらのリソース ファイルは、タスクの作業ディレクトリにダウンロードされませんが、代わりに、タスク ルート ディレクトリ (作業ディレクトリの上の 1 つのディレクトリ) にダウンロードにも注意してください。</span><span class="sxs-lookup"><span data-stu-id="d8860-103">Also note that these resource files are not downloaded to the task working directory, but instead are downloaded to the task root directory (one directory above the working directory).</span></span>  <span data-ttu-id="d8860-104">リソース ファイルの一覧の最大サイズがあります。</span><span class="sxs-lookup"><span data-stu-id="d8860-104">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="d8860-105">最大サイズを超えると、要求は失敗し、RequestEntityTooLarge が応答のエラー コードになります。</span><span class="sxs-lookup"><span data-stu-id="d8860-105">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="d8860-106">このような場合は、サイズの ResourceFiles コレクションを減らす必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8860-106">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="d8860-107">これは、.zip ファイル、アプリケーションのパッケージまたは Docker コンテナーを使用して実現できます。</span><span class="sxs-lookup"><span data-stu-id="d8860-107">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>
+  optional: true
+  syntax:
+    content: 'commonResourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.MultiInstanceSettings.coordinationCommandLine
+  name: coordinationCommandLine
+  fullName: coordinationCommandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d8860-108">一般的なコーディネーション コマンドラインはバック グラウンド サービスを起動し、サービスがノード間メッセージを処理する準備ができていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="d8860-108">A typical coordination command line launches a background service and verifies that the service is ready to process inter-node messages.</span></span>
+  syntax:
+    content: 'coordinationCommandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.MultiInstanceSettings.numberOfInstances
+  name: numberOfInstances
+  fullName: numberOfInstances
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d8860-109">省略した場合、既定値は 1 です。</span><span class="sxs-lookup"><span data-stu-id="d8860-109">If omitted, the default is 1.</span></span>
+  optional: true
+  syntax:
+    content: 'numberOfInstances?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+references:
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'

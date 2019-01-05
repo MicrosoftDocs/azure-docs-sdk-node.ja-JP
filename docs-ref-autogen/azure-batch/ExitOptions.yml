@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 116ebcb356f208cd312b3af76482a3e3a115293a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53676360"
+items:
+- uid: azure-batch.ExitOptions
+  name: ExitOptions
+  fullName: ExitOptions
+  children:
+  - azure-batch.ExitOptions.dependencyAction
+  - azure-batch.ExitOptions.jobAction
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.ExitOptions.dependencyAction
+  name: dependencyAction
+  fullName: dependencyAction
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"aadc9-101\">既定では終了コード 0、およびその他のすべての終了条件に対して ' block' の '満たす' です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"aadc9-101\">The default is 'satisfy' for exit code 0, and 'block' for all other exit conditions.</span></span> <span data-ttu-id=\"aadc9-102\">ジョブの usesTaskDependencies プロパティ設定されている場合、false、dependencyAction プロパティを指定するには、エラーが返されます、タスクの追加要求が無効なプロパティ値をエラーで失敗REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"aadc9-102\">If the job's usesTaskDependencies property is set to false, then specifying the dependencyAction property returns an error and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id=\"aadc9-103\">使用可能な値が含まれます: 'を満たす'、'を ' ブロック</span><span class=\"sxs-lookup\"><span data-stu-id=\"aadc9-103\">Possible values include: 'satisfy', 'block'</span></span>"
+  optional: true
+  syntax:
+    content: 'dependencyAction?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.ExitOptions.jobAction
+  name: jobAction
+  fullName: jobAction
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="aadc9-104">既定値は none 終了コード 0 を他のすべての終了条件を終了します。</span><span class="sxs-lookup"><span data-stu-id="aadc9-104">The default is none for exit code 0 and terminate for all other exit conditions.</span></span>
+
+    <span data-ttu-id="aadc9-105">ジョブの onTaskFailed プロパティが noaction の場合は、このプロパティを指定すると、エラーが返され、タスクの追加要求が無効なプロパティ値をエラーで失敗REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="aadc9-105">If the job's onTaskFailed property is noaction, then specifying this property returns an error and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="aadc9-106">使用可能な値が含まれます: 'none'、'disable'、'terminate'</span><span class="sxs-lookup"><span data-stu-id="aadc9-106">Possible values include: 'none', 'disable', 'terminate'</span></span>
+  optional: true
+  syntax:
+    content: 'jobAction?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
