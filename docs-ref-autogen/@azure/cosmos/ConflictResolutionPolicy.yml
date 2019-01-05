@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6be3af94898fd3f29c1904568c5e9f7d20c64073
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52054136"
+items:
+- uid: '@azure/cosmos.ConflictResolutionPolicy'
+  name: ConflictResolutionPolicy
+  fullName: ConflictResolutionPolicy
+  children:
+  - '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionPath'
+  - '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionProcedure'
+  - '@azure/cosmos.ConflictResolutionPolicy.mode'
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="4b071-101">さまざまなリージョンからの書き込み、Azure Cosmos DB サービスでは、コレクション内のドキュメントで競合が発生する場合の競合を解決する方法を指定するための競合解決ポリシーの構成を表します。</span><span class="sxs-lookup"><span data-stu-id="4b071-101">Represents the conflict resolution policy configuration for specifying how to resolve conflicts in case writes from different regions result in conflicts on documents in the collection in the Azure Cosmos DB service.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionPath'
+  name: conflictResolutionPath
+  fullName: conflictResolutionPath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >+
+    <span data-ttu-id="4b071-102">取得または設定が最後ライター wins 競合解決のための Azure Cosmos DB サービス内の各ドキュメントに存在するパス。</span><span class="sxs-lookup"><span data-stu-id="4b071-102">Gets or sets the path which is present in each document in the Azure Cosmos DB service for last writer wins conflict-resolution.</span></span>
+
+    <span data-ttu-id="4b071-103">このパスは、各ドキュメントに存在する必要があり、整数値である必要があります。</span><span class="sxs-lookup"><span data-stu-id="4b071-103">This path must be present in each document and must be an integer value.</span></span>
+
+    <span data-ttu-id="4b071-104">ドキュメント上で発生する競合が発生した場合、指定されたパスに、上位の整数値を持つドキュメントが取得されます。</span><span class="sxs-lookup"><span data-stu-id="4b071-104">In case of a conflict occurring on a document, the document with the higher integer value in the specified path will be picked.</span></span>
+
+    <span data-ttu-id="4b071-105">パスが指定されていない場合は、既定では、タイムスタンプ パス適用されます。</span><span class="sxs-lookup"><span data-stu-id="4b071-105">If the path is unspecified, by default the timestamp path will be used.</span></span>
+
+    <span data-ttu-id="4b071-106">この値を使用する場合にのみ設定する必要があります<xref:ConflictResolutionMode.LastWriterWins>します。</span><span class="sxs-lookup"><span data-stu-id="4b071-106">This value should only be set when using <xref:ConflictResolutionMode.LastWriterWins>.</span></span>
+
+
+    ```typescript
+
+    conflictResolutionPolicy.ConflictResolutionPath = "/name/first";
+
+    ```
+
+  optional: true
+  syntax:
+    content: 'conflictResolutionPath?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionProcedure'
+  name: conflictResolutionProcedure
+  fullName: conflictResolutionProcedure
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="4b071-107">取得または設定します、 <xref:StoredProcedure> Azure Cosmos DB サービスで競合の解決に使用されます。</span><span class="sxs-lookup"><span data-stu-id="4b071-107">Gets or sets the <xref:StoredProcedure> which is used for conflict resolution in the Azure Cosmos DB service.</span></span>
+
+    <span data-ttu-id="4b071-108">このストアド プロシージャは、後に作成される可能性があります、<xref:Container>が作成され、変更することができます必要に応じて。</span><span class="sxs-lookup"><span data-stu-id="4b071-108">This stored procedure may be created after the <xref:Container> is created and can be changed as required.</span></span>
+
+    1. <span data-ttu-id="4b071-109">この値を使用する場合にのみ設定する必要があります<xref:ConflictResolutionMode.Custom>します。</span><span class="sxs-lookup"><span data-stu-id="4b071-109">This value should only be set when using <xref:ConflictResolutionMode.Custom>.</span></span>
+
+    2. <span data-ttu-id="4b071-110">場合は、ストアド プロシージャは失敗するか、例外をスロー、競合の解決は既定で、競合フィードでの競合を登録します。</span><span class="sxs-lookup"><span data-stu-id="4b071-110">In case the stored procedure fails or throws an exception, the conflict resolution will default to registering conflicts in the conflicts feed.</span></span>
+
+
+    ```typescript
+
+    conflictResolutionPolicy.ConflictResolutionProcedure = "resolveConflict"
+
+    ```
+  optional: true
+  syntax:
+    content: 'conflictResolutionProcedure?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConflictResolutionPolicy.mode'
+  name: mode
+  fullName: mode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="4b071-111">取得または設定します、<see cref="ConflictResolutionMode"/>で Azure Cosmos DB サービス。</span><span class="sxs-lookup"><span data-stu-id="4b071-111">Gets or sets the <see cref="ConflictResolutionMode"/> in the Azure Cosmos DB service.</span></span> <span data-ttu-id="4b071-112">既定では<xref:ConflictResolutionMode.LastWriterWins>します。</span><span class="sxs-lookup"><span data-stu-id="4b071-112">By default it is <xref:ConflictResolutionMode.LastWriterWins>.</span></span>
+  optional: true
+  syntax:
+    content: 'mode?: Object'
+    return:
+      type:
+      - Object
+  package: '@azure/cosmos'
