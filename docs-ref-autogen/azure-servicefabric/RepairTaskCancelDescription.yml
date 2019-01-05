@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e60d425343726a8add5fe452758aba1a0e93d833
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52119207"
+items:
+- uid: azure-servicefabric.RepairTaskCancelDescription
+  name: RepairTaskCancelDescription
+  fullName: RepairTaskCancelDescription
+  children:
+  - azure-servicefabric.RepairTaskCancelDescription.requestAbort
+  - azure-servicefabric.RepairTaskCancelDescription.taskId
+  - azure-servicefabric.RepairTaskCancelDescription.version
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    <span data-ttu-id="8aea4-101">修復タスクのキャンセルを要求について説明します。</span><span class="sxs-lookup"><span data-stu-id="8aea4-101">Describes a request to cancel a repair task.</span></span>
+
+    <span data-ttu-id="8aea4-102">この型は、Service Fabric プラットフォームをサポートしていますコードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="8aea4-102">This type supports the Service Fabric platform; it is not meant to be used directly from your code.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTaskCancelDescription.requestAbort
+  name: requestAbort
+  fullName: requestAbort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="8aea4-103">_True_かどうか、修復を停止するか、できるだけ早く実行を既に開始した場合でもです。</span><span class="sxs-lookup"><span data-stu-id="8aea4-103">_True_ if the repair should be stopped as soon as possible even if it has already started executing.</span></span> <span data-ttu-id="8aea4-104">_False_実行がまだ開始されていない場合にのみ、修復を取り消す必要がある場合。</span><span class="sxs-lookup"><span data-stu-id="8aea4-104">_False_ if the repair should be cancelled only if execution has not yet started.</span></span>
+  optional: true
+  syntax:
+    content: 'requestAbort?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTaskCancelDescription.taskId
+  name: taskId
+  fullName: taskId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="8aea4-105">修復タスクの ID。</span><span class="sxs-lookup"><span data-stu-id="8aea4-105">The ID of the repair task.</span></span>
+  syntax:
+    content: 'taskId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTaskCancelDescription.version
+  name: version
+  fullName: version
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="8aea4-106">修復タスクの現在のバージョン番号。</span><span class="sxs-lookup"><span data-stu-id="8aea4-106">The current version number of the repair task.</span></span> <span data-ttu-id="8aea4-107">0 以外の場合、この値が修復タスクの実際の現行バージョンと一致する場合にのみ要求が成功します。</span><span class="sxs-lookup"><span data-stu-id="8aea4-107">If non-zero, then the request will only succeed if this value matches the actual current version of the repair task.</span></span> <span data-ttu-id="8aea4-108">0 の場合、バージョン チェックは実行されません。</span><span class="sxs-lookup"><span data-stu-id="8aea4-108">If zero, then no version check is performed.</span></span>
+  optional: true
+  syntax:
+    content: 'version?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

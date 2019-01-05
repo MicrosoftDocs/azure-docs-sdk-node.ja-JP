@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 833d102244edea2c5d239f0079c34a88b32958e2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52099407"
+items:
+- uid: ms-rest-azure.loginWithAuthFile_1
+  name: 'loginWithAuthFile((err: Error, credentials: ApplicationTokenCredentials, subscriptions: Array<LinkedSubscription>) => void)'
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="087ac-101">このメソッドを使用する前にから az cli をインストールしてくださいhttps://github.com/Azure/azure-cli/releasesします。</span><span class="sxs-lookup"><span data-stu-id="087ac-101">Before using this method please install az cli from https://github.com/Azure/azure-cli/releases.</span></span> <span data-ttu-id="087ac-102">実行し、`az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`します。</span><span class="sxs-lookup"><span data-stu-id="087ac-102">Then execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.</span></span>
+
+    <span data-ttu-id="087ac-103">別のクラウド/環境向けの sp を作成する場合、実行してください。</span><span class="sxs-lookup"><span data-stu-id="087ac-103">If you want to create the sp for a different cloud/environment then please execute:</span></span>
+
+    1. <span data-ttu-id="087ac-104">az cloud 一覧</span><span class="sxs-lookup"><span data-stu-id="087ac-104">az cloud list</span></span>
+
+    2. <span data-ttu-id="087ac-105">az cloud 設定: n <name of the environment></span><span class="sxs-lookup"><span data-stu-id="087ac-105">az cloud set –n <name of the environment></span></span>
+
+    3. <span data-ttu-id="087ac-106">az ad sp rbac の作成-sdk 認証 > auth.json サービス プリンシパル作成済みの場合、ログイン サービス プリンシパルの情報を記入します。</span><span class="sxs-lookup"><span data-stu-id="087ac-106">az ad sp create-for-rbac --sdk-auth > auth.json If the service principal is already created then login with service principal info:</span></span>
+
+    3. <span data-ttu-id="087ac-107">az login - サービス プリンシパル-u <clientId> -p <clientSecret> -t <tenantId></span><span class="sxs-lookup"><span data-stu-id="087ac-107">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span></span>
+
+    4. <span data-ttu-id="087ac-108">az アカウントの表示 - sdk 認証 > auth.json</span><span class="sxs-lookup"><span data-stu-id="087ac-108">az account show --sdk-auth > auth.json</span></span>
+
+
+    <span data-ttu-id="087ac-109">認証ファイルで提供されるサービス プリンシパル情報を使用して認証します。</span><span class="sxs-lookup"><span data-stu-id="087ac-109">Authenticates using the service principal information provided in the auth file.</span></span> <span data-ttu-id="087ac-110">このメソッドは、認証ファイルから、サブスクリプション Id をユーザー指定の options パラメーターまたは 'AZURE_SUBSCRIPTION_ID' の既定の環境変数に設定されます。</span><span class="sxs-lookup"><span data-stu-id="087ac-110">This method will set the subscriptionId from the auth file to the user provided environment variable in the options parameter or the default 'AZURE_SUBSCRIPTION_ID'.</span></span>
+  syntax:
+    content: 'function loginWithAuthFile(callback: (err: Error, credentials: ApplicationTokenCredentials, subscriptions: Array<LinkedSubscription>) => void)'
+    parameters:
+    - id: callback
+      type:
+      - '(err: Error, credentials: ApplicationTokenCredentials, subscriptions: Array<LinkedSubscription>) => void'
+      description: ''
+    return:
+      type:
+      - Promise<ms-rest-azure.ApplicationTokenCredentials>
+  package: ms-rest-azure
+references:
+- uid: Promise<ms-rest-azure.ApplicationTokenCredentials>
+  name: ApplicationTokenCredentials>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ApplicationTokenCredentials
+    fullName: ApplicationTokenCredentials
+    uid: ms-rest-azure.ApplicationTokenCredentials
+  - name: '>'
+    fullName: '>'
