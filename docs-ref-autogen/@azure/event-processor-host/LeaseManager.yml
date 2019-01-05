@@ -1,0 +1,288 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ed7f92526f273477e153fad3fe0ab03db0704f34
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52104227"
+items:
+- uid: '@azure/event-processor-host.LeaseManager'
+  name: LeaseManager
+  fullName: LeaseManager
+  children:
+  - '@azure/event-processor-host.LeaseManager.acquireLease'
+  - '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.deleteLease'
+  - '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  - '@azure/event-processor-host.LeaseManager.getAllLeases'
+  - '@azure/event-processor-host.LeaseManager.getLease'
+  - '@azure/event-processor-host.LeaseManager.leaseDuration'
+  - '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  - '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  - '@azure/event-processor-host.LeaseManager.releaseLease'
+  - '@azure/event-processor-host.LeaseManager.renewLease'
+  - '@azure/event-processor-host.LeaseManager.updateLease'
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.acquireLease'
+  name: acquireLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    この EventProcessorHost の適切なパーティションのリースを取得します。
+
+    別のホストが既に所有しているリースを取得することに注意してください。
+
+    リース スティー リングは、追加のホストが開始されたときにパーティションが再配分方法です。
+
+
+    既存の Azure Storage の実装を取得するか、同時に、リースを盗用しようとしています。 2 つのホスト インスタンスの間の競合が発生することができます。 2 つのホスト インスタンスの状況を回避するためには、リースを所有していること、取得が失敗するエラーのない場合は false を返すことによって、ため、ホスト インスタンスに、短期間のリースが所有していない疑いがある--起こり得る最悪のケースでは、ときに行う必要があります両方と考えています。 これは、定性的異なるなど、エラーは、アクセスの例外をスローする基になるストアです。
+  syntax:
+    content: 'function acquireLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 以前から取得した適切なパーティションの情報をリース`getLease()`します。
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  name: createAllLeasesIfNotExists(string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ストアに、リースの情報を作成、特定のパーティションが存在しない場合。 ストアに既に存在している場合何もありません。
+  syntax:
+    content: 'function createAllLeasesIfNotExists(partitionIds: string[])'
+    parameters:
+    - id: partitionIds
+      type:
+      - string[]
+      description: リース情報を作成するパーティションの id
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  name: createLeaseStoreIfNotExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 存在しない場合は、リースのストアを作成します。 存在する場合は機能しません。
+  syntax:
+    content: function createLeaseStoreIfNotExists()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLease'
+  name: deleteLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ストアから特定のパーティションのリース情報を削除します。 ストアドのリースを成功として扱われる特定のパーティションがない場合。
+  syntax:
+    content: 'function deleteLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 以前から取得した適切なパーティションの情報をリース`getLease()`します。
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  name: deleteLeaseStore()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: リースのストアを削除します。
+  syntax:
+    content: function deleteLeaseStore()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getAllLeases'
+  name: getAllLeases()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ホストとのリースが期限切れかどうかを所有しているの名前を含むすべてのリースの軽量の BaseLease を返します。 実装は、「CompleteLease または CompleteLease、から派生した独自クラスを返すこと getAllLeases ができるだけ速く実行すること重要です。 場合を BaseLease に必要な情報のみを取得する高速化は、その作業を大きくお勧めします。
+  syntax:
+    content: function getAllLeases()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/event-processor-host.BaseLease[]>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getLease'
+  name: getLease(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 指定されたパーティションのリース情報を取得します。 返すことができます`undefined`指定したパーティションについて、ストア内にリースが作成されていない場合。
+  syntax:
+    content: 'function getLease(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: リースを取得するパーティションの id。
+    return:
+      type:
+      - Promise<@azure/event-processor-host.CompleteLease | undefined>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseDuration'
+  name: leaseDuration
+  fullName: leaseDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} leaseDuration リース期間**秒単位で**更新しない限り、有効期限が切れる前にします。'
+  syntax:
+    content: 'leaseDuration: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  name: leaseRenewInterval
+  fullName: leaseRenewInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {number} leaseRenewInterval スリープ間隔**秒単位で**スキャンの間。
+
+
+    PartitionManager に、リースをスキャンしてそれらを更新する頻度を指定するリース マネージャーの実装を使用します。 ホストが動作を中断した後は、適切なタイミングでリースを再配布するには 10 秒などの比較的短い間隔お勧めします。 明らかに偶発的な有効期限を防ぐために、リース期間の半分未満である必要があります。
+  syntax:
+    content: 'leaseRenewInterval: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  name: leaseStoreExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: リースのストアが存在か
+  syntax:
+    content: function leaseStoreExists()
+    parameters: []
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.releaseLease'
+  name: releaseLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    このホストで現在保持されているリースを提供します。
+
+    リースが盗まれた場合、または有効期限が切れてされた場合はリリースする必要はありません、しようとするとに失敗します。
+  syntax:
+    content: 'function releaseLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 以前から取得した適切なパーティションの情報をリース`getLease()`します。
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.renewLease'
+  name: renewLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    このホストで現在保持されているリースを更新します。
+
+    リースが別のホスト インスタンス (盗難にあったまたは有効期限の後)、または明示的に解放された場合 renewLease は false を返す必要があります。 作成されていない別のホストにより、実装で許可するか、期限切れのリースを更新することは、Azure Storage ベースの実装の方が便利です。 そうでない場合は、renewLease が false を返します。
+  syntax:
+    content: 'function renewLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: リースを更新します。
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.updateLease'
+  name: updateLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    指定されたリース情報で、ストアを更新します。
+
+    更新するために現在のリースを保持する必要があります。 リースが盗まれた、または有効期限が切れた、またはリリースを更新できません。 リース マネージャーの実装では、処理中にリースの有効期限を回避するために、更新プログラムを実行する前に、リースを更新する必要があります。
+  syntax:
+    content: 'function updateLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 格納する新しいリース情報。
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+- uid: Promise<@azure/event-processor-host.BaseLease[]>
+  name: BaseLease[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: BaseLease
+    fullName: BaseLease
+    uid: '@azure/event-processor-host.BaseLease'
+  - name: '[]>'
+    fullName: '[]>'
+- uid: Promise<@azure/event-processor-host.CompleteLease | undefined>
+  name: CompleteLease | undefined>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+  - name: " | undefined>"
+    fullName: " | undefined>"

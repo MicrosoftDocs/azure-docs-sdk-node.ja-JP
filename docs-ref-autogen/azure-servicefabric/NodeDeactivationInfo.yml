@@ -1,0 +1,101 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a3f03d5af3c4ae25c60f33dbed8b343c09354fd9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52141707"
+items:
+- uid: azure-servicefabric.NodeDeactivationInfo
+  name: NodeDeactivationInfo
+  fullName: NodeDeactivationInfo
+  children:
+  - azure-servicefabric.NodeDeactivationInfo.nodeDeactivationIntent
+  - azure-servicefabric.NodeDeactivationInfo.nodeDeactivationStatus
+  - azure-servicefabric.NodeDeactivationInfo.nodeDeactivationTask
+  - azure-servicefabric.NodeDeactivationInfo.pendingSafetyChecks
+  langs:
+  - typeScript
+  type: interface
+  summary: ノードの非アクティブ化について説明します。 この情報は、非アクティブ化を実行中ですまたは既に非アクティブ化されているノードに対して無効です。
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeDeactivationInfo.nodeDeactivationIntent
+  name: nodeDeactivationIntent
+  fullName: nodeDeactivationIntent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    目的は、またはノードを非アクティブ化の理由。 指定できる値を次に示します。
+
+    指定できる値は、次のとおりです。'Invalid'、'Pause'、'再起動'、'RemoveData'、'RemoveNode'
+  optional: true
+  syntax:
+    content: 'nodeDeactivationIntent?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeDeactivationInfo.nodeDeactivationStatus
+  name: nodeDeactivationStatus
+  fullName: nodeDeactivationStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ノードの非アクティブ化操作の状態です。 使用可能な値を次に示します。 指定できる値は、次のとおりです。'None'、'SafetyCheckInProgress'、'SafetyCheckComplete'、' 完了 '
+  optional: true
+  syntax:
+    content: 'nodeDeactivationStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeDeactivationInfo.nodeDeactivationTask
+  name: nodeDeactivationTask
+  fullName: nodeDeactivationTask
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ノードの非アクティブ化操作を表すタスクの一覧です。
+  optional: true
+  syntax:
+    content: 'nodeDeactivationTask?: NodeDeactivationTask[]'
+    return:
+      type:
+      - azure-servicefabric.NodeDeactivationTask[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeDeactivationInfo.pendingSafetyChecks
+  name: pendingSafetyChecks
+  fullName: pendingSafetyChecks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 保留中の安全性チェックの一覧
+  optional: true
+  syntax:
+    content: 'pendingSafetyChecks?: SafetyCheckWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.SafetyCheckWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.NodeDeactivationTask[]
+  name: NodeDeactivationTask[]
+  spec.typeScript:
+  - name: NodeDeactivationTask
+    fullName: NodeDeactivationTask
+    uid: azure-servicefabric.NodeDeactivationTask
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.SafetyCheckWrapper[]
+  name: SafetyCheckWrapper[]
+  spec.typeScript:
+  - name: SafetyCheckWrapper
+    fullName: SafetyCheckWrapper
+    uid: azure-servicefabric.SafetyCheckWrapper
+  - name: '[]'
+    fullName: '[]'
