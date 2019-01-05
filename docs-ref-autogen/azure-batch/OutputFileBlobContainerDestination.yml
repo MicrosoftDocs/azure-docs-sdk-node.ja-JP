@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 09ce6b03757f9d861118debfc5d0bc96d751ca62
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53674256"
+items:
+- uid: azure-batch.OutputFileBlobContainerDestination
+  name: OutputFileBlobContainerDestination
+  fullName: OutputFileBlobContainerDestination
+  children:
+  - azure-batch.OutputFileBlobContainerDestination.containerUrl
+  - azure-batch.OutputFileBlobContainerDestination.path
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.OutputFileBlobContainerDestination.containerUrl
+  name: containerUrl
+  fullName: containerUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2aba-101">URL は、Shared Access Signature (SAS)、コンテナーに対する書き込みアクセス許可の付与を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="c2aba-101">The URL must include a Shared Access Signature (SAS) granting write permissions to the container.</span></span>
+  syntax:
+    content: 'containerUrl: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.OutputFileBlobContainerDestination.path
+  name: path
+  fullName: path
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c2aba-102">FilePattern が特定のファイルを参照している場合 (つまりが含まれていないワイルドカードには)、パスはそのファイルをアップロードする blob の名前。</span><span class="sxs-lookup"><span data-stu-id="c2aba-102">If filePattern refers to a specific file (i.e. contains no wildcards), then path is the name of the blob to which to upload that file.</span></span> <span data-ttu-id="c2aba-103">場合 filePattern は 1 つまたは複数のワイルドカードが含まれています (および、そのため、複数のファイルを一致する場合があります)、パスになります (これは、各 blob の名前に付加されます)、blob 仮想ディレクトリの名前に、ファイルをアップロードします。</span><span class="sxs-lookup"><span data-stu-id="c2aba-103">If filePattern contains one or more wildcards (and therefore may match multiple files), then path is the name of the blob virtual directory (which is prepended to each blob name) to which to upload the file(s).</span></span> <span data-ttu-id="c2aba-104">省略した場合のファイル名に一致する blob 名とコンテナーのルートにファイルがアップロードされます。</span><span class="sxs-lookup"><span data-stu-id="c2aba-104">If omitted, file(s) are uploaded to the root of the container with a blob name matching their file name.</span></span>
+  optional: true
+  syntax:
+    content: 'path?: string'
+    return:
+      type:
+      - string
+  package: azure-batch

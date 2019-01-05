@@ -1,0 +1,264 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ee71468dd02dea68dfda2595f76825b2ebcd6df2
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53675816"
+items:
+- uid: azure-arm-network.LoadBalancer
+  name: LoadBalancer
+  fullName: LoadBalancer
+  children:
+  - azure-arm-network.LoadBalancer.backendAddressPools
+  - azure-arm-network.LoadBalancer.etag
+  - azure-arm-network.LoadBalancer.frontendIPConfigurations
+  - azure-arm-network.LoadBalancer.inboundNatPools
+  - azure-arm-network.LoadBalancer.inboundNatRules
+  - azure-arm-network.LoadBalancer.loadBalancingRules
+  - azure-arm-network.LoadBalancer.outboundRules
+  - azure-arm-network.LoadBalancer.probes
+  - azure-arm-network.LoadBalancer.provisioningState
+  - azure-arm-network.LoadBalancer.resourceGuid
+  - azure-arm-network.LoadBalancer.sku
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="5dcc4-101">ロード バランサーのリソース</span><span class="sxs-lookup"><span data-stu-id="5dcc4-101">LoadBalancer resource</span></span>
+  extends:
+    name: azure-arm-network.Resource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.backendAddressPools
+  name: backendAddressPools
+  fullName: backendAddressPools
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-102">ロード バランサーで使用されるバックエンド アドレス プールのコレクション</span><span class="sxs-lookup"><span data-stu-id="5dcc4-102">Collection of backend address pools used by a load balancer</span></span>
+  optional: true
+  syntax:
+    content: 'backendAddressPools?: BackendAddressPool[]'
+    return:
+      type:
+      - azure-arm-network.BackendAddressPool[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-103">読み取り専用する一意の文字列リソースを更新するたびに変更します。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-103">A unique read-only string that changes whenever the resource is updated.</span></span>
+  optional: true
+  syntax:
+    content: 'etag?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.frontendIPConfigurations
+  name: frontendIPConfigurations
+  fullName: frontendIPConfigurations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-104">ロード バランサーに使用する ip アドレス フロント エンドを表すオブジェクト</span><span class="sxs-lookup"><span data-stu-id="5dcc4-104">Object representing the frontend IPs to be used for the load balancer</span></span>
+  optional: true
+  syntax:
+    content: 'frontendIPConfigurations?: FrontendIPConfiguration[]'
+    return:
+      type:
+      - azure-arm-network.FrontendIPConfiguration[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.inboundNatPools
+  name: inboundNatPools
+  fullName: inboundNatPools
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-105">ロード バランサーに関連付けられた Nic の 1 つのバックエンド ポートに受信 NAT の外部ポートの範囲を定義します。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-105">Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer.</span></span> <span data-ttu-id="5dcc4-106">この範囲からの外部ポートを使用してロード バランサーに関連付けられている各 NIC の受信 NAT 規則が自動的に作成されます。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-106">Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range.</span></span> <span data-ttu-id="5dcc4-107">受信 Nat 規則を定義することで相互に排他的では、ロード バランサーに、受信 NAT プールを定義します。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-107">Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules.</span></span> <span data-ttu-id="5dcc4-108">受信 NAT プールは、仮想マシン スケール セットから参照されます。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-108">Inbound NAT pools are referenced from virtual machine scale sets.</span></span> <span data-ttu-id="5dcc4-109">個々 の仮想マシンに関連付けられている Nic には、受信 NAT プールを参照できません。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-109">NICs that are associated with individual virtual machines cannot reference an inbound NAT pool.</span></span> <span data-ttu-id="5dcc4-110">個々 の受信 NAT 規則を参照する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-110">They have to reference individual inbound NAT rules.</span></span>
+  optional: true
+  syntax:
+    content: 'inboundNatPools?: InboundNatPool[]'
+    return:
+      type:
+      - azure-arm-network.InboundNatPool[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.inboundNatRules
+  name: inboundNatRules
+  fullName: inboundNatRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-111">ロード バランサーで使用される、受信 NAT 規則のコレクションです。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-111">Collection of inbound NAT Rules used by a load balancer.</span></span> <span data-ttu-id="5dcc4-112">受信 NAT プールを定義することで相互に排他的では、ロード バランサーの受信 NAT 規則を定義します。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-112">Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool.</span></span> <span data-ttu-id="5dcc4-113">受信 NAT プールは、仮想マシン スケール セットから参照されます。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-113">Inbound NAT pools are referenced from virtual machine scale sets.</span></span> <span data-ttu-id="5dcc4-114">個々 の仮想マシンに関連付けられている Nic には、受信 NAT プールを参照できません。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-114">NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool.</span></span> <span data-ttu-id="5dcc4-115">個々 の受信 NAT 規則を参照する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-115">They have to reference individual inbound NAT rules.</span></span>
+  optional: true
+  syntax:
+    content: 'inboundNatRules?: InboundNatRule[]'
+    return:
+      type:
+      - azure-arm-network.InboundNatRule[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.loadBalancingRules
+  name: loadBalancingRules
+  fullName: loadBalancingRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-116">プロビジョニング、負荷分散規則を表すオブジェクト コレクションを取得します</span><span class="sxs-lookup"><span data-stu-id="5dcc4-116">Object collection representing the load balancing rules Gets the provisioning</span></span>
+  optional: true
+  syntax:
+    content: 'loadBalancingRules?: LoadBalancingRule[]'
+    return:
+      type:
+      - azure-arm-network.LoadBalancingRule[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.outboundRules
+  name: outboundRules
+  fullName: outboundRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-117">送信の規則。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-117">The outbound rules.</span></span>
+  optional: true
+  syntax:
+    content: 'outboundRules?: OutboundRule[]'
+    return:
+      type:
+      - azure-arm-network.OutboundRule[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.probes
+  name: probes
+  fullName: probes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-118">ロード バランサーで使用されるプローブ オブジェクトのコレクション</span><span class="sxs-lookup"><span data-stu-id="5dcc4-118">Collection of probe objects used in the load balancer</span></span>
+  optional: true
+  syntax:
+    content: 'probes?: Probe[]'
+    return:
+      type:
+      - azure-arm-network.Probe[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.provisioningState
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"5dcc4-119\">パブリック Ip リソースのプロビジョニングの状態を取得します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"5dcc4-119\">Gets the provisioning state of the PublicIP resource.</span></span> <span data-ttu-id=\"5dcc4-120\">次のいずれかの値になります。' の更新'、'削除' および '失敗' です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"5dcc4-120\">Possible values are: 'Updating', 'Deleting', and 'Failed'.</span></span>"
+  optional: true
+  syntax:
+    content: 'provisioningState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.resourceGuid
+  name: resourceGuid
+  fullName: resourceGuid
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-121">ロード バランサーのリソースの GUID プロパティ リソースです。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-121">The resource GUID property of the load balancer resource.</span></span>
+  optional: true
+  syntax:
+    content: 'resourceGuid?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.sku
+  name: sku
+  fullName: sku
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5dcc4-122">ロード バランサーの SKU です。</span><span class="sxs-lookup"><span data-stu-id="5dcc4-122">The load balancer SKU.</span></span>
+  optional: true
+  syntax:
+    content: 'sku?: LoadBalancerSku'
+    return:
+      type:
+      - azure-arm-network.LoadBalancerSku
+  package: azure-arm-network
+references:
+- uid: azure-arm-network.Resource
+  name: Resource
+  spec.typeScript:
+  - name: Resource
+    fullName: Resource
+    uid: azure-arm-network.Resource
+- uid: azure-arm-network.BackendAddressPool[]
+  name: BackendAddressPool[]
+  spec.typeScript:
+  - name: BackendAddressPool
+    fullName: BackendAddressPool
+    uid: azure-arm-network.BackendAddressPool
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.FrontendIPConfiguration[]
+  name: FrontendIPConfiguration[]
+  spec.typeScript:
+  - name: FrontendIPConfiguration
+    fullName: FrontendIPConfiguration
+    uid: azure-arm-network.FrontendIPConfiguration
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.InboundNatPool[]
+  name: InboundNatPool[]
+  spec.typeScript:
+  - name: InboundNatPool
+    fullName: InboundNatPool
+    uid: azure-arm-network.InboundNatPool
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.InboundNatRule[]
+  name: InboundNatRule[]
+  spec.typeScript:
+  - name: InboundNatRule
+    fullName: InboundNatRule
+    uid: azure-arm-network.InboundNatRule
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.LoadBalancingRule[]
+  name: LoadBalancingRule[]
+  spec.typeScript:
+  - name: LoadBalancingRule
+    fullName: LoadBalancingRule
+    uid: azure-arm-network.LoadBalancingRule
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.OutboundRule[]
+  name: OutboundRule[]
+  spec.typeScript:
+  - name: OutboundRule
+    fullName: OutboundRule
+    uid: azure-arm-network.OutboundRule
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.Probe[]
+  name: Probe[]
+  spec.typeScript:
+  - name: Probe
+    fullName: Probe
+    uid: azure-arm-network.Probe
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.LoadBalancerSku
+  name: LoadBalancerSku
+  spec.typeScript:
+  - name: LoadBalancerSku
+    fullName: LoadBalancerSku
+    uid: azure-arm-network.LoadBalancerSku
