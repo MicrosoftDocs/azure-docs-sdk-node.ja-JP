@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d3e75182e570626c77183494aebb37f3ae54a77c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52170017"
+items:
+- uid: azure-arm-resource.DeploymentProperties
+  name: DeploymentProperties
+  fullName: DeploymentProperties
+  children:
+  - azure-arm-resource.DeploymentProperties.debugSetting
+  - azure-arm-resource.DeploymentProperties.mode
+  - azure-arm-resource.DeploymentProperties.onErrorDeployment
+  - azure-arm-resource.DeploymentProperties.parameters
+  - azure-arm-resource.DeploymentProperties.parametersLink
+  - azure-arm-resource.DeploymentProperties.template
+  - azure-arm-resource.DeploymentProperties.templateLink
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="b9634-101">配置プロパティです。</span><span class="sxs-lookup"><span data-stu-id="b9634-101">Deployment properties.</span></span>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.debugSetting
+  name: debugSetting
+  fullName: debugSetting
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b9634-102">デプロイのデバッグ設定です。</span><span class="sxs-lookup"><span data-stu-id="b9634-102">The debug setting of the deployment.</span></span>
+  optional: true
+  syntax:
+    content: 'debugSetting?: DebugSetting'
+    return:
+      type:
+      - azure-arm-resource.DebugSetting
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.mode
+  name: mode
+  fullName: mode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b9634-103">リソースをデプロイするために使用するモード。</span><span class="sxs-lookup"><span data-stu-id="b9634-103">The mode that is used to deploy resources.</span></span> <span data-ttu-id="b9634-104">この値は、増分または完全のいずれかを指定できます。</span><span class="sxs-lookup"><span data-stu-id="b9634-104">This value can be either Incremental or Complete.</span></span>
+
+    <span data-ttu-id="b9634-105">増分モードでは、リソースがテンプレートに含まれていない既存のリソースを削除することがなくデプロイされます。</span><span class="sxs-lookup"><span data-stu-id="b9634-105">In Incremental mode, resources are deployed without deleting existing resources that are not included in the template.</span></span> <span data-ttu-id="b9634-106">完全モードでは、リソースがデプロイされ、テンプレートに含まれていないリソース グループ内の既存のリソースが削除されます。</span><span class="sxs-lookup"><span data-stu-id="b9634-106">In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted.</span></span> <span data-ttu-id="b9634-107">リソースを削除することは意図せずに、完全モードを使用する場合は注意します。</span><span class="sxs-lookup"><span data-stu-id="b9634-107">Be careful when using Complete mode as you may unintentionally delete resources.</span></span> <span data-ttu-id="b9634-108">指定できる値は、次のとおりです。' 増分 '、'完了'</span><span class="sxs-lookup"><span data-stu-id="b9634-108">Possible values include: 'Incremental', 'Complete'</span></span>
+  syntax:
+    content: 'mode: string'
+    return:
+      type:
+      - string
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.onErrorDeployment
+  name: onErrorDeployment
+  fullName: onErrorDeployment
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b9634-109">エラーの動作に展開します。</span><span class="sxs-lookup"><span data-stu-id="b9634-109">The deployment on error behavior.</span></span>
+  optional: true
+  syntax:
+    content: 'onErrorDeployment?: OnErrorDeployment'
+    return:
+      type:
+      - azure-arm-resource.OnErrorDeployment
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.parameters
+  name: parameters
+  fullName: parameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b9634-110">テンプレートのデプロイ パラメーターを定義する名前と値のペア。</span><span class="sxs-lookup"><span data-stu-id="b9634-110">Name and value pairs that define the deployment parameters for the template.</span></span> <span data-ttu-id="b9634-111">既存のパラメーター ファイルへのリンクではなく、要求で直接パラメーター値を指定する場合に、この要素を使用します。</span><span class="sxs-lookup"><span data-stu-id="b9634-111">You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file.</span></span> <span data-ttu-id="b9634-112">ParametersLink プロパティまたはパラメーター プロパティの両方ではなくいずれかを使用します。</span><span class="sxs-lookup"><span data-stu-id="b9634-112">Use either the parametersLink property or the parameters property, but not both.</span></span> <span data-ttu-id="b9634-113">JObject または正しい形式の JSON 文字列を指定できます。</span><span class="sxs-lookup"><span data-stu-id="b9634-113">It can be a JObject or a well formed JSON string.</span></span>
+  optional: true
+  syntax:
+    content: 'parameters?: any'
+    return:
+      type:
+      - any
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.parametersLink
+  name: parametersLink
+  fullName: parametersLink
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b9634-114">パラメーター ファイルの URI。</span><span class="sxs-lookup"><span data-stu-id="b9634-114">The URI of parameters file.</span></span> <span data-ttu-id="b9634-115">既存のパラメーター ファイルにリンクするには、この要素を使用します。</span><span class="sxs-lookup"><span data-stu-id="b9634-115">You use this element to link to an existing parameters file.</span></span> <span data-ttu-id="b9634-116">ParametersLink プロパティまたはパラメーター プロパティの両方ではなくいずれかを使用します。</span><span class="sxs-lookup"><span data-stu-id="b9634-116">Use either the parametersLink property or the parameters property, but not both.</span></span>
+  optional: true
+  syntax:
+    content: 'parametersLink?: ParametersLink'
+    return:
+      type:
+      - azure-arm-resource.ParametersLink
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.template
+  name: template
+  fullName: template
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b9634-117">テンプレートの内容。</span><span class="sxs-lookup"><span data-stu-id="b9634-117">The template content.</span></span> <span data-ttu-id="b9634-118">既存のテンプレートにリンクするのではなく、要求で直接、テンプレートの構文を渡す場合は、この要素を使用します。</span><span class="sxs-lookup"><span data-stu-id="b9634-118">You use this element when you want to pass the template syntax directly in the request rather than link to an existing template.</span></span> <span data-ttu-id="b9634-119">JObject または適切な形式の JSON 文字列を指定できます。</span><span class="sxs-lookup"><span data-stu-id="b9634-119">It can be a JObject or well-formed JSON string.</span></span> <span data-ttu-id="b9634-120">TemplateLink プロパティまたは template プロパティの両方ではなくいずれかを使用します。</span><span class="sxs-lookup"><span data-stu-id="b9634-120">Use either the templateLink property or the template property, but not both.</span></span>
+  optional: true
+  syntax:
+    content: 'template?: any'
+    return:
+      type:
+      - any
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentProperties.templateLink
+  name: templateLink
+  fullName: templateLink
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b9634-121">テンプレートの URI。</span><span class="sxs-lookup"><span data-stu-id="b9634-121">The URI of the template.</span></span> <span data-ttu-id="b9634-122">TemplateLink プロパティまたは template プロパティの両方ではなくいずれかを使用します。</span><span class="sxs-lookup"><span data-stu-id="b9634-122">Use either the templateLink property or the template property, but not both.</span></span>
+  optional: true
+  syntax:
+    content: 'templateLink?: TemplateLink'
+    return:
+      type:
+      - azure-arm-resource.TemplateLink
+  package: azure-arm-resource
+references:
+- uid: azure-arm-resource.DebugSetting
+  name: DebugSetting
+  spec.typeScript:
+  - name: DebugSetting
+    fullName: DebugSetting
+    uid: azure-arm-resource.DebugSetting
+- uid: azure-arm-resource.OnErrorDeployment
+  name: OnErrorDeployment
+  spec.typeScript:
+  - name: OnErrorDeployment
+    fullName: OnErrorDeployment
+    uid: azure-arm-resource.OnErrorDeployment
+- uid: azure-arm-resource.ParametersLink
+  name: ParametersLink
+  spec.typeScript:
+  - name: ParametersLink
+    fullName: ParametersLink
+    uid: azure-arm-resource.ParametersLink
+- uid: azure-arm-resource.TemplateLink
+  name: TemplateLink
+  spec.typeScript:
+  - name: TemplateLink
+    fullName: TemplateLink
+    uid: azure-arm-resource.TemplateLink

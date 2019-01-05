@@ -1,0 +1,944 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e2d905a200190804df26d4317afebcd13d535944
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52168487"
+items:
+- uid: azure-cognitiveservices-face.FaceListOperations
+  name: FaceListOperations
+  fullName: FaceListOperations
+  children:
+  - azure-cognitiveservices-face.FaceListOperations.addFaceFromStream
+  - azure-cognitiveservices-face.FaceListOperations.addFaceFromStream_2
+  - azure-cognitiveservices-face.FaceListOperations.addFaceFromStream_1
+  - azure-cognitiveservices-face.FaceListOperations.addFaceFromStreamWithHttpOperationResponse
+  - azure-cognitiveservices-face.FaceListOperations.addFaceFromUrl
+  - azure-cognitiveservices-face.FaceListOperations.addFaceFromUrl_2
+  - azure-cognitiveservices-face.FaceListOperations.addFaceFromUrl_1
+  - azure-cognitiveservices-face.FaceListOperations.addFaceFromUrlWithHttpOperationResponse
+  - azure-cognitiveservices-face.FaceListOperations.create
+  - azure-cognitiveservices-face.FaceListOperations.create_2
+  - azure-cognitiveservices-face.FaceListOperations.create_1
+  - azure-cognitiveservices-face.FaceListOperations.createWithHttpOperationResponse
+  - azure-cognitiveservices-face.FaceListOperations.deleteFace
+  - azure-cognitiveservices-face.FaceListOperations.deleteFace_2
+  - azure-cognitiveservices-face.FaceListOperations.deleteFace_1
+  - azure-cognitiveservices-face.FaceListOperations.deleteFaceWithHttpOperationResponse
+  - azure-cognitiveservices-face.FaceListOperations.deleteMethod
+  - azure-cognitiveservices-face.FaceListOperations.deleteMethod_2
+  - azure-cognitiveservices-face.FaceListOperations.deleteMethod_1
+  - azure-cognitiveservices-face.FaceListOperations.deleteMethodWithHttpOperationResponse
+  - azure-cognitiveservices-face.FaceListOperations.get
+  - azure-cognitiveservices-face.FaceListOperations.get_2
+  - azure-cognitiveservices-face.FaceListOperations.get_1
+  - azure-cognitiveservices-face.FaceListOperations.getWithHttpOperationResponse
+  - azure-cognitiveservices-face.FaceListOperations.list
+  - azure-cognitiveservices-face.FaceListOperations.list_2
+  - azure-cognitiveservices-face.FaceListOperations.list_1
+  - azure-cognitiveservices-face.FaceListOperations.listWithHttpOperationResponse
+  - azure-cognitiveservices-face.FaceListOperations.update
+  - azure-cognitiveservices-face.FaceListOperations.update_2
+  - azure-cognitiveservices-face.FaceListOperations.update_1
+  - azure-cognitiveservices-face.FaceListOperations.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.addFaceFromStream
+  name: addFaceFromStream(string, stream.Readable, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-101">顔を顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-101">Add a face to a face list.</span></span> <span data-ttu-id="d6ad6-102">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-102">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d6ad6-103">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-103">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+  syntax:
+    content: 'function addFaceFromStream(faceListId: string, image: stream.Readable, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-104">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-104">Id referencing a particular face list.</span></span>
+    - id: image
+      type:
+      - stream.Readable
+      description: >
+        <span data-ttu-id="d6ad6-105">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-105">An image stream.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.PersistedFace>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.addFaceFromStream_2
+  name: addFaceFromStream(string, stream.Readable, Object, ServiceCallback<PersistedFace>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-106">顔を顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-106">Add a face to a face list.</span></span> <span data-ttu-id="d6ad6-107">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-107">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d6ad6-108">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-108">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+  syntax:
+    content: 'function addFaceFromStream(faceListId: string, image: stream.Readable, options: Object, callback: ServiceCallback<PersistedFace>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: image
+      type:
+      - stream.Readable
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.PersistedFace>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.PersistedFace>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.addFaceFromStream_1
+  name: addFaceFromStream(string, stream.Readable, ServiceCallback<PersistedFace>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-109">顔を顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-109">Add a face to a face list.</span></span> <span data-ttu-id="d6ad6-110">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-110">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d6ad6-111">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-111">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+  syntax:
+    content: 'function addFaceFromStream(faceListId: string, image: stream.Readable, callback: ServiceCallback<PersistedFace>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: image
+      type:
+      - stream.Readable
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.PersistedFace>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.PersistedFace>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.addFaceFromStreamWithHttpOperationResponse
+  name: addFaceFromStreamWithHttpOperationResponse(string, stream.Readable, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-112">顔を顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-112">Add a face to a face list.</span></span> <span data-ttu-id="d6ad6-113">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-113">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d6ad6-114">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-114">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+  syntax:
+    content: 'function addFaceFromStreamWithHttpOperationResponse(faceListId: string, image: stream.Readable, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-115">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-115">Id referencing a particular face list.</span></span>
+    - id: image
+      type:
+      - stream.Readable
+      description: >
+        <span data-ttu-id="d6ad6-116">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-116">An image stream.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-face.PersistedFace>>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.addFaceFromUrl
+  name: addFaceFromUrl(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-117">顔を顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-117">Add a face to a face list.</span></span> <span data-ttu-id="d6ad6-118">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-118">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d6ad6-119">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-119">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+  syntax:
+    content: 'function addFaceFromUrl(faceListId: string, url: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-120">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-120">Id referencing a particular face list.</span></span>
+    - id: url
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-121">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="d6ad6-121">Publicly reachable URL of an image</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.PersistedFace>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.addFaceFromUrl_2
+  name: addFaceFromUrl(string, string, Object, ServiceCallback<PersistedFace>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-122">顔を顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-122">Add a face to a face list.</span></span> <span data-ttu-id="d6ad6-123">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-123">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d6ad6-124">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-124">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+  syntax:
+    content: 'function addFaceFromUrl(faceListId: string, url: string, options: Object, callback: ServiceCallback<PersistedFace>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: url
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.PersistedFace>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.PersistedFace>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.addFaceFromUrl_1
+  name: addFaceFromUrl(string, string, ServiceCallback<PersistedFace>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-125">顔を顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-125">Add a face to a face list.</span></span> <span data-ttu-id="d6ad6-126">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-126">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d6ad6-127">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-127">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+  syntax:
+    content: 'function addFaceFromUrl(faceListId: string, url: string, callback: ServiceCallback<PersistedFace>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: url
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.PersistedFace>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.PersistedFace>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.addFaceFromUrlWithHttpOperationResponse
+  name: addFaceFromUrlWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-128">顔を顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-128">Add a face to a face list.</span></span> <span data-ttu-id="d6ad6-129">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-129">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d6ad6-130">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-130">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+  syntax:
+    content: 'function addFaceFromUrlWithHttpOperationResponse(faceListId: string, url: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-131">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-131">Id referencing a particular face list.</span></span>
+    - id: url
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-132">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="d6ad6-132">Publicly reachable URL of an image</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-face.PersistedFace>>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.create
+  name: create(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-133">空の顔リストを作成します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-133">Create an empty face list.</span></span> <span data-ttu-id="d6ad6-134">最大 64 の面リストは 1 つのサブスクリプションに存在する許可されています。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-134">Up to 64 face lists are allowed to exist in one subscription.</span></span>
+  syntax:
+    content: 'function create(faceListId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-135">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-135">Id referencing a particular face list.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.create_2
+  name: create(string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-136">空の顔リストを作成します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-136">Create an empty face list.</span></span> <span data-ttu-id="d6ad6-137">最大 64 の面リストは 1 つのサブスクリプションに存在する許可されています。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-137">Up to 64 face lists are allowed to exist in one subscription.</span></span>
+  syntax:
+    content: 'function create(faceListId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.create_1
+  name: create(string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-138">空の顔リストを作成します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-138">Create an empty face list.</span></span> <span data-ttu-id="d6ad6-139">最大 64 の面リストは 1 つのサブスクリプションに存在する許可されています。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-139">Up to 64 face lists are allowed to exist in one subscription.</span></span>
+  syntax:
+    content: 'function create(faceListId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.createWithHttpOperationResponse
+  name: createWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-140">空の顔リストを作成します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-140">Create an empty face list.</span></span> <span data-ttu-id="d6ad6-141">最大 64 の面リストは 1 つのサブスクリプションに存在する許可されています。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-141">Up to 64 face lists are allowed to exist in one subscription.</span></span>
+  syntax:
+    content: 'function createWithHttpOperationResponse(faceListId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-142">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-142">Id referencing a particular face list.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.deleteFace
+  name: deleteFace(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-143">(、PersisitedFaceId と、faceListId によって指定される)、顔の一覧から既存の顔を削除します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-143">Delete an existing face from a face list (given by a persisitedFaceId and a faceListId).</span></span> <span data-ttu-id="d6ad6-144">表面に関連する永続化されたイメージも削除されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-144">Persisted image related to the face will also be deleted.</span></span>
+  syntax:
+    content: 'function deleteFace(faceListId: string, persistedFaceId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-145">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-145">Id referencing a particular face list.</span></span>
+    - id: persistedFaceId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-146">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-146">Id referencing a particular persistedFaceId of an existing face.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.deleteFace_2
+  name: deleteFace(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-147">(、PersisitedFaceId と、faceListId によって指定される)、顔の一覧から既存の顔を削除します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-147">Delete an existing face from a face list (given by a persisitedFaceId and a faceListId).</span></span> <span data-ttu-id="d6ad6-148">表面に関連する永続化されたイメージも削除されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-148">Persisted image related to the face will also be deleted.</span></span>
+  syntax:
+    content: 'function deleteFace(faceListId: string, persistedFaceId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: persistedFaceId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.deleteFace_1
+  name: deleteFace(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-149">(、PersisitedFaceId と、faceListId によって指定される)、顔の一覧から既存の顔を削除します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-149">Delete an existing face from a face list (given by a persisitedFaceId and a faceListId).</span></span> <span data-ttu-id="d6ad6-150">表面に関連する永続化されたイメージも削除されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-150">Persisted image related to the face will also be deleted.</span></span>
+  syntax:
+    content: 'function deleteFace(faceListId: string, persistedFaceId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: persistedFaceId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.deleteFaceWithHttpOperationResponse
+  name: deleteFaceWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-151">(、PersisitedFaceId と、faceListId によって指定される)、顔の一覧から既存の顔を削除します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-151">Delete an existing face from a face list (given by a persisitedFaceId and a faceListId).</span></span> <span data-ttu-id="d6ad6-152">表面に関連する永続化されたイメージも削除されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-152">Persisted image related to the face will also be deleted.</span></span>
+  syntax:
+    content: 'function deleteFaceWithHttpOperationResponse(faceListId: string, persistedFaceId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-153">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-153">Id referencing a particular face list.</span></span>
+    - id: persistedFaceId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-154">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-154">Id referencing a particular persistedFaceId of an existing face.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.deleteMethod
+  name: deleteMethod(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-155">FaceListId に従って既存の顔リストを削除します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-155">Delete an existing face list according to faceListId.</span></span> <span data-ttu-id="d6ad6-156">顔顔リスト内のイメージも削除されますが永続化されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-156">Persisted face images in the face list will also be deleted.</span></span>
+  syntax:
+    content: 'function deleteMethod(faceListId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-157">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-157">Id referencing a particular face list.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.deleteMethod_2
+  name: deleteMethod(string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-158">FaceListId に従って既存の顔リストを削除します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-158">Delete an existing face list according to faceListId.</span></span> <span data-ttu-id="d6ad6-159">顔顔リスト内のイメージも削除されますが永続化されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-159">Persisted face images in the face list will also be deleted.</span></span>
+  syntax:
+    content: 'function deleteMethod(faceListId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.deleteMethod_1
+  name: deleteMethod(string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-160">FaceListId に従って既存の顔リストを削除します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-160">Delete an existing face list according to faceListId.</span></span> <span data-ttu-id="d6ad6-161">顔顔リスト内のイメージも削除されますが永続化されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-161">Persisted face images in the face list will also be deleted.</span></span>
+  syntax:
+    content: 'function deleteMethod(faceListId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-162">FaceListId に従って既存の顔リストを削除します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-162">Delete an existing face list according to faceListId.</span></span> <span data-ttu-id="d6ad6-163">顔顔リスト内のイメージも削除されますが永続化されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-163">Persisted face images in the face list will also be deleted.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(faceListId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-164">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-164">Id referencing a particular face list.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.get
+  name: get(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-165">顔リストの情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-165">Retrieve a face list's information.</span></span>
+  syntax:
+    content: 'function get(faceListId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-166">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-166">Id referencing a particular face list.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.FaceList>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.get_2
+  name: get(string, Object, ServiceCallback<FaceList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-167">顔リストの情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-167">Retrieve a face list's information.</span></span>
+  syntax:
+    content: 'function get(faceListId: string, options: Object, callback: ServiceCallback<FaceList>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.FaceList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.FaceList>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.get_1
+  name: get(string, ServiceCallback<FaceList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-168">顔リストの情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-168">Retrieve a face list's information.</span></span>
+  syntax:
+    content: 'function get(faceListId: string, callback: ServiceCallback<FaceList>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.FaceList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.FaceList>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-169">顔リストの情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-169">Retrieve a face list's information.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(faceListId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-170">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-170">Id referencing a particular face list.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-face.FaceList>>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.list
+  name: list(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-171">既存のすべての顔リストに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-171">Retrieve information about all existing face lists.</span></span> <span data-ttu-id="d6ad6-172">FaceListId、名、および userData のみが返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-172">Only faceListId, name and userData will be returned.</span></span>
+  syntax:
+    content: 'function list(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.FaceList[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.list_2
+  name: list(Object, ServiceCallback<FaceList[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-173">既存のすべての顔リストに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-173">Retrieve information about all existing face lists.</span></span> <span data-ttu-id="d6ad6-174">FaceListId、名、および userData のみが返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-174">Only faceListId, name and userData will be returned.</span></span>
+  syntax:
+    content: 'function list(options: Object, callback: ServiceCallback<FaceList[]>)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.FaceList[]>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.FaceList[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.list_1
+  name: list(ServiceCallback<FaceList[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-175">既存のすべての顔リストに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-175">Retrieve information about all existing face lists.</span></span> <span data-ttu-id="d6ad6-176">FaceListId、名、および userData のみが返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-176">Only faceListId, name and userData will be returned.</span></span>
+  syntax:
+    content: 'function list(callback: ServiceCallback<FaceList[]>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.FaceList[]>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.FaceList[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-177">既存のすべての顔リストに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-177">Retrieve information about all existing face lists.</span></span> <span data-ttu-id="d6ad6-178">FaceListId、名、および userData のみが返されます。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-178">Only faceListId, name and userData will be returned.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-face.FaceList[]>>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.update
+  name: update(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-179">顔リストの情報を更新します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-179">Update information of a face list.</span></span>
+  syntax:
+    content: 'function update(faceListId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-180">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-180">Id referencing a particular face list.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.update_2
+  name: update(string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-181">顔リストの情報を更新します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-181">Update information of a face list.</span></span>
+  syntax:
+    content: 'function update(faceListId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.update_1
+  name: update(string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-182">顔リストの情報を更新します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-182">Update information of a face list.</span></span>
+  syntax:
+    content: 'function update(faceListId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.FaceListOperations.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d6ad6-183">顔リストの情報を更新します。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-183">Update information of a face list.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(faceListId: string, options?: Object)'
+    parameters:
+    - id: faceListId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="d6ad6-184">特定の面の一覧を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d6ad6-184">Id referencing a particular face list.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-face
+references:
+- uid: Promise<azure-cognitiveservices-face.PersistedFace>
+  name: PersistedFace>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: PersistedFace
+    fullName: PersistedFace
+    uid: azure-cognitiveservices-face.PersistedFace
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-face.PersistedFace>
+  name: PersistedFace>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: PersistedFace
+    fullName: PersistedFace
+    uid: azure-cognitiveservices-face.PersistedFace
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.PersistedFace>>
+  name: PersistedFace>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: PersistedFace
+    fullName: PersistedFace
+    uid: azure-cognitiveservices-face.PersistedFace
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-cognitiveservices-face.FaceList>
+  name: FaceList>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: FaceList
+    fullName: FaceList
+    uid: azure-cognitiveservices-face.FaceList
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-face.FaceList>
+  name: FaceList>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: FaceList
+    fullName: FaceList
+    uid: azure-cognitiveservices-face.FaceList
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.FaceList>>
+  name: FaceList>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: FaceList
+    fullName: FaceList
+    uid: azure-cognitiveservices-face.FaceList
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-cognitiveservices-face.FaceList[]>
+  name: FaceList[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: FaceList
+    fullName: FaceList
+    uid: azure-cognitiveservices-face.FaceList
+  - name: '[]>'
+    fullName: '[]>'
+- uid: ServiceCallback<azure-cognitiveservices-face.FaceList[]>
+  name: FaceList[]>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: FaceList
+    fullName: FaceList
+    uid: azure-cognitiveservices-face.FaceList
+  - name: '[]>'
+    fullName: '[]>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.FaceList[]>>
+  name: FaceList[]>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: FaceList
+    fullName: FaceList
+    uid: azure-cognitiveservices-face.FaceList
+  - name: '[]>>'
+    fullName: '[]>>'
