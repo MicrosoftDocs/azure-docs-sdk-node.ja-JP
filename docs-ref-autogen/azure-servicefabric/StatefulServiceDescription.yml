@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6a26081a8779302e6524a8b01778592788b4d8c8
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52101357"
+items:
+- uid: azure-servicefabric.StatefulServiceDescription
+  name: StatefulServiceDescription
+  fullName: StatefulServiceDescription
+  children:
+  - azure-servicefabric.StatefulServiceDescription.flags
+  - azure-servicefabric.StatefulServiceDescription.hasPersistedState
+  - azure-servicefabric.StatefulServiceDescription.minReplicaSetSize
+  - azure-servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds
+  - azure-servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds
+  - azure-servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds
+  - azure-servicefabric.StatefulServiceDescription.targetReplicaSetSize
+  langs:
+  - typeScript
+  type: interface
+  summary: ステートフル サービスをについて説明します。
+  extends:
+    name: azure-servicefabric.ServiceDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    その他のプロパティを設定するかどうかを示すフラグです。 各関連付けられているプロパティに対応して、以下で指定したフラグを場合、プロパティが指定されていることを示します。
+
+    このプロパティは、ビットごとの 'OR' 演算子を使用して取得したこれらのフラグの組み合わせを指定できます。
+
+    たとえば、指定された値は 6 QuorumLossWaitDuration (2) と StandByReplicaKeepDuration(4) フラグが設定されます。
+
+    - その他のプロパティを設定するなし - は示しません。 値は 0 です。
+
+    - ReplicaRestartWaitDuration - は、プロパティの設定の ReplicaRestartWaitDuration を示します。 値は 1 です。
+
+    - QuorumLossWaitDuration では、プロパティが設定されて QuorumLossWaitDuration を示します。 値は、します。
+
+    2.
+
+    - StandByReplicaKeepDuration のでは、プロパティが設定されて StandByReplicaKeepDuration を示します。 値は 4 です。
+  optional: true
+  syntax:
+    content: 'flags?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.hasPersistedState
+  name: hasPersistedState
+  fullName: hasPersistedState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    これは、ローカル ディスク上の状態を格納する永続的なサービスであるかどうかを示すフラグです。
+
+    これは、このプロパティの値が true の場合、いない場合は false。
+  syntax:
+    content: 'hasPersistedState: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.minReplicaSetSize
+  name: minReplicaSetSize
+  fullName: minReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: レプリカ セットの最小サイズ (数)。
+  syntax:
+    content: 'minReplicaSetSize: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds
+  name: quorumLossWaitDurationSeconds
+  fullName: quorumLossWaitDurationSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: パーティションがクォーラム損失の状態であることを許可する最大期間 (秒)。
+  optional: true
+  syntax:
+    content: 'quorumLossWaitDurationSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds
+  name: replicaRestartWaitDurationSeconds
+  fullName: replicaRestartWaitDurationSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: レプリカがダウンしてから新しいレプリカが作成されるまでの期間 (秒)。
+  optional: true
+  syntax:
+    content: 'replicaRestartWaitDurationSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds
+  name: standByReplicaKeepDurationSeconds
+  fullName: standByReplicaKeepDurationSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 削除される前にスタンバイ レプリカを維持する期間を定義します。
+  optional: true
+  syntax:
+    content: 'standByReplicaKeepDurationSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.targetReplicaSetSize
+  name: targetReplicaSetSize
+  fullName: targetReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ターゲット レプリカ セットのサイズ (数)。
+  syntax:
+    content: 'targetReplicaSetSize: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServiceDescription
+  name: ServiceDescription
+  spec.typeScript:
+  - name: ServiceDescription
+    fullName: ServiceDescription
+    uid: azure-servicefabric.ServiceDescription

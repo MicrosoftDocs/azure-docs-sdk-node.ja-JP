@@ -1,0 +1,181 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a9b7f6544194a1f83e2552de130e6fab8f1cf9c0
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52099577"
+items:
+- uid: azure-servicefabric.ApplicationUpgradeDescription
+  name: ApplicationUpgradeDescription
+  fullName: ApplicationUpgradeDescription
+  children:
+  - azure-servicefabric.ApplicationUpgradeDescription.applicationHealthPolicy
+  - azure-servicefabric.ApplicationUpgradeDescription.forceRestart
+  - azure-servicefabric.ApplicationUpgradeDescription.monitoringPolicy
+  - azure-servicefabric.ApplicationUpgradeDescription.name
+  - azure-servicefabric.ApplicationUpgradeDescription.parameters
+  - azure-servicefabric.ApplicationUpgradeDescription.rollingUpgradeMode
+  - azure-servicefabric.ApplicationUpgradeDescription.targetApplicationTypeVersion
+  - azure-servicefabric.ApplicationUpgradeDescription.upgradeKind
+  - azure-servicefabric.ApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds
+  langs:
+  - typeScript
+  type: interface
+  summary: アプリケーションのアップグレードのパラメーターについて説明します。 アップグレードの説明により既存のアプリケーションの説明が置き換えられることに注意してください。 これは、パラメーターが指定されていない場合、アプリケーションの既存のパラメーターが空のパラメーター リストで上書きされることを意味します。 これにより、アプリケーションがアプリケーション マニフェストからのパラメーターの既定値を使用することになります。 既存のパラメーター値を変更しない場合は、最初 GetApplicationInfo クエリを使用してアプリケーションのパラメーターを取得してくださいとこの ApplicationUpgradeDescription でパラメーターとしてそれらの値を指定します。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.applicationHealthPolicy
+  name: applicationHealthPolicy
+  fullName: applicationHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: アプリケーションまたはその子エンティティのいずれかの正常性の評価に使用される正常性ポリシーを定義します。
+  optional: true
+  syntax:
+    content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthPolicy
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: True の場合、し、プロセスが強制的に再起動アップグレード中に (構成の変更のみをアップグレードまたはデータ)、コードのバージョンが変更されていない場合でもです。
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.monitoringPolicy
+  name: monitoringPolicy
+  fullName: monitoringPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 監視対象モードでアップグレードを監視するためのパラメーターについて説明します。
+  optional: true
+  syntax:
+    content: 'monitoringPolicy?: MonitoringPolicyDescription'
+    return:
+      type:
+      - azure-servicefabric.MonitoringPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ターゲット アプリケーションの名前を含む、' fabric:'URI スキーム。
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.parameters
+  name: parameters
+  fullName: parameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: アプリケーション マニフェストで指定された既定値のオーバーライドされた値でパラメーターをアプリケーションの一覧。
+  syntax:
+    content: 'parameters: ApplicationParameter[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationParameter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ローリング アップグレード時に正常性を監視するために使用されるモード。 値は UnmonitoredAuto、UnmonitoredManual、および監視対象です。 指定できる値は、次のとおりです。' Invalid'、'UnmonitoredAuto'、'UnmonitoredManual'、'監視'
+  optional: true
+  syntax:
+    content: 'rollingUpgradeMode?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.targetApplicationTypeVersion
+  name: targetApplicationTypeVersion
+  fullName: targetApplicationTypeVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: アプリケーションの種類のターゲット バージョン (アプリケーション マニフェストで見つかった)、アプリケーションのアップグレード。
+  syntax:
+    content: 'targetApplicationTypeVersion: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.upgradeKind
+  name: upgradeKind
+  fullName: upgradeKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 次の値からのアップグレードの種類。 指定できる値は、次のとおりです。' Invalid'、'ロールバック'
+  syntax:
+    content: 'upgradeKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds
+  name: upgradeReplicaSetCheckTimeoutInSeconds
+  fullName: upgradeReplicaSetCheckTimeoutInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    アップグレード ドメインの処理をブロックし、予期しない問題が発生したときに可用性の損失を防ぐための最長時間。 このタイムアウトが期限切れになると、可用性の損失問題に関係なく、アップグレード ドメインの処理が続行されます。 タイムアウトは、各アップグレード ドメインの開始時にリセットされます。 有効な値は 0 から 42949672925 の範囲です (0 と 42949672925 を含みます)。
+
+    (符号なし 32 ビット整数)。
+  optional: true
+  syntax:
+    content: 'upgradeReplicaSetCheckTimeoutInSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthPolicy
+  name: ApplicationHealthPolicy
+  spec.typeScript:
+  - name: ApplicationHealthPolicy
+    fullName: ApplicationHealthPolicy
+    uid: azure-servicefabric.ApplicationHealthPolicy
+- uid: azure-servicefabric.MonitoringPolicyDescription
+  name: MonitoringPolicyDescription
+  spec.typeScript:
+  - name: MonitoringPolicyDescription
+    fullName: MonitoringPolicyDescription
+    uid: azure-servicefabric.MonitoringPolicyDescription
+- uid: azure-servicefabric.ApplicationParameter[]
+  name: ApplicationParameter[]
+  spec.typeScript:
+  - name: ApplicationParameter
+    fullName: ApplicationParameter
+    uid: azure-servicefabric.ApplicationParameter
+  - name: '[]'
+    fullName: '[]'
