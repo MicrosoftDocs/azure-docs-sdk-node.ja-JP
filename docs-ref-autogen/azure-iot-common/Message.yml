@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ade1e46fe84f5e9b55bb82d709a62cd89d76bba9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52017996"
+items:
+- uid: azure-iot-common.Message
+  name: Message
+  fullName: Message
+  children:
+  - azure-iot-common.Message.ack
+  - azure-iot-common.Message.BufferConvertible
+  - azure-iot-common.Message.contentEncoding
+  - azure-iot-common.Message.contentType
+  - azure-iot-common.Message.correlationId
+  - azure-iot-common.Message.data
+  - azure-iot-common.Message.expiryTimeUtc
+  - azure-iot-common.Message.getBytes
+  - azure-iot-common.Message.getData
+  - azure-iot-common.Message.isBufferConvertible
+  - azure-iot-common.Message.lockToken
+  - azure-iot-common.Message.constructor
+  - azure-iot-common.Message.messageId
+  - azure-iot-common.Message.properties
+  - azure-iot-common.Message.to
+  - azure-iot-common.Message.userId
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="fc4dc-101"><xref:azure-iot-common.Message>オブジェクトは、製品利用統計情報 (デバイスからクラウド) が使用され、(クラウドからデバイス) の非同期メッセージング、デバイスと IoT Hub サービスの間でのコマンドします。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-101">The <xref:azure-iot-common.Message> object is used for telemetry (device-to-cloud) and commands (cloud-to-device) asynchronous messaging between the device and the IoT Hub service.</span></span> <span data-ttu-id="fc4dc-102">つまり、AMQP、MQTT と HTTP 経由で同じように機能がトランスポートに依存しないになります。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-102">It is transport-agnostic, meaning it works the same way over AMQP, MQTT and HTTP.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.Message.ack
+  name: ack
+  fullName: ack
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="fc4dc-103">(クラウドからデバイスへのコマンド) の場合に要求されたフィードバックの種類</span><span class="sxs-lookup"><span data-stu-id="fc4dc-103">Type of feedback requested (in case of cloud-to-device command)</span></span>
+  syntax:
+    content: 'ack: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.contentEncoding
+  name: contentEncoding
+  fullName: contentEncoding
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="fc4dc-104">メッセージ本文のコンテンツ エンコーディング。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-104">Content encoding of the message body.</span></span> <span data-ttu-id="fc4dc-105">'utf-8 '、' utf-16' または 'utf-32' を指定できます。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-105">can be 'utf-8', 'utf-16' or 'utf-32'.</span></span>
+  syntax:
+    content: 'contentEncoding: undefined | "utf-8" | "utf-16" | "utf-32"'
+    return:
+      type:
+      - undefined | "utf-8" | "utf-16" | "utf-32"
+  package: azure-iot-common
+- uid: azure-iot-common.Message.contentType
+  name: contentType
+  fullName: contentType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="fc4dc-106">Content type プロパティは、メッセージ本文を持つルートするために使用します。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-106">Content type property used to routes with the message body.</span></span> <span data-ttu-id="fc4dc-107">'Application/json' があります。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-107">Should be 'application/json'.</span></span>
+  syntax:
+    content: 'contentType: undefined | "application/json"'
+    return:
+      type:
+      - undefined | "application/json"
+  package: azure-iot-common
+- uid: azure-iot-common.Message.correlationId
+  name: correlationId
+  fullName: correlationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="fc4dc-108">メッセージ応答とフィードバックに使用</span><span class="sxs-lookup"><span data-stu-id="fc4dc-108">Used in message responses and feedback</span></span>
+  syntax:
+    content: 'correlationId: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.data
+  name: data
+  fullName: data
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'data: any'
+    return:
+      type:
+      - any
+  package: azure-iot-common
+- uid: azure-iot-common.Message.expiryTimeUtc
+  name: expiryTimeUtc
+  fullName: expiryTimeUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="fc4dc-109">有効期限日時-UTC の C2D メッセージをハブによって解釈されます。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-109">Expiry time in UTC interpreted by hub on C2D messages.</span></span> <span data-ttu-id="fc4dc-110">それ以外の場合は無視されます。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-110">Ignored in other cases.</span></span>
+  syntax:
+    content: 'expiryTimeUtc: any'
+    return:
+      type:
+      - any
+  package: azure-iot-common
+- uid: azure-iot-common.Message.getBytes
+  name: getBytes()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="fc4dc-111">としてコンス トラクターに渡されるデータの取得、[バッファー](https://nodejs.org/api/globals.html#globals_class_buffer)</span><span class="sxs-lookup"><span data-stu-id="fc4dc-111">Gets the data passed to the constructor as a [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer)</span></span>
+  syntax:
+    content: function getBytes()
+    parameters: []
+    return:
+      type:
+      - Buffer
+  package: azure-iot-common
+- uid: azure-iot-common.Message.getData
+  name: getData()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="fc4dc-112">コンテンツ (本文) を取得、<xref:azure-iot-common.Message>します。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-112">Gets the content (body) of the <xref:azure-iot-common.Message>.</span></span>
+  syntax:
+    content: function getData()
+    parameters: []
+    return:
+      type:
+      - azure-iot-common.Message.BufferConvertible
+  package: azure-iot-common
+- uid: azure-iot-common.Message.isBufferConvertible
+  name: isBufferConvertible(any)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="fc4dc-113">指定したオブジェクトが型の場合は true を返します<xref:Message.BufferConvertible>します。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-113">Returns true if the given object is of type <xref:Message.BufferConvertible>.</span></span>  <span data-ttu-id="fc4dc-114">型のオブジェクト<xref:Message.BufferConvertible>に渡すことができます、<xref:Message>コンス トラクター。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-114">Objects of type <xref:Message.BufferConvertible> can be passed into the <xref:Message> constructor.</span></span>
+  syntax:
+    content: 'static function isBufferConvertible(obj: any)'
+    parameters:
+    - id: obj
+      type:
+      - any
+      description: >
+        <span data-ttu-id="fc4dc-115">オブジェクトのインスタンスを確認するには</span><span class="sxs-lookup"><span data-stu-id="fc4dc-115">object instance to check</span></span>
+    return:
+      type:
+      - boolean
+  package: azure-iot-common
+- uid: azure-iot-common.Message.lockToken
+  name: lockToken
+  fullName: lockToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="fc4dc-116">破棄、拒否、またはメッセージを受信するために使用</span><span class="sxs-lookup"><span data-stu-id="fc4dc-116">Used to Abandon, Reject or Accept the message</span></span>
+  syntax:
+    content: 'lockToken: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.constructor
+  name: Message(Message.BufferConvertible)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="fc4dc-117">新たに作成<xref:azure-iot-common.Message>オブジェクト</span><span class="sxs-lookup"><span data-stu-id="fc4dc-117">Creates a new <xref:azure-iot-common.Message> object</span></span>
+  syntax:
+    content: 'new Message(data: Message.BufferConvertible)'
+    parameters:
+    - id: data
+      type:
+      - azure-iot-common.Message.BufferConvertible
+      description: >
+        <span data-ttu-id="fc4dc-118">ノード[バッファー](https://nodejs.org/api/globals.html#globals_class_buffer)オブジェクトまたはに渡すことが何も、[バッファー](https://nodejs.org/api/globals.html#globals_class_buffer)構築するコンス トラクター、[バッファー](https://nodejs.org/api/globals.html#globals_class_buffer)から。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-118">a Node [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) object or anything that can be passed to the [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) constructor to construct a [Buffer](https://nodejs.org/api/globals.html#globals_class_buffer) from.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.Message.messageId
+  name: messageId
+  fullName: messageId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"fc4dc-119\">双方向通信の関連付けに使用されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"fc4dc-119\">Used to correlate two-way communication.</span></span> <span data-ttu-id=\"fc4dc-120\">形式:ASCII 7 ビット英数字文字と、次の特殊文字の大文字の文字列 (最大 128 文字の長い):</span><span class=\"sxs-lookup\"><span data-stu-id=\"fc4dc-120\">Format: A case-sensitive string (up to 128 char long) of ASCII 7-bit alphanumeric chars and the following special symbols:</span></span> <br/><span data-ttu-id=\"fc4dc-121\">`- : . + % _ # * ? ! ( ) , = @ ; $ '`</span><span class=\"sxs-lookup\"><span data-stu-id=\"fc4dc-121\">`- : . + % _ # * ? ! ( ) , = @ ; $ '`.</span></span>"
+  syntax:
+    content: 'messageId: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.properties
+  name: properties
+  fullName: properties
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="fc4dc-122">文字列キーとカスタム メッセージ プロパティを格納するための値を格納しているマップ。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-122">A map containing string keys and values for storing custom message properties.</span></span>
+  syntax:
+    content: 'properties: Properties'
+    return:
+      type:
+      - azure-iot-common.Properties
+  package: azure-iot-common
+- uid: azure-iot-common.Message.to
+  name: to
+  fullName: to
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="fc4dc-123">メッセージの転送先。</span><span class="sxs-lookup"><span data-stu-id="fc4dc-123">Destination of the message.</span></span>
+  syntax:
+    content: 'to: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.userId
+  name: userId
+  fullName: userId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="fc4dc-124">メッセージを作成するエンティティを指定するために使用</span><span class="sxs-lookup"><span data-stu-id="fc4dc-124">Used to specify the entity creating the message</span></span>
+  syntax:
+    content: 'userId: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.Message.BufferConvertible
+  name: BufferConvertible
+  spec.typeScript:
+  - name: BufferConvertible
+    fullName: BufferConvertible
+    uid: azure-iot-common.Message.BufferConvertible
+- uid: azure-iot-common.Properties
+  name: Properties
+  spec.typeScript:
+  - name: Properties
+    fullName: Properties
+    uid: azure-iot-common.Properties
+- uid: azure-iot-common.Message.BufferConvertible
+  name: BufferConvertible
