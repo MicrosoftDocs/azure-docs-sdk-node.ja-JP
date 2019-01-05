@@ -1,0 +1,236 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3dbaad7d2e0bd581a2506686db9ee38ce2f858ad
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48477470"
+items:
+- uid: '@azure/event-hubs.RequestResponseLink'
+  name: RequestResponseLink
+  fullName: RequestResponseLink
+  children:
+  - '@azure/event-hubs.RequestResponseLink.close'
+  - '@azure/event-hubs.RequestResponseLink.connection'
+  - '@azure/event-hubs.RequestResponseLink.create'
+  - '@azure/event-hubs.RequestResponseLink.isOpen'
+  - '@azure/event-hubs.RequestResponseLink.receiver'
+  - '@azure/event-hubs.RequestResponseLink.constructor'
+  - '@azure/event-hubs.RequestResponseLink.sender'
+  - '@azure/event-hubs.RequestResponseLink.sendRequest'
+  - '@azure/event-hubs.RequestResponseLink.session'
+  langs:
+  - typeScript
+  type: class
+  summary: Amqp セッションで作成される amqp request(sender)-response(receiver) リンクをについて説明します。
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RequestResponseLink.close'
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 送信者、受信者のリンクおよび基になるセッションを閉じます。
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RequestResponseLink.connection'
+  name: connection
+  fullName: connection
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 基になる amqp 接続オブジェクトを提供します。
+  syntax:
+    content: 'connection: Connection'
+    return:
+      type:
+      - '@azure/event-hubs.Connection'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RequestResponseLink.create'
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Amqp 要求/応答のリンクを作成します。
+  syntax:
+    content: 'static function create(connection: Connection, senderOptions: SenderOptions, receiverOptions: ReceiverOptions)'
+    parameters:
+    - id: connection
+      type:
+      - '@azure/event-hubs.Connection'
+      description: Amqp 接続。
+    - id: senderOptions
+      type:
+      - '@azure/event-hubs.SenderOptions'
+      description: 送信側のリンクを作成する必要がありますを指定するオプションです。
+    - id: receiverOptions
+      type:
+      - '@azure/event-hubs.ReceiverOptions'
+      description: 受信側リンクを作成する必要がありますを指定するオプションです。
+    return:
+      type:
+      - Promise<@azure/event-hubs.RequestResponseLink>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RequestResponseLink.isOpen'
+  name: isOpen
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: セッションと、送信側と受信側のリンクがすべてオープンかクローズかどうかを示します。
+  syntax:
+    content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RequestResponseLink.receiver'
+  name: receiver
+  fullName: receiver
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'receiver: Receiver'
+    return:
+      type:
+      - '@azure/event-hubs.Receiver'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RequestResponseLink.constructor'
+  name: RequestResponseLink
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new RequestResponseLink(session: Session, sender: Sender, receiver: Receiver)'
+    parameters:
+    - id: session
+      type:
+      - '@azure/event-hubs.Session'
+      description: Amqp セッションです。
+    - id: sender
+      type:
+      - '@azure/event-hubs.Sender'
+      description: Amqp の送信側リンク。
+    - id: receiver
+      type:
+      - '@azure/event-hubs.Receiver'
+      description: >
+        Amqp の受信側リンク。
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RequestResponseLink.sender'
+  name: sender
+  fullName: sender
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'sender: Sender'
+    return:
+      type:
+      - '@azure/event-hubs.Sender'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RequestResponseLink.sendRequest'
+  name: sendRequest
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: '指定された要求メッセージを送信し、受信した応答を返します。 操作が秒単位で指定したタイムアウトで完了しないかどうか`default: 10`、要求は指定された回数の直線的に再試行し、`default: 3`秒単位で指定された遅延時間で`default: 15`再試行間隔。'
+  syntax:
+    content: 'function sendRequest<T>(request: Message, options?: SendRequestOptions)'
+    parameters:
+    - id: request
+      type:
+      - Message
+      description: AMQP メッセージです。
+    - id: options
+      type:
+      - '@azure/event-hubs.SendRequestOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<T>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RequestResponseLink.session'
+  name: session
+  fullName: session
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'session: Session'
+    return:
+      type:
+      - '@azure/event-hubs.Session'
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.Session'
+  name: Session
+  spec.typeScript:
+  - name: Session
+    fullName: Session
+    uid: '@azure/event-hubs.Session'
+- uid: '@azure/event-hubs.Sender'
+  name: Sender
+  spec.typeScript:
+  - name: Sender
+    fullName: Sender
+    uid: '@azure/event-hubs.Sender'
+- uid: '@azure/event-hubs.Receiver'
+  name: Receiver
+  spec.typeScript:
+  - name: Receiver
+    fullName: Receiver
+    uid: '@azure/event-hubs.Receiver'
+- uid: '@azure/event-hubs.Connection'
+  name: Connection
+  spec.typeScript:
+  - name: Connection
+    fullName: Connection
+    uid: '@azure/event-hubs.Connection'
+- uid: '@azure/event-hubs.SendRequestOptions'
+  name: SendRequestOptions
+  spec.typeScript:
+  - name: SendRequestOptions
+    fullName: SendRequestOptions
+    uid: '@azure/event-hubs.SendRequestOptions'
+- uid: '@azure/event-hubs.SenderOptions'
+  name: SenderOptions
+  spec.typeScript:
+  - name: SenderOptions
+    fullName: SenderOptions
+    uid: '@azure/event-hubs.SenderOptions'
+- uid: '@azure/event-hubs.ReceiverOptions'
+  name: ReceiverOptions
+  spec.typeScript:
+  - name: ReceiverOptions
+    fullName: ReceiverOptions
+    uid: '@azure/event-hubs.ReceiverOptions'
+- uid: Promise<@azure/event-hubs.RequestResponseLink>
+  name: RequestResponseLink>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: RequestResponseLink
+    fullName: RequestResponseLink
+    uid: '@azure/event-hubs.RequestResponseLink'
+  - name: '>'
+    fullName: '>'
