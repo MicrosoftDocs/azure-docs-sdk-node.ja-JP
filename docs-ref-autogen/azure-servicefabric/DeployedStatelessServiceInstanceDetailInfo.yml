@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0ad49539905ab6480d3da4a3d778658b8a960169
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52024976"
+items:
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo
+  name: DeployedStatelessServiceInstanceDetailInfo
+  fullName: DeployedStatelessServiceInstanceDetailInfo
+  children:
+  - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+  - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="0b1d1-101">コード パッケージで実行されているステートレス インスタンスに関する情報。</span><span class="sxs-lookup"><span data-stu-id="0b1d1-101">Information about a stateless instance running in a code package.</span></span> <span data-ttu-id="0b1d1-102">DeployedServiceReplicaQueryResult が ServiceKind、ServiceName、PartitionId、InstanceId のような重複するデータを含むことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="0b1d1-102">Note that DeployedServiceReplicaQueryResult will contain duplicate data like ServiceKind, ServiceName, PartitionId and InstanceId.</span></span>
+  extends:
+    name: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+  name: deployedServiceReplicaQueryResult
+  fullName: deployedServiceReplicaQueryResult
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0b1d1-103">ノードにデプロイされたステートレス サービス インスタンスに関する情報。</span><span class="sxs-lookup"><span data-stu-id="0b1d1-103">Information about a stateless service instance deployed on a node.</span></span>
+  optional: true
+  syntax:
+    content: 'deployedServiceReplicaQueryResult?: DeployedStatelessServiceInstanceInfo'
+    return:
+      type:
+      - azure-servicefabric.DeployedStatelessServiceInstanceInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0b1d1-104">ステートレス サービス インスタンスの id。</span><span class="sxs-lookup"><span data-stu-id="0b1d1-104">Id of a stateless service instance.</span></span> <span data-ttu-id="0b1d1-105">インスタンス Id は、ステートレス サービスのパーティションのインスタンスを一意に識別する Service Fabric によって使用されます。</span><span class="sxs-lookup"><span data-stu-id="0b1d1-105">InstanceId is used by Service Fabric to uniquely identify an instance of a partition of a stateless service.</span></span> <span data-ttu-id="0b1d1-106">パーティション内で一意ですし、インスタンスの有効期間は変更されません。</span><span class="sxs-lookup"><span data-stu-id="0b1d1-106">It is unique within a partition and does not change for the lifetime of the instance.</span></span> <span data-ttu-id="0b1d1-107">インスタンスは、同じまたは別のノードでフェールオーバーが場合、は、さまざまな値を InstanceId の取得します。</span><span class="sxs-lookup"><span data-stu-id="0b1d1-107">If the instance has failed over on the same or different node, it will get a different value for the InstanceId.</span></span>
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  name: DeployedServiceReplicaDetailInfo
+  spec.typeScript:
+  - name: DeployedServiceReplicaDetailInfo
+    fullName: DeployedServiceReplicaDetailInfo
+    uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+- uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
+  name: DeployedStatelessServiceInstanceInfo
+  spec.typeScript:
+  - name: DeployedStatelessServiceInstanceInfo
+    fullName: DeployedStatelessServiceInstanceInfo
+    uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo

@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2c4f5428705a81cd27cecf6244be2a0f597f92fa
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52033217"
+items:
+- uid: azure-servicefabric.PartitionLoadInformation
+  name: PartitionLoadInformation
+  fullName: PartitionLoadInformation
+  children:
+  - azure-servicefabric.PartitionLoadInformation.partitionId
+  - azure-servicefabric.PartitionLoadInformation.primaryLoadMetricReports
+  - azure-servicefabric.PartitionLoadInformation.secondaryLoadMetricReports
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="6d2f2-101">表すでは、プライマリとセカンダリの報告される負荷メトリックを含むパーティションの情報を読み込めません。</span><span class="sxs-lookup"><span data-stu-id="6d2f2-101">Represents load information for a partition, which contains the primary and secondary reported load metrics.</span></span>
+
+    <span data-ttu-id="6d2f2-102">報告される負荷がない場合に、パーティションのサービスの既定の負荷を PartitionLoadInformation が含まれます。</span><span class="sxs-lookup"><span data-stu-id="6d2f2-102">In case there is no load reported, PartitionLoadInformation will contain the default load for the service of the partition.</span></span>
+
+    <span data-ttu-id="6d2f2-103">既定の負荷を LoadMetricReport の LastReportedUtc は 0 に設定されます。</span><span class="sxs-lookup"><span data-stu-id="6d2f2-103">For default loads, LoadMetricReport's LastReportedUtc is set to 0.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionLoadInformation.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6d2f2-104">パーティションの id。</span><span class="sxs-lookup"><span data-stu-id="6d2f2-104">Id of the partition.</span></span>
+  optional: true
+  syntax:
+    content: 'partitionId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionLoadInformation.primaryLoadMetricReports
+  name: primaryLoadMetricReports
+  fullName: primaryLoadMetricReports
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6d2f2-105">このパーティションのプライマリ レプリカからの負荷レポートの配列。</span><span class="sxs-lookup"><span data-stu-id="6d2f2-105">Array of load reports from the primary replica for this partition.</span></span>
+  optional: true
+  syntax:
+    content: 'primaryLoadMetricReports?: LoadMetricReport[]'
+    return:
+      type:
+      - azure-servicefabric.LoadMetricReport[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionLoadInformation.secondaryLoadMetricReports
+  name: secondaryLoadMetricReports
+  fullName: secondaryLoadMetricReports
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="6d2f2-106">このパーティションのすべてのセカンダリ レプリカからの負荷の集計レポートの配列。</span><span class="sxs-lookup"><span data-stu-id="6d2f2-106">Array of aggregated load reports from all secondary replicas for this partition.</span></span>
+
+    <span data-ttu-id="6d2f2-107">配列には、各メトリックの報告された最新の負荷にはのみが含まれています。</span><span class="sxs-lookup"><span data-stu-id="6d2f2-107">Array only contains the latest reported load for each metric.</span></span>
+  optional: true
+  syntax:
+    content: 'secondaryLoadMetricReports?: LoadMetricReport[]'
+    return:
+      type:
+      - azure-servicefabric.LoadMetricReport[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.LoadMetricReport[]
+  name: LoadMetricReport[]
+  spec.typeScript:
+  - name: LoadMetricReport
+    fullName: LoadMetricReport
+    uid: azure-servicefabric.LoadMetricReport
+  - name: '[]'
+    fullName: '[]'

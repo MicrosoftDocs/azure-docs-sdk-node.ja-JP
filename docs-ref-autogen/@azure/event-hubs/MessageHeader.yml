@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c31000a058e36e2dbcda7f6739913d83ce5fca8e
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48477570"
+items:
+- uid: '@azure/event-hubs.MessageHeader'
+  name: MessageHeader
+  fullName: MessageHeader
+  children:
+  - '@azure/event-hubs.MessageHeader.deliveryCount'
+  - '@azure/event-hubs.MessageHeader.durable'
+  - '@azure/event-hubs.MessageHeader.firstAcquirer'
+  - '@azure/event-hubs.MessageHeader.fromAmqpMessageProperties'
+  - '@azure/event-hubs.MessageHeader.priority'
+  - '@azure/event-hubs.MessageHeader.toAmqpMessageHeader'
+  - '@azure/event-hubs.MessageHeader.ttl'
+  langs:
+  - typeScript
+  type: module
+  summary: <span data-ttu-id="d3b5f-101">メッセージ ヘッダーで実行できる操作をについて説明します。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-101">Describes the operations that can be performed on the message header.</span></span>
+  package: '@azure/event-hubs'
+  module: MessageHeader
+- uid: '@azure/event-hubs.MessageHeader.deliveryCount'
+  name: deliveryCount
+  fullName: deliveryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d3b5f-102">{number}[deliveryCount]失敗した以前の配信試行の数。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-102">{number} [deliveryCount] The number of prior unsuccessful delivery attempts.</span></span>
+  optional: true
+  syntax:
+    content: 'deliveryCount?: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.MessageHeader.durable'
+  name: durable
+  fullName: durable
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d3b5f-103">{ブール値。[永続]持続性の要件を指定します。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-103">{boolean} [durable] Specifies durability requirements.</span></span>
+  optional: true
+  syntax:
+    content: 'durable?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.MessageHeader.firstAcquirer'
+  name: firstAcquirer
+  fullName: firstAcquirer
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d3b5f-104">{ブール値。[firstAcquirer]この値が true の場合、このメッセージがによって取得されていないその他のいずれかのリンク。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-104">{boolean} [firstAcquirer] If this value is true, then this message has not been acquired by any other link.</span></span> <span data-ttu-id="d3b5f-105">この値が false の場合、このメッセージ以前取得された可能性が別のリンクまたはリンクします。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-105">Ifthis value is false, then this message MAY have previously been acquired by another link or links.</span></span>
+  optional: true
+  syntax:
+    content: 'firstAcquirer?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.MessageHeader.fromAmqpMessageProperties'
+  name: fromAmqpMessageProperties
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d3b5f-106">AmqpMessageHeader MessageHeader に変換します。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-106">Converts AmqpMessageHeader to MessageHeader.</span></span>
+  syntax:
+    content: 'function fromAmqpMessageProperties(props: AmqpMessageHeader)'
+    parameters:
+    - id: props
+      type:
+      - AmqpMessageHeader
+      description: <span data-ttu-id="d3b5f-107">Amqp メッセージ ヘッダー</span><span class="sxs-lookup"><span data-stu-id="d3b5f-107">Amqp Message Header</span></span>
+    return:
+      type:
+      - '@azure/event-hubs.MessageHeader'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.MessageHeader.priority'
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d3b5f-108">{number}[優先度]相対的なメッセージの優先順位。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-108">{number} [priority] The relative message priority.</span></span> <span data-ttu-id="d3b5f-109">大きい値より高い優先度のメッセージを指定します。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-109">Higher numbers indicate higher priority messages.</span></span>
+  optional: true
+  syntax:
+    content: 'priority?: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.MessageHeader.toAmqpMessageHeader'
+  name: toAmqpMessageHeader
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d3b5f-110">AmqpMessageHeader MessageHeader に変換します。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-110">Converts MessageHeader to AmqpMessageHeader.</span></span>
+  syntax:
+    content: 'function toAmqpMessageHeader(props: MessageHeader)'
+    parameters:
+    - id: props
+      type:
+      - '@azure/event-hubs.MessageHeader'
+      description: <span data-ttu-id="d3b5f-111">メッセージ ヘッダー。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-111">Message header.</span></span>
+    return:
+      type:
+      - AmqpMessageHeader
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.MessageHeader.ttl'
+  name: ttl
+  fullName: ttl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d3b5f-112">{number}[ttl] (ミリ秒) の有効期間。</span><span class="sxs-lookup"><span data-stu-id="d3b5f-112">{number} [ttl] time to live in ms.</span></span>
+  optional: true
+  syntax:
+    content: 'ttl?: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.MessageHeader'
+  name: MessageHeader
+  spec.typeScript:
+  - name: MessageHeader
+    fullName: MessageHeader
+    uid: '@azure/event-hubs.MessageHeader'
+- uid: '@azure/event-hubs.MessageHeader.deliveryCount'
+  name: deliveryCount
+- uid: '@azure/event-hubs.MessageHeader.durable'
+  name: durable
+- uid: '@azure/event-hubs.MessageHeader.firstAcquirer'
+  name: firstAcquirer
+- uid: '@azure/event-hubs.MessageHeader.fromAmqpMessageProperties'
+  name: fromAmqpMessageProperties
+- uid: '@azure/event-hubs.MessageHeader.priority'
+  name: priority
+- uid: '@azure/event-hubs.MessageHeader.toAmqpMessageHeader'
+  name: toAmqpMessageHeader
+- uid: '@azure/event-hubs.MessageHeader.ttl'
+  name: ttl
