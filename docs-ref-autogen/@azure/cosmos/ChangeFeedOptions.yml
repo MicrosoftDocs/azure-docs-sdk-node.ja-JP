@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 23728e9820412b40379ec6addffb3fc8fa84affd
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53696960"
+items:
+- uid: '@azure/cosmos.ChangeFeedOptions'
+  name: ChangeFeedOptions
+  fullName: ChangeFeedOptions
+  children:
+  - '@azure/cosmos.ChangeFeedOptions.continuation'
+  - '@azure/cosmos.ChangeFeedOptions.maxItemCount'
+  - '@azure/cosmos.ChangeFeedOptions.sessionToken'
+  - '@azure/cosmos.ChangeFeedOptions.startFromBeginning'
+  - '@azure/cosmos.ChangeFeedOptions.startTime'
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    これらのオプションの制御のいくつか変更フィードのオプションを指定します、change feed から読み取りを開始します。 優先順位の順序は次のとおりです。
+
+    - 継続
+
+    - startTime
+
+    - startFromBeginning
+
+
+    設定されていないこれらのオプションの場合、最初からの変更の読み取りが開始されます`ChangeFeedIterator.executeNext()`呼び出します。
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.continuation'
+  name: continuation
+  fullName: continuation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    起動する継続トークンです。
+
+    これはから etag と継続の値に相当します `ChangeFeedResponse`
+  optional: true
+  syntax:
+    content: 'continuation?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.maxItemCount'
+  name: maxItemCount
+  fullName: maxItemCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ページごとに返される項目の最大量
+  optional: true
+  syntax:
+    content: 'maxItemCount?: number'
+    return:
+      type:
+      - number
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.sessionToken'
+  name: sessionToken
+  fullName: sessionToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 使用するセッション トークン。 指定されていない場合はトークンを使用して最新キャプチャ セッションで開始します。
+  optional: true
+  syntax:
+    content: 'sessionToken?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.startFromBeginning'
+  name: startFromBeginning
+  fullName: startFromBeginning
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 最初から開始するかどうかを通知するかどうか。
+  optional: true
+  syntax:
+    content: 'startFromBeginning?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.startTime'
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 変更の読み取りを開始する開始時刻を指定します。
+  optional: true
+  syntax:
+    content: 'startTime?: Date'
+    return:
+      type:
+      - Date
+  package: '@azure/cosmos'

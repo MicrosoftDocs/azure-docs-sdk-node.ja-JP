@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 981c3402a2579a029c7bd5d6e40af0dc410592cb
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52106497"
+items:
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo
+  name: DeployedStatefulServiceReplicaDetailInfo
+  fullName: DeployedStatefulServiceReplicaDetailInfo
+  children:
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus
+  langs:
+  - typeScript
+  type: interface
+  summary: コード パッケージで実行されているステートフルなレプリカについて説明します。 注 DeployedServiceReplicaQueryResult ServiceKind、ServiceName、PartitionId、replicaId のような重複するデータが含まれます。
+  extends:
+    name: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation
+  name: currentReplicatorOperation
+  fullName: currentReplicatorOperation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 現在、レプリケーターによって実行されている操作を指定します。 指定できる値は、次のとおりです。'Invalid'、'None'、'Open'、'ChangeRole'、'UpdateEpoch'、'終了'、'中止'、'OnDataLoss'、'WaitForCatchup'、'Build'
+  optional: true
+  syntax:
+    content: 'currentReplicatorOperation?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult
+  name: deployedServiceReplicaQueryResult
+  fullName: deployedServiceReplicaQueryResult
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ステートフル サービス レプリカがノードに展開について説明します。
+  optional: true
+  syntax:
+    content: 'deployedServiceReplicaQueryResult?: DeployedStatefulServiceReplicaInfo'
+    return:
+      type:
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus
+  name: readStatus
+  fullName: readStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: パーティションのアクセスの状態を指定します。 指定できる値は、次のとおりです。'Invalid'、' 許可 '、'ReconfigurationPending'、'NotPrimary'、'NoWriteQuorum'
+  optional: true
+  syntax:
+    content: 'readStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId
+  name: replicaId
+  fullName: replicaId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ステートフル サービス レプリカの id。 ReplicaId は、パーティションのレプリカを一意に識別する Service Fabric によって使用されます。 パーティション内で一意ですし、レプリカの有効期間は変更されません。 レプリカがドロップ別のレプリカが同じパーティションに同じノードで作成される場合は、さまざまな値を id の取得します。場合がありますステートレス サービス インスタンスの id は、レプリカ id とも呼ばれます。
+  optional: true
+  syntax:
+    content: 'replicaId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus
+  name: replicaStatus
+  fullName: replicaStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: キー値ストアでは、レプリカの情報が関連します。
+  optional: true
+  syntax:
+    content: 'replicaStatus?: KeyValueStoreReplicaStatus'
+    return:
+      type:
+      - azure-servicefabric.KeyValueStoreReplicaStatus
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus
+  name: replicatorStatus
+  fullName: replicatorStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    プライマリまたはセカンダリ レプリケーターの状態の基本クラスを表します。
+
+    レプリケーション/コピー キューの使用率、最後の確認を受信したタイムスタンプなどの service fabric レプリケーターについて説明します。
+  optional: true
+  syntax:
+    content: 'replicatorStatus?: ReplicatorStatus'
+    return:
+      type:
+      - azure-servicefabric.ReplicatorStatus
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus
+  name: writeStatus
+  fullName: writeStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: パーティションのアクセスの状態を指定します。 指定できる値は、次のとおりです。'Invalid'、' 許可 '、'ReconfigurationPending'、'NotPrimary'、'NoWriteQuorum'
+  optional: true
+  syntax:
+    content: 'writeStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  name: DeployedServiceReplicaDetailInfo
+  spec.typeScript:
+  - name: DeployedServiceReplicaDetailInfo
+    fullName: DeployedServiceReplicaDetailInfo
+    uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+  name: DeployedStatefulServiceReplicaInfo
+  spec.typeScript:
+  - name: DeployedStatefulServiceReplicaInfo
+    fullName: DeployedStatefulServiceReplicaInfo
+    uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+- uid: azure-servicefabric.KeyValueStoreReplicaStatus
+  name: KeyValueStoreReplicaStatus
+  spec.typeScript:
+  - name: KeyValueStoreReplicaStatus
+    fullName: KeyValueStoreReplicaStatus
+    uid: azure-servicefabric.KeyValueStoreReplicaStatus
+- uid: azure-servicefabric.ReplicatorStatus
+  name: ReplicatorStatus
+  spec.typeScript:
+  - name: ReplicatorStatus
+    fullName: ReplicatorStatus
+    uid: azure-servicefabric.ReplicatorStatus

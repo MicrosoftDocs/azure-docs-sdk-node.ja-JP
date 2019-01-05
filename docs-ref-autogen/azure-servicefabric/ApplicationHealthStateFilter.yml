@@ -1,0 +1,168 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d40d05884ed7fd066e3ac1c88e2393db5b8dea34
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52063807"
+items:
+- uid: azure-servicefabric.ApplicationHealthStateFilter
+  name: ApplicationHealthStateFilter
+  fullName: ApplicationHealthStateFilter
+  children:
+  - azure-servicefabric.ApplicationHealthStateFilter.applicationNameFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters
+  - azure-servicefabric.ApplicationHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.serviceFilters
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    クラスターの正常性チャンクで、アプリケーションを含めるかどうかを決定する一致条件を定義します。
+
+    1 つのフィルターが 0 の場合と一致できますプロパティに応じて、1 つまたは複数のアプリケーション。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.applicationNameFilter
+  name: applicationNameFilter
+  fullName: applicationNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    ファブリック uri として、フィルターに一致するアプリケーションの名前。 フィルターは、存在する場合、指定したアプリケーションにのみ適用されます。
+
+    アプリケーションが存在しない場合、このフィルターに基づくクラスターの正常性チャンクでアプリケーションは返されません。
+
+    アプリケーションが存在する場合は、他のフィルターのプロパティを優先する場合、クラスターの正常性チャンクで含まれます。
+
+    指定しない場合、すべてのアプリケーションは、ヘルス状態のフィルターと同様に、他のフィルター メンバーと照合されます。
+  optional: true
+  syntax:
+    content: 'applicationNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter
+  name: applicationTypeNameFilter
+  fullName: applicationTypeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    フィルターに一致するアプリケーションの種類の名前。
+
+    指定した場合は、いずれかが存在する場合、選択したアプリケーションの種類のアプリケーションにのみ、フィルターが適用されます。
+
+    指定したアプリケーションの種類のアプリケーションが存在しない場合、このフィルターに基づくクラスターの正常性チャンクでアプリケーションは返されません。
+
+    指定したアプリケーションの種類の各アプリケーションは、他のフィルターのプロパティを優先する場合、クラスターの正常性チャンクに含まれます。
+
+    指定しない場合、すべてのアプリケーションは、ヘルス状態のフィルターと同様に、他のフィルター メンバーと照合されます。
+  optional: true
+  syntax:
+    content: 'applicationTypeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters
+  name: deployedApplicationFilters
+  fullName: deployedApplicationFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    返されたクラスターの正常性に含まれるデプロイされたアプリケーションは、アプリケーションの子としてチャンクを指定するフィルターの一覧を定義します。 デプロイされたアプリケーションには、親アプリケーション フィルターに一致する場合にのみが返されます。
+
+    リストが空の場合は、デプロイされたアプリケーションは返されません。 デプロイしたすべてのアプリケーションは、入力フィルターに関係なく、親のアプリケーションで集計された正常性状態の評価に使用されます。
+
+    アプリケーションのフィルターは、デプロイされたアプリケーションの複数のフィルターを指定できます。
+
+    たとえば、デプロイされたすべてのアプリケーションのヘルス状態エラーを返すフィルターと別のフィルターを指定したノードにデプロイされたアプリケーションは、常に指定できます。
+  optional: true
+  syntax:
+    content: 'deployedApplicationFilters?: DeployedApplicationHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.DeployedApplicationHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    アプリケーションのヘルス状態を返すフィルター。 必要な正常性状態に一致する場合は、アプリケーションを選択することができます。
+
+    使用可能な値は、次のヘルス状態のいずれかの整数値です。 フィルターに一致するアプリケーションのみが返されます。 すべてのアプリケーションは、集計されたクラスターの正常性状態の評価に使用されます。
+
+    指定しない場合、既定値は None、アプリケーションの名前またはアプリケーションの種類名が指定されていない場合です。 フィルターが既定値を持つされ、アプリケーション名が指定した場合、一致するアプリケーションが返されます。
+
+    状態値はフラグベースの列挙型であるため、値はビット演算子 'OR' を使用して取得したこれらの値の組み合わせが可能です。
+
+    たとえば、指定された値が 6 の場合、HealthState 値が OK (2) と Warning (4) のアプリケーションが一致します。
+
+    - Default - 既定値。 任意の HealthState と一致します。 値は 0 です。
+
+    - None - どの HealthState 値とも一致しないフィルター。 状態の特定のコレクションの結果が返されないようにするために使用されます。 値は 1 です。
+
+    - Ok - 入力一致するフィルター HealthState 値が ok をクリックします。 値は 2 です。
+
+    - 警告 - フィルター値を HealthState 入力に一致します。 値は 4 です。
+
+    - Error - HealthState 値が Error の入力に一致するフィルター。 値は 8 です。
+
+    - All - 任意の HealthState 値の入力に一致するフィルター。 値は 65535 です。
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.serviceFilters
+  name: serviceFilters
+  fullName: serviceFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    返されたクラスターの正常性に含まれるサービスは、アプリケーションの子としてチャンクを指定するフィルターの一覧を定義します。 サービスには、親アプリケーション フィルターに一致する場合にのみが返されます。
+
+    リストが空の場合は、サービスは返されません。 すべてのサービスは、入力フィルターに関係なく、親のアプリケーションで集計された正常性状態の評価に使用されます。
+
+    アプリケーションのフィルターは、複数のサービスのフィルターを指定できます。
+
+    たとえば、すべてのサービスのヘルス状態エラーを返すフィルターと別のフィルターを常に、サービス名で識別されるサービスは、指定できます。
+  optional: true
+  syntax:
+    content: 'serviceFilters?: ServiceHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceHealthStateFilter[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter[]
+  name: DeployedApplicationHealthStateFilter[]
+  spec.typeScript:
+  - name: DeployedApplicationHealthStateFilter
+    fullName: DeployedApplicationHealthStateFilter
+    uid: azure-servicefabric.DeployedApplicationHealthStateFilter
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServiceHealthStateFilter[]
+  name: ServiceHealthStateFilter[]
+  spec.typeScript:
+  - name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    uid: azure-servicefabric.ServiceHealthStateFilter
+  - name: '[]'
+    fullName: '[]'

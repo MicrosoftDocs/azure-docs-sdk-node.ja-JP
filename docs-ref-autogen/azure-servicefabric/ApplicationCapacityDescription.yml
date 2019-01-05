@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 170e0bf52f9fd6a1932224d4dbcbe8432a029b98
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52085777"
+items:
+- uid: azure-servicefabric.ApplicationCapacityDescription
+  name: ApplicationCapacityDescription
+  fullName: ApplicationCapacityDescription
+  children:
+  - azure-servicefabric.ApplicationCapacityDescription.applicationMetrics
+  - azure-servicefabric.ApplicationCapacityDescription.maximumNodes
+  - azure-servicefabric.ApplicationCapacityDescription.minimumNodes
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    このアプリケーションのサービスの容量の情報について説明します。 この説明は、次を記述するため使用できます。
+
+    - ノード上のサービスの容量を予約します。
+
+    - このアプリケーションのサービスを実行できるノードの合計数を制限します。
+
+    - このアプリケーションのサービスによってこのメトリックの合計消費量を制限するカスタム容量メトリックを制限します。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationCapacityDescription.applicationMetrics
+  name: applicationMetrics
+  fullName: applicationMetrics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: アプリケーション容量メトリックの説明の一覧です。
+  optional: true
+  syntax:
+    content: 'applicationMetrics?: ApplicationMetricDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationMetricDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationCapacityDescription.maximumNodes
+  name: maximumNodes
+  fullName: maximumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Service Fabric がこのアプリケーション用に容量を予約するノードの最大数。
+
+    このアプリケーションのサービスがこれらすべてのノードに配置されるわけではありません。 既定では、このプロパティの値が 0 と、サービスを任意のノードに配置できることを意味します。
+  optional: true
+  syntax:
+    content: 'maximumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationCapacityDescription.minimumNodes
+  name: minimumNodes
+  fullName: minimumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Service Fabric がこのアプリケーション用に容量を予約するノードの最小数。
+
+    このアプリケーションのサービスがこれらすべてのノードに配置されるわけではありません。 このプロパティが 0 に設定されている場合は、容量は予約されません。 このプロパティの値は、MaximumNodes プロパティの値以上にすることはできません。
+  optional: true
+  syntax:
+    content: 'minimumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationMetricDescription[]
+  name: ApplicationMetricDescription[]
+  spec.typeScript:
+  - name: ApplicationMetricDescription
+    fullName: ApplicationMetricDescription
+    uid: azure-servicefabric.ApplicationMetricDescription
+  - name: '[]'
+    fullName: '[]'
