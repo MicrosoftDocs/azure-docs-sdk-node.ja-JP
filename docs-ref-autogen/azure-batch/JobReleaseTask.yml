@@ -1,0 +1,176 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8b21fb219132789baabfe63cf35d4ae01db0eea6
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53675576"
+items:
+- uid: azure-batch.JobReleaseTask
+  name: JobReleaseTask
+  fullName: JobReleaseTask
+  children:
+  - azure-batch.JobReleaseTask.commandLine
+  - azure-batch.JobReleaseTask.containerSettings
+  - azure-batch.JobReleaseTask.environmentSettings
+  - azure-batch.JobReleaseTask.id
+  - azure-batch.JobReleaseTask.maxWallClockTime
+  - azure-batch.JobReleaseTask.resourceFiles
+  - azure-batch.JobReleaseTask.retentionTime
+  - azure-batch.JobReleaseTask.userIdentity
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    ジョブのリリース タスクは、次のいずれかのジョブの終了時に実行されます。ユーザーは、ジョブの終了 API、またはいる間、ジョブがアクティブのまま、ジョブの最大のウォール クロック時間の制限に達するとジョブは引き続きアクティブ、またはジョブのジョブ マネージャー タスクが完了すると、ジョブが終了するよう構成に、削除のジョブ API を呼び出すときにジョブの管理er 完了します。
+
+    ジョブのタスクが実行されしたジョブの準備タスクが実行され、完了した各コンピューティング ノードでジョブ解放タスクが実行されます。 コンピューティング ノードをコンピューティング ノード、ジョブ準備タスクを実行してで実行されているジョブのタスクがさらに、ジョブの終了後に再イメージ化した (および、そのため、ジョブ準備タスクが再実行されない) 場合、ジョブ解放タスクは実行されませんそのノード上。 場合は、コンピューティング ノードを再起動すると、ジョブ解放タスクが実行中でも、コンピューティング ノードの起動時には、ジョブ解放タスクが再度実行されます。 ジョブは、すべてのジョブのリリース タスクが完了するまで完了としてマークされていません。 ジョブのリリース タスクは、バック グラウンドで実行されます。 スケジュールのスロットを占有しませんつまり、プールで指定された maxTasksPerNode 上限に達するまではカウントされません。
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: コマンド ライン シェルで動作しないためことはできません活用してください環境変数の拡張などのシェルの機能。 このような機能を活用する場合を呼び出す必要があります、コマンドラインでシェル例 "cmd/c MyCommand"を使用して Windows でまたは"//bin/sh-c MyCommand"linux。 コマンドラインは、ファイルのパスを参照している場合、(タスク作業ディレクトリを基準)、相対パスを使うか、バッチの指定された環境変数を使用して (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)します。
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: これは、指定した場合、AZ_BATCH_NODE_ROOT_DIR (ノード上の Azure Batch ディレクトリのルート) の下のすべてのディレクトリに再帰的には、コンテナーにマップする、すべてのタスクの環境変数は、コンテナーにマップしてタスクのコマンドラインは、コンテナー内で実行します。
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: この ID は、ハイフン、アンダー スコアを含む、英数字の任意の組み合わせを含めることができます、64 を超える文字を含めることはできません。 このプロパティを指定しない場合、Batch サービスには、'jobrelease' の既定値が割り当てられます。 ジョブ内の他のタスクがジョブのリリース タスクと同じ ID を持つことはできません。 同じ id を持つタスクを送信しようとすると、Batch サービスはエラー コード TaskIdSameAsJobReleaseTask; 要求を拒否します。REST API を直接呼び出す、HTTP 状態コードは 409 (Conflict) です。
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.maxWallClockTime
+  name: maxWallClockTime
+  fullName: maxWallClockTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'maxWallClockTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: この要素の下に示されているファイルは、タスクの作業ディレクトリ内にあります。
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.retentionTime
+  name: retentionTime
+  fullName: retentionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 既定値は 7 日間、つまりタスク ディレクトリは 7 日間保持するコンピューティング ノードが削除されるか、ジョブを削除しない限り、します。
+  optional: true
+  syntax:
+    content: 'retentionTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 省略した場合、タスクは、タスクに一意の非管理者ユーザーとして実行されます。
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity
