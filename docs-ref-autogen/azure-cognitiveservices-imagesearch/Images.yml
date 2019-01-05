@@ -1,0 +1,129 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 349033088c1c33b442b45fa405e72f04d9bf74bd
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53661176"
+items:
+- uid: azure-cognitiveservices-imagesearch.Images
+  name: Images
+  fullName: Images
+  children:
+  - azure-cognitiveservices-imagesearch.Images.nextOffset
+  - azure-cognitiveservices-imagesearch.Images.pivotSuggestions
+  - azure-cognitiveservices-imagesearch.Images.queryExpansions
+  - azure-cognitiveservices-imagesearch.Images.similarTerms
+  - azure-cognitiveservices-imagesearch.Images.value
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="3e3e7-101">イメージの回答を定義します。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-101">Defines an image answer</span></span>
+  extends:
+    name: azure-cognitiveservices-imagesearch.SearchResultsAnswer
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.Images.nextOffset
+  name: nextOffset
+  fullName: nextOffset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="3e3e7-102">Deduping の一部として使用します。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-102">Used as part of deduping.</span></span> <span data-ttu-id="3e3e7-103">次のクライアントをオフセットするように指示クライアントは、次の改ページ調整要求で使用する必要があります</span><span class="sxs-lookup"><span data-stu-id="3e3e7-103">Tells client the next offset that client should use in the next pagination request</span></span>
+  optional: true
+  syntax:
+    content: 'nextOffset?: number'
+    return:
+      type:
+      - number
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.Images.pivotSuggestions
+  name: pivotSuggestions
+  fullName: pivotSuggestions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="3e3e7-104">元のクエリ内のセグメントの一覧。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-104">A list of segments in the original query.</span></span> <span data-ttu-id="3e3e7-105">など、クエリが赤の花の場合は、Bing がクエリを赤、花に分割する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-105">For example, if the query was Red Flowers, Bing might segment the query into Red and Flowers.</span></span> <span data-ttu-id="3e3e7-106">花のピボットが Red Peonies と赤のひなぎくなどのクエリ候補を含めることができ、赤い pivot は、花の緑、黄色の花などのクエリ候補を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-106">The Flowers pivot may contain query suggestions such as Red Peonies and Red Daisies, and the Red pivot may contain query suggestions such as Green Flowers and Yellow Flowers.</span></span>
+  optional: true
+  syntax:
+    content: 'pivotSuggestions?: PivotSuggestions[]'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.PivotSuggestions[]
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.Images.queryExpansions
+  name: queryExpansions
+  fullName: queryExpansions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="3e3e7-107">元のクエリを絞り込むことが展開されているクエリの一覧。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-107">A list of expanded queries that narrows the original query.</span></span> <span data-ttu-id="3e3e7-108">たとえば、クエリが Microsoft Surface の場合は、拡張クエリが開く場合があります。Microsoft Surface Pro 3、Microsoft Surface RT、Microsoft Surface の電話番号、および Microsoft Surface Hub。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-108">For example, if the query was Microsoft Surface, the expanded queries might be: Microsoft Surface Pro 3, Microsoft Surface RT, Microsoft Surface Phone, and Microsoft Surface Hub.</span></span>'
+  optional: true
+  syntax:
+    content: 'queryExpansions?: Query[]'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.Query[]
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.Images.similarTerms
+  name: similarTerms
+  fullName: similarTerms
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="3e3e7-109">ユーザーのクエリ用語の意味が似ている用語の一覧。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-109">A list of terms that are similar in meaning to the user's query term.</span></span>
+  optional: true
+  syntax:
+    content: 'similarTerms?: Query[]'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.Query[]
+  package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.Images.value
+  name: value
+  fullName: value
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="3e3e7-110">クエリに関連するイメージ オブジェクトの一覧。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-110">A list of image objects that are relevant to the query.</span></span> <span data-ttu-id="3e3e7-111">結果がない場合、リストが空です。</span><span class="sxs-lookup"><span data-stu-id="3e3e7-111">If there are no results, the List is empty.</span></span>
+  syntax:
+    content: 'value: ImageObject[]'
+    return:
+      type:
+      - azure-cognitiveservices-imagesearch.ImageObject[]
+  package: azure-cognitiveservices-imagesearch
+references:
+- uid: azure-cognitiveservices-imagesearch.SearchResultsAnswer
+  name: SearchResultsAnswer
+  spec.typeScript:
+  - name: SearchResultsAnswer
+    fullName: SearchResultsAnswer
+    uid: azure-cognitiveservices-imagesearch.SearchResultsAnswer
+- uid: azure-cognitiveservices-imagesearch.PivotSuggestions[]
+  name: PivotSuggestions[]
+  spec.typeScript:
+  - name: PivotSuggestions
+    fullName: PivotSuggestions
+    uid: azure-cognitiveservices-imagesearch.PivotSuggestions
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-cognitiveservices-imagesearch.Query[]
+  name: Query[]
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-cognitiveservices-imagesearch.Query
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-cognitiveservices-imagesearch.ImageObject[]
+  name: ImageObject[]
+  spec.typeScript:
+  - name: ImageObject
+    fullName: ImageObject
+    uid: azure-cognitiveservices-imagesearch.ImageObject
+  - name: '[]'
+    fullName: '[]'
