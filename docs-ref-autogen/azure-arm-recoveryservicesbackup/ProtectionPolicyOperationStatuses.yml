@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 39f4add1b0ce93fc641eafe027354612e92be1c5
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: fd1214ca3abed3565ec77d7c83ec69016eed2a2a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41698141"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52082770"
 items:
 - uid: azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses
   name: ProtectionPolicyOperationStatuses
   fullName: ProtectionPolicyOperationStatuses
   children:
   - azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get
-  - azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_1
   - azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_2
+  - azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_1
   - azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.getWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-recoveryservicesbackup
 - uid: azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get
-  name: get
+  name: get(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -58,42 +58,8 @@ items:
       type:
       - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
   package: azure-arm-recoveryservicesbackup
-- uid: azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: バックアップ、復元などの非同期操作の状態が表示されます。 進行中、完了または失敗の状態を指定できます。 操作のすべての可能な状態の操作の状態の列挙型を参照することができます。 一部の操作では、ジョブを作成します。 このメソッドは、操作に関連付けられたジョブの一覧を返します。
-  syntax:
-    content: 'function get(vaultName: string, resourceGroupName: string, policyName: string, operationId: string, callback: ServiceCallback<OperationStatus>)'
-    parameters:
-    - id: vaultName
-      type:
-      - string
-      description: ''
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: policyName
-      type:
-      - string
-      description: ''
-    - id: operationId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-recoveryservicesbackup.OperationStatus>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
-  package: azure-arm-recoveryservicesbackup
 - uid: azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_2
-  name: get
+  name: get(string, string, string, string, Object, ServiceCallback<OperationStatus>)
   children: []
   type: method
   langs:
@@ -130,8 +96,42 @@ items:
       type:
       - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
   package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.get_1
+  name: get(string, string, string, string, ServiceCallback<OperationStatus>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: バックアップ、復元などの非同期操作の状態が表示されます。 進行中、完了または失敗の状態を指定できます。 操作のすべての可能な状態の操作の状態の列挙型を参照することができます。 一部の操作では、ジョブを作成します。 このメソッドは、操作に関連付けられたジョブの一覧を返します。
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, policyName: string, operationId: string, callback: ServiceCallback<OperationStatus>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: policyName
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.OperationStatus>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  package: azure-arm-recoveryservicesbackup
 - uid: azure-arm-recoveryservicesbackup.ProtectionPolicyOperationStatuses.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -171,6 +171,7 @@ items:
   package: azure-arm-recoveryservicesbackup
 references:
 - uid: Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  name: OperationStatus>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -180,6 +181,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-recoveryservicesbackup.OperationStatus>
+  name: OperationStatus>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -189,6 +191,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.OperationStatus>>
+  name: OperationStatus>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

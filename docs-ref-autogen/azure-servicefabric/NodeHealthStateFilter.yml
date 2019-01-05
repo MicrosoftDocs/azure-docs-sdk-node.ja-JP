@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7cfa6c93f47756f2ca02217849d1083336f867f2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52007817"
+items:
+- uid: azure-servicefabric.NodeHealthStateFilter
+  name: NodeHealthStateFilter
+  fullName: NodeHealthStateFilter
+  children:
+  - azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  - azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    返されたクラスターの正常性チャンクでノードを含めるかどうかを決定する一致条件を定義します。
+
+    1 つのフィルターが 0 の場合と一致できますプロパティに応じて、1 つまたは複数のノード。
+
+    クラスターの正常性チャンク クエリの説明で指定できます。
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    ノードのヘルス状態を返すフィルター。 これにより、必要な正常性状態に一致する場合は、ノードを選択できます。
+
+    使用可能な値は、次のヘルス状態のいずれかの整数値です。 フィルターに一致するノードのみが返されます。 すべてのノードは、集計されたクラスターの正常性状態の評価に使用されます。
+
+    指定しない場合、既定値は None、ノード名が指定されていない場合です。 フィルターが既定値を持つされ、ノード名が指定した場合、一致するノードが返されます。
+
+    状態値はフラグベースの列挙型であるため、値はビット演算子 'OR' を使用して取得したこれらの値の組み合わせが可能です。
+
+    たとえば、指定された値が 6 の場合、HealthState 値が OK (2) と Warning (4) のノードが一致します。
+
+    - Default - 既定値。 任意の HealthState と一致します。 値は 0 です。
+
+    - None - どの HealthState 値とも一致しないフィルター。 状態の特定のコレクションの結果が返されないようにするために使用されます。 値は 1 です。
+
+    - Ok - 入力一致するフィルター HealthState 値が ok をクリックします。 値は 2 です。
+
+    - 警告 - フィルター値を HealthState 入力に一致します。 値は 4 です。
+
+    - Error - HealthState 値が Error の入力に一致するフィルター。 値は 8 です。
+
+    - All - 任意の HealthState 値の入力に一致するフィルター。 値は 65535 です。
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  name: nodeNameFilter
+  fullName: nodeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    フィルターに一致するノードの名前。 存在する場合、指定したノードにのみ、フィルターが適用されます。
+
+    ノードが存在しない場合、このフィルターに基づくクラスターの正常性チャンクでノードは返されません。
+
+    ノードが存在する場合は、正常性状態が、その他のフィルターのプロパティと一致する場合、クラスターの正常性チャンクで含まれます。
+
+    指定しない場合、(ある場合)、親フィルターに一致するすべてのノードが考慮され、正常性の状態のフィルターと同様に、他のフィルター メンバーと照合します。
+  optional: true
+  syntax:
+    content: 'nodeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
