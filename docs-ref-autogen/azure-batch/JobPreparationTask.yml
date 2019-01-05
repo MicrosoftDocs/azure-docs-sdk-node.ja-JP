@@ -1,0 +1,207 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3feb423c429ae16cad12fcaa2b6cc97c0ca2e24a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53660537"
+items:
+- uid: azure-batch.JobPreparationTask
+  name: JobPreparationTask
+  fullName: JobPreparationTask
+  children:
+  - azure-batch.JobPreparationTask.commandLine
+  - azure-batch.JobPreparationTask.constraints
+  - azure-batch.JobPreparationTask.containerSettings
+  - azure-batch.JobPreparationTask.environmentSettings
+  - azure-batch.JobPreparationTask.id
+  - azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+  - azure-batch.JobPreparationTask.resourceFiles
+  - azure-batch.JobPreparationTask.userIdentity
+  - azure-batch.JobPreparationTask.waitForSuccess
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    ジョブの準備を使用して、ジョブのタスクを実行するコンピューティング ノードを準備することができます。
+
+    ジョブの準備で一般的に実行するアクティビティは次のとおりです。ジョブ内のすべてのタスクで使用される共通のリソース ファイルをダウンロードしています。 ジョブの準備タスクは、コンピューティング ノード上の共有場所にこれらの共通リソース ファイルをダウンロードできます。 (AZ_BATCH_NODE_ROOT_DIR\shared)、またはそのジョブのすべてのタスクと通信できるように、コンピューティング ノードでローカル サービスを開始します。 ジョブの準備のタスクが失敗 (終了コード 0 で終了する前に、再試行回数は枯渇)、バッチはコンピューティング ノードで、このジョブのタスクを実行されません。 ノードは残りますが再イメージ化されるまで、このジョブのタスクを実行する対象から外します。 ノードは、アクティブなままし、その他のジョブで使用することができます。
+
+    ジョブの準備タスクは、同じコンピューティング ノードで複数回を実行できます。 そのため、再実行を処理するジョブの準備タスクを作成する必要があります。 コンピューティング ノードが再起動された場合、ジョブ準備タスクはもう一度ノードで実行、rerunOnNodeRebootAfterSuccess が true の場合、またはジョブの準備タスクが既に完了しなかった場合、ジョブの他のタスクをスケジュールする前にします。 コンピューティング ノードが再イメージ化される場合、ジョブ準備タスクはジョブのすべてのタスクをスケジュールする前にもう一度実行します。 コンピューティング ノードで、復旧操作がトリガーされたときに、batch はタスクを再試行します。 回復操作の例が含まれます (ただしこれらに限定されません)、異常なコンピューティング ノードが再起動またはホスト エラーにより、コンピューティング ノードが表示されなくなったとします。 操作は依存しないと、maxTaskRetryCount 照らし合わせてカウントされることはありません、回復を再試行します。
+
+    MaxTaskRetryCount が 0 の場合でも、復旧操作のための内部の再試行が発生します。
+
+    このため、すべてのタスクにべき等であることがあります。 つまり、タスクが許容されているが中断され、任意の破損またはデータの重複を発生させることがなく再起動する必要があります。 最適な練習を何らかの形式のチェックポイント処理を使用するには時間の長いタスクを実行します。
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: コマンド ライン シェルで動作しないためことはできません活用してください環境変数の拡張などのシェルの機能。 このような機能を活用する場合を呼び出す必要があります、コマンドラインでシェル例 "cmd/c MyCommand"を使用して Windows でまたは"//bin/sh-c MyCommand"linux。 コマンドラインは、ファイルのパスを参照している場合、(タスク作業ディレクトリを基準)、相対パスを使うか、バッチの指定された環境変数を使用して (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)します。
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'constraints?: TaskConstraints'
+    return:
+      type:
+      - azure-batch.TaskConstraints
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: これは、指定した場合、AZ_BATCH_NODE_ROOT_DIR (ノード上の Azure Batch ディレクトリのルート) の下のすべてのディレクトリに再帰的には、コンテナーにマップする、すべてのタスクの環境変数は、コンテナーにマップしてタスクのコマンドラインは、コンテナー内で実行します。
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: この ID は、ハイフン、アンダー スコアを含む、英数字の任意の組み合わせを含めることができます、64 を超える文字を含めることはできません。 このプロパティを指定しない場合、Batch サービスには、'jobpreparation' の既定値が割り当てられます。 ジョブ内の他のタスクがジョブの準備タスクと同じ ID を持つことはできません。 同じ id を持つタスクを送信しようとすると、Batch サービスはエラー コード TaskIdSameAsJobPreparationTask; 要求を拒否します。REST API を直接呼び出す、HTTP 状態コードは 409 (Conflict) です。
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+  name: rerunOnNodeRebootAfterSuccess
+  fullName: rerunOnNodeRebootAfterSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'コンピューティング ノードが再イメージ化される場合、またはジョブの準備タスクが完了しなかった場合、ジョブの準備タスクが常に再実行 (例: タスクの実行中に再起動が発生したため)。 そのため、べき等である、複数回実行した場合に適切に動作させると、ジョブの準備タスクをいつでも記述する必要があります。 既定値は true です。'
+  optional: true
+  syntax:
+    content: 'rerunOnNodeRebootAfterSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    この要素の下に示されているファイルは、タスクの作業ディレクトリ内にあります。
+
+    リソース ファイルの一覧の最大サイズがあります。  最大サイズを超えると、要求は失敗し、RequestEntityTooLarge が応答のエラー コードになります。 このような場合は、サイズの ResourceFiles コレクションを減らす必要があります。 これは、.zip ファイル、アプリケーションのパッケージまたは Docker コンテナーを使用して実現できます。
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 省略した場合、タスクは、Windows ノードでは、タスクに一意の管理者以外のユーザーまたは Linux ノード上のプールに一意の管理者以外のユーザーとして実行されます。
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.waitForSuccess
+  name: waitForSuccess
+  fullName: waitForSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: コンピューティング ノードで true で、ジョブ準備タスクが失敗した場合、バッチ サービスは、(制約の要素で指定) として、最大再試行回数までジョブの準備タスクを再試行します。 場合は、タスクがまだ正常に完了しなかったすべての再試行後にし、Batch サービスは、コンピューティング ノードにジョブのタスクをスケジュールできません。 コンピューティング ノードは、アクティブおよびその他のジョブのタスクを実行する対象となるは残ります。 False の場合、Batch サービスはジョブの準備タスクが完了する待機しません。 ここで、ジョブの準備タスクがまだ実行中、コンピューティング ノードで実行されているジョブの他のタスクが開始します。ジョブ準備タスクが失敗した場合でも新しいタスクがノードにあるスケジュール継続されます。 既定値は true です。
+  optional: true
+  syntax:
+    content: 'waitForSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+references:
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  spec.typeScript:
+  - name: TaskConstraints
+    fullName: TaskConstraints
+    uid: azure-batch.TaskConstraints
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity

@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f2c82e8f92093797c61e65d0a019abf48bd52bf3
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52041614"
+items:
+- uid: ms-rest-azure.loginWithAuthFile_2
+  name: 'loginWithAuthFile(AuthFileOptions, (err: Error, credentials: ApplicationTokenCredentials, subscriptions: Array<LinkedSubscription>) => void)'
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    このメソッドを使用する前にから az cli をインストールしてくださいhttps://github.com/Azure/azure-cli/releasesします。 実行し、`az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`します。
+
+    別のクラウド/環境向けの sp を作成する場合、実行してください。
+
+    1. az cloud 一覧
+
+    2. az cloud 設定: n <name of the environment>
+
+    3. az ad sp rbac の作成-sdk 認証 > auth.json サービス プリンシパル作成済みの場合、ログイン サービス プリンシパルの情報を記入します。
+
+    3. az login - サービス プリンシパル-u <clientId> -p <clientSecret> -t <tenantId>
+
+    4. az アカウントの表示 - sdk 認証 > auth.json
+
+
+    認証ファイルで提供されるサービス プリンシパル情報を使用して認証します。 このメソッドは、認証ファイルから、サブスクリプション Id をユーザー指定の options パラメーターまたは 'AZURE_SUBSCRIPTION_ID' の既定の環境変数に設定されます。
+  syntax:
+    content: 'function loginWithAuthFile(options: AuthFileOptions, callback: (err: Error, credentials: ApplicationTokenCredentials, subscriptions: Array<LinkedSubscription>) => void)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest-azure.AuthFileOptions
+      description: ''
+    - id: callback
+      type:
+      - '(err: Error, credentials: ApplicationTokenCredentials, subscriptions: Array<LinkedSubscription>) => void'
+      description: ''
+    return:
+      type:
+      - Promise<ms-rest-azure.ApplicationTokenCredentials>
+  package: ms-rest-azure
+references:
+- uid: ms-rest-azure.AuthFileOptions
+  name: AuthFileOptions
+  spec.typeScript:
+  - name: AuthFileOptions
+    fullName: AuthFileOptions
+    uid: ms-rest-azure.AuthFileOptions
+- uid: Promise<ms-rest-azure.ApplicationTokenCredentials>
+  name: ApplicationTokenCredentials>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ApplicationTokenCredentials
+    fullName: ApplicationTokenCredentials
+    uid: ms-rest-azure.ApplicationTokenCredentials
+  - name: '>'
+    fullName: '>'
