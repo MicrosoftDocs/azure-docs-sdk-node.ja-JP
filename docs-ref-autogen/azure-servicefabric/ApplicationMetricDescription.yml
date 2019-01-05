@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b36a02de9e3b728340dd4350cec66428479ae8c7
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52035462"
+items:
+- uid: azure-servicefabric.ApplicationMetricDescription
+  name: ApplicationMetricDescription
+  fullName: ApplicationMetricDescription
+  children:
+  - azure-servicefabric.ApplicationMetricDescription.maximumCapacity
+  - azure-servicefabric.ApplicationMetricDescription.name
+  - azure-servicefabric.ApplicationMetricDescription.reservationCapacity
+  - azure-servicefabric.ApplicationMetricDescription.totalApplicationCapacity
+  langs:
+  - typeScript
+  type: interface
+  summary: カスタム リソースのメトリックの負荷分散の容量情報をについて説明します。 これは、このメトリックの合計消費量を制限するこのアプリケーションのサービスで使用できます。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationMetricDescription.maximumCapacity
+  name: maximumCapacity
+  fullName: maximumCapacity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Service Fabric アプリケーションの最大ノード容量。
+
+    これは、1 つのノードでこのアプリケーションのインスタンスに対する最大負荷です。 ノードの容量がこの値より大きい場合でも、Service Fabric は、この値を各ノード上のアプリケーション内のサービスの負荷合計が制限されます。
+
+    0 に設定すると、このメトリックの容量でないかどうかの各ノードに制限されています。
+
+    アプリケーション容量が定義されていると、新しいアプリケーションを作成するときに、MaximumNodes とこの値の積は TotalApplicationCapacity 以下にする常にする必要があります。
+
+    アプリケーション容量を持つ既存のアプリケーションを更新するときに、MaximumNodes とこの値の積は TotalApplicationCapacity 以下にする常にする必要があります。
+  optional: true
+  syntax:
+    content: 'maximumCapacity?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationMetricDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: メトリックの名前。
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationMetricDescription.reservationCapacity
+  name: reservationCapacity
+  fullName: reservationCapacity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Service Fabric アプリケーションのノードの予約容量。
+
+    これは、このアプリケーションのインスタンスが存在するノードで予約されている負荷の量です。
+
+    MinimumNodes が指定されている場合、これらの値の積は、アプリケーションのクラスター内で予約された容量になります。
+
+    かどうかは 0 に設定すると、容量は予約されていませんこのメトリックの。
+
+    アプリケーション容量を設定するときに、またはアプリケーションの容量を更新するときにこの値は、各メトリック機能以下である必要があります。
+  optional: true
+  syntax:
+    content: 'reservationCapacity?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationMetricDescription.totalApplicationCapacity
+  name: totalApplicationCapacity
+  fullName: totalApplicationCapacity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Service Fabric アプリケーションの合計メトリック容量。
+
+    これは、このアプリケーションをクラスター内の合計メトリック容量です。 Service Fabric はこの値をアプリケーション内のサービスの負荷の合計を制限しようとします。
+
+    アプリケーション容量が定義されていると、新しいアプリケーションを作成するよりも小さいか、この値と等しく、MaximumNodes と機能の積はあります。
+  optional: true
+  syntax:
+    content: 'totalApplicationCapacity?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric

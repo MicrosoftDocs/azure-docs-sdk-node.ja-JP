@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5eef9fa810043da9b82dc0057081e58c5bc6e086
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53676426"
+items:
+- uid: azure-batch.StartTask
+  name: StartTask
+  fullName: StartTask
+  children:
+  - azure-batch.StartTask.commandLine
+  - azure-batch.StartTask.containerSettings
+  - azure-batch.StartTask.environmentSettings
+  - azure-batch.StartTask.maxTaskRetryCount
+  - azure-batch.StartTask.resourceFiles
+  - azure-batch.StartTask.userIdentity
+  - azure-batch.StartTask.waitForSuccess
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    コンピューティング ノードで、復旧操作がトリガーされたときに、batch はタスクを再試行します。
+
+    回復操作の例が含まれます (ただしこれらに限定されません)、異常なコンピューティング ノードが再起動またはホスト エラーにより、コンピューティング ノードが表示されなくなったとします。 操作は依存しないと、maxTaskRetryCount 照らし合わせてカウントされることはありません、回復を再試行します。 MaxTaskRetryCount が 0 の場合でも、復旧操作のための内部の再試行が発生します。 このため、すべてのタスクにべき等であることがあります。 つまり、タスクが許容されているが中断され、任意の破損またはデータの重複を発生させることがなく再起動する必要があります。 最適な練習を何らかの形式のチェックポイント処理を使用するには時間の長いタスクを実行します。
+  package: azure-batch
+- uid: azure-batch.StartTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: コマンド ライン シェルで動作しないためことはできません活用してください環境変数の拡張などのシェルの機能。 このような機能を活用する場合を呼び出す必要があります、コマンドラインでシェル例 "cmd/c MyCommand"を使用して Windows でまたは"//bin/sh-c MyCommand"linux。 コマンドラインは、ファイルのパスを参照している場合、(タスク作業ディレクトリを基準)、相対パスを使うか、バッチの指定された環境変数を使用して (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)します。
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.StartTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: これは、指定した場合、AZ_BATCH_NODE_ROOT_DIR (ノード上の Azure Batch ディレクトリのルート) の下のすべてのディレクトリに再帰的には、コンテナーにマップする、すべてのタスクの環境変数は、コンテナーにマップしてタスクのコマンドラインは、コンテナー内で実行します。
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.StartTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.StartTask.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Batch サービスは、終了コードが 0 以外の場合にタスクを再試行します。 この値によって再試行の回数が限定されますのでご注意ください。 Batch サービスはタスクを 1 回試行してから、上限に達するまで再試行できます。 たとえば、最大再試行回数が 3 の場合は、バッチ タスク最大 4 回試行 (初回試行 1 回と再試行 3 回)。 最大再試行回数が 0 の場合、Batch サービスは、タスクを再試行しません。 最大再試行回数が-1 で、Batch サービスの再試行制限のないタスクです。
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.StartTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: この要素の下に示されているファイルは、タスクの作業ディレクトリ内にあります。
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.StartTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 省略した場合、タスクは、タスクに一意の非管理者ユーザーとして実行されます。
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+- uid: azure-batch.StartTask.waitForSuccess
+  name: waitForSuccess
+  fullName: waitForSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: コンピューティング ノードで true で、開始タスクが失敗した場合、バッチ サービスは、その最大再試行回数 (maxTaskRetryCount) まで開始タスクを再試行します。 タスクがまだない正常に完了し、すべての再試行、Batch のサービス マークした後、コンピューティング ノードを使用できない場合とにタスクをスケジュールしません。 この条件は、ノードの状態とエラー情報の詳細を使用して検出できます。 False の場合、Batch サービスは、開始タスクを完了するは待機しません。 この場合、その他のタスクが開始タスクがまだ実行中、コンピューティング ノードで実行されているを開始することができます。開始タスクが失敗した場合でも新しいタスクがノードにあるスケジュール続行されます。 既定値は false です。
+  optional: true
+  syntax:
+    content: 'waitForSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity
