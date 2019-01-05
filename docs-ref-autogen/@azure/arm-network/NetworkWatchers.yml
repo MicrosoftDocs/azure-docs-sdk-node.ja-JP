@@ -1,0 +1,1443 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 24f84516b4c1c4fbd89583dc53cd88d5325a81b6
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53700374"
+items:
+- uid: '@azure/arm-network.NetworkWatchers'
+  name: NetworkWatchers
+  fullName: NetworkWatchers
+  children:
+  - '@azure/arm-network.NetworkWatchers.beginCheckConnectivity'
+  - '@azure/arm-network.NetworkWatchers.beginDeleteMethod'
+  - '@azure/arm-network.NetworkWatchers.beginGetAzureReachabilityReport'
+  - '@azure/arm-network.NetworkWatchers.beginGetFlowLogStatus'
+  - '@azure/arm-network.NetworkWatchers.beginGetNetworkConfigurationDiagnostic'
+  - '@azure/arm-network.NetworkWatchers.beginGetNextHop'
+  - '@azure/arm-network.NetworkWatchers.beginGetTroubleshooting'
+  - '@azure/arm-network.NetworkWatchers.beginGetTroubleshootingResult'
+  - '@azure/arm-network.NetworkWatchers.beginGetVMSecurityRules'
+  - '@azure/arm-network.NetworkWatchers.beginListAvailableProviders'
+  - '@azure/arm-network.NetworkWatchers.beginSetFlowLogConfiguration'
+  - '@azure/arm-network.NetworkWatchers.beginVerifyIPFlow'
+  - '@azure/arm-network.NetworkWatchers.checkConnectivity'
+  - '@azure/arm-network.NetworkWatchers.createOrUpdate'
+  - '@azure/arm-network.NetworkWatchers.createOrUpdate_2'
+  - '@azure/arm-network.NetworkWatchers.createOrUpdate_1'
+  - '@azure/arm-network.NetworkWatchers.deleteMethod'
+  - '@azure/arm-network.NetworkWatchers.get'
+  - '@azure/arm-network.NetworkWatchers.get_2'
+  - '@azure/arm-network.NetworkWatchers.get_1'
+  - '@azure/arm-network.NetworkWatchers.getAzureReachabilityReport'
+  - '@azure/arm-network.NetworkWatchers.getFlowLogStatus'
+  - '@azure/arm-network.NetworkWatchers.getNetworkConfigurationDiagnostic'
+  - '@azure/arm-network.NetworkWatchers.getNextHop'
+  - '@azure/arm-network.NetworkWatchers.getTopology'
+  - '@azure/arm-network.NetworkWatchers.getTopology_2'
+  - '@azure/arm-network.NetworkWatchers.getTopology_1'
+  - '@azure/arm-network.NetworkWatchers.getTroubleshooting'
+  - '@azure/arm-network.NetworkWatchers.getTroubleshootingResult'
+  - '@azure/arm-network.NetworkWatchers.getVMSecurityRules'
+  - '@azure/arm-network.NetworkWatchers.list'
+  - '@azure/arm-network.NetworkWatchers.list_2'
+  - '@azure/arm-network.NetworkWatchers.list_1'
+  - '@azure/arm-network.NetworkWatchers.listAll'
+  - '@azure/arm-network.NetworkWatchers.listAll_2'
+  - '@azure/arm-network.NetworkWatchers.listAll_1'
+  - '@azure/arm-network.NetworkWatchers.listAvailableProviders'
+  - '@azure/arm-network.NetworkWatchers.constructor'
+  - '@azure/arm-network.NetworkWatchers.setFlowLogConfiguration'
+  - '@azure/arm-network.NetworkWatchers.updateTags'
+  - '@azure/arm-network.NetworkWatchers.updateTags_2'
+  - '@azure/arm-network.NetworkWatchers.updateTags_1'
+  - '@azure/arm-network.NetworkWatchers.verifyIPFlow'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="6abbf-101">NetworkWatchers を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="6abbf-101">Class representing a NetworkWatchers.</span></span>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginCheckConnectivity'
+  name: beginCheckConnectivity(string, string, ConnectivityParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-102">仮想マシンから、別の VM や任意のリモート サーバーなどの指定されたエンドポイントまでの、直接 TCP 接続が確立されたかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-102">Verifies the possibility of establishing a direct TCP connection from a virtual machine to a given endpoint including another VM or an arbitrary remote server.</span></span>
+  syntax:
+    content: 'function beginCheckConnectivity(resourceGroupName: string, networkWatcherName: string, parameters: ConnectivityParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-103">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-103">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-104">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-104">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.ConnectivityParameters'
+      description: <span data-ttu-id="6abbf-105">接続チェックを実行する方法を決定するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-105">Parameters that determine how the connectivity check will be performed.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginDeleteMethod'
+  name: beginDeleteMethod(string, string, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-106">指定したネットワーク ウォッチャーのリソースを削除します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-106">Deletes the specified network watcher resource.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, networkWatcherName: string, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-107">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-107">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-108">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-108">The name of the network watcher.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginGetAzureReachabilityReport'
+  name: beginGetAzureReachabilityReport(string, string, AzureReachabilityReportParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-109">相対待機時間スコアの取得インターネット サービス プロバイダーを指定した場所からの Azure リージョンにします。</span><span class="sxs-lookup"><span data-stu-id="6abbf-109">Gets the relative latency score for internet service providers from a specified location to Azure regions.</span></span>
+  syntax:
+    content: 'function beginGetAzureReachabilityReport(resourceGroupName: string, networkWatcherName: string, parameters: AzureReachabilityReportParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-110">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-110">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-111">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-111">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.AzureReachabilityReportParameters'
+      description: <span data-ttu-id="6abbf-112">Azure の到達可能性を決定するパラメーターは、構成を報告します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-112">Parameters that determine Azure reachability report configuration.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginGetFlowLogStatus'
+  name: beginGetFlowLogStatus(string, string, FlowLogStatusParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-113">フロー ログとトラフィックの分析 (省略可能) で指定されたリソースの状態を照会します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-113">Queries status of flow log and traffic analytics (optional) on a specified resource.</span></span>
+  syntax:
+    content: 'function beginGetFlowLogStatus(resourceGroupName: string, networkWatcherName: string, parameters: FlowLogStatusParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-114">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-114">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-115">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-115">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.FlowLogStatusParameters'
+      description: <span data-ttu-id="6abbf-116">クエリのフロー ログとトラフィック分析 (省略可能) 状態にリソースを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-116">Parameters that define a resource to query flow log and traffic analytics (optional)  status.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginGetNetworkConfigurationDiagnostic'
+  name: beginGetNetworkConfigurationDiagnostic(string, string, NetworkConfigurationDiagnosticParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-117">診断のネットワーク構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-117">Get network configuration diagnostic.</span></span>
+  syntax:
+    content: 'function beginGetNetworkConfigurationDiagnostic(resourceGroupName: string, networkWatcherName: string, parameters: NetworkConfigurationDiagnosticParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-118">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-118">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-119">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-119">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.NetworkConfigurationDiagnosticParameters'
+      description: <span data-ttu-id="6abbf-120">ネットワーク構成の診断を取得するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="6abbf-120">Parameters to get network configuration diagnostic.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginGetNextHop'
+  name: beginGetNextHop(string, string, NextHopParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-121">指定した VM から次のホップを取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-121">Gets the next hop from the specified VM.</span></span>
+  syntax:
+    content: 'function beginGetNextHop(resourceGroupName: string, networkWatcherName: string, parameters: NextHopParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-122">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-122">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-123">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-123">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.NextHopParameters'
+      description: <span data-ttu-id="6abbf-124">送信元と変換先のエンドポイントを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-124">Parameters that define the source and destination endpoint.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginGetTroubleshooting'
+  name: beginGetTroubleshooting(string, string, TroubleshootingParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-125">指定したリソースのトラブルシューティングを開始します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-125">Initiate troubleshooting on a specified resource</span></span>
+  syntax:
+    content: 'function beginGetTroubleshooting(resourceGroupName: string, networkWatcherName: string, parameters: TroubleshootingParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-126">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-126">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-127">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-127">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TroubleshootingParameters'
+      description: <span data-ttu-id="6abbf-128">トラブルシューティングを行うリソースを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-128">Parameters that define the resource to troubleshoot.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginGetTroubleshootingResult'
+  name: beginGetTroubleshootingResult(string, string, QueryTroubleshootingParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-129">指定したリソースに対して最後に完了したトラブルシューティングの結果を取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-129">Get the last completed troubleshooting result on a specified resource</span></span>
+  syntax:
+    content: 'function beginGetTroubleshootingResult(resourceGroupName: string, networkWatcherName: string, parameters: QueryTroubleshootingParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-130">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-130">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-131">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-131">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.QueryTroubleshootingParameters'
+      description: <span data-ttu-id="6abbf-132">クエリのトラブルシューティングの結果にリソースを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-132">Parameters that define the resource to query the troubleshooting result.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginGetVMSecurityRules'
+  name: beginGetVMSecurityRules(string, string, SecurityGroupViewParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-133">指定した VM で構成され、有効なセキュリティ グループ規則を取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-133">Gets the configured and effective security group rules on the specified VM.</span></span>
+  syntax:
+    content: 'function beginGetVMSecurityRules(resourceGroupName: string, networkWatcherName: string, parameters: SecurityGroupViewParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-134">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-134">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-135">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-135">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.SecurityGroupViewParameters'
+      description: <span data-ttu-id="6abbf-136">セキュリティ グループをチェックする VM を定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-136">Parameters that define the VM to check security groups for.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginListAvailableProviders'
+  name: beginListAvailableProviders(string, string, AvailableProvidersListParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-137">指定された Azure リージョンの利用可能なインターネット サービス プロバイダーがすべて一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-137">Lists all available internet service providers for a specified Azure region.</span></span>
+  syntax:
+    content: 'function beginListAvailableProviders(resourceGroupName: string, networkWatcherName: string, parameters: AvailableProvidersListParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-138">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-138">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-139">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-139">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.AvailableProvidersListParameters'
+      description: <span data-ttu-id="6abbf-140">使用可能なプロバイダーの一覧の範囲のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-140">Parameters that scope the list of available providers.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginSetFlowLogConfiguration'
+  name: beginSetFlowLogConfiguration(string, string, FlowLogInformation, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-141">指定したリソースに対して (省略可能) フロー ログとトラフィック分析を構成します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-141">Configures flow log  and traffic analytics (optional) on a specified resource.</span></span>
+  syntax:
+    content: 'function beginSetFlowLogConfiguration(resourceGroupName: string, networkWatcherName: string, parameters: FlowLogInformation, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-142">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-142">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-143">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-143">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.FlowLogInformation'
+      description: <span data-ttu-id="6abbf-144">フロー ログの構成を定義するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="6abbf-144">Parameters that define the configuration of flow log.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.beginVerifyIPFlow'
+  name: beginVerifyIPFlow(string, string, VerificationIPFlowParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-145">現在構成されている NSG ルールを指定された場所、指定した VM からの IP フローを確認します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-145">Verify IP flow from the specified VM to a location given the currently configured NSG rules.</span></span>
+  syntax:
+    content: 'function beginVerifyIPFlow(resourceGroupName: string, networkWatcherName: string, parameters: VerificationIPFlowParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-146">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-146">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-147">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-147">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.VerificationIPFlowParameters'
+      description: <span data-ttu-id="6abbf-148">IP フロー検証を定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-148">Parameters that define the IP flow to be verified.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.checkConnectivity'
+  name: checkConnectivity(string, string, ConnectivityParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-149">仮想マシンから、別の VM や任意のリモート サーバーなどの指定されたエンドポイントまでの、直接 TCP 接続が確立されたかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-149">Verifies the possibility of establishing a direct TCP connection from a virtual machine to a given endpoint including another VM or an arbitrary remote server.</span></span>
+  syntax:
+    content: 'function checkConnectivity(resourceGroupName: string, networkWatcherName: string, parameters: ConnectivityParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-150">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-150">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-151">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-151">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.ConnectivityParameters'
+      description: <span data-ttu-id="6abbf-152">接続チェックを実行する方法を決定するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-152">Parameters that determine how the connectivity check will be performed.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersCheckConnectivityResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.createOrUpdate'
+  name: createOrUpdate(string, string, NetworkWatcher, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-153">作成または指定されたリソース グループで network watcher を更新します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-153">Creates or updates a network watcher in the specified resource group.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, networkWatcherName: string, parameters: NetworkWatcher, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-154">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-154">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-155">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-155">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.NetworkWatcher'
+      description: <span data-ttu-id="6abbf-156">Network watcher のリソースを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-156">Parameters that define the network watcher resource.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersCreateOrUpdateResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.createOrUpdate_2'
+  name: createOrUpdate(string, string, NetworkWatcher, RequestOptionsBase, ServiceCallback<NetworkWatcher>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, networkWatcherName: string, parameters: NetworkWatcher, options: RequestOptionsBase, callback: ServiceCallback<NetworkWatcher>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-157">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-157">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-158">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-158">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.NetworkWatcher'
+      description: <span data-ttu-id="6abbf-159">Network watcher のリソースを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-159">Parameters that define the network watcher resource.</span></span>
+    - id: options
+      type:
+      - RequestOptionsBase
+      description: <span data-ttu-id="6abbf-160">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6abbf-160">The optional parameters</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcher>
+      description: >
+        <span data-ttu-id="6abbf-161">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-161">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersCreateOrUpdateResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.createOrUpdate_1'
+  name: createOrUpdate(string, string, NetworkWatcher, ServiceCallback<NetworkWatcher>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, networkWatcherName: string, parameters: NetworkWatcher, callback: ServiceCallback<NetworkWatcher>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-162">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-162">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-163">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-163">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.NetworkWatcher'
+      description: <span data-ttu-id="6abbf-164">Network watcher のリソースを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-164">Parameters that define the network watcher resource.</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcher>
+      description: >
+        <span data-ttu-id="6abbf-165">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-165">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersCreateOrUpdateResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.deleteMethod'
+  name: deleteMethod(string, string, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-166">指定したネットワーク ウォッチャーのリソースを削除します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-166">Deletes the specified network watcher resource.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, networkWatcherName: string, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-167">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-167">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-168">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-168">The name of the network watcher.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<RestResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.get'
+  name: get(string, string, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-169">リソース グループで指定したネットワーク ウォッチャーを取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-169">Gets the specified network watcher by resource group.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, networkWatcherName: string, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-170">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-170">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-171">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-171">The name of the network watcher.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.get_2'
+  name: get(string, string, RequestOptionsBase, ServiceCallback<NetworkWatcher>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function get(resourceGroupName: string, networkWatcherName: string, options: RequestOptionsBase, callback: ServiceCallback<NetworkWatcher>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-172">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-172">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-173">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-173">The name of the network watcher.</span></span>
+    - id: options
+      type:
+      - RequestOptionsBase
+      description: <span data-ttu-id="6abbf-174">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6abbf-174">The optional parameters</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcher>
+      description: >
+        <span data-ttu-id="6abbf-175">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-175">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.get_1'
+  name: get(string, string, ServiceCallback<NetworkWatcher>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function get(resourceGroupName: string, networkWatcherName: string, callback: ServiceCallback<NetworkWatcher>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-176">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-176">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-177">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-177">The name of the network watcher.</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcher>
+      description: >
+        <span data-ttu-id="6abbf-178">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-178">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getAzureReachabilityReport'
+  name: getAzureReachabilityReport(string, string, AzureReachabilityReportParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-179">相対待機時間スコアの取得インターネット サービス プロバイダーを指定した場所からの Azure リージョンにします。</span><span class="sxs-lookup"><span data-stu-id="6abbf-179">Gets the relative latency score for internet service providers from a specified location to Azure regions.</span></span>
+  syntax:
+    content: 'function getAzureReachabilityReport(resourceGroupName: string, networkWatcherName: string, parameters: AzureReachabilityReportParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-180">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-180">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-181">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-181">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.AzureReachabilityReportParameters'
+      description: <span data-ttu-id="6abbf-182">Azure の到達可能性を決定するパラメーターは、構成を報告します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-182">Parameters that determine Azure reachability report configuration.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetAzureReachabilityReportResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getFlowLogStatus'
+  name: getFlowLogStatus(string, string, FlowLogStatusParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-183">フロー ログとトラフィックの分析 (省略可能) で指定されたリソースの状態を照会します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-183">Queries status of flow log and traffic analytics (optional) on a specified resource.</span></span>
+  syntax:
+    content: 'function getFlowLogStatus(resourceGroupName: string, networkWatcherName: string, parameters: FlowLogStatusParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-184">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-184">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-185">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-185">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.FlowLogStatusParameters'
+      description: <span data-ttu-id="6abbf-186">クエリのフロー ログとトラフィック分析 (省略可能) 状態にリソースを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-186">Parameters that define a resource to query flow log and traffic analytics (optional)  status.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetFlowLogStatusResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getNetworkConfigurationDiagnostic'
+  name: getNetworkConfigurationDiagnostic(string, string, NetworkConfigurationDiagnosticParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-187">診断のネットワーク構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-187">Get network configuration diagnostic.</span></span>
+  syntax:
+    content: 'function getNetworkConfigurationDiagnostic(resourceGroupName: string, networkWatcherName: string, parameters: NetworkConfigurationDiagnosticParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-188">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-188">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-189">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-189">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.NetworkConfigurationDiagnosticParameters'
+      description: <span data-ttu-id="6abbf-190">ネットワーク構成の診断を取得するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="6abbf-190">Parameters to get network configuration diagnostic.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetNetworkConfigurationDiagnosticResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getNextHop'
+  name: getNextHop(string, string, NextHopParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-191">指定した VM から次のホップを取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-191">Gets the next hop from the specified VM.</span></span>
+  syntax:
+    content: 'function getNextHop(resourceGroupName: string, networkWatcherName: string, parameters: NextHopParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-192">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-192">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-193">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-193">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.NextHopParameters'
+      description: <span data-ttu-id="6abbf-194">送信元と変換先のエンドポイントを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-194">Parameters that define the source and destination endpoint.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetNextHopResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getTopology'
+  name: getTopology(string, string, TopologyParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-195">リソース グループでは、現在のネットワーク トポロジを取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-195">Gets the current network topology by resource group.</span></span>
+  syntax:
+    content: 'function getTopology(resourceGroupName: string, networkWatcherName: string, parameters: TopologyParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-196">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-196">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-197">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-197">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TopologyParameters'
+      description: <span data-ttu-id="6abbf-198">トポロジの表現を定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-198">Parameters that define the representation of topology.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetTopologyResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getTopology_2'
+  name: getTopology(string, string, TopologyParameters, RequestOptionsBase, ServiceCallback<Topology>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function getTopology(resourceGroupName: string, networkWatcherName: string, parameters: TopologyParameters, options: RequestOptionsBase, callback: ServiceCallback<Topology>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-199">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-199">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-200">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-200">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TopologyParameters'
+      description: <span data-ttu-id="6abbf-201">トポロジの表現を定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-201">Parameters that define the representation of topology.</span></span>
+    - id: options
+      type:
+      - RequestOptionsBase
+      description: <span data-ttu-id="6abbf-202">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6abbf-202">The optional parameters</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.Topology>
+      description: >
+        <span data-ttu-id="6abbf-203">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-203">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetTopologyResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getTopology_1'
+  name: getTopology(string, string, TopologyParameters, ServiceCallback<Topology>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function getTopology(resourceGroupName: string, networkWatcherName: string, parameters: TopologyParameters, callback: ServiceCallback<Topology>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-204">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-204">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-205">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-205">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TopologyParameters'
+      description: <span data-ttu-id="6abbf-206">トポロジの表現を定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-206">Parameters that define the representation of topology.</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.Topology>
+      description: >
+        <span data-ttu-id="6abbf-207">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-207">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetTopologyResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getTroubleshooting'
+  name: getTroubleshooting(string, string, TroubleshootingParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-208">指定したリソースのトラブルシューティングを開始します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-208">Initiate troubleshooting on a specified resource</span></span>
+  syntax:
+    content: 'function getTroubleshooting(resourceGroupName: string, networkWatcherName: string, parameters: TroubleshootingParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-209">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-209">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-210">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-210">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TroubleshootingParameters'
+      description: <span data-ttu-id="6abbf-211">トラブルシューティングを行うリソースを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-211">Parameters that define the resource to troubleshoot.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetTroubleshootingResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getTroubleshootingResult'
+  name: getTroubleshootingResult(string, string, QueryTroubleshootingParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-212">指定したリソースに対して最後に完了したトラブルシューティングの結果を取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-212">Get the last completed troubleshooting result on a specified resource</span></span>
+  syntax:
+    content: 'function getTroubleshootingResult(resourceGroupName: string, networkWatcherName: string, parameters: QueryTroubleshootingParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-213">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-213">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-214">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-214">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.QueryTroubleshootingParameters'
+      description: <span data-ttu-id="6abbf-215">クエリのトラブルシューティングの結果にリソースを定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-215">Parameters that define the resource to query the troubleshooting result.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetTroubleshootingResultResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.getVMSecurityRules'
+  name: getVMSecurityRules(string, string, SecurityGroupViewParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-216">指定した VM で構成され、有効なセキュリティ グループ規則を取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-216">Gets the configured and effective security group rules on the specified VM.</span></span>
+  syntax:
+    content: 'function getVMSecurityRules(resourceGroupName: string, networkWatcherName: string, parameters: SecurityGroupViewParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-217">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-217">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-218">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-218">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.SecurityGroupViewParameters'
+      description: <span data-ttu-id="6abbf-219">セキュリティ グループをチェックする VM を定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-219">Parameters that define the VM to check security groups for.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersGetVMSecurityRulesResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.list'
+  name: list(string, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-220">リソース グループによってすべてのネットワーク ウォッチャーを取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-220">Gets all network watchers by resource group.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-221">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-221">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersListResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.list_2'
+  name: list(string, RequestOptionsBase, ServiceCallback<NetworkWatcherListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function list(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<NetworkWatcherListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-222">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-222">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - RequestOptionsBase
+      description: <span data-ttu-id="6abbf-223">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6abbf-223">The optional parameters</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcherListResult>
+      description: >
+        <span data-ttu-id="6abbf-224">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-224">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersListResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.list_1'
+  name: list(string, ServiceCallback<NetworkWatcherListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function list(resourceGroupName: string, callback: ServiceCallback<NetworkWatcherListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-225">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-225">The name of the resource group.</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcherListResult>
+      description: >
+        <span data-ttu-id="6abbf-226">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-226">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersListResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.listAll'
+  name: listAll(msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-227">サブスクリプションでは、すべてのネットワーク ウォッチャーを取得します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-227">Gets all network watchers by subscription.</span></span>
+  syntax:
+    content: 'function listAll(options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersListAllResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.listAll_2'
+  name: listAll(RequestOptionsBase, ServiceCallback<NetworkWatcherListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listAll(options: RequestOptionsBase, callback: ServiceCallback<NetworkWatcherListResult>)'
+    parameters:
+    - id: options
+      type:
+      - RequestOptionsBase
+      description: <span data-ttu-id="6abbf-228">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6abbf-228">The optional parameters</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcherListResult>
+      description: >
+        <span data-ttu-id="6abbf-229">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-229">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersListAllResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.listAll_1'
+  name: listAll(ServiceCallback<NetworkWatcherListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listAll(callback: ServiceCallback<NetworkWatcherListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcherListResult>
+      description: >
+        <span data-ttu-id="6abbf-230">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-230">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersListAllResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.listAvailableProviders'
+  name: listAvailableProviders(string, string, AvailableProvidersListParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-231">指定された Azure リージョンの利用可能なインターネット サービス プロバイダーがすべて一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-231">Lists all available internet service providers for a specified Azure region.</span></span>
+  syntax:
+    content: 'function listAvailableProviders(resourceGroupName: string, networkWatcherName: string, parameters: AvailableProvidersListParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-232">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-232">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-233">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-233">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.AvailableProvidersListParameters'
+      description: <span data-ttu-id="6abbf-234">使用可能なプロバイダーの一覧の範囲のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-234">Parameters that scope the list of available providers.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersListAvailableProvidersResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.constructor'
+  name: NetworkWatchers(NetworkManagementClientContext)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-235">NetworkWatchers を作成します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-235">Create a NetworkWatchers.</span></span>
+  syntax:
+    content: 'new NetworkWatchers(client: NetworkManagementClientContext)'
+    parameters:
+    - id: client
+      type:
+      - '@azure/arm-network.NetworkManagementClientContext'
+      description: >
+        <span data-ttu-id="6abbf-236">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="6abbf-236">Reference to the service client.</span></span>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.setFlowLogConfiguration'
+  name: setFlowLogConfiguration(string, string, FlowLogInformation, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-237">指定したリソースに対して (省略可能) フロー ログとトラフィック分析を構成します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-237">Configures flow log  and traffic analytics (optional) on a specified resource.</span></span>
+  syntax:
+    content: 'function setFlowLogConfiguration(resourceGroupName: string, networkWatcherName: string, parameters: FlowLogInformation, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-238">Network watcher のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-238">The name of the network watcher resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-239">Network watcher のリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-239">The name of the network watcher resource.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.FlowLogInformation'
+      description: <span data-ttu-id="6abbf-240">フロー ログの構成を定義するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="6abbf-240">Parameters that define the configuration of flow log.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersSetFlowLogConfigurationResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.updateTags'
+  name: updateTags(string, string, TagsObject, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-241">ネットワーク監視のタグを更新します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-241">Updates a network watcher tags.</span></span>
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, networkWatcherName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-242">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-242">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-243">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-243">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TagsObject'
+      description: <span data-ttu-id="6abbf-244">ネットワーク監視のタグを更新する指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-244">Parameters supplied to update network watcher tags.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersUpdateTagsResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.updateTags_2'
+  name: updateTags(string, string, TagsObject, RequestOptionsBase, ServiceCallback<NetworkWatcher>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, networkWatcherName: string, parameters: TagsObject, options: RequestOptionsBase, callback: ServiceCallback<NetworkWatcher>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-245">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-245">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-246">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-246">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TagsObject'
+      description: <span data-ttu-id="6abbf-247">ネットワーク監視のタグを更新する指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-247">Parameters supplied to update network watcher tags.</span></span>
+    - id: options
+      type:
+      - RequestOptionsBase
+      description: <span data-ttu-id="6abbf-248">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6abbf-248">The optional parameters</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcher>
+      description: >
+        <span data-ttu-id="6abbf-249">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-249">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersUpdateTagsResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.updateTags_1'
+  name: updateTags(string, string, TagsObject, ServiceCallback<NetworkWatcher>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, networkWatcherName: string, parameters: TagsObject, callback: ServiceCallback<NetworkWatcher>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-250">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-250">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-251">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-251">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TagsObject'
+      description: <span data-ttu-id="6abbf-252">ネットワーク監視のタグを更新する指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-252">Parameters supplied to update network watcher tags.</span></span>
+    - id: callback
+      type:
+      - ServiceCallback<@azure/arm-network.NetworkWatcher>
+      description: >
+        <span data-ttu-id="6abbf-253">コールバック</span><span class="sxs-lookup"><span data-stu-id="6abbf-253">The callback</span></span>
+    return:
+      type:
+      - Promise<Models.NetworkWatchersUpdateTagsResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.NetworkWatchers.verifyIPFlow'
+  name: verifyIPFlow(string, string, VerificationIPFlowParameters, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="6abbf-254">現在構成されている NSG ルールを指定された場所、指定した VM からの IP フローを確認します。</span><span class="sxs-lookup"><span data-stu-id="6abbf-254">Verify IP flow from the specified VM to a location given the currently configured NSG rules.</span></span>
+  syntax:
+    content: 'function verifyIPFlow(resourceGroupName: string, networkWatcherName: string, parameters: VerificationIPFlowParameters, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-255">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-255">The name of the resource group.</span></span>
+    - id: networkWatcherName
+      type:
+      - string
+      description: <span data-ttu-id="6abbf-256">Network watcher の名前。</span><span class="sxs-lookup"><span data-stu-id="6abbf-256">The name of the network watcher.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.VerificationIPFlowParameters'
+      description: <span data-ttu-id="6abbf-257">IP フロー検証を定義するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6abbf-257">Parameters that define the IP flow to be verified.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.NetworkWatchersVerifyIPFlowResponse>
+  package: '@azure/arm-network'
+references:
+- uid: '@azure/arm-network.NetworkManagementClientContext'
+  name: NetworkManagementClientContext
+  spec.typeScript:
+  - name: NetworkManagementClientContext
+    fullName: NetworkManagementClientContext
+    uid: '@azure/arm-network.NetworkManagementClientContext'
+- uid: '@azure/arm-network.ConnectivityParameters'
+  name: ConnectivityParameters
+  spec.typeScript:
+  - name: ConnectivityParameters
+    fullName: ConnectivityParameters
+    uid: '@azure/arm-network.ConnectivityParameters'
+- uid: '@azure/arm-network.AzureReachabilityReportParameters'
+  name: AzureReachabilityReportParameters
+  spec.typeScript:
+  - name: AzureReachabilityReportParameters
+    fullName: AzureReachabilityReportParameters
+    uid: '@azure/arm-network.AzureReachabilityReportParameters'
+- uid: '@azure/arm-network.FlowLogStatusParameters'
+  name: FlowLogStatusParameters
+  spec.typeScript:
+  - name: FlowLogStatusParameters
+    fullName: FlowLogStatusParameters
+    uid: '@azure/arm-network.FlowLogStatusParameters'
+- uid: '@azure/arm-network.NetworkConfigurationDiagnosticParameters'
+  name: NetworkConfigurationDiagnosticParameters
+  spec.typeScript:
+  - name: NetworkConfigurationDiagnosticParameters
+    fullName: NetworkConfigurationDiagnosticParameters
+    uid: '@azure/arm-network.NetworkConfigurationDiagnosticParameters'
+- uid: '@azure/arm-network.NextHopParameters'
+  name: NextHopParameters
+  spec.typeScript:
+  - name: NextHopParameters
+    fullName: NextHopParameters
+    uid: '@azure/arm-network.NextHopParameters'
+- uid: '@azure/arm-network.TroubleshootingParameters'
+  name: TroubleshootingParameters
+  spec.typeScript:
+  - name: TroubleshootingParameters
+    fullName: TroubleshootingParameters
+    uid: '@azure/arm-network.TroubleshootingParameters'
+- uid: '@azure/arm-network.QueryTroubleshootingParameters'
+  name: QueryTroubleshootingParameters
+  spec.typeScript:
+  - name: QueryTroubleshootingParameters
+    fullName: QueryTroubleshootingParameters
+    uid: '@azure/arm-network.QueryTroubleshootingParameters'
+- uid: '@azure/arm-network.SecurityGroupViewParameters'
+  name: SecurityGroupViewParameters
+  spec.typeScript:
+  - name: SecurityGroupViewParameters
+    fullName: SecurityGroupViewParameters
+    uid: '@azure/arm-network.SecurityGroupViewParameters'
+- uid: '@azure/arm-network.AvailableProvidersListParameters'
+  name: AvailableProvidersListParameters
+  spec.typeScript:
+  - name: AvailableProvidersListParameters
+    fullName: AvailableProvidersListParameters
+    uid: '@azure/arm-network.AvailableProvidersListParameters'
+- uid: '@azure/arm-network.FlowLogInformation'
+  name: FlowLogInformation
+  spec.typeScript:
+  - name: FlowLogInformation
+    fullName: FlowLogInformation
+    uid: '@azure/arm-network.FlowLogInformation'
+- uid: '@azure/arm-network.VerificationIPFlowParameters'
+  name: VerificationIPFlowParameters
+  spec.typeScript:
+  - name: VerificationIPFlowParameters
+    fullName: VerificationIPFlowParameters
+    uid: '@azure/arm-network.VerificationIPFlowParameters'
+- uid: '@azure/arm-network.NetworkWatcher'
+  name: NetworkWatcher
+  spec.typeScript:
+  - name: NetworkWatcher
+    fullName: NetworkWatcher
+    uid: '@azure/arm-network.NetworkWatcher'
+- uid: ServiceCallback<@azure/arm-network.NetworkWatcher>
+  name: NetworkWatcher>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: NetworkWatcher
+    fullName: NetworkWatcher
+    uid: '@azure/arm-network.NetworkWatcher'
+  - name: '>'
+    fullName: '>'
+- uid: '@azure/arm-network.TopologyParameters'
+  name: TopologyParameters
+  spec.typeScript:
+  - name: TopologyParameters
+    fullName: TopologyParameters
+    uid: '@azure/arm-network.TopologyParameters'
+- uid: ServiceCallback<@azure/arm-network.Topology>
+  name: Topology>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Topology
+    fullName: Topology
+    uid: '@azure/arm-network.Topology'
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<@azure/arm-network.NetworkWatcherListResult>
+  name: NetworkWatcherListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: NetworkWatcherListResult
+    fullName: NetworkWatcherListResult
+    uid: '@azure/arm-network.NetworkWatcherListResult'
+  - name: '>'
+    fullName: '>'
+- uid: '@azure/arm-network.TagsObject'
+  name: TagsObject
+  spec.typeScript:
+  - name: TagsObject
+    fullName: TagsObject
+    uid: '@azure/arm-network.TagsObject'
