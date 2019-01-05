@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b8c41bfe89c1c4cc827663b8c0d1876afe8470e2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52099707"
+items:
+- uid: azure-servicefabric.ClusterHealthChunk
+  name: ClusterHealthChunk
+  fullName: ClusterHealthChunk
+  children:
+  - azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  - azure-servicefabric.ClusterHealthChunk.healthState
+  - azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    クラスターの正常性チャンクを表します。
+
+    集計されたクラスターの正常性状態、および入力フィルターに該当するクラスターのエンティティが含まれています。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  name: applicationHealthStateChunks
+  fullName: applicationHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: クラスターの正常性チャンク クエリの説明でフィルターに該当するクラスターでアプリケーションの正常性状態の一覧をチャンクします。
+  optional: true
+  syntax:
+    content: 'applicationHealthStateChunks?: ApplicationHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthStateChunkList
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    正常性マネージャーによって計算クラスターの集計正常性状態を表す HealthState します。
+
+    エンティティの正常性評価では、エンティティとその子 (該当する場合) で報告されるすべてのイベントが反映されます。
+
+    集計は、目的のクラスターの正常性ポリシーとアプリケーションの正常性ポリシーを適用することで行われます。 指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+  optional: true
+  syntax:
+    content: 'healthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  name: nodeHealthStateChunks
+  fullName: nodeHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: クラスターの正常性チャンク クエリの説明でフィルターに該当するクラスターのノードの正常性状態の一覧をチャンクします。
+  optional: true
+  syntax:
+    content: 'nodeHealthStateChunks?: NodeHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.NodeHealthStateChunkList
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthStateChunkList
+  name: ApplicationHealthStateChunkList
+  spec.typeScript:
+  - name: ApplicationHealthStateChunkList
+    fullName: ApplicationHealthStateChunkList
+    uid: azure-servicefabric.ApplicationHealthStateChunkList
+- uid: azure-servicefabric.NodeHealthStateChunkList
+  name: NodeHealthStateChunkList
+  spec.typeScript:
+  - name: NodeHealthStateChunkList
+    fullName: NodeHealthStateChunkList
+    uid: azure-servicefabric.NodeHealthStateChunkList
