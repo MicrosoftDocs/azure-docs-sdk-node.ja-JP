@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6be3af94898fd3f29c1904568c5e9f7d20c64073
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52054136"
+items:
+- uid: '@azure/cosmos.ConflictResolutionPolicy'
+  name: ConflictResolutionPolicy
+  fullName: ConflictResolutionPolicy
+  children:
+  - '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionPath'
+  - '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionProcedure'
+  - '@azure/cosmos.ConflictResolutionPolicy.mode'
+  langs:
+  - typeScript
+  type: interface
+  summary: さまざまなリージョンからの書き込み、Azure Cosmos DB サービスでは、コレクション内のドキュメントで競合が発生する場合の競合を解決する方法を指定するための競合解決ポリシーの構成を表します。
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionPath'
+  name: conflictResolutionPath
+  fullName: conflictResolutionPath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >+
+    取得または設定が最後ライター wins 競合解決のための Azure Cosmos DB サービス内の各ドキュメントに存在するパス。
+
+    このパスは、各ドキュメントに存在する必要があり、整数値である必要があります。
+
+    ドキュメント上で発生する競合が発生した場合、指定されたパスに、上位の整数値を持つドキュメントが取得されます。
+
+    パスが指定されていない場合は、既定では、タイムスタンプ パス適用されます。
+
+    この値を使用する場合にのみ設定する必要があります<xref:ConflictResolutionMode.LastWriterWins>します。
+
+
+    ```typescript
+
+    conflictResolutionPolicy.ConflictResolutionPath = "/name/first";
+
+    ```
+
+  optional: true
+  syntax:
+    content: 'conflictResolutionPath?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConflictResolutionPolicy.conflictResolutionProcedure'
+  name: conflictResolutionProcedure
+  fullName: conflictResolutionProcedure
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    取得または設定します、 <xref:StoredProcedure> Azure Cosmos DB サービスで競合の解決に使用されます。
+
+    このストアド プロシージャは、後に作成される可能性があります、<xref:Container>が作成され、変更することができます必要に応じて。
+
+    1. この値を使用する場合にのみ設定する必要があります<xref:ConflictResolutionMode.Custom>します。
+
+    2. 場合は、ストアド プロシージャは失敗するか、例外をスロー、競合の解決は既定で、競合フィードでの競合を登録します。
+
+
+    ```typescript
+
+    conflictResolutionPolicy.ConflictResolutionProcedure = "resolveConflict"
+
+    ```
+  optional: true
+  syntax:
+    content: 'conflictResolutionProcedure?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConflictResolutionPolicy.mode'
+  name: mode
+  fullName: mode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 取得または設定します、<see cref="ConflictResolutionMode"/>で Azure Cosmos DB サービス。 既定では<xref:ConflictResolutionMode.LastWriterWins>します。
+  optional: true
+  syntax:
+    content: 'mode?: Object'
+    return:
+      type:
+      - Object
+  package: '@azure/cosmos'
