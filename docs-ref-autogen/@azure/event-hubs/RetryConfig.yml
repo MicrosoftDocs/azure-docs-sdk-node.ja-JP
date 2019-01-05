@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ae5e92e8b861f900a9d2364bbb1fc70519d0fabf
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48550300"
+items:
+- uid: '@azure/event-hubs.RetryConfig'
+  name: RetryConfig
+  fullName: RetryConfig<T>
+  children:
+  - '@azure/event-hubs.RetryConfig.connectionId'
+  - '@azure/event-hubs.RetryConfig.delayInSeconds'
+  - '@azure/event-hubs.RetryConfig.operation'
+  - '@azure/event-hubs.RetryConfig.operationType'
+  - '@azure/event-hubs.RetryConfig.times'
+  langs:
+  - typeScript
+  type: interface
+  summary: 再試行操作用に構成する必要があるパラメーターをについて説明します。
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.connectionId'
+  name: connectionId
+  fullName: connectionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {文字列} connectionId 接続識別子。 ログ情報を使用します。
+
+    複数の接続が同じファイルに記録されるときに非常に便利です。
+  syntax:
+    content: 'connectionId: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.delayInSeconds'
+  name: delayInSeconds
+  fullName: delayInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number}[delayInSeconds]次の試行を行う前に秒単位で待機する時間数。 既定値は15.'
+  optional: true
+  syntax:
+    content: 'delayInSeconds?: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.operation'
+  name: operation
+  fullName: operation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Promise<T>} 操作、操作を再試行する必要があります。'
+  syntax:
+    content: 'operation: () => Promise<T>'
+    return:
+      type:
+      - () => Promise<T>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.operationType'
+  name: operationType
+  fullName: operationType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {RetryOperationType} operationType 実行する操作の名前/型。
+
+    優れたデバッグ ログを提供するために非常に便利です。
+  syntax:
+    content: 'operationType: RetryOperationType'
+    return:
+      type:
+      - '@azure/event-hubs.RetryOperationType'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.times'
+  name: times
+  fullName: times
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number}[時間]エラーが発生した場合に再試行する必要がある操作の数です。 既定値は手順 3.'
+  optional: true
+  syntax:
+    content: 'times?: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.RetryOperationType'
+  name: RetryOperationType
+  spec.typeScript:
+  - name: RetryOperationType
+    fullName: RetryOperationType
+    uid: '@azure/event-hubs.RetryOperationType'
