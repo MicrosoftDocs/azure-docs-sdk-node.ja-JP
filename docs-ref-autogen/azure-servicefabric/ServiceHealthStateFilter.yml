@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 23bebeb9af47e6ab96610c85ddc45108807e8321
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52170277"
+items:
+- uid: azure-servicefabric.ServiceHealthStateFilter
+  name: ServiceHealthStateFilter
+  fullName: ServiceHealthStateFilter
+  children:
+  - azure-servicefabric.ServiceHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ServiceHealthStateFilter.partitionFilters
+  - azure-servicefabric.ServiceHealthStateFilter.serviceNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    サービスをクラスターの正常性チャンク内のアプリケーションの子として含めるするかどうかを判断する一致条件を定義します。
+
+    サービスは、親アプリケーションがクラスターの正常性チャンク クエリの説明で指定したフィルターと一致する場合にのみ返されます。
+
+    1 つのフィルターが 0 の場合と一致できますプロパティに応じて、1 つまたは複数のサービスです。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    サービスのヘルス状態を返すフィルター。 必要な正常性状態に一致する場合は、サービスを選択することができます。
+
+    使用可能な値は、次のヘルス状態のいずれかの整数値です。 フィルターに一致するサービスのみが返されます。 すべてのサービスは、集計されたクラスターの正常性状態の評価に使用されます。
+
+    指定しない場合、既定値は None、サービス名が指定されていない場合です。 フィルターが既定値を持つされ、サービス名が指定した場合、一致するサービスが返されます。
+
+    状態値はフラグベースの列挙型であるため、値はビット演算子 'OR' を使用して取得したこれらの値の組み合わせが可能です。
+
+    たとえば、指定された値が 6 の場合、HealthState 値が OK (2) と Warning (4) のサービスが一致します。
+
+    - Default - 既定値。 任意の HealthState と一致します。 値は 0 です。
+
+    - None - どの HealthState 値とも一致しないフィルター。 状態の特定のコレクションの結果が返されないようにするために使用されます。 値は 1 です。
+
+    - Ok - 入力一致するフィルター HealthState 値が ok をクリックします。 値は 2 です。
+
+    - 警告 - フィルター値を HealthState 入力に一致します。 値は 4 です。
+
+    - Error - HealthState 値が Error の入力に一致するフィルター。 値は 8 です。
+
+    - All - 任意の HealthState 値の入力に一致するフィルター。 値は 65535 です。
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceHealthStateFilter.partitionFilters
+  name: partitionFilters
+  fullName: partitionFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    サービスの子として返されたクラスターの正常性に含まれるパーティションのチャンクを指定するフィルターの一覧を定義します。 パーティションには、親サービス フィルターに一致する場合にのみが返されます。
+
+    リストが空の場合は、パーティションは返されません。 すべてのパーティションは、入力フィルターに関係なく、親に集計されたサービスのヘルス状態の評価に使用されます。
+
+    サービス フィルターでは、複数のパーティションのフィルターを指定できます。
+
+    すべてのパーティションのヘルス状態エラーを返すフィルターと常に、パーティション ID によって識別されるパーティションを含めるもう 1 つのフィルターを指定など
+  optional: true
+  syntax:
+    content: 'partitionFilters?: PartitionHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.PartitionHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceHealthStateFilter.serviceNameFilter
+  name: serviceNameFilter
+  fullName: serviceNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    フィルターに一致するサービスの名前。 存在する場合、指定されたサービスにのみ、フィルターが適用されます。
+
+    サービスが存在しない場合、このフィルターに基づくクラスターの正常性チャンクでサービスは返されません。
+
+    サービスが存在する正常性状態が、その他のフィルターのプロパティと一致する場合に、アプリケーションの子として含まれています。
+
+    指定しない場合、(ある場合)、親フィルターに一致するすべてのサービスが考慮され、正常性の状態のフィルターと同様に、他のフィルター メンバーと照合します。
+  optional: true
+  syntax:
+    content: 'serviceNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.PartitionHealthStateFilter[]
+  name: PartitionHealthStateFilter[]
+  spec.typeScript:
+  - name: PartitionHealthStateFilter
+    fullName: PartitionHealthStateFilter
+    uid: azure-servicefabric.PartitionHealthStateFilter
+  - name: '[]'
+    fullName: '[]'

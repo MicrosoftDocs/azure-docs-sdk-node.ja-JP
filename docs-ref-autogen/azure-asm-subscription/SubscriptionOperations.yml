@@ -1,0 +1,144 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8fd8a3f32b291243229f48d3b7c99c29f71abed1
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52156272"
+items:
+- uid: azure-asm-subscription.SubscriptionOperations
+  id: azure-asm-subscription.SubscriptionOperations
+  name: SubscriptionOperations
+  summary: SubscriptionOperations を表すクラスです。
+  fullName: azure-asm-subscription.SubscriptionOperations
+  type: Class
+  children:
+  - azure-asm-subscription.SubscriptionOperations.#ctor
+  - azure-asm-subscription.SubscriptionOperations#listWithHttpOperationResponse
+  - azure-asm-subscription.SubscriptionOperations#list
+  langs:
+  - js
+- id: azure-asm-subscription.SubscriptionOperations.#ctor
+  uid: azure-asm-subscription.SubscriptionOperations.#ctor
+  parent: azure-asm-subscription.SubscriptionOperations
+  name: SubscriptionOperations(client)
+  fullName: azure-asm-subscription.SubscriptionOperations.SubscriptionOperations(client)
+  summary: SubscriptionOperations を作成します。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSubscriptionClient
+      description: サービス クライアントへの参照。
+    content: new SubscriptionOperations(client)
+  langs:
+  - js
+- uid: azure-asm-subscription.SubscriptionOperations#listWithHttpOperationResponse
+  id: azure-asm-subscription.SubscriptionOperations#listWithHttpOperationResponse
+  parent: azure-asm-subscription.SubscriptionOperations
+  name: listWithHttpOperationResponse(options)
+  summary: 使用可能な Microsoft.Subscription API 操作の保留中のすべての一覧を表示します。
+  fullName: azure-asm-subscription.SubscriptionOperations.listWithHttpOperationResponse(options)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<SubscriptionOperationListResult>} - The deserialized result object.'
+    value: '{HttpOperationResponse<SubscriptionOperationListResult>} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error} - The error object.'
+    value: '{Error} - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: 省略可能なパラメーター。
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: 要求に追加されるヘッダー
+      optional: true
+    return:
+      type:
+      - Promise
+      description: Promise が返されます
+    content: function listWithHttpOperationResponse(options)
+  langs:
+  - js
+- uid: azure-asm-subscription.SubscriptionOperations#list
+  id: azure-asm-subscription.SubscriptionOperations#list
+  parent: azure-asm-subscription.SubscriptionOperations
+  name: list(options, optionalCallback)
+  summary: 使用可能な Microsoft.Subscription API 操作の保留中のすべての一覧を表示します。
+  fullName: azure-asm-subscription.SubscriptionOperations.list(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{SubscriptionOperationListResult} - The deserialized result object.'
+    value: '{SubscriptionOperationListResult} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionOperationListResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+    value: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionOperationListResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: 省略可能なパラメーター。
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: 要求に追加されるヘッダー
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: 省略可能なコールバック。
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        コールバックは、最後のパラメーターとして渡された場合その他のコールバックが約束を返しますそれを返します。
+
+
+        {Promise}Promise が返されます
+    content: function list(options, optionalCallback)
+  langs:
+  - js
