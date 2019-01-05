@@ -1,0 +1,174 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 800dbe8ecc8b48523a109e93b30800e9929280f3
+ms.sourcegitcommit: 094b6aa16c2ee9aa1418d36ce033f1d99151d913
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45954156"
+items:
+- uid: azure-event-processor-host.AzureBlobLease
+  name: AzureBlobLease
+  fullName: AzureBlobLease
+  children:
+  - azure-event-processor-host.AzureBlobLease.constructor
+  - azure-event-processor-host.AzureBlobLease.blob
+  - azure-event-processor-host.AzureBlobLease.createFromPartitionId
+  - azure-event-processor-host.AzureBlobLease.getInfo
+  - azure-event-processor-host.AzureBlobLease.offset
+  - azure-event-processor-host.AzureBlobLease.sequenceNumber
+  - azure-event-processor-host.AzureBlobLease.serialize
+  - azure-event-processor-host.AzureBlobLease.token
+  langs:
+  - typeScript
+  type: class
+  summary: リースをチェックポイント情報を格納するため、Azure Blob の使用について説明します。
+  extends:
+    name: azure-event-processor-host.CompleteLease
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.constructor
+  name: AzureBlobLease
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new AzureBlobLease(info: AzureBlobLeaseInfo)'
+    parameters:
+    - id: info
+      type:
+      - azure-event-processor-host.AzureBlobLeaseInfo
+      description: ''
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.blob
+  name: blob
+  fullName: blob
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{AzureBlob} の blob、azure blob への参照。'
+  syntax:
+    content: 'blob: AzureBlob'
+    return:
+      type:
+      - AzureBlob
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.createFromPartitionId
+  name: createFromPartitionId
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 特定のパーティション Id のリースを作成します。
+  syntax:
+    content: 'static function createFromPartitionId(id: string, blob: AzureBlob)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: パーティション Id が、リースを作成する必要があります。
+    - id: blob
+      type:
+      - AzureBlob
+      description: Azure blob の参照
+    return:
+      type:
+      - azure-event-processor-host.AzureBlobLease
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.getInfo
+  name: getInfo
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: リースの情報を取得します。
+  syntax:
+    content: function getInfo()
+    parameters: []
+    return:
+      type:
+      - azure-event-processor-host.LeaseInfo
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.offset
+  name: offset
+  fullName: offset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} はオフセットにチェックインするイベントのオフセットです。'
+  optional: true
+  syntax:
+    content: 'offset?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.sequenceNumber
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{文字列} sequenceNumber にチェックインするイベントのシーケンス番号。'
+  syntax:
+    content: 'sequenceNumber: number'
+    return:
+      type:
+      - number
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.serialize
+  name: serialize
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: リースの情報をシリアル化します。
+  syntax:
+    content: function serialize()
+    parameters: []
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.AzureBlobLease.token
+  name: token
+  fullName: token
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{文字列} トークン ホスト間での同時実行を管理するリース トークンです。 このトークンを使用して、EPH. で必要なすべてのリソースへの 1 つのアクセスを保証することができます。'
+  syntax:
+    content: 'token: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+references:
+- uid: azure-event-processor-host.CompleteLease
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: azure-event-processor-host.CompleteLease
+- uid: azure-event-processor-host.AzureBlobLeaseInfo
+  name: AzureBlobLeaseInfo
+  spec.typeScript:
+  - name: AzureBlobLeaseInfo
+    fullName: AzureBlobLeaseInfo
+    uid: azure-event-processor-host.AzureBlobLeaseInfo
+- uid: azure-event-processor-host.LeaseInfo
+  name: LeaseInfo
+  spec.typeScript:
+  - name: LeaseInfo
+    fullName: LeaseInfo
+    uid: azure-event-processor-host.LeaseInfo
+- uid: azure-event-processor-host.AzureBlobLease
+  name: AzureBlobLease
+  spec.typeScript:
+  - name: AzureBlobLease
+    fullName: AzureBlobLease
+    uid: azure-event-processor-host.AzureBlobLease
