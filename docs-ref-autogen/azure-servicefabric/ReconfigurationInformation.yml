@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4557e6fbf7a07e424f47a9df6388b7ffe440975
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52075259"
+items:
+- uid: azure-servicefabric.ReconfigurationInformation
+  name: ReconfigurationInformation
+  fullName: ReconfigurationInformation
+  children:
+  - azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  langs:
+  - typeScript
+  type: interface
+  summary: 現在の再構成フェーズの種類、レプリカと再構成の前の構成ロールなどに関する情報は、日付時刻を開始します。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  name: previousConfigurationRole
+  fullName: previousConfigurationRole
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: レプリカのロールの再構成を開始する前にします。 指定できる値は、次のとおりです。'不明'、'None'、'Primary'、'IdleSecondary'、'ActiveSecondary'
+  optional: true
+  syntax:
+    content: 'previousConfigurationRole?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  name: reconfigurationPhase
+  fullName: reconfigurationPhase
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 継続的な再構成の現在のフェーズ。 場合の再構成が行われていないこの値は"None"になります。 指定できる値は、次のとおりです。'不明'、'None'、'Phase0'、'フェーズ 1'、'フェーズ 2'、'Phase3'、'Phase4'、'AbortPhaseZero'
+  optional: true
+  syntax:
+    content: 'reconfigurationPhase?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  name: reconfigurationStartTimeUtc
+  fullName: reconfigurationStartTimeUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 時間 (UTC)、継続的な再構成を開始します。 再構成が行われていない場合、この値はゼロの日付と時刻になります。
+  optional: true
+  syntax:
+    content: 'reconfigurationStartTimeUtc?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  name: reconfigurationType
+  fullName: reconfigurationType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 現在の継続的な再構成の種類です。 場合の再構成が行われていないこの値は"None"になります。 指定できる値は、次のとおりです。'不明'、'SwapPrimary'、'フェールオーバー'、'Other'
+  optional: true
+  syntax:
+    content: 'reconfigurationType?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
