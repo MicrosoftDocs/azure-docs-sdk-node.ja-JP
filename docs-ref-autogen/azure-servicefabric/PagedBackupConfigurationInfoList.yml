@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 13d7d253dfea70112d088f50ed0d7ecf3456ce63
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52152357"
+items:
+- uid: azure-servicefabric.PagedBackupConfigurationInfoList
+  name: PagedBackupConfigurationInfoList
+  fullName: PagedBackupConfigurationInfoList
+  children:
+  - azure-servicefabric.PagedBackupConfigurationInfoList.continuationToken
+  - azure-servicefabric.PagedBackupConfigurationInfoList.items
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="22aad-101">バックアップの構成情報のリスト。</span><span class="sxs-lookup"><span data-stu-id="22aad-101">The list of backup configuration information.</span></span> <span data-ttu-id="22aad-102">すべての結果が 1 つのメッセージに収まらないときに、リストはページングされます。</span><span class="sxs-lookup"><span data-stu-id="22aad-102">The list is paged when all of the results cannot fit in a single message.</span></span> <span data-ttu-id="22aad-103">次の結果セットは、この一覧に指定された継続トークンと共に、同じクエリを実行することによって取得できます。</span><span class="sxs-lookup"><span data-stu-id="22aad-103">The next set of results can be obtained by executing the same query with the continuation token provided in this list.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedBackupConfigurationInfoList.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="22aad-104">継続トークンのパラメーターは、次の結果セットを取得するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="22aad-104">The continuation token parameter is used to obtain next set of results.</span></span> <span data-ttu-id="22aad-105">システムからの結果が 1 つの応答に収まらないときに、継続トークンが API の応答に含まれます。</span><span class="sxs-lookup"><span data-stu-id="22aad-105">The continuation token is included in the response of the API when the results from the system do not fit in a single response.</span></span> <span data-ttu-id="22aad-106">この値が次の API 呼び出しに渡されると、API が次の結果セットを返します。</span><span class="sxs-lookup"><span data-stu-id="22aad-106">When this value is passed to the next API call, the API returns next set of results.</span></span>
+
+    <span data-ttu-id="22aad-107">それ以上の結果はありません、応答に継続トークンは含まれません。</span><span class="sxs-lookup"><span data-stu-id="22aad-107">If there are no further results, then the continuation token is not included in the response.</span></span>
+  optional: true
+  syntax:
+    content: 'continuationToken?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedBackupConfigurationInfoList.items
+  name: items
+  fullName: items
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="22aad-108">バックアップの構成情報の一覧です。</span><span class="sxs-lookup"><span data-stu-id="22aad-108">List of backup configuration information.</span></span>
+  optional: true
+  syntax:
+    content: 'items?: BackupConfigurationInfo[]'
+    return:
+      type:
+      - azure-servicefabric.BackupConfigurationInfo[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.BackupConfigurationInfo[]
+  name: BackupConfigurationInfo[]
+  spec.typeScript:
+  - name: BackupConfigurationInfo
+    fullName: BackupConfigurationInfo
+    uid: azure-servicefabric.BackupConfigurationInfo
+  - name: '[]'
+    fullName: '[]'
