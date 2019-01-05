@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c26c261c0741ba13751d313ac28767855f0d2eef
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53670523"
+items:
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  fullName: TaskConstraints
+  children:
+  - azure-batch.TaskConstraints.maxTaskRetryCount
+  - azure-batch.TaskConstraints.maxWallClockTime
+  - azure-batch.TaskConstraints.retentionTime
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.TaskConstraints.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7f9c0-101">この値が 0 以外の終了コードにより実行可能ファイルのタスクの再試行の回数を具体的には制御することに注意してください。</span><span class="sxs-lookup"><span data-stu-id="7f9c0-101">Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code.</span></span> <span data-ttu-id="7f9c0-102">Batch サービスはタスクを 1 回試行してから、上限に達するまで再試行できます。</span><span class="sxs-lookup"><span data-stu-id="7f9c0-102">The Batch service will try the task once, and may then retry up to this limit.</span></span> <span data-ttu-id="7f9c0-103">たとえば、最大再試行回数が 3 の場合は、バッチ タスク最大 4 回試行 (初回試行 1 回と再試行 3 回)。</span><span class="sxs-lookup"><span data-stu-id="7f9c0-103">For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="7f9c0-104">最大再試行回数が 0 の場合は、Batch サービスは最初の試行後に、タスクを再試行しません。</span><span class="sxs-lookup"><span data-stu-id="7f9c0-104">If the maximum retry count is 0, the Batch service does not retry the task after the first attempt.</span></span> <span data-ttu-id="7f9c0-105">最大再試行回数が-1 で、Batch サービスの再試行制限のないタスクです。</span><span class="sxs-lookup"><span data-stu-id="7f9c0-105">If the maximum retry count is -1, the Batch service retries the task without limit.</span></span>
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.TaskConstraints.maxWallClockTime
+  name: maxWallClockTime
+  fullName: maxWallClockTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7f9c0-106">これが指定されていない場合は、制限はありません時間にどのくらいの時間、タスクが実行します。</span><span class="sxs-lookup"><span data-stu-id="7f9c0-106">If this is not specified, there is no time limit on how long the task may run.</span></span>
+  optional: true
+  syntax:
+    content: 'maxWallClockTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.TaskConstraints.retentionTime
+  name: retentionTime
+  fullName: retentionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7f9c0-107">既定値は 7 日間、つまりタスク ディレクトリは 7 日間保持するコンピューティング ノードが削除されるか、ジョブを削除しない限り、します。</span><span class="sxs-lookup"><span data-stu-id="7f9c0-107">The default is 7 days, i.e. the task directory will be retained for 7 days unless the compute node is removed or the job is deleted.</span></span>
+  optional: true
+  syntax:
+    content: 'retentionTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch

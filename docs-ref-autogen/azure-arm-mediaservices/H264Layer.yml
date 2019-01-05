@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 75c8a0c2fd2d2e5de0ab87ce6db8876b89dbd0c0
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53683358"
+items:
+- uid: azure-arm-mediaservices.H264Layer
+  name: H264Layer
+  fullName: H264Layer
+  children:
+  - azure-arm-mediaservices.H264Layer.bufferWindow
+  - azure-arm-mediaservices.H264Layer.entropyMode
+  - azure-arm-mediaservices.H264Layer.level
+  - azure-arm-mediaservices.H264Layer.profile
+  - azure-arm-mediaservices.H264Layer.referenceFrames
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="bf0aa-101">H.264 ビデオ コーデックで目的の出力ビットレート レイヤーを入力ビデオにエンコードするときに使用される設定について説明します。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-101">Describes the settings to be used when encoding the input video into a desired output bitrate layer with the H.264 video codec.</span></span>
+  extends:
+    name: azure-arm-mediaservices.VideoLayer
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.bufferWindow
+  name: bufferWindow
+  fullName: bufferWindow
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="bf0aa-102">VBV バッファー ウィンドウの長さ。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-102">The VBV buffer window length.</span></span> <span data-ttu-id="bf0aa-103">値は、ISO 8601 形式でなければなりません。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-103">The value should be in ISO 8601 format.</span></span> <span data-ttu-id="bf0aa-104">値は 0.1 ~ 100 秒でなければなりません。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-104">The value should be in the range [0.1-100] seconds.</span></span> <span data-ttu-id="bf0aa-105">既定では 5 秒 (たとえば、PT5S です)。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-105">The default is 5 seconds (for example, PT5S).</span></span>
+  optional: true
+  syntax:
+    content: 'bufferWindow?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.entropyMode
+  name: entropyMode
+  fullName: entropyMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"bf0aa-106\">このレイヤーに使用されるエントロピ モード。</span><span class=\"sxs-lookup\"><span data-stu-id=\"bf0aa-106\">The entropy mode to be used for this layer.</span></span> <span data-ttu-id=\"bf0aa-107\">指定しない場合、エンコーダーは、プロファイルとレベルに適しているモードを選択します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"bf0aa-107\">If not specified, the encoder chooses the mode that is appropriate for the profile and level.</span></span> <span data-ttu-id=\"bf0aa-108\">指定できる値は、次のとおりです。' Cabac'、'Cavlc'</span><span class=\"sxs-lookup\"><span data-stu-id=\"bf0aa-108\">Possible values include: 'Cabac', 'Cavlc'</span></span>"
+  optional: true
+  syntax:
+    content: 'entropyMode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.level
+  name: level
+  fullName: level
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="bf0aa-109">このレイヤーをエンコードするときに、H.264 standard のレベルを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-109">Which level of the H.264 standard should be used when encoding this layer.</span></span> <span data-ttu-id="bf0aa-110">値は、Auto、または H.264 のプロファイルと一致する番号を指定できます。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-110">The value can be Auto, or a number that matches the H.264 profile.</span></span> <span data-ttu-id="bf0aa-111">指定しない場合、既定では Auto、エンコーダーは、このレイヤーの適切なレベルを選択できます。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-111">If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.</span></span>
+  optional: true
+  syntax:
+    content: 'level?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.profile
+  name: profile
+  fullName: profile
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"bf0aa-112\">このレイヤーをエンコードする際に、H.264 標準のプロファイルを使用してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"bf0aa-112\">Which profile of the H.264 standard should be used when encoding this layer.</span></span> <span data-ttu-id=\"bf0aa-113\">既定値は自動です。指定できる値は、次のとおりです。'Auto'、'ベースライン'、'Main'、'高'、'High422'、'High444'</span><span class=\"sxs-lookup\"><span data-stu-id=\"bf0aa-113\">Default is Auto. Possible values include: 'Auto', 'Baseline', 'Main', 'High', 'High422', 'High444'</span></span>"
+  optional: true
+  syntax:
+    content: 'profile?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.referenceFrames
+  name: referenceFrames
+  fullName: referenceFrames
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="bf0aa-114">このレイヤーをエンコードする際に使用する参照フレームの数。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-114">The number of reference frames to be used when encoding this layer.</span></span> <span data-ttu-id="bf0aa-115">指定しない場合、エンコーダーは、エンコーダーの複雑さの設定に基づいて、適切な数を決定します。</span><span class="sxs-lookup"><span data-stu-id="bf0aa-115">If not specified, the encoder determines an appropriate number based on the encoder complexity setting.</span></span>
+  optional: true
+  syntax:
+    content: 'referenceFrames?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.VideoLayer
+  name: VideoLayer
+  spec.typeScript:
+  - name: VideoLayer
+    fullName: VideoLayer
+    uid: azure-arm-mediaservices.VideoLayer
