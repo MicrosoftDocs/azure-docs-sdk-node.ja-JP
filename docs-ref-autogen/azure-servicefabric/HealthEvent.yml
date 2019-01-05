@@ -1,0 +1,144 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c83147093121e6d6da6f78ed362246e879f6c40f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52083917"
+items:
+- uid: azure-servicefabric.HealthEvent
+  name: HealthEvent
+  fullName: HealthEvent
+  children:
+  - azure-servicefabric.HealthEvent.isExpired
+  - azure-servicefabric.HealthEvent.lastErrorTransitionAt
+  - azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+  - azure-servicefabric.HealthEvent.lastOkTransitionAt
+  - azure-servicefabric.HealthEvent.lastWarningTransitionAt
+  - azure-servicefabric.HealthEvent.sourceUtcTimestamp
+  langs:
+  - typeScript
+  type: interface
+  summary: 正常性マネージャーによって追加された追加のメタデータを持つクラスター、アプリケーション ノードなどの正常性エンティティで報告される正常性の情報を表します。
+  extends:
+    name: azure-servicefabric.HealthInformation
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.isExpired
+  name: isExpired
+  fullName: isExpired
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 正常性イベントが有効期限が切れた場合に true を返します。
+  optional: true
+  syntax:
+    content: 'isExpired?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastErrorTransitionAt
+  name: lastErrorTransitionAt
+  fullName: lastErrorTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    現在の正常性状態が「エラー」の場合は、このプロパティは、位置、正常性レポートを「エラー」で最初に報告された日時を返します。 定期的なレポートの場合は、同じ状態を持つ多数のレポートが生成された可能性がただし、このプロパティは、日付とエラーの正常性レポートを受信した最初の時刻のみを返します。
+
+    現在の正常性状態が"Ok"または「警告」の場合は、日付と時刻を別の状態に遷移する前に「エラー」の最後にされた正常性状態を返します。
+
+
+    正常性状態が「エラー」されなかった、値がゼロの日付と時刻になります。
+  optional: true
+  syntax:
+    content: 'lastErrorTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+  name: lastModifiedUtcTimestamp
+  fullName: lastModifiedUtcTimestamp
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 日付と時間、正常性レポートが正常性ストアによって最終変更された日時。
+  optional: true
+  syntax:
+    content: 'lastModifiedUtcTimestamp?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastOkTransitionAt
+  name: lastOkTransitionAt
+  fullName: lastOkTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    現在の正常性状態が"Ok"の場合は、このプロパティは、位置、正常性レポートを 'Ok' で最初に報告された日時を返します。
+
+    定期的なレポートの場合は、同じ状態を持つ多数のレポートが生成された可能性が。
+
+    このプロパティは、[Ok] の最初の正常性レポートが受信した日時を返します。
+
+    現在の正常性状態が「エラー」または「警告」の場合は、日付と時刻の正常性状態が別の状態に遷移する前に Ok、最後に位置を返します。
+
+
+    正常性の状態が 'Ok' されなかった場合、値がゼロの日付と時刻になります。
+  optional: true
+  syntax:
+    content: 'lastOkTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastWarningTransitionAt
+  name: lastWarningTransitionAt
+  fullName: lastWarningTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    現在のヘルス状態が '警告'、このプロパティは位置の正常性レポートを「警告」に最初に報告された日時を返します。 定期的なレポートの場合は、同じ状態を持つ多数のレポートが生成された可能性がただし、このプロパティは、日付と時刻が「警告」の最初の正常性レポートでのみが受信したを返します。
+
+    現在の正常性状態が"Ok"または「エラー」の場合は、日付と時刻の正常性状態が別の状態に遷移する前に '警告'、最後に位置を返します。
+
+
+    正常性状態が決して '警告'、値がゼロの日付と時刻になります。
+  optional: true
+  syntax:
+    content: 'lastWarningTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.sourceUtcTimestamp
+  name: sourceUtcTimestamp
+  fullName: sourceUtcTimestamp
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 日付と正常性レポートに、ソースによって送信された時刻。
+  optional: true
+  syntax:
+    content: 'sourceUtcTimestamp?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthInformation
+  name: HealthInformation
+  spec.typeScript:
+  - name: HealthInformation
+    fullName: HealthInformation
+    uid: azure-servicefabric.HealthInformation
