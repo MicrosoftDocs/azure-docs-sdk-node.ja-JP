@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: cd1be7fe8008e2edd5e51647e50f0fce1fdab73f
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53673026"
+items:
+- uid: azure-batch.PoolUpdatePropertiesParameter
+  name: PoolUpdatePropertiesParameter
+  fullName: PoolUpdatePropertiesParameter
+  children:
+  - azure-batch.PoolUpdatePropertiesParameter.applicationPackageReferences
+  - azure-batch.PoolUpdatePropertiesParameter.certificateReferences
+  - azure-batch.PoolUpdatePropertiesParameter.metadata
+  - azure-batch.PoolUpdatePropertiesParameter.startTask
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.PoolUpdatePropertiesParameter.applicationPackageReferences
+  name: applicationPackageReferences
+  fullName: applicationPackageReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    一覧には、プールで既存のアプリケーション パッケージ参照が置き換えられます。
+
+    アプリケーション パッケージの参照への変更は、プールに参加するすべての新しいコンピューティング ノードに影響を与えるが、再起動または再イメージ化されるまでに、プールに既に存在するコンピューティング ノードには影響しません。
+
+    省略した場合、または空のコレクションを指定した場合は、アプリケーションの既存のパッケージ参照は、プールから削除されます。
+  syntax:
+    content: 'applicationPackageReferences: ApplicationPackageReference[]'
+    return:
+      type:
+      - azure-batch.ApplicationPackageReference[]
+  package: azure-batch
+- uid: azure-batch.PoolUpdatePropertiesParameter.certificateReferences
+  name: certificateReferences
+  fullName: certificateReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: この一覧には、プールに構成されている既存の証明書参照が置き換えられます。 空のコレクションを指定する場合は、既存の証明書参照が、プールから削除されます。 Windows のコンピューティング ノード、Batch サービスは、場所と指定された証明書ストアに証明書をインストールします。 Linux コンピューティング ノードの場合は、証明書は、タスクの作業ディレクトリと環境変数 AZ_BATCH_CERTIFICATES_DIR がこの場所にクエリするタスクに指定されたディレクトリに格納されます。 'RemoteUser' の可視性を持つ証明書の場合、ユーザーのホーム ディレクトリに '証明書' ディレクトリが作成 (例、/home/{ユーザー名}/証明書) し、証明書がそのディレクトリに配置されます。
+  syntax:
+    content: 'certificateReferences: CertificateReference[]'
+    return:
+      type:
+      - azure-batch.CertificateReference[]
+  package: azure-batch
+- uid: azure-batch.PoolUpdatePropertiesParameter.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: この一覧には、プールに構成されている既存のメタデータが置き換えられます。 省略した場合、または空のコレクションを指定した場合は、既存のメタデータは、プールから削除されます。
+  syntax:
+    content: 'metadata: MetadataItem[]'
+    return:
+      type:
+      - azure-batch.MetadataItem[]
+  package: azure-batch
+- uid: azure-batch.PoolUpdatePropertiesParameter.startTask
+  name: startTask
+  fullName: startTask
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: この要素が存在する場合は、既存の開始タスクが上書きされます。 省略した場合は、既存の開始タスクがプールから削除されます。
+  optional: true
+  syntax:
+    content: 'startTask?: StartTask'
+    return:
+      type:
+      - azure-batch.StartTask
+  package: azure-batch
+references:
+- uid: azure-batch.ApplicationPackageReference[]
+  name: ApplicationPackageReference[]
+  spec.typeScript:
+  - name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    uid: azure-batch.ApplicationPackageReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.CertificateReference[]
+  name: CertificateReference[]
+  spec.typeScript:
+  - name: CertificateReference
+    fullName: CertificateReference
+    uid: azure-batch.CertificateReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.MetadataItem[]
+  name: MetadataItem[]
+  spec.typeScript:
+  - name: MetadataItem
+    fullName: MetadataItem
+    uid: azure-batch.MetadataItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.StartTask
+  name: StartTask
+  spec.typeScript:
+  - name: StartTask
+    fullName: StartTask
+    uid: azure-batch.StartTask
