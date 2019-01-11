@@ -4,19 +4,19 @@ description: JavaScript 用 Cognitive Services Speech SDK のリファレンス
 author: mahilleb-msft
 ms.author: mahilleb
 manager: wolfma
-ms.date: 09/24/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
-ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 43a6921d4ec782287cc041ecaabab4567b0fe677
+ms.sourcegitcommit: 74417c10aee8987c3e0343728efac75823c902d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52015526"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185989"
 ---
 # <a name="cognitive-services-speech-sdk-for-javascript"></a>JavaScript 用 Cognitive Services Speech SDK
 
@@ -25,45 +25,73 @@ ms.locfileid: "52015526"
 Microsoft では、音声対応アプリケーションの開発を簡素化するために、[Speech Service](https://aka.ms/csspeech) で使用する Speech SDK を提供しています。
 Speech SDK には、一貫性のあるネイティブな Speech-to-Text API と Speech Translation API が提供されています。
 
-> [!NOTE]
-> Cognitive Services Speech SDK は、現在ブラウザーでのみ使用できます。
-> NPM パッケージは追って利用できるようになります。
+### <a name="install-the-npm-module"></a>npm モジュールのインストール
 
-### <a name="install-the-speech-sdk"></a>Speech SDK のインストール
+Cognitive Services Speech SDK npm モジュールのインストール
 
-Speech SDK を [.zip パッケージ](https://aka.ms/csspeech/jsbrowserpackage)としてダウンロードし、展開します。
-これにより `microsoft.cognitiveservices.speech.sdk.bundle.js` という名前のファイルを含め、複数のファイルが展開されます。
-Speech SDK の使用を開始するには、このファイルをスクリプト リソースとして Web ページに読み込みます。
-
-```html
-<script src="microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+```bash
+npm install microsoft-cognitiveservices-speech-sdk
 ```
 
 ### <a name="example"></a>例 
 
-次のコード スニペットは、お使いのブラウザーからシンプルな音声認識を実行する方法を示しています。
+次のコード スニペットは、ファイルからシンプルな音声認識を実行する方法を示しています。
 
 ```javascript 
-var SpeechSDK = window.SpeechSDK;
-var speechConfig = SpeechSDK.SpeechConfig.fromSubscription("your-subscription-key", "your-service-region");
-speechConfig.language = "en-US";
-var audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
-recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+// Pull in the required packages.
+var sdk = require("microsoft-cognitiveservices-speech-sdk");
+var fs = require("fs");
 
+// Replace with your own subscription key, service region (e.g., "westus"), and
+// the name of the file you want to run through the speech recognizer.
+var subscriptionKey = "YourSubscriptionKey";
+var serviceRegion = "YourServiceRegion"; // e.g., "westus"
+var filename = "YourAudioFile.wav"; // 16000 Hz, Mono
+
+// Create the push stream we need for the speech sdk.
+var pushStream = sdk.AudioInputStream.createPushStream();
+
+// Open the file and push it to the push stream.
+fs.createReadStream(filename).on('data', function(arrayBuffer) {
+  pushStream.write(arrayBuffer.buffer);
+}).on('end', function() {
+  pushStream.close();
+});
+
+// We are done with the setup
+console.log("Now recognizing from: " + filename);
+
+// Create the audio-config pointing to our stream and
+// the speech config specifying the language.
+var audioConfig = sdk.AudioConfig.fromStreamInput(pushStream);
+var speechConfig = sdk.SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
+
+// Setting the recognition language to English.
+speechConfig.speechRecognitionLanguage = "en-US";
+
+// Create the speech recognizer.
+var recognizer = new sdk.SpeechRecognizer(speechConfig, audioConfig);
+
+// Start the recognizer and wait for a result.
 recognizer.recognizeOnceAsync(
   function (result) {
-    alert("Recognition result:" + JSON.stringify(result));
+    console.log(result);
+
     recognizer.close();
+    recognizer = undefined;
   },
   function (err) {
-    alert("An error occurred:" + JSON.stringify(err));
+    console.trace("err - " + err);
+
     recognizer.close();
-  }
-);
+    recognizer = undefined;
+  });
 ``` 
 
-[詳細なクイック スタート](/azure/cognitive-services/speech-service/quickstart-js-browser)をご確認ください。
+[詳細なクイック スタート](/azure/cognitive-services/speech-service/quickstart-js-node)をご確認ください。
 
 ## <a name="samples"></a>サンプル
 
-その他のサンプルについては、[Speech SDK サンプル リポジトリ](https://aka.ms/csspeech/samples)を確認してください。
+* [Node.js 用の詳細なクイック スタート](/azure/cognitive-services/speech-service/quickstart-js-node)
+* [ブラウザーの詳細なクイック スタート](/azure/cognitive-services/speech-service/quickstart-js-browser)
+* その他のサンプルについては、[Speech SDK サンプル リポジトリ](https://aka.ms/csspeech/samples)を確認してください。
