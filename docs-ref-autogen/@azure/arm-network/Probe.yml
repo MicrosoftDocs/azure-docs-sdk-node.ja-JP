@@ -1,0 +1,188 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 78f30927c4742799bcb7585bbcc4006de8ac42f3
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057533"
+items:
+- uid: '@azure/arm-network.Probe'
+  name: Probe
+  fullName: Probe
+  children:
+  - '@azure/arm-network.Probe.etag'
+  - '@azure/arm-network.Probe.intervalInSeconds'
+  - '@azure/arm-network.Probe.loadBalancingRules'
+  - '@azure/arm-network.Probe.name'
+  - '@azure/arm-network.Probe.numberOfProbes'
+  - '@azure/arm-network.Probe.port'
+  - '@azure/arm-network.Probe.protocol'
+  - '@azure/arm-network.Probe.provisioningState'
+  - '@azure/arm-network.Probe.requestPath'
+  langs:
+  - typeScript
+  type: interface
+  summary: ロード バランサー プローブです。
+  extends:
+    name: '@azure/arm-network.SubResource'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.etag'
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 読み取り専用する一意の文字列リソースを更新するたびに変更します。
+  optional: true
+  syntax:
+    content: 'etag?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.intervalInSeconds'
+  name: intervalInSeconds
+  fullName: intervalInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    どのぐらいの頻度でエンドポイントに正常性状態をプローブするかを表す間隔 (秒)。
+
+    この間隔は、割り当てられているタイムアウト期間 (秒) の 1/2 よりもわずかに短くするのが一般的です。そうすることで、2 回のプローブを完全に実施したうえで、インスタンスをローテーションから除外することができます。 既定値は 15、最小値は 5 です。
+  optional: true
+  syntax:
+    content: 'intervalInSeconds?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.loadBalancingRules'
+  name: loadBalancingRules
+  fullName: loadBalancingRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    このプローブを使用するロード バランサー規則。
+
+    **注意:このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+  optional: true
+  syntax:
+    content: 'loadBalancingRules?: SubResource[]'
+    return:
+      type:
+      - '@azure/arm-network.SubResource[]'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.name'
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: リソース グループ内で一意であるリソースの名前を取得します。 この名前は、リソースへのアクセスに使用できます。
+  optional: true
+  syntax:
+    content: 'name?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.numberOfProbes'
+  name: numberOfProbes
+  fullName: numberOfProbes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 数は、エンドポイントに配信されてからのトラフィックをさらを停止中に応答の結果がない場合、場所をプローブします。 この値により、実行するエンドポイントが Azure で使用される通常の期間よりも早めたり遅らせたりローテーションから除外します。
+  optional: true
+  syntax:
+    content: 'numberOfProbes?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.port'
+  name: port
+  fullName: port
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: プローブ通信用ポート。 指定できる値は 1 以上 65535 以下です。
+  syntax:
+    content: 'port: number'
+    return:
+      type:
+      - number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.protocol'
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: エンドポイントのプロトコルです。 次のいずれかの値になります。'Http'、'Tcp' または 'Https' です。 'Tcp' が指定されている場合は ACK の受信は、プローブが成功するために必要です。 'Http' または 'Https' が指定されている場合は 200 OK 応答から、URI は、プローブが成功するのに必要なを指定します。 指定できる値は、次のとおりです。' Http'、'Tcp'、'Https'
+  syntax:
+    content: 'protocol: ProbeProtocol'
+    return:
+      type:
+      - '@azure/arm-network.ProbeProtocol'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.provisioningState'
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: パブリック IP リソースのプロビジョニングの状態を取得します。 次のいずれかの値になります。' の更新'、'削除' および '失敗' です。
+  optional: true
+  syntax:
+    content: 'provisioningState?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.Probe.requestPath'
+  name: requestPath
+  fullName: requestPath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: VM の正常性状態を要求する目的で使用される URI。 プロトコルは http に設定されている場合、パスが必要です。 それ以外の場合は、許可されません。 既定値はありません。
+  optional: true
+  syntax:
+    content: 'requestPath?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+references:
+- uid: '@azure/arm-network.SubResource'
+  name: SubResource
+  spec.typeScript:
+  - name: SubResource
+    fullName: SubResource
+    uid: '@azure/arm-network.SubResource'
+- uid: '@azure/arm-network.SubResource[]'
+  name: SubResource[]
+  spec.typeScript:
+  - name: SubResource
+    fullName: SubResource
+    uid: '@azure/arm-network.SubResource'
+  - name: '[]'
+    fullName: '[]'
+- uid: '@azure/arm-network.ProbeProtocol'
+  name: ProbeProtocol
+  spec.typeScript:
+  - name: ProbeProtocol
+    fullName: ProbeProtocol
+    uid: '@azure/arm-network.ProbeProtocol'

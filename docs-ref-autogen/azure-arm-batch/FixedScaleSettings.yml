@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f5861517c1bb3444a6428cced6edae5bb0af8731
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55049333"
+items:
+- uid: azure-arm-batch.FixedScaleSettings
+  name: FixedScaleSettings
+  fullName: FixedScaleSettings
+  children:
+  - azure-arm-batch.FixedScaleSettings.nodeDeallocationOption
+  - azure-arm-batch.FixedScaleSettings.resizeTimeout
+  - azure-arm-batch.FixedScaleSettings.targetDedicatedNodes
+  - azure-arm-batch.FixedScaleSettings.targetLowPriorityNodes
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.nodeDeallocationOption
+  name: nodeDeallocationOption
+  fullName: nodeDeallocationOption
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 省略した場合、既定値は Requeue です。 指定できる値は、次のとおりです。'キューに再登録'、'Terminate'、'TaskCompletion'、'RetainedData'
+  optional: true
+  syntax:
+    content: 'nodeDeallocationOption?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.resizeTimeout
+  name: resizeTimeout
+  fullName: resizeTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 既定値は、15 分です。 タイムアウト値は、ISO 8601 形式を使用します。 たとえば、10 分間 PT10M を使用します。 最小値は、5 分です。 5 分より小さい値を指定する場合、Batch サービスはエラー; で要求を拒否します。REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。
+  optional: true
+  syntax:
+    content: 'resizeTimeout?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.targetDedicatedNodes
+  name: targetDedicatedNodes
+  fullName: targetDedicatedNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 少なくとも 1 つの targetDedicatedNodes、targetLowPriority ノードを設定する必要があります。
+  optional: true
+  syntax:
+    content: 'targetDedicatedNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.targetLowPriorityNodes
+  name: targetLowPriorityNodes
+  fullName: targetLowPriorityNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 少なくとも 1 つの targetDedicatedNodes、targetLowPriority ノードを設定する必要があります。
+  optional: true
+  syntax:
+    content: 'targetLowPriorityNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch

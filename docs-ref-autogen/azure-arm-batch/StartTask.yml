@@ -1,0 +1,158 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7274a6ba19eff9196489fcfbd33f8a68ed5572f4
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55059373"
+items:
+- uid: azure-arm-batch.StartTask
+  name: StartTask
+  fullName: StartTask
+  children:
+  - azure-arm-batch.StartTask.commandLine
+  - azure-arm-batch.StartTask.containerSettings
+  - azure-arm-batch.StartTask.environmentSettings
+  - azure-arm-batch.StartTask.maxTaskRetryCount
+  - azure-arm-batch.StartTask.resourceFiles
+  - azure-arm-batch.StartTask.userIdentity
+  - azure-arm-batch.StartTask.waitForSuccess
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: コマンド ライン シェルで動作しないためことはできません活用してください環境変数の拡張などのシェルの機能。 このような機能を活用する場合を呼び出す必要があります、コマンドラインでシェル例 "cmd/c MyCommand"を使用して Windows でまたは"//bin/sh-c MyCommand"linux。 かどうか、startTask の他のプロパティが指定が必要です。
+  optional: true
+  syntax:
+    content: 'commandLine?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: これは、指定した場合、AZ_BATCH_NODE_ROOT_DIR (ノード上の Azure Batch ディレクトリのルート) の下のすべてのディレクトリに再帰的には、コンテナーにマップする、すべてのタスクの環境変数は、コンテナーにマップしてタスクのコマンドラインは、コンテナー内で実行します。
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-arm-batch.TaskContainerSettings
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-arm-batch.EnvironmentSetting[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Batch サービスは、終了コードが 0 以外の場合にタスクを再試行します。 この値によって再試行の回数が限定されますのでご注意ください。 Batch サービスはタスクを 1 回試行してから、上限に達するまで再試行できます。 たとえば、最大再試行回数が 3 の場合は、バッチ タスク最大 4 回試行 (初回試行 1 回と再試行 3 回)。 最大再試行回数が 0 の場合、Batch サービスは、タスクを再試行しません。 最大再試行回数が-1 で、Batch サービスの再試行制限のないタスクです。
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-arm-batch.ResourceFile[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 省略した場合、タスクは、タスクに一意の非管理者ユーザーとして実行されます。
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-arm-batch.UserIdentity
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.waitForSuccess
+  name: waitForSuccess
+  fullName: waitForSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: コンピューティング ノードで true で、開始タスクが失敗した場合、バッチ サービスは、その最大再試行回数 (maxTaskRetryCount) まで開始タスクを再試行します。 タスクがまだない正常に完了し、すべての再試行、Batch のサービス マークした後、コンピューティング ノードを使用できない場合とにタスクをスケジュールしません。 この条件は、ノードの状態とスケジュール エラーの詳細を使用して検出できます。 False の場合、Batch サービスは、開始タスクを完了するは待機しません。 この場合、その他のタスクが開始タスクがまだ実行中、コンピューティング ノードで実行されているを開始することができます。開始タスクが失敗した場合でも新しいタスクがノードにあるスケジュール続行されます。 既定値は false です。
+  optional: true
+  syntax:
+    content: 'waitForSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-arm-batch.TaskContainerSettings
+- uid: azure-arm-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-arm-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-arm-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-arm-batch.UserIdentity

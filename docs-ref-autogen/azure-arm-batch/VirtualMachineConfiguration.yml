@@ -1,0 +1,147 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 305d9f1170cdaeaa7972e21eaeeb94849d453c47
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55060329"
+items:
+- uid: azure-arm-batch.VirtualMachineConfiguration
+  name: VirtualMachineConfiguration
+  fullName: VirtualMachineConfiguration
+  children:
+  - azure-arm-batch.VirtualMachineConfiguration.containerConfiguration
+  - azure-arm-batch.VirtualMachineConfiguration.dataDisks
+  - azure-arm-batch.VirtualMachineConfiguration.imageReference
+  - azure-arm-batch.VirtualMachineConfiguration.licenseType
+  - azure-arm-batch.VirtualMachineConfiguration.nodeAgentSkuId
+  - azure-arm-batch.VirtualMachineConfiguration.windowsConfiguration
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.containerConfiguration
+  name: containerConfiguration
+  fullName: containerConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 指定した場合のコンテナーで実行するタスクを許可するプール内の各ノードでセットアップを実行します。 通常すべてのタスクおよびジョブ マネージャー タスクがこのプールで実行は、containerSettings プロパティを指定する必要があり、その他のすべてのタスクで指定できます。
+  optional: true
+  syntax:
+    content: 'containerConfiguration?: ContainerConfiguration'
+    return:
+      type:
+      - azure-arm-batch.ContainerConfiguration
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.dataDisks
+  name: dataDisks
+  fullName: dataDisks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: このプロパティである必要があります指定のかどうか、プール内のコンピューティング ノードは空のデータ ディスクを添付することがある必要があります。
+  optional: true
+  syntax:
+    content: 'dataDisks?: DataDisk[]'
+    return:
+      type:
+      - azure-arm-batch.DataDisk[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.imageReference
+  name: imageReference
+  fullName: imageReference
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'imageReference: ImageReference'
+    return:
+      type:
+      - azure-arm-batch.ImageReference
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.licenseType
+  name: licenseType
+  fullName: licenseType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    これは、Windows オペレーティング システム、およびデプロイされるノードの有効なオンプレミスのライセンスを保持する場合にのみ使用されるイメージにのみ適用されます。 省略すると、なし、オンプレミスでライセンスの割引が適用されます。 値は次のとおりです。
+
+
+    Windows_Server - Windows Server は、オンプレミスのライセンスです。
+
+    Windows クライアントは、オンプレミスのライセンスを Windows_Client - です。
+  optional: true
+  syntax:
+    content: 'licenseType?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.nodeAgentSkuId
+  name: nodeAgentSkuId
+  fullName: nodeAgentSkuId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Batch ノード エージェントは、プール内の各ノード上で実行され、ノードと Batch サービスの間のコマンドと制御のインターフェイスを提供するプログラムです。 オペレーティング システムに応じてさまざまなノード エージェントの実装 (SKU と呼ばれます) があります。
+
+    ノード エージェント SKU を選択したイメージ参照と一致するを指定する必要があります。 検証済みのイメージの参照の一覧と同時にサポートされているノード エージェント Sku の一覧を取得するには、'リストには、ノード エージェント Sku がサポートされている' 操作を参照してください。
+  syntax:
+    content: 'nodeAgentSkuId: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.VirtualMachineConfiguration.windowsConfiguration
+  name: windowsConfiguration
+  fullName: windowsConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: このプロパティにはできません、imageReference が Linux OS イメージを指定するかどうかを指定します。
+  optional: true
+  syntax:
+    content: 'windowsConfiguration?: WindowsConfiguration'
+    return:
+      type:
+      - azure-arm-batch.WindowsConfiguration
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.ContainerConfiguration
+  name: ContainerConfiguration
+  spec.typeScript:
+  - name: ContainerConfiguration
+    fullName: ContainerConfiguration
+    uid: azure-arm-batch.ContainerConfiguration
+- uid: azure-arm-batch.DataDisk[]
+  name: DataDisk[]
+  spec.typeScript:
+  - name: DataDisk
+    fullName: DataDisk
+    uid: azure-arm-batch.DataDisk
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.ImageReference
+  name: ImageReference
+  spec.typeScript:
+  - name: ImageReference
+    fullName: ImageReference
+    uid: azure-arm-batch.ImageReference
+- uid: azure-arm-batch.WindowsConfiguration
+  name: WindowsConfiguration
+  spec.typeScript:
+  - name: WindowsConfiguration
+    fullName: WindowsConfiguration
+    uid: azure-arm-batch.WindowsConfiguration

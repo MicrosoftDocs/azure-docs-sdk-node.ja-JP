@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3f17a6a8af9e46f508d62ffa2f764af53b5043ca
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: 3fa73e6b39aa13478c9ab2e98f6d062ffddb3ae7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53678996"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057743"
 items:
 - uid: azure-iothub.Client
   name: Client
@@ -44,7 +44,7 @@ items:
       - デバイスからファイル アップロード通知をリッスンします。
     ユーザーが新規に作成する必要があります<xref:azure-iothub.Client>、ファクトリ メソッドのいずれかを呼び出してインスタンス[fromConnectionString](xref:azure-iothub.Client.fromConnectionString)または[fromSharedAccessSignature](xref:azure-iothub.Client.fromSharedAccessSignature)、IoT Hub サービス クライアントを作成します。
   extends:
-    name: any
+    name: azure-iothub.Client
   package: azure-iothub
 - uid: azure-iothub.Client.close_1
   name: close()
@@ -91,7 +91,7 @@ items:
       description: IoT hub での「デバイスの接続」アクセス許可をカプセル化されている接続文字列。
     - id: transportCtor
       type:
-      - azure-iothub.Client.TransportCtor
+      - azure-iothub.Client.Client.TransportCtor
       description: ''
       optional: true
     return:
@@ -114,7 +114,7 @@ items:
       description: IoT hub での「サービス接続」アクセス許可をカプセル化されている共有アクセス署名を指定します。
     - id: transportCtor
       type:
-      - azure-iothub.Client.TransportCtor
+      - azure-iothub.Client.Client.TransportCtor
       description: ''
       optional: true
     return:
@@ -375,6 +375,12 @@ items:
         SDK には 2 つの「組み込み」ポリシー。ExponentialBackoffWithJitter (既定値) と NoRetry (のすべての再試行を取り消す) にします。 2 つのメソッドを実装している限り、ユーザーは独自のオブジェクトを渡すこともことができます:-shouldRetry(err:エラー): ブール: エラーの種類 - nextRetryTimeout に基づいて操作を再試行する必要があるかどうかを示します (retryCount: 数、調整: ブール値): 番号: 試行 (の過去数に基づく再試行までのミリ秒単位で待機時間を返しますretryCount) とエラーがでか調整エラーがあるという事実です。
   package: azure-iothub
 references:
+- uid: azure-iothub.Client
+  name: Client
+  spec.typeScript:
+  - name: Client
+    fullName: Client
+    uid: azure-iothub.Client
 - uid: Callback<azure-iothub.Client.ServiceReceiver>
   name: ServiceReceiver>
   spec.typeScript:
@@ -491,18 +497,12 @@ references:
     uid: azure-iothub.ResultWithIncomingMessage
   - name: <MessageEnqueued>>
     fullName: <MessageEnqueued>>
-- uid: azure-iothub.Client.TransportCtor
+- uid: azure-iothub.Client.Client.TransportCtor
   name: TransportCtor
   spec.typeScript:
   - name: TransportCtor
     fullName: TransportCtor
-    uid: azure-iothub.Client.TransportCtor
-- uid: azure-iothub.Client
-  name: Client
-  spec.typeScript:
-  - name: Client
-    fullName: Client
-    uid: azure-iothub.Client
+    uid: azure-iothub.Client.Client.TransportCtor
 - uid: azure-iothub.Client.ServiceReceiver
   name: ServiceReceiver
 - uid: azure-iothub.Client.Transport
