@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 8320cf7f55bf63af6965a0af98088497bc246cfc
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: a4322a9b7c81770038d7912be2e7b97bc58efd0a
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52065447"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55051802"
 items:
 - uid: azure-storage.azurestorage.services.queue.QueueService.CreateMessageRequestOptions
   name: CreateMessageRequestOptions
@@ -26,7 +26,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="ce1d7-101">{int}  秒単位で、メッセージの有効期限の間隔です。</span><span class="sxs-lookup"><span data-stu-id="ce1d7-101">{int}   The time-to-live interval for the message, in seconds.</span></span> <span data-ttu-id="ce1d7-102">許可される最大有効時間には、7 日間です。</span><span class="sxs-lookup"><span data-stu-id="ce1d7-102">The maximum time-to-live allowed is 7 days.</span></span> <span data-ttu-id="ce1d7-103">このパラメーターを省略すると、既定の有効期限は 7 日間</span><span class="sxs-lookup"><span data-stu-id="ce1d7-103">If this parameter is omitted, the default time-to-live is 7 days</span></span>
+  summary: <span data-ttu-id="f54da-101">{int}  秒単位で、メッセージの有効期限の間隔です。</span><span class="sxs-lookup"><span data-stu-id="f54da-101">{int}   The time-to-live interval for the message, in seconds.</span></span> <span data-ttu-id="f54da-102">許可される最大有効時間には、7 日間です。</span><span class="sxs-lookup"><span data-stu-id="f54da-102">The maximum time-to-live allowed is 7 days.</span></span> <span data-ttu-id="f54da-103">このパラメーターを省略すると、既定の有効期限は 7 日間</span><span class="sxs-lookup"><span data-stu-id="f54da-103">If this parameter is omitted, the default time-to-live is 7 days</span></span>
   optional: true
   syntax:
     content: 'messageTimeToLive?: number'
@@ -41,7 +41,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="ce1d7-104">{int}  サーバー時間を基準と、秒単位で、新しい表示タイムアウト値を指定します。</span><span class="sxs-lookup"><span data-stu-id="ce1d7-104">{int}   Specifies the new visibility timeout value, in seconds, relative to server time.</span></span> <span data-ttu-id="ce1d7-105">新しい値は 0 以上にする必要があり、7 日間よりも大きくすることはできません。</span><span class="sxs-lookup"><span data-stu-id="ce1d7-105">The new value must be larger than or equal to 0, and cannot be larger than 7 days.</span></span> <span data-ttu-id="ce1d7-106">メッセージの表示タイムアウトは、有効期限より後の値に設定できません。</span><span class="sxs-lookup"><span data-stu-id="ce1d7-106">The visibility timeout of a message cannot be set to a value later than the expiry time.</span></span> <span data-ttu-id="ce1d7-107">visibilitytimeout は、有効期限の値よりも小さい値に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ce1d7-107">visibilitytimeout should be set to a value smaller than the time-to-live value.</span></span>
+  summary: <span data-ttu-id="f54da-104">{int}  サーバー時間を基準と、秒単位で、新しい表示タイムアウト値を指定します。</span><span class="sxs-lookup"><span data-stu-id="f54da-104">{int}   Specifies the new visibility timeout value, in seconds, relative to server time.</span></span> <span data-ttu-id="f54da-105">新しい値は 0 以上にする必要があり、7 日間よりも大きくすることはできません。</span><span class="sxs-lookup"><span data-stu-id="f54da-105">The new value must be larger than or equal to 0, and cannot be larger than 7 days.</span></span> <span data-ttu-id="f54da-106">メッセージの表示タイムアウトは、有効期限より後の値に設定できません。</span><span class="sxs-lookup"><span data-stu-id="f54da-106">The visibility timeout of a message cannot be set to a value later than the expiry time.</span></span> <span data-ttu-id="f54da-107">visibilitytimeout は、有効期限の値よりも小さい値に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f54da-107">visibilitytimeout should be set to a value smaller than the time-to-live value.</span></span>
   optional: true
   syntax:
     content: 'visibilityTimeout?: number'
@@ -144,6 +144,12 @@ references:
   - name: LoggingProperties
     fullName: LoggingProperties
     uid: azure-storage.azurestorage.common.models.ServicePropertiesResult.LoggingProperties
+- uid: azure-storage.azurestorage.common.services.storageserviceclient.StorageServiceClient
+  name: StorageServiceClient
+  spec.typeScript:
+  - name: StorageServiceClient
+    fullName: StorageServiceClient
+    uid: azure-storage.azurestorage.common.services.storageserviceclient.StorageServiceClient
 - uid: azure-storage.azurestorage.StorageHost
   name: StorageHost
   spec.typeScript:
@@ -168,12 +174,6 @@ references:
   - name: Proxy
     fullName: Proxy
     uid: azure-storage.azurestorage.common.services.storageserviceclient.Proxy
-- uid: azure-storage.azurestorage.common.services.storageserviceclient.StorageServiceClient
-  name: StorageServiceClient
-  spec.typeScript:
-  - name: StorageServiceClient
-    fullName: StorageServiceClient
-    uid: azure-storage.azurestorage.common.services.storageserviceclient.StorageServiceClient
 - uid: azure-storage.azurestorage.AccessConditions
   name: AccessConditions
   spec.typeScript:

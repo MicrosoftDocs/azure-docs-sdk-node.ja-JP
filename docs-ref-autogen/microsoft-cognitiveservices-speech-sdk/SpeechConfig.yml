@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4c6e65102cf738ac75210b581e9abb7af69ddf60
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: f1bb66712907cbb0937dcab25ded5ff3389122a7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53665196"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046616"
 items:
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
   name: SpeechConfig
@@ -23,7 +23,7 @@ items:
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="7b770-101">音声の構成。</span><span class="sxs-lookup"><span data-stu-id="7b770-101">Speech configuration.</span></span>
+  summary: <span data-ttu-id="08f4d-101">音声の構成。</span><span class="sxs-lookup"><span data-stu-id="08f4d-101">Speech configuration.</span></span>
   package: microsoft-cognitiveservices-speech-sdk
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
   name: authorizationToken
@@ -33,11 +33,11 @@ items:
   - typeScript
   type: property
   summary: >-
-    <span data-ttu-id="7b770-102">認証トークンを設定します。</span><span class="sxs-lookup"><span data-stu-id="7b770-102">Sets the authorization token.</span></span>
+    <span data-ttu-id="08f4d-102">認証トークンを取得/設定します。</span><span class="sxs-lookup"><span data-stu-id="08f4d-102">Get/Sets the authorization token.</span></span>
 
-    <span data-ttu-id="7b770-103">これを設定すると、サブスクリプション キーは無視されます。</span><span class="sxs-lookup"><span data-stu-id="7b770-103">If this is set, subscription key is ignored.</span></span>
+    <span data-ttu-id="08f4d-103">Autorizaton トークンが設定されている場合は、サブスクリプション キーが無視されます。</span><span class="sxs-lookup"><span data-stu-id="08f4d-103">If the autorizaton token is set, the subscription key is ignored.</span></span>
 
-    <span data-ttu-id="7b770-104">ユーザーは、指定された承認トークンが有効であり、期限が切れていないかどうかを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7b770-104">User needs to make sure the provided authorization token is valid and not expired.</span></span>
+    <span data-ttu-id="08f4d-104">ユーザーは、指定された承認トークンが有効であり、期限が切れていないかどうかを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="08f4d-104">User needs to make sure the provided authorization token is valid and not expired.</span></span>
   syntax:
     content: 'public authorizationToken: string'
     return:
@@ -50,7 +50,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="7b770-105">構成を閉じます。</span><span class="sxs-lookup"><span data-stu-id="7b770-105">Closes the configuration.</span></span>
+  summary: <span data-ttu-id="08f4d-105">構成を閉じます。</span><span class="sxs-lookup"><span data-stu-id="08f4d-105">Closes the configuration.</span></span>
   syntax:
     content: function close()
     parameters: []
@@ -62,7 +62,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="7b770-106">音声認識に使用されるカスタマイズされた音声モデルのエンドポイント ID を取得します。</span><span class="sxs-lookup"><span data-stu-id="7b770-106">Gets the endpoint ID of a customized speech model that is used for speech recognition.</span></span>
+  summary: <span data-ttu-id="08f4d-106">音声認識に使用されるカスタマイズされた音声モデルのエンドポイント ID を取得/設定します。</span><span class="sxs-lookup"><span data-stu-id="08f4d-106">Gets/Sets the endpoint ID of a customized speech model that is used for speech recognition.</span></span>
   syntax:
     content: 'public endpointId: string'
     return:
@@ -75,18 +75,21 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="7b770-107">指定した初期の承認トークンとリージョンで音声ファクトリのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="7b770-107">Creates an instance of the speech factory with specified initial authorization token and region.</span></span>
+  summary: >-
+    <span data-ttu-id="08f4d-107">指定した初期の承認トークンとリージョンで音声ファクトリのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="08f4d-107">Creates an instance of the speech factory with specified initial authorization token and region.</span></span>
+
+    <span data-ttu-id="08f4d-108">注:LanguageUnderstanding サブスクリプション キーから派生したインテント、認識エンジンを使用する場合にトークンを使用してください。</span><span class="sxs-lookup"><span data-stu-id="08f4d-108">Note: Please use a token derived from your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
   syntax:
     content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
     parameters:
     - id: authorizationToken
       type:
       - string
-      description: <span data-ttu-id="7b770-108">初期の承認トークンです。</span><span class="sxs-lookup"><span data-stu-id="7b770-108">The initial authorization token.</span></span>
+      description: <span data-ttu-id="08f4d-109">初期の承認トークンです。</span><span class="sxs-lookup"><span data-stu-id="08f4d-109">The initial authorization token.</span></span>
     - id: region
       type:
       - string
-      description: <span data-ttu-id="7b770-109">リージョン名 (を参照してください、<a href="https://aka.ms/csspeech/region">リージョン ページ</a>)。</span><span class="sxs-lookup"><span data-stu-id="7b770-109">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
+      description: <span data-ttu-id="08f4d-110">リージョン名 (を参照してください、<a href="https://aka.ms/csspeech/region">リージョン ページ</a>)。</span><span class="sxs-lookup"><span data-stu-id="08f4d-110">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
     return:
       type:
       - microsoft-cognitiveservices-speech-sdk.SpeechConfig
@@ -98,22 +101,24 @@ items:
   langs:
   - typeScript
   summary: >-
-    <span data-ttu-id="7b770-110">サブスクリプション キーが指定されたエンドポイントで音声ファクトリのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="7b770-110">Creates an instance of the speech factory with specified endpoint and subscription key.</span></span>
+    <span data-ttu-id="08f4d-111">サブスクリプション キーが指定されたエンドポイントで音声ファクトリのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="08f4d-111">Creates an instance of the speech factory with specified endpoint and subscription key.</span></span>
 
-    <span data-ttu-id="7b770-111">このメソッドは、非標準のサービス エンドポイントまたはパラメーターを使用して、ユーザーに対してのみです。</span><span class="sxs-lookup"><span data-stu-id="7b770-111">This method is intended only for users who use a non-standard service endpoint or paramters.</span></span>
+    <span data-ttu-id="08f4d-112">このメソッドは、非標準のサービス エンドポイントまたはパラメーターを使用して、ユーザーに対してのみです。</span><span class="sxs-lookup"><span data-stu-id="08f4d-112">This method is intended only for users who use a non-standard service endpoint or paramters.</span></span>
 
-    <span data-ttu-id="7b770-112">uri の言語設定が優先され、有効な言語が"DE-DE"。</span><span class="sxs-lookup"><span data-stu-id="7b770-112">the language setting in uri takes precedence, and the effective language is "de-DE".</span></span>
+    <span data-ttu-id="08f4d-113">uri の言語設定が優先され、有効な言語が"DE-DE"。</span><span class="sxs-lookup"><span data-stu-id="08f4d-113">the language setting in uri takes precedence, and the effective language is "de-DE".</span></span>
+
+    <span data-ttu-id="08f4d-114">注:インテントの認識エンジンを使用する場合は、LanguageUnderstanding サブスクリプション キーを使用してください。</span><span class="sxs-lookup"><span data-stu-id="08f4d-114">Note: Please use your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
   syntax:
     content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
     parameters:
     - id: endpoint
       type:
       - URL
-      description: <span data-ttu-id="7b770-113">接続するサービス エンドポイント。</span><span class="sxs-lookup"><span data-stu-id="7b770-113">The service endpoint to connect to.</span></span>
+      description: <span data-ttu-id="08f4d-115">接続するサービス エンドポイント。</span><span class="sxs-lookup"><span data-stu-id="08f4d-115">The service endpoint to connect to.</span></span>
     - id: subscriptionKey
       type:
       - string
-      description: <span data-ttu-id="7b770-114">サブスクリプション キー。</span><span class="sxs-lookup"><span data-stu-id="7b770-114">The subscription key.</span></span>
+      description: <span data-ttu-id="08f4d-116">サブスクリプション キー。</span><span class="sxs-lookup"><span data-stu-id="08f4d-116">The subscription key.</span></span>
     return:
       type:
       - microsoft-cognitiveservices-speech-sdk.SpeechConfig
@@ -124,18 +129,21 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="7b770-115">SubscriptionKey とサービスのリージョンを渡すことによって返される SpeechConfig の静的インスタンス。</span><span class="sxs-lookup"><span data-stu-id="7b770-115">Static instance of SpeechConfig returned by passing subscriptionKey and service region.</span></span>
+  summary: >-
+    <span data-ttu-id="08f4d-117">SubscriptionKey とサービスのリージョンを渡すことによって返される SpeechConfig の静的インスタンス。</span><span class="sxs-lookup"><span data-stu-id="08f4d-117">Static instance of SpeechConfig returned by passing subscriptionKey and service region.</span></span>
+
+    <span data-ttu-id="08f4d-118">注:インテントの認識エンジンを使用する場合は、LanguageUnderstanding サブスクリプション キーを使用してください。</span><span class="sxs-lookup"><span data-stu-id="08f4d-118">Note: Please use your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
   syntax:
     content: 'static function fromSubscription(subscriptionKey: string, region: string)'
     parameters:
     - id: subscriptionKey
       type:
       - string
-      description: <span data-ttu-id="7b770-116">サブスクリプション キー。</span><span class="sxs-lookup"><span data-stu-id="7b770-116">The subscription key.</span></span>
+      description: <span data-ttu-id="08f4d-119">サブスクリプション キー。</span><span class="sxs-lookup"><span data-stu-id="08f4d-119">The subscription key.</span></span>
     - id: region
       type:
       - string
-      description: <span data-ttu-id="7b770-117">リージョン名 (を参照してください、<a href="https://aka.ms/csspeech/region">リージョン ページ</a>)。</span><span class="sxs-lookup"><span data-stu-id="7b770-117">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
+      description: <span data-ttu-id="08f4d-120">リージョン名 (を参照してください、<a href="https://aka.ms/csspeech/region">リージョン ページ</a>)。</span><span class="sxs-lookup"><span data-stu-id="08f4d-120">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
     return:
       type:
       - microsoft-cognitiveservices-speech-sdk.SpeechConfig
@@ -146,18 +154,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="7b770-118">任意のプロパティの現在の値を返します。</span><span class="sxs-lookup"><span data-stu-id="7b770-118">Returns the current value of an arbitrary property.</span></span>
+  summary: <span data-ttu-id="08f4d-121">任意のプロパティの現在の値を返します。</span><span class="sxs-lookup"><span data-stu-id="08f4d-121">Returns the current value of an arbitrary property.</span></span>
   syntax:
     content: 'function getProperty(name: string, def?: string)'
     parameters:
     - id: name
       type:
       - string
-      description: <span data-ttu-id="7b770-119">クエリのプロパティの名前。</span><span class="sxs-lookup"><span data-stu-id="7b770-119">The name of the property to query.</span></span>
+      description: <span data-ttu-id="08f4d-122">クエリのプロパティの名前。</span><span class="sxs-lookup"><span data-stu-id="08f4d-122">The name of the property to query.</span></span>
     - id: def
       type:
       - string
-      description: <span data-ttu-id="7b770-120">プロパティの場合、戻り値が不明です。</span><span class="sxs-lookup"><span data-stu-id="7b770-120">The value to return in case the property is not known.</span></span>
+      description: <span data-ttu-id="08f4d-123">プロパティの場合、戻り値が不明です。</span><span class="sxs-lookup"><span data-stu-id="08f4d-123">The value to return in case the property is not known.</span></span>
       optional: true
     return:
       type:
@@ -170,7 +178,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="7b770-121">出力形式を取得します。</span><span class="sxs-lookup"><span data-stu-id="7b770-121">Gets output format.</span></span>
+  summary: <span data-ttu-id="08f4d-124">出力形式を取得/設定します。</span><span class="sxs-lookup"><span data-stu-id="08f4d-124">Gets/Sets the output format.</span></span>
   syntax:
     content: 'public outputFormat: OutputFormat'
     return:
@@ -183,19 +191,19 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="7b770-122">任意のプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="7b770-122">Sets an arbitrary property.</span></span>
+  summary: <span data-ttu-id="08f4d-125">任意のプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="08f4d-125">Sets an arbitrary property.</span></span>
   syntax:
     content: 'function setProperty(name: string, value: string)'
     parameters:
     - id: name
       type:
       - string
-      description: <span data-ttu-id="7b770-123">設定するプロパティの名前。</span><span class="sxs-lookup"><span data-stu-id="7b770-123">The name of the property to set.</span></span>
+      description: <span data-ttu-id="08f4d-126">設定するプロパティの名前。</span><span class="sxs-lookup"><span data-stu-id="08f4d-126">The name of the property to set.</span></span>
     - id: value
       type:
       - string
       description: >
-        <span data-ttu-id="7b770-124">プロパティの新しい値。</span><span class="sxs-lookup"><span data-stu-id="7b770-124">The new value of the property.</span></span>
+        <span data-ttu-id="08f4d-127">プロパティの新しい値。</span><span class="sxs-lookup"><span data-stu-id="08f4d-127">The new value of the property.</span></span>
   package: microsoft-cognitiveservices-speech-sdk
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
   name: speechRecognitionLanguage
@@ -204,7 +212,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="7b770-125">入力言語を設定します。</span><span class="sxs-lookup"><span data-stu-id="7b770-125">Sets the input language.</span></span>
+  summary: <span data-ttu-id="08f4d-128">入力言語を取得/設定します。</span><span class="sxs-lookup"><span data-stu-id="08f4d-128">Gets/Sets the input language.</span></span>
   syntax:
     content: 'public speechRecognitionLanguage: string'
     return:

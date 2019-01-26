@@ -1,0 +1,487 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: da624cd7bcce8f413f2d2d5a2e390362debc8bf0
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55059383"
+items:
+- uid: azure-arm-batch.Pool
+  name: Pool
+  fullName: Pool
+  children:
+  - azure-arm-batch.Pool.allocationState
+  - azure-arm-batch.Pool.allocationStateTransitionTime
+  - azure-arm-batch.Pool.applicationLicenses
+  - azure-arm-batch.Pool.applicationPackages
+  - azure-arm-batch.Pool.autoScaleRun
+  - azure-arm-batch.Pool.certificates
+  - azure-arm-batch.Pool.creationTime
+  - azure-arm-batch.Pool.currentDedicatedNodes
+  - azure-arm-batch.Pool.currentLowPriorityNodes
+  - azure-arm-batch.Pool.deploymentConfiguration
+  - azure-arm-batch.Pool.displayName
+  - azure-arm-batch.Pool.interNodeCommunication
+  - azure-arm-batch.Pool.lastModified
+  - azure-arm-batch.Pool.maxTasksPerNode
+  - azure-arm-batch.Pool.metadata
+  - azure-arm-batch.Pool.networkConfiguration
+  - azure-arm-batch.Pool.provisioningState
+  - azure-arm-batch.Pool.provisioningStateTransitionTime
+  - azure-arm-batch.Pool.resizeOperationStatus
+  - azure-arm-batch.Pool.scaleSettings
+  - azure-arm-batch.Pool.startTask
+  - azure-arm-batch.Pool.taskSchedulingPolicy
+  - azure-arm-batch.Pool.userAccounts
+  - azure-arm-batch.Pool.vmSize
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="f3086-101">プールに関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f3086-101">Contains information about a pool.</span></span>
+  extends:
+    name: azure-arm-batch.ProxyResource
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.allocationState
+  name: allocationState
+  fullName: allocationState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"f3086-102\">指定できる値は、次のとおりです。' 定常 '、'サイズ'、'停止'</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3086-102\">Possible values include: 'Steady', 'Resizing', 'Stopping'</span></span>"
+  optional: true
+  syntax:
+    content: 'allocationState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.allocationStateTransitionTime
+  name: allocationStateTransitionTime
+  fullName: allocationStateTransitionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'allocationStateTransitionTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.applicationLicenses
+  name: applicationLicenses
+  fullName: applicationLicenses
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-103">アプリケーションのライセンスの一覧は、Batch サービスの利用可能なアプリケーション ライセンスのサブセットである必要があります。</span><span class="sxs-lookup"><span data-stu-id="f3086-103">The list of application licenses must be a subset of available Batch service application licenses.</span></span> <span data-ttu-id="f3086-104">サポートされていない、ライセンスが要求された場合は、プールの作成は失敗します。</span><span class="sxs-lookup"><span data-stu-id="f3086-104">If a license is requested which is not supported, pool creation will fail.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationLicenses?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.applicationPackages
+  name: applicationPackages
+  fullName: applicationPackages
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-105">アプリケーション パッケージへの変更は、プールに参加するすべての新しいコンピューティング ノードに影響を与えるが、再起動または再イメージ化されるまでに、プールに既に存在するコンピューティング ノードには影響しません。</span><span class="sxs-lookup"><span data-stu-id="f3086-105">Changes to application packages affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationPackages?: ApplicationPackageReference[]'
+    return:
+      type:
+      - azure-arm-batch.ApplicationPackageReference[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.autoScaleRun
+  name: autoScaleRun
+  fullName: autoScaleRun
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-106">このプロパティは、つまり autoScaleSettings、使用、プールが自動的にスケーリングする場合のみに設定されます。</span><span class="sxs-lookup"><span data-stu-id="f3086-106">This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.</span></span>
+  optional: true
+  syntax:
+    content: 'autoScaleRun?: AutoScaleRun'
+    return:
+      type:
+      - azure-arm-batch.AutoScaleRun
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.certificates
+  name: certificates
+  fullName: certificates
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-107">Windows のコンピューティング ノード、Batch サービスは、場所と指定された証明書ストアに証明書をインストールします。</span><span class="sxs-lookup"><span data-stu-id="f3086-107">For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location.</span></span> <span data-ttu-id="f3086-108">Linux コンピューティング ノードの場合は、証明書は、タスクの作業ディレクトリと環境変数 AZ_BATCH_CERTIFICATES_DIR がこの場所にクエリするタスクに指定されたディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="f3086-108">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="f3086-109">'RemoteUser' の可視性を持つ証明書の場合、ユーザーのホーム ディレクトリに '証明書' ディレクトリが作成 (例、/home/{ユーザー名}/証明書) し、証明書がそのディレクトリに配置されます。</span><span class="sxs-lookup"><span data-stu-id="f3086-109">For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>
+  optional: true
+  syntax:
+    content: 'certificates?: CertificateReference[]'
+    return:
+      type:
+      - azure-arm-batch.CertificateReference[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.creationTime
+  name: creationTime
+  fullName: creationTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'creationTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.currentDedicatedNodes
+  name: currentDedicatedNodes
+  fullName: currentDedicatedNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'currentDedicatedNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.currentLowPriorityNodes
+  name: currentLowPriorityNodes
+  fullName: currentLowPriorityNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'currentLowPriorityNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.deploymentConfiguration
+  name: deploymentConfiguration
+  fullName: deploymentConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-110">CloudServiceConfiguration を使用するには、VirtualMachineConfiguration Azure Virtual Machines (IaaS) を使用しますが、Azure Cloud Services (PaaS) を使用して、ノードを作成することを指定します。</span><span class="sxs-lookup"><span data-stu-id="f3086-110">Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).</span></span>
+  optional: true
+  syntax:
+    content: 'deploymentConfiguration?: DeploymentConfiguration'
+    return:
+      type:
+      - azure-arm-batch.DeploymentConfiguration
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.displayName
+  name: displayName
+  fullName: displayName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-111">表示名は一意である必要はありませんし、最大長 1024 まで任意の Unicode 文字を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="f3086-111">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+  optional: true
+  syntax:
+    content: 'displayName?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.interNodeCommunication
+  name: interNodeCommunication
+  fullName: interNodeCommunication
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f3086-112">これは、制限をノードをプールに割り当てることができます。</span><span class="sxs-lookup"><span data-stu-id="f3086-112">This imposes restrictions on which nodes can be assigned to the pool.</span></span> <span data-ttu-id="f3086-113">この値を有効にすると、プールに割り当てられるノードの要求された数の可能性を軽減できます。</span><span class="sxs-lookup"><span data-stu-id="f3086-113">Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool.</span></span>
+
+    <span data-ttu-id="f3086-114">指定しない場合、この値が '無効' に既定値です。</span><span class="sxs-lookup"><span data-stu-id="f3086-114">If not specified, this value defaults to 'Disabled'.</span></span> <span data-ttu-id="f3086-115">指定できる値は、次のとおりです。' Enabled、' 'Disabled'</span><span class="sxs-lookup"><span data-stu-id="f3086-115">Possible values include: 'Enabled', 'Disabled'</span></span>
+  optional: true
+  syntax:
+    content: 'interNodeCommunication?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.lastModified
+  name: lastModified
+  fullName: lastModified
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-116">これは、前回 targetDedicatedNodes や autoScaleSettings などのプール レベル データが変更されました。</span><span class="sxs-lookup"><span data-stu-id="f3086-116">This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed.</span></span> <span data-ttu-id="f3086-117">これは、コンピューティング ノードの状態を変更するなど、ノード レベルの変更では考慮されません。</span><span class="sxs-lookup"><span data-stu-id="f3086-117">It does not factor in node-level changes such as a compute node changing state.</span></span>
+  optional: true
+  syntax:
+    content: 'lastModified?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.maxTasksPerNode
+  name: maxTasksPerNode
+  fullName: maxTasksPerNode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'maxTasksPerNode?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-118">Batch サービスがメタデータに意味を割り当てませんユーザー コードの使用のためだけです。</span><span class="sxs-lookup"><span data-stu-id="f3086-118">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+  optional: true
+  syntax:
+    content: 'metadata?: MetadataItem[]'
+    return:
+      type:
+      - azure-arm-batch.MetadataItem[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.networkConfiguration
+  name: networkConfiguration
+  fullName: networkConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'networkConfiguration?: NetworkConfiguration'
+    return:
+      type:
+      - azure-arm-batch.NetworkConfiguration
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.provisioningState
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"f3086-119\">指定できる値は、次のとおりです。' Succeeded' で、'削除'</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3086-119\">Possible values include: 'Succeeded', 'Deleting'</span></span>"
+  optional: true
+  syntax:
+    content: 'provisioningState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.provisioningStateTransitionTime
+  name: provisioningStateTransitionTime
+  fullName: provisioningStateTransitionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'provisioningStateTransitionTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.resizeOperationStatus
+  name: resizeOperationStatus
+  fullName: resizeOperationStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'resizeOperationStatus?: ResizeOperationStatus'
+    return:
+      type:
+      - azure-arm-batch.ResizeOperationStatus
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.scaleSettings
+  name: scaleSettings
+  fullName: scaleSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'scaleSettings?: ScaleSettings'
+    return:
+      type:
+      - azure-arm-batch.ScaleSettings
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.startTask
+  name: startTask
+  fullName: startTask
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-120">修正プログラム (更新) 操作では、このプロパティは、プールから、開始タスクを削除する空のオブジェクトに設定できます。</span><span class="sxs-lookup"><span data-stu-id="f3086-120">In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.</span></span>
+  optional: true
+  syntax:
+    content: 'startTask?: StartTask'
+    return:
+      type:
+      - azure-arm-batch.StartTask
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.taskSchedulingPolicy
+  name: taskSchedulingPolicy
+  fullName: taskSchedulingPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+    return:
+      type:
+      - azure-arm-batch.TaskSchedulingPolicy
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.userAccounts
+  name: userAccounts
+  fullName: userAccounts
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'userAccounts?: UserAccount[]'
+    return:
+      type:
+      - azure-arm-batch.UserAccount[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.Pool.vmSize
+  name: vmSize
+  fullName: vmSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f3086-121">クラウド サービスの仮想マシンの利用可能なサイズについてはプール (cloudServiceConfiguration で作成されたプール) を参照してくださいサイズのクラウド サービス (http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/)します。</span><span class="sxs-lookup"><span data-stu-id="f3086-121">For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/).</span></span> <span data-ttu-id="f3086-122">バッチには、ExtraSmall を除くすべての Cloud Services VM サイズがサポートしています。</span><span class="sxs-lookup"><span data-stu-id="f3086-122">Batch supports all Cloud Services VM sizes except ExtraSmall.</span></span> <span data-ttu-id="f3086-123">使用可能な VM については (virtualMachineConfiguration で作成されたプール) の Virtual Machines マーケットプ レースからイメージを使用してプールのサイズは仮想マシン (Linux) のサイズを参照 (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/)または仮想マシン (Windows) のサイズ (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/).</span><span class="sxs-lookup"><span data-stu-id="f3086-123">For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/).</span></span> <span data-ttu-id="f3086-124">バッチには、STANDARD_A0 と premium storage (STANDARD_GS、STANDARD_DS、および STANDARD_DSV2 シリーズ) を除くすべての Azure VM サイズがサポートしています。</span><span class="sxs-lookup"><span data-stu-id="f3086-124">Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</span></span>
+  optional: true
+  syntax:
+    content: 'vmSize?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.ProxyResource
+  name: ProxyResource
+  spec.typeScript:
+  - name: ProxyResource
+    fullName: ProxyResource
+    uid: azure-arm-batch.ProxyResource
+- uid: azure-arm-batch.ApplicationPackageReference[]
+  name: ApplicationPackageReference[]
+  spec.typeScript:
+  - name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    uid: azure-arm-batch.ApplicationPackageReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.AutoScaleRun
+  name: AutoScaleRun
+  spec.typeScript:
+  - name: AutoScaleRun
+    fullName: AutoScaleRun
+    uid: azure-arm-batch.AutoScaleRun
+- uid: azure-arm-batch.CertificateReference[]
+  name: CertificateReference[]
+  spec.typeScript:
+  - name: CertificateReference
+    fullName: CertificateReference
+    uid: azure-arm-batch.CertificateReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.DeploymentConfiguration
+  name: DeploymentConfiguration
+  spec.typeScript:
+  - name: DeploymentConfiguration
+    fullName: DeploymentConfiguration
+    uid: azure-arm-batch.DeploymentConfiguration
+- uid: azure-arm-batch.MetadataItem[]
+  name: MetadataItem[]
+  spec.typeScript:
+  - name: MetadataItem
+    fullName: MetadataItem
+    uid: azure-arm-batch.MetadataItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.NetworkConfiguration
+  name: NetworkConfiguration
+  spec.typeScript:
+  - name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    uid: azure-arm-batch.NetworkConfiguration
+- uid: azure-arm-batch.ResizeOperationStatus
+  name: ResizeOperationStatus
+  spec.typeScript:
+  - name: ResizeOperationStatus
+    fullName: ResizeOperationStatus
+    uid: azure-arm-batch.ResizeOperationStatus
+- uid: azure-arm-batch.ScaleSettings
+  name: ScaleSettings
+  spec.typeScript:
+  - name: ScaleSettings
+    fullName: ScaleSettings
+    uid: azure-arm-batch.ScaleSettings
+- uid: azure-arm-batch.StartTask
+  name: StartTask
+  spec.typeScript:
+  - name: StartTask
+    fullName: StartTask
+    uid: azure-arm-batch.StartTask
+- uid: azure-arm-batch.TaskSchedulingPolicy
+  name: TaskSchedulingPolicy
+  spec.typeScript:
+  - name: TaskSchedulingPolicy
+    fullName: TaskSchedulingPolicy
+    uid: azure-arm-batch.TaskSchedulingPolicy
+- uid: azure-arm-batch.UserAccount[]
+  name: UserAccount[]
+  spec.typeScript:
+  - name: UserAccount
+    fullName: UserAccount
+    uid: azure-arm-batch.UserAccount
+  - name: '[]'
+    fullName: '[]'

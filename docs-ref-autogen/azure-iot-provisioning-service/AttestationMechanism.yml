@@ -1,22 +1,38 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: eaa6fa917de54fd65f539b977e8f4df9a9fb3bbf
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: c6f66f96fbae9c931514c9d2b5173d9d36d7f1f8
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52045247"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55059343"
 items:
 - uid: azure-iot-provisioning-service.AttestationMechanism
   name: AttestationMechanism
   fullName: AttestationMechanism
   children:
+  - azure-iot-provisioning-service.AttestationMechanism.symmetricKey
   - azure-iot-provisioning-service.AttestationMechanism.tpm
   - azure-iot-provisioning-service.AttestationMechanism.type
   - azure-iot-provisioning-service.AttestationMechanism.x509
   langs:
   - typeScript
   type: interface
-  summary: <span data-ttu-id="83585-101">デバイス構成証明の方法です。</span><span class="sxs-lookup"><span data-stu-id="83585-101">Device attestation method.</span></span>
+  summary: <span data-ttu-id="d34e9-101">デバイス構成証明の方法です。</span><span class="sxs-lookup"><span data-stu-id="d34e9-101">Device attestation method.</span></span>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.AttestationMechanism.symmetricKey
+  name: symmetricKey
+  fullName: symmetricKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d34e9-102">このプロパティは、登録レコードの対称キーを含むオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="d34e9-102">This property is an object containing the symmetric keys for an enrollment record.</span></span>
+  optional: true
+  syntax:
+    content: 'symmetricKey?: SymmetricKeyAttestation'
+    return:
+      type:
+      - azure-iot-provisioning-service.SymmetricKeyAttestation
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.AttestationMechanism.tpm
   name: tpm
@@ -25,7 +41,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="83585-102">このプロパティは、登録の TPM の特定の値を含むオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="83585-102">This property is an object containing the TPM specific values for enrollment.</span></span>
+  summary: <span data-ttu-id="d34e9-103">このプロパティは、登録の TPM の特定の値を含むオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="d34e9-103">This property is an object containing the TPM specific values for enrollment.</span></span>
   optional: true
   syntax:
     content: 'tpm?: TpmAttestation'
@@ -40,7 +56,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="83585-103">構成証明書の種類。</span><span class="sxs-lookup"><span data-stu-id="83585-103">The type of attestation.</span></span>  <span data-ttu-id="83585-104">いずれかの文字列に設定されます`tpm`または`x509`します。</span><span class="sxs-lookup"><span data-stu-id="83585-104">Will be set to a string either `tpm` or `x509`.</span></span>
+  summary: <span data-ttu-id="d34e9-104">構成証明書の種類。</span><span class="sxs-lookup"><span data-stu-id="d34e9-104">The type of attestation.</span></span>  <span data-ttu-id="d34e9-105">いずれかの文字列に設定されます`tpm`または`x509`します。</span><span class="sxs-lookup"><span data-stu-id="d34e9-105">Will be set to a string either `tpm` or `x509`.</span></span>
   syntax:
     content: 'type: AttestationTypes'
     return:
@@ -54,7 +70,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="83585-105">このプロパティは、x509 を格納するオブジェクトの登録の特定の値。</span><span class="sxs-lookup"><span data-stu-id="83585-105">This property is an object containing the x509 specific values for enrollment.</span></span>
+  summary: <span data-ttu-id="d34e9-106">このプロパティは、x509 を格納するオブジェクトの登録の特定の値。</span><span class="sxs-lookup"><span data-stu-id="d34e9-106">This property is an object containing the x509 specific values for enrollment.</span></span>
   optional: true
   syntax:
     content: 'x509?: X509Attestation'
@@ -63,6 +79,12 @@ items:
       - azure-iot-provisioning-service.X509Attestation
   package: azure-iot-provisioning-service
 references:
+- uid: azure-iot-provisioning-service.SymmetricKeyAttestation
+  name: SymmetricKeyAttestation
+  spec.typeScript:
+  - name: SymmetricKeyAttestation
+    fullName: SymmetricKeyAttestation
+    uid: azure-iot-provisioning-service.SymmetricKeyAttestation
 - uid: azure-iot-provisioning-service.TpmAttestation
   name: TpmAttestation
   spec.typeScript:
