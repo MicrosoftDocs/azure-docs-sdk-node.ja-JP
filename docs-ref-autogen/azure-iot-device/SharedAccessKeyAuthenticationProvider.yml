@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 6ab62290fb3170a34a9aaf4d18b94a28cd27bf32
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: ea8c05542e28924bd865baea6b37146832102ae3
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53679046"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057803"
 items:
 - uid: azure-iot-device.SharedAccessKeyAuthenticationProvider
   name: SharedAccessKeyAuthenticationProvider
@@ -19,11 +19,11 @@ items:
   - typeScript
   type: class
   summary: >
-    <span data-ttu-id="bfb3a-101">提供、`AuthenticationProvider`オブジェクトを接続文字列をするだけで作成できる、Azure IoT hub インスタンスでの認証にデバイス クライアントとトランスポートによって使用されます。</span><span class="sxs-lookup"><span data-stu-id="bfb3a-101">Provides an `AuthenticationProvider` object that can be created simply with a connection string and is then used by the device client and transports to authenticate with the Azure IoT hub instance.</span></span>
+    <span data-ttu-id="d5413-101">提供、`AuthenticationProvider`オブジェクトを接続文字列をするだけで作成できる、Azure IoT hub インスタンスでの認証にデバイス クライアントとトランスポートによって使用されます。</span><span class="sxs-lookup"><span data-stu-id="d5413-101">Provides an `AuthenticationProvider` object that can be created simply with a connection string and is then used by the device client and transports to authenticate with the Azure IoT hub instance.</span></span>
 
-    <span data-ttu-id="bfb3a-102">`SharedAccessKeyAuthenticationProvider`オブジェクトは、一定のリズムで共有アクセス署名トークンを作成する処理し、出力、`newTokenAvailable`イベントを配送先の Azure IoT hub インスタンスは、自分の資格情報を更新して、接続を維持します。</span><span class="sxs-lookup"><span data-stu-id="bfb3a-102">The `SharedAccessKeyAuthenticationProvider` object takes care of creating shared access signature tokens on a regular cadence and emits the `newTokenAvailable` event for the transports to renew their credentials with the Azure IoT hub instance and stay connected.</span></span>
+    <span data-ttu-id="d5413-102">`SharedAccessKeyAuthenticationProvider`オブジェクトは、一定のリズムで共有アクセス署名トークンを作成する処理し、出力、`newTokenAvailable`イベントを配送先の Azure IoT hub インスタンスは、自分の資格情報を更新して、接続を維持します。</span><span class="sxs-lookup"><span data-stu-id="d5413-102">The `SharedAccessKeyAuthenticationProvider` object takes care of creating shared access signature tokens on a regular cadence and emits the `newTokenAvailable` event for the transports to renew their credentials with the Azure IoT hub instance and stay connected.</span></span>
   extends:
-    name: any
+    name: azure-iot-device.SharedAccessKeyAuthenticationProvider
   package: azure-iot-device
 - uid: azure-iot-device.SharedAccessKeyAuthenticationProvider.fromConnectionString
   name: fromConnectionString(string, number, number)
@@ -31,24 +31,24 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="bfb3a-103">新たに作成`SharedAccessKeyAuthenticationProvider`接続文字列から</span><span class="sxs-lookup"><span data-stu-id="bfb3a-103">Creates a new `SharedAccessKeyAuthenticationProvider` from a connection string</span></span>
+  summary: <span data-ttu-id="d5413-103">新たに作成`SharedAccessKeyAuthenticationProvider`接続文字列から</span><span class="sxs-lookup"><span data-stu-id="d5413-103">Creates a new `SharedAccessKeyAuthenticationProvider` from a connection string</span></span>
   syntax:
     content: 'static function fromConnectionString(connectionString: string, tokenValidTimeInSeconds?: number, tokenRenewalMarginInSeconds?: number)'
     parameters:
     - id: connectionString
       type:
       - string
-      description: <span data-ttu-id="bfb3a-104">IoT hub での認証に必要なパラメーターを格納しているデバイスの接続文字列。</span><span class="sxs-lookup"><span data-stu-id="bfb3a-104">A device connection string containing the required parameters for authentication with the IoT hub.</span></span>
+      description: <span data-ttu-id="d5413-104">IoT hub での認証に必要なパラメーターを格納しているデバイスの接続文字列。</span><span class="sxs-lookup"><span data-stu-id="d5413-104">A device connection string containing the required parameters for authentication with the IoT hub.</span></span>
     - id: tokenValidTimeInSeconds
       type:
       - number
-      description: <span data-ttu-id="bfb3a-105">トークンが有効でなければならないとを秒数です。</span><span class="sxs-lookup"><span data-stu-id="bfb3a-105">The number of seconds for which a token is supposed to be valid.</span></span>
+      description: <span data-ttu-id="d5413-105">トークンが有効でなければならないとを秒数です。</span><span class="sxs-lookup"><span data-stu-id="d5413-105">The number of seconds for which a token is supposed to be valid.</span></span>
       optional: true
     - id: tokenRenewalMarginInSeconds
       type:
       - number
       description: >
-        <span data-ttu-id="bfb3a-106">有効期間の終了するまでの秒数、`SharedAccessKeyAuthenticationProvider`トークンを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bfb3a-106">The number of seconds before the end of the validity period during which the `SharedAccessKeyAuthenticationProvider` should renew the token.</span></span>
+        <span data-ttu-id="d5413-106">有効期間の終了するまでの秒数、`SharedAccessKeyAuthenticationProvider`トークンを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d5413-106">The number of seconds before the end of the validity period during which the `SharedAccessKeyAuthenticationProvider` should renew the token.</span></span>
       optional: true
     return:
       type:
@@ -60,7 +60,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="bfb3a-107">このメソッドの形式で最新のデバイスの資格情報を取得するトランスポートによって使用されます、`TransportConfig`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="bfb3a-107">This method is used by the transports to gets the most current device credentials in the form of a `TransportConfig` object.</span></span>
+  summary: <span data-ttu-id="d5413-107">このメソッドの形式で最新のデバイスの資格情報を取得するトランスポートによって使用されます、`TransportConfig`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="d5413-107">This method is used by the transports to gets the most current device credentials in the form of a `TransportConfig` object.</span></span>
   syntax:
     content: function getDeviceCredentials()
     parameters: []
@@ -74,7 +74,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="bfb3a-108">このメソッドの形式で最新のデバイスの資格情報を取得するトランスポートによって使用されます、`TransportConfig`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="bfb3a-108">This method is used by the transports to gets the most current device credentials in the form of a `TransportConfig` object.</span></span>
+  summary: <span data-ttu-id="d5413-108">このメソッドの形式で最新のデバイスの資格情報を取得するトランスポートによって使用されます、`TransportConfig`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="d5413-108">This method is used by the transports to gets the most current device credentials in the form of a `TransportConfig` object.</span></span>
   syntax:
     content: 'function getDeviceCredentials(callback: Callback<TransportConfig>)'
     parameters:
@@ -89,7 +89,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="bfb3a-109">SAS トークンを更新するために使用するタイマーを停止します。</span><span class="sxs-lookup"><span data-stu-id="bfb3a-109">Stops the timer used to renew to SAS token.</span></span>
+  summary: <span data-ttu-id="d5413-109">SAS トークンを更新するために使用するタイマーを停止します。</span><span class="sxs-lookup"><span data-stu-id="d5413-109">Stops the timer used to renew to SAS token.</span></span>
   syntax:
     content: function stop()
     parameters: []
