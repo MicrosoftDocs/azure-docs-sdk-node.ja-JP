@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 50b9106c48b95d21155c7b4eef8ce30bb31c71e9
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054723"
+items:
+- uid: azure-arm-batch.NetworkSecurityGroupRule
+  name: NetworkSecurityGroupRule
+  fullName: NetworkSecurityGroupRule
+  children:
+  - azure-arm-batch.NetworkSecurityGroupRule.access
+  - azure-arm-batch.NetworkSecurityGroupRule.priority
+  - azure-arm-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkSecurityGroupRule.access
+  name: access
+  fullName: access
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 指定できる値は、次のとおりです。'許可'、'拒否'
+  syntax:
+    content: 'access: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkSecurityGroupRule.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    プール内の優先順位は一意であり、優先順位の順序で評価されます。
+
+    数値が低いほど、優先度は高くなります。 たとえば、ルールを指定して、150、250、350 の順序番号を持つ可能性があります。 150 の発注番号を持つルールは、250 の順序であるルールよりも優先されます。 許可される優先度は、150 に 3500 です。 場合は、要求は HTTP ステータス コード 400 で失敗の予約済みまたは重複した値が提供されます。
+  syntax:
+    content: 'priority: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  name: sourceAddressPrefix
+  fullName: sourceAddressPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '有効な値は 1 つの IP アドレス (例: 10.10.10.10)、IP サブネット (192.168.1.0/24 など)、既定のタグ、または * (すべてのアドレス) にします。  その他の場合、要求は HTTP ステータス コード 400 で失敗値が提供されます。'
+  syntax:
+    content: 'sourceAddressPrefix: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch

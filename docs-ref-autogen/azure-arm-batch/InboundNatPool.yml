@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6bb31056a0319191bc30fc016ad82b977d64a23e
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046506"
+items:
+- uid: azure-arm-batch.InboundNatPool
+  name: InboundNatPool
+  fullName: InboundNatPool
+  children:
+  - azure-arm-batch.InboundNatPool.backendPort
+  - azure-arm-batch.InboundNatPool.frontendPortRangeEnd
+  - azure-arm-batch.InboundNatPool.frontendPortRangeStart
+  - azure-arm-batch.InboundNatPool.name
+  - azure-arm-batch.InboundNatPool.networkSecurityGroupRules
+  - azure-arm-batch.InboundNatPool.protocol
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.backendPort
+  name: backendPort
+  fullName: backendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: これは Batch プール内で一意である必要があります。 指定できる値は 1 ~ 65535 の間は点を除いて 22、3389、29876、29877 についてこれらは予約されています。 予約されて存在する場合、要求は HTTP ステータス コード 400 で失敗値が提供されます。
+  syntax:
+    content: 'backendPort: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.frontendPortRangeEnd
+  name: frontendPortRangeEnd
+  fullName: frontendPortRangeEnd
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 許容される値の範囲は 1 から 65534 ポート 50000 から Batch サービスによって予約されている 55000 を除く。 プール内のすべての範囲は一意である必要があり、重ねることはできません。 場合は、要求は HTTP ステータス コード 400 で失敗、予約済みまたは重複する値が提供されます。
+  syntax:
+    content: 'frontendPortRangeEnd: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.frontendPortRangeStart
+  name: frontendPortRangeStart
+  fullName: frontendPortRangeStart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 許容される値の範囲は 1 から 65534 50000 からポートが予約されている 55000 を除く。 プール内のすべての範囲は一意である必要があり、重ねることはできません。 場合は、要求は HTTP ステータス コード 400 で失敗、予約済みまたは重複する値が提供されます。
+  syntax:
+    content: 'frontendPortRangeStart: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 名前は、Batch プール内で一意である必要があります、文字、数字、アンダー スコア、ピリオド、およびハイフンを含めることができます。 名の先頭は英字または番号、文字、番号、またはアンダー スコアで終わる必要がありますおよび 77 文字を超えることはできません。  無効な値がある場合、要求は HTTP ステータス コード 400 で失敗します。
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.networkSecurityGroupRules
+  name: networkSecurityGroupRules
+  fullName: networkSecurityGroupRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Batch プールですべてのエンドポイントで指定できるルールの最大数には 25 です。 ネットワーク セキュリティ グループ ルールが指定されていない場合は指定された backendPort への着信アクセスを許可する既定のルールが作成されます。 ネットワーク セキュリティ グループ規則の最大数を超えたかどうか、要求は HTTP ステータス コード 400 で失敗します。
+  optional: true
+  syntax:
+    content: 'networkSecurityGroupRules?: NetworkSecurityGroupRule[]'
+    return:
+      type:
+      - azure-arm-batch.NetworkSecurityGroupRule[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.InboundNatPool.protocol
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 指定できる値は、次のとおりです。'TCP', 'UDP'
+  syntax:
+    content: 'protocol: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.NetworkSecurityGroupRule[]
+  name: NetworkSecurityGroupRule[]
+  spec.typeScript:
+  - name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    uid: azure-arm-batch.NetworkSecurityGroupRule
+  - name: '[]'
+    fullName: '[]'

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4c6e65102cf738ac75210b581e9abb7af69ddf60
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: f1bb66712907cbb0937dcab25ded5ff3389122a7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53665196"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046616"
 items:
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
   name: SpeechConfig
@@ -33,9 +33,9 @@ items:
   - typeScript
   type: property
   summary: >-
-    認証トークンを設定します。
+    認証トークンを取得/設定します。
 
-    これを設定すると、サブスクリプション キーは無視されます。
+    Autorizaton トークンが設定されている場合は、サブスクリプション キーが無視されます。
 
     ユーザーは、指定された承認トークンが有効であり、期限が切れていないかどうかを確認する必要があります。
   syntax:
@@ -62,7 +62,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: 音声認識に使用されるカスタマイズされた音声モデルのエンドポイント ID を取得します。
+  summary: 音声認識に使用されるカスタマイズされた音声モデルのエンドポイント ID を取得/設定します。
   syntax:
     content: 'public endpointId: string'
     return:
@@ -75,7 +75,10 @@ items:
   type: method
   langs:
   - typeScript
-  summary: 指定した初期の承認トークンとリージョンで音声ファクトリのインスタンスを作成します。
+  summary: >-
+    指定した初期の承認トークンとリージョンで音声ファクトリのインスタンスを作成します。
+
+    注:LanguageUnderstanding サブスクリプション キーから派生したインテント、認識エンジンを使用する場合にトークンを使用してください。
   syntax:
     content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
     parameters:
@@ -103,6 +106,8 @@ items:
     このメソッドは、非標準のサービス エンドポイントまたはパラメーターを使用して、ユーザーに対してのみです。
 
     uri の言語設定が優先され、有効な言語が"DE-DE"。
+
+    注:インテントの認識エンジンを使用する場合は、LanguageUnderstanding サブスクリプション キーを使用してください。
   syntax:
     content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
     parameters:
@@ -124,7 +129,10 @@ items:
   type: method
   langs:
   - typeScript
-  summary: SubscriptionKey とサービスのリージョンを渡すことによって返される SpeechConfig の静的インスタンス。
+  summary: >-
+    SubscriptionKey とサービスのリージョンを渡すことによって返される SpeechConfig の静的インスタンス。
+
+    注:インテントの認識エンジンを使用する場合は、LanguageUnderstanding サブスクリプション キーを使用してください。
   syntax:
     content: 'static function fromSubscription(subscriptionKey: string, region: string)'
     parameters:
@@ -170,7 +178,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: 出力形式を取得します。
+  summary: 出力形式を取得/設定します。
   syntax:
     content: 'public outputFormat: OutputFormat'
     return:
@@ -204,7 +212,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: 入力言語を設定します。
+  summary: 入力言語を取得/設定します。
   syntax:
     content: 'public speechRecognitionLanguage: string'
     return:

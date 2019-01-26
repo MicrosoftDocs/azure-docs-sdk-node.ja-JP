@@ -1,27 +1,55 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 8a4bc2ffa87d1fad8fe4c474a1a674e6ff29d270
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 5ba7cec2c5ee5bfbdeba23ae6c4573f2caadc182
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52104547"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55053643"
 items:
 - uid: azure-iot-provisioning-service.EnrollmentGroup
   name: EnrollmentGroup
   fullName: EnrollmentGroup
   children:
+  - azure-iot-provisioning-service.EnrollmentGroup.allocationPolicy
   - azure-iot-provisioning-service.EnrollmentGroup.attestation
   - azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
+  - azure-iot-provisioning-service.EnrollmentGroup.customAllocationDefinition
   - azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
   - azure-iot-provisioning-service.EnrollmentGroup.etag
   - azure-iot-provisioning-service.EnrollmentGroup.initialTwin
   - azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
+  - azure-iot-provisioning-service.EnrollmentGroup.iotHubs
   - azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
   - azure-iot-provisioning-service.EnrollmentGroup.provisioningStatus
+  - azure-iot-provisioning-service.EnrollmentGroup.reprovisionPolicy
   langs:
   - typeScript
   type: interface
   summary: 登録グループのオブジェクトです。
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.allocationPolicy
+  name: allocationPolicy
+  fullName: allocationPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    この登録グループの割り当てのポリシー。 このポリシーは、テナント レベルの割り当てのポリシーを上書きします。
+
+    - ' ハッシュ '。リンク済み IoT hub は、同程度にプロビジョニングするデバイスです。
+
+    - 'geoLatency':デバイスは、デバイスに最も低い待機時間で、IoT hub にプロビジョニングされます。複数のリンクされた IoT hub では、同じ待ち時間を提供は、プロビジョニング サービスはそれらのハブ全体のデバイスをハッシュします。
+
+    - 'static'。登録の一覧で目的の IoT hub の仕様では、サービス レベルの割り当てポリシーよりも優先されます。
+
+    - 'カスタム'。デバイスは、独自のカスタム ロジックに基づいて、IoT hub にプロビジョニングされます。 プロビジョニング サービスは、ロジックをデバイスに関する情報を渡し、ロジックが必要な IoT hub とも、必要な初期構成を返します。 Azure Functions を使用して、ロジックをホストすることをお勧めします。
+  optional: true
+  syntax:
+    content: 'allocationPolicy?: AllocationPolicyType'
+    return:
+      type:
+      - azure-iot-provisioning-service.AllocationPolicyType
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.attestation
   name: attestation
@@ -53,6 +81,21 @@ items:
     return:
       type:
       - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.customAllocationDefinition
+  name: customAllocationDefinition
+  fullName: customAllocationDefinition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: カスタム割り当ての定義。
+  optional: true
+  syntax:
+    content: 'customAllocationDefinition?: CustomAllocationDefinition'
+    return:
+      type:
+      - azure-iot-provisioning-service.CustomAllocationDefinition
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
   name: enrollmentGroupId
@@ -113,6 +156,20 @@ items:
       type:
       - string
   package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.iotHubs
+  name: iotHubs
+  fullName: iotHubs
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: このリソースでデバイスの IoT hub の名前の一覧を割り当てることができます。 IoT hub のレベルの一覧をテナントのサブセットがあります。
+  syntax:
+    content: 'iotHubs: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
   name: lastUpdatedDateTimeUtc
   fullName: lastUpdatedDateTimeUtc
@@ -141,13 +198,40 @@ items:
       type:
       - azure-iot-provisioning-service.ProvisioningStatus
   package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.reprovisionPolicy
+  name: reprovisionPolicy
+  fullName: reprovisionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: デバイスが IoT hub に再プロビジョニングされるときの動作です。
+  optional: true
+  syntax:
+    content: 'reprovisionPolicy?: ReprovisionPolicy'
+    return:
+      type:
+      - azure-iot-provisioning-service.ReprovisionPolicy
+  package: azure-iot-provisioning-service
 references:
+- uid: azure-iot-provisioning-service.AllocationPolicyType
+  name: AllocationPolicyType
+  spec.typeScript:
+  - name: AllocationPolicyType
+    fullName: AllocationPolicyType
+    uid: azure-iot-provisioning-service.AllocationPolicyType
 - uid: azure-iot-provisioning-service.AttestationMechanism
   name: AttestationMechanism
   spec.typeScript:
   - name: AttestationMechanism
     fullName: AttestationMechanism
     uid: azure-iot-provisioning-service.AttestationMechanism
+- uid: azure-iot-provisioning-service.CustomAllocationDefinition
+  name: CustomAllocationDefinition
+  spec.typeScript:
+  - name: CustomAllocationDefinition
+    fullName: CustomAllocationDefinition
+    uid: azure-iot-provisioning-service.CustomAllocationDefinition
 - uid: azure-iot-provisioning-service.InitialTwin
   name: InitialTwin
   spec.typeScript:
@@ -160,3 +244,9 @@ references:
   - name: ProvisioningStatus
     fullName: ProvisioningStatus
     uid: azure-iot-provisioning-service.ProvisioningStatus
+- uid: azure-iot-provisioning-service.ReprovisionPolicy
+  name: ReprovisionPolicy
+  spec.typeScript:
+  - name: ReprovisionPolicy
+    fullName: ReprovisionPolicy
+    uid: azure-iot-provisioning-service.ReprovisionPolicy
