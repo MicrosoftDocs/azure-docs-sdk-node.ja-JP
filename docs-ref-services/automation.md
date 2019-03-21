@@ -6,16 +6,14 @@ ms.author: eamono
 manager: nirb
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: nodejs
 ms.service: Automation
-ms.openlocfilehash: f364bb09c97c1262f640a4b48514c6abaee5f14a
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 281b5081163fc3b0b74219c766ff9be5c421296b
+ms.sourcegitcommit: 34172ad11850839ddd81d02841807e07f3761425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52154897"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58052595"
 ---
 # <a name="azure-automation-modules-for-nodejs"></a>Node.js 用 Azure Automation モジュール
 

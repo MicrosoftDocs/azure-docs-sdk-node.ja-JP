@@ -10,13 +10,13 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: cognitive-services
-ms.component: speech-service
-ms.openlocfilehash: 43a6921d4ec782287cc041ecaabab4567b0fe677
-ms.sourcegitcommit: 74417c10aee8987c3e0343728efac75823c902d9
+ms.subservice: speech-service
+ms.openlocfilehash: b1375b6beb478cab2475539c03b6bac9f0ea99e0
+ms.sourcegitcommit: 34172ad11850839ddd81d02841807e07f3761425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185989"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58052573"
 ---
 # <a name="cognitive-services-speech-sdk-for-javascript"></a>JavaScript 用 Cognitive Services Speech SDK
 
