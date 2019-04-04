@@ -1,0 +1,238 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iothub.Twin
+    name: Twin
+    fullName: Twin
+    children:
+      - azure-iothub.Twin.deviceId
+      - azure-iothub.Twin.etag
+      - azure-iothub.Twin.get_1
+      - azure-iothub.Twin.get
+      - azure-iothub.Twin.moduleId
+      - azure-iothub.Twin.properties
+      - azure-iothub.Twin.tags
+      - azure-iothub.Twin.toJSON
+      - azure-iothub.Twin.constructor
+      - azure-iothub.Twin.update_1
+      - azure-iothub.Twin.update
+    langs:
+      - typeScript
+    type: class
+    summary: |
+      デバイス ツインは、Azure IoT hub に格納されてして、デバイスがオフラインの場合でもはデバイスの状態を説明するドキュメントです。
+      約 3 のセクションで構築されています。
+        - サービス側からのみアクセスできます。 タグ キー/値のペア
+        - 必要なプロパティ: サービスによって更新され、デバイスで受信しました。
+        - 報告されるプロパティ。 が、デバイスが更新され、サービスによって受信されます。
+      可能性がありますが、目的、報告されるプロパティは一致するようにおらず、SDK のユーザーに必要に応じて、これら 2 つのコレクションを同期するためのロジックを左ことに注意してください。
+
+      詳細については、[デバイス ツインの理解](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins)を参照してください。
+
+      取得することをお勧めの方法、<xref:azure-iothub.Twin>は、特定のデバイスを使用する、<xref:azure-iothub.Registry.getTwin>メソッド。
+    package: azure-iothub
+  - uid: azure-iothub.Twin.deviceId
+    name: deviceId
+    fullName: deviceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: デバイス id レジストリ内に存在すると、デバイス ツインに関連付けられている、デバイス id の一意の識別子。
+    syntax:
+      content: 'deviceId: string'
+      return:
+        type:
+          - string
+    package: azure-iothub
+  - uid: azure-iothub.Twin.etag
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タグは、デバイス ツインの複数の並列エディションを回避するために、オプティミスティック同時実行制御で使用します。
+    syntax:
+      content: 'etag: string'
+      return:
+        type:
+          - string
+    package: azure-iothub
+  - uid: azure-iothub.Twin.get_1
+    name: get()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: IoT Hub サービスからこのデバイス ツインの最新バージョンを取得します。
+    syntax:
+      content: function get()
+      parameters: []
+      return:
+        type:
+          - Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin>>
+    package: azure-iothub
+  - uid: azure-iothub.Twin.get
+    name: get(IncomingMessageCallback<Twin>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: IoT Hub サービスからこのデバイス ツインの最新バージョンを取得します。
+    syntax:
+      content: 'function get(done: IncomingMessageCallback<Twin>)'
+      parameters:
+        - id: done
+          type:
+            - azure-iothub.IncomingMessageCallback<azure-iothub.Twin>
+          description: ''
+    package: azure-iothub
+  - uid: azure-iothub.Twin.moduleId
+    name: moduleId
+    fullName: moduleId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: デバイス id レジストリ内に存在すると、デバイス ツインに関連付けられているモジュールのモジュール識別子です。
+    optional: true
+    syntax:
+      content: 'moduleId?: string'
+      return:
+        type:
+          - string
+    package: azure-iothub
+  - uid: azure-iothub.Twin.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 必要な報告されるプロパティの辞書 (それぞれ`properties.desired`と`properties.reported`)。
+    syntax:
+      content: 'properties: Object'
+      return:
+        type:
+          - Object
+    package: azure-iothub
+  - uid: azure-iothub.Twin.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービス側でのみ使用できますが、特定のデバイスを検索するクエリで使用できるキー/値ペアのコレクションです。
+    syntax:
+      content: 'tags: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-iothub
+  - uid: azure-iothub.Twin.toJSON
+    name: toJSON()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function toJSON()
+      parameters: []
+      return:
+        type:
+          - object
+    package: azure-iothub
+  - uid: azure-iothub.Twin.constructor
+    name: 'Twin(DeviceIdentity | string, Registry)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: '新しいインスタンスを作成<xref:azure-iothub.Twin>です。 新しい方法として推奨される<xref:azure-iothub.Twin>オブジェクトは、使用する、<xref:azure-iothub.Registry.getTwin>メソッド。'
+    syntax:
+      content: 'new Twin(device: DeviceIdentity | string, registryClient: Registry)'
+      parameters:
+        - id: device
+          type:
+            - DeviceIdentity | string
+          description: デバイス識別子の文字列またはデバイスを表すオブジェクトです。 場合、オブジェクト、deviceId プロパティを含めることが必要があります。
+        - id: registryClient
+          type:
+            - azure-iothub.Registry
+          description: |
+            REST API の呼び出しを実行するために使用する HTTP レジストリのクライアント。
+    package: azure-iothub
+  - uid: azure-iothub.Twin.update_1
+    name: update(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 引数として指定された修正プログラムでは、デバイス ツインを更新します。
+    syntax:
+      content: 'function update(patch: any)'
+      parameters:
+        - id: patch
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin>>
+    package: azure-iothub
+  - uid: azure-iothub.Twin.update
+    name: 'update(any, IncomingMessageCallback<Twin>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 引数として指定された修正プログラムでは、デバイス ツインを更新します。
+    syntax:
+      content: 'function update(patch: any, done: IncomingMessageCallback<Twin>)'
+      parameters:
+        - id: patch
+          type:
+            - any
+          description: このデバイス ツインに適用する新しい値を格納するオブジェクト。
+        - id: done
+          type:
+            - azure-iothub.IncomingMessageCallback<azure-iothub.Twin>
+          description: ''
+    package: azure-iothub
+references:
+  - uid: azure-iothub.Registry
+    name: Registry
+    spec.typeScript:
+      - name: Registry
+        fullName: Registry
+        uid: azure-iothub.Registry
+  - uid: azure-iothub.IncomingMessageCallback<azure-iothub.Twin>
+    name: Twin>
+    spec.typeScript:
+      - name: IncomingMessageCallback
+        fullName: IncomingMessageCallback
+        uid: azure-iothub.IncomingMessageCallback
+      - name: <
+        fullName: <
+      - name: Twin
+        fullName: Twin
+        uid: azure-iothub.Twin
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin>>
+    name: Twin>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ResultWithIncomingMessage
+        fullName: ResultWithIncomingMessage
+        uid: azure-iothub.ResultWithIncomingMessage
+      - name: <
+        fullName: <
+      - name: Twin
+        fullName: Twin
+        uid: azure-iothub.Twin
+      - name: '>>'
+        fullName: '>>'

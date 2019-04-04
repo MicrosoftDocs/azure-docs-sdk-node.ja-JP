@@ -1,0 +1,30 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - azure-batch.JobNetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobNetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      これは、VirtualMachineConfiguration プールで実行されるジョブにのみサポートします。
+      これは、フォーム/subscriptions/{subscription}/resourcegroups/{グループ}/providers/{provider}/virtualNetworks/{network}/subnets/{サブネット} の。
+      仮想ネットワークは、同じリージョンと Azure Batch アカウントとサブスクリプションでなければなりません。
+      指定したサブネットに十分な空き IP アドレスをジョブからタスクを実行しているノードの数が必要です。 詳細については、https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configurationを参照してください。
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: azure-batch
