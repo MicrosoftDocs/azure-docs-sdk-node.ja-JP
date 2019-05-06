@@ -1,0 +1,455 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-hubs.EventHubClient'
+    name: EventHubClient
+    fullName: EventHubClient
+    children:
+      - '@azure/event-hubs.EventHubClient.close'
+      - '@azure/event-hubs.EventHubClient.connectionId'
+      - '@azure/event-hubs.EventHubClient.createFromAadTokenCredentials'
+      - '@azure/event-hubs.EventHubClient.createFromConnectionString'
+      - '@azure/event-hubs.EventHubClient.createFromIotHubConnectionString'
+      - '@azure/event-hubs.EventHubClient.createFromTokenProvider'
+      - '@azure/event-hubs.EventHubClient.constructor'
+      - '@azure/event-hubs.EventHubClient.eventhubName'
+      - '@azure/event-hubs.EventHubClient.getHubRuntimeInformation'
+      - '@azure/event-hubs.EventHubClient.getPartitionIds'
+      - '@azure/event-hubs.EventHubClient.getPartitionInformation'
+      - '@azure/event-hubs.EventHubClient.receive'
+      - '@azure/event-hubs.EventHubClient.receiveBatch'
+      - '@azure/event-hubs.EventHubClient.send'
+      - '@azure/event-hubs.EventHubClient.sendBatch'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: このクライアントの切断が完了したときに解決される promise を返す場合、イベント ハブへの AMQP 接続を閉じます。
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.connectionId'
+    name: connectionId
+    fullName: connectionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{文字列}[connectionId]プロセス内で接続を一意に識別する amqp の接続 id。'
+    optional: true
+    syntax:
+      content: 'connectionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.createFromAadTokenCredentials'
+    name: 'createFromAadTokenCredentials(string, string, ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, ClientOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: AADTokenCredentials から、クライアントが EventHub を作成します。
+    syntax:
+      content: 'static function createFromAadTokenCredentials(host: string, entityPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: ClientOptionsBase)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: Event Hubs の完全修飾ドメイン名。 最も可能性の高い、 <yournamespace>servicebus.windows.net。
+        - id: entityPath
+          type:
+            - string
+          description: '''My のイベント ハブ-名'' 形式の EventHub パス'
+        - id: credentials
+          type:
+            - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+          description: AAD トークン資格情報。 次のいずれかを指定できます。ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials します。
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptionsBase'
+          description: このオプションは、クライアントの作成時に指定することができます。
+          optional: true
+      return:
+        type:
+          - '@azure/event-hubs.EventHubClient'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.createFromConnectionString'
+    name: 'createFromConnectionString(string, undefined | string, ClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 接続文字列から、クライアントが EventHub を作成します。
+    syntax:
+      content: 'static function createFromConnectionString(connectionString: string, path?: undefined | string, options?: ClientOptions)'
+      parameters:
+        - id: connectionString
+          type:
+            - string
+          description: 'フォームの接続文字列 '' Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = my、SA の名前。SharedAccessKey マイ SA のキーを ='''
+        - id: path
+          type:
+            - undefined | string
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@azure/event-hubs.EventHubClient'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.createFromIotHubConnectionString'
+    name: 'createFromIotHubConnectionString(string, ClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 接続文字列から、クライアントが EventHub を作成します。
+    syntax:
+      content: 'static function createFromIotHubConnectionString(iothubConnectionString: string, options?: ClientOptions)'
+      parameters:
+        - id: iothubConnectionString
+          type:
+            - string
+          description: フォームの接続文字列 ' ホスト名 = iot のホスト名です。SharedAccessKeyName = my、SA の名前。SharedAccessKey マイ SA のキーを ='
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/event-hubs.EventHubClient>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.createFromTokenProvider'
+    name: 'createFromTokenProvider(string, string, TokenProvider, ClientOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ジェネリックのトークン プロバイダーから、クライアントが EventHub を作成します。
+    syntax:
+      content: 'static function createFromTokenProvider(host: string, entityPath: string, tokenProvider: TokenProvider, options?: ClientOptionsBase)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: Event Hubs の完全修飾ドメイン名。 最も可能性の高い、 <yournamespace>servicebus.windows.net。
+        - id: entityPath
+          type:
+            - string
+          description: '''My のイベント ハブ-名'' 形式の EventHub パス'
+        - id: tokenProvider
+          type:
+            - TokenProvider
+          description: TokenProvider インターフェイスを実装する、トークン プロバイダー。
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptionsBase'
+          description: このオプションは、クライアントの作成時に指定することができます。
+          optional: true
+      return:
+        type:
+          - '@azure/event-hubs.EventHubClient'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.constructor'
+    name: 'EventHubClient(EventHubConnectionConfig, ClientOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: この構成で指定されたイベント ハブを指すクライアントをインスタンス化します。
+    syntax:
+      content: 'new EventHubClient(config: EventHubConnectionConfig, options?: ClientOptions)'
+      parameters:
+        - id: config
+          type:
+            - EventHubConnectionConfig
+          description: EventHub のクライアントを作成する接続の構成。
+        - id: options
+          type:
+            - '@azure/event-hubs.ClientOptions'
+          description: |
+            EventHub クライアント コンストラクターに指定できる省略可能なパラメーター。
+          optional: true
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.eventhubName'
+    name: eventhubName
+    fullName: eventhubName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{文字列} eventhubName がイベント ハブの名前。'
+    syntax:
+      content: 'eventhubName: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.getHubRuntimeInformation'
+    name: getHubRuntimeInformation()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Eventhub のランタイム情報を提供します。
+    syntax:
+      content: function getHubRuntimeInformation()
+      parameters: []
+      return:
+        type:
+          - Promise<@azure/event-hubs.EventHubRuntimeInformation>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.getPartitionIds'
+    name: getPartitionIds()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: PartitionIds の配列を提供します。
+    syntax:
+      content: function getPartitionIds()
+      parameters: []
+      return:
+        type:
+          - Promise<Array<string>>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.getPartitionInformation'
+    name: getPartitionInformation(string | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定したパーティションに関する情報を提供します。
+    syntax:
+      content: 'function getPartitionInformation(partitionId: string | number)'
+      parameters:
+        - id: partitionId
+          type:
+            - string | number
+          description: パーティション ID がパーティションの情報が必要です。
+      return:
+        type:
+          - Promise<@azure/event-hubs.EventHubPartitionRuntimeInformation>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.receive'
+    name: 'receive(string | number, OnMessage, OnError, ReceiveOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: セッションで、AMQP セッションと AMQP の受信側リンクを確立することにより、受信側を起動します。 メッセージは、指定された onMessage ハンドラーに渡され、エラーは、指定された onError ハンドラーに渡されます。
+    syntax:
+      content: 'function receive(partitionId: string | number, onMessage: OnMessage, onError: OnError, options?: ReceiveOptions)'
+      parameters:
+        - id: partitionId
+          type:
+            - string | number
+          description: 受信元のパーティションの ID。
+        - id: onMessage
+          type:
+            - '@azure/event-hubs.OnMessage'
+          description: イベント データ オブジェクトを受信するメッセージ ハンドラー。
+        - id: onError
+          type:
+            - '@azure/event-hubs.OnError'
+          description: メッセージの受信中に発生するエラーが発生するエラー ハンドラー。
+        - id: options
+          type:
+            - '@azure/event-hubs.ReceiveOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@azure/event-hubs.ReceiveHandler'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.receiveBatch'
+    name: 'receiveBatch(string | number, number, undefined | number, ReceiveOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: EventHub パーティションから EventData オブジェクトのバッチを受信の指定された数、および指定された最大待機時間 (秒単位) のどちらかになります。 このメソッドは、受信者オブジェクトを作成したら、直接使用でき、 **MUST NOT**と組み合わせて使用する、`start()`メソッド。
+    syntax:
+      content: 'function receiveBatch(partitionId: string | number, maxMessageCount: number, maxWaitTimeInSeconds?: undefined | number, options?: ReceiveOptions)'
+      parameters:
+        - id: partitionId
+          type:
+            - string | number
+          description: 受信元のパーティションの ID。
+        - id: maxMessageCount
+          type:
+            - number
+          description: メッセージの最大数。 値を 0 より大きくする必要があります。
+        - id: maxWaitTimeInSeconds
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@azure/event-hubs.ReceiveOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/event-hubs.EventData[]>'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.send'
+    name: 'send(EventData, string | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定されたメッセージを EventHub に送信します。
+    syntax:
+      content: 'function send(data: EventData, partitionId?: string | number)'
+      parameters:
+        - id: data
+          type:
+            - '@azure/event-hubs.EventData'
+          description: 送信するメッセージ。  UTF8 でエンコードされた JSON 文字列として送信されます。
+        - id: partitionId
+          type:
+            - string | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Delivery>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.EventHubClient.sendBatch'
+    name: 'sendBatch(EventData[], string | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: イベント ハブには、EventData のバッチを送信します。 "Message_annotations"、"application_properties"および"properties"最初のメッセージのエンベロープ (バッチ メッセージ) として設定されます。
+    syntax:
+      content: 'function sendBatch(datas: EventData[], partitionId?: string | number)'
+      parameters:
+        - id: datas
+          type:
+            - '@azure/event-hubs.EventData[]'
+          description: バッチのメッセージで送信される EventData オブジェクトの配列。
+        - id: partitionId
+          type:
+            - string | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Delivery>
+    package: '@azure/event-hubs'
+references:
+  - uid: '@azure/event-hubs.ClientOptions'
+    name: ClientOptions
+    spec.typeScript:
+      - name: ClientOptions
+        fullName: ClientOptions
+        uid: '@azure/event-hubs.ClientOptions'
+  - uid: Promise<@azure/event-hubs.EventHubRuntimeInformation>
+    name: EventHubRuntimeInformation>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventHubRuntimeInformation
+        fullName: EventHubRuntimeInformation
+        uid: '@azure/event-hubs.EventHubRuntimeInformation'
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<@azure/event-hubs.EventHubPartitionRuntimeInformation>
+    name: EventHubPartitionRuntimeInformation>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventHubPartitionRuntimeInformation
+        fullName: EventHubPartitionRuntimeInformation
+        uid: '@azure/event-hubs.EventHubPartitionRuntimeInformation'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/event-hubs.OnMessage'
+    name: OnMessage
+    spec.typeScript:
+      - name: OnMessage
+        fullName: OnMessage
+        uid: '@azure/event-hubs.OnMessage'
+  - uid: '@azure/event-hubs.OnError'
+    name: OnError
+    spec.typeScript:
+      - name: OnError
+        fullName: OnError
+        uid: '@azure/event-hubs.OnError'
+  - uid: '@azure/event-hubs.ReceiveOptions'
+    name: ReceiveOptions
+    spec.typeScript:
+      - name: ReceiveOptions
+        fullName: ReceiveOptions
+        uid: '@azure/event-hubs.ReceiveOptions'
+  - uid: '@azure/event-hubs.ReceiveHandler'
+    name: ReceiveHandler
+    spec.typeScript:
+      - name: ReceiveHandler
+        fullName: ReceiveHandler
+        uid: '@azure/event-hubs.ReceiveHandler'
+  - uid: 'Promise<@azure/event-hubs.EventData[]>'
+    name: 'EventData[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventData
+        fullName: EventData
+        uid: '@azure/event-hubs.EventData'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/event-hubs.EventData'
+    name: EventData
+    spec.typeScript:
+      - name: EventData
+        fullName: EventData
+        uid: '@azure/event-hubs.EventData'
+  - uid: '@azure/event-hubs.EventData[]'
+    name: 'EventData[]'
+    spec.typeScript:
+      - name: EventData
+        fullName: EventData
+        uid: '@azure/event-hubs.EventData'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/event-hubs.ClientOptionsBase'
+    name: ClientOptionsBase
+    spec.typeScript:
+      - name: ClientOptionsBase
+        fullName: ClientOptionsBase
+        uid: '@azure/event-hubs.ClientOptionsBase'
+  - uid: '@azure/event-hubs.EventHubClient'
+    name: EventHubClient
+    spec.typeScript:
+      - name: EventHubClient
+        fullName: EventHubClient
+        uid: '@azure/event-hubs.EventHubClient'
+  - uid: Promise<@azure/event-hubs.EventHubClient>
+    name: EventHubClient>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: EventHubClient
+        fullName: EventHubClient
+        uid: '@azure/event-hubs.EventHubClient'
+      - name: '>'
+        fullName: '>'
