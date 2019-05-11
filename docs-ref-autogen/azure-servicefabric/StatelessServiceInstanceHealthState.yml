@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState
+    name: StatelessServiceInstanceHealthState
+    fullName: StatelessServiceInstanceHealthState
+    children:
+      - azure-servicefabric.StatelessServiceInstanceHealthState.aggregatedHealthState
+      - azure-servicefabric.StatelessServiceInstanceHealthState.partitionId
+      - azure-servicefabric.StatelessServiceInstanceHealthState.replicaId
+      - azure-servicefabric.StatelessServiceInstanceHealthState.serviceKind
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="9d9b3-101">インスタンス ID を格納するステートレス サービス インスタンスの正常性状態と、集計正常性状態を表します。</span><span class="sxs-lookup"><span data-stu-id="9d9b3-101">Represents the health state of the stateless service instance, which contains the instance ID and the aggregated health state.</span></span>'
+    extends:
+      name: azure-servicefabric.ReplicaHealthState
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d9b3-102">クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。''Invalid''、''Ok''、''警告''、''Error''、''Unknown''</span><span class="sxs-lookup"><span data-stu-id="9d9b3-102">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d9b3-103">このレプリカが属しているパーティションの ID。</span><span class="sxs-lookup"><span data-stu-id="9d9b3-103">The ID of the partition to which this replica belongs.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d9b3-104">Id、ネットワーク上で、ステートレス サービス インスタンスのこのフィールドは ReplicaId と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="9d9b3-104">Id of the stateless service instance on the wire this field is called ReplicaId.</span></span>
+    optional: true
+    syntax:
+      content: 'replicaId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d9b3-105">ポリモーフィックな識別子</span><span class="sxs-lookup"><span data-stu-id="9d9b3-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicaHealthState
+    name: ReplicaHealthState
+    spec.typeScript:
+      - name: ReplicaHealthState
+        fullName: ReplicaHealthState
+        uid: azure-servicefabric.ReplicaHealthState

@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.CheckSequencePropertyBatchOperation
+    name: CheckSequencePropertyBatchOperation
+    fullName: CheckSequencePropertyBatchOperation
+    children:
+      - azure-servicefabric.CheckSequencePropertyBatchOperation.kind
+      - azure-servicefabric.CheckSequencePropertyBatchOperation.propertyName
+      - azure-servicefabric.CheckSequencePropertyBatchOperation.sequenceNumber
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="11ada-101">SequenceNumber 引数を持つプロパティのシーケンス番号を比較します。</span><span class="sxs-lookup"><span data-stu-id="11ada-101">Compares the Sequence Number of a property with the SequenceNumber argument.</span></span>
+      <span data-ttu-id="11ada-102">プロパティのシーケンス番号は、このプロパティのバージョンとして考えることができます。</span><span class="sxs-lookup"><span data-stu-id="11ada-102">A property's sequence number can be thought of as that property's version.</span></span>
+      <span data-ttu-id="11ada-103">プロパティが変更されるたびにそのシーケンス番号は増加します。</span><span class="sxs-lookup"><span data-stu-id="11ada-103">Every time the property is modified, its sequence number is increased.</span></span>
+      <span data-ttu-id="11ada-104">プロパティのメタデータでは、シーケンス番号を確認できます。</span><span class="sxs-lookup"><span data-stu-id="11ada-104">The sequence number can be found in a property's metadata.</span></span>
+      <span data-ttu-id="11ada-105">シーケンス番号が等しくない場合、比較が失敗します。</span><span class="sxs-lookup"><span data-stu-id="11ada-105">The comparison fails if the sequence numbers are not equal.</span></span>
+      <span data-ttu-id="11ada-106">CheckSequencePropertyBatchOperation は、バッチの書き込み操作の前提条件として一般的に使用されます。</span><span class="sxs-lookup"><span data-stu-id="11ada-106">CheckSequencePropertyBatchOperation is generally used as a precondition for the write operations in the batch.</span></span>
+      <span data-ttu-id="11ada-107">なお、PropertyBatch で PropertyBatchOperation を 1 つが失敗した場合、バッチ全体が失敗したし、をトランザクションでコミットすることはできません。</span><span class="sxs-lookup"><span data-stu-id="11ada-107">Note that if one PropertyBatchOperation in a PropertyBatch fails, the entire batch fails and cannot be committed in a transactional manner.</span></span>
+    extends:
+      name: azure-servicefabric.PropertyBatchOperation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckSequencePropertyBatchOperation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="11ada-108">ポリモーフィックな識別子</span><span class="sxs-lookup"><span data-stu-id="11ada-108">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckSequencePropertyBatchOperation.propertyName
+    name: propertyName
+    fullName: propertyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="11ada-109">Service Fabric プロパティの名前。</span><span class="sxs-lookup"><span data-stu-id="11ada-109">The name of the Service Fabric property.</span></span>
+    syntax:
+      content: 'propertyName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckSequencePropertyBatchOperation.sequenceNumber
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="11ada-110">必要なシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="11ada-110">The expected sequence number.</span></span>
+    syntax:
+      content: 'sequenceNumber: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PropertyBatchOperation
+    name: PropertyBatchOperation
+    spec.typeScript:
+      - name: PropertyBatchOperation
+        fullName: PropertyBatchOperation
+        uid: azure-servicefabric.PropertyBatchOperation
