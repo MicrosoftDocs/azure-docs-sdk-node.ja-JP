@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+items:
+  - uid: durable-functions.IFunctionContext
+    name: IFunctionContext
+    fullName: IFunctionContext
+    children:
+      - durable-functions.IFunctionContext.bindingData
+      - durable-functions.IFunctionContext.bindingDefinitions
+      - durable-functions.IFunctionContext.bindings
+      - durable-functions.IFunctionContext.df
+      - durable-functions.IFunctionContext.done
+      - durable-functions.IFunctionContext.executionContext
+      - durable-functions.IFunctionContext.invocationId
+      - durable-functions.IFunctionContext.log
+      - durable-functions.IFunctionContext.req
+      - durable-functions.IFunctionContext.res
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: Context
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindingData
+    name: bindingData
+    fullName: bindingData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e0dd0-101">メタデータと関数の呼び出しデータをトリガーします。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-101">Trigger metadata and function invocation data.</span></span>
+    syntax:
+      content: 'bindingData: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindingDefinitions
+    name: bindingDefinitions
+    fullName: bindingDefinitions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0dd0-102">関数を使用する function.json で定義されているバインディング。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-102">Bindings your function uses, as defined in function.json.</span></span>'
+    syntax:
+      content: 'bindingDefinitions: BindingDefinition[]'
+      return:
+        type:
+          - 'BindingDefinition[]'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindings
+    name: bindings
+    fullName: bindings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e0dd0-103">入力とトリガーの function.json で定義されているデータをバインドします。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-103">Input and trigger binding data, as defined in function.json.</span></span> <span data-ttu-id="e0dd0-104">このオブジェクトのプロパティを動的に生成され、という名前の function.json 内の"name"プロパティに基づいています。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-104">Properties on this object are dynamically generated and named based off of the "name" property in function.json.</span></span>'
+    syntax:
+      content: 'bindings: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.df
+    name: df
+    fullName: df
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'df: DurableOrchestrationContext'
+      return:
+        type:
+          - durable-functions.DurableOrchestrationContext
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.done
+    name: 'done(Error | string | null, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="e0dd0-105">コードが完了したことをランタイムに通知するコールバック関数。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-105">A callback function that signals to the runtime that your code has completed.</span></span> <span data-ttu-id="e0dd0-106">関数が同期の場合は、実行の最後に context.done を呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-106">If your function is synchronous, you must call context.done at the end of execution.</span></span> <span data-ttu-id="e0dd0-107">関数が非同期の場合は、このコールバックを使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-107">If your function is asynchronous, you should not use this callback.</span></span>'
+    syntax:
+      content: 'function done(err?: Error | string | null, result?: any)'
+      parameters:
+        - id: err
+          type:
+            - Error | string | null
+          description: '<span data-ttu-id="e0dd0-108">ランタイムに渡すユーザー定義のエラーです。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-108">A user-defined error to pass back to the runtime.</span></span> <span data-ttu-id="e0dd0-109">存在する場合、関数の実行は失敗します。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-109">If present, your function execution will fail.</span></span>'
+          optional: true
+        - id: result
+          type:
+            - any
+          description: |
+            <span data-ttu-id="e0dd0-110">出力バインドのデータを格納するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-110">An object containing output binding data.</span></span> <span data-ttu-id="e0dd0-111">`result` 文字列、バッファー、ArrayBufferView、または数値である場合を除き、JSON.stringify に渡されます。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-111">`result` will be passed to JSON.stringify unless it is a string, Buffer, ArrayBufferView, or number.</span></span>
+          optional: true
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.executionContext
+    name: executionContext
+    fullName: executionContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e0dd0-112">関数の実行のメタデータ。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-112">Function execution metadata.</span></span>
+    syntax:
+      content: 'executionContext: ExecutionContext'
+      return:
+        type:
+          - ExecutionContext
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.invocationId
+    name: invocationId
+    fullName: invocationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e0dd0-113">関数の呼び出しごとの一意の GUID。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-113">A unique GUID per function invocation.</span></span>
+    syntax:
+      content: 'invocationId: string'
+      return:
+        type:
+          - string
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.log
+    name: log
+    fullName: log
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e0dd0-114">記述することができます関数のログをストリーミングします。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-114">Allows you to write streaming function logs.</span></span> <span data-ttu-id="e0dd0-115">記述することができますを直接呼び出す既定のトレース レベルで関数ログをストリーミングします。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-115">Calling directly allows you to write streaming function logs at the default trace level.</span></span>
+    syntax:
+      content: 'log: Logger'
+      return:
+        type:
+          - Logger
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.req
+    name: req
+    fullName: req
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e0dd0-116">HTTP 要求オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-116">HTTP request object.</span></span> <span data-ttu-id="e0dd0-117">HTTP バインドを使用する場合に、関数に用意されています。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-117">Provided to your function when using HTTP Bindings.</span></span>
+    optional: true
+    syntax:
+      content: 'req?: HttpRequest'
+      return:
+        type:
+          - HttpRequest
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.res
+    name: res
+    fullName: res
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e0dd0-118">HTTP 応答オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-118">HTTP response object.</span></span> <span data-ttu-id="e0dd0-119">HTTP バインドを使用する場合に、関数に用意されています。</span><span class="sxs-lookup"><span data-stu-id="e0dd0-119">Provided to your function when using HTTP Bindings.</span></span>
+    optional: true
+    syntax:
+      content: 'res?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+references:
+  - uid: durable-functions.DurableOrchestrationContext
+    name: DurableOrchestrationContext
+    spec.typeScript:
+      - name: DurableOrchestrationContext
+        fullName: DurableOrchestrationContext
+        uid: durable-functions.DurableOrchestrationContext
