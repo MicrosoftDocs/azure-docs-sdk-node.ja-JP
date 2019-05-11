@@ -1,0 +1,244 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy
+    name: ExtendedServerBlobAuditingPolicy
+    fullName: ExtendedServerBlobAuditingPolicy
+    children:
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.auditActionsAndGroups
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.id
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.isAzureMonitorTargetEnabled
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.isStorageSecondaryKeyInUse
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.name
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.predicateExpression
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.retentionDays
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.state
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountAccessKey
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountSubscriptionId
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageEndpoint
+      - azure-arm-sql.ExtendedServerBlobAuditingPolicy.type
+    langs:
+      - typeScript
+    type: interface
+    summary: 拡張サーバー blob 監査ポリシー、します。
+    extends:
+      name: azure-arm-sql.ProxyResource
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.auditActionsAndGroups
+    name: auditActionsAndGroups
+    fullName: auditActionsAndGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      監査アクション グループとアクションを指定します。
+      推奨されるを使用するアクション グループの設定は次の組み合わせです。-すべてのクエリと、データベース、成功および失敗したログインに対して実行されるストアド プロシージャが監査します。
+
+      BATCH_COMPLETED_GROUP、SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP、FAILED_DATABASE_AUTHENTICATION_GROUP します。
+
+      この組み合わせの上にも、Azure portal から監査を有効にする場合、既定で構成されているセット。
+
+      監査するサポートされているアクション グループは (注: 監査のニーズをカバーする特定のグループを選択します。 不要なグループを使用する可能性が非常に大量の監査レコード)。
+
+      APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP
+
+      これらは、すべての sql ステートメントに対応するグループと、ストアド プロシージャは、データベースに対して実行され、重複する監査ログで、この結果として、他のグループと組み合わせて使用されませんが。
+
+      詳細については、次を参照してください。[データベース レベルの監査アクション グループ](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups)します。
+
+      データベース監査ポリシーが、特定のアクションは、指定した (注のサーバー監査ポリシーのアクションを指定することはできません) をこともできます。 サポートされているアクションを監査します。更新プログラムの挿入の削除の実行の参照を受け取る
+
+      監査するアクションを定義するための一般的な形式: {action} ON {オブジェクト} {プリンシパル} を
+
+      なお<object>上の形式で、テーブル、ビュー、またはストアド プロシージャ、または、データベース全体またはスキーマのようなオブジェクトを参照できます。 後者の場合、データベース フォーム:: {db_name} とスキーマ:: {schema_name} それぞれで使用されます。
+
+      以下に例を示します。SELECT on dbo.myTable by public SELECT on DATABASE::myDatabase by public SELECT on SCHEMA::mySchema by public
+
+      詳細については、次を参照してください[データベース レベルの監査アクション。](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
+    optional: true
+    syntax:
+      content: 'auditActionsAndGroups?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソースの ID
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.isAzureMonitorTargetEnabled
+    name: isAzureMonitorTargetEnabled
+    fullName: isAzureMonitorTargetEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |+
+      監査イベントは、Azure Monitor に送信されるかどうかを指定します。
+      Azure Monitor にイベントを送信するには 'Enabled' と 'IsAzureMonitorTargetEnabled' true 'State' を指定します。
+      REST API を使用して、監査を構成する、データベースに 'SQLSecurityAuditEvents' 診断ログのカテゴリがある診断の設定も作成する必要があります。
+      サーバー レベルの監査することは、{databasename} として 'master' データベースを使用する必要があります。
+
+      診断設定の URI の形式:PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+      詳細については、次を参照してください[診断設定の REST API](https://go.microsoft.com/fwlink/?linkid=2033207)または[診断設定の PowerShell。](https://go.microsoft.com/fwlink/?linkid=2033043)
+
+    optional: true
+    syntax:
+      content: 'isAzureMonitorTargetEnabled?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.isStorageSecondaryKeyInUse
+    name: isStorageSecondaryKeyInUse
+    fullName: isStorageSecondaryKeyInUse
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: StorageAccountAccessKey 値が、記憶域のセカンダリ キーであるかどうかを指定します。
+    optional: true
+    syntax:
+      content: 'isStorageSecondaryKeyInUse?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソース名。
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.predicateExpression
+    name: predicateExpression
+    fullName: predicateExpression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 場所の条件を指定します、監査を作成するときに、句。
+    optional: true
+    syntax:
+      content: 'predicateExpression?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.retentionDays
+    name: retentionDays
+    fullName: retentionDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ストレージ アカウントにログに記録、監査に保持する日数を指定します。
+    optional: true
+    syntax:
+      content: 'retentionDays?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリシーの状態を指定します。 状態が有効になっている場合、storageEndpoint または isAzureMonitorTargetEnabled が必要です。 指定できる値は、次のとおりです。' Enabled、' 'Disabled'
+    syntax:
+      content: 'state: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountAccessKey
+    name: storageAccountAccessKey
+    fullName: storageAccountAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 監査のストレージ アカウントのキー識別子を指定します。 状態が有効にし、storageEndpoint が指定されて、storageAccountAccessKey が必要です。
+    optional: true
+    syntax:
+      content: 'storageAccountAccessKey?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountSubscriptionId
+    name: storageAccountSubscriptionId
+    fullName: storageAccountSubscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Blob ストレージのサブスクリプション id を指定します
+    optional: true
+    syntax:
+      content: 'storageAccountSubscriptionId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.storageEndpoint
+    name: storageEndpoint
+    fullName: storageEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Blob ストレージ エンドポイントを指定します (例:https://MyAccount.blob.core.windows.net)します。 状態が有効になっている場合は、storageEndpoint が必要です。'
+    optional: true
+    syntax:
+      content: 'storageEndpoint?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedServerBlobAuditingPolicy.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソースの種類。
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+references:
+  - uid: azure-arm-sql.ProxyResource
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: azure-arm-sql.ProxyResource

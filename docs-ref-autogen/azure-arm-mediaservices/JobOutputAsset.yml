@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.JobOutputAsset
+    name: JobOutputAsset
+    fullName: JobOutputAsset
+    children:
+      - azure-arm-mediaservices.JobOutputAsset.assetName
+      - azure-arm-mediaservices.JobOutputAsset.error
+      - azure-arm-mediaservices.JobOutputAsset.label
+      - azure-arm-mediaservices.JobOutputAsset.odatatype
+      - azure-arm-mediaservices.JobOutputAsset.progress
+      - azure-arm-mediaservices.JobOutputAsset.state
+    langs:
+      - typeScript
+    type: interface
+    summary: JobOutput として使用する資産を表します。
+    extends:
+      name: azure-arm-mediaservices.JobOutput
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobOutputAsset.assetName
+    name: assetName
+    fullName: assetName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 出力の名前資産。
+    syntax:
+      content: 'assetName: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobOutputAsset.error
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: JobOutput がエラー状態の場合は、エラーの詳細が含まれています。
+    optional: true
+    syntax:
+      content: 'error?: JobError'
+      return:
+        type:
+          - azure-arm-mediaservices.JobError
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobOutputAsset.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '一意に識別しやすくために、JobOutput に割り当てられているラベルです。 これは、機能は、変換があるジョブの 1 つ以上の JobOutput にそれにより、1 つ以上の TransformOutput ときに便利です。 このような場合は、ジョブを送信するときに TransformOutputs トランス フォームと同じ順序で、2 つ以上の JobOutputs を追加します。 その後、イベントを介してまたは GET 要求では、いずれかと、ジョブを取得するときは、JobOutput を簡単に識別するために、ラベルを使用できます。 ラベルが指定されていない場合、''{presetName} _ {outputIndex}'' の既定値は使用される、プリセット名は対応する TransformOutput と出力インデックスにプリセットの名前は、この相対インデックス番号、JobOutput ジョブ内。 このインデックスは、その変換内で対応する TransformOutput の相対インデックスと同じことに注意してください。'
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobOutputAsset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobOutputAsset.progress
+    name: progress
+    fullName: progress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: JobOutput が処理状態である場合は、ジョブの完了パーセンテージが含まれます。 値は概算でありジョブの完了時間を予測に使用するものでありません。 JobOutput が完了するとかどうかを判断するには、State プロパティを使用します。
+    optional: true
+    syntax:
+      content: 'progress?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobOutputAsset.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: JobOutput の状態について説明します。 指定できる値は、次のとおりです。'キャンセル'、'キャンセル'、'Error'、'完了'、'処理'、' Queued'、'スケジュール'
+    optional: true
+    syntax:
+      content: 'state?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.JobOutput
+    name: JobOutput
+    spec.typeScript:
+      - name: JobOutput
+        fullName: JobOutput
+        uid: azure-arm-mediaservices.JobOutput
+  - uid: azure-arm-mediaservices.JobError
+    name: JobError
+    spec.typeScript:
+      - name: JobError
+        fullName: JobError
+        uid: azure-arm-mediaservices.JobError
