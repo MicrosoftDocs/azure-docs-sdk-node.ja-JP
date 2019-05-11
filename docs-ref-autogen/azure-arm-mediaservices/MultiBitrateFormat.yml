@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.MultiBitrateFormat
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+      - azure-arm-mediaservices.MultiBitrateFormat.odatatype
+      - azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    langs:
+      - typeScript
+    type: interface
+    summary: 固定 GOP マルチビット レートのファイルのコレクションを生成するためのプロパティについて説明します。 既定の動作では、すべてのオーディオと共に muxed である各ビデオ レイヤーの 1 つの出力ファイルを作成します。 OutputFiles コレクションを指定することによって生成された正確な出力ファイルを制御できます。
+    extends:
+      name: azure-arm-mediaservices.Format
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      生成された出力ファイルのファイル名のパターン。 ファイル名に次のマクロがサポートされています: {basename} - 入力動画 {index} {extension} の基本名 - この形式の適切な拡張機能。 {ラベル} - コーデック/レイヤーに割り当てられます。
+      {Index} - サムネイルの一意のインデックス。 サムネイルにのみ適用されます。 {ビットレート} - オーディオ/ビデオ ビットレート。 サムネイルには適用されません。 {Codec} - オーディオ/ビデオ コーデックの種類。 Unsubstituted のすべてのマクロは解除され、ファイル名から削除します。
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 生成する出力ファイルの一覧。  リスト内の各エントリは、muxed をまとめるオーディオおよびビデオ レイヤーのラベルのセットです。
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.OutputFile[]'
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Format
+    name: Format
+    spec.typeScript:
+      - name: Format
+        fullName: Format
+        uid: azure-arm-mediaservices.Format
+  - uid: 'azure-arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-arm-mediaservices.OutputFile
+      - name: '[]'
+        fullName: '[]'

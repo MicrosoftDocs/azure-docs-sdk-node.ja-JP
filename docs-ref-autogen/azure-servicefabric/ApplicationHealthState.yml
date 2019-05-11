@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationHealthState
+    name: ApplicationHealthState
+    fullName: ApplicationHealthState
+    children:
+      - azure-servicefabric.ApplicationHealthState.aggregatedHealthState
+      - azure-servicefabric.ApplicationHealthState.name
+    langs:
+      - typeScript
+    type: interface
+    summary: アプリケーション識別子と集計正常性状態を含む、アプリケーションのヘルス状態を表します。
+    extends:
+      name: azure-servicefabric.EntityHealthState
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthState.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthState.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'アプリケーションの名前を含む、'' fabric:''URI スキームのないアプリケーションの完全な名前です。'
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthState
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: azure-servicefabric.EntityHealthState

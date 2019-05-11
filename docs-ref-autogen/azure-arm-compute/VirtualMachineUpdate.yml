@@ -1,0 +1,325 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-compute.VirtualMachineUpdate
+    name: VirtualMachineUpdate
+    fullName: VirtualMachineUpdate
+    children:
+      - azure-arm-compute.VirtualMachineUpdate.additionalCapabilities
+      - azure-arm-compute.VirtualMachineUpdate.availabilitySet
+      - azure-arm-compute.VirtualMachineUpdate.diagnosticsProfile
+      - azure-arm-compute.VirtualMachineUpdate.hardwareProfile
+      - azure-arm-compute.VirtualMachineUpdate.identity
+      - azure-arm-compute.VirtualMachineUpdate.instanceView
+      - azure-arm-compute.VirtualMachineUpdate.licenseType
+      - azure-arm-compute.VirtualMachineUpdate.networkProfile
+      - azure-arm-compute.VirtualMachineUpdate.osProfile
+      - azure-arm-compute.VirtualMachineUpdate.plan
+      - azure-arm-compute.VirtualMachineUpdate.provisioningState
+      - azure-arm-compute.VirtualMachineUpdate.storageProfile
+      - azure-arm-compute.VirtualMachineUpdate.tags
+      - azure-arm-compute.VirtualMachineUpdate.vmId
+      - azure-arm-compute.VirtualMachineUpdate.zones
+    langs:
+      - typeScript
+    type: interface
+    summary: バーチャル マシンの更新について説明します。
+    extends:
+      name: azure-arm-compute.UpdateResource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.additionalCapabilities
+    name: additionalCapabilities
+    fullName: additionalCapabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: その他の機能、仮想マシンで有効し、無効を指定します。
+    optional: true
+    syntax:
+      content: 'additionalCapabilities?: AdditionalCapabilities'
+      return:
+        type:
+          - azure-arm-compute.AdditionalCapabilities
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.availabilitySet
+    name: availabilitySet
+    fullName: availabilitySet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      仮想マシンを割り当てる必要がある可用性セットに関する情報を指定します。 同じ可用性セットに指定された仮想マシンは、可用性を最大化する別のノードに割り当てられます。 可用性セットの詳細については、次を参照してください。[仮想マシンの可用性管理](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)します。
+      <br><br> Azure の計画済みメンテナンスの詳細については、次を参照してください[計画済みメンテナンスについては、Azure の仮想マシン。](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> 現時点では、VM は可用性セットの作成時にのみ追加できます。 既存の VM は、可用性セットに追加できません。
+    optional: true
+    syntax:
+      content: 'availabilitySet?: SubResource'
+      return:
+        type:
+          - azure-arm-compute.SubResource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.diagnosticsProfile
+    name: diagnosticsProfile
+    fullName: diagnosticsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ブート診断設定の状態を指定します。 <br><br>最小 api バージョン:2015-06-15.'
+    optional: true
+    syntax:
+      content: 'diagnosticsProfile?: DiagnosticsProfile'
+      return:
+        type:
+          - azure-arm-compute.DiagnosticsProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.hardwareProfile
+    name: hardwareProfile
+    fullName: hardwareProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仮想マシンのハードウェア設定を指定します。
+    optional: true
+    syntax:
+      content: 'hardwareProfile?: HardwareProfile'
+      return:
+        type:
+          - azure-arm-compute.HardwareProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.identity
+    name: identity
+    fullName: identity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 構成されている場合、仮想マシンの id。
+    optional: true
+    syntax:
+      content: 'identity?: VirtualMachineIdentity'
+      return:
+        type:
+          - azure-arm-compute.VirtualMachineIdentity
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.instanceView
+    name: instanceView
+    fullName: instanceView
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仮想マシン インスタンス ビュー。
+    optional: true
+    syntax:
+      content: 'instanceView?: VirtualMachineInstanceView'
+      return:
+        type:
+          - azure-arm-compute.VirtualMachineInstanceView
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.licenseType
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      使用されているイメージまたはディスクがオンプレミスでライセンスされたことを指定します。 この要素は、Windows Server オペレーティング システムを含むイメージでのみ使用されます。 <br><br> 有効な値は次のとおりです。 <br><br> Windows_Client <br><br> Windows_Server <br><br> 更新プログラムの要求でこの要素が含まれる場合、値は、初期の値と一致する必要があります。 この値を更新することはできません。 <br><br> 詳細については、次を参照してください[Azure Hybrid Use Benefit の Windows Server。](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> 最小 api バージョン:2015-06-15
+    optional: true
+    syntax:
+      content: 'licenseType?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.networkProfile
+    name: networkProfile
+    fullName: networkProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仮想マシンのネットワーク インターフェイスを指定します。
+    optional: true
+    syntax:
+      content: 'networkProfile?: NetworkProfile'
+      return:
+        type:
+          - azure-arm-compute.NetworkProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.osProfile
+    name: osProfile
+    fullName: osProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仮想マシンのオペレーティング システム設定を指定します。
+    optional: true
+    syntax:
+      content: 'osProfile?: OSProfile'
+      return:
+        type:
+          - azure-arm-compute.OSProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.plan
+    name: plan
+    fullName: plan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '仮想マシンを作成するために使用する marketplace イメージに関する情報を指定します。 この要素は、marketplace イメージにのみ使用されます。 API からの marketplace イメージを使用するには、画像がプログラムでの使用を有効にする必要があります。  Azure portal の marketplace イメージを使用して、クリックするを見つけ**プログラムでデプロイする、開始する]-> [** します。 必要な情報を入力し、クリックして**保存**します。'
+    optional: true
+    syntax:
+      content: 'plan?: Plan'
+      return:
+        type:
+          - azure-arm-compute.Plan
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 応答内にのみ表示されます。 プロビジョニング状態。
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.storageProfile
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仮想マシンのストレージ設定を指定します。
+    optional: true
+    syntax:
+      content: 'storageProfile?: StorageProfile'
+      return:
+        type:
+          - azure-arm-compute.StorageProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソース タグ
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.vmId
+    name: vmId
+    fullName: vmId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エンコードされ、すべての Azure IaaS Vm の SMBIOS に格納される 128 ビット識別子である VM 一意の ID を指定し、使用するプラットフォームの BIOS コマンドを読み取りできます。
+    optional: true
+    syntax:
+      content: 'vmId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineUpdate.zones
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仮想マシンのゾーンです。
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-compute
+references:
+  - uid: azure-arm-compute.UpdateResource
+    name: UpdateResource
+    spec.typeScript:
+      - name: UpdateResource
+        fullName: UpdateResource
+        uid: azure-arm-compute.UpdateResource
+  - uid: azure-arm-compute.AdditionalCapabilities
+    name: AdditionalCapabilities
+    spec.typeScript:
+      - name: AdditionalCapabilities
+        fullName: AdditionalCapabilities
+        uid: azure-arm-compute.AdditionalCapabilities
+  - uid: azure-arm-compute.SubResource
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-compute.SubResource
+  - uid: azure-arm-compute.DiagnosticsProfile
+    name: DiagnosticsProfile
+    spec.typeScript:
+      - name: DiagnosticsProfile
+        fullName: DiagnosticsProfile
+        uid: azure-arm-compute.DiagnosticsProfile
+  - uid: azure-arm-compute.HardwareProfile
+    name: HardwareProfile
+    spec.typeScript:
+      - name: HardwareProfile
+        fullName: HardwareProfile
+        uid: azure-arm-compute.HardwareProfile
+  - uid: azure-arm-compute.VirtualMachineIdentity
+    name: VirtualMachineIdentity
+    spec.typeScript:
+      - name: VirtualMachineIdentity
+        fullName: VirtualMachineIdentity
+        uid: azure-arm-compute.VirtualMachineIdentity
+  - uid: azure-arm-compute.VirtualMachineInstanceView
+    name: VirtualMachineInstanceView
+    spec.typeScript:
+      - name: VirtualMachineInstanceView
+        fullName: VirtualMachineInstanceView
+        uid: azure-arm-compute.VirtualMachineInstanceView
+  - uid: azure-arm-compute.NetworkProfile
+    name: NetworkProfile
+    spec.typeScript:
+      - name: NetworkProfile
+        fullName: NetworkProfile
+        uid: azure-arm-compute.NetworkProfile
+  - uid: azure-arm-compute.OSProfile
+    name: OSProfile
+    spec.typeScript:
+      - name: OSProfile
+        fullName: OSProfile
+        uid: azure-arm-compute.OSProfile
+  - uid: azure-arm-compute.Plan
+    name: Plan
+    spec.typeScript:
+      - name: Plan
+        fullName: Plan
+        uid: azure-arm-compute.Plan
+  - uid: azure-arm-compute.StorageProfile
+    name: StorageProfile
+    spec.typeScript:
+      - name: StorageProfile
+        fullName: StorageProfile
+        uid: azure-arm-compute.StorageProfile

@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedServicePackageHealthEvaluation
+    name: DeployedServicePackageHealthEvaluation
+    fullName: DeployedServicePackageHealthEvaluation
+    children:
+      - azure-servicefabric.DeployedServicePackageHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.DeployedServicePackageHealthEvaluation.applicationName
+      - azure-servicefabric.DeployedServicePackageHealthEvaluation.description
+      - azure-servicefabric.DeployedServicePackageHealthEvaluation.kind
+      - azure-servicefabric.DeployedServicePackageHealthEvaluation.nodeName
+      - azure-servicefabric.DeployedServicePackageHealthEvaluation.serviceManifestName
+      - azure-servicefabric.DeployedServicePackageHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: デプロイされたサービス パッケージの場合、データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む正常性評価を表します。 評価には、集計正常性状態がエラーまたは警告のいずれかである場合にのみが返されます。
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthEvaluation.applicationName
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'アプリケーションの名前を含む、'' fabric:''URI スキームのないアプリケーションの完全な名前です。'
+    optional: true
+    syntax:
+      content: 'applicationName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 評価プロセスの概要を表す正常性評価の説明です。
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthEvaluation.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric ノードの名前。
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthEvaluation.serviceManifestName
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービス マニフェストの名前。
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 現在の集計正常性状態の原因となった異常性の評価のリスト。 異常性の評価の種類には、EventHealthEvaluation を指定できます。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

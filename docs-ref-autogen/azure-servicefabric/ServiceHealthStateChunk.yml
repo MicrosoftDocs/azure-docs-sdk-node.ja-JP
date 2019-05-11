@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServiceHealthStateChunk
+    name: ServiceHealthStateChunk
+    fullName: ServiceHealthStateChunk
+    children:
+      - azure-servicefabric.ServiceHealthStateChunk.healthState
+      - azure-servicefabric.ServiceHealthStateChunk.partitionHealthStateChunks
+      - azure-servicefabric.ServiceHealthStateChunk.serviceName
+    langs:
+      - typeScript
+    type: interface
+    summary: サービス名、その集計正常性状態、およびクラスターの正常性チャンク クエリの説明でフィルターに該当するすべてのパーティションを含む、サービスの正常性状態チャンクを表します。
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceHealthStateChunk.partitionHealthStateChunks
+    name: partitionHealthStateChunks
+    fullName: partitionHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: チャンクのデータのパーティションの正常性状態、サービスに属しているクラスターの正常性でフィルターに該当する一覧は、クエリの説明をチャンクします。
+    optional: true
+    syntax:
+      content: 'partitionHealthStateChunks?: PartitionHealthStateChunkList'
+      return:
+        type:
+          - azure-servicefabric.PartitionHealthStateChunkList
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceHealthStateChunk.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このオブジェクトの正常性状態チャンクが提供されるサービスの名前。
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk
+  - uid: azure-servicefabric.PartitionHealthStateChunkList
+    name: PartitionHealthStateChunkList
+    spec.typeScript:
+      - name: PartitionHealthStateChunkList
+        fullName: PartitionHealthStateChunkList
+        uid: azure-servicefabric.PartitionHealthStateChunkList

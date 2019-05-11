@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.NamedPartitionInformation
+    name: NamedPartitionInformation
+    fullName: NamedPartitionInformation
+    children:
+      - azure-servicefabric.NamedPartitionInformation.id
+      - azure-servicefabric.NamedPartitionInformation.name
+      - azure-servicefabric.NamedPartitionInformation.servicePartitionKind
+    langs:
+      - typeScript
+    type: interface
+    summary: パーティション構成に基づく文字列として名前のパーティションの情報について説明します。
+    extends:
+      name: azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NamedPartitionInformation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パーティションを一意に識別するために、Service Fabric によって使用される内部の ID。 これは、サービスの作成時にランダムに生成された GUID です。 パーティション ID は一意し、サービスの有効期間は変更されません。 同じサービスが削除され、そのパーティションの Id を再作成する場合は、異なるでしょう。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NamedPartitionInformation.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パーティションの名前。
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NamedPartitionInformation.servicePartitionKind
+    name: servicePartitionKind
+    fullName: servicePartitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'servicePartitionKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation
