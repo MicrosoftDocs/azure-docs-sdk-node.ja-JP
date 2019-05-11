@@ -1,0 +1,966 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-apimanagement.ApiSchema
+    name: ApiSchema
+    fullName: ApiSchema
+    children:
+      - azure-arm-apimanagement.ApiSchema.createOrUpdate
+      - azure-arm-apimanagement.ApiSchema.createOrUpdate_2
+      - azure-arm-apimanagement.ApiSchema.createOrUpdate_1
+      - azure-arm-apimanagement.ApiSchema.createOrUpdateWithHttpOperationResponse
+      - azure-arm-apimanagement.ApiSchema.deleteMethod
+      - azure-arm-apimanagement.ApiSchema.deleteMethod_2
+      - azure-arm-apimanagement.ApiSchema.deleteMethod_1
+      - azure-arm-apimanagement.ApiSchema.deleteMethodWithHttpOperationResponse
+      - azure-arm-apimanagement.ApiSchema.get
+      - azure-arm-apimanagement.ApiSchema.get_2
+      - azure-arm-apimanagement.ApiSchema.get_1
+      - azure-arm-apimanagement.ApiSchema.getEntityTag
+      - azure-arm-apimanagement.ApiSchema.getEntityTag_2
+      - azure-arm-apimanagement.ApiSchema.getEntityTag_1
+      - azure-arm-apimanagement.ApiSchema.getEntityTagWithHttpOperationResponse
+      - azure-arm-apimanagement.ApiSchema.getWithHttpOperationResponse
+      - azure-arm-apimanagement.ApiSchema.listByApi
+      - azure-arm-apimanagement.ApiSchema.listByApi_2
+      - azure-arm-apimanagement.ApiSchema.listByApi_1
+      - azure-arm-apimanagement.ApiSchema.listByApiNext
+      - azure-arm-apimanagement.ApiSchema.listByApiNext_2
+      - azure-arm-apimanagement.ApiSchema.listByApiNext_1
+      - azure-arm-apimanagement.ApiSchema.listByApiNextWithHttpOperationResponse
+      - azure-arm-apimanagement.ApiSchema.listByApiWithHttpOperationResponse
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.createOrUpdate
+    name: 'createOrUpdate(string, string, string, string, SchemaCreateOrUpdateContract, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-101">作成または API のスキーマの構成を更新します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-101">Creates or updates schema configuration for the API.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, parameters: SchemaCreateOrUpdateContract, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-102">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-102">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-103">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-103">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-104">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-104">API revision identifier.</span></span> <span data-ttu-id="b6d98-105">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-105">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-106">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-106">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: schemaId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-107">API 内のスキーマの識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-107">Schema identifier within an API.</span></span> <span data-ttu-id="b6d98-108">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-108">Must be unique in the current API Management service instance.</span></span>
+        - id: parameters
+          type:
+            - azure-arm-apimanagement.SchemaCreateOrUpdateContract
+          description: |
+            <span data-ttu-id="b6d98-109">適用するスキーマの内容。</span><span class="sxs-lookup"><span data-stu-id="b6d98-109">The schema contents to apply.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaContract>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.createOrUpdate_2
+    name: 'createOrUpdate(string, string, string, string, SchemaCreateOrUpdateContract, Object, ServiceCallback<SchemaContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-110">作成または API のスキーマの構成を更新します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-110">Creates or updates schema configuration for the API.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, parameters: SchemaCreateOrUpdateContract, options: Object, callback: ServiceCallback<SchemaContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: schemaId
+          type:
+            - string
+          description: ''
+        - id: parameters
+          type:
+            - azure-arm-apimanagement.SchemaCreateOrUpdateContract
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-apimanagement.SchemaContract>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaContract>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.createOrUpdate_1
+    name: 'createOrUpdate(string, string, string, string, SchemaCreateOrUpdateContract, ServiceCallback<SchemaContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-111">作成または API のスキーマの構成を更新します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-111">Creates or updates schema configuration for the API.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, parameters: SchemaCreateOrUpdateContract, callback: ServiceCallback<SchemaContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: schemaId
+          type:
+            - string
+          description: ''
+        - id: parameters
+          type:
+            - azure-arm-apimanagement.SchemaCreateOrUpdateContract
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-apimanagement.SchemaContract>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaContract>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.createOrUpdateWithHttpOperationResponse
+    name: 'createOrUpdateWithHttpOperationResponse(string, string, string, string, SchemaCreateOrUpdateContract, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-112">作成または API のスキーマの構成を更新します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-112">Creates or updates schema configuration for the API.</span></span>
+    syntax:
+      content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, parameters: SchemaCreateOrUpdateContract, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-113">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-113">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-114">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-114">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-115">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-115">API revision identifier.</span></span> <span data-ttu-id="b6d98-116">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-116">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-117">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-117">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: schemaId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-118">API 内のスキーマの識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-118">Schema identifier within an API.</span></span> <span data-ttu-id="b6d98-119">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-119">Must be unique in the current API Management service instance.</span></span>
+        - id: parameters
+          type:
+            - azure-arm-apimanagement.SchemaCreateOrUpdateContract
+          description: |
+            <span data-ttu-id="b6d98-120">適用するスキーマの内容。</span><span class="sxs-lookup"><span data-stu-id="b6d98-120">The schema contents to apply.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-apimanagement.SchemaContract>>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.deleteMethod
+    name: 'deleteMethod(string, string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-121">Api でスキーマの構成を削除します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-121">Deletes the schema configuration at the Api.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-122">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-122">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-123">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-123">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-124">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-124">API revision identifier.</span></span> <span data-ttu-id="b6d98-125">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-125">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-126">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-126">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: schemaId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-127">API 内のスキーマの識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-127">Schema identifier within an API.</span></span> <span data-ttu-id="b6d98-128">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-128">Must be unique in the current API Management service instance.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-129">エンティティの ETag。</span><span class="sxs-lookup"><span data-stu-id="b6d98-129">ETag of the Entity.</span></span> <span data-ttu-id="b6d98-130">ETag は、GET 要求のヘッダー応答から現在のエンティティ状態と一致する必要がありますまたは必要がある \* の無条件更新します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-130">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.deleteMethod_2
+    name: 'deleteMethod(string, string, string, string, string, Object, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-131">Api でスキーマの構成を削除します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-131">Deletes the schema configuration at the Api.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, ifMatch: string, options: Object, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: schemaId
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.deleteMethod_1
+    name: 'deleteMethod(string, string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-132">Api でスキーマの構成を削除します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-132">Deletes the schema configuration at the Api.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, ifMatch: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: schemaId
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.deleteMethodWithHttpOperationResponse
+    name: 'deleteMethodWithHttpOperationResponse(string, string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-133">Api でスキーマの構成を削除します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-133">Deletes the schema configuration at the Api.</span></span>
+    syntax:
+      content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-134">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-134">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-135">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-135">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-136">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-136">API revision identifier.</span></span> <span data-ttu-id="b6d98-137">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-137">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-138">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-138">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: schemaId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-139">API 内のスキーマの識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-139">Schema identifier within an API.</span></span> <span data-ttu-id="b6d98-140">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-140">Must be unique in the current API Management service instance.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-141">エンティティの ETag。</span><span class="sxs-lookup"><span data-stu-id="b6d98-141">ETag of the Entity.</span></span> <span data-ttu-id="b6d98-142">ETag は、GET 要求のヘッダー応答から現在のエンティティ状態と一致する必要がありますまたは必要がある \* の無条件更新します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-142">ETag should match the current entity state from the header response of the GET request or it should be \* for unconditional update.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<void>>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.get
+    name: 'get(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-143">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-143">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-144">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-144">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-145">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-145">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-146">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-146">API revision identifier.</span></span> <span data-ttu-id="b6d98-147">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-147">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-148">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-148">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: schemaId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-149">API 内のスキーマの識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-149">Schema identifier within an API.</span></span> <span data-ttu-id="b6d98-150">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-150">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaContract>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.get_2
+    name: 'get(string, string, string, string, Object, ServiceCallback<SchemaContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-151">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-151">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, options: Object, callback: ServiceCallback<SchemaContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: schemaId
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-apimanagement.SchemaContract>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaContract>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.get_1
+    name: 'get(string, string, string, string, ServiceCallback<SchemaContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-152">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-152">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, callback: ServiceCallback<SchemaContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: schemaId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-apimanagement.SchemaContract>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaContract>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.getEntityTag
+    name: 'getEntityTag(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-153">その識別子によって指定されたスキーマのエンティティの状態 (Etag) バージョンを取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-153">Gets the entity state (Etag) version of the schema specified by its identifier.</span></span>
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-154">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-154">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-155">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-155">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-156">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-156">API revision identifier.</span></span> <span data-ttu-id="b6d98-157">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-157">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-158">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-158">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: schemaId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-159">API 内のスキーマの識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-159">Schema identifier within an API.</span></span> <span data-ttu-id="b6d98-160">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-160">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.getEntityTag_2
+    name: 'getEntityTag(string, string, string, string, Object, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-161">その識別子によって指定されたスキーマのエンティティの状態 (Etag) バージョンを取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-161">Gets the entity state (Etag) version of the schema specified by its identifier.</span></span>
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, options: Object, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: schemaId
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.getEntityTag_1
+    name: 'getEntityTag(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-162">その識別子によって指定されたスキーマのエンティティの状態 (Etag) バージョンを取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-162">Gets the entity state (Etag) version of the schema specified by its identifier.</span></span>
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: schemaId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.getEntityTagWithHttpOperationResponse
+    name: 'getEntityTagWithHttpOperationResponse(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-163">その識別子によって指定されたスキーマのエンティティの状態 (Etag) バージョンを取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-163">Gets the entity state (Etag) version of the schema specified by its identifier.</span></span>
+    syntax:
+      content: 'function getEntityTagWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-164">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-164">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-165">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-165">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-166">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-166">API revision identifier.</span></span> <span data-ttu-id="b6d98-167">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-167">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-168">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-168">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: schemaId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-169">API 内のスキーマの識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-169">Schema identifier within an API.</span></span> <span data-ttu-id="b6d98-170">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-170">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<void>>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.getWithHttpOperationResponse
+    name: 'getWithHttpOperationResponse(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-171">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-171">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function getWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, schemaId: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-172">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-172">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-173">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-173">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-174">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-174">API revision identifier.</span></span> <span data-ttu-id="b6d98-175">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-175">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-176">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-176">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: schemaId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-177">API 内のスキーマの識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-177">Schema identifier within an API.</span></span> <span data-ttu-id="b6d98-178">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-178">Must be unique in the current API Management service instance.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-apimanagement.SchemaContract>>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.listByApi
+    name: 'listByApi(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-179">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-179">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-180">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-180">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-181">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-181">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-182">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-182">API revision identifier.</span></span> <span data-ttu-id="b6d98-183">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-183">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-184">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-184">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaCollection>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.listByApi_2
+    name: 'listByApi(string, string, string, Object, ServiceCallback<SchemaCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-185">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-185">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, options: Object, callback: ServiceCallback<SchemaCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-apimanagement.SchemaCollection>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaCollection>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.listByApi_1
+    name: 'listByApi(string, string, string, ServiceCallback<SchemaCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-186">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-186">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, callback: ServiceCallback<SchemaCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: serviceName
+          type:
+            - string
+          description: ''
+        - id: apiId
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-apimanagement.SchemaCollection>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaCollection>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.listByApiNext
+    name: 'listByApiNext(string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-187">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-187">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function listByApiNext(nextPageLink: string, options?: Object)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-188">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-188">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaCollection>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.listByApiNext_2
+    name: 'listByApiNext(string, Object, ServiceCallback<SchemaCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-189">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-189">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function listByApiNext(nextPageLink: string, options: Object, callback: ServiceCallback<SchemaCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-apimanagement.SchemaCollection>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaCollection>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.listByApiNext_1
+    name: 'listByApiNext(string, ServiceCallback<SchemaCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-190">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-190">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function listByApiNext(nextPageLink: string, callback: ServiceCallback<SchemaCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-apimanagement.SchemaCollection>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-apimanagement.SchemaCollection>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.listByApiNextWithHttpOperationResponse
+    name: 'listByApiNextWithHttpOperationResponse(string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-191">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-191">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function listByApiNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-192">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-apimanagement.SchemaCollection>>
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ApiSchema.listByApiWithHttpOperationResponse
+    name: 'listByApiWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b6d98-193">API レベルでは、スキーマの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6d98-193">Get the schema configuration at the API level.</span></span>
+    syntax:
+      content: 'function listByApiWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-194">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-194">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-195">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="b6d98-195">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="b6d98-196">API リビジョン識別子。</span><span class="sxs-lookup"><span data-stu-id="b6d98-196">API revision identifier.</span></span> <span data-ttu-id="b6d98-197">現在の API Management サービス インスタンス内で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6d98-197">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="b6d98-198">現在以外のリビジョンには、リビジョンで n はリビジョン番号のサフィックスとして n を = です。</span><span class="sxs-lookup"><span data-stu-id="b6d98-198">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-apimanagement.SchemaCollection>>
+    package: azure-arm-apimanagement
+references:
+  - uid: azure-arm-apimanagement.SchemaCreateOrUpdateContract
+    name: SchemaCreateOrUpdateContract
+    spec.typeScript:
+      - name: SchemaCreateOrUpdateContract
+        fullName: SchemaCreateOrUpdateContract
+        uid: azure-arm-apimanagement.SchemaCreateOrUpdateContract
+  - uid: Promise<azure-arm-apimanagement.SchemaContract>
+    name: SchemaContract>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SchemaContract
+        fullName: SchemaContract
+        uid: azure-arm-apimanagement.SchemaContract
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-apimanagement.SchemaContract>
+    name: SchemaContract>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SchemaContract
+        fullName: SchemaContract
+        uid: azure-arm-apimanagement.SchemaContract
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-apimanagement.SchemaContract>>
+    name: SchemaContract>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SchemaContract
+        fullName: SchemaContract
+        uid: azure-arm-apimanagement.SchemaContract
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-arm-apimanagement.SchemaCollection>
+    name: SchemaCollection>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SchemaCollection
+        fullName: SchemaCollection
+        uid: azure-arm-apimanagement.SchemaCollection
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-apimanagement.SchemaCollection>
+    name: SchemaCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SchemaCollection
+        fullName: SchemaCollection
+        uid: azure-arm-apimanagement.SchemaCollection
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-apimanagement.SchemaCollection>>
+    name: SchemaCollection>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: SchemaCollection
+        fullName: SchemaCollection
+        uid: azure-arm-apimanagement.SchemaCollection
+      - name: '>>'
+        fullName: '>>'

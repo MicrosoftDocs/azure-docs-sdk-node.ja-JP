@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationHealthState
+    name: ApplicationHealthState
+    fullName: ApplicationHealthState
+    children:
+      - azure-servicefabric.ApplicationHealthState.aggregatedHealthState
+      - azure-servicefabric.ApplicationHealthState.name
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="a8496-101">アプリケーション識別子と集計正常性状態を含む、アプリケーションのヘルス状態を表します。</span><span class="sxs-lookup"><span data-stu-id="a8496-101">Represents the health state of an application, which contains the application identifier and the aggregated health state.</span></span>'
+    extends:
+      name: azure-servicefabric.EntityHealthState
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthState.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a8496-102">クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。''Invalid''、''Ok''、''警告''、''Error''、''Unknown''</span><span class="sxs-lookup"><span data-stu-id="a8496-102">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthState.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a8496-103">アプリケーションの名前を含む、'' fabric:''URI スキームのないアプリケーションの完全な名前です。</span><span class="sxs-lookup"><span data-stu-id="a8496-103">The name of the application, including the ''fabric:'' URI scheme.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthState
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: azure-servicefabric.EntityHealthState
