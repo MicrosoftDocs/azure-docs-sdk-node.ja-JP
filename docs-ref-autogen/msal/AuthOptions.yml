@@ -1,0 +1,20 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.AuthOptions
+    name: AuthOptions
+    fullName: AuthOptions
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: |2+
+       <span data-ttu-id="913ec-101">認証オプションの clientId - 既定値は証明機関に送信する Azure Active Directory の証明機関の開発者によって、アプリに割り当てられたクライアント ID を選択できます""(TODO:フォロー アップ PMs - に機関ディスカッションにまでこのコメントはプレース ホルダー) validateAuthority のオン/オフ、機関の検証を有効にするために使用します。</span><span class="sxs-lookup"><span data-stu-id="913ec-101">Authentication Options clientId                    - Client ID assigned to your app by Azure Active Directory authority                   - Developer can choose to send an authority, defaults to " " (TODO: Follow up with the authority discussion with the PMs - Until then this comment is a placeholder) validateAuthority           - Used to turn authority validation on/off.</span></span> <span data-ttu-id="913ec-102">True (既定値) に設定すると、MSAL は、整形式の機関を表す既知の Url テンプレートに対して、アプリケーションの機関に比較されます。</span><span class="sxs-lookup"><span data-stu-id="913ec-102">When set to true (default), MSAL will compare the application's authority against well-known URLs templates representing well-formed authorities.</span></span>
+      <span data-ttu-id="913ec-103">権限は MSAL が悪意のあるページからの認証プロンプトを表示するを防ぐために実行時に取得したときに便利です。</span><span class="sxs-lookup"><span data-stu-id="913ec-103">It is useful when the authority is obtained at run time to prevent MSAL from displaying authentication prompts from malicious pages.</span></span>
+      <span data-ttu-id="913ec-104">redirectUri のリダイレクト URI、アプリケーションの必要があります、アプリケーション登録ポータルの値と同じです。</span><span class="sxs-lookup"><span data-stu-id="913ec-104">redirectUri                 - The redirect URI of the application, this should be same as the value in the application registration portal.</span></span>
+      <span data-ttu-id="913ec-105">既定値は `window.location.href` です。</span><span class="sxs-lookup"><span data-stu-id="913ec-105">Defaults to `window.location.href`.</span></span>
+      <span data-ttu-id="913ec-106">postLogoutRedirectUri - ユーザーをログアウト後にこの場所にリダイレクトするために使用します。</span><span class="sxs-lookup"><span data-stu-id="913ec-106">postLogoutRedirectUri       - Used to redirect the user to this location after logout.</span></span> <span data-ttu-id="913ec-107">既定値は `window.location.href` です。</span><span class="sxs-lookup"><span data-stu-id="913ec-107">Defaults to `window.location.href`.</span></span>
+      <span data-ttu-id="913ec-108">状態: を使用して認証要求 navigateToLoginRequestUrl - ログイン後にスタート ページに既定のナビゲーションをオフにするために使用すると、状態パラメーターを送信します。</span><span class="sxs-lookup"><span data-stu-id="913ec-108">state                       - Use to send the state parameter with authentication request navigateToLoginRequestUrl   - Used to turn off default navigation to start page after login.</span></span> <span data-ttu-id="913ec-109">既定値は true です。</span><span class="sxs-lookup"><span data-stu-id="913ec-109">Default is true.</span></span> <span data-ttu-id="913ec-110">これは、リダイレクトのフローに対してのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="913ec-110">This is used only for redirect flows.</span></span>
+
+    syntax:
+      content: 'type AuthOptions = { authority:string, clientId:string, navigateToLoginRequestUrl:boolean, postLogoutRedirectUri:Object, redirectUri:Object, validateAuthority:boolean }'
+    package: msal

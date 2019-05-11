@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-storage.LeaseContainerRequest
+    name: LeaseContainerRequest
+    fullName: LeaseContainerRequest
+    children:
+      - azure-arm-storage.LeaseContainerRequest.action
+      - azure-arm-storage.LeaseContainerRequest.breakPeriod
+      - azure-arm-storage.LeaseContainerRequest.leaseDuration
+      - azure-arm-storage.LeaseContainerRequest.leaseId
+      - azure-arm-storage.LeaseContainerRequest.proposedLeaseId
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="00eb7-101">要求スキーマのコンテナーをリースします。</span><span class="sxs-lookup"><span data-stu-id="00eb7-101">Lease Container request schema.</span></span>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.action
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="00eb7-102">リース操作を指定します。</span><span class="sxs-lookup"><span data-stu-id="00eb7-102">Specifies the lease action.</span></span> <span data-ttu-id="00eb7-103">使用可能なアクションのいずれかを指定できます。</span><span class="sxs-lookup"><span data-stu-id="00eb7-103">Can be one of the available actions.</span></span> <span data-ttu-id="00eb7-104">指定できる値は、次のとおりです。''取得''、''Renew''、''を変更する''、''リリース''、''Break''</span><span class="sxs-lookup"><span data-stu-id="00eb7-104">Possible values include: ''Acquire'', ''Renew'', ''Change'', ''Release'', ''Break''</span></span>'
+    syntax:
+      content: 'action: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.breakPeriod
+    name: breakPeriod
+    fullName: breakPeriod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="00eb7-105">任意。</span><span class="sxs-lookup"><span data-stu-id="00eb7-105">Optional.</span></span> <span data-ttu-id="00eb7-106">中断アクションを提案期間リースを中断、0 から 60 までの秒単位で前に続行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="00eb7-106">For a break action, proposed duration the lease should continue before it is broken, in seconds, between 0 and 60.</span></span>'
+    optional: true
+    syntax:
+      content: 'breakPeriod?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.leaseDuration
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="00eb7-107">取得に必要です。</span><span class="sxs-lookup"><span data-stu-id="00eb7-107">Required for acquire.</span></span> <span data-ttu-id="00eb7-108">リースの期間を秒単位で指定しますまたは、リースを無期限にマイナス 1 (-1)。</span><span class="sxs-lookup"><span data-stu-id="00eb7-108">Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires.</span></span>'
+    optional: true
+    syntax:
+      content: 'leaseDuration?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.leaseId
+    name: leaseId
+    fullName: leaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="00eb7-109">リースを識別します。</span><span class="sxs-lookup"><span data-stu-id="00eb7-109">Identifies the lease.</span></span> <span data-ttu-id="00eb7-110">任意の有効な GUID 文字列形式で指定できます。</span><span class="sxs-lookup"><span data-stu-id="00eb7-110">Can be specified in any valid GUID string format.</span></span>
+    optional: true
+    syntax:
+      content: 'leaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.proposedLeaseId
+    name: proposedLeaseId
+    fullName: proposedLeaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="00eb7-111">取得、変更に必要なオプションです。</span><span class="sxs-lookup"><span data-stu-id="00eb7-111">Optional for acquire, required for change.</span></span> <span data-ttu-id="00eb7-112">GUID の文字列形式での推奨リース ID です。</span><span class="sxs-lookup"><span data-stu-id="00eb7-112">Proposed lease ID, in a GUID string format.</span></span>'
+    optional: true
+    syntax:
+      content: 'proposedLeaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
