@@ -1,0 +1,20 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.AuthOptions
+    name: AuthOptions
+    fullName: AuthOptions
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: |2+
+       認証オプションの clientId - 既定値は証明機関に送信する Azure Active Directory の証明機関の開発者によって、アプリに割り当てられたクライアント ID を選択できます""(TODO:フォロー アップ PMs - に機関ディスカッションにまでこのコメントはプレース ホルダー) validateAuthority のオン/オフ、機関の検証を有効にするために使用します。 True (既定値) に設定すると、MSAL は、整形式の機関を表す既知の Url テンプレートに対して、アプリケーションの機関に比較されます。
+      権限は MSAL が悪意のあるページからの認証プロンプトを表示するを防ぐために実行時に取得したときに便利です。
+      redirectUri のリダイレクト URI、アプリケーションの必要があります、アプリケーション登録ポータルの値と同じです。
+      既定値は `window.location.href` です。
+      postLogoutRedirectUri - ユーザーをログアウト後にこの場所にリダイレクトするために使用します。 既定値は `window.location.href` です。
+      状態: を使用して認証要求 navigateToLoginRequestUrl - ログイン後にスタート ページに既定のナビゲーションをオフにするために使用すると、状態パラメーターを送信します。 既定値は true です。 これは、リダイレクトのフローに対してのみ使用されます。
+
+    syntax:
+      content: 'type AuthOptions = { authority:string, clientId:string, navigateToLoginRequestUrl:boolean, postLogoutRedirectUri:Object, redirectUri:Object, validateAuthority:boolean }'
+    package: msal

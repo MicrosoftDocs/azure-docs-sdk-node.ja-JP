@@ -1,0 +1,19 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.FrameworkOptions
+    name: FrameworkOptions
+    fullName: FrameworkOptions
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: |+
+      アプリ/フレームワーク固有の環境サポート isAngular - フラグは、Angular フレームワークに設定します。 トークンをブロードキャストするために使用します。 TODO: は detangle コアからこの依存関係です。
+      unprotectedResources - 配列の URI の保護されていないリソースであります。 MSAL をこれらの URI を持つ送信される要求にトークンを添付しません。 'Null' に既定値です。
+      protectedResourceMap - MSAL によって自動的に web API の呼び出しでアクセス トークンをアタッチするために使用されるスコープへのリソースのマッピングです。
+      リソースの 1 つのアクセス トークンが取得されます。 ように、特定のリソース パスを次のようにマップすることができます: {"https://graph.microsoft.com/v1.0/me"、["user.read"]}、またはリソースとしてのアプリの URL: {"https://graph.microsoft.com/"、["user.read","mail.send"]} です。
+      これは、機能は、CORS の呼び出しに必要です。
+
+    syntax:
+      content: 'type FrameworkOptions = { isAngular:boolean, protectedResourceMap:Map<string>, unprotectedResources:Array<string> }'
+    package: msal
