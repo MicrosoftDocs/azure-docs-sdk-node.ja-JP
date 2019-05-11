@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthEvaluation
+    name: ReplicaHealthEvaluation
+    fullName: ReplicaHealthEvaluation
+    children:
+      - azure-servicefabric.ReplicaHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.ReplicaHealthEvaluation.description
+      - azure-servicefabric.ReplicaHealthEvaluation.kind
+      - azure-servicefabric.ReplicaHealthEvaluation.partitionId
+      - azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+      - azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む、レプリカの正常性評価を表します。 評価には、集計正常性状態がエラーまたは警告のいずれかである場合にのみが返されます。
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 評価プロセスの概要を表す正常性評価の説明です。
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: レプリカが属しているパーティションの id。
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ステートフル サービス レプリカまたはステートレス サービス インスタンスの id。 この ID は、ステートフルとステートレスの両方のサービスに適用されるクエリで使用されます。 ステートフル サービスまたはステートレス サービス パーティションのインスタンスのパーティションのレプリカを一意に識別する Service Fabric によって使用されます。 パーティション内で一意ですし、レプリカまたはインスタンスの有効期間は変更されません。 ID の別の値を取得、ステートフルなレプリカがドロップし、別のレプリカが同じノードで同じパーティションの作成を取得する場合 ID の別の値を取得、ステートレス インスタンスが同じまたは別のノードにフェールオーバーする場合
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      レプリカの現在の集計正常性状態の原因となった異常性の評価のリスト。
+      異常性の評価の種類には、EventHealthEvaluation を指定できます。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'
