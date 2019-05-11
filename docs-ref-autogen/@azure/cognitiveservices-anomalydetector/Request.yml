@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.Request'
+    name: Request
+    fullName: Request
+    children:
+      - '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+      - '@azure/cognitiveservices-anomalydetector.Request.granularity'
+      - '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+      - '@azure/cognitiveservices-anomalydetector.Request.period'
+      - '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+      - '@azure/cognitiveservices-anomalydetector.Request.series'
+    langs:
+      - typeScript
+    type: interface
+    summary: 要求を表すインターフェイスです。
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+    name: customInterval
+    fullName: customInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '[カスタム間隔] は非標準の時間間隔を設定するため、たとえば、系列が 5 分である場合は、要求として設定できます {「粒度」:"customInterval"、「分数」: 5}。'
+    optional: true
+    syntax:
+      content: 'customInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.granularity'
+    name: granularity
+    fullName: granularity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'できる、毎年のいずれかの月単位、週 1 回、毎日、毎時間または分数です。 粒度が使用される入力系列が有効かどうかを確認します。 使用可能な値が含まれます: ''年''、'' 月''、''毎週''、''毎日''、''時間単位''、''分数'''
+    syntax:
+      content: 'granularity: Granularity'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Granularity'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+    name: maxAnomalyRatio
+    fullName: maxAnomalyRatio
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: モデルのパラメーター、時系列の異常の最大比率が高度なオプションの引数。
+    optional: true
+    syntax:
+      content: 'maxAnomalyRatio?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 省略可能な引数は、タイム シリーズの定期的な値。 値が null であるか、存在しない場合には、API が自動で期間を決定します。
+    optional: true
+    syntax:
+      content: 'period?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+    name: sensitivity
+    fullName: sensitivity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 0 ~ 99 の間でのモデルのパラメーター値は低く、高度なオプションの引数、大きい方、余白の値が低い異常が受け入れられることを意味になります。
+    optional: true
+    syntax:
+      content: 'sensitivity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.series'
+    name: series
+    fullName: series
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タイム シリーズ データ ポイント。 ポイントは、異常検出の結果と一致する昇順でタイムスタンプで並べ替え 必要があります。 データが正しく並べ替えられていない、またはタイムスタンプの重複がある、API は機能しません。 このような場合、エラー メッセージが返されます。
+    syntax:
+      content: 'series: Point[]'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Point[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+references:
+  - uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+    name: Granularity
+    spec.typeScript:
+      - name: Granularity
+        fullName: Granularity
+        uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+  - uid: '@azure/cognitiveservices-anomalydetector.Point[]'
+    name: 'Point[]'
+    spec.typeScript:
+      - name: Point
+        fullName: Point
+        uid: '@azure/cognitiveservices-anomalydetector.Point'
+      - name: '[]'
+        fullName: '[]'
