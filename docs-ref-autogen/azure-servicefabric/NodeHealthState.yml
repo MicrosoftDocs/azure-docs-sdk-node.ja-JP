@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.NodeHealthState
+    name: NodeHealthState
+    fullName: NodeHealthState
+    children:
+      - azure-servicefabric.NodeHealthState.aggregatedHealthState
+      - azure-servicefabric.NodeHealthState.id
+      - azure-servicefabric.NodeHealthState.name
+    langs:
+      - typeScript
+    type: interface
+    summary: ノードの識別子と、集計正常性状態が含まれたノードのヘルス状態を表します。
+    extends:
+      name: azure-servicefabric.EntityHealthState
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NodeHealthState.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NodeHealthState.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ノードを一意に識別するために、Service Fabric によって使用される内部の ID。 ノード Id は確定的に、ノード名から生成されます。
+    optional: true
+    syntax:
+      content: 'id?: NodeId'
+      return:
+        type:
+          - azure-servicefabric.NodeId
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NodeHealthState.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric ノードの名前。
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthState
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: azure-servicefabric.EntityHealthState
+  - uid: azure-servicefabric.NodeId
+    name: NodeId
+    spec.typeScript:
+      - name: NodeId
+        fullName: NodeId
+        uid: azure-servicefabric.NodeId

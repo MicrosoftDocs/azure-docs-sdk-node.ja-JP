@@ -1,0 +1,377 @@
+### YamlMime:UniversalReference
+items:
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer
+    name: TranslationRecognizer
+    fullName: TranslationRecognizer
+    children:
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.authorizationToken
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.canceled
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.close
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.enableTelemetry
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.properties
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognized
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizeOnceAsync
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizing
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.sessionStarted
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.sessionStopped
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechEndDetected
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechRecognitionLanguage
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechStartDetected
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsync
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.stopContinuousRecognitionAsync
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.synthesizing
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.targetLanguages
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.telemetryEnabled
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.constructor
+      - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.voiceName
+    langs:
+      - typeScript
+    type: class
+    summary: 翻訳認識エンジン
+    extends:
+      name: microsoft-cognitiveservices-speech-sdk.Recognizer
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.authorizationToken
+    name: authorizationToken
+    fullName: authorizationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービスと通信するために使用する認証トークンを取得/設定します。
+    syntax:
+      content: 'public authorizationToken: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.canceled
+    name: canceled
+    fullName: canceled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: イベントには、認識中にエラーが発生しました。 シグナルが取り消されました。
+    syntax:
+      content: 'public canceled: (sender: TranslationRecognizer, event: TranslationRecognitionCanceledEventArgs) => void'
+      return:
+        type:
+          - '(sender: TranslationRecognizer, event: TranslationRecognitionCanceledEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.close
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: このクラスのインスタンスによって保持されているすべての外部リソースを閉じます。
+    syntax:
+      content: function close()
+      parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.enableTelemetry
+    name: enableTelemetry(boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: このメソッドは、グローバルに有効またはテレメトリを無効にします。
+    syntax:
+      content: 'static function enableTelemetry(enabled: boolean)'
+      parameters:
+        - id: enabled
+          type:
+            - boolean
+          description: |
+            製品利用統計情報コレクションのグローバル設定です。
+            マイク エラー製品利用統計情報を true に設定する場合は、認識エラーが収集され、Microsoft に送信されます。
+            かどうかは false に設定すると、製品利用統計情報が Microsoft に送信されません。
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プロパティとその値がこの TranslationRecognizer の定義のコレクション。
+    syntax:
+      content: 'public properties: PropertyCollection'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.PropertyCollection
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognized
+    name: recognized
+    fullName: recognized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: イベントは、最終的な認識結果を受信できる信号を認識します。
+    syntax:
+      content: 'public recognized: (sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+      return:
+        type:
+          - '(sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizeOnceAsync
+    name: 'recognizeOnceAsync((e: TranslationRecognitionResult) => void, (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      認識と変換を起動し、最初の発話は認識されてから停止されます。
+      タスクは、結果として、翻訳テキストを返します。
+      シングル ショット認識 suitableonly ようなコマンドまたはクエリ、最初の発話が認識されている場合に注意: recognizeOnceAsync を返します。 実行時間の長い認識、startContinuousRecognitionAsync() を代わりに使用します。
+    syntax:
+      content: 'function recognizeOnceAsync(cb?: (e: TranslationRecognitionResult) => void, err?: (e: string) => void)'
+      parameters:
+        - id: cb
+          type:
+            - '(e: TranslationRecognitionResult) => void'
+          description: 変換が完了すると、結果を受信するコールバック。
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: |
+            エラー発生時に呼び出されるコールバック。
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizing
+    name: recognizing
+    fullName: recognizing
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: イベントの認識、中間の認識結果を受信したことを通知します。
+    syntax:
+      content: 'public recognizing: (sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+      return:
+        type:
+          - '(sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.sessionStarted
+    name: sessionStarted
+    fullName: sessionStarted
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: セッションの開始イベントのイベント ハンドラーを定義します。
+    syntax:
+      content: 'public sessionStarted: (sender: Recognizer, event: SessionEventArgs) => void'
+      return:
+        type:
+          - '(sender: Recognizer, event: SessionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.sessionStopped
+    name: sessionStopped
+    fullName: sessionStopped
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: セッションの停止イベントのイベント ハンドラーを定義します。
+    syntax:
+      content: 'public sessionStopped: (sender: Recognizer, event: SessionEventArgs) => void'
+      return:
+        type:
+          - '(sender: Recognizer, event: SessionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechEndDetected
+    name: speechEndDetected
+    fullName: speechEndDetected
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 音声認識の停止イベントのイベント ハンドラーを定義します。
+    syntax:
+      content: 'public speechEndDetected: (sender: Recognizer, event: RecognitionEventArgs) => void'
+      return:
+        type:
+          - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechRecognitionLanguage
+    name: speechRecognitionLanguage
+    fullName: speechRecognitionLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 認識エンジンが作成されたときに設定された言語の名前を取得します。
+    syntax:
+      content: 'public speechRecognitionLanguage: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechStartDetected
+    name: speechStartDetected
+    fullName: speechStartDetected
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 音声の開始イベントのイベント ハンドラーを定義します。
+    syntax:
+      content: 'public speechStartDetected: (sender: Recognizer, event: RecognitionEventArgs) => void'
+      return:
+        type:
+          - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsync
+    name: 'startContinuousRecognitionAsync(() => void, (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      StopContinuousRecognitionAsync() が呼び出されるまでは、認識および翻訳を開始します。
+      ユーザーは、変換結果を受信するイベントにサブスクライブする必要があります。
+    syntax:
+      content: 'function startContinuousRecognitionAsync(cb?: () => void, err?: (e: string) => void)'
+      parameters:
+        - id: cb
+          type:
+            - () => void
+          description: 翻訳を受信するコールバックが開始されました。
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: |
+            エラー発生時に呼び出されるコールバック。
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.stopContinuousRecognitionAsync
+    name: 'stopContinuousRecognitionAsync(() => void, (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 継続的な認識を停止および翻訳します。
+    syntax:
+      content: 'function stopContinuousRecognitionAsync(cb?: () => void, err?: (e: string) => void)'
+      parameters:
+        - id: cb
+          type:
+            - () => void
+          description: 翻訳を受信するコールバックが停止しました。
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: |
+            エラー発生時に呼び出されるコールバック。
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.synthesizing
+    name: synthesizing
+    fullName: synthesizing
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 翻訳合成の結果を受信できる信号を合成するイベントです。
+    syntax:
+      content: 'public synthesizing: (sender: TranslationRecognizer, event: TranslationSynthesisEventArgs) => void'
+      return:
+        type:
+          - '(sender: TranslationRecognizer, event: TranslationSynthesisEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.targetLanguages
+    name: targetLanguages
+    fullName: targetLanguages
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      認識エンジンの作成時に設定された変換対象の言語を取得します。
+      言語は、BCP 47 の形式で指定されます。 翻訳は各言語の翻訳されたテキストを提供します。
+    syntax:
+      content: 'public targetLanguages: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.telemetryEnabled
+    name: telemetryEnabled
+    fullName: telemetryEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このメソッドは、製品利用統計情報設定の現在の状態を返します。
+    syntax:
+      content: 'public static telemetryEnabled: boolean'
+      return:
+        type:
+          - boolean
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.constructor
+    name: 'TranslationRecognizer(SpeechTranslationConfig, AudioConfig)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: TranslationRecognizer のインスタンスを初期化します。
+    syntax:
+      content: 'new TranslationRecognizer(speechConfig: SpeechTranslationConfig, audioConfig?: AudioConfig)'
+      parameters:
+        - id: speechConfig
+          type:
+            - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+          description: この認識エンジンを構成するプロパティのセット。
+        - id: audioConfig
+          type:
+            - microsoft-cognitiveservices-speech-sdk.AudioConfig
+          description: |
+            認識エンジンに関連付けられているオプションのオーディオ構成
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.voiceName
+    name: voiceName
+    fullName: voiceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 出力の音声の名前を取得します。
+    syntax:
+      content: 'public voiceName: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+references:
+  - uid: microsoft-cognitiveservices-speech-sdk.Recognizer
+    name: Recognizer
+    spec.typeScript:
+      - name: Recognizer
+        fullName: Recognizer
+        uid: microsoft-cognitiveservices-speech-sdk.Recognizer
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+    name: SpeechTranslationConfig
+    spec.typeScript:
+      - name: SpeechTranslationConfig
+        fullName: SpeechTranslationConfig
+        uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  - uid: microsoft-cognitiveservices-speech-sdk.AudioConfig
+    name: AudioConfig
+    spec.typeScript:
+      - name: AudioConfig
+        fullName: AudioConfig
+        uid: microsoft-cognitiveservices-speech-sdk.AudioConfig
+  - uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection
+    name: PropertyCollection
+    spec.typeScript:
+      - name: PropertyCollection
+        fullName: PropertyCollection
+        uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection
