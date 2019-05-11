@@ -1,0 +1,255 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo
+    name: DeployedStatefulServiceReplicaDetailInfo
+    fullName: DeployedStatefulServiceReplicaDetailInfo
+    children:
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperation
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.partitionId
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.reportedLoad
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceKind
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceName
+      - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus
+    langs:
+      - typeScript
+    type: interface
+    summary: コード パッケージで実行されているステートフルなレプリカについて説明します。 注 DeployedServiceReplicaQueryResult ServiceKind、ServiceName、PartitionId、replicaId のような重複するデータが含まれます。
+    extends:
+      name: azure-servicefabric.DeployedServiceReplicaDetailInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation
+    name: currentReplicatorOperation
+    fullName: currentReplicatorOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 現在、レプリケーターによって実行されている操作を指定します。 指定できる値は、次のとおりです。'Invalid'、'None'、'Open'、'ChangeRole'、'UpdateEpoch'、'終了'、'中止'、'OnDataLoss'、'WaitForCatchup'、'Build'
+    optional: true
+    syntax:
+      content: 'currentReplicatorOperation?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperation
+    name: currentServiceOperation
+    fullName: currentServiceOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ステートフル サービス レプリカまたはステートレス サービス インスタンスの現在のアクティブなライフ サイクル操作を指定します。 指定できる値は、次のとおりです。'不明'、'None'、' 開く '、'ChangeRole'、'閉じる'、'中止'
+    optional: true
+    syntax:
+      content: 'currentServiceOperation?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc
+    name: currentServiceOperationStartTimeUtc
+    fullName: currentServiceOperationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: UTC 形式で現在のサービス操作の開始時刻。
+    optional: true
+    syntax:
+      content: 'currentServiceOperationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult
+    name: deployedServiceReplicaQueryResult
+    fullName: deployedServiceReplicaQueryResult
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ステートフル サービス レプリカがノードに展開について説明します。
+    optional: true
+    syntax:
+      content: 'deployedServiceReplicaQueryResult?: DeployedStatefulServiceReplicaInfo'
+      return:
+        type:
+          - azure-servicefabric.DeployedStatefulServiceReplicaInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パーティションを一意に識別するために、Service Fabric によって使用される内部の ID。 これは、サービスの作成時にランダムに生成された GUID です。 パーティション ID は一意し、サービスの有効期間は変更されません。 同じサービスが削除され、そのパーティションの Id を再作成する場合は、異なるでしょう。
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus
+    name: readStatus
+    fullName: readStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'パーティションのアクセスの状態を指定します。 指定できる値は、次のとおりです。''Invalid'', ''Granted'', ''ReconfigurationPending'', ''NotPrimary'', ''NoWriteQuorum'''
+    optional: true
+    syntax:
+      content: 'readStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ステートフル サービス レプリカの id。 ReplicaId は、パーティションのレプリカを一意に識別する Service Fabric によって使用されます。 パーティション内で一意ですし、レプリカの有効期間は変更されません。 レプリカがドロップ別のレプリカが同じパーティションに同じノードで作成される場合は、さまざまな値を id の取得します。場合がありますステートレス サービス インスタンスの id は、レプリカ id とも呼ばれます。
+    optional: true
+    syntax:
+      content: 'replicaId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: キー値ストアでは、レプリカの情報が関連します。
+    optional: true
+    syntax:
+      content: 'replicaStatus?: KeyValueStoreReplicaStatus'
+      return:
+        type:
+          - azure-servicefabric.KeyValueStoreReplicaStatus
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus
+    name: replicatorStatus
+    fullName: replicatorStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      プライマリまたはセカンダリ レプリケーターの状態の基本クラスを表します。
+      レプリケーション/コピー キューの使用率、最後の確認を受信したタイムスタンプなどの service fabric レプリケーターについて説明します。
+    optional: true
+    syntax:
+      content: 'replicatorStatus?: ReplicatorStatus'
+      return:
+        type:
+          - azure-servicefabric.ReplicatorStatus
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.reportedLoad
+    name: reportedLoad
+    fullName: reportedLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: レプリカによって報告された負荷の一覧。
+    optional: true
+    syntax:
+      content: 'reportedLoad?: LoadMetricReportInfo[]'
+      return:
+        type:
+          - 'azure-servicefabric.LoadMetricReportInfo[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'URI の形式の開始時にサービスの完全な階層名`fabric:`します。'
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus
+    name: writeStatus
+    fullName: writeStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'パーティションのアクセスの状態を指定します。 指定できる値は、次のとおりです。''Invalid'', ''Granted'', ''ReconfigurationPending'', ''NotPrimary'', ''NoWriteQuorum'''
+    optional: true
+    syntax:
+      content: 'writeStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+    name: DeployedServiceReplicaDetailInfo
+    spec.typeScript:
+      - name: DeployedServiceReplicaDetailInfo
+        fullName: DeployedServiceReplicaDetailInfo
+        uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+    name: DeployedStatefulServiceReplicaInfo
+    spec.typeScript:
+      - name: DeployedStatefulServiceReplicaInfo
+        fullName: DeployedStatefulServiceReplicaInfo
+        uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+  - uid: azure-servicefabric.KeyValueStoreReplicaStatus
+    name: KeyValueStoreReplicaStatus
+    spec.typeScript:
+      - name: KeyValueStoreReplicaStatus
+        fullName: KeyValueStoreReplicaStatus
+        uid: azure-servicefabric.KeyValueStoreReplicaStatus
+  - uid: azure-servicefabric.ReplicatorStatus
+    name: ReplicatorStatus
+    spec.typeScript:
+      - name: ReplicatorStatus
+        fullName: ReplicatorStatus
+        uid: azure-servicefabric.ReplicatorStatus
+  - uid: 'azure-servicefabric.LoadMetricReportInfo[]'
+    name: 'LoadMetricReportInfo[]'
+    spec.typeScript:
+      - name: LoadMetricReportInfo
+        fullName: LoadMetricReportInfo
+        uid: azure-servicefabric.LoadMetricReportInfo
+      - name: '[]'
+        fullName: '[]'

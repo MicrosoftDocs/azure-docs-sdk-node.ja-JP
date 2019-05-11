@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.PartitionHealthEvaluation
+    name: PartitionHealthEvaluation
+    fullName: PartitionHealthEvaluation
+    children:
+      - azure-servicefabric.PartitionHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.PartitionHealthEvaluation.description
+      - azure-servicefabric.PartitionHealthEvaluation.kind
+      - azure-servicefabric.PartitionHealthEvaluation.partitionId
+      - azure-servicefabric.PartitionHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む、パーティションの正常性評価を表します。 評価には、集計正常性状態がエラーまたは警告のいずれかである場合にのみが返されます。
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 評価プロセスの概要を表す正常性評価の説明です。
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionHealthEvaluation.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このオブジェクトである正常性評価が説明されているパーティションの id。
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パーティションの現在の集計正常性状態の原因となった異常性の評価のリスト。 ReplicasHealthEvaluation または EventHealthEvaluation、異常性の評価の種類を指定できます。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

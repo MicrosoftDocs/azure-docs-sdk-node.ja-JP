@@ -1,0 +1,127 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaEvent
+    name: ReplicaEvent
+    fullName: ReplicaEvent
+    children:
+      - azure-servicefabric.ReplicaEvent.category
+      - azure-servicefabric.ReplicaEvent.eventInstanceId
+      - azure-servicefabric.ReplicaEvent.hasCorrelatedEvents
+      - azure-servicefabric.ReplicaEvent.kind
+      - azure-servicefabric.ReplicaEvent.partitionId
+      - azure-servicefabric.ReplicaEvent.replicaId
+      - azure-servicefabric.ReplicaEvent.timeStamp
+    langs:
+      - typeScript
+    type: interface
+    summary: レプリカのすべてのイベントの基本クラスを表します。
+    extends:
+      name: azure-servicefabric.FabricEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaEvent.category
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: イベントのカテゴリ。
+    optional: true
+    syntax:
+      content: 'category?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaEvent.eventInstanceId
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: FabricEvent インスタンスの識別子。
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaEvent.hasCorrelatedEvents
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 既存の使用可能な関連のイベントを示しています。
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaEvent.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パーティションを一意に識別するために、Service Fabric によって使用される内部の ID。 これは、サービスの作成時にランダムに生成された GUID です。 パーティション ID は一意し、サービスの有効期間は変更されません。 同じサービスが削除され、そのパーティションの Id を再作成する場合は、異なるでしょう。
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaEvent.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ステートフル サービス レプリカの id。 ReplicaId は、パーティションのレプリカを一意に識別する Service Fabric によって使用されます。 パーティション内で一意ですし、レプリカの有効期間は変更されません。 レプリカがドロップ別のレプリカが同じパーティションに同じノードで作成される場合は、さまざまな値を id の取得します。場合がありますステートレス サービス インスタンスの id は、レプリカ id とも呼ばれます。
+    syntax:
+      content: 'replicaId: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaEvent.timeStamp
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 時間のイベントが記録されます。
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.FabricEvent
+    name: FabricEvent
+    spec.typeScript:
+      - name: FabricEvent
+        fullName: FabricEvent
+        uid: azure-servicefabric.FabricEvent

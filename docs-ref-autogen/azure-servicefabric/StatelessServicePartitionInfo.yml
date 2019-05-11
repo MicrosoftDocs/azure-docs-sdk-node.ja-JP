@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServicePartitionInfo
+    name: StatelessServicePartitionInfo
+    fullName: StatelessServicePartitionInfo
+    children:
+      - azure-servicefabric.StatelessServicePartitionInfo.healthState
+      - azure-servicefabric.StatelessServicePartitionInfo.instanceCount
+      - azure-servicefabric.StatelessServicePartitionInfo.partitionInformation
+      - azure-servicefabric.StatelessServicePartitionInfo.partitionStatus
+      - azure-servicefabric.StatelessServicePartitionInfo.serviceKind
+    langs:
+      - typeScript
+    type: interface
+    summary: Service Fabric のステートレス サービスのパーティションに関する情報。
+    extends:
+      name: azure-servicefabric.ServicePartitionInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.instanceCount
+    name: instanceCount
+    fullName: instanceCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このパーティションのインスタンスの数。
+    optional: true
+    syntax:
+      content: 'instanceCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.partitionInformation
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: スキームとことでサポートされるキーのパーティション分割、パーティション id について説明します。
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformation'
+      return:
+        type:
+          - azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.partitionStatus
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Service fabric のサービス パーティションの状態です。 指定できる値は、次のとおりです。''Invalid'', ''Ready'', ''NotReady'', ''InQuorumLoss'', ''Reconfiguring'', ''Deleting'''
+    optional: true
+    syntax:
+      content: 'partitionStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServicePartitionInfo
+    name: ServicePartitionInfo
+    spec.typeScript:
+      - name: ServicePartitionInfo
+        fullName: ServicePartitionInfo
+        uid: azure-servicefabric.ServicePartitionInfo
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation

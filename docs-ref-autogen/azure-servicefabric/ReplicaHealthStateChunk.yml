@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthStateChunk
+    name: ReplicaHealthStateChunk
+    fullName: ReplicaHealthStateChunk
+    children:
+      - azure-servicefabric.ReplicaHealthStateChunk.healthState
+      - azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      ステートフル サービス レプリカまたはステートレス サービス インスタンスの正常性状態チャンクを表します。
+      レプリカの正常性状態には、レプリカの ID とその集計正常性状態が含まれています。
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ステートフル サービス レプリカまたはステートレス サービス インスタンスの id。 この ID は、ステートフルとステートレスの両方のサービスに適用されるクエリで使用されます。 ステートフル サービスまたはステートレス サービス パーティションのインスタンスのパーティションのレプリカを一意に識別する Service Fabric によって使用されます。 パーティション内で一意ですし、レプリカまたはインスタンスの有効期間は変更されません。 ID の別の値を取得、ステートフルなレプリカがドロップし、別のレプリカが同じノードで同じパーティションの作成を取得する場合 ID の別の値を取得、ステートレス インスタンスが同じまたは別のノードにフェールオーバーする場合
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk

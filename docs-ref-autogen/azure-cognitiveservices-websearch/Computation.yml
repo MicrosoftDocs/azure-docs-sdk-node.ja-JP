@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-cognitiveservices-websearch.Computation
+    name: Computation
+    fullName: Computation
+    children:
+      - azure-cognitiveservices-websearch.Computation.expression
+      - azure-cognitiveservices-websearch.Computation.followUpQueries
+      - azure-cognitiveservices-websearch.Computation.id
+      - azure-cognitiveservices-websearch.Computation.value
+      - azure-cognitiveservices-websearch.Computation.webSearchUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: 式とその回答を定義します。
+    extends:
+      name: azure-cognitiveservices-websearch.Answer
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.expression
+    name: expression
+    fullName: expression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 数値演算または変換式。 このフィールドには、クエリに (たとえば、フィート メートル) の測定単位に変換する要求が含まれている場合、単位と値が含まれています、ユニットにします。 クエリの数式など、2 + 2 の場合は、このフィールドには、式と値には、応答が含まれています。 数式を正規化することがありますに注意してください。 たとえば、クエリが sqrt(4^2+8^2) の場合は、正規化された式には sqrt((4^2)+(8^2)) 可能性があります。 ユーザーのクエリは、数値演算質問し、textdecorations をクエリ パラメーターは設定を true に、式文字列が書式設定のマーカーを含めることができます。 たとえば、ユーザーのクエリが log(2) の場合は、正規化された式に下付き文字マーカーが含まれます。 詳細については、ヒットの強調表示を参照してください。
+    syntax:
+      content: 'expression: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.followUpQueries
+    name: followUpQueries
+    fullName: followUpQueries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'followUpQueries?: Query[]'
+      return:
+        type:
+          - 'azure-cognitiveservices-websearch.Query[]'
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 文字列の識別子です。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 式の回答。
+    syntax:
+      content: 'value: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.webSearchUrl
+    name: webSearchUrl
+    fullName: webSearchUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: この項目の URL を Bing の検索結果です。
+    optional: true
+    syntax:
+      content: 'webSearchUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+references:
+  - uid: azure-cognitiveservices-websearch.Answer
+    name: Answer
+    spec.typeScript:
+      - name: Answer
+        fullName: Answer
+        uid: azure-cognitiveservices-websearch.Answer
+  - uid: 'azure-cognitiveservices-websearch.Query[]'
+    name: 'Query[]'
+    spec.typeScript:
+      - name: Query
+        fullName: Query
+        uid: azure-cognitiveservices-websearch.Query
+      - name: '[]'
+        fullName: '[]'

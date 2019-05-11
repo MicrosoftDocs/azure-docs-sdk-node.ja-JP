@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServicesHealthEvaluation
+    name: ServicesHealthEvaluation
+    fullName: ServicesHealthEvaluation
+    children:
+      - azure-servicefabric.ServicesHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.ServicesHealthEvaluation.description
+      - azure-servicefabric.ServicesHealthEvaluation.kind
+      - azure-servicefabric.ServicesHealthEvaluation.maxPercentUnhealthyServices
+      - azure-servicefabric.ServicesHealthEvaluation.serviceTypeName
+      - azure-servicefabric.ServicesHealthEvaluation.totalCount
+      - azure-servicefabric.ServicesHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: 特定サービスの種類のアプリケーションに属している現在の集計正常性状態に影響を与えた問題のある各サービスの正常性評価を含むサービスの正常性評価を表します。 エラーまたは警告は、アプリケーションの正常性と集計正常性状態を評価するときに返されます。
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 評価プロセスの概要を表す正常性評価の説明です。
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.maxPercentUnhealthyServices
+    name: maxPercentUnhealthyServices
+    fullName: maxPercentUnhealthyServices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 異常なサービスの割合が、ServiceTypeHealthPolicy から最大です。
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyServices?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.serviceTypeName
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービスのサービスの種類の名前です。
+    optional: true
+    syntax:
+      content: 'serviceTypeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 正常性ストアからアプリケーションの現在のサービスの種類のサービスの合計数。
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicesHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 集計された正常性の状態の原因となった異常性の評価のリスト。 集計された正常性の影響を受けるすべての異常な ServiceHealthEvaluation が含まれています。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,212 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription
+    name: StatelessServiceUpdateDescription
+    fullName: StatelessServiceUpdateDescription
+    children:
+      - azure-servicefabric.StatelessServiceUpdateDescription.correlationScheme
+      - azure-servicefabric.StatelessServiceUpdateDescription.defaultMoveCost
+      - azure-servicefabric.StatelessServiceUpdateDescription.flags
+      - azure-servicefabric.StatelessServiceUpdateDescription.instanceCount
+      - azure-servicefabric.StatelessServiceUpdateDescription.loadMetrics
+      - azure-servicefabric.StatelessServiceUpdateDescription.placementConstraints
+      - azure-servicefabric.StatelessServiceUpdateDescription.scalingPolicies
+      - azure-servicefabric.StatelessServiceUpdateDescription.serviceKind
+      - azure-servicefabric.StatelessServiceUpdateDescription.servicePlacementPolicies
+    langs:
+      - typeScript
+    type: interface
+    summary: ステートレス サービスの更新プログラムをについて説明します。
+    extends:
+      name: azure-servicefabric.ServiceUpdateDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.correlationScheme
+    name: correlationScheme
+    fullName: correlationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 相関スキーム。
+    optional: true
+    syntax:
+      content: 'correlationScheme?: ServiceCorrelationDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceCorrelationDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.defaultMoveCost
+    name: defaultMoveCost
+    fullName: defaultMoveCost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービスの移動コスト。 指定できる値は、次のとおりです。'0'、'Low'、'Medium'、'High'
+    optional: true
+    syntax:
+      content: 'defaultMoveCost?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.flags
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      その他のプロパティを設定するかどうかを示すフラグです。 各関連付けられているプロパティに対応して、以下で指定したフラグを場合、プロパティが指定されていることを示します。
+      このプロパティは、ビットごとの 'OR' 演算子を使用して取得したこれらのフラグの組み合わせを指定できます。
+      たとえば、指定された値が 6 の ReplicaRestartWaitDuration (2) と (4) の QuorumLossWaitDuration フラグが設定します。
+      - その他のプロパティを設定するなし - は示しません。 値は 0 です。
+      - TargetReplicaSetSize/InstanceCount - は、(ステートフル サービス) 用の TargetReplicaSetSize プロパティまたは (ステートレス サービス) 用 InstanceCount プロパティが設定するかどうかを示します。 値は 1 です。
+      - ReplicaRestartWaitDuration - は、プロパティの設定の ReplicaRestartWaitDuration を示します。 値は、2 です。
+      - QuorumLossWaitDuration では、プロパティが設定されて QuorumLossWaitDuration を示します。 値は、します。
+      4.
+      - StandByReplicaKeepDuration のでは、プロパティが設定されて StandByReplicaKeepDuration を示します。 値は 8 です。
+      - MinReplicaSetSize - は、プロパティが設定されて MinReplicaSetSize を示します。 値は 16 です。
+      - PlacementConstraints - は、プロパティが設定されて PlacementConstraints を示します。 値は、32 です。
+      - PlacementPolicyList - は、プロパティが設定されて ServicePlacementPolicies を示します。 値は、します。
+      64.
+      - -の相関関係では、プロパティが設定されて CorrelationScheme を示します。 値は 128 です。
+      - メトリックのでは、プロパティが設定されて ServiceLoadMetrics を示します。 値には 256 です。
+      - DefaultMoveCost - は、プロパティが設定されて DefaultMoveCost を示します。 値は 512 文字です。
+      - ScalingPolicy - は、プロパティが設定されて ScalingPolicies を示します。 値は、1024 です。
+    optional: true
+    syntax:
+      content: 'flags?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.instanceCount
+    name: instanceCount
+    fullName: instanceCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: インスタンス数。
+    optional: true
+    syntax:
+      content: 'instanceCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.loadMetrics
+    name: loadMetrics
+    fullName: loadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービスの負荷メトリック。
+    optional: true
+    syntax:
+      content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.placementConstraints
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 文字列としての配置の制約。 配置の制約はノード プロパティ上のブール式で、サービスの要件に基づいて特定のノードにサービスを制限することができます。 たとえば、配置する NodeType が blue のノード上のサービスを次を指定します。"NodeColor == blue)"。
+    optional: true
+    syntax:
+      content: 'placementConstraints?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.scalingPolicies
+    name: scalingPolicies
+    fullName: scalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このサービスのスケーリング ポリシー。
+    optional: true
+    syntax:
+      content: 'scalingPolicies?: ScalingPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ScalingPolicyDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceUpdateDescription.servicePlacementPolicies
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービス配置ポリシー。
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServiceUpdateDescription
+    name: ServiceUpdateDescription
+    spec.typeScript:
+      - name: ServiceUpdateDescription
+        fullName: ServiceUpdateDescription
+        uid: azure-servicefabric.ServiceUpdateDescription
+  - uid: 'azure-servicefabric.ServiceCorrelationDescription[]'
+    name: 'ServiceCorrelationDescription[]'
+    spec.typeScript:
+      - name: ServiceCorrelationDescription
+        fullName: ServiceCorrelationDescription
+        uid: azure-servicefabric.ServiceCorrelationDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: azure-servicefabric.ServiceLoadMetricDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ScalingPolicyDescription[]'
+    name: 'ScalingPolicyDescription[]'
+    spec.typeScript:
+      - name: ScalingPolicyDescription
+        fullName: ScalingPolicyDescription
+        uid: azure-servicefabric.ScalingPolicyDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    name: 'ServicePlacementPolicyDescription[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription
+      - name: '[]'
+        fullName: '[]'
