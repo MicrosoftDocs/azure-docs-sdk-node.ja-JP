@@ -4,32 +4,87 @@ items:
     name: ModuleClient
     fullName: ModuleClient
     children:
+      - azure-iot-device.ModuleClient.abandon_1
+      - azure-iot-device.ModuleClient.abandon
       - azure-iot-device.ModuleClient.close_1
       - azure-iot-device.ModuleClient.close
+      - azure-iot-device.ModuleClient.complete_1
+      - azure-iot-device.ModuleClient.complete
       - azure-iot-device.ModuleClient.fromAuthenticationProvider
       - azure-iot-device.ModuleClient.fromConnectionString
       - azure-iot-device.ModuleClient.fromEnvironment_1
       - azure-iot-device.ModuleClient.fromEnvironment
       - azure-iot-device.ModuleClient.fromSharedAccessSignature
+      - azure-iot-device.ModuleClient.getTwin_1
+      - azure-iot-device.ModuleClient.getTwin
       - azure-iot-device.ModuleClient.invokeMethod_2
       - azure-iot-device.ModuleClient.invokeMethod
       - azure-iot-device.ModuleClient.invokeMethod_3
       - azure-iot-device.ModuleClient.invokeMethod_1
       - azure-iot-device.ModuleClient.onMethod
+      - azure-iot-device.ModuleClient.open_1
+      - azure-iot-device.ModuleClient.open
+      - azure-iot-device.ModuleClient.reject_1
+      - azure-iot-device.ModuleClient.reject
+      - azure-iot-device.ModuleClient.sendEvent_1
+      - azure-iot-device.ModuleClient.sendEvent
+      - azure-iot-device.ModuleClient.sendEventBatch_1
+      - azure-iot-device.ModuleClient.sendEventBatch
       - azure-iot-device.ModuleClient.sendOutputEvent_1
       - azure-iot-device.ModuleClient.sendOutputEvent
       - azure-iot-device.ModuleClient.sendOutputEventBatch_1
       - azure-iot-device.ModuleClient.sendOutputEventBatch
       - azure-iot-device.ModuleClient.setOptions_1
       - azure-iot-device.ModuleClient.setOptions
+      - azure-iot-device.ModuleClient.setRetryPolicy
+      - azure-iot-device.ModuleClient.setTransportOptions_1
+      - azure-iot-device.ModuleClient.setTransportOptions
+      - azure-iot-device.ModuleClient.updateSharedAccessSignature
     langs:
       - typeScript
     type: class
     summary: |
-      <span data-ttu-id="fb888-101">IoT Hub デバイス クライアントは、Azure IoT hub とデバイスを接続するために使用します。</span><span class="sxs-lookup"><span data-stu-id="fb888-101">IoT Hub device client used to connect a device with an Azure IoT hub.</span></span>
-      <span data-ttu-id="fb888-102">SDK のユーザーは、ファクトリ メソッドのいずれかを呼び出す必要があります[fromConnectionString](xref:azure-iot-device.Client.fromConnectionString)または[fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) IoT Hub デバイス クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="fb888-102">Users of the SDK should call one of the factory methods, [fromConnectionString](xref:azure-iot-device.Client.fromConnectionString) or [fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) to create an IoT Hub device client.</span></span>
+      <span data-ttu-id="6216f-101">IoT Hub デバイス クライアントは、Azure IoT hub とデバイスを接続するために使用します。</span><span class="sxs-lookup"><span data-stu-id="6216f-101">IoT Hub device client used to connect a device with an Azure IoT hub.</span></span>
+      <span data-ttu-id="6216f-102">SDK のユーザーは、ファクトリ メソッドのいずれかを呼び出す必要があります[fromConnectionString](xref:azure-iot-device.Client.fromConnectionString)または[fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) IoT Hub デバイス クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="6216f-102">Users of the SDK should call one of the factory methods, [fromConnectionString](xref:azure-iot-device.Client.fromConnectionString) or [fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) to create an IoT Hub device client.</span></span>
     extends:
       name: InternalClient
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.abandon_1
+    name: abandon(Message)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function abandon(message: Message)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+      return:
+        type:
+          - Promise<MessageAbandoned>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.abandon
+    name: 'abandon(Message, Callback<MessageAbandoned>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function abandon(message: Message, abandonCallback: Callback<MessageAbandoned>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: abandonCallback
+          type:
+            - Callback<MessageAbandoned>
+          description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.close_1
     name: close()
@@ -38,8 +93,8 @@ items:
     langs:
       - typeScript
     summary: |
-      <span data-ttu-id="fb888-103">トランスポート接続を終了し、クライアントのリソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="fb888-103">Closes the transport connection and destroys the client resources.</span></span>
-      <span data-ttu-id="fb888-104">*注:ModuleClient、このメソッドを呼び出した後は、オブジェクトを再利用することはできません。*</span><span class="sxs-lookup"><span data-stu-id="fb888-104">*Note: After calling this method the ModuleClient object cannot be reused.*</span></span>
+      <span data-ttu-id="6216f-103">トランスポート接続を終了し、クライアントのリソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="6216f-103">Closes the transport connection and destroys the client resources.</span></span>
+      <span data-ttu-id="6216f-104">*注:ModuleClient、このメソッドを呼び出した後は、オブジェクトを再利用することはできません。*</span><span class="sxs-lookup"><span data-stu-id="6216f-104">*Note: After calling this method the ModuleClient object cannot be reused.*</span></span>
     syntax:
       content: function close()
       parameters: []
@@ -54,8 +109,8 @@ items:
     langs:
       - typeScript
     summary: |
-      <span data-ttu-id="fb888-105">トランスポート接続を終了し、クライアントのリソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="fb888-105">Closes the transport connection and destroys the client resources.</span></span>
-      <span data-ttu-id="fb888-106">*注:ModuleClient、このメソッドを呼び出した後は、オブジェクトを再利用することはできません。*</span><span class="sxs-lookup"><span data-stu-id="fb888-106">*Note: After calling this method the ModuleClient object cannot be reused.*</span></span>
+      <span data-ttu-id="6216f-105">トランスポート接続を終了し、クライアントのリソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="6216f-105">Closes the transport connection and destroys the client resources.</span></span>
+      <span data-ttu-id="6216f-106">*注:ModuleClient、このメソッドを呼び出した後は、オブジェクトを再利用することはできません。*</span><span class="sxs-lookup"><span data-stu-id="6216f-106">*Note: After calling this method the ModuleClient object cannot be reused.*</span></span>
     syntax:
       content: 'function close(closeCallback: Callback<Disconnected>)'
       parameters:
@@ -64,25 +119,62 @@ items:
             - Callback<Disconnected>
           description: ''
     package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.complete_1
+    name: complete(Message)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function complete(message: Message)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+      return:
+        type:
+          - Promise<MessageCompleted>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.complete
+    name: 'complete(Message, Callback<MessageCompleted>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function complete(message: Message, completeCallback: Callback<MessageCompleted>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: completeCallback
+          type:
+            - Callback<MessageCompleted>
+          description: ''
+    package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.fromAuthenticationProvider
     name: 'fromAuthenticationProvider(AuthenticationProvider, any)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-107">指定された認証方法と、特定のトランスポートの種類を使用して、IoT Hub モジュールのクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="fb888-107">Creates an IoT Hub module client from the given authentication method and using the given transport type.</span></span>
+    summary: <span data-ttu-id="6216f-107">指定された認証方法と、特定のトランスポートの種類を使用して、IoT Hub モジュールのクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="6216f-107">Creates an IoT Hub module client from the given authentication method and using the given transport type.</span></span>
     syntax:
       content: 'static function fromAuthenticationProvider(authenticationProvider: AuthenticationProvider, transportCtor: any)'
       parameters:
         - id: authenticationProvider
           type:
             - AuthenticationProvider
-          description: <span data-ttu-id="fb888-108">IoT hub の認証パラメーターを取得するために使用するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="fb888-108">Object used to obtain the authentication parameters for the IoT hub.</span></span>
+          description: <span data-ttu-id="6216f-108">IoT hub の認証パラメーターを取得するために使用するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="6216f-108">Object used to obtain the authentication parameters for the IoT hub.</span></span>
         - id: transportCtor
           type:
             - any
           description: |
-            <span data-ttu-id="fb888-109">トランスポート プロトコルの IoT hub に接続するために使用します。</span><span class="sxs-lookup"><span data-stu-id="fb888-109">Transport protocol used to connect to IoT hub.</span></span>
+            <span data-ttu-id="6216f-109">トランスポート プロトコルの IoT hub に接続するために使用します。</span><span class="sxs-lookup"><span data-stu-id="6216f-109">Transport protocol used to connect to IoT hub.</span></span>
       return:
         type:
           - azure-iot-device.ModuleClient
@@ -93,19 +185,19 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-110">特定のトランスポートの種類を使用して、特定の接続文字列から、IoT Hub デバイス クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="fb888-110">Creates an IoT Hub device client from the given connection string using the given transport type.</span></span>
+    summary: <span data-ttu-id="6216f-110">特定のトランスポートの種類を使用して、特定の接続文字列から、IoT Hub デバイス クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="6216f-110">Creates an IoT Hub device client from the given connection string using the given transport type.</span></span>
     syntax:
       content: 'static function fromConnectionString(connStr: string, transportCtor: any)'
       parameters:
         - id: connStr
           type:
             - string
-          description: <span data-ttu-id="fb888-111">IoT hub での「デバイスの接続」アクセス許可をカプセル化されている接続文字列。</span><span class="sxs-lookup"><span data-stu-id="fb888-111">A connection string which encapsulates "device connect" permissions on an IoT hub.</span></span>
+          description: <span data-ttu-id="6216f-111">IoT hub での「デバイスの接続」アクセス許可をカプセル化されている接続文字列。</span><span class="sxs-lookup"><span data-stu-id="6216f-111">A connection string which encapsulates "device connect" permissions on an IoT hub.</span></span>
         - id: transportCtor
           type:
             - any
           description: |
-            <span data-ttu-id="fb888-112">トランスポートのコンストラクターです。</span><span class="sxs-lookup"><span data-stu-id="fb888-112">A transport constructor.</span></span>
+            <span data-ttu-id="6216f-112">トランスポートのコンス トラクターです。</span><span class="sxs-lookup"><span data-stu-id="6216f-112">A transport constructor.</span></span>
       return:
         type:
           - azure-iot-device.ModuleClient
@@ -117,15 +209,15 @@ items:
     langs:
       - typeScript
     summary: |
-      <span data-ttu-id="fb888-113">環境から構成情報を使用して、IoT Hub モジュールのクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="fb888-113">Creates an IoT Hub module client by using configuration information from the environment.</span></span>
-      <span data-ttu-id="fb888-114">環境変数が呼び出された場合`EdgeHubConnectionString`または`IotHubConnectionString`その値が使用され、動作を呼び出すことと同じですが、存在する`fromConnectionString`で渡します。</span><span class="sxs-lookup"><span data-stu-id="fb888-114">If an environment variable called `EdgeHubConnectionString` or `IotHubConnectionString` exists, then that value is used and behavior is identical to calling `fromConnectionString` passing that in.</span></span> <span data-ttu-id="fb888-115">これらの環境変数が存在しない場合は、次の変数を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fb888-115">If those environment variables do not exist then the following variables MUST be defined:</span></span>
+      <span data-ttu-id="6216f-113">環境から構成情報を使用して、IoT Hub モジュールのクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="6216f-113">Creates an IoT Hub module client by using configuration information from the environment.</span></span>
+      <span data-ttu-id="6216f-114">環境変数が呼び出された場合`EdgeHubConnectionString`または`IotHubConnectionString`その値が使用され、動作を呼び出すことと同じですが、存在する`fromConnectionString`で渡します。</span><span class="sxs-lookup"><span data-stu-id="6216f-114">If an environment variable called `EdgeHubConnectionString` or `IotHubConnectionString` exists, then that value is used and behavior is identical to calling `fromConnectionString` passing that in.</span></span> <span data-ttu-id="6216f-115">これらの環境変数が存在しない場合は、次の変数を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6216f-115">If those environment variables do not exist then the following variables MUST be defined:</span></span>
 
-          - <span data-ttu-id="fb888-116">API の iotedged のワークロードの IOTEDGE_WORKLOADURI URI</span><span class="sxs-lookup"><span data-stu-id="fb888-116">IOTEDGE_WORKLOADURI          URI for iotedged's workload API</span></span>
-          - <span data-ttu-id="fb888-117">IOTEDGE_DEVICEID デバイス識別子</span><span class="sxs-lookup"><span data-stu-id="fb888-117">IOTEDGE_DEVICEID             Device identifier</span></span>
-          - <span data-ttu-id="fb888-118">IOTEDGE_MODULEID モジュールの識別子</span><span class="sxs-lookup"><span data-stu-id="fb888-118">IOTEDGE_MODULEID             Module identifier</span></span>
-          - <span data-ttu-id="fb888-119">IOTEDGE_MODULEGENERATIONID モジュール id</span><span class="sxs-lookup"><span data-stu-id="fb888-119">IOTEDGE_MODULEGENERATIONID   Module generation identifier</span></span>
-          - <span data-ttu-id="fb888-120">IOTEDGE_IOTHUBHOSTNAME IoT Hub ホスト名</span><span class="sxs-lookup"><span data-stu-id="fb888-120">IOTEDGE_IOTHUBHOSTNAME       IoT Hub host name</span></span>
-          - <span data-ttu-id="fb888-121">を使用する IOTEDGE_AUTHSCHEME 認証スキーム"sasToken"である必要があります。</span><span class="sxs-lookup"><span data-stu-id="fb888-121">IOTEDGE_AUTHSCHEME           Authentication scheme to use; must be "sasToken"</span></span>
+          - <span data-ttu-id="6216f-116">API の iotedged のワークロードの IOTEDGE_WORKLOADURI URI</span><span class="sxs-lookup"><span data-stu-id="6216f-116">IOTEDGE_WORKLOADURI          URI for iotedged's workload API</span></span>
+          - <span data-ttu-id="6216f-117">IOTEDGE_DEVICEID デバイス識別子</span><span class="sxs-lookup"><span data-stu-id="6216f-117">IOTEDGE_DEVICEID             Device identifier</span></span>
+          - <span data-ttu-id="6216f-118">IOTEDGE_MODULEID             Module identifier</span><span class="sxs-lookup"><span data-stu-id="6216f-118">IOTEDGE_MODULEID             Module identifier</span></span>
+          - <span data-ttu-id="6216f-119">IOTEDGE_MODULEGENERATIONID モジュール id</span><span class="sxs-lookup"><span data-stu-id="6216f-119">IOTEDGE_MODULEGENERATIONID   Module generation identifier</span></span>
+          - <span data-ttu-id="6216f-120">IOTEDGE_IOTHUBHOSTNAME IoT Hub ホスト名</span><span class="sxs-lookup"><span data-stu-id="6216f-120">IOTEDGE_IOTHUBHOSTNAME       IoT Hub host name</span></span>
+          - <span data-ttu-id="6216f-121">IOTEDGE_AUTHSCHEME           Authentication scheme to use; must be "sasToken"</span><span class="sxs-lookup"><span data-stu-id="6216f-121">IOTEDGE_AUTHSCHEME           Authentication scheme to use; must be "sasToken"</span></span>
     syntax:
       content: 'static function fromEnvironment(transportCtor: any)'
       parameters:
@@ -144,22 +236,22 @@ items:
     langs:
       - typeScript
     summary: |
-      <span data-ttu-id="fb888-122">環境から構成情報を使用して、IoT Hub モジュールのクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="fb888-122">Creates an IoT Hub module client by using configuration information from the environment.</span></span>
-      <span data-ttu-id="fb888-123">環境変数が呼び出された場合`EdgeHubConnectionString`または`IotHubConnectionString`その値が使用され、動作を呼び出すことと同じですが、存在する`fromConnectionString`で渡します。</span><span class="sxs-lookup"><span data-stu-id="fb888-123">If an environment variable called `EdgeHubConnectionString` or `IotHubConnectionString` exists, then that value is used and behavior is identical to calling `fromConnectionString` passing that in.</span></span> <span data-ttu-id="fb888-124">これらの環境変数が存在しない場合は、次の変数を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fb888-124">If those environment variables do not exist then the following variables MUST be defined:</span></span>
+      <span data-ttu-id="6216f-122">環境から構成情報を使用して、IoT Hub モジュールのクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="6216f-122">Creates an IoT Hub module client by using configuration information from the environment.</span></span>
+      <span data-ttu-id="6216f-123">環境変数が呼び出された場合`EdgeHubConnectionString`または`IotHubConnectionString`その値が使用され、動作を呼び出すことと同じですが、存在する`fromConnectionString`で渡します。</span><span class="sxs-lookup"><span data-stu-id="6216f-123">If an environment variable called `EdgeHubConnectionString` or `IotHubConnectionString` exists, then that value is used and behavior is identical to calling `fromConnectionString` passing that in.</span></span> <span data-ttu-id="6216f-124">これらの環境変数が存在しない場合は、次の変数を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6216f-124">If those environment variables do not exist then the following variables MUST be defined:</span></span>
 
-          - <span data-ttu-id="fb888-125">API の iotedged のワークロードの IOTEDGE_WORKLOADURI URI</span><span class="sxs-lookup"><span data-stu-id="fb888-125">IOTEDGE_WORKLOADURI          URI for iotedged's workload API</span></span>
-          - <span data-ttu-id="fb888-126">IOTEDGE_DEVICEID デバイス識別子</span><span class="sxs-lookup"><span data-stu-id="fb888-126">IOTEDGE_DEVICEID             Device identifier</span></span>
-          - <span data-ttu-id="fb888-127">IOTEDGE_MODULEID モジュールの識別子</span><span class="sxs-lookup"><span data-stu-id="fb888-127">IOTEDGE_MODULEID             Module identifier</span></span>
-          - <span data-ttu-id="fb888-128">IOTEDGE_MODULEGENERATIONID モジュール id</span><span class="sxs-lookup"><span data-stu-id="fb888-128">IOTEDGE_MODULEGENERATIONID   Module generation identifier</span></span>
-          - <span data-ttu-id="fb888-129">IOTEDGE_IOTHUBHOSTNAME IoT Hub ホスト名</span><span class="sxs-lookup"><span data-stu-id="fb888-129">IOTEDGE_IOTHUBHOSTNAME       IoT Hub host name</span></span>
-          - <span data-ttu-id="fb888-130">を使用する IOTEDGE_AUTHSCHEME 認証スキーム"sasToken"である必要があります。</span><span class="sxs-lookup"><span data-stu-id="fb888-130">IOTEDGE_AUTHSCHEME           Authentication scheme to use; must be "sasToken"</span></span>
+          - <span data-ttu-id="6216f-125">API の iotedged のワークロードの IOTEDGE_WORKLOADURI URI</span><span class="sxs-lookup"><span data-stu-id="6216f-125">IOTEDGE_WORKLOADURI          URI for iotedged's workload API</span></span>
+          - <span data-ttu-id="6216f-126">IOTEDGE_DEVICEID デバイス識別子</span><span class="sxs-lookup"><span data-stu-id="6216f-126">IOTEDGE_DEVICEID             Device identifier</span></span>
+          - <span data-ttu-id="6216f-127">IOTEDGE_MODULEID             Module identifier</span><span class="sxs-lookup"><span data-stu-id="6216f-127">IOTEDGE_MODULEID             Module identifier</span></span>
+          - <span data-ttu-id="6216f-128">IOTEDGE_MODULEGENERATIONID モジュール id</span><span class="sxs-lookup"><span data-stu-id="6216f-128">IOTEDGE_MODULEGENERATIONID   Module generation identifier</span></span>
+          - <span data-ttu-id="6216f-129">IOTEDGE_IOTHUBHOSTNAME IoT Hub ホスト名</span><span class="sxs-lookup"><span data-stu-id="6216f-129">IOTEDGE_IOTHUBHOSTNAME       IoT Hub host name</span></span>
+          - <span data-ttu-id="6216f-130">IOTEDGE_AUTHSCHEME           Authentication scheme to use; must be "sasToken"</span><span class="sxs-lookup"><span data-stu-id="6216f-130">IOTEDGE_AUTHSCHEME           Authentication scheme to use; must be "sasToken"</span></span>
     syntax:
       content: 'static function fromEnvironment(transportCtor: any, callback: Callback<ModuleClient>)'
       parameters:
         - id: transportCtor
           type:
             - any
-          description: <span data-ttu-id="fb888-131">トランスポート プロトコルの IoT hub に接続するために使用します。</span><span class="sxs-lookup"><span data-stu-id="fb888-131">Transport protocol used to connect to IoT hub.</span></span>
+          description: <span data-ttu-id="6216f-131">トランスポート プロトコルの IoT hub に接続するために使用します。</span><span class="sxs-lookup"><span data-stu-id="6216f-131">Transport protocol used to connect to IoT hub.</span></span>
         - id: callback
           type:
             - Callback<azure-iot-device.ModuleClient>
@@ -171,14 +263,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-132">特定のトランスポートの種類を使用して特定の共有アクセス署名から、IoT Hub モジュールのクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="fb888-132">Creates an IoT Hub module client from the given shared access signature using the given transport type.</span></span>
+    summary: <span data-ttu-id="6216f-132">特定のトランスポートの種類を使用して特定の共有アクセス署名から、IoT Hub モジュールのクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="6216f-132">Creates an IoT Hub module client from the given shared access signature using the given transport type.</span></span>
     syntax:
       content: 'static function fromSharedAccessSignature(sharedAccessSignature: string, transportCtor: any)'
       parameters:
         - id: sharedAccessSignature
           type:
             - string
-          description: <span data-ttu-id="fb888-133">IoT hub での「デバイスの接続」アクセス許可をカプセル化されている共有アクセス署名を指定します。</span><span class="sxs-lookup"><span data-stu-id="fb888-133">A shared access signature which encapsulates "device connect" permissions on an IoT hub.</span></span>
+          description: <span data-ttu-id="6216f-133">IoT hub での「デバイスの接続」アクセス許可をカプセル化されている共有アクセス署名を指定します。</span><span class="sxs-lookup"><span data-stu-id="6216f-133">A shared access signature which encapsulates "device connect" permissions on an IoT hub.</span></span>
         - id: transportCtor
           type:
             - any
@@ -187,13 +279,42 @@ items:
         type:
           - azure-iot-device.ModuleClient
     package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.getTwin_1
+    name: getTwin()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getTwin()
+      parameters: []
+      return:
+        type:
+          - Promise<azure-iot-device.Twin>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.getTwin
+    name: getTwin(Callback<Twin>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTwin(done: Callback<Twin>)'
+      parameters:
+        - id: done
+          type:
+            - Callback<azure-iot-device.Twin>
+          description: ''
+    package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.invokeMethod_2
     name: 'invokeMethod(string, MethodParams)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-134">ダウン ストリーム デバイスまたは同じのエッジ デバイス上の別のモジュールにメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="fb888-134">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="fb888-135">エッジ デバイスの一部として、モジュールが実行されている、この機能が動作だけに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fb888-135">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
+    summary: <span data-ttu-id="6216f-134">ダウン ストリーム デバイスまたは同じのエッジ デバイス上の別のモジュールにメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="6216f-134">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="6216f-135">エッジ デバイスの一部として、モジュールが実行されている、この機能が動作だけに注意してください。</span><span class="sxs-lookup"><span data-stu-id="6216f-135">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
     syntax:
       content: 'function invokeMethod(deviceId: string, methodParams: MethodParams)'
       parameters:
@@ -215,18 +336,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-136">ダウン ストリーム デバイスまたは同じのエッジ デバイス上の別のモジュールにメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="fb888-136">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="fb888-137">エッジ デバイスの一部として、モジュールが実行されている、この機能が動作だけに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fb888-137">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
+    summary: <span data-ttu-id="6216f-136">ダウン ストリーム デバイスまたは同じのエッジ デバイス上の別のモジュールにメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="6216f-136">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="6216f-137">エッジ デバイスの一部として、モジュールが実行されている、この機能が動作だけに注意してください。</span><span class="sxs-lookup"><span data-stu-id="6216f-137">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
     syntax:
       content: 'function invokeMethod(deviceId: string, methodParams: MethodParams, callback: Callback<MethodResult>)'
       parameters:
         - id: deviceId
           type:
             - string
-          description: <span data-ttu-id="fb888-138">ターゲット デバイスの識別子</span><span class="sxs-lookup"><span data-stu-id="fb888-138">target device identifier</span></span>
+          description: <span data-ttu-id="6216f-138">ターゲット デバイスの識別子</span><span class="sxs-lookup"><span data-stu-id="6216f-138">target device identifier</span></span>
         - id: methodParams
           type:
             - azure-iot-device.MethodParams
-          description: <span data-ttu-id="fb888-139">ダイレクト メソッド呼び出しのパラメーター</span><span class="sxs-lookup"><span data-stu-id="fb888-139">parameters of the direct method call</span></span>
+          description: <span data-ttu-id="6216f-139">ダイレクト メソッド呼び出しのパラメーター</span><span class="sxs-lookup"><span data-stu-id="6216f-139">parameters of the direct method call</span></span>
         - id: callback
           type:
             - Callback<azure-iot-device.MethodResult>
@@ -238,7 +359,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-140">ダウン ストリーム デバイスまたは同じのエッジ デバイス上の別のモジュールにメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="fb888-140">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="fb888-141">エッジ デバイスの一部として、モジュールが実行されている、この機能が動作だけに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fb888-141">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
+    summary: <span data-ttu-id="6216f-140">ダウン ストリーム デバイスまたは同じのエッジ デバイス上の別のモジュールにメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="6216f-140">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="6216f-141">エッジ デバイスの一部として、モジュールが実行されている、この機能が動作だけに注意してください。</span><span class="sxs-lookup"><span data-stu-id="6216f-141">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
     syntax:
       content: 'function invokeMethod(deviceId: string, moduleId: string, methodParams: MethodParams)'
       parameters:
@@ -264,7 +385,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-142">ダウン ストリーム デバイスまたは同じのエッジ デバイス上の別のモジュールにメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="fb888-142">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="fb888-143">エッジ デバイスの一部として、モジュールが実行されている、この機能が動作だけに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fb888-143">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
+    summary: <span data-ttu-id="6216f-142">ダウン ストリーム デバイスまたは同じのエッジ デバイス上の別のモジュールにメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="6216f-142">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="6216f-143">エッジ デバイスの一部として、モジュールが実行されている、この機能が動作だけに注意してください。</span><span class="sxs-lookup"><span data-stu-id="6216f-143">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
     syntax:
       content: 'function invokeMethod(deviceId: string, moduleId: string, methodParams: MethodParams, callback: Callback<MethodResult>)'
       parameters:
@@ -291,19 +412,159 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-144">という名前のメソッドのコールバックを登録`methodName`します。</span><span class="sxs-lookup"><span data-stu-id="fb888-144">Registers a callback for a method named `methodName`.</span></span>
+    summary: <span data-ttu-id="6216f-144">という名前のメソッドのコールバックを登録`methodName`します。</span><span class="sxs-lookup"><span data-stu-id="6216f-144">Registers a callback for a method named `methodName`.</span></span>
     syntax:
       content: 'function onMethod(methodName: string, callback: DoubleValueCallback<DeviceMethodRequest, DeviceMethodResponse>)'
       parameters:
         - id: methodName
           type:
             - string
-          description: <span data-ttu-id="fb888-145">コールバックによって処理されるメソッドの名前</span><span class="sxs-lookup"><span data-stu-id="fb888-145">Name of the method that will be handled by the callback</span></span>
+          description: <span data-ttu-id="6216f-145">コールバックによって処理されるメソッドの名前</span><span class="sxs-lookup"><span data-stu-id="6216f-145">Name of the method that will be handled by the callback</span></span>
         - id: callback
           type:
             - 'DoubleValueCallback<azure-iot-device.DeviceMethodRequest, azure-iot-device.DeviceMethodResponse>'
           description: |
-            <span data-ttu-id="fb888-146">メソッドのメソッドの要求が呼び出されるたびに呼び出されます関数`methodName`を受信します。</span><span class="sxs-lookup"><span data-stu-id="fb888-146">Function that shall be called whenever a method request for the method called `methodName` is received.</span></span>
+            <span data-ttu-id="6216f-146">メソッドのメソッドの要求が呼び出されるたびに呼び出されます関数`methodName`を受信します。</span><span class="sxs-lookup"><span data-stu-id="6216f-146">Function that shall be called whenever a method request for the method called `methodName` is received.</span></span>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.open_1
+    name: open()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function open()
+      parameters: []
+      return:
+        type:
+          - Promise<Connected>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.open
+    name: open(Callback<Connected>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function open(openCallback: Callback<Connected>)'
+      parameters:
+        - id: openCallback
+          type:
+            - Callback<Connected>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.reject_1
+    name: reject(Message)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reject(message: Message)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+      return:
+        type:
+          - Promise<MessageRejected>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.reject
+    name: 'reject(Message, Callback<MessageRejected>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reject(message: Message, rejectCallback: Callback<MessageRejected>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: rejectCallback
+          type:
+            - Callback<MessageRejected>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.sendEvent_1
+    name: sendEvent(Message)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendEvent(message: Message)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+      return:
+        type:
+          - Promise<MessageEnqueued>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.sendEvent
+    name: 'sendEvent(Message, Callback<MessageEnqueued>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendEvent(message: Message, sendEventCallback: Callback<MessageEnqueued>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: sendEventCallback
+          type:
+            - Callback<MessageEnqueued>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.sendEventBatch_1
+    name: 'sendEventBatch(Message[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendEventBatch(messages: Message[])'
+      parameters:
+        - id: messages
+          type:
+            - 'Message[]'
+          description: ''
+      return:
+        type:
+          - Promise<MessageEnqueued>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.sendEventBatch
+    name: 'sendEventBatch(Message[], Callback<MessageEnqueued>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendEventBatch(messages: Message[], sendEventBatchCallback: Callback<MessageEnqueued>)'
+      parameters:
+        - id: messages
+          type:
+            - 'Message[]'
+          description: ''
+        - id: sendEventBatchCallback
+          type:
+            - Callback<MessageEnqueued>
+          description: ''
     package: azure-iot-device
   - uid: azure-iot-device.ModuleClient.sendOutputEvent_1
     name: 'sendOutputEvent(string, Message)'
@@ -311,7 +572,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-147">指定したモジュールの出力にイベントを送信します。</span><span class="sxs-lookup"><span data-stu-id="fb888-147">Sends an event to the given module output</span></span>
+    summary: <span data-ttu-id="6216f-147">指定したモジュールの出力にイベントを送信します。</span><span class="sxs-lookup"><span data-stu-id="6216f-147">Sends an event to the given module output</span></span>
     syntax:
       content: 'function sendOutputEvent(outputName: string, message: Message)'
       parameters:
@@ -333,18 +594,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-148">指定したモジュールの出力にイベントを送信します。</span><span class="sxs-lookup"><span data-stu-id="fb888-148">Sends an event to the given module output</span></span>
+    summary: <span data-ttu-id="6216f-148">指定したモジュールの出力にイベントを送信します。</span><span class="sxs-lookup"><span data-stu-id="6216f-148">Sends an event to the given module output</span></span>
     syntax:
       content: 'function sendOutputEvent(outputName: string, message: Message, callback: Callback<MessageEnqueued>)'
       parameters:
         - id: outputName
           type:
             - string
-          description: <span data-ttu-id="fb888-149">イベントを送信する出力の名前</span><span class="sxs-lookup"><span data-stu-id="fb888-149">Name of the output to send the event to</span></span>
+          description: <span data-ttu-id="6216f-149">イベントを送信する出力の名前</span><span class="sxs-lookup"><span data-stu-id="6216f-149">Name of the output to send the event to</span></span>
         - id: message
           type:
             - Message
-          description: <span data-ttu-id="fb888-150">指定した出力に送信するメッセージ</span><span class="sxs-lookup"><span data-stu-id="fb888-150">Message to send to the given output</span></span>
+          description: <span data-ttu-id="6216f-150">指定した出力に送信するメッセージ</span><span class="sxs-lookup"><span data-stu-id="6216f-150">Message to send to the given output</span></span>
         - id: callback
           type:
             - Callback<MessageEnqueued>
@@ -356,7 +617,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-151">イベントの配列を指定したモジュール出力に送信します。</span><span class="sxs-lookup"><span data-stu-id="fb888-151">Sends an array of events to the given module output</span></span>
+    summary: <span data-ttu-id="6216f-151">イベントの配列を指定したモジュール出力に送信します。</span><span class="sxs-lookup"><span data-stu-id="6216f-151">Sends an array of events to the given module output</span></span>
     syntax:
       content: 'function sendOutputEventBatch(outputName: string, messages: Message[])'
       parameters:
@@ -378,14 +639,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-152">イベントの配列を指定したモジュール出力に送信します。</span><span class="sxs-lookup"><span data-stu-id="fb888-152">Sends an array of events to the given module output</span></span>
+    summary: <span data-ttu-id="6216f-152">イベントの配列を指定したモジュール出力に送信します。</span><span class="sxs-lookup"><span data-stu-id="6216f-152">Sends an array of events to the given module output</span></span>
     syntax:
       content: 'function sendOutputEventBatch(outputName: string, messages: Message[], callback: Callback<MessageEnqueued>)'
       parameters:
         - id: outputName
           type:
             - string
-          description: <span data-ttu-id="fb888-153">イベントを送信する出力の名前</span><span class="sxs-lookup"><span data-stu-id="fb888-153">Name of the output to send the events to</span></span>
+          description: <span data-ttu-id="6216f-153">イベントを送信する出力の名前</span><span class="sxs-lookup"><span data-stu-id="6216f-153">Name of the output to send the events to</span></span>
         - id: messages
           type:
             - 'Message[]'
@@ -401,7 +662,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-154">オプションを渡す、`ModuleClient`トランスポートを構成するために使用できるオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="fb888-154">Passes options to the `ModuleClient` object that can be used to configure the transport.</span></span>
+    summary: <span data-ttu-id="6216f-154">オプションを渡す、`ModuleClient`トランスポートを構成するために使用できるオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="6216f-154">Passes options to the `ModuleClient` object that can be used to configure the transport.</span></span>
     syntax:
       content: 'function setOptions(options: DeviceClientOptions)'
       parameters:
@@ -419,20 +680,113 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="fb888-155">オプションを渡す、`ModuleClient`トランスポートを構成するために使用できるオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="fb888-155">Passes options to the `ModuleClient` object that can be used to configure the transport.</span></span>
+    summary: <span data-ttu-id="6216f-155">オプションを渡す、`ModuleClient`トランスポートを構成するために使用できるオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="6216f-155">Passes options to the `ModuleClient` object that can be used to configure the transport.</span></span>
     syntax:
       content: 'function setOptions(options: DeviceClientOptions, done: Callback<TransportConfigured>)'
       parameters:
         - id: options
           type:
             - azure-iot-device.DeviceClientOptions
-          description: '<span data-ttu-id="fb888-156"><xref:DeviceClientOptions> オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="fb888-156">A <xref:DeviceClientOptions> object.</span></span>'
+          description: '<span data-ttu-id="6216f-156"><xref:DeviceClientOptions> オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="6216f-156">A <xref:DeviceClientOptions> object.</span></span>'
         - id: done
           type:
             - Callback<TransportConfigured>
           description: ''
     package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.setRetryPolicy
+    name: setRetryPolicy(RetryPolicy)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="6216f-157">すべての操作上のクライアントによって使用される再試行ポリシーを設定します。</span><span class="sxs-lookup"><span data-stu-id="6216f-157">Sets the retry policy used by the client on all operations.</span></span> <span data-ttu-id="6216f-158">既定値は[ExponentialBackoffWithJitter](xref:azure-iot-common.ExponentialBackoffWithJitter)します。</span><span class="sxs-lookup"><span data-stu-id="6216f-158">The default is [ExponentialBackoffWithJitter](xref:azure-iot-common.ExponentialBackoffWithJitter).</span></span>'
+    syntax:
+      content: 'function setRetryPolicy(policy: RetryPolicy)'
+      parameters:
+        - id: policy
+          type:
+            - RetryPolicy
+          description: |
+            <span data-ttu-id="6216f-159">将来のすべての操作を使用する再試行ポリシーです。</span><span class="sxs-lookup"><span data-stu-id="6216f-159">The retry policy that should be used for all future operations.</span></span>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.setTransportOptions_1
+    name: setTransportOptions(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setTransportOptions(options: any)'
+      parameters:
+        - id: options
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - Promise<TransportConfigured>
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.setTransportOptions
+    name: 'setTransportOptions(any, Callback<TransportConfigured>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setTransportOptions(options: any, done: Callback<TransportConfigured>)'
+      parameters:
+        - id: options
+          type:
+            - any
+          description: ''
+        - id: done
+          type:
+            - Callback<TransportConfigured>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.ModuleClient.updateSharedAccessSignature
+    name: 'updateSharedAccessSignature(string, Callback<SharedAccessSignatureUpdated>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateSharedAccessSignature(sharedAccessSignature: string, updateSasCallback?: Callback<SharedAccessSignatureUpdated>)'
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: ''
+        - id: updateSasCallback
+          type:
+            - Callback<SharedAccessSignatureUpdated>
+          description: ''
+          optional: true
+    package: azure-iot-device
 references:
+  - uid: Callback<azure-iot-device.Twin>
+    name: Twin>
+    spec.typeScript:
+      - name: Callback<
+        fullName: Callback<
+      - name: Twin
+        fullName: Twin
+        uid: azure-iot-device.Twin
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-iot-device.Twin>
+    name: Twin>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Twin
+        fullName: Twin
+        uid: azure-iot-device.Twin
+      - name: '>'
+        fullName: '>'
   - uid: azure-iot-device.MethodParams
     name: MethodParams
     spec.typeScript:

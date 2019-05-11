@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ClusterHealth
+    name: ClusterHealth
+    fullName: ClusterHealth
+    children:
+      - azure-servicefabric.ClusterHealth.aggregatedHealthState
+      - azure-servicefabric.ClusterHealth.applicationHealthStates
+      - azure-servicefabric.ClusterHealth.healthEvents
+      - azure-servicefabric.ClusterHealth.healthStatistics
+      - azure-servicefabric.ClusterHealth.nodeHealthStates
+      - azure-servicefabric.ClusterHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="983ce-101">クラスターの正常性を表します。</span><span class="sxs-lookup"><span data-stu-id="983ce-101">Represents the health of the cluster.</span></span>
+      <span data-ttu-id="983ce-102">集計されたクラスターの正常性状態、クラスターのアプリケーションとノードの正常性の状態と正常性イベントおよび異常性の評価が含まれています。</span><span class="sxs-lookup"><span data-stu-id="983ce-102">Contains the cluster aggregated health state, the cluster application and node health states as well as the health events and the unhealthy evaluations.</span></span>
+    extends:
+      name: azure-servicefabric.EntityHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="983ce-103">正常性マネージャーによって計算されたエンティティの集計正常性状態を表す HealthState します。</span><span class="sxs-lookup"><span data-stu-id="983ce-103">The HealthState representing the aggregated health state of the entity computed by Health Manager.</span></span>
+      <span data-ttu-id="983ce-104">エンティティの正常性評価では、エンティティとその子 (該当する場合) で報告されるすべてのイベントが反映されます。</span><span class="sxs-lookup"><span data-stu-id="983ce-104">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>
+      <span data-ttu-id="983ce-105">集計は、目的の正常性ポリシーを適用することで行われます。</span><span class="sxs-lookup"><span data-stu-id="983ce-105">The aggregation is done by applying the desired health policy.</span></span> <span data-ttu-id="983ce-106">指定できる値は、次のとおりです。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'</span><span class="sxs-lookup"><span data-stu-id="983ce-106">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.applicationHealthStates
+    name: applicationHealthStates
+    fullName: applicationHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="983ce-107">クラスターの正常性ストアで見つかったとしてアプリケーション正常性状態。</span><span class="sxs-lookup"><span data-stu-id="983ce-107">Cluster application health states as found in the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationHealthStates?: ApplicationHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.ApplicationHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="983ce-108">エンティティで報告される正常性イベントの一覧。</span><span class="sxs-lookup"><span data-stu-id="983ce-108">The list of health events reported on the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="983ce-109">照会されたエンティティのすべての子の種類の正常性の統計情報を示します。</span><span class="sxs-lookup"><span data-stu-id="983ce-109">Shows the health statistics for all children types of the queried entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.nodeHealthStates
+    name: nodeHealthStates
+    fullName: nodeHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="983ce-110">クラスターの正常性ストアで見つかったノード正常性状態。</span><span class="sxs-lookup"><span data-stu-id="983ce-110">Cluster node health states as found in the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeHealthStates?: NodeHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.NodeHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ClusterHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="983ce-111">現在の正常性状態に集計された理由を示す異常性の評価には、正常性マネージャーによってが返されました。</span><span class="sxs-lookup"><span data-stu-id="983ce-111">The unhealthy evaluations that show why the current aggregated health state was returned by Health Manager.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealth
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: azure-servicefabric.EntityHealth
+  - uid: 'azure-servicefabric.ApplicationHealthState[]'
+    name: 'ApplicationHealthState[]'
+    spec.typeScript:
+      - name: ApplicationHealthState
+        fullName: ApplicationHealthState
+        uid: azure-servicefabric.ApplicationHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.NodeHealthState[]'
+    name: 'NodeHealthState[]'
+    spec.typeScript:
+      - name: NodeHealthState
+        fullName: NodeHealthState
+        uid: azure-servicefabric.NodeHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation
+    name: DeployedServicePackagesHealthEvaluation
+    fullName: DeployedServicePackagesHealthEvaluation
+    children:
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.description
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.kind
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.totalCount
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="ce38e-101">現在の集計正常性状態に影響を受ける各問題のあるデプロイされたサービス パッケージの正常性評価を含む、デプロイされたサービス パッケージの正常性評価を表します。</span><span class="sxs-lookup"><span data-stu-id="ce38e-101">Represents health evaluation for deployed service packages, containing health evaluations for each unhealthy deployed service package that impacted current aggregated health state.</span></span> <span data-ttu-id="ce38e-102">エラーまたは警告は、デプロイされたアプリケーションの正常性と集計正常性状態を評価するときに返されます。</span><span class="sxs-lookup"><span data-stu-id="ce38e-102">Can be returned when evaluating deployed application health and the aggregated health state is either Error or Warning.</span></span>'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ce38e-103">クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。指定できる値は、次のとおりです。''Invalid''、''Ok''、''警告''、''Error''、''Unknown''</span><span class="sxs-lookup"><span data-stu-id="ce38e-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ce38e-104">評価プロセスの概要を表す正常性評価の説明です。</span><span class="sxs-lookup"><span data-stu-id="ce38e-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ce38e-105">ポリモーフィックな識別子</span><span class="sxs-lookup"><span data-stu-id="ce38e-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ce38e-106">正常性ストアにデプロイされたアプリケーションのデプロイされたサービス パッケージの合計数。</span><span class="sxs-lookup"><span data-stu-id="ce38e-106">Total number of deployed service packages of the deployed application in the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ce38e-107">集計された正常性の状態の原因となった異常性の評価のリスト。</span><span class="sxs-lookup"><span data-stu-id="ce38e-107">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="ce38e-108">集計された正常性の影響を受けるすべての異常な DeployedServicePackageHealthEvaluation が含まれています。</span><span class="sxs-lookup"><span data-stu-id="ce38e-108">Includes all the unhealthy DeployedServicePackageHealthEvaluation that impacted the aggregated health.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

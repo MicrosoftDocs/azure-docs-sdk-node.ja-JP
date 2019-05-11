@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.Int64RangePartitionInformation
+    name: Int64RangePartitionInformation
+    fullName: Int64RangePartitionInformation
+    children:
+      - azure-servicefabric.Int64RangePartitionInformation.highKey
+      - azure-servicefabric.Int64RangePartitionInformation.id
+      - azure-servicefabric.Int64RangePartitionInformation.lowKey
+      - azure-servicefabric.Int64RangePartitionInformation.servicePartitionKind
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="e8e4a-101">パーティション構成に基づく整数の範囲のパーティションの情報について説明します。</span><span class="sxs-lookup"><span data-stu-id="e8e4a-101">Describes the partition information for the integer range that is based on partition schemes.</span></span>
+    extends:
+      name: azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.Int64RangePartitionInformation.highKey
+    name: highKey
+    fullName: highKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e8e4a-102">このパーティションによって処理される最大のキー値を指定します。</span><span class="sxs-lookup"><span data-stu-id="e8e4a-102">Specifies the maximum key value handled by this partition.</span></span>
+    optional: true
+    syntax:
+      content: 'highKey?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.Int64RangePartitionInformation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e8e4a-103">パーティションを一意に識別するために、Service Fabric によって使用される内部の ID。</span><span class="sxs-lookup"><span data-stu-id="e8e4a-103">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="e8e4a-104">これは、サービスの作成時にランダムに生成された GUID です。</span><span class="sxs-lookup"><span data-stu-id="e8e4a-104">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="e8e4a-105">パーティション ID は一意し、サービスの有効期間は変更されません。</span><span class="sxs-lookup"><span data-stu-id="e8e4a-105">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="e8e4a-106">同じサービスが削除され、そのパーティションの Id を再作成する場合は、異なるでしょう。</span><span class="sxs-lookup"><span data-stu-id="e8e4a-106">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.Int64RangePartitionInformation.lowKey
+    name: lowKey
+    fullName: lowKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e8e4a-107">このパーティションによって処理される最小のキー値を指定します。</span><span class="sxs-lookup"><span data-stu-id="e8e4a-107">Specifies the minimum key value handled by this partition.</span></span>
+    optional: true
+    syntax:
+      content: 'lowKey?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.Int64RangePartitionInformation.servicePartitionKind
+    name: servicePartitionKind
+    fullName: servicePartitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e8e4a-108">ポリモーフィックな識別子</span><span class="sxs-lookup"><span data-stu-id="e8e4a-108">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'servicePartitionKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation
