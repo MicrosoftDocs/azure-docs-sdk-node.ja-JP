@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.EndpointHealthData'
+    name: EndpointHealthData
+    fullName: EndpointHealthData
+    children:
+      - '@azure/arm-iothub.EndpointHealthData.endpointId'
+      - '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="95654-101">エンドポイントの正常性データ</span><span class="sxs-lookup"><span data-stu-id="95654-101">The health data for an endpoint</span></span>
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.endpointId'
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95654-102">エンドポイントの id</span><span class="sxs-lookup"><span data-stu-id="95654-102">Id of the endpoint</span></span>
+    optional: true
+    syntax:
+      content: 'endpointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    name: healthStatus
+    fullName: healthStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="95654-103">正常性状態は、次の意味が。</span><span class="sxs-lookup"><span data-stu-id="95654-103">Health statuses have following meanings.</span></span> <span data-ttu-id="95654-104">期待どおりに、エンドポイントにメッセージを受け付けてが ''正常な状態'' の状態を示しています。</span><span class="sxs-lookup"><span data-stu-id="95654-104">The ''healthy'' status shows that the endpoint is accepting messages as expected.</span></span> <span data-ttu-id="95654-105">期待どおりに、エンドポイントがメッセージを受け入れませんを IoT Hub がデータをこのエンドポイントに送信する再試行 ''異常'' の状態を示しています。</span><span class="sxs-lookup"><span data-stu-id="95654-105">The ''unhealthy'' status shows that the endpoint is not accepting messages as expected and IoT Hub is retrying to send data to this endpoint.</span></span> <span data-ttu-id="95654-106">IoT Hub が最終的に一貫して正常状態を確立すると、異常なエンドポイントの状態が "正常" に更新されます。</span><span class="sxs-lookup"><span data-stu-id="95654-106">The status of an unhealthy endpoint will be updated to healthy when IoT Hub has established an eventually consistent state of health.</span></span> <span data-ttu-id="95654-107">エントリの IoT Hub では、メッセージの送信を再試行 retrial 期間の後に、エンドポイントは、メッセージが受け付けていません ''停止'' の状態を示しています。</span><span class="sxs-lookup"><span data-stu-id="95654-107">The ''dead'' status shows that the endpoint is not accepting messages, after IoT Hub retried sending messages for the retrial period.</span></span> <span data-ttu-id="95654-108">エラーを識別して、エンドポイントでの問題を監視する IoT Hub メトリックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="95654-108">See IoT Hub metrics to identify errors and monitor issues with endpoints.</span></span> <span data-ttu-id="95654-109">''不明'' 状態では、IoT Hub がエンドポイントとの接続を確立していないことを示します。</span><span class="sxs-lookup"><span data-stu-id="95654-109">The ''unknown'' status shows that the IoT Hub has not established a connection with the endpoint.</span></span> <span data-ttu-id="95654-110">このエンドポイントとの間でメッセージが配信または拒否されたことはありません。</span><span class="sxs-lookup"><span data-stu-id="95654-110">No messages have been delivered to or rejected from this endpoint.</span></span> <span data-ttu-id="95654-111">使用可能な値が含まれます: ''unknown''、''異常''、''異常''、''dead''</span><span class="sxs-lookup"><span data-stu-id="95654-111">Possible values include: ''unknown'', ''healthy'', ''unhealthy'', ''dead''</span></span>'
+    optional: true
+    syntax:
+      content: 'healthStatus?: EndpointHealthStatus'
+      return:
+        type:
+          - '@azure/arm-iothub.EndpointHealthStatus'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.EndpointHealthStatus'
+    name: EndpointHealthStatus
+    spec.typeScript:
+      - name: EndpointHealthStatus
+        fullName: EndpointHealthStatus
+        uid: '@azure/arm-iothub.EndpointHealthStatus'
