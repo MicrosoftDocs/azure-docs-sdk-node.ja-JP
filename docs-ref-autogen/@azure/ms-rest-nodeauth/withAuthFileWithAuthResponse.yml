@@ -1,0 +1,46 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFileWithAuthResponse'
+    name: withAuthFileWithAuthResponse(LoginWithAuthFileOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="d49b6-101">このメソッドを使用する前にから az cli をインストールしてくださいhttps://github.com/Azure/azure-cli/releasesします。</span><span class="sxs-lookup"><span data-stu-id="d49b6-101">Before using this method please install az cli from https://github.com/Azure/azure-cli/releases.</span></span> <span data-ttu-id="d49b6-102">実行し、`az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`します。</span><span class="sxs-lookup"><span data-stu-id="d49b6-102">Then execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.</span></span>
+      <span data-ttu-id="d49b6-103">別のクラウド/環境向けの sp を作成する場合、実行してください。</span><span class="sxs-lookup"><span data-stu-id="d49b6-103">If you want to create the sp for a different cloud/environment then please execute:</span></span>
+      1. <span data-ttu-id="d49b6-104">az cloud 一覧</span><span class="sxs-lookup"><span data-stu-id="d49b6-104">az cloud list</span></span>
+      2. <span data-ttu-id="d49b6-105">az cloud 設定: n <name of the environment></span><span class="sxs-lookup"><span data-stu-id="d49b6-105">az cloud set –n <name of the environment></span></span>
+      3. <span data-ttu-id="d49b6-106">az ad sp create-for-rbac --sdk-auth > auth.json // create sp with secret **OR**</span><span class="sxs-lookup"><span data-stu-id="d49b6-106">az ad sp create-for-rbac --sdk-auth > auth.json // create sp with secret **OR**</span></span>
+      3. <span data-ttu-id="d49b6-107">az ad sp create-for-rbac --create-cert --sdk-auth > auth.json // create sp with certificate If the service principal is already created then login with service principal info:</span><span class="sxs-lookup"><span data-stu-id="d49b6-107">az ad sp create-for-rbac --create-cert --sdk-auth > auth.json // create sp with certificate If the service principal is already created then login with service principal info:</span></span>
+      4. <span data-ttu-id="d49b6-108">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span><span class="sxs-lookup"><span data-stu-id="d49b6-108">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span></span>
+      5. <span data-ttu-id="d49b6-109">az アカウントの表示 - sdk 認証 > auth.json 認証ファイルで提供されるサービス プリンシパル情報を使用して認証します。</span><span class="sxs-lookup"><span data-stu-id="d49b6-109">az account show --sdk-auth > auth.json Authenticates using the service principal information provided in the auth file.</span></span> <span data-ttu-id="d49b6-110">このメソッドは、認証ファイルから、サブスクリプション Id をユーザー指定の options パラメーターまたは既定の"AZURE_SUBSCRIPTION_ID"で環境変数に設定されます。</span><span class="sxs-lookup"><span data-stu-id="d49b6-110">This method will set the subscriptionId from the auth file to the user provided environment variable in the options parameter or the default "AZURE_SUBSCRIPTION_ID".</span></span>
+    syntax:
+      content: 'function withAuthFileWithAuthResponse(options?: LoginWithAuthFileOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+    name: LoginWithAuthFileOptions
+    spec.typeScript:
+      - name: LoginWithAuthFileOptions
+        fullName: LoginWithAuthFileOptions
+        uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    name: AuthResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: AuthResponse
+        fullName: AuthResponse
+        uid: '@azure/ms-rest-nodeauth.AuthResponse'
+      - name: '>'
+        fullName: '>'
