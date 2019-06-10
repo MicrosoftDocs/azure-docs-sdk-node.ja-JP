@@ -1,0 +1,235 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.OSDisk'
+    name: OSDisk
+    fullName: OSDisk
+    children:
+      - '@azure/arm-compute.OSDisk.caching'
+      - '@azure/arm-compute.OSDisk.createOption'
+      - '@azure/arm-compute.OSDisk.diffDiskSettings'
+      - '@azure/arm-compute.OSDisk.diskSizeGB'
+      - '@azure/arm-compute.OSDisk.encryptionSettings'
+      - '@azure/arm-compute.OSDisk.image'
+      - '@azure/arm-compute.OSDisk.managedDisk'
+      - '@azure/arm-compute.OSDisk.name'
+      - '@azure/arm-compute.OSDisk.osType'
+      - '@azure/arm-compute.OSDisk.vhd'
+      - '@azure/arm-compute.OSDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="9d4c1-101">仮想マシンで使用されるオペレーティング システム ディスクに関する情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-101">Specifies information about the operating system disk used by the virtual machine.</span></span> <br><br> <span data-ttu-id="9d4c1-102">ディスクの詳細については、次を参照してください。[ディスクと Azure 仮想マシンの Vhd について](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-102">For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).</span></span>'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d4c1-103">キャッシュの要件を指定します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-103">Specifies the caching requirements.</span></span> <br><br> <span data-ttu-id="9d4c1-104">設定可能な値は、次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-104">Possible values are:</span></span> <br><br> <span data-ttu-id="9d4c1-105">**None**</span><span class="sxs-lookup"><span data-stu-id="9d4c1-105">**None**</span></span> <br><br>
+      <span data-ttu-id="9d4c1-106">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="9d4c1-106">**ReadOnly**</span></span> <br><br> <span data-ttu-id="9d4c1-107">**ReadWrite**</span><span class="sxs-lookup"><span data-stu-id="9d4c1-107">**ReadWrite**</span></span> <br><br> <span data-ttu-id="9d4c1-108">既定値:**Standard storage はありません。Premium storage の ReadOnly**します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-108">Default: **None for Standard storage. ReadOnly for Premium storage**.</span></span> <span data-ttu-id="9d4c1-109">指定できる値は、次のとおりです。'None', 'ReadOnly', 'ReadWrite'</span><span class="sxs-lookup"><span data-stu-id="9d4c1-109">Possible values include: 'None', 'ReadOnly', 'ReadWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d4c1-110">仮想マシンを作成する方法を指定します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-110">Specifies how the virtual machine should be created.</span></span><br><br> <span data-ttu-id="9d4c1-111">設定可能な値は、次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-111">Possible values are:</span></span><br><br>
+      <span data-ttu-id="9d4c1-112">**アタッチ**\u2013 仮想マシンを作成する特殊化されたディスクを使用しているときにこの値が使用されます。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-112">**Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.</span></span><br><br> <span data-ttu-id="9d4c1-113">**FromImage** \u2013 仮想マシンを作成するイメージを使用しているときにこの値が使用されます。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-113">**FromImage** \u2013 This value is used when you are using an image to create the virtual machine.</span></span> <span data-ttu-id="9d4c1-114">プラットフォーム イメージを使用している場合は、上記で説明した、imageReference 要素を使用します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-114">If you are using a platform image, you also use the imageReference element described above.</span></span> <span data-ttu-id="9d4c1-115">Marketplace イメージを使用している場合は、前に説明した計画要素も使用します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-115">If you are using a marketplace image, you  also use the plan element previously described.</span></span> <span data-ttu-id="9d4c1-116">指定できる値は、次のとおりです。'FromImage'、'Empty'、' 接続 '</span><span class="sxs-lookup"><span data-stu-id="9d4c1-116">Possible values include: 'FromImage', 'Empty', 'Attach'</span></span>
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.diffDiskSettings'
+    name: diffDiskSettings
+    fullName: diffDiskSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d4c1-117">仮想マシンで使用されるオペレーティング システム ディスクの一時ディスクの設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-117">Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'diffDiskSettings?: DiffDiskSettings'
+      return:
+        type:
+          - '@azure/arm-compute.DiffDiskSettings'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d4c1-118">空のデータ ディスクのサイズをギガバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-118">Specifies the size of an empty data disk in gigabytes.</span></span> <span data-ttu-id="9d4c1-119">この要素を使用して、仮想マシン イメージのディスクのサイズを上書きします。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-119">This element can be used to overwrite the size of the disk in a virtual machine image.</span></span> <br><br> <span data-ttu-id="9d4c1-120">この値は 1023 GB より大きくすることはできません。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-120">This value cannot be larger than 1023 GB</span></span>
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.encryptionSettings'
+    name: encryptionSettings
+    fullName: encryptionSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d4c1-121">OS ディスクの暗号化の設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-121">Specifies the encryption settings for the OS Disk.</span></span> <br><br> <span data-ttu-id="9d4c1-122">最小 api バージョン:2015-06-15</span><span class="sxs-lookup"><span data-stu-id="9d4c1-122">Minimum api-version: 2015-06-15</span></span>'
+    optional: true
+    syntax:
+      content: 'encryptionSettings?: DiskEncryptionSettings'
+      return:
+        type:
+          - '@azure/arm-compute.DiskEncryptionSettings'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d4c1-123">元のユーザーは、仮想ハード ディスク イメージします。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-123">The source user image virtual hard disk.</span></span> <span data-ttu-id="9d4c1-124">仮想ハード_ディスクは、仮想マシンにアタッチされる前にコピーされます。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-124">The virtual hard disk will be copied before being attached to the virtual machine.</span></span> <span data-ttu-id="9d4c1-125">SourceImage が指定されている場合、変換先の仮想ハード ドライブが存在する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-125">If SourceImage is provided, the destination virtual hard drive must not exist.</span></span>'
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d4c1-126">管理ディスクのパラメーター。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-126">The managed disk parameters.</span></span>
+    optional: true
+    syntax:
+      content: 'managedDisk?: ManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.ManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d4c1-127">ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-127">The disk name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d4c1-128">このプロパティを使用すると、ユーザー イメージまたは特殊化された VHD から VM を作成する場合は、ディスクに含まれている OS の種類を指定できます。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-128">This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD.</span></span> <br><br> <span data-ttu-id="9d4c1-129">設定可能な値は、次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-129">Possible values are:</span></span> <br><br>
+      <span data-ttu-id="9d4c1-130">**Windows**</span><span class="sxs-lookup"><span data-stu-id="9d4c1-130">**Windows**</span></span> <br><br> <span data-ttu-id="9d4c1-131">**Linux**します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-131">**Linux**.</span></span> <span data-ttu-id="9d4c1-132">指定できる値は、次のとおりです。'Windows', 'Linux'</span><span class="sxs-lookup"><span data-stu-id="9d4c1-132">Possible values include: 'Windows', 'Linux'</span></span>
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.vhd'
+    name: vhd
+    fullName: vhd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d4c1-133">バーチャル ハード_ディスク。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-133">The virtual hard disk.</span></span>
+    optional: true
+    syntax:
+      content: 'vhd?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d4c1-134">WriteAccelerator を有効または、ディスクを無効になっているかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="9d4c1-134">Specifies whether writeAccelerator should be enabled or disabled on the disk.</span></span>
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.DiffDiskSettings'
+    name: DiffDiskSettings
+    spec.typeScript:
+      - name: DiffDiskSettings
+        fullName: DiffDiskSettings
+        uid: '@azure/arm-compute.DiffDiskSettings'
+  - uid: '@azure/arm-compute.DiskEncryptionSettings'
+    name: DiskEncryptionSettings
+    spec.typeScript:
+      - name: DiskEncryptionSettings
+        fullName: DiskEncryptionSettings
+        uid: '@azure/arm-compute.DiskEncryptionSettings'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.ManagedDiskParameters'
+    name: ManagedDiskParameters
+    spec.typeScript:
+      - name: ManagedDiskParameters
+        fullName: ManagedDiskParameters
+        uid: '@azure/arm-compute.ManagedDiskParameters'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'

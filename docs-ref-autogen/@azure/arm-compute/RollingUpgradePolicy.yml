@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    fullName: RollingUpgradePolicy
+    children:
+      - '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="84881-101">ローリング アップグレードの実行中に使用される構成パラメーター。</span><span class="sxs-lookup"><span data-stu-id="84881-101">The configuration parameters used while performing a rolling upgrade.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+    name: maxBatchInstancePercent
+    fullName: maxBatchInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="84881-102">1 つのバッチでローリング アップグレードによって同時にアップグレードされる合計の仮想マシン インスタンスの最大比率。</span><span class="sxs-lookup"><span data-stu-id="84881-102">The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch.</span></span> <span data-ttu-id="84881-103">これは、最大で前または後のバッチの異常なインスタンスはインスタンスの割合を高い信頼性を確保を小さくバッチに可能性があります。</span><span class="sxs-lookup"><span data-stu-id="84881-103">As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.</span></span> <span data-ttu-id="84881-104">このパラメーターの既定値は、20% です。</span><span class="sxs-lookup"><span data-stu-id="84881-104">The default value for this parameter is 20%.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxBatchInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+    name: maxUnhealthyInstancePercent
+    fullName: maxUnhealthyInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="84881-105">同時に正常であり、アップグレード中の結果としてまたはローリング アップグレードを中止する前に、仮想マシンの正常性チェックによって異常な状態で検索することができる、スケール セット内の合計の仮想マシン インスタンスの最大パーセンテージ。</span><span class="sxs-lookup"><span data-stu-id="84881-105">The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts.</span></span> <span data-ttu-id="84881-106">この制約は、バッチを開始する前にチェックされます。</span><span class="sxs-lookup"><span data-stu-id="84881-106">This constraint will be checked prior to starting any batch.</span></span> <span data-ttu-id="84881-107">このパラメーターの既定値は、20% です。</span><span class="sxs-lookup"><span data-stu-id="84881-107">The default value for this parameter is 20%.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+    name: maxUnhealthyUpgradedInstancePercent
+    fullName: maxUnhealthyUpgradedInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="84881-108">異常な状態にするのにはアップグレード後の仮想マシン インスタンスの最大パーセンテージ。</span><span class="sxs-lookup"><span data-stu-id="84881-108">The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state.</span></span> <span data-ttu-id="84881-109">このチェックは、各バッチをアップグレードした後に発生します。</span><span class="sxs-lookup"><span data-stu-id="84881-109">This check will happen after each batch is upgraded.</span></span> <span data-ttu-id="84881-110">この値を下回ることは、ローリング アップデートは中止されます。</span><span class="sxs-lookup"><span data-stu-id="84881-110">If this percentage is ever exceeded, the rolling update aborts.</span></span> <span data-ttu-id="84881-111">このパラメーターの既定値は、20% です。</span><span class="sxs-lookup"><span data-stu-id="84881-111">The default value for this parameter is 20%.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyUpgradedInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    name: pauseTimeBetweenBatches
+    fullName: pauseTimeBetweenBatches
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="84881-112">次のバッチを開始する 1 つのバッチ内のすべての仮想マシンの更新を完了するまでの待機時間。</span><span class="sxs-lookup"><span data-stu-id="84881-112">The wait time between completing the update for all virtual machines in one batch and starting the next batch.</span></span> <span data-ttu-id="84881-113">継続時間は、ISO 8601 形式で指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="84881-113">The time duration should be specified in ISO 8601 format.</span></span> <span data-ttu-id="84881-114">既定値は、0 秒 (PT0S) です。</span><span class="sxs-lookup"><span data-stu-id="84881-114">The default value is 0 seconds (PT0S).</span></span>
+    optional: true
+    syntax:
+      content: 'pauseTimeBetweenBatches?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

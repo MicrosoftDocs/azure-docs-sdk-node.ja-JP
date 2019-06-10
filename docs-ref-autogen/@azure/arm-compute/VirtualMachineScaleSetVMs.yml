@@ -1,0 +1,1171 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs'
+    name: VirtualMachineScaleSetVMs
+    fullName: VirtualMachineScaleSetVMs
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeallocate'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeleteMethod'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPerformMaintenance'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPowerOff'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRedeploy'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimage'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimageAll'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRestart'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRunCommand'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginStart'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.beginUpdate'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.deallocate'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.deleteMethod'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.get'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.get_2'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.get_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_2'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.list'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.list_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.list_2'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_2'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_1'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.performMaintenance'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.powerOff'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.redeploy'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.reimage'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.reimageAll'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.restart'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.runCommand'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.start'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.update'
+      - '@azure/arm-compute.VirtualMachineScaleSetVMs.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="1eb52-101">VirtualMachineScaleSetVMs を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="1eb52-101">Class representing a VirtualMachineScaleSetVMs.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeallocate'
+    name: 'beginDeallocate(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-102">VM スケール セット内の特定の仮想マシンの割り当てを解除します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-102">Deallocates a specific virtual machine in a VM scale set.</span></span> <span data-ttu-id="1eb52-103">仮想マシンをシャット ダウンし、使用するコンピューティング リソースを解放します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-103">Shuts down the virtual machine and releases the compute resources it uses.</span></span> <span data-ttu-id="1eb52-104">割り当てが解除されると、この仮想マシンのコンピューティング リソースの課金されませんが。</span><span class="sxs-lookup"><span data-stu-id="1eb52-104">You are not billed for the compute resources of this virtual machine once it is deallocated.</span></span>
+    syntax:
+      content: 'function beginDeallocate(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-105">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-105">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-106">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-106">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-107">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-107">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-108">VM スケール セットから仮想マシンを削除します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-108">Deletes a virtual machine from a VM scale set.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-109">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-109">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-110">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-110">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-111">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-111">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPerformMaintenance'
+    name: 'beginPerformMaintenance(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-112">VM スケール セット内の仮想マシンに対してメンテナンスを実行します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-112">Performs maintenance on a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginPerformMaintenance(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-113">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-113">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-114">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-114">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-115">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-115">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginPowerOff'
+    name: 'beginPowerOff(string, string, string, Models.VirtualMachineScaleSetVMsBeginPowerOffOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="1eb52-116">(停止) の仮想マシンに VM スケール セットの電源を切ります。</span><span class="sxs-lookup"><span data-stu-id="1eb52-116">Power off (stop) a virtual machine in a VM scale set.</span></span> <span data-ttu-id="1eb52-117">リソースがまだアタッチされているし、リソースに対して課金されるを取得することに注意してください。</span><span class="sxs-lookup"><span data-stu-id="1eb52-117">Note that resources are still attached and you are getting charged for the resources.</span></span> <span data-ttu-id="1eb52-118">代わりに、使用は、リソースを解放し、課金されないようにの割り当てを解除します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-118">Instead, use deallocate to release resources and avoid charges.</span></span>'
+    syntax:
+      content: 'function beginPowerOff(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: Models.VirtualMachineScaleSetVMsBeginPowerOffOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-119">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-119">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-120">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-120">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-121">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-121">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsBeginPowerOffOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRedeploy'
+    name: 'beginRedeploy(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-122">VM スケール セット内の仮想マシンを再デプロイします。</span><span class="sxs-lookup"><span data-stu-id="1eb52-122">Redeploys a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginRedeploy(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-123">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-123">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-124">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-124">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-125">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-125">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimage'
+    name: 'beginReimage(string, string, string, Models.VirtualMachineScaleSetVMsBeginReimageOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-126">VM のスケールで特定のバーチャル マシンの設定 (オペレーティング システムのアップグレード) を再イメージ化します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-126">Reimages (upgrade the operating system) a specific virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginReimage(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: Models.VirtualMachineScaleSetVMsBeginReimageOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-127">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-127">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-128">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-128">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-129">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-129">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsBeginReimageOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginReimageAll'
+    name: 'beginReimageAll(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="1eb52-130">使用すると、イメージを再作成 (データ ディスクを含む) すべてのディスク、VM スケール セットのインスタンス。</span><span class="sxs-lookup"><span data-stu-id="1eb52-130">Allows you to re-image all the disks ( including data disks ) in the a VM scale set instance.</span></span>
+      <span data-ttu-id="1eb52-131">この操作は、管理ディスクにのみサポートされます。</span><span class="sxs-lookup"><span data-stu-id="1eb52-131">This operation is only supported for managed disks.</span></span>
+    syntax:
+      content: 'function beginReimageAll(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-132">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-132">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-133">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-133">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-134">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-134">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRestart'
+    name: 'beginRestart(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-135">VM スケール セット内の仮想マシンを再起動します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-135">Restarts a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginRestart(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-136">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-136">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-137">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-137">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-138">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-138">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginRunCommand'
+    name: 'beginRunCommand(string, string, string, RunCommandInput, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-139">VM スケール セット内の仮想マシンでコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-139">Run command on a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginRunCommand(resourceGroupName: string, vmScaleSetName: string, instanceId: string, parameters: RunCommandInput, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-140">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-140">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-141">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-141">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-142">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-142">The instance ID of the virtual machine.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.RunCommandInput'
+          description: <span data-ttu-id="1eb52-143">実行コマンドの操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="1eb52-143">Parameters supplied to the Run command operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginStart'
+    name: 'beginStart(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-144">VM スケール セット内の仮想マシンを起動します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-144">Starts a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function beginStart(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-145">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-145">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-146">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-146">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-147">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-147">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginUpdate'
+    name: 'beginUpdate(string, string, string, VirtualMachineScaleSetVM, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-148">VM スケール セットの仮想マシンを更新します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-148">Updates a virtual machine of a VM scale set.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, vmScaleSetName: string, instanceId: string, parameters: VirtualMachineScaleSetVM, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-149">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-149">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-150">VM スケール セット拡張機能が表示されるはずの場所の名前は、作成または更新します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-150">The name of the VM scale set where the extension should be create or updated.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-151">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-151">The instance ID of the virtual machine.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.VirtualMachineScaleSetVM'
+          description: <span data-ttu-id="1eb52-152">更新プログラムの仮想マシン スケール セットの VM 操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="1eb52-152">Parameters supplied to the Update Virtual Machine Scale Sets VM operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.deallocate'
+    name: 'deallocate(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-153">VM スケール セット内の特定の仮想マシンの割り当てを解除します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-153">Deallocates a specific virtual machine in a VM scale set.</span></span> <span data-ttu-id="1eb52-154">仮想マシンをシャット ダウンし、使用するコンピューティング リソースを解放します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-154">Shuts down the virtual machine and releases the compute resources it uses.</span></span> <span data-ttu-id="1eb52-155">割り当てが解除されると、この仮想マシンのコンピューティング リソースの課金されませんが。</span><span class="sxs-lookup"><span data-stu-id="1eb52-155">You are not billed for the compute resources of this virtual machine once it is deallocated.</span></span>
+    syntax:
+      content: 'function deallocate(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-156">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-156">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-157">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-157">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-158">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-158">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-159">VM スケール セットから仮想マシンを削除します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-159">Deletes a virtual machine from a VM scale set.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-160">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-160">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-161">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-161">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-162">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-162">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-163">VM スケール セットから仮想マシンを取得します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-163">Gets a virtual machine from a VM scale set.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-164">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-164">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-165">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-165">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-166">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-166">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<VirtualMachineScaleSetVM>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineScaleSetVM>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-167">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-167">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-168">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-168">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-169">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-169">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1eb52-170">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="1eb52-170">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVM>
+          description: |
+            <span data-ttu-id="1eb52-171">コールバック</span><span class="sxs-lookup"><span data-stu-id="1eb52-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.get_1'
+    name: 'get(string, string, string, ServiceCallback<VirtualMachineScaleSetVM>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, vmScaleSetName: string, instanceId: string, callback: ServiceCallback<VirtualMachineScaleSetVM>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-172">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-172">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-173">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-173">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-174">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-174">The instance ID of the virtual machine.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVM>
+          description: |
+            <span data-ttu-id="1eb52-175">コールバック</span><span class="sxs-lookup"><span data-stu-id="1eb52-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView'
+    name: 'getInstanceView(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-176">VM スケール セットから仮想マシンの状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-176">Gets the status of a virtual machine from a VM scale set.</span></span>
+    syntax:
+      content: 'function getInstanceView(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-177">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-177">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-178">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-178">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-179">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-179">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_2'
+    name: 'getInstanceView(string, string, string, RequestOptionsBase, ServiceCallback<VirtualMachineScaleSetVMInstanceView>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getInstanceView(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineScaleSetVMInstanceView>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-180">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-180">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-181">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-181">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-182">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-182">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1eb52-183">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="1eb52-183">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMInstanceView>
+          description: |
+            <span data-ttu-id="1eb52-184">コールバック</span><span class="sxs-lookup"><span data-stu-id="1eb52-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.getInstanceView_1'
+    name: 'getInstanceView(string, string, string, ServiceCallback<VirtualMachineScaleSetVMInstanceView>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getInstanceView(resourceGroupName: string, vmScaleSetName: string, instanceId: string, callback: ServiceCallback<VirtualMachineScaleSetVMInstanceView>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-185">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-185">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-186">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-186">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-187">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-187">The instance ID of the virtual machine.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMInstanceView>
+          description: |
+            <span data-ttu-id="1eb52-188">コールバック</span><span class="sxs-lookup"><span data-stu-id="1eb52-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsGetInstanceViewResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.list'
+    name: 'list(string, string, Models.VirtualMachineScaleSetVMsListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-189">VM スケール セットのすべての仮想マシンの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-189">Gets a list of all virtual machines in a VM scale sets.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, virtualMachineScaleSetName: string, options?: Models.VirtualMachineScaleSetVMsListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-190">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-190">The name of the resource group.</span></span>
+        - id: virtualMachineScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-191">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-191">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.list_1'
+    name: 'list(string, string, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, virtualMachineScaleSetName: string, callback: ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-192">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-192">The name of the resource group.</span></span>
+        - id: virtualMachineScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-193">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-193">The name of the VM scale set.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+          description: |
+            <span data-ttu-id="1eb52-194">コールバック</span><span class="sxs-lookup"><span data-stu-id="1eb52-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.list_2'
+    name: 'list(string, string, VirtualMachineScaleSetVMsListOptionalParams, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, virtualMachineScaleSetName: string, options: VirtualMachineScaleSetVMsListOptionalParams, callback: ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-195">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-195">The name of the resource group.</span></span>
+        - id: virtualMachineScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-196">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-196">The name of the VM scale set.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-compute.VirtualMachineScaleSetVMsListOptionalParams'
+          description: <span data-ttu-id="1eb52-197">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="1eb52-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+          description: |
+            <span data-ttu-id="1eb52-198">コールバック</span><span class="sxs-lookup"><span data-stu-id="1eb52-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-199">VM スケール セットのすべての仮想マシンの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-199">Gets a list of all virtual machines in a VM scale sets.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-200">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="1eb52-200">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-201">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="1eb52-201">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1eb52-202">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="1eb52-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+          description: |
+            <span data-ttu-id="1eb52-203">コールバック</span><span class="sxs-lookup"><span data-stu-id="1eb52-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.listNext_1'
+    name: 'listNext(string, ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<VirtualMachineScaleSetVMListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-204">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="1eb52-204">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+          description: |
+            <span data-ttu-id="1eb52-205">コールバック</span><span class="sxs-lookup"><span data-stu-id="1eb52-205">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.performMaintenance'
+    name: 'performMaintenance(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-206">VM スケール セット内の仮想マシンに対してメンテナンスを実行します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-206">Performs maintenance on a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function performMaintenance(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-207">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-207">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-208">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-208">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-209">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-209">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.powerOff'
+    name: 'powerOff(string, string, string, Models.VirtualMachineScaleSetVMsPowerOffOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="1eb52-210">(停止) の仮想マシンに VM スケール セットの電源を切ります。</span><span class="sxs-lookup"><span data-stu-id="1eb52-210">Power off (stop) a virtual machine in a VM scale set.</span></span> <span data-ttu-id="1eb52-211">リソースがまだアタッチされているし、リソースに対して課金されるを取得することに注意してください。</span><span class="sxs-lookup"><span data-stu-id="1eb52-211">Note that resources are still attached and you are getting charged for the resources.</span></span> <span data-ttu-id="1eb52-212">代わりに、使用は、リソースを解放し、課金されないようにの割り当てを解除します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-212">Instead, use deallocate to release resources and avoid charges.</span></span>'
+    syntax:
+      content: 'function powerOff(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: Models.VirtualMachineScaleSetVMsPowerOffOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-213">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-213">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-214">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-214">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-215">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-215">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsPowerOffOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.redeploy'
+    name: 'redeploy(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-216">VM スケール セット内の仮想マシンを再デプロイします。</span><span class="sxs-lookup"><span data-stu-id="1eb52-216">Redeploys a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function redeploy(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-217">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-217">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-218">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-218">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-219">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-219">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.reimage'
+    name: 'reimage(string, string, string, Models.VirtualMachineScaleSetVMsReimageOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-220">VM のスケールで特定のバーチャル マシンの設定 (オペレーティング システムのアップグレード) を再イメージ化します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-220">Reimages (upgrade the operating system) a specific virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function reimage(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: Models.VirtualMachineScaleSetVMsReimageOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-221">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-221">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-222">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-222">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-223">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-223">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - Models.VirtualMachineScaleSetVMsReimageOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.reimageAll'
+    name: 'reimageAll(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="1eb52-224">使用すると、イメージを再作成 (データ ディスクを含む) すべてのディスク、VM スケール セットのインスタンス。</span><span class="sxs-lookup"><span data-stu-id="1eb52-224">Allows you to re-image all the disks ( including data disks ) in the a VM scale set instance.</span></span>
+      <span data-ttu-id="1eb52-225">この操作は、管理ディスクにのみサポートされます。</span><span class="sxs-lookup"><span data-stu-id="1eb52-225">This operation is only supported for managed disks.</span></span>
+    syntax:
+      content: 'function reimageAll(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-226">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-226">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-227">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-227">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-228">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-228">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.restart'
+    name: 'restart(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-229">VM スケール セット内の仮想マシンを再起動します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-229">Restarts a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function restart(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-230">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-230">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-231">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-231">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-232">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-232">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.runCommand'
+    name: 'runCommand(string, string, string, RunCommandInput, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-233">VM スケール セット内の仮想マシンでコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-233">Run command on a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function runCommand(resourceGroupName: string, vmScaleSetName: string, instanceId: string, parameters: RunCommandInput, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-234">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-234">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-235">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-235">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-236">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-236">The instance ID of the virtual machine.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.RunCommandInput'
+          description: <span data-ttu-id="1eb52-237">実行コマンドの操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="1eb52-237">Parameters supplied to the Run command operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsRunCommandResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.start'
+    name: 'start(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-238">VM スケール セット内の仮想マシンを起動します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-238">Starts a virtual machine in a VM scale set.</span></span>
+    syntax:
+      content: 'function start(resourceGroupName: string, vmScaleSetName: string, instanceId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-239">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-239">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-240">VM スケール セットの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-240">The name of the VM scale set.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-241">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-241">The instance ID of the virtual machine.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.update'
+    name: 'update(string, string, string, VirtualMachineScaleSetVM, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-242">VM スケール セットの仮想マシンを更新します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-242">Updates a virtual machine of a VM scale set.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, vmScaleSetName: string, instanceId: string, parameters: VirtualMachineScaleSetVM, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-243">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="1eb52-243">The name of the resource group.</span></span>
+        - id: vmScaleSetName
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-244">VM スケール セット拡張機能が表示されるはずの場所の名前は、作成または更新します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-244">The name of the VM scale set where the extension should be create or updated.</span></span>
+        - id: instanceId
+          type:
+            - string
+          description: <span data-ttu-id="1eb52-245">仮想マシンのインスタンス ID。</span><span class="sxs-lookup"><span data-stu-id="1eb52-245">The instance ID of the virtual machine.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.VirtualMachineScaleSetVM'
+          description: <span data-ttu-id="1eb52-246">更新プログラムの仮想マシン スケール セットの VM 操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="1eb52-246">Parameters supplied to the Update Virtual Machine Scale Sets VM operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualMachineScaleSetVMsUpdateResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.constructor'
+    name: VirtualMachineScaleSetVMs(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1eb52-247">VirtualMachineScaleSetVMs を作成します。</span><span class="sxs-lookup"><span data-stu-id="1eb52-247">Create a VirtualMachineScaleSetVMs.</span></span>
+    syntax:
+      content: 'new VirtualMachineScaleSetVMs(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            <span data-ttu-id="1eb52-248">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="1eb52-248">Reference to the service client.</span></span>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: '@azure/arm-compute.RunCommandInput'
+    name: RunCommandInput
+    spec.typeScript:
+      - name: RunCommandInput
+        fullName: RunCommandInput
+        uid: '@azure/arm-compute.RunCommandInput'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
+    name: VirtualMachineScaleSetVM
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVM
+        fullName: VirtualMachineScaleSetVM
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
+  - uid: ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVM>
+    name: VirtualMachineScaleSetVM>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualMachineScaleSetVM
+        fullName: VirtualMachineScaleSetVM
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMInstanceView>
+    name: VirtualMachineScaleSetVMInstanceView>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualMachineScaleSetVMInstanceView
+        fullName: VirtualMachineScaleSetVMInstanceView
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMInstanceView'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-compute.VirtualMachineScaleSetVMListResult>
+    name: VirtualMachineScaleSetVMListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualMachineScaleSetVMListResult
+        fullName: VirtualMachineScaleSetVMListResult
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMsListOptionalParams'
+    name: VirtualMachineScaleSetVMsListOptionalParams
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMsListOptionalParams
+        fullName: VirtualMachineScaleSetVMsListOptionalParams
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMsListOptionalParams'
