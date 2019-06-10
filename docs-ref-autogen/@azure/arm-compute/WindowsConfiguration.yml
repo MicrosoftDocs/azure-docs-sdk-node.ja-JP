@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    fullName: WindowsConfiguration
+    children:
+      - '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+      - '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+      - '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+      - '@azure/arm-compute.WindowsConfiguration.timeZone'
+      - '@azure/arm-compute.WindowsConfiguration.winRM'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="bdd92-101">仮想マシン上の Windows オペレーティング システムの設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="bdd92-101">Specifies Windows operating system settings on the virtual machine.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+    name: additionalUnattendContent
+    fullName: additionalUnattendContent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="bdd92-102">追加情報を指定 base 64 でエンコードされた XML 形式で Windows セットアップで使用される Unattend.xml ファイルを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="bdd92-102">Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.</span></span>'
+    optional: true
+    syntax:
+      content: 'additionalUnattendContent?: AdditionalUnattendContent[]'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalUnattendContent[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+    name: enableAutomaticUpdates
+    fullName: enableAutomaticUpdates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bdd92-103">自動更新の仮想マシンが有効になっているかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="bdd92-103">Indicates whether virtual machine is enabled for automatic updates.</span></span>
+    optional: true
+    syntax:
+      content: 'enableAutomaticUpdates?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+    name: provisionVMAgent
+    fullName: provisionVMAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="bdd92-104">仮想マシン エージェントが仮想マシンをプロビジョニングするかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="bdd92-104">Indicates whether virtual machine agent should be provisioned on the virtual machine.</span></span> <br><br>
+      <span data-ttu-id="bdd92-105">このプロパティは、要求本文で指定されていない、既定の動作は true に設定するには。</span><span class="sxs-lookup"><span data-stu-id="bdd92-105">When this property is not specified in the request body, default behavior is to set it to true.</span></span>  <span data-ttu-id="bdd92-106">これにより、拡張機能を後で、VM に追加できるように、VM に VM エージェントがインストールされているが保証されます。</span><span class="sxs-lookup"><span data-stu-id="bdd92-106">This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.</span></span>
+    optional: true
+    syntax:
+      content: 'provisionVMAgent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.timeZone'
+    name: timeZone
+    fullName: timeZone
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bdd92-107">仮想マシンのタイム ゾーンを指定します。</span><span class="sxs-lookup"><span data-stu-id="bdd92-107">Specifies the time zone of the virtual machine.</span></span> <span data-ttu-id="bdd92-108">例。"Pacific Standard Time"</span><span class="sxs-lookup"><span data-stu-id="bdd92-108">e.g. "Pacific Standard Time"</span></span>
+    optional: true
+    syntax:
+      content: 'timeZone?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.winRM'
+    name: winRM
+    fullName: winRM
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bdd92-109">Windows リモート管理のリスナーを指定します。</span><span class="sxs-lookup"><span data-stu-id="bdd92-109">Specifies the Windows Remote Management listeners.</span></span> <span data-ttu-id="bdd92-110">これにより、リモートの Windows PowerShell ができます。</span><span class="sxs-lookup"><span data-stu-id="bdd92-110">This enables remote Windows PowerShell.</span></span>
+    optional: true
+    syntax:
+      content: 'winRM?: WinRMConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WinRMConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AdditionalUnattendContent[]'
+    name: 'AdditionalUnattendContent[]'
+    spec.typeScript:
+      - name: AdditionalUnattendContent
+        fullName: AdditionalUnattendContent
+        uid: '@azure/arm-compute.AdditionalUnattendContent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WinRMConfiguration'
+    name: WinRMConfiguration
+    spec.typeScript:
+      - name: WinRMConfiguration
+        fullName: WinRMConfiguration
+        uid: '@azure/arm-compute.WinRMConfiguration'
