@@ -1,0 +1,685 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.CertificateOperations'
+    name: CertificateOperations
+    fullName: CertificateOperations
+    children:
+      - '@azure/arm-batch.CertificateOperations.beginCreate'
+      - '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+      - '@azure/arm-batch.CertificateOperations.constructor'
+      - '@azure/arm-batch.CertificateOperations.create'
+      - '@azure/arm-batch.CertificateOperations.deleteMethod'
+      - '@azure/arm-batch.CertificateOperations.get'
+      - '@azure/arm-batch.CertificateOperations.get_2'
+      - '@azure/arm-batch.CertificateOperations.get_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+      - '@azure/arm-batch.CertificateOperations.update_2'
+      - '@azure/arm-batch.CertificateOperations.update'
+      - '@azure/arm-batch.CertificateOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="b5fc3-101">CertificateOperations を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-101">Class representing a CertificateOperations.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginCreate'
+    name: 'beginCreate(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateBeginCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fc3-102">指定されたアカウント内で新しい証明書を作成します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-102">Creates a new certificate inside the specified account.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateBeginCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-103">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-103">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-104">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-104">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-105">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-105">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-106">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-106">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-107">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-107">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="b5fc3-108">証明書の作成の追加のパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-108">Additional parameters for certificate creation.</span></span>
+        - id: options
+          type:
+            - Models.CertificateBeginCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fc3-109">指定された証明書を削除します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-109">Deletes the specified certificate.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-110">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-110">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-111">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-111">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-112">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-112">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-113">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-113">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-114">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-114">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion'
+    name: 'cancelDeletion(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="b5fc3-115">プールで使用されている証明書を削除またはノードを計算しようとする場合、証明書の状態は、削除が失敗しましたに変わります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-115">If you try to delete a certificate that is being used by a pool or compute node, the status of the certificate changes to deleteFailed.</span></span> <span data-ttu-id="b5fc3-116">引き続き、証明書を使用する場合は、証明書の状態をアクティブに設定するこのオペレーションを使用することができます。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-116">If you decide that you want to continue using the certificate, you can use this operation to set the status of the certificate back to active.</span></span> <span data-ttu-id="b5fc3-117">証明書を削除する場合は、削除が失敗した後、この操作を実行する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-117">If you intend to delete the certificate, you do not need to run this operation after the deletion failed.</span></span> <span data-ttu-id="b5fc3-118">証明書がすべてのリソースで使用されていない、し、再度試行できる証明書を削除することを確認しておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-118">You must make sure that the certificate is not being used by any resources, and then you can try again to delete the certificate.</span></span>'
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-119">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-119">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-120">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-120">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-121">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-121">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-122">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-122">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-123">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-123">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+    name: 'cancelDeletion(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-124">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-124">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-125">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-125">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-126">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-126">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-127">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-127">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-128">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-128">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b5fc3-129">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="b5fc3-129">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="b5fc3-130">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-130">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+    name: 'cancelDeletion(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-131">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-131">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-132">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-132">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-133">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-133">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-134">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-134">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-135">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-135">For example SHA1-a3d1c5.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="b5fc3-136">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.constructor'
+    name: CertificateOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fc3-137">CertificateOperations を作成します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-137">Create a CertificateOperations.</span></span>
+    syntax:
+      content: 'new CertificateOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            <span data-ttu-id="b5fc3-138">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-138">Reference to the service client.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.create'
+    name: 'create(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fc3-139">指定されたアカウント内で新しい証明書を作成します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-139">Creates a new certificate inside the specified account.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-140">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-140">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-141">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-141">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-142">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-142">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-143">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-143">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-144">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-144">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="b5fc3-145">証明書の作成の追加のパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-145">Additional parameters for certificate creation.</span></span>
+        - id: options
+          type:
+            - Models.CertificateCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fc3-146">指定された証明書を削除します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-146">Deletes the specified certificate.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-147">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-147">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-148">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-148">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-149">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-149">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-150">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-150">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-151">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-151">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fc3-152">指定された証明書に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-152">Gets information about the specified certificate.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-153">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-153">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-154">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-154">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-155">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-155">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-156">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-156">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-157">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-157">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-158">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-158">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-159">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-159">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-160">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-160">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-161">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-161">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-162">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-162">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b5fc3-163">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="b5fc3-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="b5fc3-164">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-165">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-165">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-166">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-166">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-167">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-167">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-168">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-168">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-169">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-169">For example SHA1-a3d1c5.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="b5fc3-170">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+    name: 'listByBatchAccount(string, string, CertificateListByBatchAccountOptionalParams, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options: CertificateListByBatchAccountOptionalParams, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-171">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-171">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-172">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-172">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+          description: <span data-ttu-id="b5fc3-173">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="b5fc3-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="b5fc3-174">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+    name: 'listByBatchAccount(string, string, Models.CertificateListByBatchAccountOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fc3-175">すべての指定されたアカウントに証明書の一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-175">Lists all of the certificates in the specified account.</span></span>
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options?: Models.CertificateListByBatchAccountOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-176">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-176">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-177">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-177">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - Models.CertificateListByBatchAccountOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+    name: 'listByBatchAccount(string, string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-178">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-178">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-179">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-179">The name of the Batch account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="b5fc3-180">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+    name: 'listByBatchAccountNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fc3-181">すべての指定されたアカウントに証明書の一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-181">Lists all of the certificates in the specified account.</span></span>
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-182">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-182">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+    name: 'listByBatchAccountNext(string, RequestOptionsBase, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-183">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-183">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b5fc3-184">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="b5fc3-184">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="b5fc3-185">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+    name: 'listByBatchAccountNext(string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-186">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-186">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="b5fc3-187">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-187">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_2'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, CertificateUpdateOptionalParams, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options: CertificateUpdateOptionalParams, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-188">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-188">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-189">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-189">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-190">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-190">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-191">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-191">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-192">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-192">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="b5fc3-193">証明書のエンティティを更新します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-193">Certificate entity to update.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateUpdateOptionalParams'
+          description: <span data-ttu-id="b5fc3-194">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="b5fc3-194">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="b5fc3-195">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fc3-196">既存の証明書のプロパティを更新します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-196">Updates the properties of an existing certificate.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-197">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-197">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-198">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-198">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-199">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-199">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-200">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-200">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-201">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-201">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="b5fc3-202">証明書のエンティティを更新します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-202">Certificate entity to update.</span></span>
+        - id: options
+          type:
+            - Models.CertificateUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_1'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-203">Batch アカウントを含むリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-203">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b5fc3-204">Batch アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-204">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="b5fc3-205">証明書の識別子です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-205">The identifier for the certificate.</span></span> <span data-ttu-id="b5fc3-206">これは、アルゴリズムと、ダッシュで区切られたサムプリント行う必要があり、要求の証明書データに一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-206">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="b5fc3-207">たとえば SHA1 a3d1c5 です。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-207">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="b5fc3-208">証明書のエンティティを更新します。</span><span class="sxs-lookup"><span data-stu-id="b5fc3-208">Certificate entity to update.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="b5fc3-209">コールバック</span><span class="sxs-lookup"><span data-stu-id="b5fc3-209">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+    name: CertificateCreateOrUpdateParameters
+    spec.typeScript:
+      - name: CertificateCreateOrUpdateParameters
+        fullName: CertificateCreateOrUpdateParameters
+        uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-batch.Certificate>
+    name: Certificate>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Certificate
+        fullName: Certificate
+        uid: '@azure/arm-batch.Certificate'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+    name: ListCertificatesResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListCertificatesResult
+        fullName: ListCertificatesResult
+        uid: '@azure/arm-batch.ListCertificatesResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+    name: CertificateListByBatchAccountOptionalParams
+    spec.typeScript:
+      - name: CertificateListByBatchAccountOptionalParams
+        fullName: CertificateListByBatchAccountOptionalParams
+        uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+  - uid: '@azure/arm-batch.CertificateUpdateOptionalParams'
+    name: CertificateUpdateOptionalParams
+    spec.typeScript:
+      - name: CertificateUpdateOptionalParams
+        fullName: CertificateUpdateOptionalParams
+        uid: '@azure/arm-batch.CertificateUpdateOptionalParams'
