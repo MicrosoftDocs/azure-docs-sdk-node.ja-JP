@@ -1,0 +1,263 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys'
+    name: QuotaByCounterKeys
+    fullName: QuotaByCounterKeys
+    children:
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_2'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_1'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.constructor'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update_2'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="a93cd-101">QuotaByCounterKeys を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="a93cd-101">Class representing a QuotaByCounterKeys.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService'
+    name: 'listByService(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a93cd-102">指定されたサービス インスタンス上のポリシーで構成されているカウンタ キーに関連付けられた現在のクォータ カウンターの期間のコレクションを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="a93cd-102">Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance.</span></span> <span data-ttu-id="a93cd-103">Api は、まだページングをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="a93cd-103">The api does not support paging yet.</span></span>
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-104">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-104">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-105">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-105">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="a93cd-106">クォータ カウンターのキー識別子。これは、クォータのキーによってポリシーの反時計回りのキー属性で定義された式の結果です。たとえば、カウンター キーを指定する場合 ="boo"ポリシーでは、"boo"カウンターのキーからアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-106">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="a93cd-107">Counter-key="@("b"+"a") として定義されている場合は"、"ba"キーにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-107">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_2'
+    name: 'listByService(string, string, string, RequestOptionsBase, ServiceCallback<QuotaCounterCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options: RequestOptionsBase, callback: ServiceCallback<QuotaCounterCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-108">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-108">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-109">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-109">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="a93cd-110">クォータ カウンターのキー識別子。これは、クォータのキーによってポリシーの反時計回りのキー属性で定義された式の結果です。たとえば、カウンター キーを指定する場合 ="boo"ポリシーでは、"boo"カウンターのキーからアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-110">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="a93cd-111">Counter-key="@("b"+"a") として定義されている場合は"、"ba"キーにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-111">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a93cd-112">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="a93cd-112">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+          description: |
+            <span data-ttu-id="a93cd-113">コールバック</span><span class="sxs-lookup"><span data-stu-id="a93cd-113">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_1'
+    name: 'listByService(string, string, string, ServiceCallback<QuotaCounterCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, callback: ServiceCallback<QuotaCounterCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-114">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-114">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-115">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-115">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="a93cd-116">クォータ カウンターのキー識別子。これは、クォータのキーによってポリシーの反時計回りのキー属性で定義された式の結果です。たとえば、カウンター キーを指定する場合 ="boo"ポリシーでは、"boo"カウンターのキーからアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-116">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="a93cd-117">Counter-key="@("b"+"a") として定義されている場合は"、"ba"キーにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-117">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+          description: |
+            <span data-ttu-id="a93cd-118">コールバック</span><span class="sxs-lookup"><span data-stu-id="a93cd-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.constructor'
+    name: QuotaByCounterKeys(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a93cd-119">QuotaByCounterKeys を作成します。</span><span class="sxs-lookup"><span data-stu-id="a93cd-119">Create a QuotaByCounterKeys.</span></span>
+    syntax:
+      content: 'new QuotaByCounterKeys(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            <span data-ttu-id="a93cd-120">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="a93cd-120">Reference to the service client.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a93cd-121">指定されたサービス インスタンスの値には、既存のクォータ カウンター キーで指定されたすべてのクォータ カウンターの値を更新します。</span><span class="sxs-lookup"><span data-stu-id="a93cd-121">Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance.</span></span> <span data-ttu-id="a93cd-122">クォータ カウンターの値の設定にリセットのために使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a93cd-122">This should be used for reset of the quota counter values.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-123">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-123">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-124">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-124">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="a93cd-125">クォータ カウンターのキー識別子。これは、クォータのキーによってポリシーの反時計回りのキー属性で定義された式の結果です。たとえば、カウンター キーを指定する場合 ="boo"ポリシーでは、"boo"カウンターのキーからアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-125">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="a93cd-126">Counter-key="@("b"+"a") として定義されている場合は"、"ba"キーにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-126">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: <span data-ttu-id="a93cd-127">クォータ カウンターのすべての期間に適用されるクォータ カウンターの値。</span><span class="sxs-lookup"><span data-stu-id="a93cd-127">The value of the quota counter to be applied to all quota counter periods.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update_2'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-128">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-128">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-129">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-129">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="a93cd-130">クォータ カウンターのキー識別子。これは、クォータのキーによってポリシーの反時計回りのキー属性で定義された式の結果です。たとえば、カウンター キーを指定する場合 ="boo"ポリシーでは、"boo"カウンターのキーからアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-130">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="a93cd-131">Counter-key="@("b"+"a") として定義されている場合は"、"ba"キーにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-131">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: <span data-ttu-id="a93cd-132">クォータ カウンターのすべての期間に適用されるクォータ カウンターの値。</span><span class="sxs-lookup"><span data-stu-id="a93cd-132">The value of the quota counter to be applied to all quota counter periods.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a93cd-133">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="a93cd-133">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a93cd-134">コールバック</span><span class="sxs-lookup"><span data-stu-id="a93cd-134">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update_1'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-135">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-135">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="a93cd-136">API Management サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="a93cd-136">The name of the API Management service.</span></span>
+        - id: quotaCounterKey
+          type:
+            - string
+          description: '<span data-ttu-id="a93cd-137">クォータ カウンターのキー識別子。これは、クォータのキーによってポリシーの反時計回りのキー属性で定義された式の結果です。たとえば、カウンター キーを指定する場合 ="boo"ポリシーでは、"boo"カウンターのキーからアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-137">Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key="boo" in the policy, then it’s accessible by "boo" counter key.</span></span> <span data-ttu-id="a93cd-138">Counter-key="@("b"+"a") として定義されている場合は"、"ba"キーにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a93cd-138">But if it’s defined as counter-key="@("b"+"a")" then it will be accessible by "ba" key</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: <span data-ttu-id="a93cd-139">クォータ カウンターのすべての期間に適用されるクォータ カウンターの値。</span><span class="sxs-lookup"><span data-stu-id="a93cd-139">The value of the quota counter to be applied to all quota counter periods.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="a93cd-140">コールバック</span><span class="sxs-lookup"><span data-stu-id="a93cd-140">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+    name: QuotaCounterCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: QuotaCounterCollection
+        fullName: QuotaCounterCollection
+        uid: '@azure/arm-apimanagement.QuotaCounterCollection'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+    name: QuotaCounterValueContractProperties
+    spec.typeScript:
+      - name: QuotaCounterValueContractProperties
+        fullName: QuotaCounterValueContractProperties
+        uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
