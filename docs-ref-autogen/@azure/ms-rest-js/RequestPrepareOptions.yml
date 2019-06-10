@@ -1,0 +1,340 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions'
+    name: RequestPrepareOptions
+    fullName: RequestPrepareOptions
+    children:
+      - '@azure/ms-rest-js.RequestPrepareOptions.abortSignal'
+      - '@azure/ms-rest-js.RequestPrepareOptions.baseUrl'
+      - '@azure/ms-rest-js.RequestPrepareOptions.body'
+      - '@azure/ms-rest-js.RequestPrepareOptions.bodyIsStream'
+      - '@azure/ms-rest-js.RequestPrepareOptions.deserializationMapper'
+      - '@azure/ms-rest-js.RequestPrepareOptions.disableClientRequestId'
+      - '@azure/ms-rest-js.RequestPrepareOptions.disableJsonStringifyOnBody'
+      - '@azure/ms-rest-js.RequestPrepareOptions.formData'
+      - '@azure/ms-rest-js.RequestPrepareOptions.headers'
+      - '@azure/ms-rest-js.RequestPrepareOptions.mappers'
+      - '@azure/ms-rest-js.RequestPrepareOptions.method'
+      - '@azure/ms-rest-js.RequestPrepareOptions.onDownloadProgress'
+      - '@azure/ms-rest-js.RequestPrepareOptions.onUploadProgress'
+      - '@azure/ms-rest-js.RequestPrepareOptions.pathParameters'
+      - '@azure/ms-rest-js.RequestPrepareOptions.pathTemplate'
+      - '@azure/ms-rest-js.RequestPrepareOptions.queryParameters'
+      - '@azure/ms-rest-js.RequestPrepareOptions.serializationMapper'
+      - '@azure/ms-rest-js.RequestPrepareOptions.url'
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.abortSignal'
+    name: abortSignal
+    fullName: abortSignal
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type:
+          - '@azure/ms-rest-js.AbortSignalLike'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.baseUrl'
+    name: baseUrl
+    fullName: baseUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '要求のベース url。 既定値:"https://management.azure.com"。 これは、pathTemplate でのみ適用されます。 Options.url を提供する、完全な url を指定することが必要だ場合。'
+    optional: true
+    syntax:
+      content: 'baseUrl?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要求本文。 任意の型のことができます。 ストリームではない場合は、この値をシリアル化されます。
+    optional: true
+    syntax:
+      content: 'body?: any'
+      return:
+        type:
+          - any
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.bodyIsStream'
+    name: bodyIsStream
+    fullName: bodyIsStream
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要求本文がストリーム (ファイルのアップロード シナリオに便利です) であるかどうかを示します。
+    optional: true
+    syntax:
+      content: 'bodyIsStream?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.deserializationMapper'
+    name: deserializationMapper
+    fullName: deserializationMapper
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 応答本文を逆シリアル化する方法についてを説明します。
+    optional: true
+    syntax:
+      content: 'deserializationMapper?: object'
+      return:
+        type:
+          - object
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.disableClientRequestId'
+    name: disableClientRequestId
+    fullName: disableClientRequestId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: True に設定する、新しい Guid() に設定されていない"x-ms-クライアント要求 id"ヘッダーをクライアントに指示します。
+    optional: true
+    syntax:
+      content: 'disableClientRequestId?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.disableJsonStringifyOnBody'
+    name: disableJsonStringifyOnBody
+    fullName: disableJsonStringifyOnBody
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'このメソッドが JSON.stringify() 要求本文をかどうかを示します。 既定値: false。'
+    optional: true
+    syntax:
+      content: 'disableJsonStringifyOnBody?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.formData'
+    name: formData
+    fullName: formData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'formData?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.headers'
+    name: headers
+    fullName: headers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要求ヘッダー、要求に適用する必要があるのディクショナリ。
+      ここで「ヘッダー名」は、キーと値が「ヘッダー値」。 ヘッダー値は、文字列型にする必要があります。
+       - ContentType は、キーの名前を持つ"Content-type"として指定する必要があります。 既定値"application/json;charset = utf-8"です。
+       - 「転送エンコード」に設定されている既定の「チャンク」"options.bodyIsStream"が設定されている場合は true。
+       - "Content-type"は、既定で"options.bodyIsStream"が設定されている場合で、「アプリケーションまたはオクテット ストリーム」に設定が true に設定します。
+       - 「そのまま使用言語」既定では、"EN-US"に設定されます。
+       - "x-ms-クライアント要求 id"既定では、新しい Guid に設定されます。 True に options.disableClientRequestId に設定してください、要求の guid を生成できません。
+    optional: true
+    syntax:
+      content: 'headers?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.mappers'
+    name: mappers
+    fullName: mappers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '[De] のシリアル化中に使用されるマッパーのディクショナリ。'
+    optional: true
+    syntax:
+      content: 'mappers?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.method'
+    name: method
+    fullName: method
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HTTP 要求メソッド。 有効な値は、"GET"、"PUT"、"HEAD"、"DELETE"、「オプション」、"POST"または"PATCH"には。
+    syntax:
+      content: 'method: HttpMethods'
+      return:
+        type:
+          - '@azure/ms-rest-js.HttpMethods'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.onDownloadProgress'
+    name: onDownloadProgress
+    fullName: onDownloadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - '(progress: TransferProgressEvent) => void'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.onUploadProgress'
+    name: onUploadProgress
+    fullName: onUploadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - '(progress: TransferProgressEvent) => void'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.pathParameters'
+    name: pathParameters
+    fullName: pathParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      PathTemplate の実際の値に置き換える必要があるパス パラメーターのディクショナリ。
+      ここで、キー「パス-パラメーター-名前」であり、値は、「パス パラメーターの値」です。
+      「パス-パラメーターの値」を指定できます文字列"型"または"object"型のことができます。
+      Url エンコードをスキップする場合に、"object"の形式を使用してください。 オブジェクトの形式を使用しているときに、オブジェクトは、「パス パラメーターの値」を提供する値をという名前のプロパティが必要です。
+      例:
+         - path-parameter-value in "object" format: { "path-parameter-name": { value: "path-parameter-value", skipUrlEncoding: true } }
+         - "string"の形式でパスとパラメーターの値: {「パス パラメーター名」:「パス パラメーター値」}。
+    optional: true
+    syntax:
+      content: 'pathParameters?: [key: string]: function'
+      return:
+        type:
+          - '[key: string]: function'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.pathTemplate'
+    name: pathTemplate
+    fullName: pathTemplate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      要求のパス テンプレートの url。 "Url"を指定するか、オプションのオブジェクトで"pathTemplate"を提供します。 どちらのオプションは相互に排他的です。
+      例:"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}"
+    optional: true
+    syntax:
+      content: 'pathTemplate?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.queryParameters'
+    name: queryParameters
+    fullName: queryParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      「キー」が、"クエリのパラメーター-name"と"value"を url に付加するクエリ パラメーターの辞書は、「クエリ パラメーターの値」です。
+      型"string"、「クエリ パラメーターの値」ができますか、"object"型のことができます。
+      Url エンコードをスキップする場合に、"object"の形式を使用してください。 オブジェクトの形式を使用しているときに、オブジェクトは、「クエリ パラメーターの値」を提供する値をという名前のプロパティが必要です。
+      例:
+         - query-parameter-value in "object" format: { "query-parameter-name": { value: "query-parameter-value", skipUrlEncoding: true } }
+         - "string"の形式でクエリのパラメーターの値: {「クエリ パラメーター名」:「クエリ パラメーター値」}。
+      注:"Options.url は既にいくつかのクエリ パラメーターを使用して、し options.queryParameters で指定された値は url に追加します。
+    optional: true
+    syntax:
+      content: 'queryParameters?: [key: string]: function'
+      return:
+        type:
+          - '[key: string]: function'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.serializationMapper'
+    name: serializationMapper
+    fullName: serializationMapper
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要求本文をシリアル化する方法についてを説明します。
+    optional: true
+    syntax:
+      content: 'serializationMapper?: Mapper'
+      return:
+        type:
+          - '@azure/ms-rest-js.Mapper'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要求 url。 これは、その中のクエリ パラメーターがない可能性がありますもかまいません。 "Url"を指定するか、オプションのオブジェクトで"pathTemplate"を提供します。 どちらのオプションは相互に排他的です。
+    optional: true
+    syntax:
+      content: 'url?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+references:
+  - uid: '@azure/ms-rest-js.AbortSignalLike'
+    name: AbortSignalLike
+    spec.typeScript:
+      - name: AbortSignalLike
+        fullName: AbortSignalLike
+        uid: '@azure/ms-rest-js.AbortSignalLike'
+  - uid: '@azure/ms-rest-js.HttpMethods'
+    name: HttpMethods
+    spec.typeScript:
+      - name: HttpMethods
+        fullName: HttpMethods
+        uid: '@azure/ms-rest-js.HttpMethods'
+  - uid: '@azure/ms-rest-js.Mapper'
+    name: Mapper
+    spec.typeScript:
+      - name: Mapper
+        fullName: Mapper
+        uid: '@azure/ms-rest-js.Mapper'

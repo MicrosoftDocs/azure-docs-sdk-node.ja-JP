@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.NetworkRuleSet'
+    name: NetworkRuleSet
+    fullName: NetworkRuleSet
+    children:
+      - '@azure/arm-keyvault.NetworkRuleSet.bypass'
+      - '@azure/arm-keyvault.NetworkRuleSet.defaultAction'
+      - '@azure/arm-keyvault.NetworkRuleSet.ipRules'
+      - '@azure/arm-keyvault.NetworkRuleSet.virtualNetworkRules'
+    langs:
+      - typeScript
+    type: interface
+    summary: 資格情報コンテナーのネットワークのアクセシビリティを制御する規則のセット。
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.bypass'
+    name: bypass
+    fullName: bypass
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: どのようなトラフィックはネットワーク ルールをバイパスできるように指示します。 これには、'一般' または 'None' を指定できます。  既定値は '一般' を指定しない場合。 指定できる値は、次のとおりです。'一般'、'None'
+    optional: true
+    syntax:
+      content: 'bypass?: NetworkRuleBypassOptions'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleBypassOptions'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.defaultAction'
+    name: defaultAction
+    fullName: defaultAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 既定のアクションと ipRules および virtualNetworkRules 一致からないルール。 これは、バイパスのプロパティが評価された後にのみ使用されます。 指定できる値は、次のとおりです。'許可'、'拒否'
+    optional: true
+    syntax:
+      content: 'defaultAction?: NetworkRuleAction'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleAction'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.ipRules'
+    name: ipRules
+    fullName: ipRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IP アドレスの規則の一覧。
+    optional: true
+    syntax:
+      content: 'ipRules?: IPRule[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.IPRule[]'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.virtualNetworkRules'
+    name: virtualNetworkRules
+    fullName: virtualNetworkRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仮想ネットワーク規則の一覧。
+    optional: true
+    syntax:
+      content: 'virtualNetworkRules?: VirtualNetworkRule[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.VirtualNetworkRule[]'
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.NetworkRuleBypassOptions'
+    name: NetworkRuleBypassOptions
+    spec.typeScript:
+      - name: NetworkRuleBypassOptions
+        fullName: NetworkRuleBypassOptions
+        uid: '@azure/arm-keyvault.NetworkRuleBypassOptions'
+  - uid: '@azure/arm-keyvault.NetworkRuleAction'
+    name: NetworkRuleAction
+    spec.typeScript:
+      - name: NetworkRuleAction
+        fullName: NetworkRuleAction
+        uid: '@azure/arm-keyvault.NetworkRuleAction'
+  - uid: '@azure/arm-keyvault.IPRule[]'
+    name: 'IPRule[]'
+    spec.typeScript:
+      - name: IPRule
+        fullName: IPRule
+        uid: '@azure/arm-keyvault.IPRule'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-keyvault.VirtualNetworkRule[]'
+    name: 'VirtualNetworkRule[]'
+    spec.typeScript:
+      - name: VirtualNetworkRule
+        fullName: VirtualNetworkRule
+        uid: '@azure/arm-keyvault.VirtualNetworkRule'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile'
+    name: ContainerServiceNetworkProfile
+    fullName: ContainerServiceNetworkProfile
+    children:
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.dnsServiceIP'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.dockerBridgeCidr'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPlugin'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPolicy'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.podCidr'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.serviceCidr'
+    langs:
+      - typeScript
+    type: interface
+    summary: ネットワーク構成のプロファイル。
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.dnsServiceIP'
+    name: dnsServiceIP
+    fullName: dnsServiceIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Kubernetes DNS サービスに割り当てられた IP アドレス。 ServiceCidr で指定された Kubernetes サービスのアドレス範囲でなければなりません。 既定値:''10.0.0.10''.'
+    optional: true
+    syntax:
+      content: 'dnsServiceIP?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.dockerBridgeCidr'
+    name: dockerBridgeCidr
+    fullName: dockerBridgeCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Docker ブリッジ ネットワークに割り当てられている、CIDR 表記法 IP 範囲。 サブネット IP 範囲、または Kubernetes サービスのアドレス範囲とその重複できません。 既定値:''172.17.0.1/16''.'
+    optional: true
+    syntax:
+      content: 'dockerBridgeCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPlugin'
+    name: networkPlugin
+    fullName: networkPlugin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Kubernetes ネットワークを構築するために使用されるネットワーク プラグイン。 使用可能な値が含まれます: ''azure''、''kubenet''。 既定値: ''kubenet''。'
+    optional: true
+    syntax:
+      content: 'networkPlugin?: NetworkPlugin'
+      return:
+        type:
+          - '@azure/arm-containerservice.NetworkPlugin'
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPolicy'
+    name: networkPolicy
+    fullName: networkPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Kubernetes ネットワークを構築するために使用されるネットワーク ポリシー。 使用可能な値が含まれます: ''calico''、''azure'''
+    optional: true
+    syntax:
+      content: 'networkPolicy?: NetworkPolicy'
+      return:
+        type:
+          - '@azure/arm-containerservice.NetworkPolicy'
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.podCidr'
+    name: podCidr
+    fullName: podCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Kubenet を使用している場合、ポッド IP を割り当てる CIDR 表記の IP 範囲。 既定値:''10.244.0.0/16''.'
+    optional: true
+    syntax:
+      content: 'podCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.serviceCidr'
+    name: serviceCidr
+    fullName: serviceCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Kubenet を使用している場合、サービス クラスター IP を割り当てる CIDR 表記の IP 範囲。 どのサブネット IP アドレスとも重複していてはなりません。 既定値:''10.0.0.0/16''.'
+    optional: true
+    syntax:
+      content: 'serviceCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+references:
+  - uid: '@azure/arm-containerservice.NetworkPlugin'
+    name: NetworkPlugin
+    spec.typeScript:
+      - name: NetworkPlugin
+        fullName: NetworkPlugin
+        uid: '@azure/arm-containerservice.NetworkPlugin'
+  - uid: '@azure/arm-containerservice.NetworkPolicy'
+    name: NetworkPolicy
+    spec.typeScript:
+      - name: NetworkPolicy
+        fullName: NetworkPolicy
+        uid: '@azure/arm-containerservice.NetworkPolicy'
