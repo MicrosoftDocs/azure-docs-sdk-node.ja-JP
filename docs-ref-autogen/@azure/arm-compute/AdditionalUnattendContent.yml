@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.AdditionalUnattendContent'
+    name: AdditionalUnattendContent
+    fullName: AdditionalUnattendContent
+    children:
+      - '@azure/arm-compute.AdditionalUnattendContent.componentName'
+      - '@azure/arm-compute.AdditionalUnattendContent.content'
+      - '@azure/arm-compute.AdditionalUnattendContent.passName'
+      - '@azure/arm-compute.AdditionalUnattendContent.settingName'
+    langs:
+      - typeScript
+    type: interface
+    summary: Windows セットアップで使用される Unattend.xml ファイルに含めることができる追加の XML 書式設定情報を指定します。 内容は、名前、コンポーネント名、およびコンテンツを適用するパスを設定して定義されます。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.componentName'
+    name: componentName
+    fullName: componentName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      コンポーネントの名前。 現時点では、できる唯一の値は、Microsoft Windows Shell セットアップです。
+      指定できる値は、次のとおりです。' Microsoft-Windows のシェルの Setup'
+    optional: true
+    syntax:
+      content: 'componentName?: ComponentNames'
+      return:
+        type:
+          - '@azure/arm-compute.ComponentNames'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.content'
+    name: content
+    fullName: content
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定したパスおよびコンポーネントの unattend.xml ファイルに追加される XML 形式のコンテンツを指定します。 XML では、4 KB 未満にする必要があり、設定または挿入される機能のルート要素を含める必要があります。
+    optional: true
+    syntax:
+      content: 'content?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.passName'
+    name: passName
+    fullName: passName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パスの名前。 現時点では、可能な値は、OobeSystem が。 指定できる値は、次のとおりです。'OobeSystem'
+    optional: true
+    syntax:
+      content: 'passName?: PassNames'
+      return:
+        type:
+          - '@azure/arm-compute.PassNames'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.settingName'
+    name: settingName
+    fullName: settingName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '設定の名前を指定します、コンテンツを適用します。 設定可能な値は、次のとおりです。FirstLogonCommands と AutoLogon。 指定できる値は、次のとおりです。''AutoLogon'', ''FirstLogonCommands'''
+    optional: true
+    syntax:
+      content: 'settingName?: SettingNames'
+      return:
+        type:
+          - '@azure/arm-compute.SettingNames'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComponentNames'
+    name: ComponentNames
+    spec.typeScript:
+      - name: ComponentNames
+        fullName: ComponentNames
+        uid: '@azure/arm-compute.ComponentNames'
+  - uid: '@azure/arm-compute.PassNames'
+    name: PassNames
+    spec.typeScript:
+      - name: PassNames
+        fullName: PassNames
+        uid: '@azure/arm-compute.PassNames'
+  - uid: '@azure/arm-compute.SettingNames'
+    name: SettingNames
+    spec.typeScript:
+      - name: SettingNames
+        fullName: SettingNames
+        uid: '@azure/arm-compute.SettingNames'
