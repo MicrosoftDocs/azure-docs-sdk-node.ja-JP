@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    fullName: TopicClient
+    children:
+      - '@azure/service-bus.TopicClient.close'
+      - '@azure/service-bus.TopicClient.createSender'
+      - '@azure/service-bus.TopicClient.entityPath'
+      - '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+      - '@azure/service-bus.TopicClient.id'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Service Bus トピックとの対話を許可するクライアントについて説明します。
+      使用して、 `createTopicClient` TopicClient をインスタンス化する ServiceBusClient オブジェクトに対して関数
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      このクライアントによって作成された送信者の AMQP リンクを閉じます。
+      閉じた後、TopicClient もメッセージの送信者は、その他の操作を使用できます。
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      メッセージを送信する、メッセージは後で送信するためのスケジュール、このようなスケジュール設定されたメッセージをキャンセルするに使用するセンダを作成します。
+      - この TopicClient のオープン、送信元が既に存在する場合は、エラーをスローします。
+      トピックにセッションが有効なサブスクリプションではかどうか、に、メッセージを送信せず、`sessionId`プロパティは、このようなサブスクリプションの配信不能キューに移動します。
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このクライアントを作成する Service Bus トピックのパス。
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+    name: 'getDeadLetterTopicPath(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      指定されたトピックとサブスクリプションの名前に対応する配信不能メッセージ トピック名を返します。
+      これを使用して、`createSubscriptionClient`の関数、`ServiceBusClient`インスタンスが指定された配信不能キューからメッセージを受信するサブスクリプション。
+    syntax:
+      content: 'static function getDeadLetterTopicPath(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: 配信不能対応の名前がフェッチされるトピックの名前
+        - id: subscriptionName
+          type:
+            - string
+          description: |
+            配信不能対応の名前がフェッチされるサブスクリプションの名前
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このクライアントの一意の識別子。
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'

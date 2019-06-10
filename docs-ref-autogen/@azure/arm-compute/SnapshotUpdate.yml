@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.SnapshotUpdate'
+    name: SnapshotUpdate
+    fullName: SnapshotUpdate
+    children:
+      - '@azure/arm-compute.SnapshotUpdate.diskSizeGB'
+      - '@azure/arm-compute.SnapshotUpdate.encryptionSettingsCollection'
+      - '@azure/arm-compute.SnapshotUpdate.osType'
+      - '@azure/arm-compute.SnapshotUpdate.sku'
+      - '@azure/arm-compute.SnapshotUpdate.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: スナップショットの更新プログラムのリソースです。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CreationData.createOption が空の場合は、このフィールドは必須および作成するための VHD のサイズを示します。 このフィールドが更新やその他のオプションを使用した作成のために存在する場合は、サイズ変更を示します。 サイズを変更は、ディスクが実行中の VM にアタッチされていないと、ディスクのサイズを増やすことができますのみ場合にのみ使用できます。
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.encryptionSettingsCollection'
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 暗号化設定のコレクションを使用する Azure Disk Encryption では、ディスクまたはスナップショットごとに複数の暗号化設定を含めることができます。
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - '@azure/arm-compute.EncryptionSettingsCollection'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'オペレーティング システムの種類。 指定できる値は、次のとおりです。''Windows'', ''Linux'''
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: SnapshotSku'
+      return:
+        type:
+          - '@azure/arm-compute.SnapshotSku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソース タグ
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection'
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: '@azure/arm-compute.EncryptionSettingsCollection'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.SnapshotSku'
+    name: SnapshotSku
+    spec.typeScript:
+      - name: SnapshotSku
+        fullName: SnapshotSku
+        uid: '@azure/arm-compute.SnapshotSku'
