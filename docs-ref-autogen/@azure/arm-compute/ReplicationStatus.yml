@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.ReplicationStatus'
+    name: ReplicationStatus
+    fullName: ReplicationStatus
+    children:
+      - '@azure/arm-compute.ReplicationStatus.aggregatedState'
+      - '@azure/arm-compute.ReplicationStatus.summary'
+    langs:
+      - typeScript
+    type: interface
+    summary: これは、ギャラリーのイメージのバージョンのレプリケーションの状態です。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ReplicationStatus.aggregatedState'
+    name: aggregatedState
+    fullName: aggregatedState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      これは、すべてのリージョンのレプリケーション状態フラグに基づいて集計レプリケーションの状態です。
+      指定できる値は、次のとおりです。'不明'、'InProgress'、'完了'、'失敗'**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'aggregatedState?: AggregatedReplicationState'
+      return:
+        type:
+          - '@azure/arm-compute.AggregatedReplicationState'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ReplicationStatus.summary'
+    name: summary
+    fullName: summary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      これは、各リージョンのレプリケーション ステータスの概要を示します。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'summary?: RegionalReplicationStatus[]'
+      return:
+        type:
+          - '@azure/arm-compute.RegionalReplicationStatus[]'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AggregatedReplicationState'
+    name: AggregatedReplicationState
+    spec.typeScript:
+      - name: AggregatedReplicationState
+        fullName: AggregatedReplicationState
+        uid: '@azure/arm-compute.AggregatedReplicationState'
+  - uid: '@azure/arm-compute.RegionalReplicationStatus[]'
+    name: 'RegionalReplicationStatus[]'
+    spec.typeScript:
+      - name: RegionalReplicationStatus
+        fullName: RegionalReplicationStatus
+        uid: '@azure/arm-compute.RegionalReplicationStatus'
+      - name: '[]'
+        fullName: '[]'
