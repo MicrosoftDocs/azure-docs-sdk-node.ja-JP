@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.MessageHandlerOptions'
+    name: MessageHandlerOptions
+    fullName: MessageHandlerOptions
+    children:
+      - '@azure/service-bus.MessageHandlerOptions.autoComplete'
+      - '@azure/service-bus.MessageHandlerOptions.maxConcurrentCalls'
+      - '@azure/service-bus.MessageHandlerOptions.maxMessageAutoRenewLockDurationInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: 渡されるオプションの説明`registerMessageHandler`メソッドに有効なセッションがないキューまたはサブスクリプションからメッセージを受信するときにします。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.autoComplete'
+    name: autoComplete
+    fullName: autoComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      示すかどうか、 `complete()` onMessage ハンドラーが実行されているユーザーが指定した後、メッセージ上のメソッドを sdk によって呼び出さ自動的にする必要があります。
+      呼び出す`complete()`メッセージのキューまたはサブスクリプションから削除します。
+      - **既定の**:`true`します。
+    optional: true
+    syntax:
+      content: 'autoComplete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.maxConcurrentCalls'
+    name: maxConcurrentCalls
+    fullName: maxConcurrentCalls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ユーザーのメッセージ ハンドラーに、sdk と、同時呼び出しの最大数。 この制限に達すると、さらにメッセージは受信できません少なくとも、ユーザーのメッセージ ハンドラーへの呼び出しのいずれかが完了するまで。
+      - **既定の**:`1`します。
+    optional: true
+    syntax:
+      content: 'maxConcurrentCalls?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.maxMessageAutoRenewLockDurationInSeconds'
+    name: maxMessageAutoRenewLockDurationInSeconds
+    fullName: maxMessageAutoRenewLockDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      これまでのメッセージに対するロックは、sdk によって自動的に更新する秒単位で最大期間です。 この自動更新には、メッセージの決済または onMessage ハンドラーには項目の実行が完了すると、ユーザーに提供が停止します。
+
+      - **既定の**:`300`秒 (5 分)。
+      - **Autolock 更新を無効にする**、これを設定`0`します。
+    optional: true
+    syntax:
+      content: 'maxMessageAutoRenewLockDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
