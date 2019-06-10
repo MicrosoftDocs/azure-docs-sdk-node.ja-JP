@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry'
+    name: AccessPolicyEntry
+    fullName: AccessPolicyEntry
+    children:
+      - '@azure/arm-keyvault.AccessPolicyEntry.applicationId'
+      - '@azure/arm-keyvault.AccessPolicyEntry.objectId'
+      - '@azure/arm-keyvault.AccessPolicyEntry.permissions'
+      - '@azure/arm-keyvault.AccessPolicyEntry.tenantId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="0e60e-101">Key vault へのアクセス権を持つ id です。</span><span class="sxs-lookup"><span data-stu-id="0e60e-101">An identity that have access to the key vault.</span></span> <span data-ttu-id="0e60e-102">配列内のすべての id は、キー コンテナーのテナント ID とテナントと同じ ID を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0e60e-102">All identities in the array must use the same tenant ID as the key vault's tenant ID.</span></span>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.applicationId'
+    name: applicationId
+    fullName: applicationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0e60e-103">プリンシパルの代わりに要求を行っているクライアントのアプリケーション ID</span><span class="sxs-lookup"><span data-stu-id="0e60e-103">Application ID of the client making request on behalf of a principal</span></span>
+    optional: true
+    syntax:
+      content: 'applicationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.objectId'
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0e60e-104">ユーザー、サービス プリンシパルまたはセキュリティ グループ、コンテナーの Azure Active Directory テナント内のオブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="0e60e-104">The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault.</span></span> <span data-ttu-id="0e60e-105">オブジェクト ID は、アクセス ポリシーの一覧については一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="0e60e-105">The object ID must be unique for the list of access policies.</span></span>'
+    syntax:
+      content: 'objectId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.permissions'
+    name: permissions
+    fullName: permissions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0e60e-106">アクセス許可のキー、シークレット、証明書の id を持っています。</span><span class="sxs-lookup"><span data-stu-id="0e60e-106">Permissions the identity has for keys, secrets and certificates.</span></span>'
+    syntax:
+      content: 'permissions: Permissions'
+      return:
+        type:
+          - '@azure/arm-keyvault.Permissions'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0e60e-107">Azure Active Directory テナント ID、key vault への要求を認証するために使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0e60e-107">The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.</span></span>
+    syntax:
+      content: 'tenantId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.Permissions'
+    name: Permissions
+    spec.typeScript:
+      - name: Permissions
+        fullName: Permissions
+        uid: '@azure/arm-keyvault.Permissions'
