@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.RuleDescription'
+    name: RuleDescription
+    fullName: RuleDescription
+    children:
+      - '@azure/service-bus.RuleDescription.action'
+      - '@azure/service-bus.RuleDescription.filter'
+      - '@azure/service-bus.RuleDescription.name'
+    langs:
+      - typeScript
+    type: interface
+    summary: サブスクリプションからの受信メッセージをフィルター処理するために使用するサブスクリプションの規則を表します。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: メッセージがフィルター式を満たす場合に実行するアクション。
+    optional: true
+    syntax:
+      content: 'action?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.filter'
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      フィルター式のメッセージと一致するために使用します。 2 つの種類をサポートしています。
+      - `string`:メッセージのユーザー定義プロパティとシステム プロパティに対して評価される SQL に似た条件式です。 すべてのシステム プロパティが付加されます`sys.`条件式にします。
+      - `CorrelationFilter`:メッセージのプロパティと一致するフィルターのプロパティが使用されます。
+    optional: true
+    syntax:
+      content: 'filter?: string | CorrelationFilter'
+      return:
+        type:
+          - string | @azure/service-bus.CorrelationFilter
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ルールの名前を表します。
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: string | @azure/service-bus.CorrelationFilter
+    name: CorrelationFilter
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: CorrelationFilter
+        fullName: CorrelationFilter
+        uid: '@azure/service-bus.CorrelationFilter'
