@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy'
+    name: ConsistencyPolicy
+    fullName: ConsistencyPolicy
+    children:
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: Cosmos DB データベース アカウントの一貫性ポリシー。
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+    name: defaultConsistencyLevel
+    fullName: defaultConsistencyLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一貫性レベルと構成の既定の設定、Cosmos DB アカウント。 指定できる値は、次のとおりです。' 最終的です '、'Session'、'BoundedStaleness'、'厳密な'、'ConsistentPrefix'
+    syntax:
+      content: 'defaultConsistencyLevel: DefaultConsistencyLevel'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+    name: maxIntervalInSeconds
+    fullName: maxIntervalInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Bounded Staleness の一貫性レベルを併用すると、この値は許容される秒単位での古さの時間を表します。 この値の許容範囲は、5 86400 です。 DefaultConsistencyPolicy が 'BoundedStaleness' に設定されているときに必要です。
+    optional: true
+    syntax:
+      content: 'maxIntervalInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    name: maxStalenessPrefix
+    fullName: maxStalenessPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Bounded Staleness の一貫性レベルを併用すると、この値は許容される古い要求の数を表します。 この値の許容範囲は、1 ～ 2,147,483,647 です。 DefaultConsistencyPolicy が ''BoundedStaleness'' に設定されているときに必要です。'
+    optional: true
+    syntax:
+      content: 'maxStalenessPrefix?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    name: DefaultConsistencyLevel
+    spec.typeScript:
+      - name: DefaultConsistencyLevel
+        fullName: DefaultConsistencyLevel
+        uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'
