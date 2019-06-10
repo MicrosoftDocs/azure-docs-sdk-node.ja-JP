@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withServicePrincipalCertificateWithAuthResponse'
+    name: 'withServicePrincipalCertificateWithAuthResponse(string, string, string, AzureTokenCredentialsOptions)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="c8bab-101">ApplicationTokenCertificateCredentials オブジェクトとすべての該当するテナントにわたる servicePrinicpalId/clientId に関連付けられているサブスクリプションの一覧を提供します。</span><span class="sxs-lookup"><span data-stu-id="c8bab-101">Provides an ApplicationTokenCertificateCredentials object and the list of subscriptions associated with that servicePrinicpalId/clientId across all the applicable tenants.</span></span>
+    syntax:
+      content: 'function withServicePrincipalCertificateWithAuthResponse(clientId: string, certificateStringOrFilePath: string, domain: string, options?: AzureTokenCredentialsOptions)'
+      parameters:
+        - id: clientId
+          type:
+            - string
+          description: |-
+            <span data-ttu-id="c8bab-102">Active directory アプリケーション クライアント id、SPN (ServicePrincipal 名) とも呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="c8bab-102">The active directory application client id also known as the SPN (ServicePrincipal Name).</span></span>
+            <span data-ttu-id="c8bab-103">参照してください[.Net 用 Active Directory のクイック スタート](https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-dotnet/)例についてはします。</span><span class="sxs-lookup"><span data-stu-id="c8bab-103">See [Active Directory Quickstart for .Net](https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-dotnet/) for an example.</span></span>
+        - id: certificateStringOrFilePath
+          type:
+            - string
+          description: |-
+            <span data-ttu-id="c8bab-104">証明書と秘密キー、PEM でエンコードされたか、その情報を含む、.pem ファイルへの絶対ファイル パス。</span><span class="sxs-lookup"><span data-stu-id="c8bab-104">A PEM encoded certificate and private key OR an absolute filepath to the .pem file containing that information.</span></span> <span data-ttu-id="c8bab-105">以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="c8bab-105">For example:</span></span>
+            - <span data-ttu-id="c8bab-106">CertificateString:"---秘密キーの開始---\n<xxxxx>\n---END \n---BEGIN の秘密キー------証明書 \n<yyyyy>\n---END---証明書 \n"</span><span class="sxs-lookup"><span data-stu-id="c8bab-106">CertificateString: "-----BEGIN PRIVATE KEY-----\n<xxxxx>\n-----END PRIVATE KEY-----\n-----BEGIN CERTIFICATE-----\n<yyyyy>\n-----END CERTIFICATE-----\n"</span></span>
+            - <span data-ttu-id="c8bab-107">CertificateFilePath:**絶対**.pem ファイルのファイル パス。</span><span class="sxs-lookup"><span data-stu-id="c8bab-107">CertificateFilePath: **Absolute** file path of the .pem file.</span></span>
+        - id: domain
+          type:
+            - string
+          description: <span data-ttu-id="c8bab-108">このアプリケーションを含むドメインまたはテナント id です。</span><span class="sxs-lookup"><span data-stu-id="c8bab-108">The domain or tenant id containing this application.</span></span>
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+    name: AzureTokenCredentialsOptions
+    spec.typeScript:
+      - name: AzureTokenCredentialsOptions
+        fullName: AzureTokenCredentialsOptions
+        uid: '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    name: AuthResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: AuthResponse
+        fullName: AuthResponse
+        uid: '@azure/ms-rest-nodeauth.AuthResponse'
+      - name: '>'
+        fullName: '>'
