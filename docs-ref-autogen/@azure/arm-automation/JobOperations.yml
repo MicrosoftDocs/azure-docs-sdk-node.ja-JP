@@ -1,0 +1,991 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-automation.JobOperations'
+    name: JobOperations
+    fullName: JobOperations
+    children:
+      - '@azure/arm-automation.JobOperations.create_2'
+      - '@azure/arm-automation.JobOperations.create'
+      - '@azure/arm-automation.JobOperations.create_1'
+      - '@azure/arm-automation.JobOperations.get_2'
+      - '@azure/arm-automation.JobOperations.get'
+      - '@azure/arm-automation.JobOperations.get_1'
+      - '@azure/arm-automation.JobOperations.getOutput_2'
+      - '@azure/arm-automation.JobOperations.getOutput'
+      - '@azure/arm-automation.JobOperations.getOutput_1'
+      - '@azure/arm-automation.JobOperations.getRunbookContent_2'
+      - '@azure/arm-automation.JobOperations.getRunbookContent'
+      - '@azure/arm-automation.JobOperations.getRunbookContent_1'
+      - '@azure/arm-automation.JobOperations.constructor'
+      - '@azure/arm-automation.JobOperations.listByAutomationAccount_2'
+      - '@azure/arm-automation.JobOperations.listByAutomationAccount'
+      - '@azure/arm-automation.JobOperations.listByAutomationAccount_1'
+      - '@azure/arm-automation.JobOperations.listByAutomationAccountNext_2'
+      - '@azure/arm-automation.JobOperations.listByAutomationAccountNext'
+      - '@azure/arm-automation.JobOperations.listByAutomationAccountNext_1'
+      - '@azure/arm-automation.JobOperations.resume_2'
+      - '@azure/arm-automation.JobOperations.resume'
+      - '@azure/arm-automation.JobOperations.resume_1'
+      - '@azure/arm-automation.JobOperations.stop_2'
+      - '@azure/arm-automation.JobOperations.stop'
+      - '@azure/arm-automation.JobOperations.stop_1'
+      - '@azure/arm-automation.JobOperations.suspend_2'
+      - '@azure/arm-automation.JobOperations.suspend'
+      - '@azure/arm-automation.JobOperations.suspend_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="fcfca-101">JobOperations を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="fcfca-101">Class representing a JobOperations.</span></span>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.create_2'
+    name: 'create(string, string, string, JobCreateParameters, JobCreateOptionalParams, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, automationAccountName: string, jobName: string, parameters: JobCreateParameters, options: JobCreateOptionalParams, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-102">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-102">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-103">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-103">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-104">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-104">The job name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.JobCreateParameters'
+          description: <span data-ttu-id="fcfca-105">ジョブの作成操作に指定するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="fcfca-105">The parameters supplied to the create job operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-automation.JobCreateOptionalParams'
+          description: <span data-ttu-id="fcfca-106">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="fcfca-106">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Job>
+          description: |
+            <span data-ttu-id="fcfca-107">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-107">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobCreateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.create'
+    name: 'create(string, string, string, JobCreateParameters, Models.JobCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-108">Runbook のジョブを作成します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-108">Create a job of the runbook.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, automationAccountName: string, jobName: string, parameters: JobCreateParameters, options?: Models.JobCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-109">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-109">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-110">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-110">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-111">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-111">The job name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.JobCreateParameters'
+          description: <span data-ttu-id="fcfca-112">ジョブの作成操作に指定するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="fcfca-112">The parameters supplied to the create job operation.</span></span>
+        - id: options
+          type:
+            - Models.JobCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobCreateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.create_1'
+    name: 'create(string, string, string, JobCreateParameters, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, automationAccountName: string, jobName: string, parameters: JobCreateParameters, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-113">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-113">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-114">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-114">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-115">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-115">The job name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-automation.JobCreateParameters'
+          description: <span data-ttu-id="fcfca-116">ジョブの作成操作に指定するパラメーター。</span><span class="sxs-lookup"><span data-stu-id="fcfca-116">The parameters supplied to the create job operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Job>
+          description: |
+            <span data-ttu-id="fcfca-117">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-117">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobCreateResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.get_2'
+    name: 'get(string, string, string, JobGetOptionalParams, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, automationAccountName: string, jobName: string, options: JobGetOptionalParams, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-118">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-118">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-119">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-119">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-120">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-120">The job name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-automation.JobGetOptionalParams'
+          description: <span data-ttu-id="fcfca-121">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="fcfca-121">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Job>
+          description: |
+            <span data-ttu-id="fcfca-122">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-122">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.get'
+    name: 'get(string, string, string, Models.JobGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-123">ジョブの名前によって識別されるジョブを取得します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-123">Retrieve the job identified by job name.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, automationAccountName: string, jobName: string, options?: Models.JobGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-124">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-124">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-125">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-125">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-126">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-126">The job name.</span></span>
+        - id: options
+          type:
+            - Models.JobGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, automationAccountName: string, jobName: string, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-127">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-127">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-128">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-128">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-129">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-129">The job name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.Job>
+          description: |
+            <span data-ttu-id="fcfca-130">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-130">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.getOutput_2'
+    name: 'getOutput(string, string, string, JobGetOutputOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOutput(resourceGroupName: string, automationAccountName: string, jobName: string, options: JobGetOutputOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-131">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-131">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-132">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-132">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-133">作成するジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-133">The name of the job to be created.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-automation.JobGetOutputOptionalParams'
+          description: <span data-ttu-id="fcfca-134">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="fcfca-134">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-135">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-135">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetOutputResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.getOutput'
+    name: 'getOutput(string, string, string, Models.JobGetOutputOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-136">ジョブ名で識別されるジョブの出力を取得します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-136">Retrieve the job output identified by job name.</span></span>
+    syntax:
+      content: 'function getOutput(resourceGroupName: string, automationAccountName: string, jobName: string, options?: Models.JobGetOutputOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-137">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-137">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-138">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-138">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-139">作成するジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-139">The name of the job to be created.</span></span>
+        - id: options
+          type:
+            - Models.JobGetOutputOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetOutputResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.getOutput_1'
+    name: 'getOutput(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOutput(resourceGroupName: string, automationAccountName: string, jobName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-140">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-140">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-141">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-141">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-142">作成するジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-142">The name of the job to be created.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-143">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetOutputResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.getRunbookContent_2'
+    name: 'getRunbookContent(string, string, string, JobGetRunbookContentOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRunbookContent(resourceGroupName: string, automationAccountName: string, jobName: string, options: JobGetRunbookContentOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-144">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-144">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-145">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-145">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-146">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-146">The job name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-automation.JobGetRunbookContentOptionalParams'
+          description: <span data-ttu-id="fcfca-147">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="fcfca-147">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-148">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-148">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetRunbookContentResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.getRunbookContent'
+    name: 'getRunbookContent(string, string, string, Models.JobGetRunbookContentOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-149">Runbook ジョブの名前によって識別されるジョブの内容を取得します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-149">Retrieve the runbook content of the job identified by job name.</span></span>
+    syntax:
+      content: 'function getRunbookContent(resourceGroupName: string, automationAccountName: string, jobName: string, options?: Models.JobGetRunbookContentOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-150">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-150">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-151">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-151">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-152">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-152">The job name.</span></span>
+        - id: options
+          type:
+            - Models.JobGetRunbookContentOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetRunbookContentResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.getRunbookContent_1'
+    name: 'getRunbookContent(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRunbookContent(resourceGroupName: string, automationAccountName: string, jobName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-153">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-153">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-154">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-154">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-155">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-155">The job name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-156">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetRunbookContentResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.constructor'
+    name: JobOperations(AutomationClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-157">JobOperations を作成します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-157">Create a JobOperations.</span></span>
+    syntax:
+      content: 'new JobOperations(client: AutomationClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-automation.AutomationClientContext'
+          description: |
+            <span data-ttu-id="fcfca-158">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="fcfca-158">Reference to the service client.</span></span>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.listByAutomationAccount_2'
+    name: 'listByAutomationAccount(string, string, JobListByAutomationAccountOptionalParams, ServiceCallback<JobListResultV2>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccount(resourceGroupName: string, automationAccountName: string, options: JobListByAutomationAccountOptionalParams, callback: ServiceCallback<JobListResultV2>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-159">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-159">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-160">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-160">The name of the automation account.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-automation.JobListByAutomationAccountOptionalParams'
+          description: <span data-ttu-id="fcfca-161">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="fcfca-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.JobListResultV2>
+          description: |
+            <span data-ttu-id="fcfca-162">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListByAutomationAccountResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.listByAutomationAccount'
+    name: 'listByAutomationAccount(string, string, Models.JobListByAutomationAccountOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-163">ジョブの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-163">Retrieve a list of jobs.</span></span>
+    syntax:
+      content: 'function listByAutomationAccount(resourceGroupName: string, automationAccountName: string, options?: Models.JobListByAutomationAccountOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-164">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-164">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-165">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-165">The name of the automation account.</span></span>
+        - id: options
+          type:
+            - Models.JobListByAutomationAccountOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListByAutomationAccountResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.listByAutomationAccount_1'
+    name: 'listByAutomationAccount(string, string, ServiceCallback<JobListResultV2>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccount(resourceGroupName: string, automationAccountName: string, callback: ServiceCallback<JobListResultV2>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-166">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-166">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-167">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-167">The name of the automation account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.JobListResultV2>
+          description: |
+            <span data-ttu-id="fcfca-168">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListByAutomationAccountResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.listByAutomationAccountNext_2'
+    name: 'listByAutomationAccountNext(string, JobListByAutomationAccountNextOptionalParams, ServiceCallback<JobListResultV2>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccountNext(nextPageLink: string, options: JobListByAutomationAccountNextOptionalParams, callback: ServiceCallback<JobListResultV2>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-169">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="fcfca-169">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-automation.JobListByAutomationAccountNextOptionalParams'
+          description: <span data-ttu-id="fcfca-170">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="fcfca-170">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.JobListResultV2>
+          description: |
+            <span data-ttu-id="fcfca-171">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListByAutomationAccountNextResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.listByAutomationAccountNext'
+    name: 'listByAutomationAccountNext(string, Models.JobListByAutomationAccountNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-172">ジョブの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-172">Retrieve a list of jobs.</span></span>
+    syntax:
+      content: 'function listByAutomationAccountNext(nextPageLink: string, options?: Models.JobListByAutomationAccountNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-173">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="fcfca-173">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListByAutomationAccountNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListByAutomationAccountNextResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.listByAutomationAccountNext_1'
+    name: 'listByAutomationAccountNext(string, ServiceCallback<JobListResultV2>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAutomationAccountNext(nextPageLink: string, callback: ServiceCallback<JobListResultV2>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-174">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="fcfca-174">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-automation.JobListResultV2>
+          description: |
+            <span data-ttu-id="fcfca-175">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListByAutomationAccountNextResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.resume_2'
+    name: 'resume(string, string, string, JobResumeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function resume(resourceGroupName: string, automationAccountName: string, jobName: string, options: JobResumeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-176">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-176">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-177">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-177">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-178">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-178">The job name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-automation.JobResumeOptionalParams'
+          description: <span data-ttu-id="fcfca-179">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="fcfca-179">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-180">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-180">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.resume'
+    name: 'resume(string, string, string, Models.JobResumeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-181">JobName によって識別されるジョブを再開します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-181">Resume the job identified by jobName.</span></span>
+    syntax:
+      content: 'function resume(resourceGroupName: string, automationAccountName: string, jobName: string, options?: Models.JobResumeOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-182">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-182">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-183">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-183">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-184">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-184">The job name.</span></span>
+        - id: options
+          type:
+            - Models.JobResumeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.resume_1'
+    name: 'resume(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function resume(resourceGroupName: string, automationAccountName: string, jobName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-185">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-185">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-186">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-186">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-187">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-187">The job name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-188">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-188">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.stop_2'
+    name: 'stop(string, string, string, JobStopOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stop(resourceGroupName: string, automationAccountName: string, jobName: string, options: JobStopOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-189">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-189">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-190">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-190">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-191">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-191">The job name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-automation.JobStopOptionalParams'
+          description: <span data-ttu-id="fcfca-192">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="fcfca-192">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-193">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-193">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.stop'
+    name: 'stop(string, string, string, Models.JobStopOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-194">JobName によって識別されるジョブを停止します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-194">Stop the job identified by jobName.</span></span>
+    syntax:
+      content: 'function stop(resourceGroupName: string, automationAccountName: string, jobName: string, options?: Models.JobStopOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-195">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-195">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-196">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-196">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-197">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-197">The job name.</span></span>
+        - id: options
+          type:
+            - Models.JobStopOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.stop_1'
+    name: 'stop(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stop(resourceGroupName: string, automationAccountName: string, jobName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-198">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-198">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-199">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-199">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-200">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-200">The job name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-201">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-201">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.suspend_2'
+    name: 'suspend(string, string, string, JobSuspendOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function suspend(resourceGroupName: string, automationAccountName: string, jobName: string, options: JobSuspendOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-202">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-202">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-203">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-203">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-204">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-204">The job name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-automation.JobSuspendOptionalParams'
+          description: <span data-ttu-id="fcfca-205">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="fcfca-205">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-206">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-206">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.suspend'
+    name: 'suspend(string, string, string, Models.JobSuspendOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="fcfca-207">ジョブの名前によって識別されるジョブを中断します。</span><span class="sxs-lookup"><span data-stu-id="fcfca-207">Suspend the job identified by job name.</span></span>
+    syntax:
+      content: 'function suspend(resourceGroupName: string, automationAccountName: string, jobName: string, options?: Models.JobSuspendOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-208">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-208">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-209">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-209">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-210">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-210">The job name.</span></span>
+        - id: options
+          type:
+            - Models.JobSuspendOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+  - uid: '@azure/arm-automation.JobOperations.suspend_1'
+    name: 'suspend(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function suspend(resourceGroupName: string, automationAccountName: string, jobName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-211">Azure リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-211">Name of an Azure Resource group.</span></span>
+        - id: automationAccountName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-212">Automation アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-212">The name of the automation account.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="fcfca-213">ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="fcfca-213">The job name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="fcfca-214">コールバック</span><span class="sxs-lookup"><span data-stu-id="fcfca-214">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-automation'
+references:
+  - uid: '@azure/arm-automation.AutomationClientContext'
+    name: AutomationClientContext
+    spec.typeScript:
+      - name: AutomationClientContext
+        fullName: AutomationClientContext
+        uid: '@azure/arm-automation.AutomationClientContext'
+  - uid: '@azure/arm-automation.JobCreateParameters'
+    name: JobCreateParameters
+    spec.typeScript:
+      - name: JobCreateParameters
+        fullName: JobCreateParameters
+        uid: '@azure/arm-automation.JobCreateParameters'
+  - uid: ServiceCallback<@azure/arm-automation.Job>
+    name: Job>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Job
+        fullName: Job
+        uid: '@azure/arm-automation.Job'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-automation.JobCreateOptionalParams'
+    name: JobCreateOptionalParams
+    spec.typeScript:
+      - name: JobCreateOptionalParams
+        fullName: JobCreateOptionalParams
+        uid: '@azure/arm-automation.JobCreateOptionalParams'
+  - uid: '@azure/arm-automation.JobGetOptionalParams'
+    name: JobGetOptionalParams
+    spec.typeScript:
+      - name: JobGetOptionalParams
+        fullName: JobGetOptionalParams
+        uid: '@azure/arm-automation.JobGetOptionalParams'
+  - uid: '@azure/arm-automation.JobGetOutputOptionalParams'
+    name: JobGetOutputOptionalParams
+    spec.typeScript:
+      - name: JobGetOutputOptionalParams
+        fullName: JobGetOutputOptionalParams
+        uid: '@azure/arm-automation.JobGetOutputOptionalParams'
+  - uid: '@azure/arm-automation.JobGetRunbookContentOptionalParams'
+    name: JobGetRunbookContentOptionalParams
+    spec.typeScript:
+      - name: JobGetRunbookContentOptionalParams
+        fullName: JobGetRunbookContentOptionalParams
+        uid: '@azure/arm-automation.JobGetRunbookContentOptionalParams'
+  - uid: ServiceCallback<@azure/arm-automation.JobListResultV2>
+    name: JobListResultV2>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobListResultV2
+        fullName: JobListResultV2
+        uid: '@azure/arm-automation.JobListResultV2'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-automation.JobListByAutomationAccountOptionalParams'
+    name: JobListByAutomationAccountOptionalParams
+    spec.typeScript:
+      - name: JobListByAutomationAccountOptionalParams
+        fullName: JobListByAutomationAccountOptionalParams
+        uid: '@azure/arm-automation.JobListByAutomationAccountOptionalParams'
+  - uid: '@azure/arm-automation.JobListByAutomationAccountNextOptionalParams'
+    name: JobListByAutomationAccountNextOptionalParams
+    spec.typeScript:
+      - name: JobListByAutomationAccountNextOptionalParams
+        fullName: JobListByAutomationAccountNextOptionalParams
+        uid: '@azure/arm-automation.JobListByAutomationAccountNextOptionalParams'
+  - uid: '@azure/arm-automation.JobResumeOptionalParams'
+    name: JobResumeOptionalParams
+    spec.typeScript:
+      - name: JobResumeOptionalParams
+        fullName: JobResumeOptionalParams
+        uid: '@azure/arm-automation.JobResumeOptionalParams'
+  - uid: '@azure/arm-automation.JobStopOptionalParams'
+    name: JobStopOptionalParams
+    spec.typeScript:
+      - name: JobStopOptionalParams
+        fullName: JobStopOptionalParams
+        uid: '@azure/arm-automation.JobStopOptionalParams'
+  - uid: '@azure/arm-automation.JobSuspendOptionalParams'
+    name: JobSuspendOptionalParams
+    spec.typeScript:
+      - name: JobSuspendOptionalParams
+        fullName: JobSuspendOptionalParams
+        uid: '@azure/arm-automation.JobSuspendOptionalParams'
