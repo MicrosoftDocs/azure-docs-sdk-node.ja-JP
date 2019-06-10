@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.SnapshotUpdate'
+    name: SnapshotUpdate
+    fullName: SnapshotUpdate
+    children:
+      - '@azure/arm-compute.SnapshotUpdate.diskSizeGB'
+      - '@azure/arm-compute.SnapshotUpdate.encryptionSettingsCollection'
+      - '@azure/arm-compute.SnapshotUpdate.osType'
+      - '@azure/arm-compute.SnapshotUpdate.sku'
+      - '@azure/arm-compute.SnapshotUpdate.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="20912-101">スナップショットの更新プログラムのリソースです。</span><span class="sxs-lookup"><span data-stu-id="20912-101">Snapshot update resource.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="20912-102">CreationData.createOption が空の場合は、このフィールドは必須および作成するための VHD のサイズを示します。</span><span class="sxs-lookup"><span data-stu-id="20912-102">If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create.</span></span> <span data-ttu-id="20912-103">このフィールドが更新やその他のオプションを使用した作成のために存在する場合は、サイズ変更を示します。</span><span class="sxs-lookup"><span data-stu-id="20912-103">If this field is present for updates or creation with other options, it indicates a resize.</span></span> <span data-ttu-id="20912-104">サイズを変更は、ディスクが実行中の VM にアタッチされていないと、ディスクのサイズを増やすことができますのみ場合にのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="20912-104">Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk''s size.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.encryptionSettingsCollection'
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="20912-105">暗号化設定のコレクションを使用する Azure Disk Encryption では、ディスクまたはスナップショットごとに複数の暗号化設定を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="20912-105">Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.</span></span>'
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - '@azure/arm-compute.EncryptionSettingsCollection'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="20912-106">オペレーティング システムの種類。</span><span class="sxs-lookup"><span data-stu-id="20912-106">the Operating System type.</span></span> <span data-ttu-id="20912-107">指定できる値は、次のとおりです。''Windows'', ''Linux''</span><span class="sxs-lookup"><span data-stu-id="20912-107">Possible values include: ''Windows'', ''Linux''</span></span>'
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: SnapshotSku'
+      return:
+        type:
+          - '@azure/arm-compute.SnapshotSku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="20912-108">リソース タグ</span><span class="sxs-lookup"><span data-stu-id="20912-108">Resource tags</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection'
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: '@azure/arm-compute.EncryptionSettingsCollection'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.SnapshotSku'
+    name: SnapshotSku
+    spec.typeScript:
+      - name: SnapshotSku
+        fullName: SnapshotSku
+        uid: '@azure/arm-compute.SnapshotSku'

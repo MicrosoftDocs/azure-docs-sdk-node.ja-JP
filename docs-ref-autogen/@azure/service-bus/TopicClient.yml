@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    fullName: TopicClient
+    children:
+      - '@azure/service-bus.TopicClient.close'
+      - '@azure/service-bus.TopicClient.createSender'
+      - '@azure/service-bus.TopicClient.entityPath'
+      - '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+      - '@azure/service-bus.TopicClient.id'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="e882d-101">Service Bus トピックとの対話を許可するクライアントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="e882d-101">Describes the client that allows interacting with a Service Bus Topic.</span></span>
+      <span data-ttu-id="e882d-102">使用して、 `createTopicClient` TopicClient をインスタンス化する ServiceBusClient オブジェクトに対して関数</span><span class="sxs-lookup"><span data-stu-id="e882d-102">Use the `createTopicClient` function on the ServiceBusClient object to instantiate a TopicClient</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="e882d-103">このクライアントによって作成された送信者の AMQP リンクを閉じます。</span><span class="sxs-lookup"><span data-stu-id="e882d-103">Closes the AMQP link for the sender created by this client.</span></span>
+      <span data-ttu-id="e882d-104">閉じた後、TopicClient もメッセージの送信者は、その他の操作を使用できます。</span><span class="sxs-lookup"><span data-stu-id="e882d-104">Once closed, neither the TopicClient nor its senders can be used for any further operations.</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="e882d-105">メッセージを送信する、メッセージは後で送信するためのスケジュール、このようなスケジュール設定されたメッセージをキャンセルするに使用するセンダを作成します。</span><span class="sxs-lookup"><span data-stu-id="e882d-105">Creates a Sender to be used for sending messages, scheduling messages to be sent at a later time and cancelling such scheduled messages.</span></span>
+      - <span data-ttu-id="e882d-106">この TopicClient のオープン、送信元が既に存在する場合は、エラーをスローします。</span><span class="sxs-lookup"><span data-stu-id="e882d-106">Throws error if an open sender already exists for this TopicClient.</span></span>
+      <span data-ttu-id="e882d-107">トピックにセッションが有効なサブスクリプションではかどうか、に、メッセージを送信せず、`sessionId`プロパティは、このようなサブスクリプションの配信不能キューに移動します。</span><span class="sxs-lookup"><span data-stu-id="e882d-107">If the Topic has session enabled Subscriptions, then messages sent without the `sessionId` property will go to the dead letter queue of such subscriptions.</span></span>
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e882d-108">このクライアントを作成する Service Bus トピックのパス。</span><span class="sxs-lookup"><span data-stu-id="e882d-108">The path for the Service Bus Topic for which this client is created.</span></span>
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+    name: 'getDeadLetterTopicPath(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="e882d-109">指定されたトピックとサブスクリプションの名前に対応する配信不能メッセージ トピック名を返します。</span><span class="sxs-lookup"><span data-stu-id="e882d-109">Returns the corresponding dead letter topic name for the given topic and subscription names.</span></span>
+      <span data-ttu-id="e882d-110">これを使用して、`createSubscriptionClient`の関数、`ServiceBusClient`インスタンスが指定された配信不能キューからメッセージを受信するサブスクリプション。</span><span class="sxs-lookup"><span data-stu-id="e882d-110">Use this in the `createSubscriptionClient` function of the `ServiceBusClient` instance to receive messages from dead letter queue for given subscription.</span></span>
+    syntax:
+      content: 'static function getDeadLetterTopicPath(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="e882d-111">配信不能対応の名前がフェッチされるトピックの名前</span><span class="sxs-lookup"><span data-stu-id="e882d-111">Name of the topic whose dead letter counterpart's name is being fetched</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="e882d-112">配信不能対応の名前がフェッチされるサブスクリプションの名前</span><span class="sxs-lookup"><span data-stu-id="e882d-112">Name of the subscription whose dead letter counterpart's name is being fetched</span></span>
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e882d-113">このクライアントの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="e882d-113">A unique identifier for this client.</span></span>
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
