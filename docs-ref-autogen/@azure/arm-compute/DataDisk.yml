@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.DataDisk'
+    name: DataDisk
+    fullName: DataDisk
+    children:
+      - '@azure/arm-compute.DataDisk.caching'
+      - '@azure/arm-compute.DataDisk.createOption'
+      - '@azure/arm-compute.DataDisk.diskSizeGB'
+      - '@azure/arm-compute.DataDisk.image'
+      - '@azure/arm-compute.DataDisk.lun'
+      - '@azure/arm-compute.DataDisk.managedDisk'
+      - '@azure/arm-compute.DataDisk.name'
+      - '@azure/arm-compute.DataDisk.vhd'
+      - '@azure/arm-compute.DataDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: データ ディスクをについて説明します。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      キャッシュの要件を指定します。 <br><br> 設定可能な値は、次のとおりです。 <br><br> **None** <br><br>
+      **ReadOnly** <br><br> **ReadWrite** <br><br> 既定値:**Standard storage はありません。Premium storage の ReadOnly**します。 指定できる値は、次のとおりです。'None', 'ReadOnly', 'ReadWrite'
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      仮想マシンを作成する方法を指定します。<br><br> 設定可能な値は、次のとおりです。<br><br>
+      **アタッチ**\u2013 仮想マシンを作成する特殊化されたディスクを使用しているときにこの値が使用されます。<br><br> **FromImage** \u2013 仮想マシンを作成するイメージを使用しているときにこの値が使用されます。 プラットフォーム イメージを使用している場合は、上記で説明した、imageReference 要素を使用します。 Marketplace イメージを使用している場合は、前に説明した計画要素も使用します。 指定できる値は、次のとおりです。'FromImage'、'Empty'、' 接続 '
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 空のデータ ディスクのサイズをギガバイト単位で指定します。 この要素を使用して、仮想マシン イメージのディスクのサイズを上書きします。 <br><br> この値は 1023 GB より大きくすることはできません。
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 元のユーザーは、仮想ハード ディスク イメージします。 仮想ハード_ディスクは、仮想マシンにアタッチされる前にコピーされます。 SourceImage が指定されている場合、変換先の仮想ハード ドライブが存在する必要があります。
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: データ ディスクの論理ユニットの数を指定します。 この値は、VM 内のデータ ディスクを識別するために使用しする必要があります、VM にアタッチされている各データ ディスクに対して一意であるため。
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 管理ディスクのパラメーター。
+    optional: true
+    syntax:
+      content: 'managedDisk?: ManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.ManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ディスクの名前。
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.vhd'
+    name: vhd
+    fullName: vhd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: バーチャル ハード_ディスク。
+    optional: true
+    syntax:
+      content: 'vhd?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: WriteAccelerator を有効または、ディスクを無効になっているかどうかを指定します。
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.ManagedDiskParameters'
+    name: ManagedDiskParameters
+    spec.typeScript:
+      - name: ManagedDiskParameters
+        fullName: ManagedDiskParameters
+        uid: '@azure/arm-compute.ManagedDiskParameters'

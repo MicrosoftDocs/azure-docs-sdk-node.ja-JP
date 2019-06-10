@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VaultCertificate'
+    name: VaultCertificate
+    fullName: VaultCertificate
+    children:
+      - '@azure/arm-compute.VaultCertificate.certificateStore'
+      - '@azure/arm-compute.VaultCertificate.certificateUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: Key Vault での単一の証明書参照をについて説明しますと、VM で証明書が存在する必要があります。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateStore'
+    name: certificateStore
+    fullName: certificateStore
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Windows vm の場合は、証明書の追加先となる仮想マシンで、証明書ストアを指定します。 指定された証明書ストアは、LocalMachine のアカウントで暗黙的にです。 <br><br>Linux Vm の場合、証明書ファイルがファイル名で、/var/lib/waagent ディレクトリの下に配置&lt;UppercaseThumbprint&gt;.crt、x509 証明書ファイルと&lt;UppercaseThumbprint&gt;の .prv という秘密キー。 これらのファイルは、書式設定された .pem です。
+    optional: true
+    syntax:
+      content: 'certificateStore?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      これは、シークレットとして Key Vault にアップロードされた証明書の URL です。 Key Vault にシークレットを追加するため、次を参照してください。[キーまたはシークレットを key vault に追加](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add)します。 この場合、証明書の要件を次の JSON の Base64 エンコード オブジェクトがあるは、utf-8 でエンコードされます。 <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>
+      "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

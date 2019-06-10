@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.EncryptionSettingsElement'
+    name: EncryptionSettingsElement
+    fullName: EncryptionSettingsElement
+    children:
+      - '@azure/arm-compute.EncryptionSettingsElement.diskEncryptionKey'
+      - '@azure/arm-compute.EncryptionSettingsElement.keyEncryptionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 1 つのディスク ボリュームの暗号化の設定。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.EncryptionSettingsElement.diskEncryptionKey'
+    name: diskEncryptionKey
+    fullName: diskEncryptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ディスクの暗号化キーの Key Vault シークレット Url と資格情報コンテナーの id
+    optional: true
+    syntax:
+      content: 'diskEncryptionKey?: KeyVaultAndSecretReference'
+      return:
+        type:
+          - '@azure/arm-compute.KeyVaultAndSecretReference'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.EncryptionSettingsElement.keyEncryptionKey'
+    name: keyEncryptionKey
+    fullName: keyEncryptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: キー暗号化キーの Key Vault キーの Url と資格情報コンテナーの id。 KeyEncryptionKey が省略可能なディスクの暗号化キーのラップを解除するために使用を指定した場合とします。
+    optional: true
+    syntax:
+      content: 'keyEncryptionKey?: KeyVaultAndKeyReference'
+      return:
+        type:
+          - '@azure/arm-compute.KeyVaultAndKeyReference'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.KeyVaultAndSecretReference'
+    name: KeyVaultAndSecretReference
+    spec.typeScript:
+      - name: KeyVaultAndSecretReference
+        fullName: KeyVaultAndSecretReference
+        uid: '@azure/arm-compute.KeyVaultAndSecretReference'
+  - uid: '@azure/arm-compute.KeyVaultAndKeyReference'
+    name: KeyVaultAndKeyReference
+    spec.typeScript:
+      - name: KeyVaultAndKeyReference
+        fullName: KeyVaultAndKeyReference
+        uid: '@azure/arm-compute.KeyVaultAndKeyReference'

@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.CreationData'
+    name: CreationData
+    fullName: CreationData
+    children:
+      - '@azure/arm-compute.CreationData.createOption'
+      - '@azure/arm-compute.CreationData.imageReference'
+      - '@azure/arm-compute.CreationData.sourceResourceId'
+      - '@azure/arm-compute.CreationData.sourceUri'
+      - '@azure/arm-compute.CreationData.storageAccountId'
+    langs:
+      - typeScript
+    type: interface
+    summary: データ ディスクを作成するときに使用します。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: これには、ディスクの作成の使用可能なソースを列挙します。 指定できる値は、次のとおりです。'Empty'、' 接続 '、'FromImage'、'Import'、'コピー'、'Restore'、'のアップロード
+    syntax:
+      content: 'createOption: DiskCreateOption'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOption'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.imageReference'
+    name: imageReference
+    fullName: imageReference
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ディスクのソース情報です。
+    optional: true
+    syntax:
+      content: 'imageReference?: ImageDiskReference'
+      return:
+        type:
+          - '@azure/arm-compute.ImageDiskReference'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.sourceResourceId'
+    name: sourceResourceId
+    fullName: sourceResourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CreateOption がコピーである場合は、これは、ソースのスナップショットまたはディスクの ARM id になります。
+    optional: true
+    syntax:
+      content: 'sourceResourceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.sourceUri'
+    name: sourceUri
+    fullName: sourceUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CreateOption がインポートの場合は、これは、管理ディスクにインポートする blob の URI。
+    optional: true
+    syntax:
+      content: 'sourceUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.CreationData.storageAccountId'
+    name: storageAccountId
+    fullName: storageAccountId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CreateOption がインポート、ディスクとしてインポートする blob を含むストレージ アカウントの Azure Resource Manager 識別子の場合は。 Blob が別のサブスクリプションにかどうかにのみ必要です。
+    optional: true
+    syntax:
+      content: 'storageAccountId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.DiskCreateOption'
+    name: DiskCreateOption
+    spec.typeScript:
+      - name: DiskCreateOption
+        fullName: DiskCreateOption
+        uid: '@azure/arm-compute.DiskCreateOption'
+  - uid: '@azure/arm-compute.ImageDiskReference'
+    name: ImageDiskReference
+    spec.typeScript:
+      - name: ImageDiskReference
+        fullName: ImageDiskReference
+        uid: '@azure/arm-compute.ImageDiskReference'
