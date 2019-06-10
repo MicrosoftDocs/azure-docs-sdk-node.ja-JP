@@ -45,23 +45,23 @@ items:
           - string
     package: '@azure/cognitiveservices-qnamaker'
   - uid: '@azure/cognitiveservices-qnamaker.QnAMakerClientContext.constructor'
-    name: 'QnAMakerClientContext(string, ServiceClientCredentials, msRest.ServiceClientOptions)'
+    name: 'QnAMakerClientContext(ServiceClientCredentials, string, msRest.ServiceClientOptions)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: QnAMakerClientContext クラスの新しいインスタンスを初期化します。
     syntax:
-      content: 'new QnAMakerClientContext(endpoint: string, credentials: ServiceClientCredentials, options?: msRest.ServiceClientOptions)'
+      content: 'new QnAMakerClientContext(credentials: ServiceClientCredentials, endpoint: string, options?: msRest.ServiceClientOptions)'
       parameters:
-        - id: endpoint
-          type:
-            - string
-          description: 'Cognitive Services のエンドポイントがサポートされている (プロトコルと例については、ホスト名:https://westus.api.cognitive.microsoft.com)します。'
         - id: credentials
           type:
             - ServiceClientCredentials
           description: サブスクリプションの資格情報をクライアント サブスクリプションを一意に識別します。
+        - id: endpoint
+          type:
+            - string
+          description: 'Cognitive Services のエンドポイントがサポートされている (プロトコルと例については、ホスト名:https://westus.api.cognitive.microsoft.com)します。'
         - id: options
           type:
             - msRest.ServiceClientOptions
