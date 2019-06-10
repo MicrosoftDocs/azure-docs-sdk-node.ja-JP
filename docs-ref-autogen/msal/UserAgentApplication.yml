@@ -15,8 +15,6 @@ items:
       - msal.UserAgentApplication.getLoginInProgress
       - msal.UserAgentApplication.getPostLogoutRedirectUri
       - msal.UserAgentApplication.getRedirectUri
-      - msal.UserAgentApplication.handleRedirectCallback_1
-      - msal.UserAgentApplication.handleRedirectCallback
       - msal.UserAgentApplication.loginPopup
       - msal.UserAgentApplication.loginRedirect
       - msal.UserAgentApplication.logout
@@ -24,7 +22,8 @@ items:
     langs:
       - typeScript
     type: class
-    summary: '<span data-ttu-id="65dfb-101">UserAgentApplication クラス:<xref:UserAgentApplication> 開発者は loginXX を行うときに使用できるインスタンスのオブジェクトまたは acquireTokenXX 関数</span><span class="sxs-lookup"><span data-stu-id="65dfb-101">UserAgentApplication class : <xref:UserAgentApplication> Object Instance that the developer can use to make loginXX OR acquireTokenXX functions</span></span>'
+    summary: |
+      <span data-ttu-id="f0d6c-101">UserAgentApplication クラス loginXX を開発者が使用できるオブジェクトのインスタンスまたは acquireTokenXX 関数</span><span class="sxs-lookup"><span data-stu-id="f0d6c-101">UserAgentApplication class Object Instance that the developer can use to make loginXX OR acquireTokenXX functions</span></span>
     package: msal
   - uid: msal.UserAgentApplication.acquireTokenPopup
     name: acquireTokenPopup(AuthenticationParameters)
@@ -32,7 +31,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="65dfb-102">ユーザーのブラウザーでポップアップ ウィンドウを開きを使用して、API の access_token を取得する場合に使用します</span><span class="sxs-lookup"><span data-stu-id="65dfb-102">Use when you want to obtain an access_token for your API via opening a popup window in the user's browser</span></span>
+    summary: <span data-ttu-id="f0d6c-102">ユーザーのブラウザーでポップアップ ウィンドウを開きを使用して、API の access_token を取得する場合に使用します</span><span class="sxs-lookup"><span data-stu-id="f0d6c-102">Use when you want to obtain an access_token for your API via opening a popup window in the user's browser</span></span>
     syntax:
       content: 'function acquireTokenPopup(request: AuthenticationParameters)'
       parameters:
@@ -50,7 +49,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="65dfb-103">ユーザーを承認エンドポイントにリダイレクトすることで、API の access_token を取得するときに使用されます。</span><span class="sxs-lookup"><span data-stu-id="65dfb-103">Used when you want to obtain an access_token for your API by redirecting the user to the authorization endpoint.</span></span>
+    summary: <span data-ttu-id="f0d6c-103">ユーザーのブラウザー ウィンドウを承認エンドポイントにリダイレクトすることで、API の access_token を取得する場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-103">Use when you want to obtain an access_token for your API by redirecting the user's browser window to the authorization endpoint.</span></span>
     syntax:
       content: 'function acquireTokenRedirect(request: AuthenticationParameters)'
       parameters:
@@ -66,7 +65,7 @@ items:
     langs:
       - typeScript
     summary: |
-      <span data-ttu-id="65dfb-104">この関数を使用して、api 呼び出しごとにトークンを取得する]、[リソース プロバイダー MSAL の戻り値の使用可能な場合、キャッシュされたトークンをまたはに送信する非表示の iframe を使用して新しいトークンを取得するには、STS に要求します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-104">Use this function to obtain a token before every call to the API / resource provider MSAL return's a cached token when available Or it send's a request to the STS to obtain a new token using a hidden iframe.</span></span>
+      <span data-ttu-id="f0d6c-104">この関数を使用して、api 呼び出しごとにトークンを取得する]、[リソース プロバイダー MSAL の戻り値の使用可能な場合、キャッシュされたトークンをまたはに送信する非表示の iframe を使用して新しいトークンを取得するには、STS に要求します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-104">Use this function to obtain a token before every call to the API / resource provider MSAL return's a cached token when available Or it send's a request to the STS to obtain a new token using a hidden iframe.</span></span>
     syntax:
       content: 'function acquireTokenSilent(request: AuthenticationParameters)'
       parameters:
@@ -85,11 +84,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: |-
-      <span data-ttu-id="65dfb-105">返します、機関、authority は MSAL がトークンの取得に使用できるディレクトリを示す URL</span><span class="sxs-lookup"><span data-stu-id="65dfb-105">returns the authority, where authority is a URL indicating the directory that MSAL can use to obtain tokens</span></span>
-      - <span data-ttu-id="65dfb-106">Azure ad でこの属性は、MSAL を使用して、フォームのトークンを取得する Azure active directory を示す URL https://login.microsoftonline.com/&lt;Enter_the_Tenant_Info_Here&gt;場合は、アプリケーションは、1 つの組織のディレクトリにアカウントをサポートする値に置き換えます"Enter_the_Tenant_Info_Here"テナント Id またはテナント名 (たとえば、contoso.microsoft.com) 場合、アプリケーション組織の任意のディレクトリでアカウントをサポートする、アプリケーションは、個人の Microsoft アカウント、組織のディレクトリでアカウントをサポートしている場合は、組織で"Enter_the_Tenant_Info_Here"の値を置き換えます、"Enter_the_Tenant_Info_ を置換ここで"値を使用して、一般的な使用。</span><span class="sxs-lookup"><span data-stu-id="65dfb-106">In Azure AD, this attribute is a URL indicating the Azure active directory that MSAL uses to obtain tokens It is of the form https://login.microsoftonline.com/&lt;Enter_the_Tenant_Info_Here&gt; If your application supports Accounts in one organizational directory, replace "Enter_the_Tenant_Info_Here" value with the Tenant Id or Tenant name (for example, contoso.microsoft.com) If your application supports Accounts in any organizational directory, replace "Enter_the_Tenant_Info_Here" value with organizations If your application supports Accounts in any organizational directory and personal Microsoft accounts, replace "Enter_the_Tenant_Info_Here" value with common.</span></span>
-      <span data-ttu-id="65dfb-107">個人の Microsoft へのサポートを制限するには、アカウントはコンシューマーでのみ、データの"Enter_the_Tenant_Info_Here"の値を置き換えます。</span><span class="sxs-lookup"><span data-stu-id="65dfb-107">To restrict support to Personal Microsoft accounts only, replace "Enter_the_Tenant_Info_Here" value with consumers.</span></span>
-      - <span data-ttu-id="65dfb-108">Azure B2C でのフォーム https:// は&lt;インスタンス&gt;/tfp/&lt;テナント&gt;/<policyName>/</span><span class="sxs-lookup"><span data-stu-id="65dfb-108">In Azure B2C, it is of the form https://&lt;instance&gt;/tfp/&lt;tenant&gt;/<policyName>/</span></span>
+    summary: <span data-ttu-id="f0d6c-105">機関 URL を管理する方法。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-105">Method to manage the authority URL.</span></span>
     syntax:
       content: 'authority: string'
       return:
@@ -102,7 +97,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="65dfb-109">返します、サインインしているアカウント (ログイン時に作成されたアカウント オブジェクトから受信した) または null で状態が見つからない場合</span><span class="sxs-lookup"><span data-stu-id="65dfb-109">Returns the signed in account (received from an account object created at the time of login) or null when no state is found</span></span>
+    summary: <span data-ttu-id="f0d6c-106">返します、サインインしているアカウント (アカウントのオブジェクトは正常なログイン時に作成された) または null で状態が見つからない場合</span><span class="sxs-lookup"><span data-stu-id="f0d6c-106">Returns the signed in account (the account object is created at the time of successful login) or null when no state is found</span></span>
     syntax:
       content: function getAccount()
       parameters: []
@@ -116,7 +111,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="65dfb-110">使用してすべてのキャッシュされた項目をフィルター処理および homeAccountIdentifier に基づく一意のアカウントの一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-110">Used to filter all cached items and return a list of unique accounts based on homeAccountIdentifier.</span></span>
+    summary: <span data-ttu-id="f0d6c-107">使用すると、homeAccountIdentifier に基づいて、MSAL キャッシュ内で一意のアカウントの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-107">Use to get a list of unique accounts in MSAL cache based on homeAccountIdentifier.</span></span>
     syntax:
       content: function getAllAccounts()
       parameters: []
@@ -130,7 +125,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="65dfb-111">機関のインスタンスを返します</span><span class="sxs-lookup"><span data-stu-id="65dfb-111">returns the authority instance</span></span>
+    summary: <span data-ttu-id="f0d6c-108">MSAL の構成オブジェクトから現在の機関インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-108">Get the current authority instance from the MSAL configuration object</span></span>
     syntax:
       content: function getAuthorityInstance()
       parameters: []
@@ -144,7 +139,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="65dfb-112">使用して、現在の取得<xref:Configuration>MSAL 内のオブジェクト</span><span class="sxs-lookup"><span data-stu-id="65dfb-112">Use to get the current <xref:Configuration> object in MSAL</span></span>'
+    summary: '<span data-ttu-id="f0d6c-109">使用して、現在の取得<xref:Configuration>MSAL 内のオブジェクト</span><span class="sxs-lookup"><span data-stu-id="f0d6c-109">Use to get the current <xref:Configuration> object in MSAL</span></span>'
     syntax:
       content: function getCurrentConfiguration()
       parameters: []
@@ -158,7 +153,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="65dfb-113">ログインが実行中である場合に通知するために開発者にブール型のフラグを返す</span><span class="sxs-lookup"><span data-stu-id="65dfb-113">Return boolean flag to developer to help inform if login is in progress</span></span>
+    summary: <span data-ttu-id="f0d6c-110">ログインが実行中である場合に通知するために開発者にブール型のフラグを返す</span><span class="sxs-lookup"><span data-stu-id="f0d6c-110">Return boolean flag to developer to help inform if login is in progress</span></span>
     syntax:
       content: function getLoginInProgress()
       parameters: []
@@ -173,8 +168,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="65dfb-114">使用すると、MSAL または null で構成されている投稿ログアウト リダイレクト uri を取得します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-114">Use to get the post logout redirect uri configured in MSAL or null.</span></span>
-      <span data-ttu-id="65dfb-115">評価 postLogoutredirectUri 場合は関数の場合、それ以外の場合単にその値を返します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-115">Evaluates postLogoutredirectUri if its a function, otherwise simply returns its value.</span></span>
+      <span data-ttu-id="f0d6c-111">使用すると、MSAL または null で構成されている投稿ログアウト リダイレクト uri を取得します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-111">Use to get the post logout redirect uri configured in MSAL or null.</span></span>
+      <span data-ttu-id="f0d6c-112">評価 postLogoutredirectUri 場合は関数の場合、それ以外の場合単にその値を返します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-112">Evaluates postLogoutredirectUri if its a function, otherwise simply returns its value.</span></span>
     syntax:
       content: function getPostLogoutRedirectUri()
       parameters: []
@@ -189,8 +184,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="65dfb-116">使用すると、MSAL または null で構成されているリダイレクト uri を取得します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-116">Use to get the redirect uri configured in MSAL or null.</span></span>
-      <span data-ttu-id="65dfb-117">評価 redirectUri 場合は関数の場合、それ以外の場合単にその値を返します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-117">Evaluates redirectUri if its a function, otherwise simply returns its value.</span></span>
+      <span data-ttu-id="f0d6c-113">使用すると、MSAL または null で構成されているリダイレクト uri を取得します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-113">Use to get the redirect uri configured in MSAL or null.</span></span>
+      <span data-ttu-id="f0d6c-114">評価 redirectUri 場合は関数の場合、それ以外の場合単にその値を返します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-114">Evaluates redirectUri if its a function, otherwise simply returns its value.</span></span>
     syntax:
       content: function getRedirectUri()
       parameters: []
@@ -198,47 +193,13 @@ items:
         type:
           - string
     package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback_1
-    name: handleRedirectCallback(authResponseCallback)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="65dfb-118">成功またはエラー オブジェクトを返信するリダイレクトのフローのコールバック関数を設定します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-118">Sets the callback functions for the redirect flow to send back the success or error object.</span></span>
-    syntax:
-      content: 'function handleRedirectCallback(authCallback: authResponseCallback)'
-      parameters:
-        - id: authCallback
-          type:
-            - authResponseCallback
-          description: ''
-    package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback
-    name: 'handleRedirectCallback(tokenReceivedCallback, errorReceivedCallback)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="65dfb-119">成功またはエラー オブジェクトを返信するリダイレクトのフローのコールバック関数を設定します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-119">Sets the callback functions for the redirect flow to send back the success or error object.</span></span>
-    syntax:
-      content: 'function handleRedirectCallback(tokenReceivedCallback: tokenReceivedCallback, errorReceivedCallback: errorReceivedCallback)'
-      parameters:
-        - id: tokenReceivedCallback
-          type:
-            - tokenReceivedCallback
-          description: ''
-        - id: errorReceivedCallback
-          type:
-            - errorReceivedCallback
-          description: ''
-    package: msal
   - uid: msal.UserAgentApplication.loginPopup
     name: loginPopup(AuthenticationParameters)
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="65dfb-120">ユーザーのブラウザーでポップアップ ウィンドウを開きを使用してログイン プロセスを開始するときに使用</span><span class="sxs-lookup"><span data-stu-id="65dfb-120">Use when initiating the login process via opening a popup window in the user's browser</span></span>
+    summary: <span data-ttu-id="f0d6c-115">ユーザーのブラウザーでポップアップ ウィンドウを開きを使用してログイン プロセスを開始するときに使用</span><span class="sxs-lookup"><span data-stu-id="f0d6c-115">Use when initiating the login process via opening a popup window in the user's browser</span></span>
     syntax:
       content: 'function loginPopup(request?: AuthenticationParameters)'
       parameters:
@@ -257,7 +218,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="65dfb-121">ユーザーのブラウザーを承認エンドポイントにリダイレクトすることで、ログイン プロセスを開始するときに使用します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-121">Use when initiating the login process by redirecting the user's browser to the authorization endpoint.</span></span>
+    summary: <span data-ttu-id="f0d6c-116">ユーザーのブラウザーを承認エンドポイントにリダイレクトすることで、ログイン プロセスを開始するときに使用します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-116">Use when initiating the login process by redirecting the user's browser to the authorization endpoint.</span></span>
     syntax:
       content: 'function loginRedirect(request?: AuthenticationParameters)'
       parameters:
@@ -274,8 +235,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="65dfb-122">現在のユーザーをログアウトし、postLogoutRedirectUri にユーザーをリダイレクトするために使用します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-122">Used to log out the current user, and redirect the user to the postLogoutRedirectUri.</span></span>
-      <span data-ttu-id="65dfb-123">既定の動作では、ユーザーをリダイレクトに`window.location.href`します。</span><span class="sxs-lookup"><span data-stu-id="65dfb-123">Defaults behaviour is to redirect the user to `window.location.href`.</span></span>
+      <span data-ttu-id="f0d6c-117">使用して、現在のユーザーをログアウトして、postLogoutRedirectUri にユーザーをリダイレクトします。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-117">Use to log out the current user, and redirect the user to the postLogoutRedirectUri.</span></span>
+      <span data-ttu-id="f0d6c-118">既定の動作は、ユーザーをリダイレクトする`window.location.href`します。</span><span class="sxs-lookup"><span data-stu-id="f0d6c-118">Default behaviour is to redirect the user to `window.location.href`.</span></span>
     syntax:
       content: function logout()
       parameters: []
@@ -286,7 +247,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: '<span data-ttu-id="65dfb-124">コンス トラクター、<xref:UserAgentApplication>オブジェクトのこのインスタンス化できるため、<xref:UserAgentApplication>オブジェクト</span><span class="sxs-lookup"><span data-stu-id="65dfb-124">Constructor for the <xref:UserAgentApplication> object This is to be able to instantiate the <xref:UserAgentApplication> object</span></span>'
+    summary: ''
     syntax:
       content: 'new UserAgentApplication(configuration: Configuration)'
       parameters:
@@ -294,7 +255,7 @@ items:
           type:
             - msal.Configuration
           description: |
-            <span data-ttu-id="65dfb-125">MSAL UserAgentApplication インスタンスのオブジェクト</span><span class="sxs-lookup"><span data-stu-id="65dfb-125">object for the MSAL UserAgentApplication instance</span></span>
+            <span data-ttu-id="f0d6c-119">MSAL UserAgentApplication インスタンスのオブジェクト</span><span class="sxs-lookup"><span data-stu-id="f0d6c-119">object for the MSAL UserAgentApplication instance</span></span>
     package: msal
 references:
   - uid: msal.Configuration
