@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration'
+    name: HostnameConfiguration
+    fullName: HostnameConfiguration
+    children:
+      - '@azure/arm-apimanagement.HostnameConfiguration.certificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.certificatePassword'
+      - '@azure/arm-apimanagement.HostnameConfiguration.defaultSslBinding'
+      - '@azure/arm-apimanagement.HostnameConfiguration.encodedCertificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.hostName'
+      - '@azure/arm-apimanagement.HostnameConfiguration.keyVaultId'
+      - '@azure/arm-apimanagement.HostnameConfiguration.negotiateClientCertificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: カスタム ホスト名の構成。
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.certificate'
+    name: certificate
+    fullName: certificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 証明書情報。
+    optional: true
+    syntax:
+      content: 'certificate?: CertificateInformation'
+      return:
+        type:
+          - '@azure/arm-apimanagement.CertificateInformation'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.certificatePassword'
+    name: certificatePassword
+    fullName: certificatePassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 証明書のパスワード。
+    optional: true
+    syntax:
+      content: 'certificatePassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.defaultSslBinding'
+    name: defaultSslBinding
+    fullName: defaultSslBinding
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '既定の SSL 証明書としてこのホスト名に関連付けられている証明書をセットアップする場合は true に指定します。 クライアントが SNI ヘッダーを送信しない場合は、困難になることが証明書にこのなります。 プロパティは、サービスが複数のカスタム ホスト名が有効になっているし、既定の ssl 証明書を決定する必要がある場合に便利です。 プロキシ ホスト名の型にのみ適用する設定です。 既定値: false。'
+    optional: true
+    syntax:
+      content: 'defaultSslBinding?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.encodedCertificate'
+    name: encodedCertificate
+    fullName: encodedCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Base64 でエンコードされた証明書。
+    optional: true
+    syntax:
+      content: 'encodedCertificate?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.hostName'
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Api Management サービスを構成するホスト名です。
+    syntax:
+      content: 'hostName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.keyVaultId'
+    name: keyVaultId
+    fullName: keyVaultId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ssl 証明書を含む key Vault シークレットへの Url。 絶対 Url 含むのバージョンが指定されている場合は、ssl 証明書の自動更新は機能しません。 これには、MSI で構成される Api Management サービスが必要です。 型のシークレットは必ず*アプリケーション/x-pkcs12*
+    optional: true
+    syntax:
+      content: 'keyVaultId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.negotiateClientCertificate'
+    name: negotiateClientCertificate
+    fullName: negotiateClientCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      常に、ホスト名にクライアント証明書をネゴシエートする場合は true を指定します。 既定値は false です。
+      既定値: false。
+    optional: true
+    syntax:
+      content: 'negotiateClientCertificate?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ホスト名の型。 指定できる値は、次のとおりです。' Proxy'、'ポータル'、'管理'、'Scm'、'DeveloperPortal'
+    syntax:
+      content: 'type: HostnameType'
+      return:
+        type:
+          - '@azure/arm-apimanagement.HostnameType'
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.CertificateInformation'
+    name: CertificateInformation
+    spec.typeScript:
+      - name: CertificateInformation
+        fullName: CertificateInformation
+        uid: '@azure/arm-apimanagement.CertificateInformation'
+  - uid: '@azure/arm-apimanagement.HostnameType'
+    name: HostnameType
+    spec.typeScript:
+      - name: HostnameType
+        fullName: HostnameType
+        uid: '@azure/arm-apimanagement.HostnameType'
