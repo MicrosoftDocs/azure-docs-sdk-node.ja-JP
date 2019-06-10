@@ -1,0 +1,561 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.ContainerServices'
+    name: ContainerServices
+    fullName: ContainerServices
+    children:
+      - '@azure/arm-compute.ContainerServices.beginCreateOrUpdate'
+      - '@azure/arm-compute.ContainerServices.beginDeleteMethod'
+      - '@azure/arm-compute.ContainerServices.constructor'
+      - '@azure/arm-compute.ContainerServices.createOrUpdate'
+      - '@azure/arm-compute.ContainerServices.deleteMethod'
+      - '@azure/arm-compute.ContainerServices.get'
+      - '@azure/arm-compute.ContainerServices.get_2'
+      - '@azure/arm-compute.ContainerServices.get_1'
+      - '@azure/arm-compute.ContainerServices.list'
+      - '@azure/arm-compute.ContainerServices.list_2'
+      - '@azure/arm-compute.ContainerServices.list_1'
+      - '@azure/arm-compute.ContainerServices.listByResourceGroup'
+      - '@azure/arm-compute.ContainerServices.listByResourceGroup_2'
+      - '@azure/arm-compute.ContainerServices.listByResourceGroup_1'
+      - '@azure/arm-compute.ContainerServices.listByResourceGroupNext'
+      - '@azure/arm-compute.ContainerServices.listByResourceGroupNext_2'
+      - '@azure/arm-compute.ContainerServices.listByResourceGroupNext_1'
+      - '@azure/arm-compute.ContainerServices.listNext'
+      - '@azure/arm-compute.ContainerServices.listNext_2'
+      - '@azure/arm-compute.ContainerServices.listNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="cf416-101">ContainerServices を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="cf416-101">Class representing a ContainerServices.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, ContainerService, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cf416-102">作成または orchestrator、マスターおよびエージェントの指定された構成で、コンテナー サービスを更新します。</span><span class="sxs-lookup"><span data-stu-id="cf416-102">Creates or updates a container service with the specified configuration of orchestrator, masters, and agents.</span></span>'
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, containerServiceName: string, parameters: ContainerService, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-103">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-103">The name of the resource group.</span></span>
+        - id: containerServiceName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-104">指定したサブスクリプションとリソース グループ内のコンテナー サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-104">The name of the container service in the specified subscription and resource group.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.ContainerService'
+          description: <span data-ttu-id="cf416-105">作成または更新 Container Service の操作に渡されるパラメーター。</span><span class="sxs-lookup"><span data-stu-id="cf416-105">Parameters supplied to the Create or Update a Container Service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cf416-106">指定したサブスクリプションとリソース グループ内の指定されたコンテナー サービスを削除します。</span><span class="sxs-lookup"><span data-stu-id="cf416-106">Deletes the specified container service in the specified subscription and resource group.</span></span> <span data-ttu-id="cf416-107">操作は、Vm、ストレージ アカウントを含む、コンテナー サービスの作成の一環として作成するその他のリソースを削除できません、可用性セットします。</span><span class="sxs-lookup"><span data-stu-id="cf416-107">The operation does not delete other resources created as part of creating a container service, including storage accounts, VMs, and availability sets.</span></span> <span data-ttu-id="cf416-108">コンテナー サービスで作成されたその他のすべてのリソースは、同じリソース グループの一部であるし、個別に削除することができます。</span><span class="sxs-lookup"><span data-stu-id="cf416-108">All the other resources created with the container service are part of the same resource group and can be deleted individually.</span></span>'
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, containerServiceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-109">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-109">The name of the resource group.</span></span>
+        - id: containerServiceName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-110">指定したサブスクリプションとリソース グループ内のコンテナー サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-110">The name of the container service in the specified subscription and resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.constructor'
+    name: ContainerServices(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cf416-111">ContainerServices を作成します。</span><span class="sxs-lookup"><span data-stu-id="cf416-111">Create a ContainerServices.</span></span>
+    syntax:
+      content: 'new ContainerServices(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            <span data-ttu-id="cf416-112">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="cf416-112">Reference to the service client.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.createOrUpdate'
+    name: 'createOrUpdate(string, string, ContainerService, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cf416-113">作成または orchestrator、マスターおよびエージェントの指定された構成で、コンテナー サービスを更新します。</span><span class="sxs-lookup"><span data-stu-id="cf416-113">Creates or updates a container service with the specified configuration of orchestrator, masters, and agents.</span></span>'
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, containerServiceName: string, parameters: ContainerService, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-114">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-114">The name of the resource group.</span></span>
+        - id: containerServiceName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-115">指定したサブスクリプションとリソース グループ内のコンテナー サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-115">The name of the container service in the specified subscription and resource group.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-compute.ContainerService'
+          description: <span data-ttu-id="cf416-116">作成または更新 Container Service の操作に渡されるパラメーター。</span><span class="sxs-lookup"><span data-stu-id="cf416-116">Parameters supplied to the Create or Update a Container Service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ContainerServicesCreateOrUpdateResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cf416-117">指定したサブスクリプションとリソース グループ内の指定されたコンテナー サービスを削除します。</span><span class="sxs-lookup"><span data-stu-id="cf416-117">Deletes the specified container service in the specified subscription and resource group.</span></span> <span data-ttu-id="cf416-118">操作は、Vm、ストレージ アカウントを含む、コンテナー サービスの作成の一環として作成するその他のリソースを削除できません、可用性セットします。</span><span class="sxs-lookup"><span data-stu-id="cf416-118">The operation does not delete other resources created as part of creating a container service, including storage accounts, VMs, and availability sets.</span></span> <span data-ttu-id="cf416-119">コンテナー サービスで作成されたその他のすべてのリソースは、同じリソース グループの一部であるし、個別に削除することができます。</span><span class="sxs-lookup"><span data-stu-id="cf416-119">All the other resources created with the container service are part of the same resource group and can be deleted individually.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, containerServiceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-120">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-120">The name of the resource group.</span></span>
+        - id: containerServiceName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-121">指定したサブスクリプションとリソース グループ内のコンテナー サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-121">The name of the container service in the specified subscription and resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cf416-122">指定されたサブスクリプションとリソース グループで指定されたコンテナー サービスのプロパティを取得します。</span><span class="sxs-lookup"><span data-stu-id="cf416-122">Gets the properties of the specified container service in the specified subscription and resource group.</span></span> <span data-ttu-id="cf416-123">操作は、状態、orchestrator、マスターおよびエージェントの数などのプロパティを返しますおよびマスターおよびエージェントの Fqdn。</span><span class="sxs-lookup"><span data-stu-id="cf416-123">The operation returns the properties including state, orchestrator, number of masters and agents, and FQDNs of masters and agents.</span></span>'
+    syntax:
+      content: 'function get(resourceGroupName: string, containerServiceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-124">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-124">The name of the resource group.</span></span>
+        - id: containerServiceName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-125">指定したサブスクリプションとリソース グループ内のコンテナー サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-125">The name of the container service in the specified subscription and resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ContainerServicesGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<ContainerService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, containerServiceName: string, options: RequestOptionsBase, callback: ServiceCallback<ContainerService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-126">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-126">The name of the resource group.</span></span>
+        - id: containerServiceName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-127">指定したサブスクリプションとリソース グループ内のコンテナー サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-127">The name of the container service in the specified subscription and resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cf416-128">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cf416-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerService>
+          description: |
+            <span data-ttu-id="cf416-129">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.get_1'
+    name: 'get(string, string, ServiceCallback<ContainerService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, containerServiceName: string, callback: ServiceCallback<ContainerService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-130">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-130">The name of the resource group.</span></span>
+        - id: containerServiceName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-131">指定したサブスクリプションとリソース グループ内のコンテナー サービスの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-131">The name of the container service in the specified subscription and resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerService>
+          description: |
+            <span data-ttu-id="cf416-132">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-132">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cf416-133">指定されたサブスクリプションには、コンテナー サービスの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="cf416-133">Gets a list of container services in the specified subscription.</span></span> <span data-ttu-id="cf416-134">操作は、各コンテナー サービスの状態、orchestrator、マスターおよびエージェントの数などのプロパティを返しますおよびマスターおよびエージェントの Fqdn。</span><span class="sxs-lookup"><span data-stu-id="cf416-134">The operation returns properties of each container service including state, orchestrator, number of masters and agents, and FQDNs of masters and agents.</span></span>'
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ContainerServicesListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<ContainerServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<ContainerServiceListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cf416-135">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cf416-135">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerServiceListResult>
+          description: |
+            <span data-ttu-id="cf416-136">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.list_1'
+    name: list(ServiceCallback<ContainerServiceListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ContainerServiceListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerServiceListResult>
+          description: |
+            <span data-ttu-id="cf416-137">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-137">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cf416-138">指定したサブスクリプションとリソース グループ内のコンテナー サービスの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="cf416-138">Gets a list of container services in the specified subscription and resource group.</span></span> <span data-ttu-id="cf416-139">操作は、各コンテナー サービスの状態、orchestrator、マスターおよびエージェントの数などのプロパティを返しますおよびマスターおよびエージェントの Fqdn。</span><span class="sxs-lookup"><span data-stu-id="cf416-139">The operation returns properties of each container service including state, orchestrator, number of masters and agents, and FQDNs of masters and agents.</span></span>'
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-140">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-140">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ContainerServicesListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<ContainerServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<ContainerServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-141">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-141">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cf416-142">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cf416-142">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerServiceListResult>
+          description: |
+            <span data-ttu-id="cf416-143">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<ContainerServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<ContainerServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cf416-144">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="cf416-144">The name of the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerServiceListResult>
+          description: |
+            <span data-ttu-id="cf416-145">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cf416-146">指定したサブスクリプションとリソース グループ内のコンテナー サービスの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="cf416-146">Gets a list of container services in the specified subscription and resource group.</span></span> <span data-ttu-id="cf416-147">操作は、各コンテナー サービスの状態、orchestrator、マスターおよびエージェントの数などのプロパティを返しますおよびマスターおよびエージェントの Fqdn。</span><span class="sxs-lookup"><span data-stu-id="cf416-147">The operation returns properties of each container service including state, orchestrator, number of masters and agents, and FQDNs of masters and agents.</span></span>'
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cf416-148">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="cf416-148">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ContainerServicesListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<ContainerServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ContainerServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cf416-149">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="cf416-149">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cf416-150">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cf416-150">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerServiceListResult>
+          description: |
+            <span data-ttu-id="cf416-151">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<ContainerServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<ContainerServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cf416-152">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="cf416-152">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerServiceListResult>
+          description: |
+            <span data-ttu-id="cf416-153">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cf416-154">指定されたサブスクリプションには、コンテナー サービスの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="cf416-154">Gets a list of container services in the specified subscription.</span></span> <span data-ttu-id="cf416-155">操作は、各コンテナー サービスの状態、orchestrator、マスターおよびエージェントの数などのプロパティを返しますおよびマスターおよびエージェントの Fqdn。</span><span class="sxs-lookup"><span data-stu-id="cf416-155">The operation returns properties of each container service including state, orchestrator, number of masters and agents, and FQDNs of masters and agents.</span></span>'
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cf416-156">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="cf416-156">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ContainerServicesListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ContainerServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ContainerServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cf416-157">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="cf416-157">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cf416-158">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cf416-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerServiceListResult>
+          description: |
+            <span data-ttu-id="cf416-159">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ContainerServices.listNext_1'
+    name: 'listNext(string, ServiceCallback<ContainerServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ContainerServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cf416-160">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="cf416-160">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.ContainerServiceListResult>
+          description: |
+            <span data-ttu-id="cf416-161">コールバック</span><span class="sxs-lookup"><span data-stu-id="cf416-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ContainerServicesListNextResponse>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: '@azure/arm-compute.ContainerService'
+    name: ContainerService
+    spec.typeScript:
+      - name: ContainerService
+        fullName: ContainerService
+        uid: '@azure/arm-compute.ContainerService'
+  - uid: ServiceCallback<@azure/arm-compute.ContainerService>
+    name: ContainerService>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ContainerService
+        fullName: ContainerService
+        uid: '@azure/arm-compute.ContainerService'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-compute.ContainerServiceListResult>
+    name: ContainerServiceListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ContainerServiceListResult
+        fullName: ContainerServiceListResult
+        uid: '@azure/arm-compute.ContainerServiceListResult'
+      - name: '>'
+        fullName: '>'
