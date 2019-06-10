@@ -7,7 +7,13 @@ items:
     langs:
       - typeScript
     type: type alias
-    summary: 構成オブジェクト
+    summary: |
+      構成オブジェクトを使用して、MSAL を構成し、UserAgentApplication を初期化します。
+      このオブジェクトを使用して、MSAL の機能の重要な要素を構成できます。
+      - 認証: これは、clientID、Microsoft の Id プラットフォームに対して認証を使用する証明機関の認証要素を構成します。
+      - キャッシュ: これは、キャッシュの場所を構成して、キャッシュを cookie に保存するかどうか
+      - system: これは、ロガー、フレームのタイムアウトなどを構成できます。
+      - フレームワーク: これは、angular の実行中のモードを構成することができます。 詳細はここですぐに追加します。
     syntax:
-      content: 'type Configuration = { auth:AuthOptions, cache:CacheOptions, framework:FrameworkOptions, system:SystemOptions }'
+      content: 'type Configuration = { auth: AuthOptions, cache: CacheOptions, framework: FrameworkOptions, system: SystemOptions }'
     package: msal
