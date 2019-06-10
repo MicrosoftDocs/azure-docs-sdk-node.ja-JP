@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withServicePrincipalCertificateWithAuthResponse'
+    name: 'withServicePrincipalCertificateWithAuthResponse(string, string, string, AzureTokenCredentialsOptions)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ApplicationTokenCertificateCredentials オブジェクトとすべての該当するテナントにわたる servicePrinicpalId/clientId に関連付けられているサブスクリプションの一覧を提供します。
+    syntax:
+      content: 'function withServicePrincipalCertificateWithAuthResponse(clientId: string, certificateStringOrFilePath: string, domain: string, options?: AzureTokenCredentialsOptions)'
+      parameters:
+        - id: clientId
+          type:
+            - string
+          description: |-
+            Active directory アプリケーション クライアント id、SPN (ServicePrincipal 名) とも呼ばれます。
+            参照してください[.Net 用 Active Directory のクイック スタート](https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-dotnet/)例についてはします。
+        - id: certificateStringOrFilePath
+          type:
+            - string
+          description: |-
+            証明書と秘密キー、PEM でエンコードされたか、その情報を含む、.pem ファイルへの絶対ファイル パス。 以下に例を示します。
+            - CertificateString:"---秘密キーの開始---\n<xxxxx>\n---END \n---BEGIN の秘密キー------証明書 \n<yyyyy>\n---END---証明書 \n"
+            - CertificateFilePath:**絶対**.pem ファイルのファイル パス。
+        - id: domain
+          type:
+            - string
+          description: このアプリケーションを含むドメインまたはテナント id です。
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+    name: AzureTokenCredentialsOptions
+    spec.typeScript:
+      - name: AzureTokenCredentialsOptions
+        fullName: AzureTokenCredentialsOptions
+        uid: '@azure/ms-rest-nodeauth.AzureTokenCredentialsOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    name: AuthResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: AuthResponse
+        fullName: AuthResponse
+        uid: '@azure/ms-rest-nodeauth.AuthResponse'
+      - name: '>'
+        fullName: '>'

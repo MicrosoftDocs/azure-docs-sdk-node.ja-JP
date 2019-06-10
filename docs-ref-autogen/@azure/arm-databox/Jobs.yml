@@ -1,0 +1,963 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-databox.Jobs'
+    name: Jobs
+    fullName: Jobs
+    children:
+      - '@azure/arm-databox.Jobs.beginCreate'
+      - '@azure/arm-databox.Jobs.beginDeleteMethod'
+      - '@azure/arm-databox.Jobs.beginUpdate'
+      - '@azure/arm-databox.Jobs.bookShipmentPickUp'
+      - '@azure/arm-databox.Jobs.bookShipmentPickUp_2'
+      - '@azure/arm-databox.Jobs.bookShipmentPickUp_1'
+      - '@azure/arm-databox.Jobs.cancel'
+      - '@azure/arm-databox.Jobs.cancel_2'
+      - '@azure/arm-databox.Jobs.cancel_1'
+      - '@azure/arm-databox.Jobs.create'
+      - '@azure/arm-databox.Jobs.deleteMethod'
+      - '@azure/arm-databox.Jobs.get_2'
+      - '@azure/arm-databox.Jobs.get'
+      - '@azure/arm-databox.Jobs.get_1'
+      - '@azure/arm-databox.Jobs.constructor'
+      - '@azure/arm-databox.Jobs.list_2'
+      - '@azure/arm-databox.Jobs.list'
+      - '@azure/arm-databox.Jobs.list_1'
+      - '@azure/arm-databox.Jobs.listByResourceGroup_2'
+      - '@azure/arm-databox.Jobs.listByResourceGroup'
+      - '@azure/arm-databox.Jobs.listByResourceGroup_1'
+      - '@azure/arm-databox.Jobs.listByResourceGroupNext'
+      - '@azure/arm-databox.Jobs.listByResourceGroupNext_2'
+      - '@azure/arm-databox.Jobs.listByResourceGroupNext_1'
+      - '@azure/arm-databox.Jobs.listCredentials'
+      - '@azure/arm-databox.Jobs.listCredentials_2'
+      - '@azure/arm-databox.Jobs.listCredentials_1'
+      - '@azure/arm-databox.Jobs.listNext'
+      - '@azure/arm-databox.Jobs.listNext_2'
+      - '@azure/arm-databox.Jobs.listNext_1'
+      - '@azure/arm-databox.Jobs.update'
+    langs:
+      - typeScript
+    type: class
+    summary: ジョブを表すクラスです。
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.beginCreate'
+    name: 'beginCreate(string, string, JobResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定されたパラメーターでは、新しいジョブを作成します。 既存のジョブは、この API で更新することはできませんし、更新ジョブ API の代わりに更新する必要があります。
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, jobName: string, jobResource: JobResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: jobResource
+          type:
+            - '@azure/arm-databox.JobResource'
+          description: 要求本文からジョブの詳細。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ジョブを削除します。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.beginUpdate'
+    name: 'beginUpdate(string, string, JobResourceUpdateParameter, Models.JobsBeginUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 既存のジョブのプロパティを更新します。
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, jobName: string, jobResourceUpdateParameter: JobResourceUpdateParameter, options?: Models.JobsBeginUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: jobResourceUpdateParameter
+          type:
+            - '@azure/arm-databox.JobResourceUpdateParameter'
+          description: ジョブ要求本文からパラメーターを更新します。
+        - id: options
+          type:
+            - Models.JobsBeginUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.bookShipmentPickUp'
+    name: 'bookShipmentPickUp(string, string, ShipmentPickUpRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 書籍の出荷を選択します。
+    syntax:
+      content: 'function bookShipmentPickUp(resourceGroupName: string, jobName: string, shipmentPickUpRequest: ShipmentPickUpRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: shipmentPickUpRequest
+          type:
+            - '@azure/arm-databox.ShipmentPickUpRequest'
+          description: 出荷の詳細については、要求を選択します。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsBookShipmentPickUpResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.bookShipmentPickUp_2'
+    name: 'bookShipmentPickUp(string, string, ShipmentPickUpRequest, RequestOptionsBase, ServiceCallback<ShipmentPickUpResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function bookShipmentPickUp(resourceGroupName: string, jobName: string, shipmentPickUpRequest: ShipmentPickUpRequest, options: RequestOptionsBase, callback: ServiceCallback<ShipmentPickUpResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: shipmentPickUpRequest
+          type:
+            - '@azure/arm-databox.ShipmentPickUpRequest'
+          description: 出荷の詳細については、要求を選択します。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.ShipmentPickUpResponse>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsBookShipmentPickUpResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.bookShipmentPickUp_1'
+    name: 'bookShipmentPickUp(string, string, ShipmentPickUpRequest, ServiceCallback<ShipmentPickUpResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function bookShipmentPickUp(resourceGroupName: string, jobName: string, shipmentPickUpRequest: ShipmentPickUpRequest, callback: ServiceCallback<ShipmentPickUpResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: shipmentPickUpRequest
+          type:
+            - '@azure/arm-databox.ShipmentPickUpRequest'
+          description: 出荷の詳細については、要求を選択します。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.ShipmentPickUpResponse>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsBookShipmentPickUpResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.cancel'
+    name: 'cancel(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: CancelJob します。
+    syntax:
+      content: 'function cancel(resourceGroupName: string, jobName: string, reason: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: reason
+          type:
+            - string
+          description: キャンセルの理由です。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.cancel_2'
+    name: 'cancel(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, jobName: string, reason: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: reason
+          type:
+            - string
+          description: キャンセルの理由です。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.cancel_1'
+    name: 'cancel(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, jobName: string, reason: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: reason
+          type:
+            - string
+          description: キャンセルの理由です。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.create'
+    name: 'create(string, string, JobResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定されたパラメーターでは、新しいジョブを作成します。 既存のジョブは、この API で更新することはできませんし、更新ジョブ API の代わりに更新する必要があります。
+    syntax:
+      content: 'function create(resourceGroupName: string, jobName: string, jobResource: JobResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: jobResource
+          type:
+            - '@azure/arm-databox.JobResource'
+          description: 要求本文からジョブの詳細。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsCreateResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ジョブを削除します。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.get_2'
+    name: 'get(string, string, JobsGetOptionalParams, ServiceCallback<JobResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, options: JobsGetOptionalParams, callback: ServiceCallback<JobResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: options
+          type:
+            - '@azure/arm-databox.JobsGetOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResource>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsGetResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.get'
+    name: 'get(string, string, Models.JobsGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定したジョブに関する情報を取得します。
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, options?: Models.JobsGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: options
+          type:
+            - Models.JobsGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsGetResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.get_1'
+    name: 'get(string, string, ServiceCallback<JobResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, callback: ServiceCallback<JobResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResource>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsGetResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.constructor'
+    name: Jobs(DataBoxManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ジョブを作成します。
+    syntax:
+      content: 'new Jobs(client: DataBoxManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-databox.DataBoxManagementClientContext'
+          description: |
+            サービス クライアントへの参照。
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.list_2'
+    name: 'list(JobsListOptionalParams, ServiceCallback<JobResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: JobsListOptionalParams, callback: ServiceCallback<JobResourceList>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-databox.JobsListOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResourceList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.list'
+    name: list(Models.JobsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: サブスクリプションで使用可能なすべてのジョブを一覧表示します。
+    syntax:
+      content: 'function list(options?: Models.JobsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.JobsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.list_1'
+    name: list(ServiceCallback<JobResourceList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<JobResourceList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResourceList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, JobsListByResourceGroupOptionalParams, ServiceCallback<JobResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: JobsListByResourceGroupOptionalParams, callback: ServiceCallback<JobResourceList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: options
+          type:
+            - '@azure/arm-databox.JobsListByResourceGroupOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResourceList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.JobsListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定したリソース グループで使用可能なすべてのジョブを一覧表示します。
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.JobsListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: options
+          type:
+            - Models.JobsListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<JobResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<JobResourceList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResourceList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定したリソース グループで使用可能なすべてのジョブを一覧表示します。
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupNextResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<JobResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResourceList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupNextResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<JobResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<JobResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResourceList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListByResourceGroupNextResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listCredentials'
+    name: 'listCredentials(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: このメソッドは、ジョブに関連する暗号化されていないシークレットを取得します。
+    syntax:
+      content: 'function listCredentials(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListCredentialsResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listCredentials_2'
+    name: 'listCredentials(string, string, RequestOptionsBase, ServiceCallback<UnencryptedCredentialsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listCredentials(resourceGroupName: string, jobName: string, options: RequestOptionsBase, callback: ServiceCallback<UnencryptedCredentialsList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.UnencryptedCredentialsList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListCredentialsResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listCredentials_1'
+    name: 'listCredentials(string, string, ServiceCallback<UnencryptedCredentialsList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listCredentials(resourceGroupName: string, jobName: string, callback: ServiceCallback<UnencryptedCredentialsList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.UnencryptedCredentialsList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListCredentialsResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: サブスクリプションで使用可能なすべてのジョブを一覧表示します。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListNextResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<JobResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResourceList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListNextResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.listNext_1'
+    name: 'listNext(string, ServiceCallback<JobResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<JobResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-databox.JobResourceList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.JobsListNextResponse>
+    package: '@azure/arm-databox'
+  - uid: '@azure/arm-databox.Jobs.update'
+    name: 'update(string, string, JobResourceUpdateParameter, Models.JobsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 既存のジョブのプロパティを更新します。
+    syntax:
+      content: 'function update(resourceGroupName: string, jobName: string, jobResourceUpdateParameter: JobResourceUpdateParameter, options?: Models.JobsUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソース グループ名
+        - id: jobName
+          type:
+            - string
+          description: 指定したリソース グループ内のジョブ リソースの名前。 ジョブ名は 3 から 24 文字の長さと文字、数字の使用とアンダー スコアのみ間する必要があります。
+        - id: jobResourceUpdateParameter
+          type:
+            - '@azure/arm-databox.JobResourceUpdateParameter'
+          description: ジョブ要求本文からパラメーターを更新します。
+        - id: options
+          type:
+            - Models.JobsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsUpdateResponse>
+    package: '@azure/arm-databox'
+references:
+  - uid: '@azure/arm-databox.DataBoxManagementClientContext'
+    name: DataBoxManagementClientContext
+    spec.typeScript:
+      - name: DataBoxManagementClientContext
+        fullName: DataBoxManagementClientContext
+        uid: '@azure/arm-databox.DataBoxManagementClientContext'
+  - uid: '@azure/arm-databox.JobResource'
+    name: JobResource
+    spec.typeScript:
+      - name: JobResource
+        fullName: JobResource
+        uid: '@azure/arm-databox.JobResource'
+  - uid: '@azure/arm-databox.JobResourceUpdateParameter'
+    name: JobResourceUpdateParameter
+    spec.typeScript:
+      - name: JobResourceUpdateParameter
+        fullName: JobResourceUpdateParameter
+        uid: '@azure/arm-databox.JobResourceUpdateParameter'
+  - uid: '@azure/arm-databox.ShipmentPickUpRequest'
+    name: ShipmentPickUpRequest
+    spec.typeScript:
+      - name: ShipmentPickUpRequest
+        fullName: ShipmentPickUpRequest
+        uid: '@azure/arm-databox.ShipmentPickUpRequest'
+  - uid: ServiceCallback<@azure/arm-databox.ShipmentPickUpResponse>
+    name: ShipmentPickUpResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ShipmentPickUpResponse
+        fullName: ShipmentPickUpResponse
+        uid: '@azure/arm-databox.ShipmentPickUpResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-databox.JobResource>
+    name: JobResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobResource
+        fullName: JobResource
+        uid: '@azure/arm-databox.JobResource'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-databox.JobsGetOptionalParams'
+    name: JobsGetOptionalParams
+    spec.typeScript:
+      - name: JobsGetOptionalParams
+        fullName: JobsGetOptionalParams
+        uid: '@azure/arm-databox.JobsGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-databox.JobResourceList>
+    name: JobResourceList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobResourceList
+        fullName: JobResourceList
+        uid: '@azure/arm-databox.JobResourceList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-databox.JobsListOptionalParams'
+    name: JobsListOptionalParams
+    spec.typeScript:
+      - name: JobsListOptionalParams
+        fullName: JobsListOptionalParams
+        uid: '@azure/arm-databox.JobsListOptionalParams'
+  - uid: '@azure/arm-databox.JobsListByResourceGroupOptionalParams'
+    name: JobsListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: JobsListByResourceGroupOptionalParams
+        fullName: JobsListByResourceGroupOptionalParams
+        uid: '@azure/arm-databox.JobsListByResourceGroupOptionalParams'
+  - uid: ServiceCallback<@azure/arm-databox.UnencryptedCredentialsList>
+    name: UnencryptedCredentialsList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: UnencryptedCredentialsList
+        fullName: UnencryptedCredentialsList
+        uid: '@azure/arm-databox.UnencryptedCredentialsList'
+      - name: '>'
+        fullName: '>'
