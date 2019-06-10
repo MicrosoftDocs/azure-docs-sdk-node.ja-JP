@@ -1,0 +1,757 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.Disks'
+    name: Disks
+    fullName: Disks
+    children:
+      - '@azure/arm-compute.Disks.beginCreateOrUpdate'
+      - '@azure/arm-compute.Disks.beginDeleteMethod'
+      - '@azure/arm-compute.Disks.beginGrantAccess'
+      - '@azure/arm-compute.Disks.beginRevokeAccess'
+      - '@azure/arm-compute.Disks.beginUpdate'
+      - '@azure/arm-compute.Disks.createOrUpdate'
+      - '@azure/arm-compute.Disks.deleteMethod'
+      - '@azure/arm-compute.Disks.constructor'
+      - '@azure/arm-compute.Disks.get'
+      - '@azure/arm-compute.Disks.get_2'
+      - '@azure/arm-compute.Disks.get_1'
+      - '@azure/arm-compute.Disks.grantAccess'
+      - '@azure/arm-compute.Disks.list'
+      - '@azure/arm-compute.Disks.list_2'
+      - '@azure/arm-compute.Disks.list_1'
+      - '@azure/arm-compute.Disks.listByResourceGroup'
+      - '@azure/arm-compute.Disks.listByResourceGroup_2'
+      - '@azure/arm-compute.Disks.listByResourceGroup_1'
+      - '@azure/arm-compute.Disks.listByResourceGroupNext'
+      - '@azure/arm-compute.Disks.listByResourceGroupNext_2'
+      - '@azure/arm-compute.Disks.listByResourceGroupNext_1'
+      - '@azure/arm-compute.Disks.listNext'
+      - '@azure/arm-compute.Disks.listNext_2'
+      - '@azure/arm-compute.Disks.listNext_1'
+      - '@azure/arm-compute.Disks.revokeAccess'
+      - '@azure/arm-compute.Disks.update'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="2828b-101">ディスクを表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="2828b-101">Class representing a Disks.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, Disk, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-102">作成またはディスクを更新します。</span><span class="sxs-lookup"><span data-stu-id="2828b-102">Creates or updates a disk.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-103">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-103">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-104">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-104">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-105">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-105">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-106">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-106">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-107">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-107">The maximum name length is 80 characters.</span></span>'
+        - id: disk
+          type:
+            - '@azure/arm-compute.Disk'
+          description: <span data-ttu-id="2828b-108">ディスクの Put 操作の本文に指定されているディスク オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="2828b-108">Disk object supplied in the body of the Put disk operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-109">ディスクを削除します。</span><span class="sxs-lookup"><span data-stu-id="2828b-109">Deletes a disk.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-110">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-110">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-111">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-111">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-112">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-112">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-113">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-113">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-114">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-114">The maximum name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginGrantAccess'
+    name: 'beginGrantAccess(string, string, GrantAccessData, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-115">ディスクへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="2828b-115">Grants access to a disk.</span></span>
+    syntax:
+      content: 'function beginGrantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-116">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-116">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-117">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-117">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-118">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-118">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-119">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-119">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-120">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-120">The maximum name length is 80 characters.</span></span>'
+        - id: grantAccessData
+          type:
+            - '@azure/arm-compute.GrantAccessData'
+          description: <span data-ttu-id="2828b-121">アクセス データ オブジェクトがディスクの get アクセス操作の本文で指定します。</span><span class="sxs-lookup"><span data-stu-id="2828b-121">Access data object supplied in the body of the get disk access operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginRevokeAccess'
+    name: 'beginRevokeAccess(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-122">ディスクへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="2828b-122">Revokes access to a disk.</span></span>
+    syntax:
+      content: 'function beginRevokeAccess(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-123">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-123">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-124">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-124">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-125">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-125">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-126">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-126">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-127">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-127">The maximum name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginUpdate'
+    name: 'beginUpdate(string, string, DiskUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-128">更新プログラム (修正プログラム) ディスク。</span><span class="sxs-lookup"><span data-stu-id="2828b-128">Updates (patches) a disk.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-129">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-129">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-130">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-130">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-131">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-131">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-132">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-132">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-133">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-133">The maximum name length is 80 characters.</span></span>'
+        - id: disk
+          type:
+            - '@azure/arm-compute.DiskUpdate'
+          description: <span data-ttu-id="2828b-134">修正プログラムのディスク操作の本文に指定されているディスク オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="2828b-134">Disk object supplied in the body of the Patch disk operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.createOrUpdate'
+    name: 'createOrUpdate(string, string, Disk, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-135">作成またはディスクを更新します。</span><span class="sxs-lookup"><span data-stu-id="2828b-135">Creates or updates a disk.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-136">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-136">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-137">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-137">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-138">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-138">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-139">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-139">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-140">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-140">The maximum name length is 80 characters.</span></span>'
+        - id: disk
+          type:
+            - '@azure/arm-compute.Disk'
+          description: <span data-ttu-id="2828b-141">ディスクの Put 操作の本文に指定されているディスク オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="2828b-141">Disk object supplied in the body of the Put disk operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksCreateOrUpdateResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-142">ディスクを削除します。</span><span class="sxs-lookup"><span data-stu-id="2828b-142">Deletes a disk.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-143">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-143">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-144">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-144">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-145">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-145">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-146">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-146">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-147">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-147">The maximum name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.constructor'
+    name: Disks(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-148">ディスクを作成します。</span><span class="sxs-lookup"><span data-stu-id="2828b-148">Create a Disks.</span></span>
+    syntax:
+      content: 'new Disks(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            <span data-ttu-id="2828b-149">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="2828b-149">Reference to the service client.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-150">ディスクに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="2828b-150">Gets information about a disk.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-151">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-151">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-152">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-152">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-153">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-153">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-154">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-154">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-155">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-155">The maximum name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Disk>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, diskName: string, options: RequestOptionsBase, callback: ServiceCallback<Disk>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-156">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-156">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-157">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-157">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-158">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-158">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-159">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-159">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-160">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-160">The maximum name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2828b-161">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="2828b-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.Disk>
+          description: |
+            <span data-ttu-id="2828b-162">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.get_1'
+    name: 'get(string, string, ServiceCallback<Disk>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, diskName: string, callback: ServiceCallback<Disk>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-163">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-163">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-164">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-164">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-165">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-165">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-166">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-166">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-167">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-167">The maximum name length is 80 characters.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.Disk>
+          description: |
+            <span data-ttu-id="2828b-168">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.grantAccess'
+    name: 'grantAccess(string, string, GrantAccessData, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-169">ディスクへのアクセスを許可します。</span><span class="sxs-lookup"><span data-stu-id="2828b-169">Grants access to a disk.</span></span>
+    syntax:
+      content: 'function grantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-170">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-170">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-171">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-171">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-172">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-172">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-173">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-173">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-174">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-174">The maximum name length is 80 characters.</span></span>'
+        - id: grantAccessData
+          type:
+            - '@azure/arm-compute.GrantAccessData'
+          description: <span data-ttu-id="2828b-175">アクセス データ オブジェクトがディスクの get アクセス操作の本文で指定します。</span><span class="sxs-lookup"><span data-stu-id="2828b-175">Access data object supplied in the body of the get disk access operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksGrantAccessResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-176">サブスクリプションのすべてのディスクを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2828b-176">Lists all the disks under a subscription.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2828b-177">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="2828b-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            <span data-ttu-id="2828b-178">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.list_1'
+    name: list(ServiceCallback<DiskList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            <span data-ttu-id="2828b-179">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-179">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-180">リソース グループに属するすべてのディスクを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2828b-180">Lists all the disks under a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-181">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-181">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-182">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-182">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2828b-183">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="2828b-183">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            <span data-ttu-id="2828b-184">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-185">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-185">The name of the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            <span data-ttu-id="2828b-186">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-186">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-187">リソース グループに属するすべてのディスクを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2828b-187">Lists all the disks under a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2828b-188">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="2828b-188">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2828b-189">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="2828b-189">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2828b-190">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="2828b-190">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            <span data-ttu-id="2828b-191">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-191">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2828b-192">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="2828b-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            <span data-ttu-id="2828b-193">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-193">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-194">サブスクリプションのすべてのディスクを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2828b-194">Lists all the disks under a subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2828b-195">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="2828b-195">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2828b-196">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="2828b-196">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2828b-197">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="2828b-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            <span data-ttu-id="2828b-198">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listNext_1'
+    name: 'listNext(string, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2828b-199">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="2828b-199">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            <span data-ttu-id="2828b-200">コールバック</span><span class="sxs-lookup"><span data-stu-id="2828b-200">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DisksListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.revokeAccess'
+    name: 'revokeAccess(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-201">ディスクへのアクセスを取り消します。</span><span class="sxs-lookup"><span data-stu-id="2828b-201">Revokes access to a disk.</span></span>
+    syntax:
+      content: 'function revokeAccess(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-202">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-202">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-203">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-203">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-204">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-204">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-205">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-205">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-206">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-206">The maximum name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.update'
+    name: 'update(string, string, DiskUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2828b-207">更新プログラム (修正プログラム) ディスク。</span><span class="sxs-lookup"><span data-stu-id="2828b-207">Updates (patches) a disk.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2828b-208">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-208">The name of the resource group.</span></span>
+        - id: diskName
+          type:
+            - string
+          description: '<span data-ttu-id="2828b-209">作成される管理対象ディスクの名前。</span><span class="sxs-lookup"><span data-stu-id="2828b-209">The name of the managed disk that is being created.</span></span> <span data-ttu-id="2828b-210">ディスクを作成した後、名前を変更できません。</span><span class="sxs-lookup"><span data-stu-id="2828b-210">The name can''t be changed after the disk is created.</span></span> <span data-ttu-id="2828b-211">名前でサポートされる文字は、a ~ z、A ~ Z、0-9、および _ には。</span><span class="sxs-lookup"><span data-stu-id="2828b-211">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="2828b-212">名前の最大長は 80 文字です。</span><span class="sxs-lookup"><span data-stu-id="2828b-212">The maximum name length is 80 characters.</span></span>'
+        - id: disk
+          type:
+            - '@azure/arm-compute.DiskUpdate'
+          description: <span data-ttu-id="2828b-213">修正プログラムのディスク操作の本文に指定されているディスク オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="2828b-213">Disk object supplied in the body of the Patch disk operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksUpdateResponse>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: '@azure/arm-compute.Disk'
+    name: Disk
+    spec.typeScript:
+      - name: Disk
+        fullName: Disk
+        uid: '@azure/arm-compute.Disk'
+  - uid: '@azure/arm-compute.GrantAccessData'
+    name: GrantAccessData
+    spec.typeScript:
+      - name: GrantAccessData
+        fullName: GrantAccessData
+        uid: '@azure/arm-compute.GrantAccessData'
+  - uid: '@azure/arm-compute.DiskUpdate'
+    name: DiskUpdate
+    spec.typeScript:
+      - name: DiskUpdate
+        fullName: DiskUpdate
+        uid: '@azure/arm-compute.DiskUpdate'
+  - uid: ServiceCallback<@azure/arm-compute.Disk>
+    name: Disk>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Disk
+        fullName: Disk
+        uid: '@azure/arm-compute.Disk'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-compute.DiskList>
+    name: DiskList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DiskList
+        fullName: DiskList
+        uid: '@azure/arm-compute.DiskList'
+      - name: '>'
+        fullName: '>'
