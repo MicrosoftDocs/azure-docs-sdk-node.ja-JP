@@ -1,0 +1,189 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    fullName: Sender
+    children:
+      - '@azure/service-bus.Sender.cancelScheduledMessage'
+      - '@azure/service-bus.Sender.cancelScheduledMessages'
+      - '@azure/service-bus.Sender.close'
+      - '@azure/service-bus.Sender.isClosed'
+      - '@azure/service-bus.Sender.scheduleMessage'
+      - '@azure/service-bus.Sender.scheduleMessages'
+      - '@azure/service-bus.Sender.send'
+      - '@azure/service-bus.Sender.sendBatch'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      メッセージを送信し、後で送信され、このようなスケジュール設定されたメッセージをキャンセルするメッセージのスケジュール、送信元のクラスを使用できます。
+      使用して、`createSender`送信者をインスタンス化するには、QueueClient または TopicClient 関数。
+      送信者クラスは、基になる AMQP 送信者リンク経由で抽象化です。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.cancelScheduledMessage'
+    name: cancelScheduledMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ServiceBus キュー/サブスクリプション上に表示するようにスケジュールされたメッセージを取り消します。
+    syntax:
+      content: 'function cancelScheduledMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: キャンセルするメッセージのシーケンス番号。
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.cancelScheduledMessages'
+    name: 'cancelScheduledMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Service Bus キューまたはサブスクリプション上に表示するようにスケジュールされた複数のメッセージをキャンセルします。
+    syntax:
+      content: 'function cancelScheduledMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: キャンセル メッセージのシーケンス番号の配列。
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      基になる AMQP の拒否 を閉じます。
+      終了すると、その他の操作の送信者は使用できません。
+      使用して、`createSender`新しいセンダーをインスタンス化するには、QueueClient または TopicClient 関数
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 返します`true`送信者または作成したクライアントのいずれかが閉じられている場合
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.scheduleMessage'
+    name: 'scheduleMessage(Date, SendableMessageInfo)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: スケジュールは後での Service Bus キューまたはサブスクリプションを表示するメッセージを指定します。
+    syntax:
+      content: 'function scheduleMessage(scheduledEnqueueTimeUtc: Date, message: SendableMessageInfo)'
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type:
+            - Date
+          description: UTC 時刻、メッセージをエンキューをする必要があります。
+        - id: message
+          type:
+            - '@azure/service-bus.SendableMessageInfo'
+          description: このメッセージは、スケジュールを設定する必要があります。
+      return:
+        type:
+          - Promise<Long>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.scheduleMessages'
+    name: 'scheduleMessages(Date, SendableMessageInfo[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: スケジュールは後での Service Bus キューまたはサブスクリプションを表示するメッセージを指定します。
+    syntax:
+      content: 'function scheduleMessages(scheduledEnqueueTimeUtc: Date, messages: SendableMessageInfo[])'
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type:
+            - Date
+          description: UTC 時刻、メッセージをエンキューをする必要があります。
+        - id: messages
+          type:
+            - '@azure/service-bus.SendableMessageInfo[]'
+          description: スケジュールを設定する必要があるメッセージの配列。
+      return:
+        type:
+          - 'Promise<Long[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.send'
+    name: send(SendableMessageInfo)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      存在するがまだの場合、送信者の AMQP リンクを作成した後は、特定のメッセージを送信します。
+      メッセージを送信する、`session`や`partition`が有効なキュー/トピック、設定、`sessionId`や`partitionKey`メッセージにそれぞれのプロパティ。
+    syntax:
+      content: 'function send(message: SendableMessageInfo)'
+      parameters:
+        - id: message
+          type:
+            - '@azure/service-bus.SendableMessageInfo'
+          description: 送信するメッセージ。
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.sendBatch'
+    name: 'sendBatch(SendableMessageInfo[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      存在するがまだの場合、送信者の AMQP リンクを作成した後、つまり 1 つの AMQP メッセージ内の 1 つのバッチで特定のメッセージを送信します。
+      - メッセージを送信する、`session`や`partition`が有効なキュー/トピック、設定、`sessionId`や`partitionKey`メッセージにそれぞれのプロパティ。
+      - バッチ内のすべてのメッセージが同じがこれを行うときに`sessionId`(セッションの使用) 場合と同じ`parititionKey`(パーティションの場合)。
+    syntax:
+      content: 'function sendBatch(messages: SendableMessageInfo[])'
+      parameters:
+        - id: messages
+          type:
+            - '@azure/service-bus.SendableMessageInfo[]'
+          description: バッチのメッセージで送信される SendableMessageInfo オブジェクトの配列。
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+  - uid: '@azure/service-bus.SendableMessageInfo[]'
+    name: 'SendableMessageInfo[]'
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+      - name: '[]'
+        fullName: '[]'

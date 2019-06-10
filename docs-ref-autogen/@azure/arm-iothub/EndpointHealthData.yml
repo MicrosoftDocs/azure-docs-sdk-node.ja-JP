@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.EndpointHealthData'
+    name: EndpointHealthData
+    fullName: EndpointHealthData
+    children:
+      - '@azure/arm-iothub.EndpointHealthData.endpointId'
+      - '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: エンドポイントの正常性データ
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.endpointId'
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エンドポイントの id
+    optional: true
+    syntax:
+      content: 'endpointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    name: healthStatus
+    fullName: healthStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '正常性状態は、次の意味が。 期待どおりに、エンドポイントにメッセージを受け付けてが ''正常な状態'' の状態を示しています。 期待どおりに、エンドポイントがメッセージを受け入れませんを IoT Hub がデータをこのエンドポイントに送信する再試行 ''異常'' の状態を示しています。 IoT Hub が最終的に一貫して正常状態を確立すると、異常なエンドポイントの状態が "正常" に更新されます。 エントリの IoT Hub では、メッセージの送信を再試行 retrial 期間の後に、エンドポイントは、メッセージが受け付けていません ''停止'' の状態を示しています。 エラーを識別して、エンドポイントでの問題を監視する IoT Hub メトリックを参照してください。 ''不明'' 状態では、IoT Hub がエンドポイントとの接続を確立していないことを示します。 このエンドポイントとの間でメッセージが配信または拒否されたことはありません。 使用可能な値が含まれます: ''unknown''、''異常''、''異常''、''dead'''
+    optional: true
+    syntax:
+      content: 'healthStatus?: EndpointHealthStatus'
+      return:
+        type:
+          - '@azure/arm-iothub.EndpointHealthStatus'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.EndpointHealthStatus'
+    name: EndpointHealthStatus
+    spec.typeScript:
+      - name: EndpointHealthStatus
+        fullName: EndpointHealthStatus
+        uid: '@azure/arm-iothub.EndpointHealthStatus'
