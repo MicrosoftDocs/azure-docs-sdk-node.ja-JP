@@ -1,0 +1,483 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceivedMessage'
+    name: ReceivedMessage
+    fullName: ReceivedMessage
+    children:
+      - '@azure/service-bus.ReceivedMessage.abandon'
+      - '@azure/service-bus.ReceivedMessage.body'
+      - '@azure/service-bus.ReceivedMessage.complete'
+      - '@azure/service-bus.ReceivedMessage.contentType'
+      - '@azure/service-bus.ReceivedMessage.correlationId'
+      - '@azure/service-bus.ReceivedMessage.deadLetter'
+      - '@azure/service-bus.ReceivedMessage.deadLetterSource'
+      - '@azure/service-bus.ReceivedMessage.defer'
+      - '@azure/service-bus.ReceivedMessage.deliveryCount'
+      - '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+      - '@azure/service-bus.ReceivedMessage.label'
+      - '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+      - '@azure/service-bus.ReceivedMessage.lockToken'
+      - '@azure/service-bus.ReceivedMessage.messageId'
+      - '@azure/service-bus.ReceivedMessage.partitionKey'
+      - '@azure/service-bus.ReceivedMessage.replyTo'
+      - '@azure/service-bus.ReceivedMessage.replyToSessionId'
+      - '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.sequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.sessionId'
+      - '@azure/service-bus.ReceivedMessage.timeToLive'
+      - '@azure/service-bus.ReceivedMessage.to'
+      - '@azure/service-bus.ReceivedMessage.userProperties'
+      - '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: Service Bus から受信したメッセージをについて説明します。
+    extends:
+      name: '@azure/service-bus.ReceivedMessageInfo'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.abandon'
+    name: 'abandon(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 受信側でメッセージのロックが離すと、別の受信操作のために、メッセージを Service Bus でもう一度使用できるようにします。
+    syntax:
+      content: 'function abandon(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            メッセージの破棄中に変更するメッセージのプロパティ。
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 送信する必要があるかが受信されるようにする、メッセージの本文。
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.complete'
+    name: complete()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Service Bus からメッセージを削除します。
+    syntax:
+      content: function complete()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: メッセージのコンテンツの種類。 必要に応じて RFC2045、Section 5 では、たとえば"、application/json"の形式に従った記述子を使用して、メッセージのペイロードをについて説明します。
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      により、関連付け、応答されるメッセージの MessageId を反映した例のためのメッセージのコンテキストを指定するアプリケーションの相関関係の識別子です。
+      参照してください[メッセージ ルーティングと相関関係](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)します。
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetter'
+    name: deadLetter(DeadLetterOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: メッセージを配信不能サブキューに移動します。 Deadletted メッセージを受信するには、新しい QueueClient/SubscriptionClient 配信不能サブキューのパスを使用して作成します。
+    syntax:
+      content: 'function deadLetter(options?: DeadLetterOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/service-bus.DeadLetterOptions'
+          description: |
+            メッセージを拒否しながらを指定することができます、配信不能オプション。
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetterSource'
+    name: deadLetterSource
+    fullName: deadLetterSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{文字列}[deadLetterSource]このメッセージはエンキューされました、配信不能にする前にサブスクリプションまたはキューの名前。 配信不能になっていて、後で配信不能キューから別のエンティティに自動転送されるメッセージでのみ設定されます。 メッセージが配信不能になったエンティティを示します。'
+    optional: true
+    syntax:
+      content: 'deadLetterSource?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.defer'
+    name: 'defer(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: メッセージの処理を延期します。 保存、`sequenceNumber`もう一度、将来を使用してメッセージを受信するために、メッセージの`receiveDeferredMessage`メソッド。
+    syntax:
+      content: 'function defer(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            メッセージを保留中に変更するメッセージのプロパティ
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deliveryCount'
+    name: deliveryCount
+    fullName: deliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このメッセージに対して試行された配信の数です。 カウントは、メッセージのロックの有効期限が切れた、またはを使用して、メッセージが明示的に破棄するとき、`abandon()`メソッド メッセージ。
+    optional: true
+    syntax:
+      content: 'deliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+    name: enqueuedSequenceNumber
+    fullName: enqueuedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: メッセージの元のシーケンス番号。 このプロパティは、自動転送されたメッセージの場合に、元の送信地点で最初にメッセージに割り当てられたシーケンス番号を示します。
+    optional: true
+    syntax:
+      content: 'enqueuedSequenceNumber?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+    name: enqueuedTimeUtc
+    fullName: enqueuedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: UTC 時刻をメッセージはされた承諾して、Service Bus に格納されています。
+    optional: true
+    syntax:
+      content: 'enqueuedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+    name: expiresAtUtc
+    fullName: expiresAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '有効期限切れが原因でメッセージが削除対象としてマークされ、エンティティから取得できなくなった UTC 時刻。 このプロパティは、メッセージの他の 2 つのプロパティから計算されます: `enqueuedTimeUtc`  + `timeToLive`します。'
+    optional: true
+    syntax:
+      content: 'expiresAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アプリケーション固有のラベル。 このプロパティは、標準化されたモデルで受信者にメッセージの目的を示すためにアプリケーションを使用できます。 同様に、電子メールの件名行。 マップされた AMQP プロパティは、"subject です"。
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+    name: lockedUntilUtc
+    fullName: lockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      これまで、メッセージが保持されている UTC の時刻は、キュー/サブスクリプションでロックされています。
+      ロックの有効期限、`deliveryCount`がインクリメントされます、メッセージが再び取得できるようにします。
+      - メッセージを受信する場合は該当しません`ReceiveMode.receiveAndDelete`モード。
+    optional: true
+    syntax:
+      content: 'lockedUntilUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockToken'
+    name: lockToken
+    fullName: lockToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ロック トークンは、ブローカーによって保持されているロックへの参照を`ReceiveMode.PeekLock`モード。 ロックは内部的に使用で説明したようにメッセージを決済、[さらに詳しく製品ドキュメント](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)
+      - メッセージを受信する場合は該当しません`ReceiveMode.receiveAndDelete`モード。
+    optional: true
+    syntax:
+      content: 'lockToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      メッセージ識別子は、アプリケーションによって定義される、メッセージとそのペイロードを一意に識別する値です。
+
+      注:整数でない数値を指定することはできません。
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      パーティション分割されたエンティティにメッセージを送信するためのパーティション キー。
+      最大長は 128 文字です。 [パーティション分割されたエンティティ](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning)の場合、この値を設定すると、関連するメッセージを同じ内部パーティションに割り当てて、送信順序が正しく記録されるようにできます。 パーティションはハッシュ関数でこの値を介して選択され、直接選択することはできません。
+      - セッション対応のエンティティに対して、`sessionId`プロパティは、この値をオーバーライドします。
+      - 非パーティション分割されたエンティティは、パーティション キーは無視されます。
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '返信を送信するエンティティのアドレス。 これはアプリケーションによって定義される省略可能な値であり、メッセージの受信者への応答パスを表す標準的な方法です。 応答が必要な場合、送信者は、この値を応答の送信先にするキューまたはトピックの絶対または相対パスに設定します。 参照してください[メッセージ ルーティングと相関関係](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)します。'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      セッション識別子の拡張、`replyTo`アドレス。
+      最大長は 128 文字です。 この値は、ReplyTo 情報を拡張し、応答のエンティティに送信されるときにセッション Id を設定する必要がありますを指定します。
+      参照してください[メッセージ ルーティングと相関関係](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)します。
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      日付と時間をメッセージがエンキューされます (utc)。 このプロパティは、UTC 時刻を返しますプロパティを設定するときに、指定された DateTime 値を UTC である必要があります。 この値は、遅延メッセージを送信するためです。
+      今後、特定の時点への送信メッセージを遅延するには使用されます。 メッセージのエンキュー時に、同時に、メッセージを送信するとは限りません。 キューに格納されたが取得されますが、実際の送信時間は、キューのワークロードとその状態によって異なります。
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Service Bus によってメッセージに割り当てられた一意の番号。
+      このシーケンス番号は、メッセージがブローカーおよび関数によって受け入れおよび格納されるときに真の識別子として割り当てられる 64 ビットの整数です。 パーティション分割されたエンティティの場合、最上位の 16 ビットはパーティション識別子を表します。 シーケンス番号は単調に増加します。
+      48 - 64 ビット範囲が使い果たされると、0 にロールオーバーされます。
+
+      **安全な整数の最大**Javascript 現在サポートしていますが`2^53 - 1`します。 シーケンス番号は、AMQP`Long`型最大 64 ビット長を指定できます。 という名前のライブラリが使用されているかを表す[long.js](https://github.com/dcodeIO/long.js)します。 使用することは想定されています、 ** `Long` **このライブラリによってエクスポートされた型。
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: Long'
+      return:
+        type:
+          - Long
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      セッション対応のエンティティのセッション識別子。 最大長は 128 文字です。 この値はアプリケーションによって定義され、セッションを認識するエンティティの場合に、メッセージのセッションへの所属を指定します。 同じセッション識別子を持つメッセージがまとめてロックされ、正確な順序での処理と多重化が可能になります。 セッションを認識しないエンティティの場合、この値は無視されます。
+      [メッセージ セッション](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions)します。
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'メッセージの time to live 値。 この値は、メッセージの有効期限が切れるまでの相対的な期間、メッセージ、インスタントから開始がされてによって受け入れおよび格納、ブローカーでキャプチャされた`enqueuedTimeUtc`します。 設定しない場合に明示的に、想定した値は、それぞれのキューまたはトピックの DefaultTimeToLive です。 メッセージ レベル`timeToLive`値は、エンティティの DefaultTimeToLive 設定より長くすることはできませんし、その場合は自動的に調整されます。 参照してください[有効期限](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration)します。'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '"To"アドレス。 このプロパティはルーティング　シナリオでの将来の使用のために予約されており、現在はブローカー自体で無視されます。 アプリケーションは、この値を使用して、ルール主導で[自動転送チェーン](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding)シナリオをメッセージの目的の論理送信先を示します。'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: カスタム メッセージ メタデータの使用可能アプリケーションの特定プロパティ。
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      パーティションの転送キュー経由でエンティティにメッセージを送信するパーティション キー。 最大長は 128 文字です。 トランザクションのスコープ内の転送キュー経由でメッセージを送信する場合、この値は、転送キューのパーティションを選択します。これは機能的に等価`partitionKey`プロパティしメッセージに格納されているまとめてと順序で転送されることを確認します。
+      参照してください[転送し、経由送信](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via)します。
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceivedMessageInfo'
+    name: ReceivedMessageInfo
+    spec.typeScript:
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+  - uid: '@azure/service-bus.DeadLetterOptions'
+    name: DeadLetterOptions
+    spec.typeScript:
+      - name: DeadLetterOptions
+        fullName: DeadLetterOptions
+        uid: '@azure/service-bus.DeadLetterOptions'

@@ -1,0 +1,257 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-js.OperationSpec'
+    name: OperationSpec
+    fullName: OperationSpec
+    children:
+      - '@azure/ms-rest-js.OperationSpec.baseUrl'
+      - '@azure/ms-rest-js.OperationSpec.contentType'
+      - '@azure/ms-rest-js.OperationSpec.formDataParameters'
+      - '@azure/ms-rest-js.OperationSpec.headerParameters'
+      - '@azure/ms-rest-js.OperationSpec.httpMethod'
+      - '@azure/ms-rest-js.OperationSpec.isXML'
+      - '@azure/ms-rest-js.OperationSpec.path'
+      - '@azure/ms-rest-js.OperationSpec.queryParameters'
+      - '@azure/ms-rest-js.OperationSpec.requestBody'
+      - '@azure/ms-rest-js.OperationSpec.responses'
+      - '@azure/ms-rest-js.OperationSpec.serializer'
+      - '@azure/ms-rest-js.OperationSpec.urlParameters'
+    langs:
+      - typeScript
+    type: interface
+    summary: 操作を定義する仕様。
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.baseUrl'
+    name: baseUrl
+    fullName: baseUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービスの仕様で提供された URL です。 これがこの URL テンプレート変数すべて続行されます。 これは指定しない場合、OperationSpec が作成されたときにに、ServiceClient"baseUri"プロパティで作成されます。
+    optional: true
+    syntax:
+      content: 'baseUrl?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要求本文のコンテンツ タイプ。 この値は、提供されている場合、"Content-type"ヘッダーとして使用されます。
+    optional: true
+    syntax:
+      content: 'contentType?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.formDataParameters'
+    name: formDataParameters
+    fullName: formDataParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: メソッドのパラメーターを操作の操作の HTTP 要求のフォーム データの本文を作成するために使用されます。
+    optional: true
+    syntax:
+      content: 'formDataParameters?: ReadonlyArray<OperationParameter>'
+      return:
+        type:
+          - ReadonlyArray<@azure/ms-rest-js.OperationParameter>
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.headerParameters'
+    name: headerParameters
+    fullName: headerParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 操作の HTTP 要求のヘッダーに変換される操作メソッドのパラメーター。
+    optional: true
+    syntax:
+      content: 'headerParameters?: ReadonlyArray<OperationParameter>'
+      return:
+        type:
+          - ReadonlyArray<@azure/ms-rest-js.OperationParameter>
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.httpMethod'
+    name: httpMethod
+    fullName: httpMethod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HTTP メソッドは、この操作の要求で使用する必要があります。
+    syntax:
+      content: 'httpMethod: HttpMethods'
+      return:
+        type:
+          - '@azure/ms-rest-js.HttpMethods'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.isXML'
+    name: isXML
+    fullName: isXML
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: かどうかこの操作では、XML 要求および応答の本文が使用されます。
+    optional: true
+    syntax:
+      content: 'isXML?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: この操作の URL の固定のパス。 これがこの URL テンプレート変数すべて続行されます。
+    optional: true
+    syntax:
+      content: 'path?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.queryParameters'
+    name: queryParameters
+    fullName: queryParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 構築された URL のクエリに追加される操作のメソッドのパラメーター。
+    optional: true
+    syntax:
+      content: 'queryParameters?: ReadonlyArray<OperationQueryParameter>'
+      return:
+        type:
+          - ReadonlyArray<@azure/ms-rest-js.OperationQueryParameter>
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.requestBody'
+    name: requestBody
+    fullName: requestBody
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このパラメーターは、HTTP 要求の本文を構築するために使用されます。
+    optional: true
+    syntax:
+      content: 'requestBody?: OperationParameter'
+      return:
+        type:
+          - '@azure/ms-rest-js.OperationParameter'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.responses'
+    name: responses
+    fullName: responses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: この操作で返すことができる応答のさまざまな種類は、どのような状態コードが返されるに基づいています。
+    syntax:
+      content: 'responses: [key: string]: OperationResponse'
+      return:
+        type:
+          - '[key: string]: @azure/ms-rest-js.OperationResponse'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.serializer'
+    name: serializer
+    fullName: serializer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: この操作で使用するシリアライザー。
+    syntax:
+      content: 'serializer: Serializer'
+      return:
+        type:
+          - '@azure/ms-rest-js.Serializer'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.OperationSpec.urlParameters'
+    name: urlParameters
+    fullName: urlParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 構築された URL に置き換えられる操作メソッドにパラメーター。
+    optional: true
+    syntax:
+      content: 'urlParameters?: ReadonlyArray<OperationURLParameter>'
+      return:
+        type:
+          - ReadonlyArray<@azure/ms-rest-js.OperationURLParameter>
+    package: '@azure/ms-rest-js'
+references:
+  - uid: ReadonlyArray<@azure/ms-rest-js.OperationParameter>
+    name: OperationParameter>
+    spec.typeScript:
+      - name: ReadonlyArray<
+        fullName: ReadonlyArray<
+      - name: OperationParameter
+        fullName: OperationParameter
+        uid: '@azure/ms-rest-js.OperationParameter'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/ms-rest-js.HttpMethods'
+    name: HttpMethods
+    spec.typeScript:
+      - name: HttpMethods
+        fullName: HttpMethods
+        uid: '@azure/ms-rest-js.HttpMethods'
+  - uid: ReadonlyArray<@azure/ms-rest-js.OperationQueryParameter>
+    name: OperationQueryParameter>
+    spec.typeScript:
+      - name: ReadonlyArray<
+        fullName: ReadonlyArray<
+      - name: OperationQueryParameter
+        fullName: OperationQueryParameter
+        uid: '@azure/ms-rest-js.OperationQueryParameter'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/ms-rest-js.OperationParameter'
+    name: OperationParameter
+    spec.typeScript:
+      - name: OperationParameter
+        fullName: OperationParameter
+        uid: '@azure/ms-rest-js.OperationParameter'
+  - uid: '[key: string]: @azure/ms-rest-js.OperationResponse'
+    name: OperationResponse
+    spec.typeScript:
+      - name: '[key: string]: '
+        fullName: '[key: string]: '
+      - name: OperationResponse
+        fullName: OperationResponse
+        uid: '@azure/ms-rest-js.OperationResponse'
+  - uid: '@azure/ms-rest-js.Serializer'
+    name: Serializer
+    spec.typeScript:
+      - name: Serializer
+        fullName: Serializer
+        uid: '@azure/ms-rest-js.Serializer'
+  - uid: ReadonlyArray<@azure/ms-rest-js.OperationURLParameter>
+    name: OperationURLParameter>
+    spec.typeScript:
+      - name: ReadonlyArray<
+        fullName: ReadonlyArray<
+      - name: OperationURLParameter
+        fullName: OperationURLParameter
+        uid: '@azure/ms-rest-js.OperationURLParameter'
+      - name: '>'
+        fullName: '>'
