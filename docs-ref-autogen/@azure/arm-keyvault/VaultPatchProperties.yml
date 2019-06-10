@@ -1,0 +1,198 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.VaultPatchProperties'
+    name: VaultPatchProperties
+    fullName: VaultPatchProperties
+    children:
+      - '@azure/arm-keyvault.VaultPatchProperties.accessPolicies'
+      - '@azure/arm-keyvault.VaultPatchProperties.createMode'
+      - '@azure/arm-keyvault.VaultPatchProperties.enabledForDeployment'
+      - '@azure/arm-keyvault.VaultPatchProperties.enabledForDiskEncryption'
+      - '@azure/arm-keyvault.VaultPatchProperties.enabledForTemplateDeployment'
+      - '@azure/arm-keyvault.VaultPatchProperties.enablePurgeProtection'
+      - '@azure/arm-keyvault.VaultPatchProperties.enableSoftDelete'
+      - '@azure/arm-keyvault.VaultPatchProperties.networkAcls'
+      - '@azure/arm-keyvault.VaultPatchProperties.sku'
+      - '@azure/arm-keyvault.VaultPatchProperties.tenantId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="26cb4-101">コンテナーのプロパティ</span><span class="sxs-lookup"><span data-stu-id="26cb4-101">Properties of the vault</span></span>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.accessPolicies'
+    name: accessPolicies
+    fullName: accessPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26cb4-102">Key vault へのアクセス権を持つ 0 ~ 16 id の配列。</span><span class="sxs-lookup"><span data-stu-id="26cb4-102">An array of 0 to 16 identities that have access to the key vault.</span></span> <span data-ttu-id="26cb4-103">配列内のすべての id は、キー コンテナーのテナント ID とテナントと同じ ID を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="26cb4-103">All identities in the array must use the same tenant ID as the key vault's tenant ID.</span></span>
+    optional: true
+    syntax:
+      content: 'accessPolicies?: AccessPolicyEntry[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.AccessPolicyEntry[]'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26cb4-104">資格情報コンテナーの資格情報コンテナーが必要かどうかを回復するかどうかを指定するモードを作成します。</span><span class="sxs-lookup"><span data-stu-id="26cb4-104">The vault''s create mode to indicate whether the vault need to be recovered or not.</span></span> <span data-ttu-id="26cb4-105">使用可能な値が含まれます: ''recover''、''default''</span><span class="sxs-lookup"><span data-stu-id="26cb4-105">Possible values include: ''recover'', ''default''</span></span>'
+    optional: true
+    syntax:
+      content: 'createMode?: CreateMode'
+      return:
+        type:
+          - '@azure/arm-keyvault.CreateMode'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enabledForDeployment'
+    name: enabledForDeployment
+    fullName: enabledForDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26cb4-106">Azure の仮想マシンが key vault からシークレットとして格納される証明書を取得できるかどうかを指定するプロパティ。</span><span class="sxs-lookup"><span data-stu-id="26cb4-106">Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.</span></span>
+    optional: true
+    syntax:
+      content: 'enabledForDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enabledForDiskEncryption'
+    name: enabledForDiskEncryption
+    fullName: enabledForDiskEncryption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26cb4-107">資格情報コンテナーからシークレットを取得し、キーのラップを解除する Azure Disk Encryption が許可されているかどうかを指定するプロパティ。</span><span class="sxs-lookup"><span data-stu-id="26cb4-107">Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.</span></span>
+    optional: true
+    syntax:
+      content: 'enabledForDiskEncryption?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enabledForTemplateDeployment'
+    name: enabledForTemplateDeployment
+    fullName: enabledForTemplateDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26cb4-108">Key vault からシークレットを取得する Azure Resource Manager を許可するかどうかを指定するプロパティ。</span><span class="sxs-lookup"><span data-stu-id="26cb4-108">Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.</span></span>
+    optional: true
+    syntax:
+      content: 'enabledForTemplateDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enablePurgeProtection'
+    name: enablePurgeProtection
+    fullName: enablePurgeProtection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26cb4-109">この資格情報コンテナーに対する保護を削除するかどうかを指定するプロパティを有効にします。</span><span class="sxs-lookup"><span data-stu-id="26cb4-109">Property specifying whether protection against purge is enabled for this vault.</span></span> <span data-ttu-id="26cb4-110">このプロパティを true に設定します。 この資格情報コンテナーとそのコンテンツの消去に対する保護がアクティブになります - Key Vault サービスのみが、回復不可能な削除を開始できます。</span><span class="sxs-lookup"><span data-stu-id="26cb4-110">Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion.</span></span> <span data-ttu-id="26cb4-111">設定は、論理的な削除も有効になっている場合にのみ有効です。</span><span class="sxs-lookup"><span data-stu-id="26cb4-111">The setting is effective only if soft delete is also enabled.</span></span> <span data-ttu-id="26cb4-112">この機能を有効にすると元に戻すことはありません-これは、プロパティにはその値として false は受け入れません。</span><span class="sxs-lookup"><span data-stu-id="26cb4-112">Enabling this functionality is irreversible - that is, the property does not accept false as its value.</span></span>'
+    optional: true
+    syntax:
+      content: 'enablePurgeProtection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enableSoftDelete'
+    name: enableSoftDelete
+    fullName: enableSoftDelete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26cb4-113">この key vault の論理的な削除機能が有効になっているかどうかを指定するプロパティ。</span><span class="sxs-lookup"><span data-stu-id="26cb4-113">Property to specify whether the 'soft delete' functionality is enabled for this key vault.</span></span> <span data-ttu-id="26cb4-114">False の値は受け入れられません。</span><span class="sxs-lookup"><span data-stu-id="26cb4-114">It does not accept false value.</span></span>
+    optional: true
+    syntax:
+      content: 'enableSoftDelete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.networkAcls'
+    name: networkAcls
+    fullName: networkAcls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26cb4-115">特定のネットワークの場所からコンテナーへのアクセスを制御する規則のコレクション。</span><span class="sxs-lookup"><span data-stu-id="26cb4-115">A collection of rules governing the accessibility of the vault from specific network locations.</span></span>
+    optional: true
+    syntax:
+      content: 'networkAcls?: NetworkRuleSet'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleSet'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26cb4-116">SKU の詳細</span><span class="sxs-lookup"><span data-stu-id="26cb4-116">SKU details</span></span>
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-keyvault.Sku'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26cb4-117">Azure Active Directory テナント ID、key vault への要求を認証するために使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="26cb4-117">The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.</span></span>
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry[]'
+    name: 'AccessPolicyEntry[]'
+    spec.typeScript:
+      - name: AccessPolicyEntry
+        fullName: AccessPolicyEntry
+        uid: '@azure/arm-keyvault.AccessPolicyEntry'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-keyvault.CreateMode'
+    name: CreateMode
+    spec.typeScript:
+      - name: CreateMode
+        fullName: CreateMode
+        uid: '@azure/arm-keyvault.CreateMode'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet'
+    name: NetworkRuleSet
+    spec.typeScript:
+      - name: NetworkRuleSet
+        fullName: NetworkRuleSet
+        uid: '@azure/arm-keyvault.NetworkRuleSet'
+  - uid: '@azure/arm-keyvault.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-keyvault.Sku'
