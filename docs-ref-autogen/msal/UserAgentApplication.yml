@@ -15,8 +15,6 @@ items:
       - msal.UserAgentApplication.getLoginInProgress
       - msal.UserAgentApplication.getPostLogoutRedirectUri
       - msal.UserAgentApplication.getRedirectUri
-      - msal.UserAgentApplication.handleRedirectCallback_1
-      - msal.UserAgentApplication.handleRedirectCallback
       - msal.UserAgentApplication.loginPopup
       - msal.UserAgentApplication.loginRedirect
       - msal.UserAgentApplication.logout
@@ -24,7 +22,8 @@ items:
     langs:
       - typeScript
     type: class
-    summary: 'UserAgentApplication クラス:<xref:UserAgentApplication> 開発者は loginXX を行うときに使用できるインスタンスのオブジェクトまたは acquireTokenXX 関数'
+    summary: |
+      UserAgentApplication クラス loginXX を開発者が使用できるオブジェクトのインスタンスまたは acquireTokenXX 関数
     package: msal
   - uid: msal.UserAgentApplication.acquireTokenPopup
     name: acquireTokenPopup(AuthenticationParameters)
@@ -50,7 +49,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: ユーザーを承認エンドポイントにリダイレクトすることで、API の access_token を取得するときに使用されます。
+    summary: ユーザーのブラウザー ウィンドウを承認エンドポイントにリダイレクトすることで、API の access_token を取得する場合に使用します。
     syntax:
       content: 'function acquireTokenRedirect(request: AuthenticationParameters)'
       parameters:
@@ -85,11 +84,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: |-
-      返します、機関、authority は MSAL がトークンの取得に使用できるディレクトリを示す URL
-      - Azure ad でこの属性は、MSAL を使用して、フォームのトークンを取得する Azure active directory を示す URL https://login.microsoftonline.com/&lt;Enter_the_Tenant_Info_Here&gt;場合は、アプリケーションは、1 つの組織のディレクトリにアカウントをサポートする値に置き換えます"Enter_the_Tenant_Info_Here"テナント Id またはテナント名 (たとえば、contoso.microsoft.com) 場合、アプリケーション組織の任意のディレクトリでアカウントをサポートする、アプリケーションは、個人の Microsoft アカウント、組織のディレクトリでアカウントをサポートしている場合は、組織で"Enter_the_Tenant_Info_Here"の値を置き換えます、"Enter_the_Tenant_Info_ を置換ここで"値を使用して、一般的な使用。
-      個人の Microsoft へのサポートを制限するには、アカウントはコンシューマーでのみ、データの"Enter_the_Tenant_Info_Here"の値を置き換えます。
-      - Azure B2C でのフォーム https:// は&lt;インスタンス&gt;/tfp/&lt;テナント&gt;/<policyName>/
+    summary: 機関 URL を管理する方法。
     syntax:
       content: 'authority: string'
       return:
@@ -102,7 +97,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 返します、サインインしているアカウント (ログイン時に作成されたアカウント オブジェクトから受信した) または null で状態が見つからない場合
+    summary: 返します、サインインしているアカウント (アカウントのオブジェクトは正常なログイン時に作成された) または null で状態が見つからない場合
     syntax:
       content: function getAccount()
       parameters: []
@@ -116,7 +111,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 使用してすべてのキャッシュされた項目をフィルター処理および homeAccountIdentifier に基づく一意のアカウントの一覧を返します。
+    summary: 使用すると、homeAccountIdentifier に基づいて、MSAL キャッシュ内で一意のアカウントの一覧を取得します。
     syntax:
       content: function getAllAccounts()
       parameters: []
@@ -130,7 +125,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 機関のインスタンスを返します
+    summary: MSAL の構成オブジェクトから現在の機関インスタンスを取得します。
     syntax:
       content: function getAuthorityInstance()
       parameters: []
@@ -198,40 +193,6 @@ items:
         type:
           - string
     package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback_1
-    name: handleRedirectCallback(authResponseCallback)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 成功またはエラー オブジェクトを返信するリダイレクトのフローのコールバック関数を設定します。
-    syntax:
-      content: 'function handleRedirectCallback(authCallback: authResponseCallback)'
-      parameters:
-        - id: authCallback
-          type:
-            - authResponseCallback
-          description: ''
-    package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback
-    name: 'handleRedirectCallback(tokenReceivedCallback, errorReceivedCallback)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 成功またはエラー オブジェクトを返信するリダイレクトのフローのコールバック関数を設定します。
-    syntax:
-      content: 'function handleRedirectCallback(tokenReceivedCallback: tokenReceivedCallback, errorReceivedCallback: errorReceivedCallback)'
-      parameters:
-        - id: tokenReceivedCallback
-          type:
-            - tokenReceivedCallback
-          description: ''
-        - id: errorReceivedCallback
-          type:
-            - errorReceivedCallback
-          description: ''
-    package: msal
   - uid: msal.UserAgentApplication.loginPopup
     name: loginPopup(AuthenticationParameters)
     children: []
@@ -274,8 +235,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      現在のユーザーをログアウトし、postLogoutRedirectUri にユーザーをリダイレクトするために使用します。
-      既定の動作では、ユーザーをリダイレクトに`window.location.href`します。
+      使用して、現在のユーザーをログアウトして、postLogoutRedirectUri にユーザーをリダイレクトします。
+      既定の動作は、ユーザーをリダイレクトする`window.location.href`します。
     syntax:
       content: function logout()
       parameters: []
@@ -286,7 +247,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: 'コンス トラクター、<xref:UserAgentApplication>オブジェクトのこのインスタンス化できるため、<xref:UserAgentApplication>オブジェクト'
+    summary: ''
     syntax:
       content: 'new UserAgentApplication(configuration: Configuration)'
       parameters:

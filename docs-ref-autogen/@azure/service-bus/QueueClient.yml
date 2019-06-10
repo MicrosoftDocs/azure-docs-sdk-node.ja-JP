@@ -1,0 +1,246 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.QueueClient'
+    name: QueueClient
+    fullName: QueueClient
+    children:
+      - '@azure/service-bus.QueueClient.close'
+      - '@azure/service-bus.QueueClient.createReceiver'
+      - '@azure/service-bus.QueueClient.createReceiver_1'
+      - '@azure/service-bus.QueueClient.createSender'
+      - '@azure/service-bus.QueueClient.entityPath'
+      - '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+      - '@azure/service-bus.QueueClient.id'
+      - '@azure/service-bus.QueueClient.peek'
+      - '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Service Bus キューと対話できるようにするクライアントをについて説明します。
+      使用して、 `createQueueClient` QueueClient をインスタンス化する ServiceBusClient オブジェクトに対して関数
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      このクライアントによって作成された送信者/受信者のすべての AMQP リンクを閉じます。
+      閉じた後、QueueClient でも、送信者/受信者は、その他の操作を使用できます。
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver'
+    name: createReceiver(ReceiveMode)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      セッションが有効でないキューからメッセージを受信するためには、受信側を作成します。
+      - この QueueClient のオープンの受信者が既に存在する場合は、エラーをスローします。
+      - スロー`InvalidOperationError`キューにセッションが有効になっているがある場合 (はこのメソッドのオーバー ロードを使用する場合は、`sessionOptions`引数)
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |
+            メッセージが受信されるモードを示す列挙型。 設定可能な値は、次のとおりです。
+            - `ReceiveMode.peekLock`:このモードでは、メッセージが受信されると、受信側の特定の期間のメッセージのロックを保持します。 この時点で、メッセージが決済していない場合、[次へ] をフェッチする Service Bus に戻り、到着した受信操作。
+            - `ReceiveMode.receiveAndDelete`:このモードで受信したメッセージは、Service Bus から自動的に削除を取得します。
+      return:
+        type:
+          - '@azure/service-bus.Receiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver_1'
+    name: 'createReceiver(ReceiveMode, SessionReceiverOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      キューを有効になっているセッションからメッセージを受信、受信側を作成します。 セッション Id が指定されていない場合は、使用可能なセッション間でランダムなセッションが使用されます。
+      - オープンのレシーバーは既にのセッション Id の指定された存在する場合は、エラーをスローします。
+      - スローします`SessionCannotBeLockedError`キューが有効になっているセッションを持っていない場合 (このケースで処理されない、`sessionOptions`引数) または Service Bus が (大文字と小文字 try がしばらく待ってからどの) でセッションのロックを取得できない場合
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode, sessionOptions: SessionReceiverOptions)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |-
+            メッセージが受信されるモードを示す列挙型。 設定可能な値は、次のとおりです。
+            - `ReceiveMode.peekLock`:このモードでは、メッセージが受信されると、受信側の特定の期間のメッセージのロックを保持します。 この時点で、メッセージが決済していない場合、[次へ] をフェッチする Service Bus に戻り、到着した受信操作。
+            - `ReceiveMode.receiveAndDelete`:このモードで受信したメッセージは、Service Bus から自動的に削除を取得します。
+        - id: sessionOptions
+          type:
+            - '@azure/service-bus.SessionReceiverOptions'
+          description: |
+            セッション受信プロセスのセッション Id との自動ロック更新時間を指定するオプションです。
+      return:
+        type:
+          - '@azure/service-bus.SessionReceiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      メッセージを送信する、メッセージは後で送信するためのスケジュール、このようなスケジュール設定されたメッセージをキャンセルするに使用するセンダを作成します。
+      - この QueueClient のオープン、送信元が既に存在する場合は、エラーをスローします。
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このクライアントを作成する Service Bus キューのパス。
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+    name: getDeadLetterQueuePath(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      指定した名前によって表されるキューの対応する配信不能キュー名を返します。
+      これを使用して、`createQueueClient`に対して関数を`ServiceBusClient`配信不能キューからメッセージを受信するインスタンス。
+    syntax:
+      content: 'static function getDeadLetterQueuePath(queueName: string)'
+      parameters:
+        - id: queueName
+          type:
+            - string
+          description: |
+            配信不能対応の名前がフェッチされるキューの名前
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このクライアントの一意の識別子。
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      アクティブなメッセージの次のバッチをフェッチ (配信不能メッセージではありませんが、遅延など)。
+      - 最初の呼び出し`peek()`最初のアクティブなメッセージがフェッチされます。 各後続の呼び出しでは、後続のメッセージをフェッチします。
+      - 異なり、`received`メッセージ、`peeked`メッセージがメッセージの読み取り専用バージョン。
+      できません`Completed/Abandoned/Deferred/Deadlettered`します。 ロックを更新することはできません。
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      目的の数のアクティブなメッセージをピークします (配信不能メッセージではありませんが、遅延など) 指定されたシーケンス番号から。
+      - 異なり、`received`メッセージ、`peeked`メッセージがメッセージの読み取り専用バージョン。
+      できません`Completed/Abandoned/Deferred/Deadlettered`します。 ロックを更新することはできません。
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: 読み取る、メッセージ シーケンス番号。
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    spec.typeScript:
+      - name: Receiver
+        fullName: Receiver
+        uid: '@azure/service-bus.Receiver'
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    spec.typeScript:
+      - name: SessionReceiverOptions
+        fullName: SessionReceiverOptions
+        uid: '@azure/service-bus.SessionReceiverOptions'
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    spec.typeScript:
+      - name: SessionReceiver
+        fullName: SessionReceiver
+        uid: '@azure/service-bus.SessionReceiver'
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'
