@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.RuleDescription'
+    name: RuleDescription
+    fullName: RuleDescription
+    children:
+      - '@azure/service-bus.RuleDescription.action'
+      - '@azure/service-bus.RuleDescription.filter'
+      - '@azure/service-bus.RuleDescription.name'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a4309-101">サブスクリプションからの受信メッセージをフィルター処理するために使用するサブスクリプションの規則を表します。</span><span class="sxs-lookup"><span data-stu-id="a4309-101">Represents a Rule on a Subscription that is used to filter the incoming message from the Subscription.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a4309-102">メッセージがフィルター式を満たす場合に実行するアクション。</span><span class="sxs-lookup"><span data-stu-id="a4309-102">Action to perform if the message satisfies the filtering expression.</span></span>
+    optional: true
+    syntax:
+      content: 'action?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.filter'
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a4309-103">フィルター式のメッセージと一致するために使用します。</span><span class="sxs-lookup"><span data-stu-id="a4309-103">Filter expression used to match messages.</span></span> <span data-ttu-id="a4309-104">2 つの種類をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="a4309-104">Supports 2 types:</span></span>
+      - <span data-ttu-id="a4309-105">`string`:メッセージのユーザー定義プロパティとシステム プロパティに対して評価される SQL に似た条件式です。</span><span class="sxs-lookup"><span data-stu-id="a4309-105">`string`: SQL-like condition expression that is evaluated against the messages' user-defined properties and system properties.</span></span> <span data-ttu-id="a4309-106">すべてのシステム プロパティが付加されます`sys.`条件式にします。</span><span class="sxs-lookup"><span data-stu-id="a4309-106">All system properties will be prefixed with `sys.` in the condition expression.</span></span>
+      - <span data-ttu-id="a4309-107">`CorrelationFilter`:メッセージのプロパティと一致するフィルターのプロパティが使用されます。</span><span class="sxs-lookup"><span data-stu-id="a4309-107">`CorrelationFilter`: Properties of the filter will be used to match with the message properties.</span></span>
+    optional: true
+    syntax:
+      content: 'filter?: string | CorrelationFilter'
+      return:
+        type:
+          - string | @azure/service-bus.CorrelationFilter
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.RuleDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a4309-108">ルールの名前を表します。</span><span class="sxs-lookup"><span data-stu-id="a4309-108">Represents the name of the rule.</span></span>
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: string | @azure/service-bus.CorrelationFilter
+    name: CorrelationFilter
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: CorrelationFilter
+        fullName: CorrelationFilter
+        uid: '@azure/service-bus.CorrelationFilter'
