@@ -1,0 +1,348 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.Disk'
+    name: Disk
+    fullName: Disk
+    children:
+      - '@azure/arm-compute.Disk.creationData'
+      - '@azure/arm-compute.Disk.diskIOPSReadWrite'
+      - '@azure/arm-compute.Disk.diskMBpsReadWrite'
+      - '@azure/arm-compute.Disk.diskSizeGB'
+      - '@azure/arm-compute.Disk.diskState'
+      - '@azure/arm-compute.Disk.encryptionSettingsCollection'
+      - '@azure/arm-compute.Disk.hyperVGeneration'
+      - '@azure/arm-compute.Disk.id'
+      - '@azure/arm-compute.Disk.location'
+      - '@azure/arm-compute.Disk.managedBy'
+      - '@azure/arm-compute.Disk.name'
+      - '@azure/arm-compute.Disk.osType'
+      - '@azure/arm-compute.Disk.provisioningState'
+      - '@azure/arm-compute.Disk.sku'
+      - '@azure/arm-compute.Disk.tags'
+      - '@azure/arm-compute.Disk.timeCreated'
+      - '@azure/arm-compute.Disk.type'
+      - '@azure/arm-compute.Disk.zones'
+    langs:
+      - typeScript
+    type: interface
+    summary: ディスク リソースです。
+    extends:
+      name: '@azure/arm-compute.Resource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.creationData'
+    name: creationData
+    fullName: creationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ディスクのソース情報です。 ディスクが作成された後、CreationData 情報を変更できません。
+    syntax:
+      content: 'creationData: CreationData'
+      return:
+        type:
+          - '@azure/arm-compute.CreationData'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.diskIOPSReadWrite'
+    name: diskIOPSReadWrite
+    fullName: diskIOPSReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このディスクに対して許可される IOPS の数UltraSSD ディスクでのみ設定可能です。 1 つの操作は、4 k と 256 k バイトの間で転送できます。
+    optional: true
+    syntax:
+      content: 'diskIOPSReadWrite?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.diskMBpsReadWrite'
+    name: diskMBpsReadWrite
+    fullName: diskMBpsReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このディスクの許可される帯域幅UltraSSD ディスクでのみ設定可能です。 何百万もの 1 秒あたりのバイトが MBps にことを意味 - MB をここでは、ISO 表記法で、10 の累乗を使用します。
+    optional: true
+    syntax:
+      content: 'diskMBpsReadWrite?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CreationData.createOption が空の場合は、このフィールドは必須および作成するための VHD のサイズを示します。 このフィールドが更新やその他のオプションを使用した作成のために存在する場合は、サイズ変更を示します。 サイズを変更は、ディスクが実行中の VM にアタッチされていないと、ディスクのサイズを増やすことができますのみ場合にのみ使用できます。
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.diskState'
+    name: diskState
+    fullName: diskState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ディスクの状態。 指定できる値は、次のとおりです。''Unattached'', ''Attached'', ''Reserved'', ''ActiveSAS'', ''ReadyToUpload'', ''ActiveUpload'' **NOTE:このプロパティはシリアル化されません。サーバーによってのみ設定できます。**'
+    optional: true
+    syntax:
+      content: 'diskState?: DiskState'
+      return:
+        type:
+          - '@azure/arm-compute.DiskState'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.encryptionSettingsCollection'
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Azure Disk Encryption で使用される暗号化の設定のコレクションは、ディスクまたはスナップショットごとに複数の暗号化設定を含めることができます。
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - '@azure/arm-compute.EncryptionSettingsCollection'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.hyperVGeneration'
+    name: hyperVGeneration
+    fullName: hyperVGeneration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仮想マシンのハイパーバイザー生成します。 OS ディスクのみに適用されます。 指定できる値は、次のとおりです。' V1'、'V2'
+    optional: true
+    syntax:
+      content: 'hyperVGeneration?: HyperVGeneration'
+      return:
+        type:
+          - '@azure/arm-compute.HyperVGeneration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソース Id**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソースの場所
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.managedBy'
+    name: managedBy
+    fullName: managedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      接続されているディスクが VM の ID を含む相対 URI。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'managedBy?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソース名**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'オペレーティング システムの種類。 指定できる値は、次のとおりです。''Windows'', ''Linux'''
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      プロビジョニングの状態のディスク。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: DiskSku'
+      return:
+        type:
+          - '@azure/arm-compute.DiskSku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソース タグ
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.timeCreated'
+    name: timeCreated
+    fullName: timeCreated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ディスクが作成された時刻。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'timeCreated?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソースの種類**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disk.zones'
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ディスクの論理ゾーンの一覧。
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-compute.Resource'
+  - uid: '@azure/arm-compute.CreationData'
+    name: CreationData
+    spec.typeScript:
+      - name: CreationData
+        fullName: CreationData
+        uid: '@azure/arm-compute.CreationData'
+  - uid: '@azure/arm-compute.DiskState'
+    name: DiskState
+    spec.typeScript:
+      - name: DiskState
+        fullName: DiskState
+        uid: '@azure/arm-compute.DiskState'
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection'
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: '@azure/arm-compute.EncryptionSettingsCollection'
+  - uid: '@azure/arm-compute.HyperVGeneration'
+    name: HyperVGeneration
+    spec.typeScript:
+      - name: HyperVGeneration
+        fullName: HyperVGeneration
+        uid: '@azure/arm-compute.HyperVGeneration'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.DiskSku'
+    name: DiskSku
+    spec.typeScript:
+      - name: DiskSku
+        fullName: DiskSku
+        uid: '@azure/arm-compute.DiskSku'

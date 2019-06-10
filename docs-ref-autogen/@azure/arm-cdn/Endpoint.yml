@@ -1,0 +1,386 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Endpoint'
+    name: Endpoint
+    fullName: Endpoint
+    children:
+      - '@azure/arm-cdn.Endpoint.contentTypesToCompress'
+      - '@azure/arm-cdn.Endpoint.deliveryPolicy'
+      - '@azure/arm-cdn.Endpoint.geoFilters'
+      - '@azure/arm-cdn.Endpoint.hostName'
+      - '@azure/arm-cdn.Endpoint.id'
+      - '@azure/arm-cdn.Endpoint.isCompressionEnabled'
+      - '@azure/arm-cdn.Endpoint.isHttpAllowed'
+      - '@azure/arm-cdn.Endpoint.isHttpsAllowed'
+      - '@azure/arm-cdn.Endpoint.location'
+      - '@azure/arm-cdn.Endpoint.name'
+      - '@azure/arm-cdn.Endpoint.optimizationType'
+      - '@azure/arm-cdn.Endpoint.originHostHeader'
+      - '@azure/arm-cdn.Endpoint.originPath'
+      - '@azure/arm-cdn.Endpoint.origins'
+      - '@azure/arm-cdn.Endpoint.probePath'
+      - '@azure/arm-cdn.Endpoint.provisioningState'
+      - '@azure/arm-cdn.Endpoint.queryStringCachingBehavior'
+      - '@azure/arm-cdn.Endpoint.resourceState'
+      - '@azure/arm-cdn.Endpoint.tags'
+      - '@azure/arm-cdn.Endpoint.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: CDN エンドポイントは、配信元、プロトコル、コンテンツのキャッシュと配信動作などの構成情報を含む CDN プロファイル内のエンティティです。 CDN エンドポイント URL の形式を使用して<endpointname>。 azureedge.net します。
+    extends:
+      name: '@azure/arm-cdn.TrackedResource'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.contentTypesToCompress'
+    name: contentTypesToCompress
+    fullName: contentTypesToCompress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 圧縮が適用されるコンテンツの種類の一覧です。 有効な MIME の種類、値があります。
+    optional: true
+    syntax:
+      content: 'contentTypesToCompress?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.deliveryPolicy'
+    name: deliveryPolicy
+    fullName: deliveryPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エンドポイントに使用する配信規則を指定するポリシー。
+    optional: true
+    syntax:
+      content: 'deliveryPolicy?: EndpointPropertiesUpdateParametersDeliveryPolicy'
+      return:
+        type:
+          - '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.geoFilters'
+    name: geoFilters
+    fullName: geoFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CDN エンドポイント内のユーザーの geo のアクセスを定義する規則の一覧です。 各地理フィルターは、指定されたパスまたはパス/pictures/のブロック APAC など、コンテンツにアクセス規則を定義します
+    optional: true
+    syntax:
+      content: 'geoFilters?: GeoFilter[]'
+      return:
+        type:
+          - '@azure/arm-cdn.GeoFilter[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.hostName'
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{Endpointname} として構造化されたエンドポイントのホスト名。{DNSZone} contoso.azureedge.net など**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**'
+    optional: true
+    syntax:
+      content: 'hostName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      リソースの ID
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.isCompressionEnabled'
+    name: isCompressionEnabled
+    fullName: isCompressionEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Cdn コンテンツの圧縮が有効になっているかどうかを示します。 既定値は false です。 としてコンテンツが提供される圧縮が有効になっている場合、圧縮されたバージョンのユーザーが要求した場合に圧縮します。 要求されたコンテンツが 1 バイト未満または 1 MB を超える場合、cdn コンテンツを圧縮しません。
+    optional: true
+    syntax:
+      content: 'isCompressionEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.isHttpAllowed'
+    name: isHttpAllowed
+    fullName: isHttpAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エンドポイントで HTTP トラフィックを許可するかどうかを示します。 既定値は true です。 少なくとも 1 つのプロトコル (HTTP または HTTPS) を許可する必要があります。
+    optional: true
+    syntax:
+      content: 'isHttpAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.isHttpsAllowed'
+    name: isHttpsAllowed
+    fullName: isHttpsAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エンドポイントで HTTPS トラフィックが許可されているかどうかを示します。 既定値は true です。 少なくとも 1 つのプロトコル (HTTP または HTTPS) を許可する必要があります。
+    optional: true
+    syntax:
+      content: 'isHttpsAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソースの場所。
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      リソース名。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.optimizationType'
+    name: optimizationType
+    fullName: optimizationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: この CDN エンドポイントの最適化、ダウンロードなどを Media services にどのようなシナリオ、ユーザーの希望を指定します。 この情報は、CDN は最適化を駆動型のシナリオを適用できます。 指定できる値は、次のとおりです。'GeneralWebDelivery'、'GeneralMediaStreaming'、'VideoOnDemandMediaStreaming'、'LargeFileDownload'、'DynamicSiteAcceleration'
+    optional: true
+    syntax:
+      content: 'optimizationType?: OptimizationType'
+      return:
+        type:
+          - '@azure/arm-cdn.OptimizationType'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.originHostHeader'
+    name: originHostHeader
+    fullName: originHostHeader
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 各要求で配信元に送信されるホスト ヘッダーの値。 この空白の場合、要求のホスト名は、この値を決定します。 Azure CDN 配信元の Web Apps、Blob Storage、および Cloud Services などには、既定では、配信元ホスト名を一致するようにこのホスト ヘッダーの値が必要です。
+    optional: true
+    syntax:
+      content: 'originHostHeader?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.originPath'
+    name: originPath
+    fullName: originPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '例: contoso.cloudapp.net/originpath からコンテンツを取得する CDN を使用できる配信元のディレクトリ パス。'
+    optional: true
+    syntax:
+      content: 'originPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.origins'
+    name: origins
+    fullName: origins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CDN によって配信されるコンテンツのソース。
+    syntax:
+      content: 'origins: DeepCreatedOrigin[]'
+      return:
+        type:
+          - '@azure/arm-cdn.DeepCreatedOrigin[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.probePath'
+    name: probePath
+    fullName: probePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: のに役立ちますが動的なコンテンツの配信を高速化し、CDN の最適なルートを計算するには、配信元でホストされているファイルへのパス。 これは、配信元のパスを基準とします。
+    optional: true
+    syntax:
+      content: 'probePath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      エンドポイントの状態をプロビジョニングします。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.queryStringCachingBehavior'
+    name: queryStringCachingBehavior
+    fullName: queryStringCachingBehavior
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'CDN でクエリ文字列を含む要求をキャッシュする方法を定義します。 キャッシュされてからクエリ文字列が含まれる要求を防ぐためにキャッシュをバイパス キャッシュ、または一意の url のすべての要求をキャッシュするときに、クエリ文字列を無視できます。 指定できる値は、次のとおりです。''IgnoreQueryString'', ''BypassCaching'', ''UseQueryString'', ''NotSet'''
+    optional: true
+    syntax:
+      content: 'queryStringCachingBehavior?: QueryStringCachingBehavior'
+      return:
+        type:
+          - '@azure/arm-cdn.QueryStringCachingBehavior'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.resourceState'
+    name: resourceState
+    fullName: resourceState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エンドポイントのリソースの状態。 指定できる値は、次のとおりです。'を作成する'、'削除'、'Running'、'開始'、'停止'、'停止'**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'resourceState?: EndpointResourceState'
+      return:
+        type:
+          - '@azure/arm-cdn.EndpointResourceState'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソース タグ。
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      リソースの種類。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.TrackedResource'
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: '@azure/arm-cdn.TrackedResource'
+  - uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    name: EndpointPropertiesUpdateParametersDeliveryPolicy
+    spec.typeScript:
+      - name: EndpointPropertiesUpdateParametersDeliveryPolicy
+        fullName: EndpointPropertiesUpdateParametersDeliveryPolicy
+        uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+  - uid: '@azure/arm-cdn.GeoFilter[]'
+    name: 'GeoFilter[]'
+    spec.typeScript:
+      - name: GeoFilter
+        fullName: GeoFilter
+        uid: '@azure/arm-cdn.GeoFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cdn.OptimizationType'
+    name: OptimizationType
+    spec.typeScript:
+      - name: OptimizationType
+        fullName: OptimizationType
+        uid: '@azure/arm-cdn.OptimizationType'
+  - uid: '@azure/arm-cdn.DeepCreatedOrigin[]'
+    name: 'DeepCreatedOrigin[]'
+    spec.typeScript:
+      - name: DeepCreatedOrigin
+        fullName: DeepCreatedOrigin
+        uid: '@azure/arm-cdn.DeepCreatedOrigin'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cdn.QueryStringCachingBehavior'
+    name: QueryStringCachingBehavior
+    spec.typeScript:
+      - name: QueryStringCachingBehavior
+        fullName: QueryStringCachingBehavior
+        uid: '@azure/arm-cdn.QueryStringCachingBehavior'
+  - uid: '@azure/arm-cdn.EndpointResourceState'
+    name: EndpointResourceState
+    spec.typeScript:
+      - name: EndpointResourceState
+        fullName: EndpointResourceState
+        uid: '@azure/arm-cdn.EndpointResourceState'
