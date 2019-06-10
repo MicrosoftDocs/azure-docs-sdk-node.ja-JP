@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy'
+    name: ConsistencyPolicy
+    fullName: ConsistencyPolicy
+    children:
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a059e-101">Cosmos DB データベース アカウントの一貫性ポリシー。</span><span class="sxs-lookup"><span data-stu-id="a059e-101">The consistency policy for the Cosmos DB database account.</span></span>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+    name: defaultConsistencyLevel
+    fullName: defaultConsistencyLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a059e-102">一貫性レベルと構成の既定の設定、Cosmos DB アカウント。</span><span class="sxs-lookup"><span data-stu-id="a059e-102">The default consistency level and configuration settings of the Cosmos DB account.</span></span> <span data-ttu-id="a059e-103">指定できる値は、次のとおりです。'' 最終的です ''、''Session''、''BoundedStaleness''、''厳密な''、''ConsistentPrefix''</span><span class="sxs-lookup"><span data-stu-id="a059e-103">Possible values include: ''Eventual'', ''Session'', ''BoundedStaleness'', ''Strong'', ''ConsistentPrefix''</span></span>'
+    syntax:
+      content: 'defaultConsistencyLevel: DefaultConsistencyLevel'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+    name: maxIntervalInSeconds
+    fullName: maxIntervalInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a059e-104">Bounded Staleness の一貫性レベルを併用すると、この値は許容される秒単位での古さの時間を表します。</span><span class="sxs-lookup"><span data-stu-id="a059e-104">When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated.</span></span> <span data-ttu-id="a059e-105">この値の許容範囲は、5 86400 です。</span><span class="sxs-lookup"><span data-stu-id="a059e-105">Accepted range for this value is 5 - 86400.</span></span> <span data-ttu-id="a059e-106">DefaultConsistencyPolicy が ''BoundedStaleness'' に設定されているときに必要です。</span><span class="sxs-lookup"><span data-stu-id="a059e-106">Required when defaultConsistencyPolicy is set to ''BoundedStaleness''.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxIntervalInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    name: maxStalenessPrefix
+    fullName: maxStalenessPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a059e-107">Bounded Staleness の一貫性レベルを併用すると、この値は許容される古い要求の数を表します。</span><span class="sxs-lookup"><span data-stu-id="a059e-107">When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated.</span></span> <span data-ttu-id="a059e-108">この値の許容範囲は、1 ～ 2,147,483,647 です。</span><span class="sxs-lookup"><span data-stu-id="a059e-108">Accepted range for this value is 1 – 2,147,483,647.</span></span> <span data-ttu-id="a059e-109">DefaultConsistencyPolicy が ''BoundedStaleness'' に設定されているときに必要です。</span><span class="sxs-lookup"><span data-stu-id="a059e-109">Required when defaultConsistencyPolicy is set to ''BoundedStaleness''.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxStalenessPrefix?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    name: DefaultConsistencyLevel
+    spec.typeScript:
+      - name: DefaultConsistencyLevel
+        fullName: DefaultConsistencyLevel
+        uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'
