@@ -1,0 +1,333 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SubscriptionClient'
+    name: SubscriptionClient
+    fullName: SubscriptionClient
+    children:
+      - '@azure/service-bus.SubscriptionClient.addRule'
+      - '@azure/service-bus.SubscriptionClient.close'
+      - '@azure/service-bus.SubscriptionClient.createReceiver'
+      - '@azure/service-bus.SubscriptionClient.createReceiver_1'
+      - '@azure/service-bus.SubscriptionClient.defaultRuleName'
+      - '@azure/service-bus.SubscriptionClient.entityPath'
+      - '@azure/service-bus.SubscriptionClient.getRules'
+      - '@azure/service-bus.SubscriptionClient.id'
+      - '@azure/service-bus.SubscriptionClient.peek'
+      - '@azure/service-bus.SubscriptionClient.peekBySequenceNumber'
+      - '@azure/service-bus.SubscriptionClient.removeRule'
+      - '@azure/service-bus.SubscriptionClient.subscriptionName'
+      - '@azure/service-bus.SubscriptionClient.topicName'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="f6578-101">Service Bus のサブスクリプションとの対話を許可するクライアントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="f6578-101">Describes the client that allows interacting with a Service Bus Subscription.</span></span>
+      <span data-ttu-id="f6578-102">使用して、 `createSubscriptionClient` SubscriptionClient のインスタンスを作成する ServiceBusClient オブジェクトに対して関数</span><span class="sxs-lookup"><span data-stu-id="f6578-102">Use the `createSubscriptionClient` function on the ServiceBusClient object to instantiate a SubscriptionClient</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.addRule'
+    name: 'addRule(string, boolean | string | CorrelationFilter, undefined | string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="f6578-103">特定の規則の名前、フィルターおよびアクションで定義されているサブスクリプションのルールを追加します。</span><span class="sxs-lookup"><span data-stu-id="f6578-103">Adds a rule on the subscription as defined by the given rule name, filter and action.</span></span>
+      <span data-ttu-id="f6578-104">**注意**:ルールを追加する前に、サブスクリプションの既定の場合は true。 フィルターを削除します。</span><span class="sxs-lookup"><span data-stu-id="f6578-104">**Note**: Remove the default true filter on the subscription before adding a rule.</span></span>
+      <span data-ttu-id="f6578-105">それ以外の場合、追加されるルール効果はありませんすべてのメッセージを受信するサブスクリプションで常に実際のフィルターの結果として。</span><span class="sxs-lookup"><span data-stu-id="f6578-105">Otherwise, the added rule will have no affect as the true filter will always result in the subscription receiving all messages.</span></span>
+    syntax:
+      content: 'function addRule(ruleName: string, filter: boolean | string | CorrelationFilter, sqlRuleActionExpression?: undefined | string)'
+      parameters:
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="f6578-106">ルールの名前</span><span class="sxs-lookup"><span data-stu-id="f6578-106">Name of the rule</span></span>
+        - id: filter
+          type:
+            - boolean | string | @azure/service-bus.CorrelationFilter
+          description: '<span data-ttu-id="f6578-107">ブール値、SQL 式または相関関係フィルター。</span><span class="sxs-lookup"><span data-stu-id="f6578-107">A Boolean, SQL expression or a Correlation filter.</span></span> <span data-ttu-id="f6578-108">SQL フィルターの構文を参照してください。 [SQLFilter 構文](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-filter)します。</span><span class="sxs-lookup"><span data-stu-id="f6578-108">For SQL Filter syntax, see [SQLFilter syntax](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-filter).</span></span>'
+        - id: sqlRuleActionExpression
+          type:
+            - undefined | string
+          description: |
+            <span data-ttu-id="f6578-109">メッセージがフィルター式を満たす場合に実行するアクション。</span><span class="sxs-lookup"><span data-stu-id="f6578-109">Action to perform if the message satisfies the filtering expression.</span></span> <span data-ttu-id="f6578-110">SQL ルール アクションの構文を参照してください。 [SQLRuleAction 構文](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-rule-action)します。</span><span class="sxs-lookup"><span data-stu-id="f6578-110">For SQL Rule Action syntax, see [SQLRuleAction syntax](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-rule-action).</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="f6578-111">このクライアントによって作成された受信側の AMQP リンクを閉じます。</span><span class="sxs-lookup"><span data-stu-id="f6578-111">Closes the AMQP link for the receivers created by this client.</span></span>
+      <span data-ttu-id="f6578-112">閉じた後、SubscriptionClient もその受信者は、その他の操作を使用できます。</span><span class="sxs-lookup"><span data-stu-id="f6578-112">Once closed, neither the SubscriptionClient nor its receivers can be used for any further operations.</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.createReceiver'
+    name: createReceiver(ReceiveMode)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="f6578-113">有効になっているセッションがないサブスクリプションからメッセージを受信するためには、受信側を作成します。</span><span class="sxs-lookup"><span data-stu-id="f6578-113">Creates a Receiver for receiving messages from a Subscription which does not have sessions enabled.</span></span>
+      - <span data-ttu-id="f6578-114">この SubscriptionClient のオープンの受信者が既に存在する場合は、エラーをスローします。</span><span class="sxs-lookup"><span data-stu-id="f6578-114">Throws error if an open receiver already exists for this SubscriptionClient.</span></span>
+      - <span data-ttu-id="f6578-115">スロー`InvalidOperationError`サブスクリプションがあるセッションを有効になっている場合 (はこのメソッドのオーバー ロードを使用する場合は、`sessionOptions`引数)</span><span class="sxs-lookup"><span data-stu-id="f6578-115">Throws `InvalidOperationError` if the Subscription has sessions enabled (in which case, use the overload of this method which takes `sessionOptions` argument)</span></span>
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |
+            <span data-ttu-id="f6578-116">メッセージが受信されるモードを示す列挙型。</span><span class="sxs-lookup"><span data-stu-id="f6578-116">An enum indicating the mode in which messages should be received.</span></span> <span data-ttu-id="f6578-117">設定可能な値は、次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="f6578-117">Possible values are:</span></span>
+            - <span data-ttu-id="f6578-118">`ReceiveMode.peekLock`:このモードでは、メッセージが受信されると、受信側の特定の期間のメッセージのロックを保持します。</span><span class="sxs-lookup"><span data-stu-id="f6578-118">`ReceiveMode.peekLock`: Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="f6578-119">この時点で、メッセージが決済していない場合、[次へ] をフェッチする Service Bus に戻り、到着した受信操作。</span><span class="sxs-lookup"><span data-stu-id="f6578-119">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>
+            - <span data-ttu-id="f6578-120">`ReceiveMode.receiveAndDelete`:このモードで受信したメッセージは、Service Bus から自動的に削除を取得します。</span><span class="sxs-lookup"><span data-stu-id="f6578-120">`ReceiveMode.receiveAndDelete`: Messages received in this mode get automatically removed from Service Bus.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.Receiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.createReceiver_1'
+    name: 'createReceiver(ReceiveMode, SessionReceiverOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="f6578-121">サブスクリプションを有効になっているセッションからメッセージを受信、受信側を作成します。</span><span class="sxs-lookup"><span data-stu-id="f6578-121">Creates a Receiver for receiving messages from a session enabled Subscription.</span></span> <span data-ttu-id="f6578-122">セッション Id が指定されていない場合は、使用可能なセッション間でランダムなセッションが使用されます。</span><span class="sxs-lookup"><span data-stu-id="f6578-122">When no sessionId is given, a random session among the available sessions is used.</span></span>
+      - <span data-ttu-id="f6578-123">オープンのレシーバーは既にのセッション Id の指定された存在する場合は、エラーをスローします。</span><span class="sxs-lookup"><span data-stu-id="f6578-123">Throws error if an open receiver already exists for given sessionId.</span></span>
+      - <span data-ttu-id="f6578-124">スローします`SessionCannotBeLockedError`サブスクリプションが有効になっているセッションを持たない場合 (このケースで渡さないでください、`sessionOptions`引数) または Service Bus が (大文字と小文字 try がしばらく待ってからどの) でセッションのロックを取得できない場合</span><span class="sxs-lookup"><span data-stu-id="f6578-124">Throws `SessionCannotBeLockedError` if the Subscription does not have sessions enabled (in which case do not pass the `sessionOptions` argument) or if Service Bus is not able to get a lock on the session (in which case try again after some time)</span></span>
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode, sessionOptions: SessionReceiverOptions)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |-
+            <span data-ttu-id="f6578-125">メッセージが受信されるモードを示す列挙型。</span><span class="sxs-lookup"><span data-stu-id="f6578-125">An enum indicating the mode in which messages should be received.</span></span> <span data-ttu-id="f6578-126">設定可能な値は、次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="f6578-126">Possible values are:</span></span>
+            - <span data-ttu-id="f6578-127">`ReceiveMode.peekLock`:このモードでは、メッセージが受信されると、受信側の特定の期間のメッセージのロックを保持します。</span><span class="sxs-lookup"><span data-stu-id="f6578-127">`ReceiveMode.peekLock`: Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="f6578-128">この時点で、メッセージが決済していない場合、[次へ] をフェッチする Service Bus に戻り、到着した受信操作。</span><span class="sxs-lookup"><span data-stu-id="f6578-128">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>
+            - <span data-ttu-id="f6578-129">`ReceiveMode.receiveAndDelete`:このモードで受信したメッセージは、Service Bus から自動的に削除を取得します。</span><span class="sxs-lookup"><span data-stu-id="f6578-129">`ReceiveMode.receiveAndDelete`: Messages received in this mode get automatically removed from Service Bus.</span></span>
+        - id: sessionOptions
+          type:
+            - '@azure/service-bus.SessionReceiverOptions'
+          description: |
+            <span data-ttu-id="f6578-130">セッション受信プロセスのセッション Id との自動ロック更新時間を指定するオプションです。</span><span class="sxs-lookup"><span data-stu-id="f6578-130">Options to provide sessionId and duration of automatic lock renewal for the session receiver.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.SessionReceiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.defaultRuleName'
+    name: defaultRuleName
+    fullName: defaultRuleName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f6578-131">サブスクリプションの既定のルールの名前。</span><span class="sxs-lookup"><span data-stu-id="f6578-131">The name of the default rule on the subscription.</span></span>
+    syntax:
+      content: 'defaultRuleName: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f6578-132">このクライアントを作成する Service Bus サブスクリプションのパス。</span><span class="sxs-lookup"><span data-stu-id="f6578-132">The path for the Service Bus Subscription for which this client is created.</span></span>
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.getRules'
+    name: getRules()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f6578-133">サブスクリプションに関連付けられているすべてのルールを取得します。</span><span class="sxs-lookup"><span data-stu-id="f6578-133">Gets all rules associated with the subscription</span></span>
+    syntax:
+      content: function getRules()
+      parameters: []
+      return:
+        type:
+          - 'Promise<@azure/service-bus.RuleDescription[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f6578-134">このクライアントの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="f6578-134">A unique identifier for this client.</span></span>
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="f6578-135">アクティブなメッセージの次のバッチをフェッチ (配信不能メッセージではありませんが、遅延など)。</span><span class="sxs-lookup"><span data-stu-id="f6578-135">Fetches the next batch of active messages (including deferred but not deadlettered messages).</span></span>
+      - <span data-ttu-id="f6578-136">最初の呼び出し`peek()`最初のアクティブなメッセージがフェッチされます。</span><span class="sxs-lookup"><span data-stu-id="f6578-136">The first call to `peek()` fetches the first active message.</span></span> <span data-ttu-id="f6578-137">各後続の呼び出しでは、後続のメッセージをフェッチします。</span><span class="sxs-lookup"><span data-stu-id="f6578-137">Each subsequent call fetches the subsequent message.</span></span>
+      - <span data-ttu-id="f6578-138">異なり、`received`メッセージ、`peeked`メッセージがメッセージの読み取り専用バージョン。</span><span class="sxs-lookup"><span data-stu-id="f6578-138">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="f6578-139">できません`Completed/Abandoned/Deferred/Deadlettered`します。</span><span class="sxs-lookup"><span data-stu-id="f6578-139">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="f6578-140">ロックを更新することはできません。</span><span class="sxs-lookup"><span data-stu-id="f6578-140">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="f6578-141">目的の数のアクティブなメッセージをピークします (配信不能メッセージではありませんが、遅延など) 指定されたシーケンス番号から。</span><span class="sxs-lookup"><span data-stu-id="f6578-141">Peeks the desired number of active messages (including deferred but not deadlettered messages) from the specified sequence number.</span></span>
+      - <span data-ttu-id="f6578-142">異なり、`received`メッセージ、`peeked`メッセージがメッセージの読み取り専用バージョン。</span><span class="sxs-lookup"><span data-stu-id="f6578-142">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="f6578-143">できません`Completed/Abandoned/Deferred/Deadlettered`します。</span><span class="sxs-lookup"><span data-stu-id="f6578-143">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="f6578-144">ロックを更新することはできません。</span><span class="sxs-lookup"><span data-stu-id="f6578-144">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="f6578-145">読み取る、メッセージ シーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="f6578-145">The sequence number from where to read the message.</span></span>
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.removeRule'
+    name: removeRule(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="f6578-146">特定の規則の名前によって識別されるサブスクリプションのルールを削除します。</span><span class="sxs-lookup"><span data-stu-id="f6578-146">Removes the rule on the subscription identified by the given rule name.</span></span>
+      <span data-ttu-id="f6578-147">**注意**:サブスクリプションのすべてのルールが削除された場合、サブスクリプションには、これ以上メッセージ項目受信しません。</span><span class="sxs-lookup"><span data-stu-id="f6578-147">**Caution**: If all rules on a subscription are removed, then the subscription will not receive any more messages.</span></span>
+    syntax:
+      content: 'function removeRule(ruleName: string)'
+      parameters:
+        - id: ruleName
+          type:
+            - string
+          description: |+
+
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.subscriptionName'
+    name: subscriptionName
+    fullName: subscriptionName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f6578-148">このクライアントを作成する Service Bus サブスクリプションの名前。</span><span class="sxs-lookup"><span data-stu-id="f6578-148">The name of the Service Bus Subscription for which this client is created.</span></span>
+    syntax:
+      content: 'subscriptionName: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.topicName'
+    name: topicName
+    fullName: topicName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f6578-149">サブスクリプションを持つ Service Bus トピックの名前、このクライアントが作成されます。</span><span class="sxs-lookup"><span data-stu-id="f6578-149">The name of the Service Bus Topic for whose Subscription, this client is created.</span></span>'
+    syntax:
+      content: 'topicName: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: boolean | string | @azure/service-bus.CorrelationFilter
+    name: CorrelationFilter
+    spec.typeScript:
+      - name: 'boolean | string | '
+        fullName: 'boolean | string | '
+      - name: CorrelationFilter
+        fullName: CorrelationFilter
+        uid: '@azure/service-bus.CorrelationFilter'
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    spec.typeScript:
+      - name: Receiver
+        fullName: Receiver
+        uid: '@azure/service-bus.Receiver'
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    spec.typeScript:
+      - name: SessionReceiverOptions
+        fullName: SessionReceiverOptions
+        uid: '@azure/service-bus.SessionReceiverOptions'
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    spec.typeScript:
+      - name: SessionReceiver
+        fullName: SessionReceiver
+        uid: '@azure/service-bus.SessionReceiver'
+  - uid: 'Promise<@azure/service-bus.RuleDescription[]>'
+    name: 'RuleDescription[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: RuleDescription
+        fullName: RuleDescription
+        uid: '@azure/service-bus.RuleDescription'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'
