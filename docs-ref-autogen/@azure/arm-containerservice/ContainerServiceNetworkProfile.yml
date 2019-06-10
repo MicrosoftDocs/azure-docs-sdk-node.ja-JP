@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile'
+    name: ContainerServiceNetworkProfile
+    fullName: ContainerServiceNetworkProfile
+    children:
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.dnsServiceIP'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.dockerBridgeCidr'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPlugin'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPolicy'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.podCidr'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.serviceCidr'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="59f7a-101">ネットワーク構成のプロファイル。</span><span class="sxs-lookup"><span data-stu-id="59f7a-101">Profile of network configuration.</span></span>
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.dnsServiceIP'
+    name: dnsServiceIP
+    fullName: dnsServiceIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="59f7a-102">Kubernetes DNS サービスに割り当てられた IP アドレス。</span><span class="sxs-lookup"><span data-stu-id="59f7a-102">An IP address assigned to the Kubernetes DNS service.</span></span> <span data-ttu-id="59f7a-103">ServiceCidr で指定された Kubernetes サービスのアドレス範囲でなければなりません。</span><span class="sxs-lookup"><span data-stu-id="59f7a-103">It must be within the Kubernetes service address range specified in serviceCidr.</span></span> <span data-ttu-id="59f7a-104">既定値:''10.0.0.10''.</span><span class="sxs-lookup"><span data-stu-id="59f7a-104">Default value: ''10.0.0.10''.</span></span>'
+    optional: true
+    syntax:
+      content: 'dnsServiceIP?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.dockerBridgeCidr'
+    name: dockerBridgeCidr
+    fullName: dockerBridgeCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="59f7a-105">Docker ブリッジ ネットワークに割り当てられている、CIDR 表記法 IP 範囲。</span><span class="sxs-lookup"><span data-stu-id="59f7a-105">A CIDR notation IP range assigned to the Docker bridge network.</span></span> <span data-ttu-id="59f7a-106">サブネット IP 範囲、または Kubernetes サービスのアドレス範囲とその重複できません。</span><span class="sxs-lookup"><span data-stu-id="59f7a-106">It must not overlap with any Subnet IP ranges or the Kubernetes service address range.</span></span> <span data-ttu-id="59f7a-107">既定値:''172.17.0.1/16''.</span><span class="sxs-lookup"><span data-stu-id="59f7a-107">Default value: ''172.17.0.1/16''.</span></span>'
+    optional: true
+    syntax:
+      content: 'dockerBridgeCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPlugin'
+    name: networkPlugin
+    fullName: networkPlugin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="59f7a-108">Kubernetes ネットワークを構築するために使用されるネットワーク プラグイン。</span><span class="sxs-lookup"><span data-stu-id="59f7a-108">Network plugin used for building Kubernetes network.</span></span> <span data-ttu-id="59f7a-109">使用可能な値が含まれます: ''azure''、''kubenet''。</span><span class="sxs-lookup"><span data-stu-id="59f7a-109">Possible values include: ''azure'', ''kubenet''.</span></span> <span data-ttu-id="59f7a-110">既定値: ''kubenet''。</span><span class="sxs-lookup"><span data-stu-id="59f7a-110">Default value: ''kubenet''.</span></span>'
+    optional: true
+    syntax:
+      content: 'networkPlugin?: NetworkPlugin'
+      return:
+        type:
+          - '@azure/arm-containerservice.NetworkPlugin'
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPolicy'
+    name: networkPolicy
+    fullName: networkPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="59f7a-111">Kubernetes ネットワークを構築するために使用されるネットワーク ポリシー。</span><span class="sxs-lookup"><span data-stu-id="59f7a-111">Network policy used for building Kubernetes network.</span></span> <span data-ttu-id="59f7a-112">使用可能な値が含まれます: ''calico''、''azure''</span><span class="sxs-lookup"><span data-stu-id="59f7a-112">Possible values include: ''calico'', ''azure''</span></span>'
+    optional: true
+    syntax:
+      content: 'networkPolicy?: NetworkPolicy'
+      return:
+        type:
+          - '@azure/arm-containerservice.NetworkPolicy'
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.podCidr'
+    name: podCidr
+    fullName: podCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="59f7a-113">Kubenet を使用している場合、ポッド IP を割り当てる CIDR 表記の IP 範囲。</span><span class="sxs-lookup"><span data-stu-id="59f7a-113">A CIDR notation IP range from which to assign pod IPs when kubenet is used.</span></span> <span data-ttu-id="59f7a-114">既定値:''10.244.0.0/16''.</span><span class="sxs-lookup"><span data-stu-id="59f7a-114">Default value: ''10.244.0.0/16''.</span></span>'
+    optional: true
+    syntax:
+      content: 'podCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.serviceCidr'
+    name: serviceCidr
+    fullName: serviceCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="59f7a-115">Kubenet を使用している場合、サービス クラスター IP を割り当てる CIDR 表記の IP 範囲。</span><span class="sxs-lookup"><span data-stu-id="59f7a-115">A CIDR notation IP range from which to assign service cluster IPs.</span></span> <span data-ttu-id="59f7a-116">どのサブネット IP アドレスとも重複していてはなりません。</span><span class="sxs-lookup"><span data-stu-id="59f7a-116">It must not overlap with any Subnet IP ranges.</span></span> <span data-ttu-id="59f7a-117">既定値:''10.0.0.0/16''.</span><span class="sxs-lookup"><span data-stu-id="59f7a-117">Default value: ''10.0.0.0/16''.</span></span>'
+    optional: true
+    syntax:
+      content: 'serviceCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+references:
+  - uid: '@azure/arm-containerservice.NetworkPlugin'
+    name: NetworkPlugin
+    spec.typeScript:
+      - name: NetworkPlugin
+        fullName: NetworkPlugin
+        uid: '@azure/arm-containerservice.NetworkPlugin'
+  - uid: '@azure/arm-containerservice.NetworkPolicy'
+    name: NetworkPolicy
+    spec.typeScript:
+      - name: NetworkPolicy
+        fullName: NetworkPolicy
+        uid: '@azure/arm-containerservice.NetworkPolicy'

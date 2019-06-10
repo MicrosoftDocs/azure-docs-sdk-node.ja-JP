@@ -1,0 +1,727 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-dns.Zones'
+    name: Zones
+    fullName: Zones
+    children:
+      - '@azure/arm-dns.Zones.beginDeleteMethod'
+      - '@azure/arm-dns.Zones.createOrUpdate'
+      - '@azure/arm-dns.Zones.createOrUpdate_1'
+      - '@azure/arm-dns.Zones.createOrUpdate_2'
+      - '@azure/arm-dns.Zones.deleteMethod'
+      - '@azure/arm-dns.Zones.get'
+      - '@azure/arm-dns.Zones.get_2'
+      - '@azure/arm-dns.Zones.get_1'
+      - '@azure/arm-dns.Zones.list'
+      - '@azure/arm-dns.Zones.list_1'
+      - '@azure/arm-dns.Zones.list_2'
+      - '@azure/arm-dns.Zones.listByResourceGroup'
+      - '@azure/arm-dns.Zones.listByResourceGroup_1'
+      - '@azure/arm-dns.Zones.listByResourceGroup_2'
+      - '@azure/arm-dns.Zones.listByResourceGroupNext'
+      - '@azure/arm-dns.Zones.listByResourceGroupNext_2'
+      - '@azure/arm-dns.Zones.listByResourceGroupNext_1'
+      - '@azure/arm-dns.Zones.listNext'
+      - '@azure/arm-dns.Zones.listNext_2'
+      - '@azure/arm-dns.Zones.listNext_1'
+      - '@azure/arm-dns.Zones.update'
+      - '@azure/arm-dns.Zones.update_1'
+      - '@azure/arm-dns.Zones.update_2'
+      - '@azure/arm-dns.Zones.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="6ad13-101">ゾーンを表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="6ad13-101">Class representing a Zones.</span></span>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, Models.ZonesBeginDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="6ad13-102">DNS ゾーンを削除します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-102">Deletes a DNS zone.</span></span> <span data-ttu-id="6ad13-103">警告:ゾーン内のすべての DNS レコードも削除されます。</span><span class="sxs-lookup"><span data-stu-id="6ad13-103">WARNING: All DNS records in the zone will also be deleted.</span></span> <span data-ttu-id="6ad13-104">削除操作は元に戻すことができません。</span><span class="sxs-lookup"><span data-stu-id="6ad13-104">This operation cannot be undone.</span></span>'
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, zoneName: string, options?: Models.ZonesBeginDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-105">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-105">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-106">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-106">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - Models.ZonesBeginDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.createOrUpdate'
+    name: 'createOrUpdate(string, string, Zone, Models.ZonesCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ad13-107">作成または DNS ゾーンを更新します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-107">Creates or updates a DNS zone.</span></span> <span data-ttu-id="6ad13-108">ゾーン内の DNS レコードは変更されません。</span><span class="sxs-lookup"><span data-stu-id="6ad13-108">Does not modify DNS records within the zone.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, parameters: Zone, options?: Models.ZonesCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-109">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-109">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-110">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-110">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-dns.Zone'
+          description: <span data-ttu-id="6ad13-111">CreateOrUpdate 操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6ad13-111">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - Models.ZonesCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, Zone, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, parameters: Zone, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-112">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-112">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-113">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-113">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-dns.Zone'
+          description: <span data-ttu-id="6ad13-114">CreateOrUpdate 操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6ad13-114">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            <span data-ttu-id="6ad13-115">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-115">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, Zone, ZonesCreateOrUpdateOptionalParams, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, parameters: Zone, options: ZonesCreateOrUpdateOptionalParams, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-116">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-116">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-117">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-117">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-dns.Zone'
+          description: <span data-ttu-id="6ad13-118">CreateOrUpdate 操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6ad13-118">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.ZonesCreateOrUpdateOptionalParams'
+          description: <span data-ttu-id="6ad13-119">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6ad13-119">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            <span data-ttu-id="6ad13-120">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-120">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.deleteMethod'
+    name: 'deleteMethod(string, string, Models.ZonesDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="6ad13-121">DNS ゾーンを削除します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-121">Deletes a DNS zone.</span></span> <span data-ttu-id="6ad13-122">警告:ゾーン内のすべての DNS レコードも削除されます。</span><span class="sxs-lookup"><span data-stu-id="6ad13-122">WARNING: All DNS records in the zone will also be deleted.</span></span> <span data-ttu-id="6ad13-123">削除操作は元に戻すことができません。</span><span class="sxs-lookup"><span data-stu-id="6ad13-123">This operation cannot be undone.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, options?: Models.ZonesDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-124">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-124">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-125">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-125">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - Models.ZonesDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="6ad13-126">DNS ゾーンを取得します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-126">Gets a DNS zone.</span></span> <span data-ttu-id="6ad13-127">ゾーンのプロパティが、ゾーン内のレコード セットにないを取得します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-127">Retrieves the zone properties, but not the record sets within the zone.</span></span>'
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-128">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-128">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-129">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-129">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, options: RequestOptionsBase, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-130">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-130">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-131">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-131">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6ad13-132">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6ad13-132">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            <span data-ttu-id="6ad13-133">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-133">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.get_1'
+    name: 'get(string, string, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-134">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-134">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-135">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-135">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            <span data-ttu-id="6ad13-136">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.list'
+    name: list(Models.ZonesListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ad13-137">サブスクリプション内のすべてのリソース グループ内の DNS ゾーンを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-137">Lists the DNS zones in all resource groups in a subscription.</span></span>
+    syntax:
+      content: 'function list(options?: Models.ZonesListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.ZonesListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesListResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.list_1'
+    name: list(ServiceCallback<ZoneListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            <span data-ttu-id="6ad13-138">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-138">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesListResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.list_2'
+    name: 'list(ZonesListOptionalParams, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: ZonesListOptionalParams, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-dns.ZonesListOptionalParams'
+          description: <span data-ttu-id="6ad13-139">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6ad13-139">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            <span data-ttu-id="6ad13-140">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-140">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesListResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.ZonesListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ad13-141">リソース グループ内の DNS ゾーンを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-141">Lists the DNS zones within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.ZonesListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-142">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-142">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - Models.ZonesListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-143">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-143">The name of the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            <span data-ttu-id="6ad13-144">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, ZonesListByResourceGroupOptionalParams, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: ZonesListByResourceGroupOptionalParams, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-145">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-145">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.ZonesListByResourceGroupOptionalParams'
+          description: <span data-ttu-id="6ad13-146">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6ad13-146">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            <span data-ttu-id="6ad13-147">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ad13-148">リソース グループ内の DNS ゾーンを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-148">Lists the DNS zones within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-149">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="6ad13-149">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-150">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="6ad13-150">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6ad13-151">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6ad13-151">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            <span data-ttu-id="6ad13-152">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-153">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="6ad13-153">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            <span data-ttu-id="6ad13-154">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-154">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ad13-155">サブスクリプション内のすべてのリソース グループ内の DNS ゾーンを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-155">Lists the DNS zones in all resource groups in a subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-156">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="6ad13-156">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesListNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-157">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="6ad13-157">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6ad13-158">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6ad13-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            <span data-ttu-id="6ad13-159">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesListNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listNext_1'
+    name: 'listNext(string, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-160">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="6ad13-160">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            <span data-ttu-id="6ad13-161">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesListNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.update'
+    name: 'update(string, string, ZoneUpdate, Models.ZonesUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ad13-162">DNS ゾーンを更新します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-162">Updates a DNS zone.</span></span> <span data-ttu-id="6ad13-163">ゾーン内の DNS レコードは変更されません。</span><span class="sxs-lookup"><span data-stu-id="6ad13-163">Does not modify DNS records within the zone.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, parameters: ZoneUpdate, options?: Models.ZonesUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-164">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-164">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-165">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-165">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-dns.ZoneUpdate'
+          description: <span data-ttu-id="6ad13-166">更新操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6ad13-166">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - Models.ZonesUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.update_1'
+    name: 'update(string, string, ZoneUpdate, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, parameters: ZoneUpdate, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-167">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-167">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-168">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-168">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-dns.ZoneUpdate'
+          description: <span data-ttu-id="6ad13-169">更新操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6ad13-169">Parameters supplied to the Update operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            <span data-ttu-id="6ad13-170">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.update_2'
+    name: 'update(string, string, ZoneUpdate, ZonesUpdateOptionalParams, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, parameters: ZoneUpdate, options: ZonesUpdateOptionalParams, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-171">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-171">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="6ad13-172">(末尾のドット) なしの DNS ゾーンの名前。</span><span class="sxs-lookup"><span data-stu-id="6ad13-172">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-dns.ZoneUpdate'
+          description: <span data-ttu-id="6ad13-173">更新操作に指定されたパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6ad13-173">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.ZonesUpdateOptionalParams'
+          description: <span data-ttu-id="6ad13-174">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="6ad13-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            <span data-ttu-id="6ad13-175">コールバック</span><span class="sxs-lookup"><span data-stu-id="6ad13-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ZonesUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.constructor'
+    name: Zones(DnsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6ad13-176">ゾーンを作成します。</span><span class="sxs-lookup"><span data-stu-id="6ad13-176">Create a Zones.</span></span>
+    syntax:
+      content: 'new Zones(client: DnsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-dns.DnsManagementClientContext'
+          description: |
+            <span data-ttu-id="6ad13-177">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="6ad13-177">Reference to the service client.</span></span>
+    package: '@azure/arm-dns'
+references:
+  - uid: '@azure/arm-dns.DnsManagementClientContext'
+    name: DnsManagementClientContext
+    spec.typeScript:
+      - name: DnsManagementClientContext
+        fullName: DnsManagementClientContext
+        uid: '@azure/arm-dns.DnsManagementClientContext'
+  - uid: '@azure/arm-dns.Zone'
+    name: Zone
+    spec.typeScript:
+      - name: Zone
+        fullName: Zone
+        uid: '@azure/arm-dns.Zone'
+  - uid: ServiceCallback<@azure/arm-dns.Zone>
+    name: Zone>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Zone
+        fullName: Zone
+        uid: '@azure/arm-dns.Zone'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.ZonesCreateOrUpdateOptionalParams'
+    name: ZonesCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: ZonesCreateOrUpdateOptionalParams
+        fullName: ZonesCreateOrUpdateOptionalParams
+        uid: '@azure/arm-dns.ZonesCreateOrUpdateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-dns.ZoneListResult>
+    name: ZoneListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ZoneListResult
+        fullName: ZoneListResult
+        uid: '@azure/arm-dns.ZoneListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.ZonesListOptionalParams'
+    name: ZonesListOptionalParams
+    spec.typeScript:
+      - name: ZonesListOptionalParams
+        fullName: ZonesListOptionalParams
+        uid: '@azure/arm-dns.ZonesListOptionalParams'
+  - uid: '@azure/arm-dns.ZonesListByResourceGroupOptionalParams'
+    name: ZonesListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: ZonesListByResourceGroupOptionalParams
+        fullName: ZonesListByResourceGroupOptionalParams
+        uid: '@azure/arm-dns.ZonesListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-dns.ZoneUpdate'
+    name: ZoneUpdate
+    spec.typeScript:
+      - name: ZoneUpdate
+        fullName: ZoneUpdate
+        uid: '@azure/arm-dns.ZoneUpdate'
+  - uid: '@azure/arm-dns.ZonesUpdateOptionalParams'
+    name: ZonesUpdateOptionalParams
+    spec.typeScript:
+      - name: ZonesUpdateOptionalParams
+        fullName: ZonesUpdateOptionalParams
+        uid: '@azure/arm-dns.ZonesUpdateOptionalParams'
