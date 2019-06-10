@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile'
+    name: VirtualMachineScaleSetOSProfile
+    fullName: VirtualMachineScaleSetOSProfile
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminPassword'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminUsername'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.computerNamePrefix'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.customData'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.linuxConfiguration'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.secrets'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.windowsConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: 仮想マシン スケール セットの OS プロファイルをについて説明します。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminPassword'
+    name: adminPassword
+    fullName: adminPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      管理者アカウントのパスワードを指定します。 <br><br> **長さ (Windows):** 8 文字 <br><br> **長さ (Linux):** 6 文字 <br><br> **(Windows) の最大長:** 123 文字 <br><br> **(Linux) の最大長:** 72 文字 <br><br>
+      **複雑さの要件:** 以下の 4 種類のうち 3 の条件を満たす必要があります。 <br> 小文字を含む <br>上の文字します。 <br> 数字があります。 <br> 特殊文字 (正規表現の一致 [\W_]) を含む <br><br> **値が許可されていません:** "abc@123"、"P@$$w0rd"、"P@ssw0rd「,」P@ssword123"、"Pa$ $word"、"pass@word1"、"Password!"、"Password1"、"Password22"、"iloveyou!" <br><br> パスワードをリセットするため、次を参照してください[リモート デスクトップ サービスまたは Windows VM の場合は、そのログイン パスワードをリセットする方法。](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> ルート パスワードをリセットするため、次を参照してください[管理ユーザー、SSH、のチェックまたは VMAccess 拡張機能を使用して Azure Linux Vm でディスクの修復。](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)
+    optional: true
+    syntax:
+      content: 'adminPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminUsername'
+    name: adminUsername
+    fullName: adminUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      管理者アカウントの名前を指定します。 <br><br> **Windows のみの制限:** 終わることはできません"です"。 <br><br> **値が許可されていません:** "administrator"、"admin"、"user"、"user1"、"test"、"user2"、"test1"、"user3"、"admin1"、「1」、「123」、"a"、"actuser"、"adm"、"admin2"、"aspnet"、"backup"、「コンソール」、"david"、"guest"、"john"、「所有者」、"root"、"server"、"sql"、「サポート」、"support_388945a0"、"sys"、「test2.」、"test3"、"user4"、"user5"。 <br><br> **長さ (Linux):** 1 文字 <br><br> **(Linux) の最大長:** 64 文字 <br><br> **(Windows) の最大長:** 20 文字  <br><br><li> Linux VM にルート アクセスを参照してください[Azure で Linux 仮想マシンで root 権限の使用。](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li>
+      このフィールドには使用しない必要がある Linux 上の組み込みシステム ユーザーの一覧は、次を参照してください[Azure の Linux 用のユーザー名の選択。](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+    optional: true
+    syntax:
+      content: 'adminUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.computerNamePrefix'
+    name: computerNamePrefix
+    fullName: computerNamePrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: スケール セット内のすべての仮想マシンのコンピューター名のプレフィックスを指定します。 コンピューター名のプレフィックスは、1 ~ 15 文字である必要があります。
+    optional: true
+    syntax:
+      content: 'computerNamePrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.customData'
+    name: customData
+    fullName: customData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'カスタム データの base 64 でエンコードされた文字列を指定します。 Base 64 でエンコードされた文字列は、仮想マシン上のファイルとして保存されるバイナリ配列にデコードされます。 バイナリ配列の最大長は 65535 バイトです。 <br><br> 参照してください、cloud-init を使用して、VM の[cloud-init を使用して作成時に Linux VM をカスタマイズするには](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)'
+    optional: true
+    syntax:
+      content: 'customData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.linuxConfiguration'
+    name: linuxConfiguration
+    fullName: linuxConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      仮想マシン上の Linux オペレーティング システムの設定を指定します。 <br><br>サポートされている Linux ディストリビューションの一覧は、次を参照してください[Linux Azure-Endorsed ディストリビューション。](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+      <br><br> 動作保証外のディストリビューションを実行するため、次を参照してください。[ディストリビューションの総目録について](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)します。
+    optional: true
+    syntax:
+      content: 'linuxConfiguration?: LinuxConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.LinuxConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.secrets'
+    name: secrets
+    fullName: secrets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: スケール セット内の仮想マシンにインストールされる証明書のセットを指定します。
+    optional: true
+    syntax:
+      content: 'secrets?: VaultSecretGroup[]'
+      return:
+        type:
+          - '@azure/arm-compute.VaultSecretGroup[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.windowsConfiguration'
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仮想マシン上の Windows オペレーティング システムの設定を指定します。
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WindowsConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    spec.typeScript:
+      - name: LinuxConfiguration
+        fullName: LinuxConfiguration
+        uid: '@azure/arm-compute.LinuxConfiguration'
+  - uid: '@azure/arm-compute.VaultSecretGroup[]'
+    name: 'VaultSecretGroup[]'
+    spec.typeScript:
+      - name: VaultSecretGroup
+        fullName: VaultSecretGroup
+        uid: '@azure/arm-compute.VaultSecretGroup'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: '@azure/arm-compute.WindowsConfiguration'
