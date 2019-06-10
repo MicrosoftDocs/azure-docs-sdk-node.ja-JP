@@ -1,0 +1,465 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-deploymentmanager.Rollouts'
+    name: Rollouts
+    fullName: Rollouts
+    children:
+      - '@azure/arm-deploymentmanager.Rollouts.beginCreateOrUpdate'
+      - '@azure/arm-deploymentmanager.Rollouts.cancel'
+      - '@azure/arm-deploymentmanager.Rollouts.cancel_2'
+      - '@azure/arm-deploymentmanager.Rollouts.cancel_1'
+      - '@azure/arm-deploymentmanager.Rollouts.createOrUpdate'
+      - '@azure/arm-deploymentmanager.Rollouts.deleteMethod'
+      - '@azure/arm-deploymentmanager.Rollouts.deleteMethod_2'
+      - '@azure/arm-deploymentmanager.Rollouts.deleteMethod_1'
+      - '@azure/arm-deploymentmanager.Rollouts.get'
+      - '@azure/arm-deploymentmanager.Rollouts.get_2'
+      - '@azure/arm-deploymentmanager.Rollouts.get_1'
+      - '@azure/arm-deploymentmanager.Rollouts.restart'
+      - '@azure/arm-deploymentmanager.Rollouts.restart_2'
+      - '@azure/arm-deploymentmanager.Rollouts.restart_1'
+      - '@azure/arm-deploymentmanager.Rollouts.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="3f83b-101">ロールアウトを表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="3f83b-101">Class representing a Rollouts.</span></span>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, Models.RolloutsBeginCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3f83b-102">これは非同期操作であり、この操作によって返される location ヘッダーを使用して完了をポーリングすることができます。</span><span class="sxs-lookup"><span data-stu-id="3f83b-102">This is an asynchronous operation and can be polled to completion using the location header returned by this operation.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, rolloutName: string, options?: Models.RolloutsBeginCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-103">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-103">The name of the resource group.</span></span> <span data-ttu-id="3f83b-104">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-104">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-105">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-105">The rollout name.</span></span>
+        - id: options
+          type:
+            - Models.RolloutsBeginCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.cancel'
+    name: 'cancel(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3f83b-106">ロールアウトをのみ実行をキャンセルできます。</span><span class="sxs-lookup"><span data-stu-id="3f83b-106">Only running rollouts can be canceled.</span></span>
+    syntax:
+      content: 'function cancel(resourceGroupName: string, rolloutName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-107">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-107">The name of the resource group.</span></span> <span data-ttu-id="3f83b-108">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-108">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-109">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-109">The rollout name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RolloutsCancelResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.cancel_2'
+    name: 'cancel(string, string, RequestOptionsBase, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, rolloutName: string, options: RequestOptionsBase, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-110">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-110">The name of the resource group.</span></span> <span data-ttu-id="3f83b-111">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-111">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-112">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-112">The rollout name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3f83b-113">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="3f83b-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="3f83b-114">コールバック</span><span class="sxs-lookup"><span data-stu-id="3f83b-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsCancelResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.cancel_1'
+    name: 'cancel(string, string, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, rolloutName: string, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-115">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-115">The name of the resource group.</span></span> <span data-ttu-id="3f83b-116">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-116">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-117">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-117">The rollout name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="3f83b-118">コールバック</span><span class="sxs-lookup"><span data-stu-id="3f83b-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsCancelResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.createOrUpdate'
+    name: 'createOrUpdate(string, string, Models.RolloutsCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3f83b-119">これは非同期操作であり、この操作によって返される location ヘッダーを使用して完了をポーリングすることができます。</span><span class="sxs-lookup"><span data-stu-id="3f83b-119">This is an asynchronous operation and can be polled to completion using the location header returned by this operation.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, rolloutName: string, options?: Models.RolloutsCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-120">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-120">The name of the resource group.</span></span> <span data-ttu-id="3f83b-121">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-121">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-122">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-122">The rollout name.</span></span>
+        - id: options
+          type:
+            - Models.RolloutsCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RolloutsCreateOrUpdateResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3f83b-123">終了状態での展開のみを削除できます。</span><span class="sxs-lookup"><span data-stu-id="3f83b-123">Only rollouts in terminal state can be deleted.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, rolloutName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-124">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-124">The name of the resource group.</span></span> <span data-ttu-id="3f83b-125">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-125">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-126">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-126">The rollout name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, rolloutName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-127">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-127">The name of the resource group.</span></span> <span data-ttu-id="3f83b-128">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-128">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-129">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-129">The rollout name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="3f83b-130">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="3f83b-130">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="3f83b-131">コールバック</span><span class="sxs-lookup"><span data-stu-id="3f83b-131">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, rolloutName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-132">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-132">The name of the resource group.</span></span> <span data-ttu-id="3f83b-133">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-133">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-134">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-134">The rollout name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="3f83b-135">コールバック</span><span class="sxs-lookup"><span data-stu-id="3f83b-135">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.get'
+    name: 'get(string, string, Models.RolloutsGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rolloutName: string, options?: Models.RolloutsGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-136">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-136">The name of the resource group.</span></span> <span data-ttu-id="3f83b-137">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-137">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-138">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-138">The rollout name.</span></span>
+        - id: options
+          type:
+            - Models.RolloutsGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RolloutsGetResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.get_2'
+    name: 'get(string, string, RolloutsGetOptionalParams, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rolloutName: string, options: RolloutsGetOptionalParams, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-139">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-139">The name of the resource group.</span></span> <span data-ttu-id="3f83b-140">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-140">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-141">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-141">The rollout name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-deploymentmanager.RolloutsGetOptionalParams'
+          description: <span data-ttu-id="3f83b-142">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="3f83b-142">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="3f83b-143">コールバック</span><span class="sxs-lookup"><span data-stu-id="3f83b-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsGetResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.get_1'
+    name: 'get(string, string, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rolloutName: string, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-144">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-144">The name of the resource group.</span></span> <span data-ttu-id="3f83b-145">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-145">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-146">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-146">The rollout name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="3f83b-147">コールバック</span><span class="sxs-lookup"><span data-stu-id="3f83b-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsGetResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.restart'
+    name: 'restart(string, string, Models.RolloutsRestartOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3f83b-148">失敗した展開のみを再開できます。</span><span class="sxs-lookup"><span data-stu-id="3f83b-148">Only failed rollouts can be restarted.</span></span>
+    syntax:
+      content: 'function restart(resourceGroupName: string, rolloutName: string, options?: Models.RolloutsRestartOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-149">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-149">The name of the resource group.</span></span> <span data-ttu-id="3f83b-150">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-150">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-151">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-151">The rollout name.</span></span>
+        - id: options
+          type:
+            - Models.RolloutsRestartOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RolloutsRestartResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.restart_2'
+    name: 'restart(string, string, RolloutsRestartOptionalParams, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function restart(resourceGroupName: string, rolloutName: string, options: RolloutsRestartOptionalParams, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-152">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-152">The name of the resource group.</span></span> <span data-ttu-id="3f83b-153">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-153">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-154">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-154">The rollout name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-deploymentmanager.RolloutsRestartOptionalParams'
+          description: <span data-ttu-id="3f83b-155">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="3f83b-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="3f83b-156">コールバック</span><span class="sxs-lookup"><span data-stu-id="3f83b-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsRestartResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.restart_1'
+    name: 'restart(string, string, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function restart(resourceGroupName: string, rolloutName: string, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-157">リソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-157">The name of the resource group.</span></span> <span data-ttu-id="3f83b-158">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="3f83b-158">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="3f83b-159">ロールアウトの名前。</span><span class="sxs-lookup"><span data-stu-id="3f83b-159">The rollout name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="3f83b-160">コールバック</span><span class="sxs-lookup"><span data-stu-id="3f83b-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsRestartResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.constructor'
+    name: Rollouts(AzureDeploymentManagerContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="3f83b-161">展開を作成します。</span><span class="sxs-lookup"><span data-stu-id="3f83b-161">Create a Rollouts.</span></span>
+    syntax:
+      content: 'new Rollouts(client: AzureDeploymentManagerContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-deploymentmanager.AzureDeploymentManagerContext'
+          description: |
+            <span data-ttu-id="3f83b-162">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="3f83b-162">Reference to the service client.</span></span>
+    package: '@azure/arm-deploymentmanager'
+references:
+  - uid: '@azure/arm-deploymentmanager.AzureDeploymentManagerContext'
+    name: AzureDeploymentManagerContext
+    spec.typeScript:
+      - name: AzureDeploymentManagerContext
+        fullName: AzureDeploymentManagerContext
+        uid: '@azure/arm-deploymentmanager.AzureDeploymentManagerContext'
+  - uid: ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+    name: Rollout>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Rollout
+        fullName: Rollout
+        uid: '@azure/arm-deploymentmanager.Rollout'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-deploymentmanager.RolloutsGetOptionalParams'
+    name: RolloutsGetOptionalParams
+    spec.typeScript:
+      - name: RolloutsGetOptionalParams
+        fullName: RolloutsGetOptionalParams
+        uid: '@azure/arm-deploymentmanager.RolloutsGetOptionalParams'
+  - uid: '@azure/arm-deploymentmanager.RolloutsRestartOptionalParams'
+    name: RolloutsRestartOptionalParams
+    spec.typeScript:
+      - name: RolloutsRestartOptionalParams
+        fullName: RolloutsRestartOptionalParams
+        uid: '@azure/arm-deploymentmanager.RolloutsRestartOptionalParams'
