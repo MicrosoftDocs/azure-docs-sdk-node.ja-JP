@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    fullName: UploadBatchServiceLogsConfiguration
+    children:
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="4aa49-101">UploadBatchServiceLogsConfiguration を表すインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="4aa49-101">An interface representing UploadBatchServiceLogsConfiguration.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4aa49-102">Batch サービスのログ ファイルのアップロード先 Azure Blob Storage 内のコンテナーの URL。</span><span class="sxs-lookup"><span data-stu-id="4aa49-102">The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s).</span></span> <span data-ttu-id="4aa49-103">URL は、Shared Access Signature (SAS)、コンテナーに対する書き込みアクセス許可の付与を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="4aa49-103">The URL must include a Shared Access Signature (SAS) granting write permissions to the container.</span></span> <span data-ttu-id="4aa49-104">SAS 期間には、アップロードが完了するのには十分な時間を許可する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4aa49-104">The SAS duration must allow enough time for the upload to finish.</span></span> <span data-ttu-id="4aa49-105">SAS の開始時刻は省略可能ですが指定されていないことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="4aa49-105">The start time for SAS is optional and recommended to not be specified.</span></span>
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4aa49-106">Batch サービス ログ ファイルをアップロードする時間の範囲の終了。</span><span class="sxs-lookup"><span data-stu-id="4aa49-106">The end of the time range from which to upload Batch Service log file(s).</span></span> <span data-ttu-id="4aa49-107">時間範囲のログ メッセージを含む任意のログ ファイルがアップロードされます。</span><span class="sxs-lookup"><span data-stu-id="4aa49-107">Any log file containing a log message in the time range will be uploaded.</span></span> <span data-ttu-id="4aa49-108">つまり、操作が全体のログ ファイルは常にアップロードされますが、操作が要求されているよりも少ないログを取得しないようにするために要求したよりも多くのログを取得可能性があります。</span><span class="sxs-lookup"><span data-stu-id="4aa49-108">This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested.</span></span> <span data-ttu-id="4aa49-109">省略した場合、既定では、開始時刻後に利用可能なすべてのログをアップロードします。</span><span class="sxs-lookup"><span data-stu-id="4aa49-109">If omitted, the default is to upload all logs available after the startTime.</span></span>'
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4aa49-110">Batch サービス ログ ファイルをアップロードする時間の範囲の開始。</span><span class="sxs-lookup"><span data-stu-id="4aa49-110">The start of the time range from which to upload Batch Service log file(s).</span></span> <span data-ttu-id="4aa49-111">時間範囲のログ メッセージを含む任意のログ ファイルがアップロードされます。</span><span class="sxs-lookup"><span data-stu-id="4aa49-111">Any log file containing a log message in the time range will be uploaded.</span></span> <span data-ttu-id="4aa49-112">つまり、操作が全体のログ ファイルは常にアップロードされますが、操作が要求されているよりも少ないログを取得しないようにするために要求したよりも多くのログを取得可能性があります。</span><span class="sxs-lookup"><span data-stu-id="4aa49-112">This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested.</span></span>'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'

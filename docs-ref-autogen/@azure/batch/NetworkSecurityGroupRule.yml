@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkSecurityGroupRule'
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - '@azure/batch.NetworkSecurityGroupRule.access'
+      - '@azure/batch.NetworkSecurityGroupRule.priority'
+      - '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8af64-101">NetworkSecurityGroupRule を表すインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="8af64-101">An interface representing NetworkSecurityGroupRule.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.access'
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8af64-102">このアクションは、指定した IP アドレス、サブネットの範囲またはタグに対して実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8af64-102">The action that should be taken for a specified IP address, subnet range or tag.</span></span> <span data-ttu-id="8af64-103">使用可能な値が含まれます: ''許可''、''拒否''</span><span class="sxs-lookup"><span data-stu-id="8af64-103">Possible values include: ''allow'', ''deny''</span></span>'
+    syntax:
+      content: 'access: NetworkSecurityGroupRuleAccess'
+      return:
+        type:
+          - '@azure/batch.NetworkSecurityGroupRuleAccess'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8af64-104">このルールの優先順位。</span><span class="sxs-lookup"><span data-stu-id="8af64-104">The priority for this rule.</span></span> <span data-ttu-id="8af64-105">プール内の優先順位は一意であり、優先順位の順序で評価されます。</span><span class="sxs-lookup"><span data-stu-id="8af64-105">Priorities within a pool must be unique and are evaluated in order of priority.</span></span> <span data-ttu-id="8af64-106">数値が低いほど、優先度は高くなります。</span><span class="sxs-lookup"><span data-stu-id="8af64-106">The lower the number the higher the priority.</span></span> <span data-ttu-id="8af64-107">たとえば、ルールを指定して、150、250、350 の順序番号を持つ可能性があります。</span><span class="sxs-lookup"><span data-stu-id="8af64-107">For example, rules could be specified with order numbers of 150, 250, and 350.</span></span> <span data-ttu-id="8af64-108">150 の発注番号を持つルールは、250 の順序であるルールよりも優先されます。</span><span class="sxs-lookup"><span data-stu-id="8af64-108">The rule with the order number of 150 takes precedence over the rule that has an order of 250.</span></span> <span data-ttu-id="8af64-109">許可される優先度は、150 に 3500 です。</span><span class="sxs-lookup"><span data-stu-id="8af64-109">Allowed priorities are 150 to 3500.</span></span> <span data-ttu-id="8af64-110">場合は、要求は HTTP ステータス コード 400 で失敗の予約済みまたは重複した値が提供されます。</span><span class="sxs-lookup"><span data-stu-id="8af64-110">If any reserved or duplicate values are provided the request fails with HTTP status code 400.</span></span>'
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8af64-111">ソース アドレスのプレフィックスまたはルールに関して一致するタグ。</span><span class="sxs-lookup"><span data-stu-id="8af64-111">The source address prefix or tag to match for the rule.</span></span> <span data-ttu-id="8af64-112">有効な値は 1 つの IP アドレス (例: 10.10.10.10)、IP サブネット (192.168.1.0/24 など)、既定のタグ、または \* (すべてのアドレス) にします。</span><span class="sxs-lookup"><span data-stu-id="8af64-112">Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or \* (for all addresses).</span></span>
+      <span data-ttu-id="8af64-113">その他の場合、要求は HTTP ステータス コード 400 で失敗値が提供されます。</span><span class="sxs-lookup"><span data-stu-id="8af64-113">If any other values are provided the request fails with HTTP status code 400.</span></span>
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
+    name: NetworkSecurityGroupRuleAccess
+    spec.typeScript:
+      - name: NetworkSecurityGroupRuleAccess
+        fullName: NetworkSecurityGroupRuleAccess
+        uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
