@@ -1,0 +1,285 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobSpecification'
+    name: JobSpecification
+    fullName: JobSpecification
+    children:
+      - '@azure/batch.JobSpecification.commonEnvironmentSettings'
+      - '@azure/batch.JobSpecification.constraints'
+      - '@azure/batch.JobSpecification.displayName'
+      - '@azure/batch.JobSpecification.jobManagerTask'
+      - '@azure/batch.JobSpecification.jobPreparationTask'
+      - '@azure/batch.JobSpecification.jobReleaseTask'
+      - '@azure/batch.JobSpecification.metadata'
+      - '@azure/batch.JobSpecification.networkConfiguration'
+      - '@azure/batch.JobSpecification.onAllTasksComplete'
+      - '@azure/batch.JobSpecification.onTaskFailure'
+      - '@azure/batch.JobSpecification.poolInfo'
+      - '@azure/batch.JobSpecification.priority'
+      - '@azure/batch.JobSpecification.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: JobSpecification を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一般的な環境変数の設定の一覧。 これらの環境変数は、このスケジュール (ジョブ マネージャー、ジョブの準備およびジョブ リリース タスクを含む) で作成されたジョブのすべてのタスクに設定されます。 個々 のタスクは、ここで指定した値が異なる同じ設定名を指定することで、環境設定をオーバーライドできます。
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このスケジュールで作成されたジョブの実行の制約。
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このスケジュールで作成されたジョブの表示名。 名前は一意である必要はありませんし、最大長 1024 まで任意の Unicode 文字を含めることができます。
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このスケジュールでジョブを開始するときに起動されるようにジョブ マネージャー タスクの詳細。 ジョブがジョブ マネージャー タスクを指定しない場合、ユーザーがタスク API を使用して、ジョブにタスクを追加する必要があります明示的にします。 ジョブがジョブ マネージャー タスクを指定する場合、Batch サービスは、ジョブが作成され、ジョブ内の他のタスクをスケジュールする前に、ジョブ マネージャー タスクのスケジュールを設定しようと、ジョブ マネージャー タスクを作成します。
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このスケジュールで作成されたジョブのジョブ準備タスク。 ジョブにジョブの準備タスクがある場合は、Batch サービスは、ジョブ準備タスクをそのコンピューティング ノードでそのジョブのすべてのタスクを開始する前にコンピューティング ノードで実行します。
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このスケジュールで作成されたジョブのジョブのリリース タスク。 ジョブのリリース タスクの主な目的は、コンピューティング ノード、ジョブ準備タスクによって行われた変更を取り消すです。 アクティビティ例にはでは、ローカルのファイルを削除するか、ジョブの準備の一環として開始されたサービスをシャット ダウンが含まれます。 また、ジョブのジョブ準備タスクを指定せず、ジョブ解放タスクを指定できません。 Batch サービスでは、ジョブの準備タスクを実行したコンピューティング ノードでジョブ解放タスクが実行されます。
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      メタデータとしては、このスケジュールで作成された各ジョブに関連付けられている名前/値ペアのリスト。
+      Batch サービスがメタデータに意味を割り当てませんユーザー コードの使用のためだけです。
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブのネットワーク構成。
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'このスケジュールで作成されたジョブのすべてのタスクが完了した状態では場合に、アクション、Batch サービスを実行する必要があります。 ジョブにタスクが含まれていない場合、すべてのタスクと見なされること完了に注意してください。 このオプションは、最もよくジョブ マネージャー タスクでは使用したがってジョブの自動終了せずジョブ マネージャーを使用する場合は、最初に noaction に onAllTasksComplete を設定および、タスクの追加が完了したら、terminatejob に onAllTasksComplete を設定するジョブのプロパティを更新する必要があります。 既定値は noaction です。 使用可能な値が含まれます: ''noAction''、''terminateJob'''
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'アクションでこのスケジュールで作成されたジョブ、タスクが失敗した場合、Batch サービスは実行する必要があります。 タスクが失敗した場合に失敗したと見なされるかどうかは、failureInfo します。 再試行回数を使い果たした後に 0 以外の終了コードでのタスクが完了すると、failureInfo が設定されているまたはタスクの開始中にエラーがあった場合など、リソース ファイルのためダウンロード エラー。 既定値は noaction です。 使用可能な値が含まれます: ''noAction''、''performExitOptionsJobAction'''
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch サービスがこのスケジュールで作成されたジョブのタスクを実行するプール。
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このスケジュールで作成されたジョブの優先順位。 優先度の値の範囲は-1000 から 1000 で、-1000 は最も低い優先順位と 1000 が最高の優先順位です。 既定値は 0 です。 この優先順位は、すべてのジョブのスケジュール ジョブの既定値として使用されます。 更新ジョブ API を使用して、作成した後は、ジョブの優先順位を更新できます。
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: かどうか、ジョブ内のタスクでは、相互に依存関係を定義できます。 既定値は false です。
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
