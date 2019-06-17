@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - '@azure/batch.JobConstraints.maxTaskRetryCount'
+      - '@azure/batch.JobConstraints.maxWallClockTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: JobConstraints を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 各タスクが再試行される最大回数。 Batch サービスは、終了コードが 0 以外の場合にタスクを再試行します。 この値によって再試行の回数が限定されますのでご注意ください。 Batch サービスでは、各タスクを 1 回、試すし、この上限に達するまで再試行できます。 たとえば、最大再試行回数が 3 の場合、Batch はタスクを最大 4 回試行します (初回試行 1 回と再試行 3 回)。 最大再試行回数が 0 の場合、Batch サービスはタスクを再試行しません。 最大再試行回数が -1 の場合、Batch サービスはタスクを無制限に再試行します。 既定値は 0 (再試行なし) です。
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ジョブが作成された時刻からジョブを実行する最大経過時間が計測されます。 制限時間内にジョブが完了しない場合、Batch サービスは、まだ実行しているすべてのタスクを終了します。 この場合、終了の理由は MaxWallClockTimeExpiry になります。
+      このプロパティが指定されていない場合は、制限はありません時間にどのくらいの時間、ジョブを実行します。
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.InboundNATPool'
+    name: InboundNATPool
+    fullName: InboundNATPool
+    children:
+      - '@azure/batch.InboundNATPool.backendPort'
+      - '@azure/batch.InboundNATPool.frontendPortRangeEnd'
+      - '@azure/batch.InboundNATPool.frontendPortRangeStart'
+      - '@azure/batch.InboundNATPool.name'
+      - '@azure/batch.InboundNATPool.networkSecurityGroupRules'
+      - '@azure/batch.InboundNATPool.protocol'
+    langs:
+      - typeScript
+    type: interface
+    summary: InboundNATPool を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.InboundNATPool.backendPort'
+    name: backendPort
+    fullName: backendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: コンピューティング ノードのポート番号。 これは Batch プール内で一意である必要があります。 指定できる値は 1 ~ 65535 の間は点を除いて 22、3389、29876、29877 についてこれらは予約されています。 予約されて存在する場合、要求は HTTP ステータス コード 400 で失敗値が提供されます。
+    syntax:
+      content: 'backendPort: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.InboundNATPool.frontendPortRangeEnd'
+    name: frontendPortRangeEnd
+    fullName: frontendPortRangeEnd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      個々 のコンピューティング ノードで、backendPort への着信アクセスを提供するために使用する外部ポートの範囲の最後のポート番号。 許容される値の範囲は 1 から 65534 ポート 50000 から Batch サービスによって予約されている 55000 を除く。 プール内のすべての範囲は一意である必要があり、重ねることはできません。 各範囲は、少なくとも 40 個のポートを含める必要があります。
+      HTTP 状態コードで、要求は失敗、予約済みまたは重複する値を指定しない場合
+      400.
+    syntax:
+      content: 'frontendPortRangeEnd: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.InboundNATPool.frontendPortRangeStart'
+    name: frontendPortRangeStart
+    fullName: frontendPortRangeStart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 個々 のコンピューティング ノードで、backendPort への着信アクセスを提供するために使用する外部ポートの範囲の最初のポート番号。 許容される値の範囲は 1 から 65534 50000 からポートが予約されている 55000 を除く。 プール内のすべての範囲は一意である必要があり、重ねることはできません。 各範囲は、少なくとも 40 個のポートを含める必要があります。 場合は、要求は HTTP ステータス コード 400 で失敗、予約済みまたは重複する値が提供されます。
+    syntax:
+      content: 'frontendPortRangeStart: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.InboundNATPool.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エンドポイントの名前。 名前は、Batch プール内で一意である必要があります、文字、数字、アンダー スコア、ピリオド、およびハイフンを含めることができます。 名の先頭は英字または番号、文字、番号、またはアンダー スコアで終わる必要がありますおよび 77 文字を超えることはできません。  無効な値がある場合、要求は HTTP ステータス コード 400 で失敗します。
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.InboundNATPool.networkSecurityGroupRules'
+    name: networkSecurityGroupRules
+    fullName: networkSecurityGroupRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エンドポイントに適用されるネットワーク セキュリティ グループ規則の一覧。 Batch プールですべてのエンドポイントで指定できるルールの最大数には 25 です。 ネットワーク セキュリティ グループ ルールが指定されていない場合は指定された backendPort への着信アクセスを許可する既定のルールが作成されます。 ネットワーク セキュリティ グループ規則の最大数を超えたかどうか、要求は HTTP ステータス コード 400 で失敗します。
+    optional: true
+    syntax:
+      content: 'networkSecurityGroupRules?: NetworkSecurityGroupRule[]'
+      return:
+        type:
+          - '@azure/batch.NetworkSecurityGroupRule[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.InboundNATPool.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'エンドポイントのプロトコルです。 使用可能な値が含まれます: ''tcp''、''udp'''
+    syntax:
+      content: 'protocol: InboundEndpointProtocol'
+      return:
+        type:
+          - '@azure/batch.InboundEndpointProtocol'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.NetworkSecurityGroupRule[]'
+    name: 'NetworkSecurityGroupRule[]'
+    spec.typeScript:
+      - name: NetworkSecurityGroupRule
+        fullName: NetworkSecurityGroupRule
+        uid: '@azure/batch.NetworkSecurityGroupRule'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.InboundEndpointProtocol'
+    name: InboundEndpointProtocol
+    spec.typeScript:
+      - name: InboundEndpointProtocol
+        fullName: InboundEndpointProtocol
+        uid: '@azure/batch.InboundEndpointProtocol'
