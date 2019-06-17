@@ -1,0 +1,414 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolAddParameter'
+    name: PoolAddParameter
+    fullName: PoolAddParameter
+    children:
+      - '@azure/batch.PoolAddParameter.applicationLicenses'
+      - '@azure/batch.PoolAddParameter.applicationPackageReferences'
+      - '@azure/batch.PoolAddParameter.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolAddParameter.autoScaleFormula'
+      - '@azure/batch.PoolAddParameter.certificateReferences'
+      - '@azure/batch.PoolAddParameter.cloudServiceConfiguration'
+      - '@azure/batch.PoolAddParameter.displayName'
+      - '@azure/batch.PoolAddParameter.enableAutoScale'
+      - '@azure/batch.PoolAddParameter.enableInterNodeCommunication'
+      - '@azure/batch.PoolAddParameter.id'
+      - '@azure/batch.PoolAddParameter.maxTasksPerNode'
+      - '@azure/batch.PoolAddParameter.metadata'
+      - '@azure/batch.PoolAddParameter.networkConfiguration'
+      - '@azure/batch.PoolAddParameter.resizeTimeout'
+      - '@azure/batch.PoolAddParameter.startTask'
+      - '@azure/batch.PoolAddParameter.targetDedicatedNodes'
+      - '@azure/batch.PoolAddParameter.targetLowPriorityNodes'
+      - '@azure/batch.PoolAddParameter.taskSchedulingPolicy'
+      - '@azure/batch.PoolAddParameter.userAccounts'
+      - '@azure/batch.PoolAddParameter.virtualMachineConfiguration'
+      - '@azure/batch.PoolAddParameter.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: PoolAddParameter を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.applicationLicenses'
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アプリケーションの一覧のライセンス、バッチ サービスは、プール内の各コンピューティング ノードで使用できるようにします。 アプリケーションのライセンスの一覧は、Batch サービスの利用可能なアプリケーション ライセンスのサブセットである必要があります。 サポートされていない、ライセンスが要求された場合は、プールの作成は失敗します。
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プール内の各コンピューティング ノードにインストールするアプリケーション パッケージの一覧。 アプリケーション パッケージの参照への変更は、プールに参加するすべての新しいコンピューティング ノードに影響を与えるが、再起動または再イメージ化されるまでに、プールに既に存在するコンピューティング ノードには影響しません。 いずれかのプールで 10 個のアプリケーション パッケージの参照の最大値があります。
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 自動スケールの数式に従ってプールのサイズを自動的に調整する時間間隔。 既定値は、15 分です。 最小値と最大値は、それぞれ 5 分から 168 時間です。 Batch サービスの値以下 5 分を超えないか 168 時間よりも大きい値を指定すると、エラー; が返されますREST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'プール内のコンピューティング ノードの必要な数の式。 このプロパティがある必要がありますいない enableAutoScale が false に設定されているかどうかを指定します。 EnableAutoScale が設定されている場合に必要では、true に設定します。 数式は、プールを作成する前に、有効性をチェックされます。 数式が有効でない場合、Batch サービスは、詳細なエラー情報が要求を拒否します。 次の数式を指定する方法については、''自動的に Azure Batch プール内のノードをコンピューティング スケール'' を参照してください (https://azure.microsoft.com/documentation/articles/batch-automatic-scaling/)します。'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'プール内の各コンピューティング ノードにインストールする証明書の一覧。 Windows のコンピューティング ノード、Batch サービスは、場所と指定された証明書ストアに証明書をインストールします。 Linux コンピューティング ノードの場合は、証明書は、タスクの作業ディレクトリと環境変数 AZ_BATCH_CERTIFICATES_DIR がこの場所にクエリするタスクに指定されたディレクトリに格納されます。 ''RemoteUser'' の可視性を持つ証明書の場合、ユーザーのホーム ディレクトリに ''証明書'' ディレクトリが作成 (例、/home/{ユーザー名}/証明書) し、証明書がそのディレクトリに配置されます。'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.cloudServiceConfiguration'
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プールのクラウドサービス構成。 このプロパティと virtualMachineConfiguration は相互に排他的であり、プロパティのいずれかを指定する必要があります。 このプロパティは、その poolAllocationMode プロパティを"UserSubscription"に設定して Batch アカウントが作成されたかどうかを指定します。
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - '@azure/batch.CloudServiceConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プールの表示名。 表示名は一意である必要はありませんし、最大長 1024 まで任意の Unicode 文字を含めることができます。
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.enableAutoScale'
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: かどうか、プールのサイズは、時間の経過と共に自動的に調整する必要があります。 False の場合、targetDedicateNodes と targetLowPriorityNodes の少なくとも 1 つ指定する必要があります。 True の場合は、autoScaleFormula プロパティが必須と数式に従ってプールが自動的にサイズ変更します。 既定値は false です。
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.enableInterNodeCommunication'
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      かどうか、プールは、ノード間の直接通信を許可します。 ノード間通信を有効にすると、プールのノードの展開の制限により、プールの最大サイズが制限されます。
+      これにより、プールの必要なサイズに到達しない可能性があります。 既定値は false です。
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アカウント内のプールを一意に識別する文字列。 この ID は、ハイフン、アンダー スコアを含む、英数字の任意の組み合わせを含めることができます、64 を超える文字を含めることはできません。 ID は、小文字、大文字と (つまり、アカウント内のケースのみが異なる 2 つのプール Id はない必要があります)。
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.maxTasksPerNode'
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      プール内の単一コンピューティング ノードで同時に実行できるタスクの最大数。
+      既定値は 1 です。 最大値は 4 回、プールの vmSize のコアの数または 256 のうち、小さい方です。
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: メタデータとしてプールに関連付けられている名前/値ペアのリスト。 Batch サービスがメタデータに意味を割り当てませんユーザー コードの使用のためだけです。
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プールのネットワーク構成。
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.NetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プールにコンピューティング ノードの割り当てのタイムアウト。 このタイムアウトは手動スケーリングにのみ適用されます。影響を与えません enableAutoScale が設定されている場合に true に設定します。 既定値は、15 分です。 最小値は、5 分です。 5 分より小さい値を指定する場合、Batch サービスは、; エラーを返しますREST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プールに参加するとき、各コンピューティング ノードで実行する指定されたタスク。 プールに、またはノードを再起動すると、ノードが追加されたときにタスクを実行します。
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.targetDedicatedNodes'
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 専用の目的の数は、プール内のノードを計算します。 このプロパティがある必要がありますいない enableAutoScale が設定されているかどうかは指定されたを true にします。 EnableAutoScale が false に設定されている場合は、targetDedicatedNodes、targetLowPriorityNodes、またはその両方を設定する必要があります。
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.targetLowPriorityNodes'
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プール内の優先順位の低いコンピューティング ノードの目的の数。 このプロパティがある必要がありますいない enableAutoScale が設定されているかどうかは指定されたを true にします。 EnableAutoScale が false に設定されている場合は、targetDedicatedNodes、targetLowPriorityNodes、またはその両方を設定する必要があります。
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.taskSchedulingPolicy'
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: どのタスクがプール内のコンピューティング ノードに分散されます。 指定しない場合、既定の負荷が分散されます。
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - '@azure/batch.TaskSchedulingPolicy'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.userAccounts'
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プール内の各ノード上に作成されるユーザー アカウントの一覧。
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - '@azure/batch.UserAccount[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.virtualMachineConfiguration'
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プールの仮想マシン構成。 このプロパティは、cloudServiceConfiguration は相互に排他的であり、プロパティのいずれかを指定する必要があります。
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - '@azure/batch.VirtualMachineConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      プール内の仮想マシンのサイズ。 プール内の仮想マシンのサイズはすべて同じです。
+      クラウド サービスの仮想マシンの利用可能なサイズについてはプール (cloudServiceConfiguration で作成されたプール) を参照してくださいサイズのクラウド サービス (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/)します。 バッチには、ExtraSmall、A1V2 A2V2 を除くすべての Cloud Services VM サイズがサポートしています。 使用可能な VM については (virtualMachineConfiguration で作成されたプール) の Virtual Machines マーケットプ レースからイメージを使用してプールのサイズは仮想マシン (Linux) のサイズを参照 (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/)または仮想マシン (Windows) のサイズ (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). バッチには、STANDARD_A0 と premium storage (STANDARD_GS、STANDARD_DS、および STANDARD_DSV2 シリーズ) を除くすべての Azure VM サイズがサポートしています。
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CloudServiceConfiguration'
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: '@azure/batch.CloudServiceConfiguration'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: '@azure/batch.NetworkConfiguration'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.TaskSchedulingPolicy'
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: '@azure/batch.TaskSchedulingPolicy'
+  - uid: '@azure/batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: '@azure/batch.UserAccount'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.VirtualMachineConfiguration'
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: '@azure/batch.VirtualMachineConfiguration'
