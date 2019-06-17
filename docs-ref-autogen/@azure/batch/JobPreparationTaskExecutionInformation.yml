@@ -1,0 +1,209 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation'
+    name: JobPreparationTaskExecutionInformation
+    fullName: JobPreparationTaskExecutionInformation
+    children:
+      - '@azure/batch.JobPreparationTaskExecutionInformation.containerInfo'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.endTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.exitCode'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.failureInfo'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.lastRetryTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.result'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.retryCount'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.startTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.state'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectory'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: JobPreparationTaskExecutionInformation を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクが実行されているコンテナーに関する情報。 このプロパティは、コンテナーのコンテキストでタスクを実行する場合にのみに設定されます。
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの準備タスクが完了した時刻。 このプロパティは、タスクが完了状態の場合にのみに設定されます。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクのコマンドラインで指定されたプログラムの終了コード。 このパラメーターには、タスクが完了した状態で場合にのみが返されます。 プロセスの終了コードでは、そのプロセスのアプリケーション開発者によって実装される特定の規則が反映されます。 意思決定、コード内に終了コード値を使用する場合は、アプリケーション プロセスによって使用される終了コードの規則がわかっていることを確認します。 終了コードがコンピューティング ノードのオペレーティング システム、プロセスが強制的に終了しましたなどに生成される可能性がありますに注意してください。
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 存在する場合は、タスクの失敗を説明する情報。 このプロパティでは、タスクが完了した状態で場合にのみが設定され、エラーが発生しました。
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.lastRetryTime'
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの準備タスクの再試行が実行を開始した最新の時間。 このプロパティは、タスクが再試行された場合にのみ設定されます (つまり retryCount が 0 以外の場合)。 存在する場合、これは通常、開始時刻と同じが再試行; 以外の理由、タスクが再起動された場合は異なる場合があります。たとえば、再試行時に、コンピューティング ノードを再起動すると場合、開始時刻が更新されますが、lastRetryTime はありません。
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'タスクの実行の結果。 場合は、値は ''failed''、エラーの詳細は failureInfo プロパティで検出できます。 使用可能な値が含まれます: ''成功''、''失敗'''
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch サービスによりタスクが再試行された回数。 処理前のエラー (タスクを実行できませんでした)、再試行タスク アプリケーションのエラー (0 以外の終了コード) と、ファイルのアップロード エラーは再試行されません。 Batch サービスでは、制約で指定された上限に達するまでタスクを再試行します。 処理前のエラー (タスクを実行できませんでした)、再試行タスク アプリケーションのエラー (0 以外の終了コード) と、ファイルのアップロード エラーは再試行されません。 Batch サービスでは、制約で指定された上限に達するまでタスクを再試行します。
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクの実行が開始した時刻です。 タスクが再起動または再実行された場合は、タスクが実行を開始したつい最近の時刻となります。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'コンピューティング ノードでジョブ準備タスクの現在の状態。 使用可能な値が含まれます: ''running''、''完了'''
+    syntax:
+      content: 'state: JobPreparationTaskState'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectory'
+    name: taskRootDirectory
+    fullName: taskRootDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブ準備タスク、コンピューティング ノード上のルート ディレクトリ。 このパスを使用して、ログ ファイルなど、タスクによって作成されたファイルを取得することができます。
+    optional: true
+    syntax:
+      content: 'taskRootDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl'
+    name: taskRootDirectoryUrl
+    fullName: taskRootDirectoryUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブ準備タスク、コンピューティング ノード上のルート ディレクトリの URL。
+    optional: true
+    syntax:
+      content: 'taskRootDirectoryUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.JobPreparationTaskState'
+    name: JobPreparationTaskState
+    spec.typeScript:
+      - name: JobPreparationTaskState
+        fullName: JobPreparationTaskState
+        uid: '@azure/batch.JobPreparationTaskState'

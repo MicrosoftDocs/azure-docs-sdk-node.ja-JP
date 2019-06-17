@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/cognitiveservices-face.OperationStatus.createdTime'
+      - '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+      - '@azure/cognitiveservices-face.OperationStatus.message'
+      - '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+      - '@azure/cognitiveservices-face.OperationStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: 操作の状態オブジェクト。 操作は、スナップショットを作成し、スナップショットの適用を含む非同期のバックエンド タスクを参照します。
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.createdTime'
+    name: createdTime
+    fullName: createdTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '結合された時間を UTC の日付と時刻の文字列と、操作 (実行またはスナップショットを適用) が要求されました。 例: 2018-12-25T11:41:02.2331413Z.'
+    syntax:
+      content: 'createdTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+    name: lastActionTime
+    fullName: lastActionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '結合された UTC 日付と時刻の文字列の最後を記述する時刻の操作 (実行またはスナップショットを適用) データの移行がアクティブにします。 操作が完了するまで、lastActionTime が増加し続けます。 例: 2018-12-25T11:51:27.8705696Z.'
+    optional: true
+    syntax:
+      content: 'lastActionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 操作が失敗したときに、エラー メッセージを表示する (操作が成功したときに省略)。
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+    name: resourceLocation
+    fullName: resourceLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 操作が正常に成功すると、このフィールドに、スナップショットの操作を作成するため、スナップショット id が含まれるし、このフィールドに操作を適用すると、スナップショットの取得対象のオブジェクトへのパスが返されます。
+    optional: true
+    syntax:
+      content: 'resourceLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      操作の状態: 未開始、実行されている、成功、失敗しました。 操作が要求され、実行待ちをして、ステータスは、notstarted 場合。 操作がバックエンドに継続的な場合は、状態が実行されています。 専用のスナップショットの取得操作が成功したことを意味する操作が正常に完了の状態を示しています、スナップショットは作成し、適用する準備が、操作を適用すると、スナップショットは、ターゲット オブジェクトの作成が完了しました。スナップショットと使用できるように準備します。 状態失敗が、スナップショット作成中に、ソース オブジェクトを編集することによって発生した多くの場合、か、ターゲット オブジェクトの編集の完了前に、スナップショットの適用中に、「メッセージ」エラーの理由を確認するフィールドを参照してください。
+      使用可能な値が含まれます: 'notstarted'、'running'、'成功'、'失敗'
+    syntax:
+      content: 'status: OperationStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.OperationStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.OperationStatusType'
+    name: OperationStatusType
+    spec.typeScript:
+      - name: OperationStatusType
+        fullName: OperationStatusType
+        uid: '@azure/cognitiveservices-face.OperationStatusType'

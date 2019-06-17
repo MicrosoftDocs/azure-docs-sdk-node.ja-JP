@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+      - '@azure/batch.NetworkConfiguration.endpointConfiguration'
+      - '@azure/batch.NetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: プールのネットワーク構成。
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Vnet の動的な割り当てのスコープ。 使用可能な値が含まれます: ''none''、''ジョブ'''
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: DynamicVNetAssignmentScope'
+      return:
+        type:
+          - '@azure/batch.DynamicVNetAssignmentScope'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.endpointConfiguration'
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 上のエンドポイントの構成では、Batch プール内のノードを計算します。 プール エンドポイントの構成は、プール virtualMachineConfiguration プロパティでのみサポートされます。
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - '@azure/batch.PoolEndpointConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      プールのコンピューティング ノードが参加する仮想ネットワーク サブネットの ARM リソース識別子。 これは、フォーム/subscriptions/{subscription}/resourcegroups/{グループ}/providers/{provider}/virtualNetworks/{network}/subnets/{サブネット} の。
+      仮想ネットワークは、同じリージョンと Azure Batch アカウントとサブスクリプションでなければなりません。
+      指定したサブネットに、プール内のノードの数を格納するための十分な空き IP アドレスが必要です。 サブネットには、十分な空き IP アドレスが割り当てられていない、プールは、コンピューティング ノードを割り当てます部分的にし、サイズ変更エラーが発生します。 ARM 仮想ネットワークのみ ('Microsoft.Network/virtualNetworks') のサポート virtualMachineConfiguration で作成されたプールが cloudServiceConfiguration で作成されたプール ARM とクラシック仮想ネットワークの両方がサポートされていません。 詳細についてを参照してください。 https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+    optional: true
+    syntax:
+      content: 'subnetId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DynamicVNetAssignmentScope'
+    name: DynamicVNetAssignmentScope
+    spec.typeScript:
+      - name: DynamicVNetAssignmentScope
+        fullName: DynamicVNetAssignmentScope
+        uid: '@azure/batch.DynamicVNetAssignmentScope'
+  - uid: '@azure/batch.PoolEndpointConfiguration'
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: '@azure/batch.PoolEndpointConfiguration'
