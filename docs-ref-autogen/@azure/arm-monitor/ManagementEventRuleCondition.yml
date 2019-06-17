@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ManagementEventRuleCondition'
+    name: ManagementEventRuleCondition
+    fullName: ManagementEventRuleCondition
+    children:
+      - '@azure/arm-monitor.ManagementEventRuleCondition.aggregation'
+      - '@azure/arm-monitor.ManagementEventRuleCondition.dataSource'
+      - '@azure/arm-monitor.ManagementEventRuleCondition.odatatype'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="0873a-101">管理イベント ルールの条件。</span><span class="sxs-lookup"><span data-stu-id="0873a-101">A management event rule condition.</span></span>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ManagementEventRuleCondition.aggregation'
+    name: aggregation
+    fullName: aggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0873a-102">方法収集されるデータは、時間と、アラートがアクティブにするタイミングを結合する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0873a-102">How the data that is collected should be combined over time and when the alert is activated.</span></span>
+      <span data-ttu-id="0873a-103">管理イベントのアラートの集計は省略可能 – 場合は、すべてのイベントが指定されていないことに注意をアクティブ化するアラートになります。</span><span class="sxs-lookup"><span data-stu-id="0873a-103">Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.</span></span>
+    optional: true
+    syntax:
+      content: 'aggregation?: ManagementEventAggregationCondition'
+      return:
+        type:
+          - '@azure/arm-monitor.ManagementEventAggregationCondition'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ManagementEventRuleCondition.dataSource'
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0873a-104">リソース ルールがそのデータを収集します。</span><span class="sxs-lookup"><span data-stu-id="0873a-104">the resource from which the rule collects its data.</span></span> <span data-ttu-id="0873a-105">この種類のデータ ソースは、常に RuleMetricDataSource の種類です。</span><span class="sxs-lookup"><span data-stu-id="0873a-105">For this type dataSource will always be of type RuleMetricDataSource.</span></span>
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSourceUnion'
+      return:
+        type:
+          - '@azure/arm-monitor.RuleDataSourceUnion'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ManagementEventRuleCondition.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0873a-106">ポリモーフィックな識別子</span><span class="sxs-lookup"><span data-stu-id="0873a-106">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition"'
+      return:
+        type:
+          - '"Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition"'
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ManagementEventAggregationCondition'
+    name: ManagementEventAggregationCondition
+    spec.typeScript:
+      - name: ManagementEventAggregationCondition
+        fullName: ManagementEventAggregationCondition
+        uid: '@azure/arm-monitor.ManagementEventAggregationCondition'
+  - uid: '@azure/arm-monitor.RuleDataSourceUnion'
+    name: RuleDataSourceUnion
+    spec.typeScript:
+      - name: RuleDataSourceUnion
+        fullName: RuleDataSourceUnion
+        uid: '@azure/arm-monitor.RuleDataSourceUnion'
