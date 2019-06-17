@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-migrate.AssessedMachines'
+    name: AssessedMachines
+    fullName: AssessedMachines
+    children:
+      - '@azure/arm-migrate.AssessedMachines.constructor'
+      - '@azure/arm-migrate.AssessedMachines.get'
+      - '@azure/arm-migrate.AssessedMachines.get_2'
+      - '@azure/arm-migrate.AssessedMachines.get_1'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment_2'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment_1'
+    langs:
+      - typeScript
+    type: class
+    summary: AssessedMachines を表すクラスです。
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.constructor'
+    name: AssessedMachines(AzureMigrateContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: AssessedMachines を作成します。
+    syntax:
+      content: 'new AssessedMachines(client: AzureMigrateContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-migrate.AzureMigrateContext'
+          description: |
+            サービス クライアントへの参照。
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get'
+    name: 'get(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 評価されるマシンのサイズを取得 (&)、指定された評価で評価された estimnate のコストします。
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure リソース グループ プロジェクトの名前は、一部です。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate プロジェクトの名前。
+        - id: groupName
+          type:
+            - string
+          description: プロジェクト内のグループの一意の名前。
+        - id: assessmentName
+          type:
+            - string
+          description: プロジェクト内で評価の一意の名前。
+        - id: assessedMachineName
+          type:
+            - string
+          description: 評価の一部として評価される、評価済みマシンの一意の名前。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get_2'
+    name: 'get(string, string, string, string, string, RequestOptionsBase, ServiceCallback<AssessedMachine>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessedMachine>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure リソース グループ プロジェクトの名前は、一部です。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate プロジェクトの名前。
+        - id: groupName
+          type:
+            - string
+          description: プロジェクト内のグループの一意の名前。
+        - id: assessmentName
+          type:
+            - string
+          description: プロジェクト内で評価の一意の名前。
+        - id: assessedMachineName
+          type:
+            - string
+          description: 評価の一部として評価される、評価済みマシンの一意の名前。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachine>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<AssessedMachine>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, callback: ServiceCallback<AssessedMachine>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure リソース グループ プロジェクトの名前は、一部です。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate プロジェクトの名前。
+        - id: groupName
+          type:
+            - string
+          description: プロジェクト内のグループの一意の名前。
+        - id: assessmentName
+          type:
+            - string
+          description: プロジェクト内で評価の一意の名前。
+        - id: assessedMachineName
+          type:
+            - string
+          description: 評価の一部として評価される、評価済みマシンの一意の名前。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachine>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment'
+    name: 'listByAssessment(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      指定された評価の一部として評価されるマシンの一覧を取得します。 'AssessedMachine' として、モデルで指定した型のオブジェクトの json 配列を返します。
+      評価の作成または更新されるたびに、計算の下で移動します。 このフェーズでは、評価のオブジェクトの 'status' フィールドは、'コンピューティング' を報告します。
+      計算は、評価時間は、評価済みマシンのリストが空、評価済みマシンはこの呼び出しによって返されません。
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure リソース グループ プロジェクトの名前は、一部です。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate プロジェクトの名前。
+        - id: groupName
+          type:
+            - string
+          description: プロジェクト内のグループの一意の名前。
+        - id: assessmentName
+          type:
+            - string
+          description: プロジェクト内で評価の一意の名前。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment_2'
+    name: 'listByAssessment(string, string, string, string, RequestOptionsBase, ServiceCallback<AssessedMachineResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessedMachineResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure リソース グループ プロジェクトの名前は、一部です。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate プロジェクトの名前。
+        - id: groupName
+          type:
+            - string
+          description: プロジェクト内のグループの一意の名前。
+        - id: assessmentName
+          type:
+            - string
+          description: プロジェクト内で評価の一意の名前。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment_1'
+    name: 'listByAssessment(string, string, string, string, ServiceCallback<AssessedMachineResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<AssessedMachineResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Azure リソース グループ プロジェクトの名前は、一部です。
+        - id: projectName
+          type:
+            - string
+          description: Azure Migrate プロジェクトの名前。
+        - id: groupName
+          type:
+            - string
+          description: プロジェクト内のグループの一意の名前。
+        - id: assessmentName
+          type:
+            - string
+          description: プロジェクト内で評価の一意の名前。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+references:
+  - uid: '@azure/arm-migrate.AzureMigrateContext'
+    name: AzureMigrateContext
+    spec.typeScript:
+      - name: AzureMigrateContext
+        fullName: AzureMigrateContext
+        uid: '@azure/arm-migrate.AzureMigrateContext'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessedMachine>
+    name: AssessedMachine>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessedMachine
+        fullName: AssessedMachine
+        uid: '@azure/arm-migrate.AssessedMachine'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+    name: AssessedMachineResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessedMachineResultList
+        fullName: AssessedMachineResultList
+        uid: '@azure/arm-migrate.AssessedMachineResultList'
+      - name: '>'
+        fullName: '>'

@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeUpdateUserParameter'
+    name: NodeUpdateUserParameter
+    fullName: NodeUpdateUserParameter
+    children:
+      - '@azure/batch.NodeUpdateUserParameter.expiryTime'
+      - '@azure/batch.NodeUpdateUserParameter.password'
+      - '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: NodeUpdateUserParameter を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.expiryTime'
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アカウントが期限切れになる時刻。 省略した場合、既定では、現在の時刻から 1 日です。 Linux コンピューティング ノードでは、最大で 1 日の有効桁数を expiryTime 必要があります。
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アカウントのパスワードです。 パスワードは、Windows ノード (または Windows イメージの参照を使用して 'virtualMachineConfiguration' で作成された 'cloudServiceConfiguration' で作成されたもの) に必要です。 Linux コンピューティング ノードの場合、パスワードが必要に応じて sshPublicKey プロパティと一緒に指定することができます。 省略した場合は、既存のパスワードが削除されます。
+    optional: true
+    syntax:
+      content: 'password?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: コンピューティング ノードにリモート ログインのために使用する SSH 公開キー。 公開キーが OpenSSH エンコーディングと互換性があるし、する base 64 エンコードする必要があります。 このプロパティは、Linux ノードに対してのみ指定できます。 Windows ノードに指定されている場合、Batch サービスは要求を拒否します。REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。 省略した場合、既存の SSH 公開キーが削除されます。
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
