@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ExitOptions'
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - '@azure/batch.ExitOptions.dependencyAction'
+      - '@azure/batch.ExitOptions.jobAction'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="b4000-101">ExitOptions を表すインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b4000-101">An interface representing ExitOptions.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.dependencyAction'
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b4000-102">このタスクに依存するタスクを Batch サービスを実行するアクション。</span><span class="sxs-lookup"><span data-stu-id="b4000-102">An action that the Batch service performs on tasks that depend on this task.</span></span> <span data-ttu-id="b4000-103">既定では終了コード 0、およびその他のすべての終了条件に対して '' block'' の ''満たす'' です。</span><span class="sxs-lookup"><span data-stu-id="b4000-103">The default is ''satisfy'' for exit code 0, and ''block'' for all other exit conditions.</span></span> <span data-ttu-id="b4000-104">ジョブの usesTaskDependencies プロパティ設定されている場合、false、dependencyAction プロパティを指定するには、エラーが返されます、タスクの追加要求が無効なプロパティ値をエラーで失敗REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="b4000-104">If the job''s usesTaskDependencies property is set to false, then specifying the dependencyAction property returns an error and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400  (Bad Request).</span></span> <span data-ttu-id="b4000-105">使用可能な値が含まれます: ''を満たす''、''を '' ブロック</span><span class="sxs-lookup"><span data-stu-id="b4000-105">Possible values include: ''satisfy'', ''block''</span></span>'
+    optional: true
+    syntax:
+      content: 'dependencyAction?: DependencyAction'
+      return:
+        type:
+          - '@azure/batch.DependencyAction'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.jobAction'
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b4000-106">タスクは、指定された終了条件と、ジョブの onTaskFailed プロパティが完了すると、タスクを含むジョブを実行するアクションは、''performExitOptionsJobAction'' です。</span><span class="sxs-lookup"><span data-stu-id="b4000-106">An action to take on the job containing the task, if the task completes with the given exit condition and the job''s onTaskFailed property is ''performExitOptionsJobAction''.</span></span> <span data-ttu-id="b4000-107">既定値は none 終了コード 0 を他のすべての終了条件を終了します。</span><span class="sxs-lookup"><span data-stu-id="b4000-107">The default is none for exit code 0 and terminate for all other exit conditions.</span></span> <span data-ttu-id="b4000-108">ジョブの onTaskFailed プロパティが noaction の場合は、このプロパティを指定すると、エラーが返され、タスクの追加要求が無効なプロパティ値をエラーで失敗REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="b4000-108">If the job''s onTaskFailed property is noaction, then specifying this property returns an error and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="b4000-109">使用可能な値が含まれます: ''none''、''disable''、''terminate''</span><span class="sxs-lookup"><span data-stu-id="b4000-109">Possible values include: ''none'', ''disable'', ''terminate''</span></span>'
+    optional: true
+    syntax:
+      content: 'jobAction?: JobAction'
+      return:
+        type:
+          - '@azure/batch.JobAction'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DependencyAction'
+    name: DependencyAction
+    spec.typeScript:
+      - name: DependencyAction
+        fullName: DependencyAction
+        uid: '@azure/batch.DependencyAction'
+  - uid: '@azure/batch.JobAction'
+    name: JobAction
+    spec.typeScript:
+      - name: JobAction
+        fullName: JobAction
+        uid: '@azure/batch.JobAction'
