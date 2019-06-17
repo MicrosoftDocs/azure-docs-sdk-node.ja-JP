@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CertificateReference'
+    name: CertificateReference
+    fullName: CertificateReference
+    children:
+      - '@azure/batch.CertificateReference.storeLocation'
+      - '@azure/batch.CertificateReference.storeName'
+      - '@azure/batch.CertificateReference.thumbprint'
+      - '@azure/batch.CertificateReference.thumbprintAlgorithm'
+      - '@azure/batch.CertificateReference.visibility'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="b5eca-101">CertificateReference を表すインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b5eca-101">An interface representing CertificateReference.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeLocation'
+    name: storeLocation
+    fullName: storeLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b5eca-102">コンピューティング ノードで証明書ストアの証明書のインストール先の場所。</span><span class="sxs-lookup"><span data-stu-id="b5eca-102">The location of the certificate store on the compute node into which to install the certificate.</span></span> <span data-ttu-id="b5eca-103">既定値は、currentuser です。</span><span class="sxs-lookup"><span data-stu-id="b5eca-103">The default value is currentuser.</span></span> <span data-ttu-id="b5eca-104">このプロパティは、プール (cloudServiceConfiguration で作成された、または、Windows を使用して virtualMachineConfiguration でイメージの参照)、Windows ノードで構成にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="b5eca-104">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id="b5eca-105">Linux コンピューティング ノードの場合は、証明書は、タスクの作業ディレクトリと環境変数 AZ_BATCH_CERTIFICATES_DIR がこの場所にクエリするタスクに指定されたディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="b5eca-105">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="b5eca-106">'RemoteUser' の可視性を持つ証明書の場合、ユーザーのホーム ディレクトリに '証明書' ディレクトリが作成 (例、/home/{ユーザー名}/証明書) し、証明書がそのディレクトリに配置されます。</span><span class="sxs-lookup"><span data-stu-id="b5eca-106">For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>
+      <span data-ttu-id="b5eca-107">使用可能な値が含まれます: 'currentUser'、'localMachine'</span><span class="sxs-lookup"><span data-stu-id="b5eca-107">Possible values include: 'currentUser', 'localMachine'</span></span>
+    optional: true
+    syntax:
+      content: 'storeLocation?: CertificateStoreLocation'
+      return:
+        type:
+          - '@azure/batch.CertificateStoreLocation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeName'
+    name: storeName
+    fullName: storeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b5eca-108">証明書をインストールするためにコンピューティング ノードで証明書ストアの名前。</span><span class="sxs-lookup"><span data-stu-id="b5eca-108">The name of the certificate store on the compute node into which to install the certificate.</span></span>
+      <span data-ttu-id="b5eca-109">このプロパティは、プール (cloudServiceConfiguration で作成された、または、Windows を使用して virtualMachineConfiguration でイメージの参照)、Windows ノードで構成にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="b5eca-109">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id="b5eca-110">一般的な店舗名は次のとおりです。My、Root、CA、信頼、許可しない、TrustedPeople、TrustedPublisher、AuthRoot、AddressBook が任意のカスタム ストア名も使用できます。</span><span class="sxs-lookup"><span data-stu-id="b5eca-110">Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used.</span></span> <span data-ttu-id="b5eca-111">既定値は My です。</span><span class="sxs-lookup"><span data-stu-id="b5eca-111">The default value is My.</span></span>
+    optional: true
+    syntax:
+      content: 'storeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprint'
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b5eca-112">証明書の拇印。</span><span class="sxs-lookup"><span data-stu-id="b5eca-112">The thumbprint of the certificate.</span></span>
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprintAlgorithm'
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b5eca-113">拇印が関連付けられているアルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="b5eca-113">The algorithm with which the thumbprint is associated.</span></span> <span data-ttu-id="b5eca-114">これには、sha1 があります。</span><span class="sxs-lookup"><span data-stu-id="b5eca-114">This must be sha1.</span></span>
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.visibility'
+    name: visibility
+    fullName: visibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b5eca-115">コンピューティング ノード上のユーザー アカウントと、証明書のプライベート データへのアクセスが必要です。</span><span class="sxs-lookup"><span data-stu-id="b5eca-115">Which user accounts on the compute node should have access to the private data of the certificate.</span></span> <span data-ttu-id="b5eca-116">このコレクションでは、1 つ以上の可視性を指定できます。</span><span class="sxs-lookup"><span data-stu-id="b5eca-116">You can specify more than one visibility in this collection.</span></span> <span data-ttu-id="b5eca-117">既定ではすべてのアカウントです。</span><span class="sxs-lookup"><span data-stu-id="b5eca-117">The default is all accounts.</span></span>
+    optional: true
+    syntax:
+      content: 'visibility?: CertificateVisibility[]'
+      return:
+        type:
+          - '@azure/batch.CertificateVisibility[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CertificateStoreLocation'
+    name: CertificateStoreLocation
+    spec.typeScript:
+      - name: CertificateStoreLocation
+        fullName: CertificateStoreLocation
+        uid: '@azure/batch.CertificateStoreLocation'
+  - uid: '@azure/batch.CertificateVisibility[]'
+    name: 'CertificateVisibility[]'
+    spec.typeScript:
+      - name: CertificateVisibility
+        fullName: CertificateVisibility
+        uid: '@azure/batch.CertificateVisibility'
+      - name: '[]'
+        fullName: '[]'
