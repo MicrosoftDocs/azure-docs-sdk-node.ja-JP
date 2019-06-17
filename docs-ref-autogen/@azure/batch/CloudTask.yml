@@ -1,0 +1,532 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudTask'
+    name: CloudTask
+    fullName: CloudTask
+    children:
+      - '@azure/batch.CloudTask.affinityInfo'
+      - '@azure/batch.CloudTask.applicationPackageReferences'
+      - '@azure/batch.CloudTask.authenticationTokenSettings'
+      - '@azure/batch.CloudTask.commandLine'
+      - '@azure/batch.CloudTask.constraints'
+      - '@azure/batch.CloudTask.containerSettings'
+      - '@azure/batch.CloudTask.creationTime'
+      - '@azure/batch.CloudTask.dependsOn'
+      - '@azure/batch.CloudTask.displayName'
+      - '@azure/batch.CloudTask.environmentSettings'
+      - '@azure/batch.CloudTask.eTag'
+      - '@azure/batch.CloudTask.executionInfo'
+      - '@azure/batch.CloudTask.exitConditions'
+      - '@azure/batch.CloudTask.id'
+      - '@azure/batch.CloudTask.lastModified'
+      - '@azure/batch.CloudTask.multiInstanceSettings'
+      - '@azure/batch.CloudTask.nodeInfo'
+      - '@azure/batch.CloudTask.outputFiles'
+      - '@azure/batch.CloudTask.previousState'
+      - '@azure/batch.CloudTask.previousStateTransitionTime'
+      - '@azure/batch.CloudTask.resourceFiles'
+      - '@azure/batch.CloudTask.state'
+      - '@azure/batch.CloudTask.stateTransitionTime'
+      - '@azure/batch.CloudTask.stats'
+      - '@azure/batch.CloudTask.url'
+      - '@azure/batch.CloudTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: コンピューティング ノードで、復旧操作がトリガーされたときに、batch はタスクを再試行します。 回復操作の例が含まれます (ただしこれらに限定されません)、異常なコンピューティング ノードが再起動またはホスト エラーにより、コンピューティング ノードが表示されなくなったとします。 操作は依存しないと、maxTaskRetryCount 照らし合わせてカウントされることはありません、回復を再試行します。 MaxTaskRetryCount が 0 の場合でも、復旧操作のための内部の再試行が発生します。 このため、すべてのタスクにべき等であることがあります。 つまり、タスクが許容されているが中断され、任意の破損またはデータの重複を発生させることがなく再起動する必要があります。 最適な練習を何らかの形式のチェックポイント処理を使用するには時間の長いタスクを実行します。
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.affinityInfo'
+    name: affinityInfo
+    fullName: affinityInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch サービスによって新しいタスクを開始するコンピューティング ノードを選択するのに使用できる局所性のヒント。
+    optional: true
+    syntax:
+      content: 'affinityInfo?: AffinityInformation'
+      return:
+        type:
+          - '@azure/batch.AffinityInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch サービスは、コマンドラインを実行する前に、コンピューティング ノードを展開するアプリケーション パッケージの一覧。 アプリケーション パッケージがダウンロードされ、作業ディレクトリ タスクではない、共有ディレクトリに配置されます。 そのため、参照されるパッケージは、コンピューティング ノードに既に存在しが最新では、が再ダウンロードされません。コンピューティング ノード上の既存のコピーが使用されます。 参照されているアプリケーション パッケージをインストールできない場合、たとえば、パッケージが削除されたか、ダウンロードが失敗したため、タスクが失敗したため。
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクが Batch service 操作の実行に使用できる認証トークンの設定。 このプロパティが設定されている場合、Batch サービスは、アカウント アクセス キーを必要とせずに Batch サービスの操作を認証するために使用する認証トークンを使用してタスクを提供します。 AZ_BATCH_AUTHENTICATION_TOKEN の環境変数を使用して、トークンが提供されます。 トークンを使用して、タスクが実行できる操作は、設定によって異なります。 たとえば、タスクは、ジョブに他のタスクを追加またはまたはその他のタスク、ジョブの下でのジョブの状態を確認するには、ジョブのアクセス許可を要求できます。
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'タスクのコマンドラインです。 マルチ インスタンス タスクでは、コマンドラインは、プライマリ タスクとすべてのサブタスクのコーディネーション コマンドラインの実行が完了した後、プライマリのタスクとして実行されます。 コマンド ライン シェルで動作しないためことはできません活用してください環境変数の拡張などのシェルの機能。 このような機能を活用する場合を呼び出す必要があります、コマンドラインでシェル例 "cmd/c MyCommand"を使用して Windows でまたは"//bin/sh-c MyCommand"linux。 コマンドラインは、ファイルのパスを参照している場合、(タスク作業ディレクトリを基準)、相対パスを使うか、バッチの指定された環境変数を使用して (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)します。'
+    optional: true
+    syntax:
+      content: 'commandLine?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このタスクに適用される実行の制約。
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクを実行するコンテナーの設定。 このタスクを実行するプールに containerConfiguration が設定がある場合は、これも設定する必要があります。 このタスクを実行するプールが containerConfiguration が設定を持っていない場合これを設定しない必要があります。 これは、指定した場合、AZ_BATCH_NODE_ROOT_DIR (ノード上の Azure Batch ディレクトリのルート) の下のすべてのディレクトリに再帰的には、コンテナーにマップする、すべてのタスクの環境変数は、コンテナーにマップしてタスクのコマンドラインは、コンテナー内で実行します。
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクの作成時間。
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.dependsOn'
+    name: dependsOn
+    fullName: dependsOn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このタスクは、このタスクによって異なります。 依存しているすべてのタスクが正常に完了するまで、このタスクはスケジュールされません。 失敗それらのタスクのいずれか、再試行カウントを使い果たしてしまう場合は、このタスクがスケジュールされることはありません。
+    optional: true
+    syntax:
+      content: 'dependsOn?: TaskDependencies'
+      return:
+        type:
+          - '@azure/batch.TaskDependencies'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクの表示名。 表示名は一意である必要はありませんし、最大長 1024 まで任意の Unicode 文字を含めることができます。
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクの環境変数設定の一覧。
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクの ETag。 これは、不透明な文字列です。 要求間で、タスクが変更されたかどうかを検出するために使用できます。 特にには、タスクは、その間にその他のユーザー変更が場合にのみ、変更内容に効果を実行する必要がありますを指定するタスクを更新するときに ETag を渡すことができます。
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.executionInfo'
+    name: executionInfo
+    fullName: executionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクの実行について説明します。
+    optional: true
+    syntax:
+      content: 'executionInfo?: TaskExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.exitConditions'
+    name: exitConditions
+    fullName: exitConditions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: どの、Batch サービスは、タスクが完了したときに応答します。
+    optional: true
+    syntax:
+      content: 'exitConditions?: ExitConditions'
+      return:
+        type:
+          - '@azure/batch.ExitConditions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブ内のタスクを一意に識別する文字列。 この ID は、ハイフン、アンダー スコアを含む、英数字の任意の組み合わせを含めることができます、64 を超える文字を含めることはできません。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 最終では、タスクの時間を更新します。
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.multiInstanceSettings'
+    name: multiInstanceSettings
+    fullName: multiInstanceSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクがマルチ インスタンス タスクでは、し、マルチ インスタンス タスクを実行する方法についての情報が含まれますことを示すオブジェクト。
+    optional: true
+    syntax:
+      content: 'multiInstanceSettings?: MultiInstanceSettings'
+      return:
+        type:
+          - '@azure/batch.MultiInstanceSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.nodeInfo'
+    name: nodeInfo
+    fullName: nodeInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクが実行されたコンピューティング ノードについて説明します。
+    optional: true
+    syntax:
+      content: 'nodeInfo?: ComputeNodeInformation'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: コマンドラインを実行した後、Batch サービスがコンピューティング ノードからアップロードするファイルの一覧。 マルチ インスタンス タスクでは、プライマリ タスクを実行するコンピューティング ノードから、ファイルのみアップロードされます。
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'タスクの前の状態。 タスクが初期のアクティブ状態の場合は、このプロパティは設定されていません。 使用可能な値が含まれます: ''active''、''準備''、''running''、''完了'''
+    optional: true
+    syntax:
+      content: 'previousState?: TaskState'
+      return:
+        type:
+          - '@azure/batch.TaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクが、以前の状態になった時刻。 タスクが初期のアクティブ状態の場合は、このプロパティは設定されていません。
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: コマンドラインを実行する前に、Batch サービスをコンピューティング ノードにダウンロードするファイルの一覧。 マルチ インスタンス タスクでは、プライマリ タスクを実行するコンピューティング ノードにリソース ファイルのみダウンロードされます。 リソース ファイルの一覧の最大サイズがあります。  最大サイズを超えると、要求は失敗し、RequestEntityTooLarge が応答のエラー コードになります。 このような場合は、サイズの ResourceFiles コレクションを減らす必要があります。 これは、.zip ファイル、アプリケーションのパッケージまたは Docker コンテナーを使用して実現できます。
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'タスクの現在の状態。 使用可能な値が含まれます: ''active''、''準備''、''running''、''完了'''
+    optional: true
+    syntax:
+      content: 'state?: TaskState'
+      return:
+        type:
+          - '@azure/batch.TaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクが現在の状態になった時刻。
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクのリソース使用状況の統計。
+    optional: true
+    syntax:
+      content: 'stats?: TaskStatistics'
+      return:
+        type:
+          - '@azure/batch.TaskStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクの URL。
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクを実行するユーザーの id。 省略した場合、タスクは、タスクに一意の非管理者ユーザーとして実行されます。
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AffinityInformation'
+    name: AffinityInformation
+    spec.typeScript:
+      - name: AffinityInformation
+        fullName: AffinityInformation
+        uid: '@azure/batch.AffinityInformation'
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.TaskDependencies'
+    name: TaskDependencies
+    spec.typeScript:
+      - name: TaskDependencies
+        fullName: TaskDependencies
+        uid: '@azure/batch.TaskDependencies'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.TaskExecutionInformation'
+    name: TaskExecutionInformation
+    spec.typeScript:
+      - name: TaskExecutionInformation
+        fullName: TaskExecutionInformation
+        uid: '@azure/batch.TaskExecutionInformation'
+  - uid: '@azure/batch.ExitConditions'
+    name: ExitConditions
+    spec.typeScript:
+      - name: ExitConditions
+        fullName: ExitConditions
+        uid: '@azure/batch.ExitConditions'
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    spec.typeScript:
+      - name: MultiInstanceSettings
+        fullName: MultiInstanceSettings
+        uid: '@azure/batch.MultiInstanceSettings'
+  - uid: '@azure/batch.ComputeNodeInformation'
+    name: ComputeNodeInformation
+    spec.typeScript:
+      - name: ComputeNodeInformation
+        fullName: ComputeNodeInformation
+        uid: '@azure/batch.ComputeNodeInformation'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.TaskState'
+    name: TaskState
+    spec.typeScript:
+      - name: TaskState
+        fullName: TaskState
+        uid: '@azure/batch.TaskState'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.TaskStatistics'
+    name: TaskStatistics
+    spec.typeScript:
+      - name: TaskStatistics
+        fullName: TaskStatistics
+        uid: '@azure/batch.TaskStatistics'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
