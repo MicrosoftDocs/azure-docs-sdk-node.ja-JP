@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeRemoveParameter'
+    name: NodeRemoveParameter
+    fullName: NodeRemoveParameter
+    children:
+      - '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+      - '@azure/batch.NodeRemoveParameter.nodeList'
+      - '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="9ecd5-101">NodeRemoveParameter を表すインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="9ecd5-101">An interface representing NodeRemoveParameter.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+    name: nodeDeallocationOption
+    fullName: nodeDeallocationOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9ecd5-102">割り当て解除が選択されたノードとその実行中のタスクの処理方法を決定します。</span><span class="sxs-lookup"><span data-stu-id="9ecd5-102">Determines what to do with a node and its running task(s) after it has been selected for deallocation.</span></span> <span data-ttu-id="9ecd5-103">既定値は requeue です。</span><span class="sxs-lookup"><span data-stu-id="9ecd5-103">The default value is requeue.</span></span> <span data-ttu-id="9ecd5-104">使用可能な値が含まれます: ''requeue''、''terminate''、''taskCompletion''、''retainedData''</span><span class="sxs-lookup"><span data-stu-id="9ecd5-104">Possible values include: ''requeue'', ''terminate'', ''taskCompletion'', ''retainedData''</span></span>'
+    optional: true
+    syntax:
+      content: 'nodeDeallocationOption?: ComputeNodeDeallocationOption'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeDeallocationOption'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeList'
+    name: nodeList
+    fullName: nodeList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9ecd5-105">指定したプールから削除するコンピューティング ノードの Id を含むリスト。</span><span class="sxs-lookup"><span data-stu-id="9ecd5-105">A list containing the IDs of the compute nodes to be removed from the specified pool.</span></span>
+    syntax:
+      content: 'nodeList: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9ecd5-106">プールにコンピューティング ノードの削除のタイムアウト。</span><span class="sxs-lookup"><span data-stu-id="9ecd5-106">The timeout for removal of compute nodes to the pool.</span></span> <span data-ttu-id="9ecd5-107">既定値は、15 分です。</span><span class="sxs-lookup"><span data-stu-id="9ecd5-107">The default value is 15 minutes.</span></span> <span data-ttu-id="9ecd5-108">最小値は、5 分です。</span><span class="sxs-lookup"><span data-stu-id="9ecd5-108">The minimum value is 5 minutes.</span></span> <span data-ttu-id="9ecd5-109">5 分より小さい値を指定する場合、Batch サービスは、; エラーを返しますREST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="9ecd5-109">If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ComputeNodeDeallocationOption'
+    name: ComputeNodeDeallocationOption
+    spec.typeScript:
+      - name: ComputeNodeDeallocationOption
+        fullName: ComputeNodeDeallocationOption
+        uid: '@azure/batch.ComputeNodeDeallocationOption'
