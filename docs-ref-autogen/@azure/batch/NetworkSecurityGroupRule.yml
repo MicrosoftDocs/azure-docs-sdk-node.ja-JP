@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkSecurityGroupRule'
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - '@azure/batch.NetworkSecurityGroupRule.access'
+      - '@azure/batch.NetworkSecurityGroupRule.priority'
+      - '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: NetworkSecurityGroupRule を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.access'
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'このアクションは、指定した IP アドレス、サブネットの範囲またはタグに対して実行する必要があります。 使用可能な値が含まれます: ''許可''、''拒否'''
+    syntax:
+      content: 'access: NetworkSecurityGroupRuleAccess'
+      return:
+        type:
+          - '@azure/batch.NetworkSecurityGroupRuleAccess'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このルールの優先順位。 プール内の優先順位は一意であり、優先順位の順序で評価されます。 数値が低いほど、優先度は高くなります。 たとえば、ルールを指定して、150、250、350 の順序番号を持つ可能性があります。 150 の発注番号を持つルールは、250 の順序であるルールよりも優先されます。 許可される優先度は、150 に 3500 です。 場合は、要求は HTTP ステータス コード 400 で失敗の予約済みまたは重複した値が提供されます。
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ソース アドレスのプレフィックスまたはルールに関して一致するタグ。 有効な値は 1 つの IP アドレス (例: 10.10.10.10)、IP サブネット (192.168.1.0/24 など)、既定のタグ、または * (すべてのアドレス) にします。
+      その他の場合、要求は HTTP ステータス コード 400 で失敗値が提供されます。
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
+    name: NetworkSecurityGroupRuleAccess
+    spec.typeScript:
+      - name: NetworkSecurityGroupRuleAccess
+        fullName: NetworkSecurityGroupRuleAccess
+        uid: '@azure/batch.NetworkSecurityGroupRuleAccess'

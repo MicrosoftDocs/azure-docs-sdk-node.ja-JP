@@ -1,0 +1,443 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/storage-datalake.FilesystemOperations'
+    name: FilesystemOperations
+    fullName: FilesystemOperations
+    children:
+      - '@azure/storage-datalake.FilesystemOperations.create_2'
+      - '@azure/storage-datalake.FilesystemOperations.create'
+      - '@azure/storage-datalake.FilesystemOperations.create_1'
+      - '@azure/storage-datalake.FilesystemOperations.deleteMethod_2'
+      - '@azure/storage-datalake.FilesystemOperations.deleteMethod'
+      - '@azure/storage-datalake.FilesystemOperations.deleteMethod_1'
+      - '@azure/storage-datalake.FilesystemOperations.constructor'
+      - '@azure/storage-datalake.FilesystemOperations.getProperties_2'
+      - '@azure/storage-datalake.FilesystemOperations.getProperties'
+      - '@azure/storage-datalake.FilesystemOperations.getProperties_1'
+      - '@azure/storage-datalake.FilesystemOperations.list_2'
+      - '@azure/storage-datalake.FilesystemOperations.list'
+      - '@azure/storage-datalake.FilesystemOperations.list_1'
+      - '@azure/storage-datalake.FilesystemOperations.setProperties_2'
+      - '@azure/storage-datalake.FilesystemOperations.setProperties'
+      - '@azure/storage-datalake.FilesystemOperations.setProperties_1'
+    langs:
+      - typeScript
+    type: class
+    summary: FilesystemOperations を表すクラスです。
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.create_2'
+    name: 'create(string, FilesystemCreateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, options: FilesystemCreateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: options
+          type:
+            - '@azure/storage-datalake.FilesystemCreateOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.create'
+    name: 'create(string, Models.FilesystemCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定した場所にルート ファイル システムを作成します。 ファイル システムが既に存在する場合、操作は失敗します。  この操作は、条件付きの HTTP 要求をサポートしていません。
+    syntax:
+      content: 'function create(filesystem: string, options?: Models.FilesystemCreateOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: options
+          type:
+            - Models.FilesystemCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FilesystemCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.create_1'
+    name: 'create(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.deleteMethod_2'
+    name: 'deleteMethod(string, FilesystemDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, options: FilesystemDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: options
+          type:
+            - '@azure/storage-datalake.FilesystemDeleteMethodOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.deleteMethod'
+    name: 'deleteMethod(string, Models.FilesystemDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '削除対象のファイル システムをマークします。  ファイル システムが削除されたときに、少なくとも 30 秒間の同じ識別子を持つファイル システムを作成できません。 ファイル システムの削除中に同じ識別子を持つ、ファイル システムを作成しようとは、ファイル システムを削除中であることを示す追加のエラー情報を返すサービスのステータス コード 409 (Conflict) で失敗します。 ファイル システムの削除中に、ファイルまたはディレクトリ、ファイル システム内での操作を含む、他のすべての操作はステータス コード 404 (Not Found) で失敗します。 この操作は、条件付きの HTTP 要求をサポートします。  詳細については、次を参照してください。 [Blob サービス操作の条件ヘッダーの指定](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)します。'
+    syntax:
+      content: 'function deleteMethod(filesystem: string, options?: Models.FilesystemDeleteMethodOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: options
+          type:
+            - Models.FilesystemDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FilesystemDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.constructor'
+    name: FilesystemOperations(DataLakeStorageClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: FilesystemOperations を作成します。
+    syntax:
+      content: 'new FilesystemOperations(client: DataLakeStorageClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/storage-datalake.DataLakeStorageClientContext'
+          description: |
+            サービス クライアントへの参照。
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.getProperties_2'
+    name: 'getProperties(string, FilesystemGetPropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, options: FilesystemGetPropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: options
+          type:
+            - '@azure/storage-datalake.FilesystemGetPropertiesOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.getProperties'
+    name: 'getProperties(string, Models.FilesystemGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: すべてのシステムおよびユーザー定義のファイル システムのプロパティは、応答ヘッダーで指定されます。
+    syntax:
+      content: 'function getProperties(filesystem: string, options?: Models.FilesystemGetPropertiesOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: options
+          type:
+            - Models.FilesystemGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FilesystemGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.getProperties_1'
+    name: 'getProperties(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.list_2'
+    name: 'list(FilesystemListOptionalParams, ServiceCallback<FilesystemList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: FilesystemListOptionalParams, callback: ServiceCallback<FilesystemList>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/storage-datalake.FilesystemListOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.FilesystemList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.list'
+    name: list(Models.FilesystemListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 一覧のファイル システム、そのプロパティは、アカウントを指定します。
+    syntax:
+      content: 'function list(options?: Models.FilesystemListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.FilesystemListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FilesystemListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.list_1'
+    name: list(ServiceCallback<FilesystemList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<FilesystemList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.FilesystemList>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.setProperties_2'
+    name: 'setProperties(string, FilesystemSetPropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setProperties(filesystem: string, options: FilesystemSetPropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: options
+          type:
+            - '@azure/storage-datalake.FilesystemSetPropertiesOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemSetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.setProperties'
+    name: 'setProperties(string, Models.FilesystemSetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'ファイル システムのプロパティを設定します。  この操作は、条件付きの HTTP 要求をサポートします。  詳細については、次を参照してください。 [Blob サービス操作の条件ヘッダーの指定](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)します。'
+    syntax:
+      content: 'function setProperties(filesystem: string, options?: Models.FilesystemSetPropertiesOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: options
+          type:
+            - Models.FilesystemSetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FilesystemSetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.FilesystemOperations.setProperties_1'
+    name: 'setProperties(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setProperties(filesystem: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: ファイル システムの識別子です。  値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。  連続するダッシュは許可されていません。  すべての文字を小文字にする必要があります。  値は 3 ~ 63 文字が必要です。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.FilesystemSetPropertiesResponse>
+    package: '@azure/storage-datalake'
+references:
+  - uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+    name: DataLakeStorageClientContext
+    spec.typeScript:
+      - name: DataLakeStorageClientContext
+        fullName: DataLakeStorageClientContext
+        uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+  - uid: '@azure/storage-datalake.FilesystemCreateOptionalParams'
+    name: FilesystemCreateOptionalParams
+    spec.typeScript:
+      - name: FilesystemCreateOptionalParams
+        fullName: FilesystemCreateOptionalParams
+        uid: '@azure/storage-datalake.FilesystemCreateOptionalParams'
+  - uid: '@azure/storage-datalake.FilesystemDeleteMethodOptionalParams'
+    name: FilesystemDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: FilesystemDeleteMethodOptionalParams
+        fullName: FilesystemDeleteMethodOptionalParams
+        uid: '@azure/storage-datalake.FilesystemDeleteMethodOptionalParams'
+  - uid: '@azure/storage-datalake.FilesystemGetPropertiesOptionalParams'
+    name: FilesystemGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: FilesystemGetPropertiesOptionalParams
+        fullName: FilesystemGetPropertiesOptionalParams
+        uid: '@azure/storage-datalake.FilesystemGetPropertiesOptionalParams'
+  - uid: ServiceCallback<@azure/storage-datalake.FilesystemList>
+    name: FilesystemList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FilesystemList
+        fullName: FilesystemList
+        uid: '@azure/storage-datalake.FilesystemList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/storage-datalake.FilesystemListOptionalParams'
+    name: FilesystemListOptionalParams
+    spec.typeScript:
+      - name: FilesystemListOptionalParams
+        fullName: FilesystemListOptionalParams
+        uid: '@azure/storage-datalake.FilesystemListOptionalParams'
+  - uid: '@azure/storage-datalake.FilesystemSetPropertiesOptionalParams'
+    name: FilesystemSetPropertiesOptionalParams
+    spec.typeScript:
+      - name: FilesystemSetPropertiesOptionalParams
+        fullName: FilesystemSetPropertiesOptionalParams
+        uid: '@azure/storage-datalake.FilesystemSetPropertiesOptionalParams'

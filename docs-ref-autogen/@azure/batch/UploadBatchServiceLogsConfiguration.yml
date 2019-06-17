@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    fullName: UploadBatchServiceLogsConfiguration
+    children:
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: UploadBatchServiceLogsConfiguration を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch サービスのログ ファイルのアップロード先 Azure Blob Storage 内のコンテナーの URL。 URL は、Shared Access Signature (SAS)、コンテナーに対する書き込みアクセス許可の付与を含める必要があります。 SAS 期間には、アップロードが完了するのには十分な時間を許可する必要があります。 SAS の開始時刻は省略可能ですが指定されていないことをお勧めします。
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch サービス ログ ファイルをアップロードする時間の範囲の終了。 時間範囲のログ メッセージを含む任意のログ ファイルがアップロードされます。 つまり、操作が全体のログ ファイルは常にアップロードされますが、操作が要求されているよりも少ないログを取得しないようにするために要求したよりも多くのログを取得可能性があります。 省略した場合、既定では、開始時刻後に利用可能なすべてのログをアップロードします。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch サービス ログ ファイルをアップロードする時間の範囲の開始。 時間範囲のログ メッセージを含む任意のログ ファイルがアップロードされます。 つまり、操作が全体のログ ファイルは常にアップロードされますが、操作が要求されているよりも少ないログを取得しないようにするために要求したよりも多くのログを取得可能性があります。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
