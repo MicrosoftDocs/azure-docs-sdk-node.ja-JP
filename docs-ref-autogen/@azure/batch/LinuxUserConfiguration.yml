@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.LinuxUserConfiguration'
+    name: LinuxUserConfiguration
+    fullName: LinuxUserConfiguration
+    children:
+      - '@azure/batch.LinuxUserConfiguration.gid'
+      - '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+      - '@azure/batch.LinuxUserConfiguration.uid'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="9e072-101">LinuxUserConfiguration を表すインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="9e072-101">An interface representing LinuxUserConfiguration.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.gid'
+    name: gid
+    fullName: gid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9e072-102">ユーザー アカウントのグループ ID。</span><span class="sxs-lookup"><span data-stu-id="9e072-102">The group ID for the user account.</span></span> <span data-ttu-id="9e072-103">まとめてまたはまったく、uid および gid のプロパティを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9e072-103">The uid and gid properties must be specified together or not at all.</span></span> <span data-ttu-id="9e072-104">基になるオペレーティング システムが指定されていない場合、システムは、gid を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e072-104">If not specified the underlying operating system picks the gid.</span></span>
+    optional: true
+    syntax:
+      content: 'gid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+    name: sshPrivateKey
+    fullName: sshPrivateKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9e072-105">ユーザー アカウントの SSH 秘密キー。</span><span class="sxs-lookup"><span data-stu-id="9e072-105">The SSH private key for the user account.</span></span> <span data-ttu-id="9e072-106">秘密キーをパスワードで保護されたとがあります。</span><span class="sxs-lookup"><span data-stu-id="9e072-106">The private key must not be password protected.</span></span> <span data-ttu-id="9e072-107">秘密キーは、プールの enableInterNodeCommunication プロパティが (そのことで enableInterNodeCommunication が false の場合、無視されます) が true の場合は、Linux プール内のノード間で SSH の非対称キーのベース認証を自動的に構成されます。</span><span class="sxs-lookup"><span data-stu-id="9e072-107">The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool''s enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false).</span></span> <span data-ttu-id="9e072-108">これは、キーのペアをユーザーの .ssh ディレクトリに配置することで。</span><span class="sxs-lookup"><span data-stu-id="9e072-108">It does this by placing the key pair into the user''s .ssh directory.</span></span> <span data-ttu-id="9e072-109">指定しない場合、(ユーザーの .ssh ディレクトリの変更は行われません) のノード間で指定すると、パスワードのない SSH が構成されていません。</span><span class="sxs-lookup"><span data-stu-id="9e072-109">If not specified, password-less SSH is not configured between nodes (no modification of the user''s .ssh directory is done).</span></span>'
+    optional: true
+    syntax:
+      content: 'sshPrivateKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.uid'
+    name: uid
+    fullName: uid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9e072-110">ユーザー アカウントのユーザー ID。</span><span class="sxs-lookup"><span data-stu-id="9e072-110">The user ID of the user account.</span></span> <span data-ttu-id="9e072-111">まとめてまたはまったく、uid および gid のプロパティを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9e072-111">The uid and gid properties must be specified together or not at all.</span></span> <span data-ttu-id="9e072-112">基になるオペレーティング システムが指定されていない場合、システムは、uid を取得します。</span><span class="sxs-lookup"><span data-stu-id="9e072-112">If not specified the underlying operating system picks the uid.</span></span>
+    optional: true
+    syntax:
+      content: 'uid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
