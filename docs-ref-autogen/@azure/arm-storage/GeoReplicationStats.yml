@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.GeoReplicationStats'
+    name: GeoReplicationStats
+    fullName: GeoReplicationStats
+    children:
+      - '@azure/arm-storage.GeoReplicationStats.canFailover'
+      - '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+      - '@azure/arm-storage.GeoReplicationStats.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="77b81-101">レプリケーションをストレージ アカウントの Blob、テーブル、キュー、およびファイル サービスに関連する統計。</span><span class="sxs-lookup"><span data-stu-id="77b81-101">Statistics related to replication for storage account''s Blob, Table, Queue and File services.</span></span> <span data-ttu-id="77b81-102">ストレージ アカウントの地理冗長レプリケーションが有効になっているときにのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="77b81-102">It is only available when geo-redundant replication is enabled for the storage account.</span></span>'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.canFailover'
+    name: canFailover
+    fullName: canFailover
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="77b81-103">アカウントのアカウントのフェールオーバーがサポートされているかどうかを示すブール フラグです。</span><span class="sxs-lookup"><span data-stu-id="77b81-103">A boolean flag which indicates whether or not account failover is supported for the account.</span></span>
+      <span data-ttu-id="77b81-104">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="77b81-104">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'canFailover?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+    name: lastSyncTime
+    fullName: lastSyncTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="77b81-105">上記のすべてのプライマリ書き込みこの UTC 日付/時刻値が保証されて読み取り操作に使用できます。</span><span class="sxs-lookup"><span data-stu-id="77b81-105">All primary writes preceding this UTC date/time value are guaranteed to be available for read operations.</span></span> <span data-ttu-id="77b81-106">プライマリは、可能性がありますまたは読み取りを利用できない可能性がありますを時間でこの点を次に書き込みます。</span><span class="sxs-lookup"><span data-stu-id="77b81-106">Primary writes following this point in time may or may not be available for reads.</span></span>
+      <span data-ttu-id="77b81-107">要素は、LastSyncTime の値がない場合、既定値可能性があります使用可能なこれは、セカンダリの場合に発生することができますがオフラインか、ブートス トラップでです。</span><span class="sxs-lookup"><span data-stu-id="77b81-107">Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap.</span></span>
+      <span data-ttu-id="77b81-108">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="77b81-108">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'lastSyncTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="77b81-109">2 次拠点の状態です。</span><span class="sxs-lookup"><span data-stu-id="77b81-109">The status of the secondary location.</span></span> <span data-ttu-id="77b81-110">指定できる値は: - ライブ。2 次拠点がアクティブで、動作であることを示します。</span><span class="sxs-lookup"><span data-stu-id="77b81-110">Possible values are: - Live: Indicates that the secondary location is active and operational.</span></span> <span data-ttu-id="77b81-111">ブートス トラップします。1 次拠点から 2 次拠点への初期同期が進行状況を示します。これは通常、レプリケーションを有効にするときに発生します。</span><span class="sxs-lookup"><span data-stu-id="77b81-111">- Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled.</span></span> <span data-ttu-id="77b81-112">-利用不可。2 次拠点が一時的に使用できないことを示します。</span><span class="sxs-lookup"><span data-stu-id="77b81-112">- Unavailable: Indicates that the secondary location is temporarily unavailable.</span></span> <span data-ttu-id="77b81-113">指定できる値は、次のとおりです。''ライブ''、''のブートス トラップ''、''使用できない''**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="77b81-113">Possible values include: ''Live'', ''Bootstrap'', ''Unavailable'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'status?: GeoReplicationStatus'
+      return:
+        type:
+          - '@azure/arm-storage.GeoReplicationStatus'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.GeoReplicationStatus'
+    name: GeoReplicationStatus
+    spec.typeScript:
+      - name: GeoReplicationStatus
+        fullName: GeoReplicationStatus
+        uid: '@azure/arm-storage.GeoReplicationStatus'
