@@ -1,0 +1,737 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/storage-datalake.PathOperations'
+    name: PathOperations
+    fullName: PathOperations
+    children:
+      - '@azure/storage-datalake.PathOperations.create'
+      - '@azure/storage-datalake.PathOperations.create_2'
+      - '@azure/storage-datalake.PathOperations.create_1'
+      - '@azure/storage-datalake.PathOperations.deleteMethod'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_2'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_1'
+      - '@azure/storage-datalake.PathOperations.getProperties'
+      - '@azure/storage-datalake.PathOperations.getProperties_2'
+      - '@azure/storage-datalake.PathOperations.getProperties_1'
+      - '@azure/storage-datalake.PathOperations.lease'
+      - '@azure/storage-datalake.PathOperations.lease_2'
+      - '@azure/storage-datalake.PathOperations.lease_1'
+      - '@azure/storage-datalake.PathOperations.list'
+      - '@azure/storage-datalake.PathOperations.list_2'
+      - '@azure/storage-datalake.PathOperations.list_1'
+      - '@azure/storage-datalake.PathOperations.constructor'
+      - '@azure/storage-datalake.PathOperations.read'
+      - '@azure/storage-datalake.PathOperations.read_2'
+      - '@azure/storage-datalake.PathOperations.read_1'
+      - '@azure/storage-datalake.PathOperations.update'
+      - '@azure/storage-datalake.PathOperations.update_2'
+      - '@azure/storage-datalake.PathOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="13201-101">PathOperations を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="13201-101">Class representing a PathOperations.</span></span>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create'
+    name: 'create(string, string, Models.PathCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="13201-102">作成またはファイルまたはディレクトリの名前を変更します。</span><span class="sxs-lookup"><span data-stu-id="13201-102">Create or rename a file or directory.</span></span>    <span data-ttu-id="13201-103">既定では、変換先は上書きされ、変換先は既に存在し、リース、リースを持つ場合は解除されます。</span><span class="sxs-lookup"><span data-stu-id="13201-103">By default, the destination is overwritten and if the destination already exists and has a lease the lease is broken.</span></span>  <span data-ttu-id="13201-104">この操作は、条件付きの HTTP 要求をサポートします。</span><span class="sxs-lookup"><span data-stu-id="13201-104">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="13201-105">詳細については、次を参照してください。 [Blob サービス操作の条件ヘッダーの指定](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)します。</span><span class="sxs-lookup"><span data-stu-id="13201-105">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>
+      <span data-ttu-id="13201-106">変換先が既に存在する場合、失敗するには、None-If-match で条件付き要求を使用します。"\*"。</span><span class="sxs-lookup"><span data-stu-id="13201-106">To fail if the destination already exists, use a conditional request with If-None-Match: "\*".</span></span>
+    syntax:
+      content: 'function create(filesystem: string, path: string, options?: Models.PathCreateOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-107">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-107">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-108">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-108">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_2'
+    name: 'create(string, string, PathCreateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, options: PathCreateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-109">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-109">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-110">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-110">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathCreateOptionalParams'
+          description: <span data-ttu-id="13201-111">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="13201-111">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-112">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-112">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_1'
+    name: 'create(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-113">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-113">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-114">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-114">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-115">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-115">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod'
+    name: 'deleteMethod(string, string, Models.PathDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="13201-116">ファイルまたはディレクトリを削除します。</span><span class="sxs-lookup"><span data-stu-id="13201-116">Delete the file or directory.</span></span> <span data-ttu-id="13201-117">この操作は、条件付きの HTTP 要求をサポートします。</span><span class="sxs-lookup"><span data-stu-id="13201-117">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="13201-118">詳細については、次を参照してください。 [Blob サービス操作の条件ヘッダーの指定](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)します。</span><span class="sxs-lookup"><span data-stu-id="13201-118">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options?: Models.PathDeleteMethodOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-119">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-119">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-120">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-120">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_2'
+    name: 'deleteMethod(string, string, PathDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options: PathDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-121">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-121">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-122">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-122">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+          description: <span data-ttu-id="13201-123">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="13201-123">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-124">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-124">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-125">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-125">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-126">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-126">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-127">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-127">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties'
+    name: 'getProperties(string, string, Models.PathGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="13201-128">ファイルまたはディレクトリのプロパティを取得し、必要に応じてアクセス制御リストが含まれます。</span><span class="sxs-lookup"><span data-stu-id="13201-128">Get the properties for a file or directory, and optionally include the access control list.</span></span>
+      <span data-ttu-id="13201-129">この操作は、条件付きの HTTP 要求をサポートします。</span><span class="sxs-lookup"><span data-stu-id="13201-129">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="13201-130">詳細については、次を参照してください。 [Blob サービス操作の条件ヘッダーの指定](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)します。</span><span class="sxs-lookup"><span data-stu-id="13201-130">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options?: Models.PathGetPropertiesOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-131">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-131">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-132">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-132">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_2'
+    name: 'getProperties(string, string, PathGetPropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options: PathGetPropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-133">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-133">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-134">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-134">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+          description: <span data-ttu-id="13201-135">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="13201-135">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-136">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_1'
+    name: 'getProperties(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-137">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-137">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-138">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-138">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-139">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease'
+    name: 'lease(Models.PathLeaseAction, string, string, Models.PathLeaseOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="13201-140">作成し、書き込みを制限し、パスへのアクセスを削除してリースを管理します。</span><span class="sxs-lookup"><span data-stu-id="13201-140">Create and manage a lease to restrict write and delete access to the path.</span></span> <span data-ttu-id="13201-141">この操作は、条件付きの HTTP 要求をサポートします。</span><span class="sxs-lookup"><span data-stu-id="13201-141">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="13201-142">詳細については、次を参照してください。 [Blob サービス操作の条件ヘッダーの指定](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)します。</span><span class="sxs-lookup"><span data-stu-id="13201-142">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options?: Models.PathLeaseOptionalParams)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            <span data-ttu-id="13201-143">リースの 5 つのアクションがある:「取得」、"break"、「変更」、"renew"、および「リリース」。</span><span class="sxs-lookup"><span data-stu-id="13201-143">There are five lease actions: "acquire", "break", "change", "renew", and "release".</span></span> <span data-ttu-id="13201-144">「取得」を使用し、"x ms-提案のリースの id"と「x-ms のリースの所要時間」新しいリースを取得するを指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-144">Use "acquire" and specify the "x-ms-proposed-lease-id" and "x-ms-lease-duration" to acquire a new lease.</span></span> <span data-ttu-id="13201-145">"Break"を使用して、既存のリースを中断します。</span><span class="sxs-lookup"><span data-stu-id="13201-145">Use "break" to break an existing lease.</span></span> <span data-ttu-id="13201-146">リースが切断されたときに、リース中断期間は許容経過時間を間中断とリリース以外のリース操作はありませんファイル。</span><span class="sxs-lookup"><span data-stu-id="13201-146">When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the file.</span></span> <span data-ttu-id="13201-147">リースが正常に中断されると、応答は、新しいリースを取得するまでの秒数の間隔を示します。</span><span class="sxs-lookup"><span data-stu-id="13201-147">When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.</span></span> <span data-ttu-id="13201-148">使用は、「変更」し、アクティブなリースのリース ID を変更するには、現在のリース ID が"x-ms のリースの id"と"x ms-提案のリースの id"で新しいリース ID を指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-148">Use "change" and specify the current lease ID in "x-ms-lease-id" and the new lease ID in "x-ms-proposed-lease-id" to change the lease ID of an active lease.</span></span> <span data-ttu-id="13201-149">「更新」を使用し、"x ms のリースの id"既存のリースを更新するを指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-149">Use "renew" and specify the "x-ms-lease-id" to renew an existing lease.</span></span>
+            <span data-ttu-id="13201-150">「リリース」を使用し、"x ms のリースの id"のリースを解放するを指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-150">Use "release" and specify the "x-ms-lease-id" to release a lease.</span></span> <span data-ttu-id="13201-151">使用可能な値が含まれます: '取得'、'break'、'を変更する'、'renew'、'リリース'</span><span class="sxs-lookup"><span data-stu-id="13201-151">Possible values include: 'acquire', 'break', 'change', 'renew', 'release'</span></span>
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-152">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-152">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-153">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-153">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathLeaseOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_2'
+    name: 'lease(Models.PathLeaseAction, string, string, PathLeaseOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options: PathLeaseOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            <span data-ttu-id="13201-154">リースの 5 つのアクションがある:「取得」、"break"、「変更」、"renew"、および「リリース」。</span><span class="sxs-lookup"><span data-stu-id="13201-154">There are five lease actions: "acquire", "break", "change", "renew", and "release".</span></span> <span data-ttu-id="13201-155">「取得」を使用し、"x ms-提案のリースの id"と「x-ms のリースの所要時間」新しいリースを取得するを指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-155">Use "acquire" and specify the "x-ms-proposed-lease-id" and "x-ms-lease-duration" to acquire a new lease.</span></span> <span data-ttu-id="13201-156">"Break"を使用して、既存のリースを中断します。</span><span class="sxs-lookup"><span data-stu-id="13201-156">Use "break" to break an existing lease.</span></span> <span data-ttu-id="13201-157">リースが切断されたときに、リース中断期間は許容経過時間を間中断とリリース以外のリース操作はありませんファイル。</span><span class="sxs-lookup"><span data-stu-id="13201-157">When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the file.</span></span> <span data-ttu-id="13201-158">リースが正常に中断されると、応答は、新しいリースを取得するまでの秒数の間隔を示します。</span><span class="sxs-lookup"><span data-stu-id="13201-158">When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.</span></span> <span data-ttu-id="13201-159">使用は、「変更」し、アクティブなリースのリース ID を変更するには、現在のリース ID が"x-ms のリースの id"と"x ms-提案のリースの id"で新しいリース ID を指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-159">Use "change" and specify the current lease ID in "x-ms-lease-id" and the new lease ID in "x-ms-proposed-lease-id" to change the lease ID of an active lease.</span></span> <span data-ttu-id="13201-160">「更新」を使用し、"x ms のリースの id"既存のリースを更新するを指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-160">Use "renew" and specify the "x-ms-lease-id" to renew an existing lease.</span></span>
+            <span data-ttu-id="13201-161">「リリース」を使用し、"x ms のリースの id"のリースを解放するを指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-161">Use "release" and specify the "x-ms-lease-id" to release a lease.</span></span> <span data-ttu-id="13201-162">使用可能な値が含まれます: '取得'、'break'、'を変更する'、'renew'、'リリース'</span><span class="sxs-lookup"><span data-stu-id="13201-162">Possible values include: 'acquire', 'break', 'change', 'renew', 'release'</span></span>
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-163">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-163">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-164">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-164">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathLeaseOptionalParams'
+          description: <span data-ttu-id="13201-165">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="13201-165">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-166">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_1'
+    name: 'lease(Models.PathLeaseAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            <span data-ttu-id="13201-167">リースの 5 つのアクションがある:「取得」、"break"、「変更」、"renew"、および「リリース」。</span><span class="sxs-lookup"><span data-stu-id="13201-167">There are five lease actions: "acquire", "break", "change", "renew", and "release".</span></span> <span data-ttu-id="13201-168">「取得」を使用し、"x ms-提案のリースの id"と「x-ms のリースの所要時間」新しいリースを取得するを指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-168">Use "acquire" and specify the "x-ms-proposed-lease-id" and "x-ms-lease-duration" to acquire a new lease.</span></span> <span data-ttu-id="13201-169">"Break"を使用して、既存のリースを中断します。</span><span class="sxs-lookup"><span data-stu-id="13201-169">Use "break" to break an existing lease.</span></span> <span data-ttu-id="13201-170">リースが切断されたときに、リース中断期間は許容経過時間を間中断とリリース以外のリース操作はありませんファイル。</span><span class="sxs-lookup"><span data-stu-id="13201-170">When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the file.</span></span> <span data-ttu-id="13201-171">リースが正常に中断されると、応答は、新しいリースを取得するまでの秒数の間隔を示します。</span><span class="sxs-lookup"><span data-stu-id="13201-171">When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.</span></span> <span data-ttu-id="13201-172">使用は、「変更」し、アクティブなリースのリース ID を変更するには、現在のリース ID が"x-ms のリースの id"と"x ms-提案のリースの id"で新しいリース ID を指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-172">Use "change" and specify the current lease ID in "x-ms-lease-id" and the new lease ID in "x-ms-proposed-lease-id" to change the lease ID of an active lease.</span></span> <span data-ttu-id="13201-173">「更新」を使用し、"x ms のリースの id"既存のリースを更新するを指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-173">Use "renew" and specify the "x-ms-lease-id" to renew an existing lease.</span></span>
+            <span data-ttu-id="13201-174">「リリース」を使用し、"x ms のリースの id"のリースを解放するを指定します。</span><span class="sxs-lookup"><span data-stu-id="13201-174">Use "release" and specify the "x-ms-lease-id" to release a lease.</span></span> <span data-ttu-id="13201-175">使用可能な値が含まれます: '取得'、'break'、'を変更する'、'renew'、'リリース'</span><span class="sxs-lookup"><span data-stu-id="13201-175">Possible values include: 'acquire', 'break', 'change', 'renew', 'release'</span></span>
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-176">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-176">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-177">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-177">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-178">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list'
+    name: 'list(boolean, string, Models.PathListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="13201-179">ファイル システム パスとそのプロパティを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="13201-179">List filesystem paths and their properties.</span></span>
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options?: Models.PathListOptionalParams)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: '<span data-ttu-id="13201-180">"True"の場合は、すべてのパスが一覧表示されます。それ以外の場合、ファイル システムのルートにあるパスのみが一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="13201-180">If "true", all paths are listed; otherwise, only paths at the root of the filesystem are listed.</span></span>  <span data-ttu-id="13201-181">"Directory"が指定されている場合、リストは同じルートを共有パスのみが含まれます。</span><span class="sxs-lookup"><span data-stu-id="13201-181">If "directory" is specified, the list will only include paths that share the same root.</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: '<span data-ttu-id="13201-182">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-182">The filesystem identifier.</span></span>  <span data-ttu-id="13201-183">値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="13201-183">The value must start and end with a letter or number and must contain only letters, numbers, and the dash (-) character.</span></span>  <span data-ttu-id="13201-184">連続するダッシュは許可されていません。</span><span class="sxs-lookup"><span data-stu-id="13201-184">Consecutive dashes are not permitted.</span></span>  <span data-ttu-id="13201-185">すべての文字を小文字にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="13201-185">All letters must be lowercase.</span></span>  <span data-ttu-id="13201-186">値は 3 ~ 63 文字が必要です。</span><span class="sxs-lookup"><span data-stu-id="13201-186">The value must have between 3 and 63 characters.</span></span>'
+        - id: options
+          type:
+            - Models.PathListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_2'
+    name: 'list(boolean, string, PathListOptionalParams, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options: PathListOptionalParams, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: '<span data-ttu-id="13201-187">"True"の場合は、すべてのパスが一覧表示されます。それ以外の場合、ファイル システムのルートにあるパスのみが一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="13201-187">If "true", all paths are listed; otherwise, only paths at the root of the filesystem are listed.</span></span>  <span data-ttu-id="13201-188">"Directory"が指定されている場合、リストは同じルートを共有パスのみが含まれます。</span><span class="sxs-lookup"><span data-stu-id="13201-188">If "directory" is specified, the list will only include paths that share the same root.</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: '<span data-ttu-id="13201-189">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-189">The filesystem identifier.</span></span>  <span data-ttu-id="13201-190">値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="13201-190">The value must start and end with a letter or number and must contain only letters, numbers, and the dash (-) character.</span></span>  <span data-ttu-id="13201-191">連続するダッシュは許可されていません。</span><span class="sxs-lookup"><span data-stu-id="13201-191">Consecutive dashes are not permitted.</span></span>  <span data-ttu-id="13201-192">すべての文字を小文字にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="13201-192">All letters must be lowercase.</span></span>  <span data-ttu-id="13201-193">値は 3 ~ 63 文字が必要です。</span><span class="sxs-lookup"><span data-stu-id="13201-193">The value must have between 3 and 63 characters.</span></span>'
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathListOptionalParams'
+          description: <span data-ttu-id="13201-194">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="13201-194">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            <span data-ttu-id="13201-195">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_1'
+    name: 'list(boolean, string, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: '<span data-ttu-id="13201-196">"True"の場合は、すべてのパスが一覧表示されます。それ以外の場合、ファイル システムのルートにあるパスのみが一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="13201-196">If "true", all paths are listed; otherwise, only paths at the root of the filesystem are listed.</span></span>  <span data-ttu-id="13201-197">"Directory"が指定されている場合、リストは同じルートを共有パスのみが含まれます。</span><span class="sxs-lookup"><span data-stu-id="13201-197">If "directory" is specified, the list will only include paths that share the same root.</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: '<span data-ttu-id="13201-198">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-198">The filesystem identifier.</span></span>  <span data-ttu-id="13201-199">値を先頭し、末尾は英字または数字し、文字、数字、およびダッシュ (-) 文字のみを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="13201-199">The value must start and end with a letter or number and must contain only letters, numbers, and the dash (-) character.</span></span>  <span data-ttu-id="13201-200">連続するダッシュは許可されていません。</span><span class="sxs-lookup"><span data-stu-id="13201-200">Consecutive dashes are not permitted.</span></span>  <span data-ttu-id="13201-201">すべての文字を小文字にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="13201-201">All letters must be lowercase.</span></span>  <span data-ttu-id="13201-202">値は 3 ~ 63 文字が必要です。</span><span class="sxs-lookup"><span data-stu-id="13201-202">The value must have between 3 and 63 characters.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            <span data-ttu-id="13201-203">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.constructor'
+    name: PathOperations(DataLakeStorageClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="13201-204">PathOperations を作成します。</span><span class="sxs-lookup"><span data-stu-id="13201-204">Create a PathOperations.</span></span>
+    syntax:
+      content: 'new PathOperations(client: DataLakeStorageClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/storage-datalake.DataLakeStorageClientContext'
+          description: |
+            <span data-ttu-id="13201-205">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="13201-205">Reference to the service client.</span></span>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read'
+    name: 'read(string, string, Models.PathReadOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="13201-206">ファイルの内容を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="13201-206">Read the contents of a file.</span></span>  <span data-ttu-id="13201-207">読み取り操作は、範囲の要求がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="13201-207">For read operations, range requests are supported.</span></span> <span data-ttu-id="13201-208">この操作は、条件付きの HTTP 要求をサポートします。</span><span class="sxs-lookup"><span data-stu-id="13201-208">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="13201-209">詳細については、次を参照してください。 [Blob サービス操作の条件ヘッダーの指定](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)します。</span><span class="sxs-lookup"><span data-stu-id="13201-209">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function read(filesystem: string, path: string, options?: Models.PathReadOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-210">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-210">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-211">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-211">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathReadOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_2'
+    name: 'read(string, string, PathReadOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, options: PathReadOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-212">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-212">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-213">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-213">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathReadOptionalParams'
+          description: <span data-ttu-id="13201-214">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="13201-214">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-215">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_1'
+    name: 'read(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-216">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-216">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-217">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-217">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-218">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-218">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update'
+    name: 'update(Models.PathUpdateAction, string, string, Models.PathUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="13201-219">ファイルに追加するデータのアップロード、(書き込み) の前にアップロードされたデータをファイルにフラッシュ、ファイルまたはディレクトリのプロパティを設定またはファイルまたはディレクトリのアクセス制御を設定します。</span><span class="sxs-lookup"><span data-stu-id="13201-219">Uploads data to be appended to a file, flushes (writes) previously uploaded data to a file, sets properties for a file or directory, or sets access control for a file or directory.</span></span> <span data-ttu-id="13201-220">データは、ファイルにのみ追加できます。</span><span class="sxs-lookup"><span data-stu-id="13201-220">Data can only be appended to a file.</span></span> <span data-ttu-id="13201-221">この操作は、条件付きの HTTP 要求をサポートします。</span><span class="sxs-lookup"><span data-stu-id="13201-221">This operation supports conditional HTTP requests.</span></span> <span data-ttu-id="13201-222">詳細については、次を参照してください。 [Blob サービス操作の条件ヘッダーの指定](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)します。</span><span class="sxs-lookup"><span data-stu-id="13201-222">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options?: Models.PathUpdateOptionalParams)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '<span data-ttu-id="13201-223">前にアップロードされたデータ ファイル、ファイルのプロパティを設定するには、"setProperties"をフラッシュ"flush"をファイルに追加するデータをアップロードするには、「追加」操作であるか、ディレクトリ、または、所有者を設定するには、"setAccessControl"は、グループ、アクセス許可、またはアクセス制御リストファイルまたはディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="13201-223">The action must be "append" to upload data to be appended to a file, "flush" to flush previously uploaded data to a file, "setProperties" to set the properties of a file or directory, or "setAccessControl" to set the owner, group, permissions, or access control list for a file or directory.</span></span>  <span data-ttu-id="13201-224">アクセス制御を使用するにはアカウントの階層の Namespace を有効する必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="13201-224">Note that Hierarchical Namespace must be enabled for the account in order to use access control.</span></span>  <span data-ttu-id="13201-225">アクセス制御リスト (ACL) の所有者は、所有グループ、アクセス許可が含まれています、アクセス許可 ms x と x-ms の acl の要求ヘッダー、他は相互に排他的に注意してください。</span><span class="sxs-lookup"><span data-stu-id="13201-225">Also note that the Access Control List (ACL) includes permissions for the owner, owning group, and others, so the x-ms-permissions and x-ms-acl request headers are mutually exclusive.</span></span> <span data-ttu-id="13201-226">使用可能な値が含まれます: ''append''、''フラッシュ''、''setProperties''、''setAccessControl''</span><span class="sxs-lookup"><span data-stu-id="13201-226">Possible values include: ''append'', ''flush'', ''setProperties'', ''setAccessControl''</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-227">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-227">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-228">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-228">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_2'
+    name: 'update(Models.PathUpdateAction, string, string, PathUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options: PathUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '<span data-ttu-id="13201-229">前にアップロードされたデータ ファイル、ファイルのプロパティを設定するには、"setProperties"をフラッシュ"flush"をファイルに追加するデータをアップロードするには、「追加」操作であるか、ディレクトリ、または、所有者を設定するには、"setAccessControl"は、グループ、アクセス許可、またはアクセス制御リストファイルまたはディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="13201-229">The action must be "append" to upload data to be appended to a file, "flush" to flush previously uploaded data to a file, "setProperties" to set the properties of a file or directory, or "setAccessControl" to set the owner, group, permissions, or access control list for a file or directory.</span></span>  <span data-ttu-id="13201-230">アクセス制御を使用するにはアカウントの階層の Namespace を有効する必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="13201-230">Note that Hierarchical Namespace must be enabled for the account in order to use access control.</span></span>  <span data-ttu-id="13201-231">アクセス制御リスト (ACL) の所有者は、所有グループ、アクセス許可が含まれています、アクセス許可 ms x と x-ms の acl の要求ヘッダー、他は相互に排他的に注意してください。</span><span class="sxs-lookup"><span data-stu-id="13201-231">Also note that the Access Control List (ACL) includes permissions for the owner, owning group, and others, so the x-ms-permissions and x-ms-acl request headers are mutually exclusive.</span></span> <span data-ttu-id="13201-232">使用可能な値が含まれます: ''append''、''フラッシュ''、''setProperties''、''setAccessControl''</span><span class="sxs-lookup"><span data-stu-id="13201-232">Possible values include: ''append'', ''flush'', ''setProperties'', ''setAccessControl''</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-233">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-233">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-234">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-234">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathUpdateOptionalParams'
+          description: <span data-ttu-id="13201-235">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="13201-235">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-236">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-236">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_1'
+    name: 'update(Models.PathUpdateAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '<span data-ttu-id="13201-237">前にアップロードされたデータ ファイル、ファイルのプロパティを設定するには、"setProperties"をフラッシュ"flush"をファイルに追加するデータをアップロードするには、「追加」操作であるか、ディレクトリ、または、所有者を設定するには、"setAccessControl"は、グループ、アクセス許可、またはアクセス制御リストファイルまたはディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="13201-237">The action must be "append" to upload data to be appended to a file, "flush" to flush previously uploaded data to a file, "setProperties" to set the properties of a file or directory, or "setAccessControl" to set the owner, group, permissions, or access control list for a file or directory.</span></span>  <span data-ttu-id="13201-238">アクセス制御を使用するにはアカウントの階層の Namespace を有効する必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="13201-238">Note that Hierarchical Namespace must be enabled for the account in order to use access control.</span></span>  <span data-ttu-id="13201-239">アクセス制御リスト (ACL) の所有者は、所有グループ、アクセス許可が含まれています、アクセス許可 ms x と x-ms の acl の要求ヘッダー、他は相互に排他的に注意してください。</span><span class="sxs-lookup"><span data-stu-id="13201-239">Also note that the Access Control List (ACL) includes permissions for the owner, owning group, and others, so the x-ms-permissions and x-ms-acl request headers are mutually exclusive.</span></span> <span data-ttu-id="13201-240">使用可能な値が含まれます: ''append''、''フラッシュ''、''setProperties''、''setAccessControl''</span><span class="sxs-lookup"><span data-stu-id="13201-240">Possible values include: ''append'', ''flush'', ''setProperties'', ''setAccessControl''</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="13201-241">ファイル システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="13201-241">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="13201-242">ファイルまたはディレクトリのパス。</span><span class="sxs-lookup"><span data-stu-id="13201-242">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="13201-243">コールバック</span><span class="sxs-lookup"><span data-stu-id="13201-243">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+references:
+  - uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+    name: DataLakeStorageClientContext
+    spec.typeScript:
+      - name: DataLakeStorageClientContext
+        fullName: DataLakeStorageClientContext
+        uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+  - uid: '@azure/storage-datalake.PathCreateOptionalParams'
+    name: PathCreateOptionalParams
+    spec.typeScript:
+      - name: PathCreateOptionalParams
+        fullName: PathCreateOptionalParams
+        uid: '@azure/storage-datalake.PathCreateOptionalParams'
+  - uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+    name: PathDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: PathDeleteMethodOptionalParams
+        fullName: PathDeleteMethodOptionalParams
+        uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+  - uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+    name: PathGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: PathGetPropertiesOptionalParams
+        fullName: PathGetPropertiesOptionalParams
+        uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+  - uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+    name: PathLeaseOptionalParams
+    spec.typeScript:
+      - name: PathLeaseOptionalParams
+        fullName: PathLeaseOptionalParams
+        uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+  - uid: ServiceCallback<@azure/storage-datalake.PathList>
+    name: PathList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PathList
+        fullName: PathList
+        uid: '@azure/storage-datalake.PathList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/storage-datalake.PathListOptionalParams'
+    name: PathListOptionalParams
+    spec.typeScript:
+      - name: PathListOptionalParams
+        fullName: PathListOptionalParams
+        uid: '@azure/storage-datalake.PathListOptionalParams'
+  - uid: '@azure/storage-datalake.PathReadOptionalParams'
+    name: PathReadOptionalParams
+    spec.typeScript:
+      - name: PathReadOptionalParams
+        fullName: PathReadOptionalParams
+        uid: '@azure/storage-datalake.PathReadOptionalParams'
+  - uid: '@azure/storage-datalake.PathUpdateOptionalParams'
+    name: PathUpdateOptionalParams
+    spec.typeScript:
+      - name: PathUpdateOptionalParams
+        fullName: PathUpdateOptionalParams
+        uid: '@azure/storage-datalake.PathUpdateOptionalParams'

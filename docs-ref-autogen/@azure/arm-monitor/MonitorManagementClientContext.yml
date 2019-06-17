@@ -1,0 +1,242 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext'
+    name: MonitorManagementClientContext
+    fullName: MonitorManagementClientContext
+    children:
+      - '@azure/arm-monitor.MonitorManagementClientContext.acceptLanguage'
+      - '@azure/arm-monitor.MonitorManagementClientContext.beginLongRunningRequest'
+      - '@azure/arm-monitor.MonitorManagementClientContext.credentials'
+      - '@azure/arm-monitor.MonitorManagementClientContext.longRunningOperationRetryTimeout'
+      - '@azure/arm-monitor.MonitorManagementClientContext.constructor'
+      - '@azure/arm-monitor.MonitorManagementClientContext.restoreLROPoller'
+      - '@azure/arm-monitor.MonitorManagementClientContext.sendLongRunningRequest'
+      - '@azure/arm-monitor.MonitorManagementClientContext.sendLRORequest'
+      - '@azure/arm-monitor.MonitorManagementClientContext.sendOperationRequest'
+      - '@azure/arm-monitor.MonitorManagementClientContext.sendRequest'
+      - '@azure/arm-monitor.MonitorManagementClientContext.subscriptionId'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: AzureServiceClient
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.acceptLanguage'
+    name: acceptLanguage
+    fullName: acceptLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'acceptLanguage: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.beginLongRunningRequest'
+    name: 'beginLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90cba-101">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、HttpLongRunningOperationResponse を取得します。</span><span class="sxs-lookup"><span data-stu-id="90cba-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    syntax:
+      content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
+      parameters:
+        - id: request
+          type:
+            - RequestPrepareOptions | WebResource
+          description: <span data-ttu-id="90cba-102">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="90cba-102">The request object</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.credentials'
+    name: credentials
+    fullName: credentials
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'credentials: ServiceClientCredentials'
+      return:
+        type:
+          - ServiceClientCredentials
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.longRunningOperationRetryTimeout'
+    name: longRunningOperationRetryTimeout
+    fullName: longRunningOperationRetryTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="90cba-103">長時間実行される操作の秒の再試行タイムアウト。</span><span class="sxs-lookup"><span data-stu-id="90cba-103">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="90cba-104">既定値は 30 です。</span><span class="sxs-lookup"><span data-stu-id="90cba-104">Default value is 30.</span></span>
+    optional: true
+    syntax:
+      content: 'longRunningOperationRetryTimeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.constructor'
+    name: 'MonitorManagementClientContext(ServiceClientCredentials, string, Models.MonitorManagementClientOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90cba-105">MonitorManagementClient クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="90cba-105">Initializes a new instance of the MonitorManagementClient class.</span></span>
+    syntax:
+      content: 'new MonitorManagementClientContext(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.MonitorManagementClientOptions)'
+      parameters:
+        - id: credentials
+          type:
+            - ServiceClientCredentials
+          description: <span data-ttu-id="90cba-106">Azure に接続するクライアントに必要な資格情報。</span><span class="sxs-lookup"><span data-stu-id="90cba-106">Credentials needed for the client to connect to Azure.</span></span>
+        - id: subscriptionId
+          type:
+            - string
+          description: <span data-ttu-id="90cba-107">Azure サブスクリプション id。</span><span class="sxs-lookup"><span data-stu-id="90cba-107">The Azure subscription Id.</span></span>
+        - id: options
+          type:
+            - Models.MonitorManagementClientOptions
+          description: ''
+          optional: true
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.restoreLROPoller'
+    name: restoreLROPoller(LROPollState)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90cba-108">指定された LROPollState から、LROPoller を復元します。</span><span class="sxs-lookup"><span data-stu-id="90cba-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="90cba-109">このメソッドは、別のプロセスやマシンで、LROPoller を再作成に使用できます。</span><span class="sxs-lookup"><span data-stu-id="90cba-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    syntax:
+      content: 'function restoreLROPoller(lroPollState: LROPollState)'
+      parameters:
+        - id: lroPollState
+          type:
+            - LROPollState
+          description: ''
+      return:
+        type:
+          - LROPoller
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.sendLongRunningRequest'
+    name: 'sendLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90cba-110">ポーリングされ、最終的な結果を提供する要求を作成するためのメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="90cba-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    syntax:
+      content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
+      parameters:
+        - id: request
+          type:
+            - RequestPrepareOptions | WebResource
+          description: <span data-ttu-id="90cba-111">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="90cba-111">The request object</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.sendLRORequest'
+    name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90cba-112">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、LROPoller を取得します。</span><span class="sxs-lookup"><span data-stu-id="90cba-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    syntax:
+      content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: <span data-ttu-id="90cba-113">操作の引数。</span><span class="sxs-lookup"><span data-stu-id="90cba-113">The arguments to the operation.</span></span>
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: <span data-ttu-id="90cba-114">操作を指定します。</span><span class="sxs-lookup"><span data-stu-id="90cba-114">The specification for the operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="90cba-115">要求時に送信される追加のオプション。</span><span class="sxs-lookup"><span data-stu-id="90cba-115">Additional options to be sent while making the request.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.sendOperationRequest'
+    name: 'sendOperationRequest(OperationArguments, OperationSpec, ServiceCallback<any>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90cba-116">指定された OperationSpec を使用して設定される HTTP 要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="90cba-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    syntax:
+      content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: <span data-ttu-id="90cba-117">この引数から HTTP 要求のテンプレート化された値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="90cba-117">The arguments that the HTTP request's templated values will be populated from.</span></span>
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: <span data-ttu-id="90cba-118">使用して設定、httpRequest OperationSpec します。</span><span class="sxs-lookup"><span data-stu-id="90cba-118">The OperationSpec to use to populate the httpRequest.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<any>
+          description: |
+            <span data-ttu-id="90cba-119">応答が受信されたときに呼び出すコールバック。</span><span class="sxs-lookup"><span data-stu-id="90cba-119">The callback to call when the response is received.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.sendRequest'
+    name: sendRequest(RequestPrepareOptions | WebResource)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="90cba-120">指定された httpRequest を送信します。</span><span class="sxs-lookup"><span data-stu-id="90cba-120">Send the provided httpRequest.</span></span>
+    syntax:
+      content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
+      parameters:
+        - id: options
+          type:
+            - RequestPrepareOptions | WebResource
+          description: ''
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.MonitorManagementClientContext.subscriptionId'
+    name: subscriptionId
+    fullName: subscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'subscriptionId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
