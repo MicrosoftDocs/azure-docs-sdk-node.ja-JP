@@ -1,0 +1,837 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.Functions'
+    name: Functions
+    fullName: Functions
+    children:
+      - '@azure/arm-streamanalytics.Functions.beginTest'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace_2'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace_1'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod_2'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod_1'
+      - '@azure/arm-streamanalytics.Functions.constructor'
+      - '@azure/arm-streamanalytics.Functions.get'
+      - '@azure/arm-streamanalytics.Functions.get_2'
+      - '@azure/arm-streamanalytics.Functions.get_1'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob_2'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob_1'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_2'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_1'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_2'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_1'
+      - '@azure/arm-streamanalytics.Functions.test'
+      - '@azure/arm-streamanalytics.Functions.update_2'
+      - '@azure/arm-streamanalytics.Functions.update'
+      - '@azure/arm-streamanalytics.Functions.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="16ac5-101">関数を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="16ac5-101">Class representing a Functions.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.beginTest'
+    name: 'beginTest(string, string, string, Models.FunctionsBeginTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-102">関数の提供情報が有効かどうかをテストします。</span><span class="sxs-lookup"><span data-stu-id="16ac5-102">Tests if the information provided for a function is valid.</span></span> <span data-ttu-id="16ac5-103">関数の背後にある基になる web サービスへの接続をテストまたは提供される関数のコードの構文が正しいことを確認の範囲で指定できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-103">This can range from testing the connection to the underlying web service behind the function or making sure the function code provided is syntactically correct.</span></span>
+    syntax:
+      content: 'function beginTest(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsBeginTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-104">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-105">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-106">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-106">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-107">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-107">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsBeginTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace_2'
+    name: 'createOrReplace(FunctionModel, string, string, string, FunctionsCreateOrReplaceOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options: FunctionsCreateOrReplaceOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="16ac5-108">新しい関数を作成またはストリーミング ジョブの下で、既存の置換に使用される関数の定義。</span><span class="sxs-lookup"><span data-stu-id="16ac5-108">The definition of the function that will be used to create a new function or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-109">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-110">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-111">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-111">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-112">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-112">The name of the function.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+          description: <span data-ttu-id="16ac5-113">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="16ac5-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="16ac5-114">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace'
+    name: 'createOrReplace(FunctionModel, string, string, string, Models.FunctionsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-115">関数を作成するか、既存のストリーミング ジョブの下で既存の関数を置き換えます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-115">Creates a function or replaces an already existing function under an existing streaming job.</span></span>
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="16ac5-116">新しい関数を作成またはストリーミング ジョブの下で、既存の置換に使用される関数の定義。</span><span class="sxs-lookup"><span data-stu-id="16ac5-116">The definition of the function that will be used to create a new function or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-117">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-117">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-118">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-118">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-119">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-119">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-120">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-120">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace_1'
+    name: 'createOrReplace(FunctionModel, string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="16ac5-121">新しい関数を作成またはストリーミング ジョブの下で、既存の置換に使用される関数の定義。</span><span class="sxs-lookup"><span data-stu-id="16ac5-121">The definition of the function that will be used to create a new function or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-122">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-122">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-123">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-123">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-124">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-124">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-125">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-125">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="16ac5-126">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-127">ストリーミング ジョブから関数を削除します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-127">Deletes a function from the streaming job.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-128">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-128">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-129">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-129">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-130">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-130">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-131">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-131">The name of the function.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-132">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-132">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-133">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-133">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-134">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-134">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-135">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-135">The name of the function.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="16ac5-136">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="16ac5-136">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="16ac5-137">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-137">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-138">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-138">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-139">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-139">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-140">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-140">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-141">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-141">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="16ac5-142">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.constructor'
+    name: Functions(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-143">関数を作成します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-143">Create a Functions.</span></span>
+    syntax:
+      content: 'new Functions(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            <span data-ttu-id="16ac5-144">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="16ac5-144">Reference to the service client.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-145">指定された関数の詳細を取得します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-145">Gets details about the specified function.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-146">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-146">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-147">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-147">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-148">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-148">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-149">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-149">The name of the function.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, options: RequestOptionsBase, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-150">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-150">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-151">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-151">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-152">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-152">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-153">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-153">The name of the function.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="16ac5-154">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="16ac5-154">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="16ac5-155">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-155">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get_1'
+    name: 'get(string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-156">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-156">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-157">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-157">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-158">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-158">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-159">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-159">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="16ac5-160">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob_2'
+    name: 'listByStreamingJob(string, string, FunctionsListByStreamingJobOptionalParams, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options: FunctionsListByStreamingJobOptionalParams, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-161">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-161">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-162">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-162">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-163">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-163">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+          description: <span data-ttu-id="16ac5-164">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="16ac5-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="16ac5-165">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob'
+    name: 'listByStreamingJob(string, string, Models.FunctionsListByStreamingJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-166">すべての指定のストリーミング ジョブの下で関数の一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-166">Lists all of the functions under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options?: Models.FunctionsListByStreamingJobOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-167">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-167">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-168">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-168">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-169">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-169">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsListByStreamingJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob_1'
+    name: 'listByStreamingJob(string, string, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-170">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-170">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-171">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-171">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-172">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-172">The name of the streaming job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="16ac5-173">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-173">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext'
+    name: 'listByStreamingJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-174">すべての指定のストリーミング ジョブの下で関数の一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-174">Lists all of the functions under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-175">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="16ac5-175">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_2'
+    name: 'listByStreamingJobNext(string, RequestOptionsBase, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-176">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="16ac5-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="16ac5-177">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="16ac5-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="16ac5-178">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_1'
+    name: 'listByStreamingJobNext(string, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-179">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="16ac5-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="16ac5-180">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_2'
+    name: 'retrieveDefaultDefinition(string, string, string, FunctionsRetrieveDefaultDefinitionOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, options: FunctionsRetrieveDefaultDefinitionOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-181">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-181">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-182">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-182">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-183">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-183">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-184">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-184">The name of the function.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+          description: <span data-ttu-id="16ac5-185">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="16ac5-185">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="16ac5-186">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-186">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition'
+    name: 'retrieveDefaultDefinition(string, string, string, Models.FunctionsRetrieveDefaultDefinitionOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-187">指定されたパラメーターに基づいて関数の既定の定義を取得します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-187">Retrieves the default definition of a function based on the parameters specified.</span></span>
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsRetrieveDefaultDefinitionOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-188">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-188">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-189">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-189">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-190">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-190">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-191">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-191">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsRetrieveDefaultDefinitionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_1'
+    name: 'retrieveDefaultDefinition(string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-192">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-192">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-193">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-193">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-194">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-194">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-195">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-195">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="16ac5-196">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-196">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.test'
+    name: 'test(string, string, string, Models.FunctionsTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-197">関数の提供情報が有効かどうかをテストします。</span><span class="sxs-lookup"><span data-stu-id="16ac5-197">Tests if the information provided for a function is valid.</span></span> <span data-ttu-id="16ac5-198">関数の背後にある基になる web サービスへの接続をテストまたは提供される関数のコードの構文が正しいことを確認の範囲で指定できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-198">This can range from testing the connection to the underlying web service behind the function or making sure the function code provided is syntactically correct.</span></span>
+    syntax:
+      content: 'function test(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-199">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-199">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-200">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-200">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-201">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-201">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-202">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-202">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsTestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update_2'
+    name: 'update(FunctionModel, string, string, string, FunctionsUpdateOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options: FunctionsUpdateOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="16ac5-203">関数オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16ac5-203">A function object.</span></span> <span data-ttu-id="16ac5-204">(つまり、既存の関数に対応するプロパティをここで指定したプロパティが上書きされます。これらのプロパティは更新されます)。</span><span class="sxs-lookup"><span data-stu-id="16ac5-204">The properties specified here will overwrite the corresponding properties in the existing function (ie. Those properties will be updated).</span></span> <span data-ttu-id="16ac5-205">ここでは null に設定されている任意のプロパティは既存の関数に対応するプロパティが、同じままし、このパッチ操作の結果として変更はことを意味します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-205">Any properties that are set to null here will mean that the corresponding property in the existing function will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-206">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-206">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-207">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-207">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-208">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-208">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-209">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-209">The name of the function.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'
+          description: <span data-ttu-id="16ac5-210">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="16ac5-210">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="16ac5-211">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-211">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update'
+    name: 'update(FunctionModel, string, string, string, Models.FunctionsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="16ac5-212">既存のストリーミング ジョブの下で既存の関数を更新します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-212">Updates an existing function under an existing streaming job.</span></span> <span data-ttu-id="16ac5-213">これを部分的に更新 (つまり使用できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-213">This can be used to partially update (ie.</span></span> <span data-ttu-id="16ac5-214">1 つまたは 2 つのプロパティを更新)、ジョブまたは関数定義の残りの部分に影響を与えず関数。</span><span class="sxs-lookup"><span data-stu-id="16ac5-214">update one or two properties) a function without affecting the rest the job or function definition.</span></span>
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsUpdateOptionalParams)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="16ac5-215">関数オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16ac5-215">A function object.</span></span> <span data-ttu-id="16ac5-216">(つまり、既存の関数に対応するプロパティをここで指定したプロパティが上書きされます。これらのプロパティは更新されます)。</span><span class="sxs-lookup"><span data-stu-id="16ac5-216">The properties specified here will overwrite the corresponding properties in the existing function (ie. Those properties will be updated).</span></span> <span data-ttu-id="16ac5-217">ここでは null に設定されている任意のプロパティは既存の関数に対応するプロパティが、同じままし、このパッチ操作の結果として変更はことを意味します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-217">Any properties that are set to null here will mean that the corresponding property in the existing function will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-218">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-218">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-219">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-219">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-220">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-220">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-221">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-221">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update_1'
+    name: 'update(FunctionModel, string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="16ac5-222">関数オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="16ac5-222">A function object.</span></span> <span data-ttu-id="16ac5-223">(つまり、既存の関数に対応するプロパティをここで指定したプロパティが上書きされます。これらのプロパティは更新されます)。</span><span class="sxs-lookup"><span data-stu-id="16ac5-223">The properties specified here will overwrite the corresponding properties in the existing function (ie. Those properties will be updated).</span></span> <span data-ttu-id="16ac5-224">ここでは null に設定されている任意のプロパティは既存の関数に対応するプロパティが、同じままし、このパッチ操作の結果として変更はことを意味します。</span><span class="sxs-lookup"><span data-stu-id="16ac5-224">Any properties that are set to null here will mean that the corresponding property in the existing function will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-225">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-225">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="16ac5-226">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="16ac5-226">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-227">ストリーミング ジョブの名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-227">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="16ac5-228">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="16ac5-228">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="16ac5-229">コールバック</span><span class="sxs-lookup"><span data-stu-id="16ac5-229">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.FunctionModel'
+    name: FunctionModel
+    spec.typeScript:
+      - name: FunctionModel
+        fullName: FunctionModel
+        uid: '@azure/arm-streamanalytics.FunctionModel'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+    name: FunctionModel>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FunctionModel
+        fullName: FunctionModel
+        uid: '@azure/arm-streamanalytics.FunctionModel'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+    name: FunctionsCreateOrReplaceOptionalParams
+    spec.typeScript:
+      - name: FunctionsCreateOrReplaceOptionalParams
+        fullName: FunctionsCreateOrReplaceOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+    name: FunctionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FunctionListResult
+        fullName: FunctionListResult
+        uid: '@azure/arm-streamanalytics.FunctionListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+    name: FunctionsListByStreamingJobOptionalParams
+    spec.typeScript:
+      - name: FunctionsListByStreamingJobOptionalParams
+        fullName: FunctionsListByStreamingJobOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+  - uid: '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+    name: FunctionsRetrieveDefaultDefinitionOptionalParams
+    spec.typeScript:
+      - name: FunctionsRetrieveDefaultDefinitionOptionalParams
+        fullName: FunctionsRetrieveDefaultDefinitionOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+  - uid: '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'
+    name: FunctionsUpdateOptionalParams
+    spec.typeScript:
+      - name: FunctionsUpdateOptionalParams
+        fullName: FunctionsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'

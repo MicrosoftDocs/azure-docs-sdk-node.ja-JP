@@ -1,0 +1,233 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-luis-authoring.Train'
+    name: Train
+    fullName: Train
+    children:
+      - '@azure/cognitiveservices-luis-authoring.Train.getStatus'
+      - '@azure/cognitiveservices-luis-authoring.Train.getStatus_2'
+      - '@azure/cognitiveservices-luis-authoring.Train.getStatus_1'
+      - '@azure/cognitiveservices-luis-authoring.Train.constructor'
+      - '@azure/cognitiveservices-luis-authoring.Train.trainVersion'
+      - '@azure/cognitiveservices-luis-authoring.Train.trainVersion_2'
+      - '@azure/cognitiveservices-luis-authoring.Train.trainVersion_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="8d22a-101">トレーニングを表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="8d22a-101">Class representing a Train.</span></span>
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Train.getStatus'
+    name: 'getStatus(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8d22a-102">指定した LUIS アプリ (インテントとエンティティ) のすべてのモデルのトレーニングの状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="8d22a-102">Gets the training status of all models (intents and entities) for the specified LUIS app.</span></span> <span data-ttu-id="8d22a-103">トレーニングの状態を取得するには、この API を呼び出す前に、LUIS アプリのトレーニングにトレーニング API を呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="8d22a-103">You must call the train API to train the LUIS app before you call this API to get training status.</span></span>
+      <span data-ttu-id="8d22a-104">"appID"が LUIS アプリ ID を指定します</span><span class="sxs-lookup"><span data-stu-id="8d22a-104">"appID" specifies the LUIS app ID.</span></span> <span data-ttu-id="8d22a-105">"versionId"では、LUIS アプリのバージョン番号を指定します。</span><span class="sxs-lookup"><span data-stu-id="8d22a-105">"versionId" specifies the version number of the LUIS app.</span></span> <span data-ttu-id="8d22a-106">たとえば、「0.1」です。</span><span class="sxs-lookup"><span data-stu-id="8d22a-106">For example, "0.1".</span></span>
+    syntax:
+      content: 'function getStatus(appId: string, versionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-107">アプリケーション id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-107">The application ID.</span></span>
+        - id: versionId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-108">バージョン id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-108">The version ID.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TrainGetStatusResponse>
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Train.getStatus_2'
+    name: 'getStatus(string, string, RequestOptionsBase, ServiceCallback<ModelTrainingInfo[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getStatus(appId: string, versionId: string, options: RequestOptionsBase, callback: ServiceCallback<ModelTrainingInfo[]>)'
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-109">アプリケーション id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-109">The application ID.</span></span>
+        - id: versionId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-110">バージョン id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-110">The version ID.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8d22a-111">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="8d22a-111">The optional parameters</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-luis-authoring.ModelTrainingInfo[]>'
+          description: |
+            <span data-ttu-id="8d22a-112">コールバック</span><span class="sxs-lookup"><span data-stu-id="8d22a-112">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TrainGetStatusResponse>
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Train.getStatus_1'
+    name: 'getStatus(string, string, ServiceCallback<ModelTrainingInfo[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getStatus(appId: string, versionId: string, callback: ServiceCallback<ModelTrainingInfo[]>)'
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-113">アプリケーション id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-113">The application ID.</span></span>
+        - id: versionId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-114">バージョン id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-114">The version ID.</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-luis-authoring.ModelTrainingInfo[]>'
+          description: |
+            <span data-ttu-id="8d22a-115">コールバック</span><span class="sxs-lookup"><span data-stu-id="8d22a-115">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TrainGetStatusResponse>
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Train.constructor'
+    name: Train(LUISAuthoringClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="8d22a-116">トレーニングを作成します。</span><span class="sxs-lookup"><span data-stu-id="8d22a-116">Create a Train.</span></span>
+    syntax:
+      content: 'new Train(client: LUISAuthoringClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-luis-authoring.LUISAuthoringClientContext'
+          description: |
+            <span data-ttu-id="8d22a-117">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="8d22a-117">Reference to the service client.</span></span>
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Train.trainVersion'
+    name: 'trainVersion(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8d22a-118">指定した LUIS アプリのバージョンのトレーニングの要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="8d22a-118">Sends a training request for a version of a specified LUIS app.</span></span> <span data-ttu-id="8d22a-119">この POST 要求では、要求を非同期的に開始します。</span><span class="sxs-lookup"><span data-stu-id="8d22a-119">This POST request initiates a request asynchronously.</span></span> <span data-ttu-id="8d22a-120">トレーニングの要求が成功したかどうかを判断するには、トレーニングの状態を取得する GET 要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="8d22a-120">To determine whether the training request is successful, submit a GET request to get training status.</span></span> <span data-ttu-id="8d22a-121">注:(インテントとエンティティ) のすべてのモデルが正常にトレーニングや最新場合を除き、アプリケーションのバージョンは完全にトレーニングされません。</span><span class="sxs-lookup"><span data-stu-id="8d22a-121">Note: The application version is not fully trained unless all the models (intents and entities) are trained successfully or are up to date.</span></span> <span data-ttu-id="8d22a-122">トレーニングの成功を確認するには、トレーニングが完了した後、少なくとも 1 回トレーニング状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="8d22a-122">To verify training success, get the training status at least once after training is complete.</span></span>'
+    syntax:
+      content: 'function trainVersion(appId: string, versionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-123">アプリケーション id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-123">The application ID.</span></span>
+        - id: versionId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-124">バージョン id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-124">The version ID.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TrainTrainVersionResponse>
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Train.trainVersion_2'
+    name: 'trainVersion(string, string, RequestOptionsBase, ServiceCallback<EnqueueTrainingResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function trainVersion(appId: string, versionId: string, options: RequestOptionsBase, callback: ServiceCallback<EnqueueTrainingResponse>)'
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-125">アプリケーション id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-125">The application ID.</span></span>
+        - id: versionId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-126">バージョン id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-126">The version ID.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8d22a-127">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="8d22a-127">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-luis-authoring.EnqueueTrainingResponse>
+          description: |
+            <span data-ttu-id="8d22a-128">コールバック</span><span class="sxs-lookup"><span data-stu-id="8d22a-128">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TrainTrainVersionResponse>
+    package: '@azure/cognitiveservices-luis-authoring'
+  - uid: '@azure/cognitiveservices-luis-authoring.Train.trainVersion_1'
+    name: 'trainVersion(string, string, ServiceCallback<EnqueueTrainingResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function trainVersion(appId: string, versionId: string, callback: ServiceCallback<EnqueueTrainingResponse>)'
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-129">アプリケーション id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-129">The application ID.</span></span>
+        - id: versionId
+          type:
+            - string
+          description: <span data-ttu-id="8d22a-130">バージョン id。</span><span class="sxs-lookup"><span data-stu-id="8d22a-130">The version ID.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-luis-authoring.EnqueueTrainingResponse>
+          description: |
+            <span data-ttu-id="8d22a-131">コールバック</span><span class="sxs-lookup"><span data-stu-id="8d22a-131">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TrainTrainVersionResponse>
+    package: '@azure/cognitiveservices-luis-authoring'
+references:
+  - uid: '@azure/cognitiveservices-luis-authoring.LUISAuthoringClientContext'
+    name: LUISAuthoringClientContext
+    spec.typeScript:
+      - name: LUISAuthoringClientContext
+        fullName: LUISAuthoringClientContext
+        uid: '@azure/cognitiveservices-luis-authoring.LUISAuthoringClientContext'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-luis-authoring.ModelTrainingInfo[]>'
+    name: 'ModelTrainingInfo[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ModelTrainingInfo
+        fullName: ModelTrainingInfo
+        uid: '@azure/cognitiveservices-luis-authoring.ModelTrainingInfo'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: ServiceCallback<@azure/cognitiveservices-luis-authoring.EnqueueTrainingResponse>
+    name: EnqueueTrainingResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: EnqueueTrainingResponse
+        fullName: EnqueueTrainingResponse
+        uid: '@azure/cognitiveservices-luis-authoring.EnqueueTrainingResponse'
+      - name: '>'
+        fullName: '>'
