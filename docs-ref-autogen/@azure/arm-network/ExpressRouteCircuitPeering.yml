@@ -26,6 +26,7 @@ items:
       - '@azure/arm-network.ExpressRouteCircuitPeering.sharedKey'
       - '@azure/arm-network.ExpressRouteCircuitPeering.state'
       - '@azure/arm-network.ExpressRouteCircuitPeering.stats'
+      - '@azure/arm-network.ExpressRouteCircuitPeering.type'
       - '@azure/arm-network.ExpressRouteCircuitPeering.vlanId'
     langs:
       - typeScript
@@ -270,7 +271,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: パブリック IP リソースのプロビジョニングの状態を取得します。 有効な値は次のとおりです。' の更新'、'削除' および '失敗' です。
+    summary: パブリック IP リソースのプロビジョニングの状態を取得します。 設定可能な値は、次のとおりです。' の更新'、'削除' および '失敗' です。
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -288,10 +289,10 @@ items:
     summary: '[Routefilter] リソースの参照。'
     optional: true
     syntax:
-      content: 'routeFilter?: RouteFilter'
+      content: 'routeFilter?: SubResource'
       return:
         type:
-          - '@azure/arm-network.RouteFilter'
+          - '@azure/arm-network.SubResource'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuitPeering.secondaryAzurePort'
     name: secondaryAzurePort
@@ -368,6 +369,23 @@ items:
         type:
           - '@azure/arm-network.ExpressRouteCircuitStats'
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRouteCircuitPeering.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      リソースの種類。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.ExpressRouteCircuitPeering.vlanId'
     name: vlanId
     fullName: vlanId
@@ -430,12 +448,6 @@ references:
       - name: ExpressRoutePeeringType
         fullName: ExpressRoutePeeringType
         uid: '@azure/arm-network.ExpressRoutePeeringType'
-  - uid: '@azure/arm-network.RouteFilter'
-    name: RouteFilter
-    spec.typeScript:
-      - name: RouteFilter
-        fullName: RouteFilter
-        uid: '@azure/arm-network.RouteFilter'
   - uid: '@azure/arm-network.ExpressRoutePeeringState'
     name: ExpressRoutePeeringState
     spec.typeScript:
