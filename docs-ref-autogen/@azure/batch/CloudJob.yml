@@ -1,0 +1,482 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudJob'
+    name: CloudJob
+    fullName: CloudJob
+    children:
+      - '@azure/batch.CloudJob.commonEnvironmentSettings'
+      - '@azure/batch.CloudJob.constraints'
+      - '@azure/batch.CloudJob.creationTime'
+      - '@azure/batch.CloudJob.displayName'
+      - '@azure/batch.CloudJob.eTag'
+      - '@azure/batch.CloudJob.executionInfo'
+      - '@azure/batch.CloudJob.id'
+      - '@azure/batch.CloudJob.jobManagerTask'
+      - '@azure/batch.CloudJob.jobPreparationTask'
+      - '@azure/batch.CloudJob.jobReleaseTask'
+      - '@azure/batch.CloudJob.lastModified'
+      - '@azure/batch.CloudJob.metadata'
+      - '@azure/batch.CloudJob.networkConfiguration'
+      - '@azure/batch.CloudJob.onAllTasksComplete'
+      - '@azure/batch.CloudJob.onTaskFailure'
+      - '@azure/batch.CloudJob.poolInfo'
+      - '@azure/batch.CloudJob.previousState'
+      - '@azure/batch.CloudJob.previousStateTransitionTime'
+      - '@azure/batch.CloudJob.priority'
+      - '@azure/batch.CloudJob.state'
+      - '@azure/batch.CloudJob.stateTransitionTime'
+      - '@azure/batch.CloudJob.stats'
+      - '@azure/batch.CloudJob.url'
+      - '@azure/batch.CloudJob.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: CloudJob を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      一般的な環境変数の設定の一覧。 すべてのタスク (ジョブ マネージャー、ジョブの準備およびジョブ リリース タスクを含む)、ジョブ内のこれらの環境変数が設定されます。
+      個々 のタスクは、ここで指定した値が異なる同じ設定名を指定することで、環境設定をオーバーライドできます。
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの実行の制約。
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの作成時間。
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの表示名。
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの ETag。 これは、不透明な文字列です。 要求の間、ジョブが変更されたかどうかを検出するために使用できます。 特にには、ジョブは、その間にその他のユーザー変更が場合にのみ、変更内容に効果を実行する必要がありますを指定するジョブを更新するときに ETag を渡すことができます。
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.executionInfo'
+    name: executionInfo
+    fullName: executionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの実行情報。
+    optional: true
+    syntax:
+      content: 'executionInfo?: JobExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.JobExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アカウント内でジョブを一意に識別する文字列。 ID は、小文字、大文字と (つまり、大文字と小文字が異なるのみアカウント内の 2 つの Id はない必要があります)。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの開始時に起動されるようにジョブ マネージャー タスクの詳細です。
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの準備タスク。 ジョブの準備タスクは、ジョブの他のタスクの前に各ノードで実行する特別な作業です。
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブのリリース タスク。 ジョブのリリース タスクは、ジョブの他のタスクが実行された各ノードでジョブの終了時に実行する特別な作業です。
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 最終では、ジョブの時刻を変更します。 これは、前回のジョブの状態や、優先順位などのジョブ レベル データが変更されました。 これは、新しいタスクや状態を変更するタスクの追加など、タスク レベルの変更では考慮されません。
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: メタデータとして、ジョブに関連付けられている名前/値ペアのリスト。 Batch サービスがメタデータに意味を割り当てませんユーザー コードの使用のためだけです。
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブのネットワーク構成。
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      アクション、ジョブ内のすべてのタスクが完了した状態では場合に、Batch サービスは実行する必要があります。
+      既定値は noaction です。 使用可能な値が含まれます: 'noAction'、'terminateJob'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'アクション、ジョブ内のタスクが失敗したときに、Batch サービスは実行する必要があります。 タスクがあると見なされますが、failureInfo の失敗した場合。 再試行回数を使い果たした後に 0 以外の終了コードでのタスクが完了すると、failureInfo が設定されているまたはタスクの開始中にエラーがあった場合など、リソース ファイルのためダウンロード エラー。 既定値は noaction です。 使用可能な値が含まれます: ''noAction''、''performExitOptionsJobAction'''
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブに関連付けられたプールの設定。
+    optional: true
+    syntax:
+      content: 'poolInfo?: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ジョブの前の状態。 ジョブが初期のアクティブ状態の場合は、このプロパティは設定されていません。 使用可能な値が含まれます: ''active''、''無効''、''disabled''、''有効''、''終了''、''完了''、''削除'''
+    optional: true
+    syntax:
+      content: 'previousState?: JobState'
+      return:
+        type:
+          - '@azure/batch.JobState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブが、以前の状態になった時刻。 ジョブが初期のアクティブ状態の場合は、このプロパティは設定されていません。
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの優先度。 優先度の値の範囲は-1000 から 1000 で、-1000 は最も低い優先順位と 1000 が最高の優先順位です。 既定値は 0 です。
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ジョブの現在の状態。 使用可能な値が含まれます: ''active''、''無効''、''disabled''、''有効''、''終了''、''完了''、''削除'''
+    optional: true
+    syntax:
+      content: 'state?: JobState'
+      return:
+        type:
+          - '@azure/batch.JobState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブが現在の状態になった時刻。
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの有効期間にわたってリソース使用状況の統計。 Stats' 属性を含む展開句を使用して、CloudJob が取得された場合にのみ、このプロパティが設定されます。それ以外の場合は null です。 統計情報をすぐに使用できない可能性があります。 Batch サービスは、統計情報の定期的なロール アップを実行します。 一般的な遅延は、約 30 分です。
+    optional: true
+    syntax:
+      content: 'stats?: JobStatistics'
+      return:
+        type:
+          - '@azure/batch.JobStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブの URL。
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: かどうか、ジョブ内のタスクでは、相互に依存関係を定義できます。 既定値は false です。
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobExecutionInformation'
+    name: JobExecutionInformation
+    spec.typeScript:
+      - name: JobExecutionInformation
+        fullName: JobExecutionInformation
+        uid: '@azure/batch.JobExecutionInformation'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
+  - uid: '@azure/batch.JobState'
+    name: JobState
+    spec.typeScript:
+      - name: JobState
+        fullName: JobState
+        uid: '@azure/batch.JobState'
+  - uid: '@azure/batch.JobStatistics'
+    name: JobStatistics
+    spec.typeScript:
+      - name: JobStatistics
+        fullName: JobStatistics
+        uid: '@azure/batch.JobStatistics'

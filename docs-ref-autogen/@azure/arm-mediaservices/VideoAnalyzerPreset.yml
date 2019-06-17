@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset'
+    name: VideoAnalyzerPreset
+    fullName: VideoAnalyzerPreset
+    children:
+      - '@azure/arm-mediaservices.VideoAnalyzerPreset.audioLanguage'
+      - '@azure/arm-mediaservices.VideoAnalyzerPreset.insightsToExtract'
+      - '@azure/arm-mediaservices.VideoAnalyzerPreset.odatatype'
+    langs:
+      - typeScript
+    type: interface
+    summary: ビデオのアナライザーでは、オーディオとビデオの両方から insights (豊富なメタデータ) を抽出し、出力形式の JSON ファイルを事前設定されます。
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset.audioLanguage'
+    name: audioLanguage
+    fullName: audioLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '''言語タグ region'' の BCP 47 形式を使用して入力オーディオのペイロードの言語 (例:'' EN-US '')。  サポートされている言語の一覧は、('' EN-US ''および'' EN-GB '')、英語、スペイン語 ('' ES-ES ''および'' ES-MX '')、フランス語 ('' FR-FR '')、イタリア語 (''it IT'')、日本語 ('' JA-JP '')、ポルトガル語 ("PT-BR '')、中国語 ('' ZH-CN '')、ドイツ語 ('' DE-DE '')、アラビア語 ('' AR-EG ''および'' ar SY'')、ロシア語 (''RU-RU '')、ヒンディー語 ('' やあに '')、および韓国語 ("KO-KR '')。 コンテンツの言語がわかっている場合は、指定することをお勧めします。 言語が指定されていないか、null 値に設定されている場合、自動言語検出は、最初に検出された言語を選択し、ファイルの実行中、選択された言語で処理を行います。 現在、この言語の検出機能は、英語、中国語、フランス語、ドイツ語、イタリア語、日本語、スペイン語、ロシア語、およびポルトガル語をサポートします。 現在、最初の言語が検出された後に複数の言語を動的に切り替えることはサポートされていません。 自動検出は、明確にはっきり音声認識でオーディオの録音で最適に動作します。 言語を自動検出に失敗した場合の議事録は ''EN-US'' にフォールバックします。"'
+    optional: true
+    syntax:
+      content: 'audioLanguage?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset.insightsToExtract'
+    name: insightsToExtract
+    fullName: insightsToExtract
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '抽出する insights の型。 次に、選択した型が、コンテンツに基づいて設定しない場合。  オーディオのみの洞察を抽出し、のみとのみビデオがある場合にコンテンツがオーディオ場合は。 指定できる値は、次のとおりです。''AudioInsightsOnly'', ''VideoInsightsOnly'', ''AllInsights'''
+    optional: true
+    syntax:
+      content: 'insightsToExtract?: InsightsType'
+      return:
+        type:
+          - '@azure/arm-mediaservices.InsightsType'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.VideoAnalyzerPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.VideoAnalyzerPreset"'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.InsightsType'
+    name: InsightsType
+    spec.typeScript:
+      - name: InsightsType
+        fullName: InsightsType
+        uid: '@azure/arm-mediaservices.InsightsType'
