@@ -1,0 +1,145 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses'
+    name: BackupOperationStatuses
+    fullName: BackupOperationStatuses
+    children:
+      - '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.constructor'
+      - '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get'
+      - '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get_2'
+      - '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="8b187-101">BackupOperationStatuses を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="8b187-101">Class representing a BackupOperationStatuses.</span></span>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.constructor'
+    name: BackupOperationStatuses(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="8b187-102">BackupOperationStatuses を作成します。</span><span class="sxs-lookup"><span data-stu-id="8b187-102">Create a BackupOperationStatuses.</span></span>
+    syntax:
+      content: 'new BackupOperationStatuses(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            <span data-ttu-id="8b187-103">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="8b187-103">Reference to the service client.</span></span>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8b187-104">フェッチの状態のバックアップをトリガーするなどの操作、復元します。</span><span class="sxs-lookup"><span data-stu-id="8b187-104">Fetches the status of an operation such as triggering a backup, restore.</span></span> <span data-ttu-id="8b187-105">進行中、完了または失敗の状態を指定できます。</span><span class="sxs-lookup"><span data-stu-id="8b187-105">The status can be in progress, completed or failed.</span></span> <span data-ttu-id="8b187-106">操作のすべての可能な状態の OperationStatus 列挙型を参照することができます。</span><span class="sxs-lookup"><span data-stu-id="8b187-106">You can refer to the OperationStatus enum for all the possible states of an operation.</span></span> <span data-ttu-id="8b187-107">一部の操作では、ジョブを作成します。</span><span class="sxs-lookup"><span data-stu-id="8b187-107">Some operations create jobs.</span></span> <span data-ttu-id="8b187-108">このメソッドは、操作が完了すると、ジョブの一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="8b187-108">This method returns the list of jobs when the operation is complete.</span></span>'
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="8b187-109">Recovery services コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="8b187-109">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8b187-110">リソース グループが、recovery services コンテナーの名前が存在します。</span><span class="sxs-lookup"><span data-stu-id="8b187-110">The name of the resource group where the recovery services vault is present.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="8b187-111">操作を表す OperationID します。</span><span class="sxs-lookup"><span data-stu-id="8b187-111">OperationID which represents the operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BackupOperationStatusesGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="8b187-112">Recovery services コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="8b187-112">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8b187-113">リソース グループが、recovery services コンテナーの名前が存在します。</span><span class="sxs-lookup"><span data-stu-id="8b187-113">The name of the resource group where the recovery services vault is present.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="8b187-114">操作を表す OperationID します。</span><span class="sxs-lookup"><span data-stu-id="8b187-114">OperationID which represents the operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8b187-115">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="8b187-115">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.OperationStatus>
+          description: |
+            <span data-ttu-id="8b187-116">コールバック</span><span class="sxs-lookup"><span data-stu-id="8b187-116">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BackupOperationStatusesGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get_1'
+    name: 'get(string, string, string, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, operationId: string, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="8b187-117">Recovery services コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="8b187-117">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8b187-118">リソース グループが、recovery services コンテナーの名前が存在します。</span><span class="sxs-lookup"><span data-stu-id="8b187-118">The name of the resource group where the recovery services vault is present.</span></span>
+        - id: operationId
+          type:
+            - string
+          description: <span data-ttu-id="8b187-119">操作を表す OperationID します。</span><span class="sxs-lookup"><span data-stu-id="8b187-119">OperationID which represents the operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.OperationStatus>
+          description: |
+            <span data-ttu-id="8b187-120">コールバック</span><span class="sxs-lookup"><span data-stu-id="8b187-120">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BackupOperationStatusesGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: ServiceCallback<@azure/arm-recoveryservicesbackup.OperationStatus>
+    name: OperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatus
+        fullName: OperationStatus
+        uid: '@azure/arm-recoveryservicesbackup.OperationStatus'
+      - name: '>'
+        fullName: '>'
