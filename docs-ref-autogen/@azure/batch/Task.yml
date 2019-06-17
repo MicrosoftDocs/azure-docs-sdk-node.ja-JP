@@ -1,0 +1,1005 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Task'
+    name: Task
+    fullName: Task
+    children:
+      - '@azure/batch.Task.add'
+      - '@azure/batch.Task.add_1'
+      - '@azure/batch.Task.add_2'
+      - '@azure/batch.Task.addCollection'
+      - '@azure/batch.Task.addCollection_1'
+      - '@azure/batch.Task.addCollection_2'
+      - '@azure/batch.Task.deleteMethod'
+      - '@azure/batch.Task.deleteMethod_1'
+      - '@azure/batch.Task.deleteMethod_2'
+      - '@azure/batch.Task.get'
+      - '@azure/batch.Task.get_1'
+      - '@azure/batch.Task.get_2'
+      - '@azure/batch.Task.list'
+      - '@azure/batch.Task.list_1'
+      - '@azure/batch.Task.list_2'
+      - '@azure/batch.Task.listNext'
+      - '@azure/batch.Task.listNext_1'
+      - '@azure/batch.Task.listNext_2'
+      - '@azure/batch.Task.listSubtasks'
+      - '@azure/batch.Task.listSubtasks_1'
+      - '@azure/batch.Task.listSubtasks_2'
+      - '@azure/batch.Task.reactivate'
+      - '@azure/batch.Task.reactivate_1'
+      - '@azure/batch.Task.reactivate_2'
+      - '@azure/batch.Task.constructor'
+      - '@azure/batch.Task.terminate'
+      - '@azure/batch.Task.terminate_1'
+      - '@azure/batch.Task.terminate_2'
+      - '@azure/batch.Task.update'
+      - '@azure/batch.Task.update_1'
+      - '@azure/batch.Task.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="7bb7c-101">タスクを表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-101">Class representing a Task.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.add'
+    name: 'add(string, TaskAddParameter, Models.TaskAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7bb7c-102">追加のタスクを完了するまでの最長有効期間は、180 日間です。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-102">The maximum lifetime of a task from addition to completion is 180 days.</span></span> <span data-ttu-id="7bb7c-103">Batch サービスと左で終了されている追加の 180 日以内、タスクが完了していない場合どのような状態に当時の時点でします。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-103">If a task has not completed within 180 days of being added it will be terminated by the Batch service and left in whatever state it was in at that time.</span></span>
+    syntax:
+      content: 'function add(jobId: string, task: TaskAddParameter, options?: Models.TaskAddOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-104">タスクが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-104">The ID of the job to which the task is to be added.</span></span>
+        - id: task
+          type:
+            - '@azure/batch.TaskAddParameter'
+          description: <span data-ttu-id="7bb7c-105">追加するタスク。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-105">The task to be added.</span></span>
+        - id: options
+          type:
+            - Models.TaskAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.add_1'
+    name: 'add(string, TaskAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(jobId: string, task: TaskAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-106">タスクが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-106">The ID of the job to which the task is to be added.</span></span>
+        - id: task
+          type:
+            - '@azure/batch.TaskAddParameter'
+          description: <span data-ttu-id="7bb7c-107">追加するタスク。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-107">The task to be added.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-108">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-108">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.add_2'
+    name: 'add(string, TaskAddParameter, TaskAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(jobId: string, task: TaskAddParameter, options: TaskAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-109">タスクが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-109">The ID of the job to which the task is to be added.</span></span>
+        - id: task
+          type:
+            - '@azure/batch.TaskAddParameter'
+          description: <span data-ttu-id="7bb7c-110">追加するタスク。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-110">The task to be added.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.TaskAddOptionalParams'
+          description: <span data-ttu-id="7bb7c-111">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-111">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-112">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-112">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.addCollection'
+    name: 'addCollection(string, TaskAddParameter[], Models.TaskAddCollectionOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="7bb7c-113">各タスクに一意の ID を持つ必要があるに注意してください。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-113">Note that each task must have a unique ID.</span></span> <span data-ttu-id="7bb7c-114">Batch サービスは、タスクは、この要求で送信された順序と同じ順序で各タスクの結果を返しません可能性があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-114">The Batch service may not return the results for each task in the same order the tasks were submitted in this request.</span></span> <span data-ttu-id="7bb7c-115">サーバーがタイムアウトまたは要求時に、接続が閉じられる、部分的または完全な処理も、まったく要求をされている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-115">If the server times out or the connection is closed during the request, the request may have been partially or fully processed, or not at all.</span></span> <span data-ttu-id="7bb7c-116">このような場合、ユーザーは再要求を発行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-116">In such cases, the user should re-issue the request.</span></span> <span data-ttu-id="7bb7c-117">要求を再発行するときに正しくエラーを処理するには、ユーザーの責任であるに注意してください。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-117">Note that it is up to the user to correctly handle failures when re-issuing a request.</span></span> <span data-ttu-id="7bb7c-118">たとえば、前の操作が成功した場合、再試行は余分な作業を予期せず作成しないように、再試行時に同じタスク Id を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-118">For example, you should use the same task IDs during a retry so that if the prior operation succeeded, the retry will not create extra tasks unexpectedly.</span></span> <span data-ttu-id="7bb7c-119">応答に追加に失敗したすべてのタスクが含まれている場合、クライアントは要求を再試行できます。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-119">If the response contains any tasks which failed to add, a client can retry the request.</span></span> <span data-ttu-id="7bb7c-120">再試行を追加して、最初の試行で正常に追加されたタスクを省略する場合に失敗したタスクのみを再送信する最も効率的です。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-120">In a retry, it is most efficient to resubmit only tasks that failed to add, and to omit tasks that were successfully added on the first attempt.</span></span> <span data-ttu-id="7bb7c-121">追加のタスクを完了するまでの最長有効期間は、180 日間です。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-121">The maximum lifetime of a task from addition to completion is 180 days.</span></span> <span data-ttu-id="7bb7c-122">Batch サービスと左で終了されている追加の 180 日以内、タスクが完了していない場合どのような状態に当時の時点でします。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-122">If a task has not completed within 180 days of being added it will be terminated by the Batch service and left in whatever state it was in at that time.</span></span>'
+    syntax:
+      content: 'function addCollection(jobId: string, value: TaskAddParameter[], options?: Models.TaskAddCollectionOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-123">タスクのコレクションが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-123">The ID of the job to which the task collection is to be added.</span></span>
+        - id: value
+          type:
+            - '@azure/batch.TaskAddParameter[]'
+          description: '<span data-ttu-id="7bb7c-124">追加するタスクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-124">The collection of tasks to add.</span></span> <span data-ttu-id="7bb7c-125">タスクの最大数は 100 です。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-125">The maximum count of tasks is 100.</span></span> <span data-ttu-id="7bb7c-126">このコレクションのシリアル化されたサイズの合計は 1 MB 未満である必要があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-126">The total serialized size of this collection must be less than 1MB.</span></span> <span data-ttu-id="7bb7c-127">(たとえば、各タスクは 100 のリソース ファイルまたは環境変数の場合など) の 1 MB より大きい場合は、要求は ''RequestBodyTooLarge'' のコードでは失敗し、以下のタスクをもう一度試す必要があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-127">If it is greater than 1MB (for example if each task has 100''s of resource files or environment variables), the request will fail with code ''RequestBodyTooLarge'' and should be retried again with fewer tasks.</span></span>'
+        - id: options
+          type:
+            - Models.TaskAddCollectionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskAddCollectionResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.addCollection_1'
+    name: 'addCollection(string, TaskAddParameter[], ServiceCallback<TaskAddCollectionResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addCollection(jobId: string, value: TaskAddParameter[], callback: ServiceCallback<TaskAddCollectionResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-128">タスクのコレクションが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-128">The ID of the job to which the task collection is to be added.</span></span>
+        - id: value
+          type:
+            - '@azure/batch.TaskAddParameter[]'
+          description: '<span data-ttu-id="7bb7c-129">追加するタスクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-129">The collection of tasks to add.</span></span> <span data-ttu-id="7bb7c-130">タスクの最大数は 100 です。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-130">The maximum count of tasks is 100.</span></span> <span data-ttu-id="7bb7c-131">このコレクションのシリアル化されたサイズの合計は 1 MB 未満である必要があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-131">The total serialized size of this collection must be less than 1MB.</span></span> <span data-ttu-id="7bb7c-132">(たとえば、各タスクは 100 のリソース ファイルまたは環境変数の場合など) の 1 MB より大きい場合は、要求は ''RequestBodyTooLarge'' のコードでは失敗し、以下のタスクをもう一度試す必要があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-132">If it is greater than 1MB (for example if each task has 100''s of resource files or environment variables), the request will fail with code ''RequestBodyTooLarge'' and should be retried again with fewer tasks.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskAddCollectionResult>
+          description: |
+            <span data-ttu-id="7bb7c-133">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-133">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskAddCollectionResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.addCollection_2'
+    name: 'addCollection(string, TaskAddParameter[], TaskAddCollectionOptionalParams, ServiceCallback<TaskAddCollectionResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addCollection(jobId: string, value: TaskAddParameter[], options: TaskAddCollectionOptionalParams, callback: ServiceCallback<TaskAddCollectionResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-134">タスクのコレクションが追加されるジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-134">The ID of the job to which the task collection is to be added.</span></span>
+        - id: value
+          type:
+            - '@azure/batch.TaskAddParameter[]'
+          description: '<span data-ttu-id="7bb7c-135">追加するタスクのコレクション。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-135">The collection of tasks to add.</span></span> <span data-ttu-id="7bb7c-136">タスクの最大数は 100 です。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-136">The maximum count of tasks is 100.</span></span> <span data-ttu-id="7bb7c-137">このコレクションのシリアル化されたサイズの合計は 1 MB 未満である必要があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-137">The total serialized size of this collection must be less than 1MB.</span></span> <span data-ttu-id="7bb7c-138">(たとえば、各タスクは 100 のリソース ファイルまたは環境変数の場合など) の 1 MB より大きい場合は、要求は ''RequestBodyTooLarge'' のコードでは失敗し、以下のタスクをもう一度試す必要があります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-138">If it is greater than 1MB (for example if each task has 100''s of resource files or environment variables), the request will fail with code ''RequestBodyTooLarge'' and should be retried again with fewer tasks.</span></span>'
+        - id: options
+          type:
+            - '@azure/batch.TaskAddCollectionOptionalParams'
+          description: <span data-ttu-id="7bb7c-139">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-139">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskAddCollectionResult>
+          description: |
+            <span data-ttu-id="7bb7c-140">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-140">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskAddCollectionResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.deleteMethod'
+    name: 'deleteMethod(string, string, Models.TaskDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="7bb7c-141">タスクを削除すると、すべての行く先、コンピューティング ノード上のディレクトリにファイルの (リテンション期間) に関係なくも削除されます。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-141">When a task is deleted, all of the files in its directory on the compute node where it ran are also deleted (regardless of the retention time).</span></span> <span data-ttu-id="7bb7c-142">マルチ インスタンス タスクでは、削除タスクの操作に適用されます同期的に、プライマリ タスクです。サブタスクとそのファイル非同期的に、バック グラウンドでは削除し、されます。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-142">For multi-instance tasks, the delete task operation applies synchronously to the primary task; subtasks and their files are then deleted asynchronously in the background.</span></span>'
+    syntax:
+      content: 'function deleteMethod(jobId: string, taskId: string, options?: Models.TaskDeleteMethodOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-143">タスクを削除するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-143">The ID of the job from which to delete the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-144">削除するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-144">The ID of the task to delete.</span></span>
+        - id: options
+          type:
+            - Models.TaskDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-145">タスクを削除するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-145">The ID of the job from which to delete the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-146">削除するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-146">The ID of the task to delete.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-147">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.deleteMethod_2'
+    name: 'deleteMethod(string, string, TaskDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, taskId: string, options: TaskDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-148">タスクを削除するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-148">The ID of the job from which to delete the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-149">削除するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-149">The ID of the task to delete.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.TaskDeleteMethodOptionalParams'
+          description: <span data-ttu-id="7bb7c-150">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-150">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-151">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.get'
+    name: 'get(string, string, Models.TaskGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="7bb7c-152">マルチ インスタンス タスクでは、affinityId などの情報 executionInfo と nodeInfo は、プライマリ タスクを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-152">For multi-instance tasks, information such as affinityId, executionInfo and nodeInfo refer to the primary task.</span></span> <span data-ttu-id="7bb7c-153">リスト サブタスク API を使用して、サブタスクに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-153">Use the list subtasks API to retrieve information about subtasks.</span></span>'
+    syntax:
+      content: 'function get(jobId: string, taskId: string, options?: Models.TaskGetOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-154">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-154">The ID of the job that contains the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-155">に関する情報を取得するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-155">The ID of the task to get information about.</span></span>
+        - id: options
+          type:
+            - Models.TaskGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.get_1'
+    name: 'get(string, string, ServiceCallback<CloudTask>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, taskId: string, callback: ServiceCallback<CloudTask>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-156">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-156">The ID of the job that contains the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-157">に関する情報を取得するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-157">The ID of the task to get information about.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTask>
+          description: |
+            <span data-ttu-id="7bb7c-158">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.get_2'
+    name: 'get(string, string, TaskGetOptionalParams, ServiceCallback<CloudTask>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, taskId: string, options: TaskGetOptionalParams, callback: ServiceCallback<CloudTask>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-159">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-159">The ID of the job that contains the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-160">に関する情報を取得するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-160">The ID of the task to get information about.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.TaskGetOptionalParams'
+          description: <span data-ttu-id="7bb7c-161">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTask>
+          description: |
+            <span data-ttu-id="7bb7c-162">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.list'
+    name: 'list(string, Models.TaskListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="7bb7c-163">マルチ インスタンス タスクでは、affinityId などの情報 executionInfo と nodeInfo は、プライマリ タスクを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-163">For multi-instance tasks, information such as affinityId, executionInfo and nodeInfo refer to the primary task.</span></span> <span data-ttu-id="7bb7c-164">リスト サブタスク API を使用して、サブタスクに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-164">Use the list subtasks API to retrieve information about subtasks.</span></span>'
+    syntax:
+      content: 'function list(jobId: string, options?: Models.TaskListOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-165">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-165">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.TaskListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.list_1'
+    name: 'list(string, ServiceCallback<CloudTaskListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(jobId: string, callback: ServiceCallback<CloudTaskListResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-166">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-166">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListResult>
+          description: |
+            <span data-ttu-id="7bb7c-167">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-167">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.list_2'
+    name: 'list(string, TaskListOptionalParams, ServiceCallback<CloudTaskListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(jobId: string, options: TaskListOptionalParams, callback: ServiceCallback<CloudTaskListResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-168">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-168">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.TaskListOptionalParams'
+          description: <span data-ttu-id="7bb7c-169">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-169">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListResult>
+          description: |
+            <span data-ttu-id="7bb7c-170">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listNext'
+    name: 'listNext(string, Models.TaskListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="7bb7c-171">マルチ インスタンス タスクでは、affinityId などの情報 executionInfo と nodeInfo は、プライマリ タスクを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-171">For multi-instance tasks, information such as affinityId, executionInfo and nodeInfo refer to the primary task.</span></span> <span data-ttu-id="7bb7c-172">リスト サブタスク API を使用して、サブタスクに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-172">Use the list subtasks API to retrieve information about subtasks.</span></span>'
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.TaskListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-173">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-173">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.TaskListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listNext_1'
+    name: 'listNext(string, ServiceCallback<CloudTaskListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudTaskListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-174">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-174">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListResult>
+          description: |
+            <span data-ttu-id="7bb7c-175">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listNext_2'
+    name: 'listNext(string, TaskListNextOptionalParams, ServiceCallback<CloudTaskListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: TaskListNextOptionalParams, callback: ServiceCallback<CloudTaskListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-176">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.TaskListNextOptionalParams'
+          description: <span data-ttu-id="7bb7c-177">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListResult>
+          description: |
+            <span data-ttu-id="7bb7c-178">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listSubtasks'
+    name: 'listSubtasks(string, string, Models.TaskListSubtasksOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7bb7c-179">タスクがマルチ インスタンス タスクではない場合これは空のコレクションを返します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-179">If the task is not a multi-instance task then this returns an empty collection.</span></span>
+    syntax:
+      content: 'function listSubtasks(jobId: string, taskId: string, options?: Models.TaskListSubtasksOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-180">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-180">The ID of the job.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-181">タスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-181">The ID of the task.</span></span>
+        - id: options
+          type:
+            - Models.TaskListSubtasksOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskListSubtasksResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listSubtasks_1'
+    name: 'listSubtasks(string, string, ServiceCallback<CloudTaskListSubtasksResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSubtasks(jobId: string, taskId: string, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-182">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-182">The ID of the job.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-183">タスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-183">The ID of the task.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListSubtasksResult>
+          description: |
+            <span data-ttu-id="7bb7c-184">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskListSubtasksResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listSubtasks_2'
+    name: 'listSubtasks(string, string, TaskListSubtasksOptionalParams, ServiceCallback<CloudTaskListSubtasksResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSubtasks(jobId: string, taskId: string, options: TaskListSubtasksOptionalParams, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-185">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-185">The ID of the job.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-186">タスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-186">The ID of the task.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.TaskListSubtasksOptionalParams'
+          description: <span data-ttu-id="7bb7c-187">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-187">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListSubtasksResult>
+          description: |
+            <span data-ttu-id="7bb7c-188">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskListSubtasksResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.reactivate'
+    name: 'reactivate(string, string, Models.TaskReactivateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="7bb7c-189">再アクティブ化では、タスクをもう一度その最大再試行回数まで再試行を対象になります。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-189">Reactivation makes a task eligible to be retried again up to its maximum retry count.</span></span> <span data-ttu-id="7bb7c-190">タスクの状態をアクティブに変更します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-190">The task''s state is changed to active.</span></span> <span data-ttu-id="7bb7c-191">タスクが完了状態では不要になったで、以前の終了コードまたはエラー情報が再アクティブ化の後に使用可能な不要になった。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-191">As the task is no longer in the completed state, any previous exit code or failure information is no longer available after reactivation.</span></span> <span data-ttu-id="7bb7c-192">タスクが再アクティブ化するたびに、再試行カウントが 0 にリセットされます。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-192">Each time a task is reactivated, its retry count is reset to 0.</span></span> <span data-ttu-id="7bb7c-193">再アクティブ化では、完了していないか、正常に (終了コード 0) で以前に完了したタスクは失敗します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-193">Reactivation will fail for tasks that are not completed or that previously completed successfully (with an exit code of 0).</span></span> <span data-ttu-id="7bb7c-194">さらに、ジョブが完了した (または、終了または削除する場合) には失敗します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-194">Additionally, it will fail if the job has completed (or is terminating or deleting).</span></span>'
+    syntax:
+      content: 'function reactivate(jobId: string, taskId: string, options?: Models.TaskReactivateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-195">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-195">The ID of the job containing the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-196">再アクティブ化するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-196">The ID of the task to reactivate.</span></span>
+        - id: options
+          type:
+            - Models.TaskReactivateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskReactivateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.reactivate_1'
+    name: 'reactivate(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reactivate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-197">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-197">The ID of the job containing the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-198">再アクティブ化するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-198">The ID of the task to reactivate.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-199">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-199">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskReactivateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.reactivate_2'
+    name: 'reactivate(string, string, TaskReactivateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reactivate(jobId: string, taskId: string, options: TaskReactivateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-200">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-200">The ID of the job containing the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-201">再アクティブ化するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-201">The ID of the task to reactivate.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.TaskReactivateOptionalParams'
+          description: <span data-ttu-id="7bb7c-202">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-203">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskReactivateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.constructor'
+    name: Task(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7bb7c-204">タスクを作成します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-204">Create a Task.</span></span>
+    syntax:
+      content: 'new Task(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            <span data-ttu-id="7bb7c-205">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-205">Reference to the service client.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.terminate'
+    name: 'terminate(string, string, Models.TaskTerminateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="7bb7c-206">タスクが終了しているときに、完了状態に移動します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-206">When the task has been terminated, it moves to the completed state.</span></span> <span data-ttu-id="7bb7c-207">マルチ インスタンス タスクでは、終了タスク操作が適用される同期的に、プライマリ タスクにサブタスクは、バック グラウンドで非同期的に終了します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-207">For multi-instance tasks, the terminate task operation applies synchronously to the primary task; subtasks are then terminated asynchronously in the background.</span></span>'
+    syntax:
+      content: 'function terminate(jobId: string, taskId: string, options?: Models.TaskTerminateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-208">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-208">The ID of the job containing the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-209">終了するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-209">The ID of the task to terminate.</span></span>
+        - id: options
+          type:
+            - Models.TaskTerminateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.terminate_1'
+    name: 'terminate(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-210">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-210">The ID of the job containing the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-211">終了するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-211">The ID of the task to terminate.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-212">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-212">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.terminate_2'
+    name: 'terminate(string, string, TaskTerminateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, taskId: string, options: TaskTerminateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-213">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-213">The ID of the job containing the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-214">終了するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-214">The ID of the task to terminate.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.TaskTerminateOptionalParams'
+          description: <span data-ttu-id="7bb7c-215">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-215">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-216">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-216">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.update'
+    name: 'update(string, string, Models.TaskUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7bb7c-217">指定したタスクのプロパティを更新します。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-217">Updates the properties of the specified task.</span></span>
+    syntax:
+      content: 'function update(jobId: string, taskId: string, options?: Models.TaskUpdateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-218">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-218">The ID of the job containing the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-219">更新するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-219">The ID of the task to update.</span></span>
+        - id: options
+          type:
+            - Models.TaskUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.update_1'
+    name: 'update(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-220">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-220">The ID of the job containing the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-221">更新するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-221">The ID of the task to update.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-222">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-222">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.update_2'
+    name: 'update(string, string, TaskUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, taskId: string, options: TaskUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-223">タスクを含むジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-223">The ID of the job containing the task.</span></span>
+        - id: taskId
+          type:
+            - string
+          description: <span data-ttu-id="7bb7c-224">更新するタスクの ID。</span><span class="sxs-lookup"><span data-stu-id="7bb7c-224">The ID of the task to update.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.TaskUpdateOptionalParams'
+          description: <span data-ttu-id="7bb7c-225">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7bb7c-225">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="7bb7c-226">コールバック</span><span class="sxs-lookup"><span data-stu-id="7bb7c-226">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.TaskUpdateResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.TaskAddParameter'
+    name: TaskAddParameter
+    spec.typeScript:
+      - name: TaskAddParameter
+        fullName: TaskAddParameter
+        uid: '@azure/batch.TaskAddParameter'
+  - uid: '@azure/batch.TaskAddOptionalParams'
+    name: TaskAddOptionalParams
+    spec.typeScript:
+      - name: TaskAddOptionalParams
+        fullName: TaskAddOptionalParams
+        uid: '@azure/batch.TaskAddOptionalParams'
+  - uid: '@azure/batch.TaskAddParameter[]'
+    name: 'TaskAddParameter[]'
+    spec.typeScript:
+      - name: TaskAddParameter
+        fullName: TaskAddParameter
+        uid: '@azure/batch.TaskAddParameter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: ServiceCallback<@azure/batch.TaskAddCollectionResult>
+    name: TaskAddCollectionResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TaskAddCollectionResult
+        fullName: TaskAddCollectionResult
+        uid: '@azure/batch.TaskAddCollectionResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.TaskAddCollectionOptionalParams'
+    name: TaskAddCollectionOptionalParams
+    spec.typeScript:
+      - name: TaskAddCollectionOptionalParams
+        fullName: TaskAddCollectionOptionalParams
+        uid: '@azure/batch.TaskAddCollectionOptionalParams'
+  - uid: '@azure/batch.TaskDeleteMethodOptionalParams'
+    name: TaskDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: TaskDeleteMethodOptionalParams
+        fullName: TaskDeleteMethodOptionalParams
+        uid: '@azure/batch.TaskDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudTask>
+    name: CloudTask>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudTask
+        fullName: CloudTask
+        uid: '@azure/batch.CloudTask'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.TaskGetOptionalParams'
+    name: TaskGetOptionalParams
+    spec.typeScript:
+      - name: TaskGetOptionalParams
+        fullName: TaskGetOptionalParams
+        uid: '@azure/batch.TaskGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudTaskListResult>
+    name: CloudTaskListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudTaskListResult
+        fullName: CloudTaskListResult
+        uid: '@azure/batch.CloudTaskListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.TaskListOptionalParams'
+    name: TaskListOptionalParams
+    spec.typeScript:
+      - name: TaskListOptionalParams
+        fullName: TaskListOptionalParams
+        uid: '@azure/batch.TaskListOptionalParams'
+  - uid: '@azure/batch.TaskListNextOptionalParams'
+    name: TaskListNextOptionalParams
+    spec.typeScript:
+      - name: TaskListNextOptionalParams
+        fullName: TaskListNextOptionalParams
+        uid: '@azure/batch.TaskListNextOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudTaskListSubtasksResult>
+    name: CloudTaskListSubtasksResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudTaskListSubtasksResult
+        fullName: CloudTaskListSubtasksResult
+        uid: '@azure/batch.CloudTaskListSubtasksResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.TaskListSubtasksOptionalParams'
+    name: TaskListSubtasksOptionalParams
+    spec.typeScript:
+      - name: TaskListSubtasksOptionalParams
+        fullName: TaskListSubtasksOptionalParams
+        uid: '@azure/batch.TaskListSubtasksOptionalParams'
+  - uid: '@azure/batch.TaskReactivateOptionalParams'
+    name: TaskReactivateOptionalParams
+    spec.typeScript:
+      - name: TaskReactivateOptionalParams
+        fullName: TaskReactivateOptionalParams
+        uid: '@azure/batch.TaskReactivateOptionalParams'
+  - uid: '@azure/batch.TaskTerminateOptionalParams'
+    name: TaskTerminateOptionalParams
+    spec.typeScript:
+      - name: TaskTerminateOptionalParams
+        fullName: TaskTerminateOptionalParams
+        uid: '@azure/batch.TaskTerminateOptionalParams'
+  - uid: '@azure/batch.TaskUpdateOptionalParams'
+    name: TaskUpdateOptionalParams
+    spec.typeScript:
+      - name: TaskUpdateOptionalParams
+        fullName: TaskUpdateOptionalParams
+        uid: '@azure/batch.TaskUpdateOptionalParams'
