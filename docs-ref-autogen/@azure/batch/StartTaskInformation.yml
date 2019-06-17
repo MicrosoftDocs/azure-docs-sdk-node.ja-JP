@@ -1,0 +1,179 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.StartTaskInformation'
+    name: StartTaskInformation
+    fullName: StartTaskInformation
+    children:
+      - '@azure/batch.StartTaskInformation.containerInfo'
+      - '@azure/batch.StartTaskInformation.endTime'
+      - '@azure/batch.StartTaskInformation.exitCode'
+      - '@azure/batch.StartTaskInformation.failureInfo'
+      - '@azure/batch.StartTaskInformation.lastRetryTime'
+      - '@azure/batch.StartTaskInformation.result'
+      - '@azure/batch.StartTaskInformation.retryCount'
+      - '@azure/batch.StartTaskInformation.startTime'
+      - '@azure/batch.StartTaskInformation.state'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="f2e8d-101">StartTaskInformation を表すインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-101">An interface representing StartTaskInformation.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f2e8d-102">タスクが実行されているコンテナーに関する情報。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-102">Information about the container under which the task is executing.</span></span> <span data-ttu-id="f2e8d-103">このプロパティは、コンテナーのコンテキストでタスクを実行する場合にのみに設定されます。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-103">This property is set only if the task runs in a container context.</span></span>
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f2e8d-104">開始タスクが実行を停止した時刻。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-104">The time at which the start task stopped running.</span></span> <span data-ttu-id="f2e8d-105">これは、最新の終了時刻に実行、開始タスク (あっても失敗した実行して、再試行が保留中) を実行しているが完了した場合です。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-105">This is the end time of the most recent run of the start task, if that run has completed (even if that run failed and a retry is pending).</span></span>
+      <span data-ttu-id="f2e8d-106">この要素が存在するは、開始タスクが現在実行されている場合ではありません。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-106">This element is not present if the start task is currently running.</span></span>
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2e8d-107">開始タスクのコマンドラインで指定されたプログラムの終了コード。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-107">The exit code of the program specified on the start task command line.</span></span> <span data-ttu-id="f2e8d-108">このプロパティは、開始タスクが完了状態の場合にのみに設定されます。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-108">This property is set only if the start task is in the completed state.</span></span> <span data-ttu-id="f2e8d-109">一般に、プロセスの終了コードでは、そのプロセスのアプリケーション開発者によって実装される特定の規則が反映されます。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-109">In general, the exit code for a process reflects the specific convention implemented by the application developer for that process.</span></span> <span data-ttu-id="f2e8d-110">意思決定、コード内に終了コード値を使用する場合は、アプリケーション プロセスによって使用される終了コードの規則がわかっていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-110">If you use the exit code value to make decisions in your code, be sure that you know the exit code convention used by the application process.</span></span> <span data-ttu-id="f2e8d-111">ただし、Batch サービス (タイムアウト、または API を使用してユーザーの終了) のため、開始タスクが終了した場合、オペレーティング システム定義の終了コードを参照してください可能性があります。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-111">However, if the Batch service terminates the start task (due to timeout, or user termination via the API) you may see an operating system-defined exit code.</span></span>'
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2e8d-112">存在する場合は、タスクの失敗を説明する情報。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-112">Information describing the task failure, if any.</span></span> <span data-ttu-id="f2e8d-113">このプロパティでは、タスクが完了した状態で場合にのみが設定され、エラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-113">This property is set only if the task is in the completed state and encountered a failure.</span></span>'
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.lastRetryTime'
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2e8d-114">タスクの再試行が実行を開始した最新の時間。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-114">The most recent time at which a retry of the task started running.</span></span> <span data-ttu-id="f2e8d-115">この要素は、タスクが再試行された場合にのみ存在する (つまり retryCount が 0 以外の場合)。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-115">This element is present only if the task was retried (i.e. retryCount is nonzero).</span></span> <span data-ttu-id="f2e8d-116">存在する場合、これは通常、開始時刻と同じが再試行; 以外の理由、タスクが再起動された場合は異なる場合があります。たとえば、再試行時に、コンピューティング ノードを再起動すると場合、開始時刻が更新されますが、lastRetryTime はありません。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-116">If present, this is typically the same as startTime, but may be different if the task has been restarted for reasons other than retry; for example, if the compute node was rebooted during a retry, then the startTime is updated but the lastRetryTime is not.</span></span>'
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2e8d-117">タスクの実行の結果。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-117">The result of the task execution.</span></span> <span data-ttu-id="f2e8d-118">場合は、値は ''failed''、エラーの詳細は failureInfo プロパティで検出できます。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-118">If the value is ''failed'', then the details of the failure can be found in the failureInfo property.</span></span> <span data-ttu-id="f2e8d-119">使用可能な値が含まれます: ''成功''、''失敗''</span><span class="sxs-lookup"><span data-stu-id="f2e8d-119">Possible values include: ''success'', ''failure''</span></span>'
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2e8d-120">Batch サービスによりタスクが再試行された回数。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-120">The number of times the task has been retried by the Batch service.</span></span> <span data-ttu-id="f2e8d-121">処理前のエラー (タスクを実行できませんでした)、再試行タスク アプリケーションのエラー (0 以外の終了コード) と、ファイルのアップロード エラーは再試行されません。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-121">Task application failures (non-zero exit code) are retried, pre-processing errors (the task could not be run) and file upload errors are not retried.</span></span> <span data-ttu-id="f2e8d-122">Batch サービスでは、制約で指定された上限に達するまでタスクを再試行します。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-122">The Batch service will retry the task up to the limit specified by the constraints.</span></span>'
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2e8d-123">開始タスクが実行を開始した時刻。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-123">The time at which the start task started running.</span></span> <span data-ttu-id="f2e8d-124">タスクを再起動するか、または再試行するたびに、この値はリセットされます (つまり、これは、最も最新の時間、開始タスクが実行を開始しました)。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-124">This value is reset every time the task is restarted or retried (that is, this is the most recent time at which the start task started running).</span></span>'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.StartTaskInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2e8d-125">コンピューティング ノードで開始タスクの状態。</span><span class="sxs-lookup"><span data-stu-id="f2e8d-125">The state of the start task on the compute node.</span></span> <span data-ttu-id="f2e8d-126">使用可能な値が含まれます: ''running''、''完了''</span><span class="sxs-lookup"><span data-stu-id="f2e8d-126">Possible values include: ''running'', ''completed''</span></span>'
+    syntax:
+      content: 'state: StartTaskState'
+      return:
+        type:
+          - '@azure/batch.StartTaskState'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.StartTaskState'
+    name: StartTaskState
+    spec.typeScript:
+      - name: StartTaskState
+        fullName: StartTaskState
+        uid: '@azure/batch.StartTaskState'
