@@ -1,0 +1,141 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/loganalytics.Query'
+    name: Query
+    fullName: Query
+    children:
+      - '@azure/loganalytics.Query.execute'
+      - '@azure/loganalytics.Query.execute_2'
+      - '@azure/loganalytics.Query.execute_1'
+      - '@azure/loganalytics.Query.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: クエリを表すクラスです。
+    package: '@azure/loganalytics'
+  - uid: '@azure/loganalytics.Query.execute'
+    name: 'execute(string, QueryBody, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      データの分析クエリを実行します。
+      [ここで](https://dev.loganalytics.io/documentation/Using-the-API)Analytics クエリを使用して POST を使用しての例を示します。
+    syntax:
+      content: 'function execute(workspaceId: string, body: QueryBody, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: workspaceId
+          type:
+            - string
+          description: 'ワークスペースの ID。 これは、ワークスペース ID は、Azure portal の [プロパティ] ブレードからです。'
+        - id: body
+          type:
+            - '@azure/loganalytics.QueryBody'
+          description: 'Analytics クエリです。 詳細については、 [Analytics クエリの構文](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.QueryExecuteResponse>
+    package: '@azure/loganalytics'
+  - uid: '@azure/loganalytics.Query.execute_2'
+    name: 'execute(string, QueryBody, RequestOptionsBase, ServiceCallback<QueryResults>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function execute(workspaceId: string, body: QueryBody, options: RequestOptionsBase, callback: ServiceCallback<QueryResults>)'
+      parameters:
+        - id: workspaceId
+          type:
+            - string
+          description: 'ワークスペースの ID。 これは、ワークスペース ID は、Azure portal の [プロパティ] ブレードからです。'
+        - id: body
+          type:
+            - '@azure/loganalytics.QueryBody'
+          description: 'Analytics クエリです。 詳細については、 [Analytics クエリの構文](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/loganalytics.QueryResults>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.QueryExecuteResponse>
+    package: '@azure/loganalytics'
+  - uid: '@azure/loganalytics.Query.execute_1'
+    name: 'execute(string, QueryBody, ServiceCallback<QueryResults>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function execute(workspaceId: string, body: QueryBody, callback: ServiceCallback<QueryResults>)'
+      parameters:
+        - id: workspaceId
+          type:
+            - string
+          description: 'ワークスペースの ID。 これは、ワークスペース ID は、Azure portal の [プロパティ] ブレードからです。'
+        - id: body
+          type:
+            - '@azure/loganalytics.QueryBody'
+          description: 'Analytics クエリです。 詳細については、 [Analytics クエリの構文](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/loganalytics.QueryResults>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.QueryExecuteResponse>
+    package: '@azure/loganalytics'
+  - uid: '@azure/loganalytics.Query.constructor'
+    name: Query(LogAnalyticsClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: クエリを作成します。
+    syntax:
+      content: 'new Query(client: LogAnalyticsClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/loganalytics.LogAnalyticsClientContext'
+          description: |
+            サービス クライアントへの参照。
+    package: '@azure/loganalytics'
+references:
+  - uid: '@azure/loganalytics.LogAnalyticsClientContext'
+    name: LogAnalyticsClientContext
+    spec.typeScript:
+      - name: LogAnalyticsClientContext
+        fullName: LogAnalyticsClientContext
+        uid: '@azure/loganalytics.LogAnalyticsClientContext'
+  - uid: '@azure/loganalytics.QueryBody'
+    name: QueryBody
+    spec.typeScript:
+      - name: QueryBody
+        fullName: QueryBody
+        uid: '@azure/loganalytics.QueryBody'
+  - uid: ServiceCallback<@azure/loganalytics.QueryResults>
+    name: QueryResults>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: QueryResults
+        fullName: QueryResults
+        uid: '@azure/loganalytics.QueryResults'
+      - name: '>'
+        fullName: '>'

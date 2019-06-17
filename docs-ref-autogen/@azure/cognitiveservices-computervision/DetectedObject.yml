@@ -1,0 +1,92 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject'
+    name: DetectedObject
+    fullName: DetectedObject
+    children:
+      - '@azure/cognitiveservices-computervision.DetectedObject.confidence'
+      - '@azure/cognitiveservices-computervision.DetectedObject.object'
+      - '@azure/cognitiveservices-computervision.DetectedObject.parent'
+      - '@azure/cognitiveservices-computervision.DetectedObject.rectangle'
+    langs:
+      - typeScript
+    type: interface
+    summary: イメージで検出されたオブジェクト。
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject.confidence'
+    name: confidence
+    fullName: confidence
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 0 から 1 までの値として、イメージ内のオブジェクトを監視することの信頼度スコア。
+    optional: true
+    syntax:
+      content: 'confidence?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject.object'
+    name: object
+    fullName: object
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: オブジェクトのラベル。
+    optional: true
+    syntax:
+      content: 'object?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject.parent'
+    name: parent
+    fullName: parent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      分類法の観点から親オブジェクトです。
+      親オブジェクトは、このオブジェクトのより汎用的な形式です。  たとえば、'bulldog' は 'dog' の親になります。
+    optional: true
+    syntax:
+      content: 'parent?: ObjectHierarchy'
+      return:
+        type:
+          - '@azure/cognitiveservices-computervision.ObjectHierarchy'
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.DetectedObject.rectangle'
+    name: rectangle
+    fullName: rectangle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      検出されたオブジェクトのおおよその場所。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'rectangle?: BoundingRect'
+      return:
+        type:
+          - '@azure/cognitiveservices-computervision.BoundingRect'
+    package: '@azure/cognitiveservices-computervision'
+references:
+  - uid: '@azure/cognitiveservices-computervision.ObjectHierarchy'
+    name: ObjectHierarchy
+    spec.typeScript:
+      - name: ObjectHierarchy
+        fullName: ObjectHierarchy
+        uid: '@azure/cognitiveservices-computervision.ObjectHierarchy'
+  - uid: '@azure/cognitiveservices-computervision.BoundingRect'
+    name: BoundingRect
+    spec.typeScript:
+      - name: BoundingRect
+        fullName: BoundingRect
+        uid: '@azure/cognitiveservices-computervision.BoundingRect'
