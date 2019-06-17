@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint'
+    name: InstanceFailoverGroupReadWriteEndpoint
+    fullName: InstanceFailoverGroupReadWriteEndpoint
+    children:
+      - '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverPolicy'
+      - '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    langs:
+      - typeScript
+    type: interface
+    summary: フェールオーバー グループのインスタンスのエンドポイントを読み取り/書き込みです。
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverPolicy'
+    name: failoverPolicy
+    fullName: failoverPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: フェールオーバー グループの読み取り/書き込みのエンドポイントのフェールオーバー ポリシー。 FailoverPolicy が自動場合 failoverWithDataLossGracePeriodMinutes が必要です。 指定できる値は、次のとおりです。' 手動 '、'自動'
+    syntax:
+      content: 'failoverPolicy: ReadWriteEndpointFailoverPolicy'
+      return:
+        type:
+          - '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    name: failoverWithDataLossGracePeriodMinutes
+    fullName: failoverWithDataLossGracePeriodMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 読み取り/書き込みのエンドポイントのデータの損失をフェールオーバーする前に猶予期間が試行されます。 FailoverPolicy が自動場合 failoverWithDataLossGracePeriodMinutes が必要です。
+    optional: true
+    syntax:
+      content: 'failoverWithDataLossGracePeriodMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    name: ReadWriteEndpointFailoverPolicy
+    spec.typeScript:
+      - name: ReadWriteEndpointFailoverPolicy
+        fullName: ReadWriteEndpointFailoverPolicy
+        uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
