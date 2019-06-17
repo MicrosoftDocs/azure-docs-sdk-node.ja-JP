@@ -1,0 +1,245 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-search.AdminKeys'
+    name: AdminKeys
+    fullName: AdminKeys
+    children:
+      - '@azure/arm-search.AdminKeys.constructor'
+      - '@azure/arm-search.AdminKeys.get_2'
+      - '@azure/arm-search.AdminKeys.get'
+      - '@azure/arm-search.AdminKeys.get_1'
+      - '@azure/arm-search.AdminKeys.regenerate_2'
+      - '@azure/arm-search.AdminKeys.regenerate'
+      - '@azure/arm-search.AdminKeys.regenerate_1'
+    langs:
+      - typeScript
+    type: class
+    summary: AdminKeys を表すクラスです。
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.constructor'
+    name: AdminKeys(SearchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: AdminKeys を作成します。
+    syntax:
+      content: 'new AdminKeys(client: SearchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-search.SearchManagementClientContext'
+          description: |
+            サービス クライアントへの参照。
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.get_2'
+    name: 'get(string, string, AdminKeysGetOptionalParams, ServiceCallback<AdminKeyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, options: AdminKeysGetOptionalParams, callback: ServiceCallback<AdminKeyResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 現在のサブスクリプション内のリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: searchServiceName
+          type:
+            - string
+          description: 指定したリソース グループに関連付けられた Azure Search サービスの名前。
+        - id: options
+          type:
+            - '@azure/arm-search.AdminKeysGetOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.AdminKeyResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.AdminKeysGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.get'
+    name: 'get(string, string, Models.AdminKeysGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: プライマリとセカンダリの管理者に指定された Azure Search サービスの API キーを取得します。
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, options?: Models.AdminKeysGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 現在のサブスクリプション内のリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: searchServiceName
+          type:
+            - string
+          description: 指定したリソース グループに関連付けられた Azure Search サービスの名前。
+        - id: options
+          type:
+            - Models.AdminKeysGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AdminKeysGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.get_1'
+    name: 'get(string, string, ServiceCallback<AdminKeyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, callback: ServiceCallback<AdminKeyResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 現在のサブスクリプション内のリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: searchServiceName
+          type:
+            - string
+          description: 指定したリソース グループに関連付けられた Azure Search サービスの名前。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.AdminKeyResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.AdminKeysGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.regenerate_2'
+    name: 'regenerate(string, string, Models.AdminKeyKind, AdminKeysRegenerateOptionalParams, ServiceCallback<AdminKeyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerate(resourceGroupName: string, searchServiceName: string, keyKind: Models.AdminKeyKind, options: AdminKeysRegenerateOptionalParams, callback: ServiceCallback<AdminKeyResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 現在のサブスクリプション内のリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: searchServiceName
+          type:
+            - string
+          description: 指定したリソース グループに関連付けられた Azure Search サービスの名前。
+        - id: keyKind
+          type:
+            - Models.AdminKeyKind
+          description: 再生成するキーを指定します。 有効な値には、'primary' と '第 2' が含まれます。 使用可能な値が含まれます 'primary'、'セカンダリ'。
+        - id: options
+          type:
+            - '@azure/arm-search.AdminKeysRegenerateOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.AdminKeyResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.AdminKeysRegenerateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.regenerate'
+    name: 'regenerate(string, string, Models.AdminKeyKind, Models.AdminKeysRegenerateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: プライマリまたはセカンダリの管理者 API キーを再生成します。 一度に再生成できるのは 1 つのキーのみです。
+    syntax:
+      content: 'function regenerate(resourceGroupName: string, searchServiceName: string, keyKind: Models.AdminKeyKind, options?: Models.AdminKeysRegenerateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 現在のサブスクリプション内のリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: searchServiceName
+          type:
+            - string
+          description: 指定したリソース グループに関連付けられた Azure Search サービスの名前。
+        - id: keyKind
+          type:
+            - Models.AdminKeyKind
+          description: 再生成するキーを指定します。 有効な値には、'primary' と '第 2' が含まれます。 使用可能な値が含まれます 'primary'、'セカンダリ'。
+        - id: options
+          type:
+            - Models.AdminKeysRegenerateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AdminKeysRegenerateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.regenerate_1'
+    name: 'regenerate(string, string, Models.AdminKeyKind, ServiceCallback<AdminKeyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerate(resourceGroupName: string, searchServiceName: string, keyKind: Models.AdminKeyKind, callback: ServiceCallback<AdminKeyResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 現在のサブスクリプション内のリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: searchServiceName
+          type:
+            - string
+          description: 指定したリソース グループに関連付けられた Azure Search サービスの名前。
+        - id: keyKind
+          type:
+            - Models.AdminKeyKind
+          description: 再生成するキーを指定します。 有効な値には、'primary' と '第 2' が含まれます。 使用可能な値が含まれます 'primary'、'セカンダリ'。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.AdminKeyResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.AdminKeysRegenerateResponse>
+    package: '@azure/arm-search'
+references:
+  - uid: '@azure/arm-search.SearchManagementClientContext'
+    name: SearchManagementClientContext
+    spec.typeScript:
+      - name: SearchManagementClientContext
+        fullName: SearchManagementClientContext
+        uid: '@azure/arm-search.SearchManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-search.AdminKeyResult>
+    name: AdminKeyResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AdminKeyResult
+        fullName: AdminKeyResult
+        uid: '@azure/arm-search.AdminKeyResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-search.AdminKeysGetOptionalParams'
+    name: AdminKeysGetOptionalParams
+    spec.typeScript:
+      - name: AdminKeysGetOptionalParams
+        fullName: AdminKeysGetOptionalParams
+        uid: '@azure/arm-search.AdminKeysGetOptionalParams'
+  - uid: '@azure/arm-search.AdminKeysRegenerateOptionalParams'
+    name: AdminKeysRegenerateOptionalParams
+    spec.typeScript:
+      - name: AdminKeysRegenerateOptionalParams
+        fullName: AdminKeysRegenerateOptionalParams
+        uid: '@azure/arm-search.AdminKeysRegenerateOptionalParams'
