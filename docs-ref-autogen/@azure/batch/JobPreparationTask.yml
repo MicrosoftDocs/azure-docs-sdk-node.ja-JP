@@ -1,0 +1,197 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    fullName: JobPreparationTask
+    children:
+      - '@azure/batch.JobPreparationTask.commandLine'
+      - '@azure/batch.JobPreparationTask.constraints'
+      - '@azure/batch.JobPreparationTask.containerSettings'
+      - '@azure/batch.JobPreparationTask.environmentSettings'
+      - '@azure/batch.JobPreparationTask.id'
+      - '@azure/batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess'
+      - '@azure/batch.JobPreparationTask.resourceFiles'
+      - '@azure/batch.JobPreparationTask.userIdentity'
+      - '@azure/batch.JobPreparationTask.waitForSuccess'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="6a9eb-101">ジョブの準備を使用して、ジョブのタスクを実行するコンピューティング ノードを準備することができます。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-101">You can use Job Preparation to prepare a compute node to run tasks for the job.</span></span> <span data-ttu-id="6a9eb-102">ジョブの準備で一般的に実行するアクティビティは次のとおりです。ジョブ内のすべてのタスクで使用される共通のリソース ファイルをダウンロードしています。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-102">Activities commonly performed in Job Preparation include: Downloading common resource files used by all the tasks in the job.</span></span> <span data-ttu-id="6a9eb-103">ジョブの準備タスクは、コンピューティング ノード上の共有場所にこれらの共通リソース ファイルをダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-103">The Job Preparation task can download these common resource files to the shared location on the compute node.</span></span> <span data-ttu-id="6a9eb-104">(AZ_BATCH_NODE_ROOT_DIR\shared)、またはそのジョブのすべてのタスクと通信できるように、コンピューティング ノードでローカル サービスを開始します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-104">(AZ_BATCH_NODE_ROOT_DIR\shared), or starting a local service on the compute node so that all tasks of that job can communicate with it.</span></span> <span data-ttu-id="6a9eb-105">ジョブの準備のタスクが失敗 (終了コード 0 で終了する前に、再試行回数は枯渇)、バッチはコンピューティング ノードで、このジョブのタスクを実行されません。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-105">If the Job Preparation task fails (that is, exhausts its retry count before exiting with exit code 0), Batch will not run tasks of this job on the compute node.</span></span> <span data-ttu-id="6a9eb-106">ノードは残りますが再イメージ化されるまで、このジョブのタスクを実行する対象から外します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-106">The node remains ineligible to run tasks of this job until it is reimaged.</span></span> <span data-ttu-id="6a9eb-107">ノードは、アクティブなままし、その他のジョブで使用することができます。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-107">The node remains active and can be used for other jobs.</span></span>
+      <span data-ttu-id="6a9eb-108">ジョブの準備タスクは、同じコンピューティング ノードで複数回を実行できます。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-108">The Job Preparation task can run multiple times on the same compute node.</span></span> <span data-ttu-id="6a9eb-109">そのため、再実行を処理するジョブの準備タスクを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-109">Therefore, you should write the Job Preparation task to handle re-execution.</span></span> <span data-ttu-id="6a9eb-110">コンピューティング ノードが再起動された場合、ジョブ準備タスクはもう一度ノードで実行、rerunOnNodeRebootAfterSuccess が true の場合、またはジョブの準備タスクが既に完了しなかった場合、ジョブの他のタスクをスケジュールする前にします。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-110">If the compute node is rebooted, the Job Preparation task is run again on the node before scheduling any other task of the job, if rerunOnNodeRebootAfterSuccess is true or if the Job Preparation task did not previously complete.</span></span> <span data-ttu-id="6a9eb-111">コンピューティング ノードが再イメージ化される場合、ジョブ準備タスクはジョブのすべてのタスクをスケジュールする前にもう一度実行します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-111">If the compute node is reimaged, the Job Preparation task is run again before scheduling any task of the job.</span></span> <span data-ttu-id="6a9eb-112">コンピューティング ノードで、復旧操作がトリガーされたときに、batch はタスクを再試行します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-112">Batch will retry tasks when a recovery operation is triggered on a compute node.</span></span> <span data-ttu-id="6a9eb-113">回復操作の例が含まれます (ただしこれらに限定されません)、異常なコンピューティング ノードが再起動またはホスト エラーにより、コンピューティング ノードが表示されなくなったとします。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-113">Examples of recovery operations include (but are not limited to) when an unhealthy compute node is rebooted or a compute node disappeared due to host failure.</span></span> <span data-ttu-id="6a9eb-114">操作は依存しないと、maxTaskRetryCount 照らし合わせてカウントされることはありません、回復を再試行します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-114">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span>
+      <span data-ttu-id="6a9eb-115">MaxTaskRetryCount が 0 の場合でも、復旧操作のための内部の再試行が発生します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-115">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span>
+      <span data-ttu-id="6a9eb-116">このため、すべてのタスクにべき等であることがあります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-116">Because of this, all tasks should be idempotent.</span></span> <span data-ttu-id="6a9eb-117">つまり、タスクが許容されているが中断され、任意の破損またはデータの重複を発生させることがなく再起動する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-117">This means tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="6a9eb-118">最適な練習を何らかの形式のチェックポイント処理を使用するには時間の長いタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-118">The best practice for long running tasks is to use some form of checkpointing.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6a9eb-119">ジョブの準備タスクのコマンドラインです。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-119">The command line of the Job Preparation task.</span></span> <span data-ttu-id="6a9eb-120">コマンド ライン シェルで動作しないためことはできません活用してください環境変数の拡張などのシェルの機能。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-120">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="6a9eb-121">このような機能を活用する場合を呼び出す必要があります、コマンドラインでシェル例 "cmd/c MyCommand"を使用して Windows でまたは"//bin/sh-c MyCommand"linux。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-121">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="6a9eb-122">コマンドラインは、ファイルのパスを参照している場合、(タスク作業ディレクトリを基準)、相対パスを使うか、バッチの指定された環境変数を使用して (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-122">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6a9eb-123">ジョブの準備タスクに適用される制約。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-123">Constraints that apply to the Job Preparation task.</span></span>
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6a9eb-124">ジョブの準備タスクを実行するコンテナーの設定。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-124">The settings for the container under which the Job Preparation task runs.</span></span> <span data-ttu-id="6a9eb-125">これは、指定した場合、AZ_BATCH_NODE_ROOT_DIR (ノード上の Azure Batch ディレクトリのルート) の下のすべてのディレクトリに再帰的には、コンテナーにマップする、すべてのタスクの環境変数は、コンテナーにマップしてタスクのコマンドラインは、コンテナー内で実行します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-125">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6a9eb-126">ジョブの準備タスクの環境変数設定の一覧。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-126">A list of environment variable settings for the Job Preparation task.</span></span>
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6a9eb-127">ジョブ内のジョブ準備タスクを一意に識別する文字列。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-127">A string that uniquely identifies the Job Preparation task within the job.</span></span> <span data-ttu-id="6a9eb-128">この ID は、ハイフン、アンダー スコアを含む、英数字の任意の組み合わせを含めることができます、64 を超える文字を含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-128">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span> <span data-ttu-id="6a9eb-129">このプロパティを指定しない場合、Batch サービスには、''jobpreparation'' の既定値が割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-129">If you do not specify this property, the Batch service assigns a default value of ''jobpreparation''.</span></span> <span data-ttu-id="6a9eb-130">ジョブ内の他のタスクがジョブの準備タスクと同じ ID を持つことはできません。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-130">No other task in the job can have the same ID as the Job Preparation task.</span></span> <span data-ttu-id="6a9eb-131">同じ id を持つタスクを送信しようとすると、Batch サービスはエラー コード TaskIdSameAsJobPreparationTask; 要求を拒否します。REST API を直接呼び出す、HTTP 状態コードは 409 (Conflict) です。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-131">If you try to submit a task with the same id, the Batch service rejects the request with error code TaskIdSameAsJobPreparationTask; if you are calling the REST API directly, the HTTP status code is 409 (Conflict).</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess'
+    name: rerunOnNodeRebootAfterSuccess
+    fullName: rerunOnNodeRebootAfterSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6a9eb-132">かどうか、Batch サービスは、コンピューティング ノードが再起動した後に、ジョブの準備タスクを再実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-132">Whether the Batch service should rerun the Job Preparation task after a compute node reboots.</span></span>
+      <span data-ttu-id="6a9eb-133">コンピューティング ノードが再イメージ化される場合、またはジョブの準備タスクが完了しなかった場合、ジョブの準備タスクが常に再実行 (例: タスクの実行中に再起動が発生したため)。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-133">The Job Preparation task is always rerun if a compute node is reimaged, or if the Job Preparation task did not complete (e.g. because the reboot occurred while the task was running).</span></span> <span data-ttu-id="6a9eb-134">そのため、べき等である、複数回実行した場合に適切に動作させると、ジョブの準備タスクをいつでも記述する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-134">Therefore, you should always write a Job Preparation task to be idempotent and to behave correctly if run multiple times.</span></span> <span data-ttu-id="6a9eb-135">既定値は true です。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-135">The default value is true.</span></span>
+    optional: true
+    syntax:
+      content: 'rerunOnNodeRebootAfterSuccess?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6a9eb-136">コマンドラインを実行する前に、Batch サービスをコンピューティング ノードにダウンロードするファイルの一覧。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-136">A list of files that the Batch service will download to the compute node before running the command line.</span></span> <span data-ttu-id="6a9eb-137">この要素の下に示されているファイルは、タスクの作業ディレクトリ内にあります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-137">Files listed under this element are located in the task's working directory.</span></span>
+      <span data-ttu-id="6a9eb-138">リソース ファイルの一覧の最大サイズがあります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-138">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="6a9eb-139">最大サイズを超えると、要求は失敗し、RequestEntityTooLarge が応答のエラー コードになります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-139">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="6a9eb-140">このような場合は、サイズの ResourceFiles コレクションを減らす必要があります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-140">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="6a9eb-141">これは、.zip ファイル、アプリケーションのパッケージまたは Docker コンテナーを使用して実現できます。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-141">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6a9eb-142">ジョブの準備タスクを実行するユーザーの id。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-142">The user identity under which the Job Preparation task runs.</span></span> <span data-ttu-id="6a9eb-143">省略した場合、タスクは、Windows ノードでは、タスクに一意の管理者以外のユーザーまたは Linux ノード上のプールに一意の管理者以外のユーザーとして実行されます。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-143">If omitted, the task runs as a non-administrative user unique to the task on Windows nodes, or a non-administrative user unique to the pool on Linux nodes.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTask.waitForSuccess'
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6a9eb-144">かどうか、Batch サービスは、コンピューティング ノード上のジョブの他のタスクをスケジュールする前に正常に完了するジョブの準備タスクを待機する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-144">Whether the Batch service should wait for the Job Preparation task to complete successfully before scheduling any other tasks of the job on the compute node.</span></span> <span data-ttu-id="6a9eb-145">終了コード 0 で終了した場合、ジョブ準備タスクが正常に完了します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-145">A Job Preparation task has completed successfully if it exits with exit code 0.</span></span> <span data-ttu-id="6a9eb-146">コンピューティング ノードで true で、ジョブ準備タスクが失敗した場合、バッチ サービスは、(制約の要素で指定) として、最大再試行回数までジョブの準備タスクを再試行します。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-146">If true and the Job Preparation task fails on a compute node, the Batch service retries the Job Preparation task up to its maximum retry count (as specified in the constraints element).</span></span> <span data-ttu-id="6a9eb-147">場合は、タスクがまだ正常に完了しなかったすべての再試行後にし、Batch サービスは、コンピューティング ノードにジョブのタスクをスケジュールできません。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-147">If the task has still not completed successfully after all retries, then the Batch service will not schedule tasks of the job to the compute node.</span></span> <span data-ttu-id="6a9eb-148">コンピューティング ノードは、アクティブおよびその他のジョブのタスクを実行する対象となるは残ります。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-148">The compute node remains active and eligible to run tasks of other jobs.</span></span> <span data-ttu-id="6a9eb-149">False の場合、Batch サービスはジョブの準備タスクが完了する待機しません。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-149">If false, the Batch service will not wait for the Job Preparation task to complete.</span></span> <span data-ttu-id="6a9eb-150">ここで、ジョブの準備タスクがまだ実行中、コンピューティング ノードで実行されているジョブの他のタスクが開始します。ジョブ準備タスクが失敗した場合でも新しいタスクがノードにあるスケジュール継続されます。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-150">In this case, other tasks of the job can start executing on the compute node while the Job Preparation task is still running; and even if the Job Preparation task fails, new tasks will continue to be scheduled on the node.</span></span> <span data-ttu-id="6a9eb-151">既定値は true です。</span><span class="sxs-lookup"><span data-stu-id="6a9eb-151">The default value is true.</span></span>'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
