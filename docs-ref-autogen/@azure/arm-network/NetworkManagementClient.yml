@@ -5,13 +5,17 @@ items:
     fullName: NetworkManagementClient
     children:
       - '@azure/arm-network.NetworkManagementClient.acceptLanguage'
+      - '@azure/arm-network.NetworkManagementClient.apiVersion'
       - '@azure/arm-network.NetworkManagementClient.applicationGateways'
       - '@azure/arm-network.NetworkManagementClient.applicationSecurityGroups'
       - '@azure/arm-network.NetworkManagementClient.availableDelegations'
       - '@azure/arm-network.NetworkManagementClient.availableEndpointServices'
+      - '@azure/arm-network.NetworkManagementClient.availablePrivateEndpointTypes'
       - '@azure/arm-network.NetworkManagementClient.availableResourceGroupDelegations'
+      - '@azure/arm-network.NetworkManagementClient.availableResourceGroupPrivateEndpointTypes'
       - '@azure/arm-network.NetworkManagementClient.azureFirewallFqdnTags'
       - '@azure/arm-network.NetworkManagementClient.azureFirewalls'
+      - '@azure/arm-network.NetworkManagementClient.bastionHosts'
       - '@azure/arm-network.NetworkManagementClient.beginLongRunningRequest'
       - '@azure/arm-network.NetworkManagementClient.bgpServiceCommunities'
       - '@azure/arm-network.NetworkManagementClient.checkDnsNameAvailability'
@@ -36,7 +40,6 @@ items:
       - '@azure/arm-network.NetworkManagementClient.expressRouteServiceProviders'
       - '@azure/arm-network.NetworkManagementClient.hubVirtualNetworkConnections'
       - '@azure/arm-network.NetworkManagementClient.inboundNatRules'
-      - '@azure/arm-network.NetworkManagementClient.interfaceEndpoints'
       - '@azure/arm-network.NetworkManagementClient.loadBalancerBackendAddressPools'
       - '@azure/arm-network.NetworkManagementClient.loadBalancerFrontendIPConfigurations'
       - '@azure/arm-network.NetworkManagementClient.loadBalancerLoadBalancingRules'
@@ -60,8 +63,11 @@ items:
       - '@azure/arm-network.NetworkManagementClient.p2sVpnServerConfigurations'
       - '@azure/arm-network.NetworkManagementClient.packetCaptures'
       - '@azure/arm-network.NetworkManagementClient.peerExpressRouteCircuitConnections'
+      - '@azure/arm-network.NetworkManagementClient.privateEndpoints'
+      - '@azure/arm-network.NetworkManagementClient.privateLinkServices'
       - '@azure/arm-network.NetworkManagementClient.publicIPAddresses'
       - '@azure/arm-network.NetworkManagementClient.publicIPPrefixes'
+      - '@azure/arm-network.NetworkManagementClient.resourceNavigationLinks'
       - '@azure/arm-network.NetworkManagementClient.restoreLROPoller'
       - '@azure/arm-network.NetworkManagementClient.routeFilterRules'
       - '@azure/arm-network.NetworkManagementClient.routeFilters'
@@ -72,8 +78,10 @@ items:
       - '@azure/arm-network.NetworkManagementClient.sendLRORequest'
       - '@azure/arm-network.NetworkManagementClient.sendOperationRequest'
       - '@azure/arm-network.NetworkManagementClient.sendRequest'
+      - '@azure/arm-network.NetworkManagementClient.serviceAssociationLinks'
       - '@azure/arm-network.NetworkManagementClient.serviceEndpointPolicies'
       - '@azure/arm-network.NetworkManagementClient.serviceEndpointPolicyDefinitions'
+      - '@azure/arm-network.NetworkManagementClient.serviceTags'
       - '@azure/arm-network.NetworkManagementClient.subnets'
       - '@azure/arm-network.NetworkManagementClient.subscriptionId'
       - '@azure/arm-network.NetworkManagementClient.supportedSecurityProviders'
@@ -112,6 +120,21 @@ items:
       return:
         type:
           - string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.apiVersion'
+    name: apiVersion
+    fullName: apiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'apiVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.applicationGateways'
     name: applicationGateways
@@ -169,6 +192,20 @@ items:
         type:
           - '@azure/arm-network.AvailableEndpointServices'
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.availablePrivateEndpointTypes'
+    name: availablePrivateEndpointTypes
+    fullName: availablePrivateEndpointTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'availablePrivateEndpointTypes: AvailablePrivateEndpointTypes'
+      return:
+        type:
+          - '@azure/arm-network.AvailablePrivateEndpointTypes'
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.availableResourceGroupDelegations'
     name: availableResourceGroupDelegations
     fullName: availableResourceGroupDelegations
@@ -182,6 +219,20 @@ items:
       return:
         type:
           - '@azure/arm-network.AvailableResourceGroupDelegations'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.availableResourceGroupPrivateEndpointTypes'
+    name: availableResourceGroupPrivateEndpointTypes
+    fullName: availableResourceGroupPrivateEndpointTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'availableResourceGroupPrivateEndpointTypes: AvailableResourceGroupPrivateEndpointTypes'
+      return:
+        type:
+          - '@azure/arm-network.AvailableResourceGroupPrivateEndpointTypes'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.azureFirewallFqdnTags'
     name: azureFirewallFqdnTags
@@ -211,20 +262,34 @@ items:
         type:
           - '@azure/arm-network.AzureFirewalls'
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.bastionHosts'
+    name: bastionHosts
+    fullName: bastionHosts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'bastionHosts: BastionHosts'
+      return:
+        type:
+          - '@azure/arm-network.BastionHosts'
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.beginLongRunningRequest'
     name: 'beginLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="766bf-101">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、HttpLongRunningOperationResponse を取得します。</span><span class="sxs-lookup"><span data-stu-id="766bf-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="4f082-101">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、HttpLongRunningOperationResponse を取得します。</span><span class="sxs-lookup"><span data-stu-id="4f082-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="766bf-102">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="766bf-102">The request object</span></span>
+          description: <span data-ttu-id="4f082-102">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="4f082-102">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -254,18 +319,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="766bf-103">.Cloudapp.azure.com というゾーン内のドメイン名が使用できるかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="766bf-103">Checks whether a domain name in the cloudapp.azure.com zone is available for use.</span></span>
+    summary: <span data-ttu-id="4f082-103">.Cloudapp.azure.com というゾーン内のドメイン名が使用できるかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="4f082-103">Checks whether a domain name in the cloudapp.azure.com zone is available for use.</span></span>
     syntax:
       content: 'function checkDnsNameAvailability(location: string, domainNameLabel: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: location
           type:
             - string
-          description: <span data-ttu-id="766bf-104">ドメイン名の場所。</span><span class="sxs-lookup"><span data-stu-id="766bf-104">The location of the domain name.</span></span>
+          description: <span data-ttu-id="4f082-104">ドメイン名の場所。</span><span class="sxs-lookup"><span data-stu-id="4f082-104">The location of the domain name.</span></span>
         - id: domainNameLabel
           type:
             - string
-          description: '<span data-ttu-id="766bf-105">検証するドメイン名。</span><span class="sxs-lookup"><span data-stu-id="766bf-105">The domain name to be verified.</span></span> <span data-ttu-id="766bf-106">次の正規表現に準拠する必要がある必要があります: ^ [a ~ z] [、-z0 - 9-]{1,61}[a-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="766bf-106">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
+          description: '<span data-ttu-id="4f082-105">検証するドメイン名。</span><span class="sxs-lookup"><span data-stu-id="4f082-105">The domain name to be verified.</span></span> <span data-ttu-id="4f082-106">次の正規表現に準拠する必要がある必要があります: ^ [a ~ z] [、-z0 - 9-]{1,61}[a-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="4f082-106">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -288,20 +353,20 @@ items:
         - id: location
           type:
             - string
-          description: <span data-ttu-id="766bf-107">ドメイン名の場所。</span><span class="sxs-lookup"><span data-stu-id="766bf-107">The location of the domain name.</span></span>
+          description: <span data-ttu-id="4f082-107">ドメイン名の場所。</span><span class="sxs-lookup"><span data-stu-id="4f082-107">The location of the domain name.</span></span>
         - id: domainNameLabel
           type:
             - string
-          description: '<span data-ttu-id="766bf-108">検証するドメイン名。</span><span class="sxs-lookup"><span data-stu-id="766bf-108">The domain name to be verified.</span></span> <span data-ttu-id="766bf-109">次の正規表現に準拠する必要がある必要があります: ^ [a ~ z] [、-z0 - 9-]{1,61}[a-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="766bf-109">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
+          description: '<span data-ttu-id="4f082-108">検証するドメイン名。</span><span class="sxs-lookup"><span data-stu-id="4f082-108">The domain name to be verified.</span></span> <span data-ttu-id="4f082-109">次の正規表現に準拠する必要がある必要があります: ^ [a ~ z] [、-z0 - 9-]{1,61}[a-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="4f082-109">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="766bf-110">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="766bf-110">The optional parameters</span></span>
+          description: <span data-ttu-id="4f082-110">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="4f082-110">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.DnsNameAvailabilityResult>
           description: |
-            <span data-ttu-id="766bf-111">コールバック</span><span class="sxs-lookup"><span data-stu-id="766bf-111">The callback</span></span>
+            <span data-ttu-id="4f082-111">コールバック</span><span class="sxs-lookup"><span data-stu-id="4f082-111">The callback</span></span>
       return:
         type:
           - Promise<Models.CheckDnsNameAvailabilityResponse>
@@ -319,16 +384,16 @@ items:
         - id: location
           type:
             - string
-          description: <span data-ttu-id="766bf-112">ドメイン名の場所。</span><span class="sxs-lookup"><span data-stu-id="766bf-112">The location of the domain name.</span></span>
+          description: <span data-ttu-id="4f082-112">ドメイン名の場所。</span><span class="sxs-lookup"><span data-stu-id="4f082-112">The location of the domain name.</span></span>
         - id: domainNameLabel
           type:
             - string
-          description: '<span data-ttu-id="766bf-113">検証するドメイン名。</span><span class="sxs-lookup"><span data-stu-id="766bf-113">The domain name to be verified.</span></span> <span data-ttu-id="766bf-114">次の正規表現に準拠する必要がある必要があります: ^ [a ~ z] [、-z0 - 9-]{1,61}[a-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="766bf-114">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
+          description: '<span data-ttu-id="4f082-113">検証するドメイン名。</span><span class="sxs-lookup"><span data-stu-id="4f082-113">The domain name to be verified.</span></span> <span data-ttu-id="4f082-114">次の正規表現に準拠する必要がある必要があります: ^ [a ~ z] [、-z0 - 9-]{1,61}[a-z0-9] $。</span><span class="sxs-lookup"><span data-stu-id="4f082-114">It must conform to the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.DnsNameAvailabilityResult>
           description: |
-            <span data-ttu-id="766bf-115">コールバック</span><span class="sxs-lookup"><span data-stu-id="766bf-115">The callback</span></span>
+            <span data-ttu-id="4f082-115">コールバック</span><span class="sxs-lookup"><span data-stu-id="4f082-115">The callback</span></span>
       return:
         type:
           - Promise<Models.CheckDnsNameAvailabilityResponse>
@@ -599,20 +664,6 @@ items:
         type:
           - '@azure/arm-network.InboundNatRules'
     package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkManagementClient.interfaceEndpoints'
-    name: interfaceEndpoints
-    fullName: interfaceEndpoints
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      content: 'interfaceEndpoints: InterfaceEndpoints'
-      return:
-        type:
-          - '@azure/arm-network.InterfaceEndpoints'
-    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.loadBalancerBackendAddressPools'
     name: loadBalancerBackendAddressPools
     fullName: loadBalancerBackendAddressPools
@@ -732,7 +783,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="766bf-116">長時間実行される操作の秒の再試行タイムアウト。</span><span class="sxs-lookup"><span data-stu-id="766bf-116">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="766bf-117">既定値は 30 です。</span><span class="sxs-lookup"><span data-stu-id="766bf-117">Default value is 30.</span></span>
+    summary: <span data-ttu-id="4f082-116">長時間実行される操作の秒の再試行タイムアウト。</span><span class="sxs-lookup"><span data-stu-id="4f082-116">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="4f082-117">既定値は 30 です。</span><span class="sxs-lookup"><span data-stu-id="4f082-117">Default value is 30.</span></span>
     optional: true
     syntax:
       content: 'longRunningOperationRetryTimeout?: undefined | number'
@@ -816,18 +867,18 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="766bf-118">NetworkManagementClient クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="766bf-118">Initializes a new instance of the NetworkManagementClient class.</span></span>
+    summary: <span data-ttu-id="4f082-118">NetworkManagementClient クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="4f082-118">Initializes a new instance of the NetworkManagementClient class.</span></span>
     syntax:
       content: 'new NetworkManagementClient(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.NetworkManagementClientOptions)'
       parameters:
         - id: credentials
           type:
             - ServiceClientCredentials
-          description: <span data-ttu-id="766bf-119">Azure に接続するクライアントに必要な資格情報。</span><span class="sxs-lookup"><span data-stu-id="766bf-119">Credentials needed for the client to connect to Azure.</span></span>
+          description: <span data-ttu-id="4f082-119">Azure に接続するクライアントに必要な資格情報。</span><span class="sxs-lookup"><span data-stu-id="4f082-119">Credentials needed for the client to connect to Azure.</span></span>
         - id: subscriptionId
           type:
             - string
-          description: <span data-ttu-id="766bf-120">Microsoft Azure サブスクリプションを一意に識別するサブスクリプションの資格情報。</span><span class="sxs-lookup"><span data-stu-id="766bf-120">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="766bf-121">サブスクリプション ID は、全ての修理依頼についてURI の一部を生じさせます。</span><span class="sxs-lookup"><span data-stu-id="766bf-121">The subscription ID forms part of the URI for every service call.</span></span>
+          description: <span data-ttu-id="4f082-120">Microsoft Azure サブスクリプションを一意に識別するサブスクリプションの資格情報。</span><span class="sxs-lookup"><span data-stu-id="4f082-120">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="4f082-121">サブスクリプション ID は、全ての修理依頼についてURI の一部を生じさせます。</span><span class="sxs-lookup"><span data-stu-id="4f082-121">The subscription ID forms part of the URI for every service call.</span></span>
         - id: options
           type:
             - Models.NetworkManagementClientOptions
@@ -946,6 +997,34 @@ items:
         type:
           - '@azure/arm-network.PeerExpressRouteCircuitConnections'
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.privateEndpoints'
+    name: privateEndpoints
+    fullName: privateEndpoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'privateEndpoints: PrivateEndpoints'
+      return:
+        type:
+          - '@azure/arm-network.PrivateEndpoints'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.privateLinkServices'
+    name: privateLinkServices
+    fullName: privateLinkServices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'privateLinkServices: PrivateLinkServices'
+      return:
+        type:
+          - '@azure/arm-network.PrivateLinkServices'
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.publicIPAddresses'
     name: publicIPAddresses
     fullName: publicIPAddresses
@@ -974,13 +1053,27 @@ items:
         type:
           - '@azure/arm-network.PublicIPPrefixes'
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.resourceNavigationLinks'
+    name: resourceNavigationLinks
+    fullName: resourceNavigationLinks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'resourceNavigationLinks: ResourceNavigationLinks'
+      return:
+        type:
+          - '@azure/arm-network.ResourceNavigationLinks'
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.restoreLROPoller'
     name: restoreLROPoller(LROPollState)
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="766bf-122">指定された LROPollState から、LROPoller を復元します。</span><span class="sxs-lookup"><span data-stu-id="766bf-122">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="766bf-123">このメソッドは、別のプロセスやマシンで、LROPoller を再作成に使用できます。</span><span class="sxs-lookup"><span data-stu-id="766bf-123">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    summary: <span data-ttu-id="4f082-122">指定された LROPollState から、LROPoller を復元します。</span><span class="sxs-lookup"><span data-stu-id="4f082-122">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="4f082-123">このメソッドは、別のプロセスやマシンで、LROPoller を再作成に使用できます。</span><span class="sxs-lookup"><span data-stu-id="4f082-123">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
     syntax:
       content: 'function restoreLROPoller(lroPollState: LROPollState)'
       parameters:
@@ -1068,14 +1161,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="766bf-124">ポーリングされ、最終的な結果を提供する要求を作成するためのメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="766bf-124">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    summary: <span data-ttu-id="4f082-124">ポーリングされ、最終的な結果を提供する要求を作成するためのメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="4f082-124">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
     syntax:
       content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="766bf-125">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="766bf-125">The request object</span></span>
+          description: <span data-ttu-id="4f082-125">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="4f082-125">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -1091,22 +1184,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="766bf-126">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、LROPoller を取得します。</span><span class="sxs-lookup"><span data-stu-id="766bf-126">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="4f082-126">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、LROPoller を取得します。</span><span class="sxs-lookup"><span data-stu-id="4f082-126">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="766bf-127">操作の引数。</span><span class="sxs-lookup"><span data-stu-id="766bf-127">The arguments to the operation.</span></span>
+          description: <span data-ttu-id="4f082-127">操作の引数。</span><span class="sxs-lookup"><span data-stu-id="4f082-127">The arguments to the operation.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="766bf-128">操作を指定します。</span><span class="sxs-lookup"><span data-stu-id="766bf-128">The specification for the operation.</span></span>
+          description: <span data-ttu-id="4f082-128">操作を指定します。</span><span class="sxs-lookup"><span data-stu-id="4f082-128">The specification for the operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="766bf-129">要求時に送信される追加のオプション。</span><span class="sxs-lookup"><span data-stu-id="766bf-129">Additional options to be sent while making the request.</span></span>
+          description: <span data-ttu-id="4f082-129">要求時に送信される追加のオプション。</span><span class="sxs-lookup"><span data-stu-id="4f082-129">Additional options to be sent while making the request.</span></span>
           optional: true
       return:
         type:
@@ -1118,23 +1211,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="766bf-130">指定された OperationSpec を使用して設定される HTTP 要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="766bf-130">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    summary: <span data-ttu-id="4f082-130">指定された OperationSpec を使用して設定される HTTP 要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="4f082-130">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
     syntax:
       content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="766bf-131">この引数から HTTP 要求のテンプレート化された値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="766bf-131">The arguments that the HTTP request's templated values will be populated from.</span></span>
+          description: <span data-ttu-id="4f082-131">この引数から HTTP 要求のテンプレート化された値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="4f082-131">The arguments that the HTTP request's templated values will be populated from.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="766bf-132">使用して設定、httpRequest OperationSpec します。</span><span class="sxs-lookup"><span data-stu-id="766bf-132">The OperationSpec to use to populate the httpRequest.</span></span>
+          description: <span data-ttu-id="4f082-132">使用して設定、httpRequest OperationSpec します。</span><span class="sxs-lookup"><span data-stu-id="4f082-132">The OperationSpec to use to populate the httpRequest.</span></span>
         - id: callback
           type:
             - ServiceCallback<any>
           description: |
-            <span data-ttu-id="766bf-133">応答が受信されたときに呼び出すコールバック。</span><span class="sxs-lookup"><span data-stu-id="766bf-133">The callback to call when the response is received.</span></span>
+            <span data-ttu-id="4f082-133">応答が受信されたときに呼び出すコールバック。</span><span class="sxs-lookup"><span data-stu-id="4f082-133">The callback to call when the response is received.</span></span>
           optional: true
       return:
         type:
@@ -1146,7 +1239,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="766bf-134">指定された httpRequest を送信します。</span><span class="sxs-lookup"><span data-stu-id="766bf-134">Send the provided httpRequest.</span></span>
+    summary: <span data-ttu-id="4f082-134">指定された httpRequest を送信します。</span><span class="sxs-lookup"><span data-stu-id="4f082-134">Send the provided httpRequest.</span></span>
     syntax:
       content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
       parameters:
@@ -1157,6 +1250,20 @@ items:
       return:
         type:
           - Promise<HttpOperationResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.serviceAssociationLinks'
+    name: serviceAssociationLinks
+    fullName: serviceAssociationLinks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'serviceAssociationLinks: ServiceAssociationLinks'
+      return:
+        type:
+          - '@azure/arm-network.ServiceAssociationLinks'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.serviceEndpointPolicies'
     name: serviceEndpointPolicies
@@ -1185,6 +1292,20 @@ items:
       return:
         type:
           - '@azure/arm-network.ServiceEndpointPolicyDefinitions'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClient.serviceTags'
+    name: serviceTags
+    fullName: serviceTags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'serviceTags: ServiceTags'
+      return:
+        type:
+          - '@azure/arm-network.ServiceTags'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClient.subnets'
     name: subnets
@@ -1220,18 +1341,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="766bf-135">サポートされているセキュリティのプロバイダーの仮想 wan を示します。</span><span class="sxs-lookup"><span data-stu-id="766bf-135">Gives the supported security providers for the virtual wan.</span></span>
+    summary: <span data-ttu-id="4f082-135">サポートされているセキュリティのプロバイダーの仮想 wan を示します。</span><span class="sxs-lookup"><span data-stu-id="4f082-135">Gives the supported security providers for the virtual wan.</span></span>
     syntax:
       content: 'function supportedSecurityProviders(resourceGroupName: string, virtualWANName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="766bf-136">リソース グループ名。</span><span class="sxs-lookup"><span data-stu-id="766bf-136">The resource group name.</span></span>
+          description: <span data-ttu-id="4f082-136">リソース グループ名。</span><span class="sxs-lookup"><span data-stu-id="4f082-136">The resource group name.</span></span>
         - id: virtualWANName
           type:
             - string
-          description: <span data-ttu-id="766bf-137">VirtualWAN の名前には、プロバイダーが必要なセキュリティがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="766bf-137">The name of the VirtualWAN for which supported security providers are needed.</span></span>
+          description: <span data-ttu-id="4f082-137">VirtualWAN の名前には、プロバイダーが必要なセキュリティがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="4f082-137">The name of the VirtualWAN for which supported security providers are needed.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1254,20 +1375,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="766bf-138">リソース グループ名。</span><span class="sxs-lookup"><span data-stu-id="766bf-138">The resource group name.</span></span>
+          description: <span data-ttu-id="4f082-138">リソース グループ名。</span><span class="sxs-lookup"><span data-stu-id="4f082-138">The resource group name.</span></span>
         - id: virtualWANName
           type:
             - string
-          description: <span data-ttu-id="766bf-139">VirtualWAN の名前には、プロバイダーが必要なセキュリティがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="766bf-139">The name of the VirtualWAN for which supported security providers are needed.</span></span>
+          description: <span data-ttu-id="4f082-139">VirtualWAN の名前には、プロバイダーが必要なセキュリティがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="4f082-139">The name of the VirtualWAN for which supported security providers are needed.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="766bf-140">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="766bf-140">The optional parameters</span></span>
+          description: <span data-ttu-id="4f082-140">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="4f082-140">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualWanSecurityProviders>
           description: |
-            <span data-ttu-id="766bf-141">コールバック</span><span class="sxs-lookup"><span data-stu-id="766bf-141">The callback</span></span>
+            <span data-ttu-id="4f082-141">コールバック</span><span class="sxs-lookup"><span data-stu-id="4f082-141">The callback</span></span>
       return:
         type:
           - Promise<Models.SupportedSecurityProvidersResponse>
@@ -1285,16 +1406,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="766bf-142">リソース グループ名。</span><span class="sxs-lookup"><span data-stu-id="766bf-142">The resource group name.</span></span>
+          description: <span data-ttu-id="4f082-142">リソース グループ名。</span><span class="sxs-lookup"><span data-stu-id="4f082-142">The resource group name.</span></span>
         - id: virtualWANName
           type:
             - string
-          description: <span data-ttu-id="766bf-143">VirtualWAN の名前には、プロバイダーが必要なセキュリティがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="766bf-143">The name of the VirtualWAN for which supported security providers are needed.</span></span>
+          description: <span data-ttu-id="4f082-143">VirtualWAN の名前には、プロバイダーが必要なセキュリティがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="4f082-143">The name of the VirtualWAN for which supported security providers are needed.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualWanSecurityProviders>
           description: |
-            <span data-ttu-id="766bf-144">コールバック</span><span class="sxs-lookup"><span data-stu-id="766bf-144">The callback</span></span>
+            <span data-ttu-id="4f082-144">コールバック</span><span class="sxs-lookup"><span data-stu-id="4f082-144">The callback</span></span>
       return:
         type:
           - Promise<Models.SupportedSecurityProvidersResponse>
@@ -1512,12 +1633,24 @@ references:
       - name: AvailableEndpointServices
         fullName: AvailableEndpointServices
         uid: '@azure/arm-network.AvailableEndpointServices'
+  - uid: '@azure/arm-network.AvailablePrivateEndpointTypes'
+    name: AvailablePrivateEndpointTypes
+    spec.typeScript:
+      - name: AvailablePrivateEndpointTypes
+        fullName: AvailablePrivateEndpointTypes
+        uid: '@azure/arm-network.AvailablePrivateEndpointTypes'
   - uid: '@azure/arm-network.AvailableResourceGroupDelegations'
     name: AvailableResourceGroupDelegations
     spec.typeScript:
       - name: AvailableResourceGroupDelegations
         fullName: AvailableResourceGroupDelegations
         uid: '@azure/arm-network.AvailableResourceGroupDelegations'
+  - uid: '@azure/arm-network.AvailableResourceGroupPrivateEndpointTypes'
+    name: AvailableResourceGroupPrivateEndpointTypes
+    spec.typeScript:
+      - name: AvailableResourceGroupPrivateEndpointTypes
+        fullName: AvailableResourceGroupPrivateEndpointTypes
+        uid: '@azure/arm-network.AvailableResourceGroupPrivateEndpointTypes'
   - uid: '@azure/arm-network.AzureFirewallFqdnTags'
     name: AzureFirewallFqdnTags
     spec.typeScript:
@@ -1530,6 +1663,12 @@ references:
       - name: AzureFirewalls
         fullName: AzureFirewalls
         uid: '@azure/arm-network.AzureFirewalls'
+  - uid: '@azure/arm-network.BastionHosts'
+    name: BastionHosts
+    spec.typeScript:
+      - name: BastionHosts
+        fullName: BastionHosts
+        uid: '@azure/arm-network.BastionHosts'
   - uid: '@azure/arm-network.BgpServiceCommunities'
     name: BgpServiceCommunities
     spec.typeScript:
@@ -1644,12 +1783,6 @@ references:
       - name: InboundNatRules
         fullName: InboundNatRules
         uid: '@azure/arm-network.InboundNatRules'
-  - uid: '@azure/arm-network.InterfaceEndpoints'
-    name: InterfaceEndpoints
-    spec.typeScript:
-      - name: InterfaceEndpoints
-        fullName: InterfaceEndpoints
-        uid: '@azure/arm-network.InterfaceEndpoints'
   - uid: '@azure/arm-network.LoadBalancerBackendAddressPools'
     name: LoadBalancerBackendAddressPools
     spec.typeScript:
@@ -1776,6 +1909,18 @@ references:
       - name: PeerExpressRouteCircuitConnections
         fullName: PeerExpressRouteCircuitConnections
         uid: '@azure/arm-network.PeerExpressRouteCircuitConnections'
+  - uid: '@azure/arm-network.PrivateEndpoints'
+    name: PrivateEndpoints
+    spec.typeScript:
+      - name: PrivateEndpoints
+        fullName: PrivateEndpoints
+        uid: '@azure/arm-network.PrivateEndpoints'
+  - uid: '@azure/arm-network.PrivateLinkServices'
+    name: PrivateLinkServices
+    spec.typeScript:
+      - name: PrivateLinkServices
+        fullName: PrivateLinkServices
+        uid: '@azure/arm-network.PrivateLinkServices'
   - uid: '@azure/arm-network.PublicIPAddresses'
     name: PublicIPAddresses
     spec.typeScript:
@@ -1788,6 +1933,12 @@ references:
       - name: PublicIPPrefixes
         fullName: PublicIPPrefixes
         uid: '@azure/arm-network.PublicIPPrefixes'
+  - uid: '@azure/arm-network.ResourceNavigationLinks'
+    name: ResourceNavigationLinks
+    spec.typeScript:
+      - name: ResourceNavigationLinks
+        fullName: ResourceNavigationLinks
+        uid: '@azure/arm-network.ResourceNavigationLinks'
   - uid: '@azure/arm-network.RouteFilterRules'
     name: RouteFilterRules
     spec.typeScript:
@@ -1818,6 +1969,12 @@ references:
       - name: SecurityRules
         fullName: SecurityRules
         uid: '@azure/arm-network.SecurityRules'
+  - uid: '@azure/arm-network.ServiceAssociationLinks'
+    name: ServiceAssociationLinks
+    spec.typeScript:
+      - name: ServiceAssociationLinks
+        fullName: ServiceAssociationLinks
+        uid: '@azure/arm-network.ServiceAssociationLinks'
   - uid: '@azure/arm-network.ServiceEndpointPolicies'
     name: ServiceEndpointPolicies
     spec.typeScript:
@@ -1830,6 +1987,12 @@ references:
       - name: ServiceEndpointPolicyDefinitions
         fullName: ServiceEndpointPolicyDefinitions
         uid: '@azure/arm-network.ServiceEndpointPolicyDefinitions'
+  - uid: '@azure/arm-network.ServiceTags'
+    name: ServiceTags
+    spec.typeScript:
+      - name: ServiceTags
+        fullName: ServiceTags
+        uid: '@azure/arm-network.ServiceTags'
   - uid: '@azure/arm-network.Subnets'
     name: Subnets
     spec.typeScript:
