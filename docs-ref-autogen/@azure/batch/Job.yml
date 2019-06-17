@@ -1,0 +1,1429 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Job'
+    name: Job
+    fullName: Job
+    children:
+      - '@azure/batch.Job.add_2'
+      - '@azure/batch.Job.add'
+      - '@azure/batch.Job.add_1'
+      - '@azure/batch.Job.deleteMethod_2'
+      - '@azure/batch.Job.deleteMethod'
+      - '@azure/batch.Job.deleteMethod_1'
+      - '@azure/batch.Job.disable_2'
+      - '@azure/batch.Job.disable'
+      - '@azure/batch.Job.disable_1'
+      - '@azure/batch.Job.enable_2'
+      - '@azure/batch.Job.enable'
+      - '@azure/batch.Job.enable_1'
+      - '@azure/batch.Job.get_2'
+      - '@azure/batch.Job.get'
+      - '@azure/batch.Job.get_1'
+      - '@azure/batch.Job.getAllLifetimeStatistics_2'
+      - '@azure/batch.Job.getAllLifetimeStatistics'
+      - '@azure/batch.Job.getAllLifetimeStatistics_1'
+      - '@azure/batch.Job.getTaskCounts_2'
+      - '@azure/batch.Job.getTaskCounts'
+      - '@azure/batch.Job.getTaskCounts_1'
+      - '@azure/batch.Job.constructor'
+      - '@azure/batch.Job.list_2'
+      - '@azure/batch.Job.list'
+      - '@azure/batch.Job.list_1'
+      - '@azure/batch.Job.listFromJobSchedule_2'
+      - '@azure/batch.Job.listFromJobSchedule'
+      - '@azure/batch.Job.listFromJobSchedule_1'
+      - '@azure/batch.Job.listFromJobScheduleNext_2'
+      - '@azure/batch.Job.listFromJobScheduleNext'
+      - '@azure/batch.Job.listFromJobScheduleNext_1'
+      - '@azure/batch.Job.listNext_2'
+      - '@azure/batch.Job.listNext'
+      - '@azure/batch.Job.listNext_1'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatus_2'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatus'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatus_1'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_2'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_1'
+      - '@azure/batch.Job.patch_2'
+      - '@azure/batch.Job.patch'
+      - '@azure/batch.Job.patch_1'
+      - '@azure/batch.Job.terminate_2'
+      - '@azure/batch.Job.terminate'
+      - '@azure/batch.Job.terminate_1'
+      - '@azure/batch.Job.update_2'
+      - '@azure/batch.Job.update'
+      - '@azure/batch.Job.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="ce8e8-101">ジョブを表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-101">Class representing a Job.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.add_2'
+    name: 'add(JobAddParameter, JobAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(job: JobAddParameter, options: JobAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: job
+          type:
+            - '@azure/batch.JobAddParameter'
+          description: <span data-ttu-id="ce8e8-102">追加するジョブ。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-102">The job to be added.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobAddOptionalParams'
+          description: <span data-ttu-id="ce8e8-103">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-103">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-104">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-104">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.add'
+    name: 'add(JobAddParameter, Models.JobAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-105">Batch サービスには、ジョブの一部として行われる作業を制御する 2 つの方法がサポートしています。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-105">The Batch service supports two ways to control the work done as part of a job.</span></span> <span data-ttu-id="ce8e8-106">最初の方法では、ユーザーは、ジョブ マネージャー タスクを指定します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-106">In the first approach, the user specifies a Job Manager task.</span></span> <span data-ttu-id="ce8e8-107">Batch サービスは、ジョブを開始する準備ができた場合、このタスクを起動します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-107">The Batch service launches this task when it is ready to start the job.</span></span> <span data-ttu-id="ce8e8-108">ジョブ マネージャー タスクは、タスク Api を使用して、このジョブで実行されるその他のすべてのタスクを制御します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-108">The Job Manager task controls all other tasks that run under this job, by using the Task APIs.</span></span> <span data-ttu-id="ce8e8-109">2 番目の方法で、ユーザーは直接タスク Api を使用して、アクティブなジョブの下でタスクの実行を制御します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-109">In the second approach, the user directly controls the execution of tasks under an active job, by using the Task APIs.</span></span> <span data-ttu-id="ce8e8-110">注意してください: ジョブの名前を付けるときは、ユーザー名またはシークレットのプロジェクト名などの機密情報が含まれないようにします。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-110">Also note: when naming jobs, avoid including sensitive information such as user names or secret project names.</span></span> <span data-ttu-id="ce8e8-111">この情報は、Microsoft サポート エンジニアにアクセスできるテレメトリ ログに表示可能性があります。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-111">This information may appear in telemetry logs accessible to Microsoft Support engineers.</span></span>'
+    syntax:
+      content: 'function add(job: JobAddParameter, options?: Models.JobAddOptionalParams)'
+      parameters:
+        - id: job
+          type:
+            - '@azure/batch.JobAddParameter'
+          description: <span data-ttu-id="ce8e8-112">追加するジョブ。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-112">The job to be added.</span></span>
+        - id: options
+          type:
+            - Models.JobAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.add_1'
+    name: 'add(JobAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(job: JobAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: job
+          type:
+            - '@azure/batch.JobAddParameter'
+          description: <span data-ttu-id="ce8e8-113">追加するジョブ。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-113">The job to be added.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-114">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.deleteMethod_2'
+    name: 'deleteMethod(string, JobDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, options: JobDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-115">削除するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-115">The ID of the job to delete.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobDeleteMethodOptionalParams'
+          description: <span data-ttu-id="ce8e8-116">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-116">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-117">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-117">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.deleteMethod'
+    name: 'deleteMethod(string, Models.JobDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-118">ジョブを削除すると、そのジョブの一部であるすべてのタスクとすべてのジョブの統計情報も削除されます。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-118">Deleting a job also deletes all tasks that are part of that job, and all job statistics.</span></span> <span data-ttu-id="ce8e8-119">タスクのデータの保有期間も上書きされます。ジョブには、コンピューティング ノードでまだ残されているタスクが含まれています場合、Batch サービスにはそれらのタスクの作業ディレクトリとそのすべてのコンテンツが削除されます。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-119">This also overrides the retention period for task data; that is, if the job contains tasks which are still retained on compute nodes, the Batch services deletes those tasks'' working directories and all their contents.</span></span>  <span data-ttu-id="ce8e8-120">ジョブの削除要求が受信したときに、Batch サービスはジョブを削除中の状態に設定します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-120">When a Delete Job request is received, the Batch service sets the job to the deleting state.</span></span> <span data-ttu-id="ce8e8-121">すべての更新操作の状態を削除するのには、ジョブでは、ジョブが削除されていることを示す追加の情報を含むステータス コード 409 (Conflict) で失敗します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-121">All update operations on a job that is in deleting state will fail with status code 409 (Conflict), with additional information indicating that the job is being deleted.</span></span>'
+    syntax:
+      content: 'function deleteMethod(jobId: string, options?: Models.JobDeleteMethodOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-122">削除するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-122">The ID of the job to delete.</span></span>
+        - id: options
+          type:
+            - Models.JobDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-123">削除するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-123">The ID of the job to delete.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-124">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-124">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.disable_2'
+    name: 'disable(string, Models.DisableJobOption, JobDisableOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disable(jobId: string, disableTasks: Models.DisableJobOption, options: JobDisableOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-125">無効にするジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-125">The ID of the job to disable.</span></span>
+        - id: disableTasks
+          type:
+            - Models.DisableJobOption
+          description: '<span data-ttu-id="ce8e8-126">ジョブに関連付けられているアクティブなタスクとは何か。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-126">What to do with active tasks associated with the job.</span></span> <span data-ttu-id="ce8e8-127">使用可能な値が含まれます: ''キューに再登録''、''terminate''、''wait''</span><span class="sxs-lookup"><span data-stu-id="ce8e8-127">Possible values include: ''requeue'', ''terminate'', ''wait''</span></span>'
+        - id: options
+          type:
+            - '@azure/batch.JobDisableOptionalParams'
+          description: <span data-ttu-id="ce8e8-128">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-129">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.disable'
+    name: 'disable(string, Models.DisableJobOption, Models.JobDisableOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ce8e8-130">Batch サービスは、すぐにジョブを無効の状態に移動します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-130">The Batch Service immediately moves the job to the disabling state.</span></span> <span data-ttu-id="ce8e8-131">バッチは、この disableTasks パラメーターを使用して、ジョブの現在実行中のタスクとは何かを判断します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-131">Batch then uses the disableTasks parameter to determine what to do with the currently running tasks of the job.</span></span> <span data-ttu-id="ce8e8-132">無効化操作が完了し、すべてのタスクが処理済み disableTasks オプション; に従ってまでに、ジョブが無効にする状態のままジョブは、無効の状態に移動します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-132">The job remains in the disabling state until the disable operation is completed and all tasks have been dealt with according to the disableTasks option; the job then moves to the disabled state.</span></span>
+      <span data-ttu-id="ce8e8-133">コンソール アプリケーションは、アクティブな状態に戻るまで、ジョブの下で、新しいタスクは開始されません。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-133">No new tasks are started under the job until it moves back to active state.</span></span> <span data-ttu-id="ce8e8-134">Active 以外の任意の状態にあるジョブを無効にしようとすると、無効化または無効になっている、要求が失敗したステータス コード 409 で。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-134">If you try to disable a job that is in any state other than active, disabling, or disabled, the request fails with status code 409.</span></span>
+    syntax:
+      content: 'function disable(jobId: string, disableTasks: Models.DisableJobOption, options?: Models.JobDisableOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-135">無効にするジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-135">The ID of the job to disable.</span></span>
+        - id: disableTasks
+          type:
+            - Models.DisableJobOption
+          description: '<span data-ttu-id="ce8e8-136">ジョブに関連付けられているアクティブなタスクとは何か。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-136">What to do with active tasks associated with the job.</span></span> <span data-ttu-id="ce8e8-137">使用可能な値が含まれます: ''キューに再登録''、''terminate''、''wait''</span><span class="sxs-lookup"><span data-stu-id="ce8e8-137">Possible values include: ''requeue'', ''terminate'', ''wait''</span></span>'
+        - id: options
+          type:
+            - Models.JobDisableOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.disable_1'
+    name: 'disable(string, Models.DisableJobOption, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disable(jobId: string, disableTasks: Models.DisableJobOption, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-138">無効にするジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-138">The ID of the job to disable.</span></span>
+        - id: disableTasks
+          type:
+            - Models.DisableJobOption
+          description: '<span data-ttu-id="ce8e8-139">ジョブに関連付けられているアクティブなタスクとは何か。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-139">What to do with active tasks associated with the job.</span></span> <span data-ttu-id="ce8e8-140">使用可能な値が含まれます: ''キューに再登録''、''terminate''、''wait''</span><span class="sxs-lookup"><span data-stu-id="ce8e8-140">Possible values include: ''requeue'', ''terminate'', ''wait''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-141">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-141">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.enable_2'
+    name: 'enable(string, JobEnableOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enable(jobId: string, options: JobEnableOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-142">有効にするジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-142">The ID of the job to enable.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobEnableOptionalParams'
+          description: <span data-ttu-id="ce8e8-143">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-143">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-144">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.enable'
+    name: 'enable(string, Models.JobEnableOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-145">この API を呼び出すときに、Batch サービスは無効なジョブを有効にする状態に設定します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-145">When you call this API, the Batch service sets a disabled job to the enabling state.</span></span> <span data-ttu-id="ce8e8-146">この後に操作が完了した、ジョブがアクティブな状態とジョブの再開での新しいタスクのスケジュール設定に移動します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-146">After the this operation is completed, the job moves to the active state, and scheduling of new tasks under the job resumes.</span></span> <span data-ttu-id="ce8e8-147">Batch サービスでは、180 日以上のアクティブな状態で維持するタスクは許可されません。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-147">The Batch service does not allow a task to remain in the active state for more than 180 days.</span></span> <span data-ttu-id="ce8e8-148">そのため、180 日以上前に追加されたアクティブなタスクを含むジョブを有効にすると、それらのタスクは実行されません。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-148">Therefore, if you enable a job containing active tasks which were added more than 180 days ago, those tasks will not run.</span></span>'
+    syntax:
+      content: 'function enable(jobId: string, options?: Models.JobEnableOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-149">有効にするジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-149">The ID of the job to enable.</span></span>
+        - id: options
+          type:
+            - Models.JobEnableOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.enable_1'
+    name: 'enable(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enable(jobId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-150">有効にするジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-150">The ID of the job to enable.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-151">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.get_2'
+    name: 'get(string, JobGetOptionalParams, ServiceCallback<CloudJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, options: JobGetOptionalParams, callback: ServiceCallback<CloudJob>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-152">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-152">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobGetOptionalParams'
+          description: <span data-ttu-id="ce8e8-153">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-153">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJob>
+          description: |
+            <span data-ttu-id="ce8e8-154">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-154">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.get'
+    name: 'get(string, Models.JobGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, options?: Models.JobGetOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-155">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-155">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.JobGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.get_1'
+    name: 'get(string, ServiceCallback<CloudJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, callback: ServiceCallback<CloudJob>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-156">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-156">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJob>
+          description: |
+            <span data-ttu-id="ce8e8-157">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getAllLifetimeStatistics_2'
+    name: 'getAllLifetimeStatistics(JobGetAllLifetimeStatisticsOptionalParams, ServiceCallback<JobStatistics>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(options: JobGetAllLifetimeStatisticsOptionalParams, callback: ServiceCallback<JobStatistics>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.JobGetAllLifetimeStatisticsOptionalParams'
+          description: <span data-ttu-id="ce8e8-158">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.JobStatistics>
+          description: |
+            <span data-ttu-id="ce8e8-159">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getAllLifetimeStatistics'
+    name: getAllLifetimeStatistics(Models.JobGetAllLifetimeStatisticsOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-160">統計情報は、すべてのジョブがこれまでに存在していたアカウントの作成から、アカウントが最後に、統計の更新時間で集計されます。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-160">Statistics are aggregated across all jobs that have ever existed in the account, from account creation to the last update time of the statistics.</span></span> <span data-ttu-id="ce8e8-161">統計情報をすぐに使用できない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-161">The statistics may not be immediately available.</span></span> <span data-ttu-id="ce8e8-162">Batch サービスは、統計情報の定期的なロール アップを実行します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-162">The Batch service performs periodic roll-up of statistics.</span></span> <span data-ttu-id="ce8e8-163">一般的な遅延は、約 30 分です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-163">The typical delay is about 30 minutes.</span></span>'
+    syntax:
+      content: 'function getAllLifetimeStatistics(options?: Models.JobGetAllLifetimeStatisticsOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.JobGetAllLifetimeStatisticsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getAllLifetimeStatistics_1'
+    name: getAllLifetimeStatistics(ServiceCallback<JobStatistics>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(callback: ServiceCallback<JobStatistics>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.JobStatistics>
+          description: |
+            <span data-ttu-id="ce8e8-164">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getTaskCounts_2'
+    name: 'getTaskCounts(string, JobGetTaskCountsOptionalParams, ServiceCallback<TaskCounts>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTaskCounts(jobId: string, options: JobGetTaskCountsOptionalParams, callback: ServiceCallback<TaskCounts>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-165">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-165">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobGetTaskCountsOptionalParams'
+          description: <span data-ttu-id="ce8e8-166">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-166">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskCounts>
+          description: |
+            <span data-ttu-id="ce8e8-167">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-167">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetTaskCountsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getTaskCounts'
+    name: 'getTaskCounts(string, Models.JobGetTaskCountsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-168">タスクの数は、アクティブ、実行中または完了したタスクの状態でタスクの数と成功または失敗したタスクの数を指定します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-168">Task counts provide a count of the tasks by active, running or completed task state, and a count of tasks which succeeded or failed.</span></span> <span data-ttu-id="ce8e8-169">準備状態のタスクは実行としてカウントされます。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-169">Tasks in the preparing state are counted as running.</span></span>'
+    syntax:
+      content: 'function getTaskCounts(jobId: string, options?: Models.JobGetTaskCountsOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-170">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-170">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.JobGetTaskCountsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetTaskCountsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getTaskCounts_1'
+    name: 'getTaskCounts(string, ServiceCallback<TaskCounts>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTaskCounts(jobId: string, callback: ServiceCallback<TaskCounts>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-171">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-171">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskCounts>
+          description: |
+            <span data-ttu-id="ce8e8-172">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetTaskCountsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.constructor'
+    name: Job(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ce8e8-173">ジョブを作成します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-173">Create a Job.</span></span>
+    syntax:
+      content: 'new Job(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            <span data-ttu-id="ce8e8-174">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-174">Reference to the service client.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.list_2'
+    name: 'list(JobListOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: JobListOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.JobListOptionalParams'
+          description: <span data-ttu-id="ce8e8-175">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-175">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="ce8e8-176">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-176">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.list'
+    name: list(Models.JobListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options?: Models.JobListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.JobListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.list_1'
+    name: list(ServiceCallback<CloudJobListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="ce8e8-177">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobSchedule_2'
+    name: 'listFromJobSchedule(string, JobListFromJobScheduleOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobSchedule(jobScheduleId: string, options: JobListFromJobScheduleOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-178">ジョブの一覧を取得するジョブのスケジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-178">The ID of the job schedule from which you want to get a list of jobs.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListFromJobScheduleOptionalParams'
+          description: <span data-ttu-id="ce8e8-179">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-179">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="ce8e8-180">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobSchedule'
+    name: 'listFromJobSchedule(string, Models.JobListFromJobScheduleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobSchedule(jobScheduleId: string, options?: Models.JobListFromJobScheduleOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-181">ジョブの一覧を取得するジョブのスケジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-181">The ID of the job schedule from which you want to get a list of jobs.</span></span>
+        - id: options
+          type:
+            - Models.JobListFromJobScheduleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobSchedule_1'
+    name: 'listFromJobSchedule(string, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobSchedule(jobScheduleId: string, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-182">ジョブの一覧を取得するジョブのスケジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-182">The ID of the job schedule from which you want to get a list of jobs.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="ce8e8-183">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobScheduleNext_2'
+    name: 'listFromJobScheduleNext(string, JobListFromJobScheduleNextOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobScheduleNext(nextPageLink: string, options: JobListFromJobScheduleNextOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-184">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-184">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListFromJobScheduleNextOptionalParams'
+          description: <span data-ttu-id="ce8e8-185">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-185">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="ce8e8-186">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-186">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobScheduleNext'
+    name: 'listFromJobScheduleNext(string, Models.JobListFromJobScheduleNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobScheduleNext(nextPageLink: string, options?: Models.JobListFromJobScheduleNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-187">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-187">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListFromJobScheduleNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobScheduleNext_1'
+    name: 'listFromJobScheduleNext(string, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobScheduleNext(nextPageLink: string, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-188">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-188">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="ce8e8-189">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listNext_2'
+    name: 'listNext(string, JobListNextOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: JobListNextOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-190">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-190">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListNextOptionalParams'
+          description: <span data-ttu-id="ce8e8-191">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-191">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="ce8e8-192">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listNext'
+    name: 'listNext(string, Models.JobListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.JobListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-193">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-193">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listNext_1'
+    name: 'listNext(string, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-194">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-194">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="ce8e8-195">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus_2'
+    name: 'listPreparationAndReleaseTaskStatus(string, JobListPreparationAndReleaseTaskStatusOptionalParams, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatus(jobId: string, options: JobListPreparationAndReleaseTaskStatusOptionalParams, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-196">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-196">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams'
+          description: <span data-ttu-id="ce8e8-197">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="ce8e8-198">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus'
+    name: 'listPreparationAndReleaseTaskStatus(string, Models.JobListPreparationAndReleaseTaskStatusOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-199">この API は、ジョブの準備またはジョブのリリース タスクを実行したすべてのコンピューティング ノードでジョブ準備およびジョブ リリース タスクの状態を返します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-199">This API returns the Job Preparation and Job Release task status on all compute nodes that have run the Job Preparation or Job Release task.</span></span> <span data-ttu-id="ce8e8-200">これには、これからは、プールから削除されているノードが含まれます。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-200">This includes nodes which have since been removed from the pool.</span></span> <span data-ttu-id="ce8e8-201">この API は、ジョブの準備またはジョブのリリースのタスクがないジョブで呼び出され、Batch サービスは JobPreparationTaskNotSpecified のエラー コードで HTTP ステータス コード 409 (Conflict) を返します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-201">If this API is invoked on a job which has no Job Preparation or Job Release task, the Batch service returns HTTP status code 409 (Conflict) with an error code of JobPreparationTaskNotSpecified.</span></span>'
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatus(jobId: string, options?: Models.JobListPreparationAndReleaseTaskStatusOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-202">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-202">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.JobListPreparationAndReleaseTaskStatusOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus_1'
+    name: 'listPreparationAndReleaseTaskStatus(string, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatus(jobId: string, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-203">ジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-203">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="ce8e8-204">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-204">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_2'
+    name: 'listPreparationAndReleaseTaskStatusNext(string, JobListPreparationAndReleaseTaskStatusNextOptionalParams, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatusNext(nextPageLink: string, options: JobListPreparationAndReleaseTaskStatusNextOptionalParams, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-205">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-205">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams'
+          description: <span data-ttu-id="ce8e8-206">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-206">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="ce8e8-207">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-207">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext'
+    name: 'listPreparationAndReleaseTaskStatusNext(string, Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-208">この API は、ジョブの準備またはジョブのリリース タスクを実行したすべてのコンピューティング ノードでジョブ準備およびジョブ リリース タスクの状態を返します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-208">This API returns the Job Preparation and Job Release task status on all compute nodes that have run the Job Preparation or Job Release task.</span></span> <span data-ttu-id="ce8e8-209">これには、これからは、プールから削除されているノードが含まれます。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-209">This includes nodes which have since been removed from the pool.</span></span> <span data-ttu-id="ce8e8-210">この API は、ジョブの準備またはジョブのリリースのタスクがないジョブで呼び出され、Batch サービスは JobPreparationTaskNotSpecified のエラー コードで HTTP ステータス コード 409 (Conflict) を返します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-210">If this API is invoked on a job which has no Job Preparation or Job Release task, the Batch service returns HTTP status code 409 (Conflict) with an error code of JobPreparationTaskNotSpecified.</span></span>'
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatusNext(nextPageLink: string, options?: Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-211">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-211">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_1'
+    name: 'listPreparationAndReleaseTaskStatusNext(string, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatusNext(nextPageLink: string, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-212">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-212">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="ce8e8-213">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-213">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.patch_2'
+    name: 'patch(string, JobPatchParameter, JobPatchOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(jobId: string, jobPatchParameter: JobPatchParameter, options: JobPatchOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-214">プロパティを更新するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-214">The ID of the job whose properties you want to update.</span></span>
+        - id: jobPatchParameter
+          type:
+            - '@azure/batch.JobPatchParameter'
+          description: <span data-ttu-id="ce8e8-215">要求のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-215">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobPatchOptionalParams'
+          description: <span data-ttu-id="ce8e8-216">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-216">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-217">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-217">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.patch'
+    name: 'patch(string, JobPatchParameter, Models.JobPatchOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-218">これには、要求で指定されたジョブのプロパティのみが置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-218">This replaces only the job properties specified in the request.</span></span> <span data-ttu-id="ce8e8-219">たとえば、ジョブの制約には、要求が制約要素を指定しない場合は、既存の制約維持ジョブにします。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-219">For example, if the job has constraints, and a request does not specify the constraints element, then the job keeps the existing constraints.</span></span>'
+    syntax:
+      content: 'function patch(jobId: string, jobPatchParameter: JobPatchParameter, options?: Models.JobPatchOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-220">プロパティを更新するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-220">The ID of the job whose properties you want to update.</span></span>
+        - id: jobPatchParameter
+          type:
+            - '@azure/batch.JobPatchParameter'
+          description: <span data-ttu-id="ce8e8-221">要求のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-221">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - Models.JobPatchOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.patch_1'
+    name: 'patch(string, JobPatchParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(jobId: string, jobPatchParameter: JobPatchParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-222">プロパティを更新するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-222">The ID of the job whose properties you want to update.</span></span>
+        - id: jobPatchParameter
+          type:
+            - '@azure/batch.JobPatchParameter'
+          description: <span data-ttu-id="ce8e8-223">要求のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-223">The parameters for the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-224">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-224">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.terminate_2'
+    name: 'terminate(string, JobTerminateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, options: JobTerminateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-225">終了するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-225">The ID of the job to terminate.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobTerminateOptionalParams'
+          description: <span data-ttu-id="ce8e8-226">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-226">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-227">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-227">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.terminate'
+    name: 'terminate(string, Models.JobTerminateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-228">ジョブの終了要求が受信したときに、Batch サービスは、ジョブを最終状態に設定します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-228">When a Terminate Job request is received, the Batch service sets the job to the terminating state.</span></span> <span data-ttu-id="ce8e8-229">Batch サービスは、ジョブに関連付けられているすべての実行中のタスクを終了し、任意の必要なジョブ リリース タスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-229">The Batch service then terminates any running tasks associated with the job and runs any required job release tasks.</span></span> <span data-ttu-id="ce8e8-230">ジョブが完了した状態に移動します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-230">Then the job moves into the completed state.</span></span> <span data-ttu-id="ce8e8-231">タスクがジョブでアクティブな状態で、アクティブな状態で残ります。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-231">If there are any tasks in the job in the active state, they will remain in the active state.</span></span> <span data-ttu-id="ce8e8-232">ジョブを終了すると、新しいタスクを追加することはできませんし、残り、アクティブなタスクがスケジュールされていません。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-232">Once a job is terminated, new tasks cannot be added and any remaining active tasks will not be scheduled.</span></span>'
+    syntax:
+      content: 'function terminate(jobId: string, options?: Models.JobTerminateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-233">終了するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-233">The ID of the job to terminate.</span></span>
+        - id: options
+          type:
+            - Models.JobTerminateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.terminate_1'
+    name: 'terminate(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-234">終了するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-234">The ID of the job to terminate.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-235">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-235">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.update_2'
+    name: 'update(string, JobUpdateParameter, JobUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, jobUpdateParameter: JobUpdateParameter, options: JobUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-236">プロパティを更新するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-236">The ID of the job whose properties you want to update.</span></span>
+        - id: jobUpdateParameter
+          type:
+            - '@azure/batch.JobUpdateParameter'
+          description: <span data-ttu-id="ce8e8-237">要求のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-237">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobUpdateOptionalParams'
+          description: <span data-ttu-id="ce8e8-238">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ce8e8-238">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-239">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-239">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.update'
+    name: 'update(string, JobUpdateParameter, Models.JobUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="ce8e8-240">これにより、ジョブのすべての更新可能なプロパティが完全に置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-240">This fully replaces all the updatable properties of the job.</span></span> <span data-ttu-id="ce8e8-241">たとえば、ジョブがある関連付けられている制約と、制約がこの要求で指定されていない場合は、Batch サービス、既存の制約は削除します。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-241">For example, if the job has constraints associated with it and if constraints is not specified with this request, then the Batch service will remove the existing constraints.</span></span>'
+    syntax:
+      content: 'function update(jobId: string, jobUpdateParameter: JobUpdateParameter, options?: Models.JobUpdateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-242">プロパティを更新するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-242">The ID of the job whose properties you want to update.</span></span>
+        - id: jobUpdateParameter
+          type:
+            - '@azure/batch.JobUpdateParameter'
+          description: <span data-ttu-id="ce8e8-243">要求のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-243">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - Models.JobUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.update_1'
+    name: 'update(string, JobUpdateParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, jobUpdateParameter: JobUpdateParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="ce8e8-244">プロパティを更新するジョブの ID。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-244">The ID of the job whose properties you want to update.</span></span>
+        - id: jobUpdateParameter
+          type:
+            - '@azure/batch.JobUpdateParameter'
+          description: <span data-ttu-id="ce8e8-245">要求のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="ce8e8-245">The parameters for the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="ce8e8-246">コールバック</span><span class="sxs-lookup"><span data-stu-id="ce8e8-246">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobUpdateResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.JobAddParameter'
+    name: JobAddParameter
+    spec.typeScript:
+      - name: JobAddParameter
+        fullName: JobAddParameter
+        uid: '@azure/batch.JobAddParameter'
+  - uid: '@azure/batch.JobAddOptionalParams'
+    name: JobAddOptionalParams
+    spec.typeScript:
+      - name: JobAddOptionalParams
+        fullName: JobAddOptionalParams
+        uid: '@azure/batch.JobAddOptionalParams'
+  - uid: '@azure/batch.JobDeleteMethodOptionalParams'
+    name: JobDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: JobDeleteMethodOptionalParams
+        fullName: JobDeleteMethodOptionalParams
+        uid: '@azure/batch.JobDeleteMethodOptionalParams'
+  - uid: '@azure/batch.JobDisableOptionalParams'
+    name: JobDisableOptionalParams
+    spec.typeScript:
+      - name: JobDisableOptionalParams
+        fullName: JobDisableOptionalParams
+        uid: '@azure/batch.JobDisableOptionalParams'
+  - uid: '@azure/batch.JobEnableOptionalParams'
+    name: JobEnableOptionalParams
+    spec.typeScript:
+      - name: JobEnableOptionalParams
+        fullName: JobEnableOptionalParams
+        uid: '@azure/batch.JobEnableOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJob>
+    name: CloudJob>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJob
+        fullName: CloudJob
+        uid: '@azure/batch.CloudJob'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobGetOptionalParams'
+    name: JobGetOptionalParams
+    spec.typeScript:
+      - name: JobGetOptionalParams
+        fullName: JobGetOptionalParams
+        uid: '@azure/batch.JobGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.JobStatistics>
+    name: JobStatistics>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobStatistics
+        fullName: JobStatistics
+        uid: '@azure/batch.JobStatistics'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobGetAllLifetimeStatisticsOptionalParams'
+    name: JobGetAllLifetimeStatisticsOptionalParams
+    spec.typeScript:
+      - name: JobGetAllLifetimeStatisticsOptionalParams
+        fullName: JobGetAllLifetimeStatisticsOptionalParams
+        uid: '@azure/batch.JobGetAllLifetimeStatisticsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.TaskCounts>
+    name: TaskCounts>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TaskCounts
+        fullName: TaskCounts
+        uid: '@azure/batch.TaskCounts'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobGetTaskCountsOptionalParams'
+    name: JobGetTaskCountsOptionalParams
+    spec.typeScript:
+      - name: JobGetTaskCountsOptionalParams
+        fullName: JobGetTaskCountsOptionalParams
+        uid: '@azure/batch.JobGetTaskCountsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJobListResult>
+    name: CloudJobListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJobListResult
+        fullName: CloudJobListResult
+        uid: '@azure/batch.CloudJobListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobListOptionalParams'
+    name: JobListOptionalParams
+    spec.typeScript:
+      - name: JobListOptionalParams
+        fullName: JobListOptionalParams
+        uid: '@azure/batch.JobListOptionalParams'
+  - uid: '@azure/batch.JobListFromJobScheduleOptionalParams'
+    name: JobListFromJobScheduleOptionalParams
+    spec.typeScript:
+      - name: JobListFromJobScheduleOptionalParams
+        fullName: JobListFromJobScheduleOptionalParams
+        uid: '@azure/batch.JobListFromJobScheduleOptionalParams'
+  - uid: '@azure/batch.JobListFromJobScheduleNextOptionalParams'
+    name: JobListFromJobScheduleNextOptionalParams
+    spec.typeScript:
+      - name: JobListFromJobScheduleNextOptionalParams
+        fullName: JobListFromJobScheduleNextOptionalParams
+        uid: '@azure/batch.JobListFromJobScheduleNextOptionalParams'
+  - uid: '@azure/batch.JobListNextOptionalParams'
+    name: JobListNextOptionalParams
+    spec.typeScript:
+      - name: JobListNextOptionalParams
+        fullName: JobListNextOptionalParams
+        uid: '@azure/batch.JobListNextOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+    name: CloudJobListPreparationAndReleaseTaskStatusResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJobListPreparationAndReleaseTaskStatusResult
+        fullName: CloudJobListPreparationAndReleaseTaskStatusResult
+        uid: '@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams'
+    name: JobListPreparationAndReleaseTaskStatusOptionalParams
+    spec.typeScript:
+      - name: JobListPreparationAndReleaseTaskStatusOptionalParams
+        fullName: JobListPreparationAndReleaseTaskStatusOptionalParams
+        uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams'
+  - uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams'
+    name: JobListPreparationAndReleaseTaskStatusNextOptionalParams
+    spec.typeScript:
+      - name: JobListPreparationAndReleaseTaskStatusNextOptionalParams
+        fullName: JobListPreparationAndReleaseTaskStatusNextOptionalParams
+        uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams'
+  - uid: '@azure/batch.JobPatchParameter'
+    name: JobPatchParameter
+    spec.typeScript:
+      - name: JobPatchParameter
+        fullName: JobPatchParameter
+        uid: '@azure/batch.JobPatchParameter'
+  - uid: '@azure/batch.JobPatchOptionalParams'
+    name: JobPatchOptionalParams
+    spec.typeScript:
+      - name: JobPatchOptionalParams
+        fullName: JobPatchOptionalParams
+        uid: '@azure/batch.JobPatchOptionalParams'
+  - uid: '@azure/batch.JobTerminateOptionalParams'
+    name: JobTerminateOptionalParams
+    spec.typeScript:
+      - name: JobTerminateOptionalParams
+        fullName: JobTerminateOptionalParams
+        uid: '@azure/batch.JobTerminateOptionalParams'
+  - uid: '@azure/batch.JobUpdateParameter'
+    name: JobUpdateParameter
+    spec.typeScript:
+      - name: JobUpdateParameter
+        fullName: JobUpdateParameter
+        uid: '@azure/batch.JobUpdateParameter'
+  - uid: '@azure/batch.JobUpdateOptionalParams'
+    name: JobUpdateOptionalParams
+    spec.typeScript:
+      - name: JobUpdateOptionalParams
+        fullName: JobUpdateOptionalParams
+        uid: '@azure/batch.JobUpdateOptionalParams'

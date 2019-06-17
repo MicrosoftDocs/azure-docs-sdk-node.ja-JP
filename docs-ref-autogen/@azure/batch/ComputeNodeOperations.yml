@@ -1,0 +1,1353 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ComputeNodeOperations'
+    name: ComputeNodeOperations
+    fullName: ComputeNodeOperations
+    children:
+      - '@azure/batch.ComputeNodeOperations.addUser_2'
+      - '@azure/batch.ComputeNodeOperations.addUser'
+      - '@azure/batch.ComputeNodeOperations.addUser_1'
+      - '@azure/batch.ComputeNodeOperations.constructor'
+      - '@azure/batch.ComputeNodeOperations.deleteUser_2'
+      - '@azure/batch.ComputeNodeOperations.deleteUser'
+      - '@azure/batch.ComputeNodeOperations.deleteUser_1'
+      - '@azure/batch.ComputeNodeOperations.disableScheduling_2'
+      - '@azure/batch.ComputeNodeOperations.disableScheduling'
+      - '@azure/batch.ComputeNodeOperations.disableScheduling_1'
+      - '@azure/batch.ComputeNodeOperations.enableScheduling_2'
+      - '@azure/batch.ComputeNodeOperations.enableScheduling'
+      - '@azure/batch.ComputeNodeOperations.enableScheduling_1'
+      - '@azure/batch.ComputeNodeOperations.get_2'
+      - '@azure/batch.ComputeNodeOperations.get'
+      - '@azure/batch.ComputeNodeOperations.get_1'
+      - '@azure/batch.ComputeNodeOperations.getRemoteDesktop_2'
+      - '@azure/batch.ComputeNodeOperations.getRemoteDesktop'
+      - '@azure/batch.ComputeNodeOperations.getRemoteDesktop_1'
+      - '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_2'
+      - '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings'
+      - '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_1'
+      - '@azure/batch.ComputeNodeOperations.list_2'
+      - '@azure/batch.ComputeNodeOperations.list'
+      - '@azure/batch.ComputeNodeOperations.list_1'
+      - '@azure/batch.ComputeNodeOperations.listNext_2'
+      - '@azure/batch.ComputeNodeOperations.listNext'
+      - '@azure/batch.ComputeNodeOperations.listNext_1'
+      - '@azure/batch.ComputeNodeOperations.reboot_2'
+      - '@azure/batch.ComputeNodeOperations.reboot'
+      - '@azure/batch.ComputeNodeOperations.reboot_1'
+      - '@azure/batch.ComputeNodeOperations.reimage_2'
+      - '@azure/batch.ComputeNodeOperations.reimage'
+      - '@azure/batch.ComputeNodeOperations.reimage_1'
+      - '@azure/batch.ComputeNodeOperations.updateUser_2'
+      - '@azure/batch.ComputeNodeOperations.updateUser'
+      - '@azure/batch.ComputeNodeOperations.updateUser_1'
+      - '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_2'
+      - '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs'
+      - '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="cfbde-101">ComputeNodeOperations を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="cfbde-101">Class representing a ComputeNodeOperations.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.addUser_2'
+    name: 'addUser(string, string, ComputeNodeUser, ComputeNodeAddUserOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addUser(poolId: string, nodeId: string, user: ComputeNodeUser, options: ComputeNodeAddUserOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-102">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-102">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-103">ユーザー アカウントを作成するマシンの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-103">The ID of the machine on which you want to create a user account.</span></span>
+        - id: user
+          type:
+            - '@azure/batch.ComputeNodeUser'
+          description: <span data-ttu-id="cfbde-104">作成するユーザー アカウント。</span><span class="sxs-lookup"><span data-stu-id="cfbde-104">The user account to be created.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeAddUserOptionalParams'
+          description: <span data-ttu-id="cfbde-105">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-105">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-106">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-106">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeAddUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.addUser'
+    name: 'addUser(string, string, ComputeNodeUser, Models.ComputeNodeAddUserOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cfbde-107">アイドル状態または実行中の状態にある場合にのみ、ノードにユーザー アカウントを追加できます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-107">You can add a user account to a node only when it is in the idle or running state.</span></span>
+    syntax:
+      content: 'function addUser(poolId: string, nodeId: string, user: ComputeNodeUser, options?: Models.ComputeNodeAddUserOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-108">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-108">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-109">ユーザー アカウントを作成するマシンの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-109">The ID of the machine on which you want to create a user account.</span></span>
+        - id: user
+          type:
+            - '@azure/batch.ComputeNodeUser'
+          description: <span data-ttu-id="cfbde-110">作成するユーザー アカウント。</span><span class="sxs-lookup"><span data-stu-id="cfbde-110">The user account to be created.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeAddUserOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeAddUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.addUser_1'
+    name: 'addUser(string, string, ComputeNodeUser, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addUser(poolId: string, nodeId: string, user: ComputeNodeUser, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-111">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-111">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-112">ユーザー アカウントを作成するマシンの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-112">The ID of the machine on which you want to create a user account.</span></span>
+        - id: user
+          type:
+            - '@azure/batch.ComputeNodeUser'
+          description: <span data-ttu-id="cfbde-113">作成するユーザー アカウント。</span><span class="sxs-lookup"><span data-stu-id="cfbde-113">The user account to be created.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-114">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeAddUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.constructor'
+    name: ComputeNodeOperations(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cfbde-115">ComputeNodeOperations を作成します。</span><span class="sxs-lookup"><span data-stu-id="cfbde-115">Create a ComputeNodeOperations.</span></span>
+    syntax:
+      content: 'new ComputeNodeOperations(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            <span data-ttu-id="cfbde-116">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="cfbde-116">Reference to the service client.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.deleteUser_2'
+    name: 'deleteUser(string, string, string, ComputeNodeDeleteUserOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteUser(poolId: string, nodeId: string, userName: string, options: ComputeNodeDeleteUserOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-117">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-117">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-118">ユーザー アカウントを削除するコンピューターの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-118">The ID of the machine on which you want to delete a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-119">削除するユーザー アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="cfbde-119">The name of the user account to delete.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeDeleteUserOptionalParams'
+          description: <span data-ttu-id="cfbde-120">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-120">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-121">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-121">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDeleteUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.deleteUser'
+    name: 'deleteUser(string, string, string, Models.ComputeNodeDeleteUserOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cfbde-122">アイドル状態または実行中の状態にある場合にのみ、ノードにユーザー アカウントを削除できます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-122">You can delete a user account to a node only when it is in the idle or running state.</span></span>
+    syntax:
+      content: 'function deleteUser(poolId: string, nodeId: string, userName: string, options?: Models.ComputeNodeDeleteUserOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-123">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-123">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-124">ユーザー アカウントを削除するコンピューターの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-124">The ID of the machine on which you want to delete a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-125">削除するユーザー アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="cfbde-125">The name of the user account to delete.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeDeleteUserOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeDeleteUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.deleteUser_1'
+    name: 'deleteUser(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteUser(poolId: string, nodeId: string, userName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-126">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-126">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-127">ユーザー アカウントを削除するコンピューターの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-127">The ID of the machine on which you want to delete a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-128">削除するユーザー アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="cfbde-128">The name of the user account to delete.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-129">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDeleteUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.disableScheduling_2'
+    name: 'disableScheduling(string, string, ComputeNodeDisableSchedulingOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableScheduling(poolId: string, nodeId: string, options: ComputeNodeDisableSchedulingOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-130">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-130">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-131">タスク スケジュールを無効にするコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-131">The ID of the compute node on which you want to disable task scheduling.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeDisableSchedulingOptionalParams'
+          description: <span data-ttu-id="cfbde-132">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-132">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-133">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-133">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDisableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.disableScheduling'
+    name: 'disableScheduling(string, string, Models.ComputeNodeDisableSchedulingOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cfbde-134">タスクのスケジュールの現在の状態が有効になっている場合にのみ、ノードでのスケジュールを無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-134">You can disable task scheduling on a node only if its current scheduling state is enabled.</span></span>
+    syntax:
+      content: 'function disableScheduling(poolId: string, nodeId: string, options?: Models.ComputeNodeDisableSchedulingOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-135">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-135">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-136">タスク スケジュールを無効にするコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-136">The ID of the compute node on which you want to disable task scheduling.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeDisableSchedulingOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeDisableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.disableScheduling_1'
+    name: 'disableScheduling(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableScheduling(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-137">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-137">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-138">タスク スケジュールを無効にするコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-138">The ID of the compute node on which you want to disable task scheduling.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-139">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDisableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.enableScheduling_2'
+    name: 'enableScheduling(string, string, ComputeNodeEnableSchedulingOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableScheduling(poolId: string, nodeId: string, options: ComputeNodeEnableSchedulingOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-140">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-140">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-141">タスクのスケジュール設定を有効にするコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-141">The ID of the compute node on which you want to enable task scheduling.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeEnableSchedulingOptionalParams'
+          description: <span data-ttu-id="cfbde-142">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-142">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-143">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeEnableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.enableScheduling'
+    name: 'enableScheduling(string, string, Models.ComputeNodeEnableSchedulingOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cfbde-144">タスクのスケジュールの現在の状態が無効になっている場合にのみ、ノードでのスケジュールを有効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-144">You can enable task scheduling on a node only if its current scheduling state is disabled</span></span>
+    syntax:
+      content: 'function enableScheduling(poolId: string, nodeId: string, options?: Models.ComputeNodeEnableSchedulingOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-145">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-145">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-146">タスクのスケジュール設定を有効にするコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-146">The ID of the compute node on which you want to enable task scheduling.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeEnableSchedulingOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeEnableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.enableScheduling_1'
+    name: 'enableScheduling(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableScheduling(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-147">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-147">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-148">タスクのスケジュール設定を有効にするコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-148">The ID of the compute node on which you want to enable task scheduling.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-149">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-149">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeEnableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.get_2'
+    name: 'get(string, string, ComputeNodeGetOptionalParams, ServiceCallback<ComputeNode>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, nodeId: string, options: ComputeNodeGetOptionalParams, callback: ServiceCallback<ComputeNode>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-150">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-150">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-151">に関する情報を取得するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-151">The ID of the compute node that you want to get information about.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeGetOptionalParams'
+          description: <span data-ttu-id="cfbde-152">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-152">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNode>
+          description: |
+            <span data-ttu-id="cfbde-153">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.get'
+    name: 'get(string, string, Models.ComputeNodeGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, nodeId: string, options?: Models.ComputeNodeGetOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-154">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-154">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-155">に関する情報を取得するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-155">The ID of the compute node that you want to get information about.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.get_1'
+    name: 'get(string, string, ServiceCallback<ComputeNode>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, nodeId: string, callback: ServiceCallback<ComputeNode>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-156">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-156">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-157">に関する情報を取得するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-157">The ID of the compute node that you want to get information about.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNode>
+          description: |
+            <span data-ttu-id="cfbde-158">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteDesktop_2'
+    name: 'getRemoteDesktop(string, string, ComputeNodeGetRemoteDesktopOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteDesktop(poolId: string, nodeId: string, options: ComputeNodeGetRemoteDesktopOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-159">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-159">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-160">リモート デスクトップ プロトコル ファイルを取得するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-160">The ID of the compute node for which you want to get the Remote Desktop Protocol file.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeGetRemoteDesktopOptionalParams'
+          description: <span data-ttu-id="cfbde-161">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-162">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteDesktopResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteDesktop'
+    name: 'getRemoteDesktop(string, string, Models.ComputeNodeGetRemoteDesktopOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="cfbde-163">ノードにアクセスするには、RDP ファイルを使用して、前に、ノードのユーザー アカウントを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cfbde-163">Before you can access a node by using the RDP file, you must create a user account on the node.</span></span>
+      <span data-ttu-id="cfbde-164">この API は、クラウド サービスの構成で作成されたプールでのみ呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-164">This API can only be invoked on pools created with a cloud service configuration.</span></span> <span data-ttu-id="cfbde-165">仮想マシンの構成で作成されたプール、GetRemoteLoginSettings API を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cfbde-165">For pools created with a virtual machine configuration, see the GetRemoteLoginSettings API.</span></span>
+    syntax:
+      content: 'function getRemoteDesktop(poolId: string, nodeId: string, options?: Models.ComputeNodeGetRemoteDesktopOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-166">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-166">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-167">リモート デスクトップ プロトコル ファイルを取得するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-167">The ID of the compute node for which you want to get the Remote Desktop Protocol file.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeGetRemoteDesktopOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteDesktopResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteDesktop_1'
+    name: 'getRemoteDesktop(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteDesktop(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-168">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-168">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-169">リモート デスクトップ プロトコル ファイルを取得するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-169">The ID of the compute node for which you want to get the Remote Desktop Protocol file.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-170">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteDesktopResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_2'
+    name: 'getRemoteLoginSettings(string, string, ComputeNodeGetRemoteLoginSettingsOptionalParams, ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteLoginSettings(poolId: string, nodeId: string, options: ComputeNodeGetRemoteLoginSettingsOptionalParams, callback: ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-171">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-171">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-172">リモート ログイン設定を取得する対象のコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-172">The ID of the compute node for which to obtain the remote login settings.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeGetRemoteLoginSettingsOptionalParams'
+          description: <span data-ttu-id="cfbde-173">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeGetRemoteLoginSettingsResult>
+          description: |
+            <span data-ttu-id="cfbde-174">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteLoginSettingsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings'
+    name: 'getRemoteLoginSettings(string, string, Models.ComputeNodeGetRemoteLoginSettingsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cfbde-175">実行する前にリモートでログインにリモート ログイン設定を使用してノード、ノードのユーザー アカウントを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cfbde-175">Before you can remotely login to a node using the remote login settings, you must create a user account on the node.</span></span> <span data-ttu-id="cfbde-176">この API は、仮想マシンの構成プロパティを使用して作成されたプールでのみ呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-176">This API can be invoked only on pools created with the virtual machine configuration property.</span></span> <span data-ttu-id="cfbde-177">クラウド サービスの構成で作成されたプール、GetRemoteDesktop API を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cfbde-177">For pools created with a cloud service configuration, see the GetRemoteDesktop API.</span></span>'
+    syntax:
+      content: 'function getRemoteLoginSettings(poolId: string, nodeId: string, options?: Models.ComputeNodeGetRemoteLoginSettingsOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-178">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-178">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-179">リモート ログイン設定を取得する対象のコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-179">The ID of the compute node for which to obtain the remote login settings.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeGetRemoteLoginSettingsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteLoginSettingsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_1'
+    name: 'getRemoteLoginSettings(string, string, ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteLoginSettings(poolId: string, nodeId: string, callback: ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-180">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-180">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-181">リモート ログイン設定を取得する対象のコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-181">The ID of the compute node for which to obtain the remote login settings.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeGetRemoteLoginSettingsResult>
+          description: |
+            <span data-ttu-id="cfbde-182">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteLoginSettingsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.list_2'
+    name: 'list(string, ComputeNodeListOptionalParams, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(poolId: string, options: ComputeNodeListOptionalParams, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-183">リストのノードにプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-183">The ID of the pool from which you want to list nodes.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeListOptionalParams'
+          description: <span data-ttu-id="cfbde-184">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-184">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="cfbde-185">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.list'
+    name: 'list(string, Models.ComputeNodeListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(poolId: string, options?: Models.ComputeNodeListOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-186">リストのノードにプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-186">The ID of the pool from which you want to list nodes.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.list_1'
+    name: 'list(string, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(poolId: string, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-187">リストのノードにプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-187">The ID of the pool from which you want to list nodes.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="cfbde-188">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.listNext_2'
+    name: 'listNext(string, ComputeNodeListNextOptionalParams, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: ComputeNodeListNextOptionalParams, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-189">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="cfbde-189">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeListNextOptionalParams'
+          description: <span data-ttu-id="cfbde-190">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-190">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="cfbde-191">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-191">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.listNext'
+    name: 'listNext(string, Models.ComputeNodeListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.ComputeNodeListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-192">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="cfbde-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.listNext_1'
+    name: 'listNext(string, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-193">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="cfbde-193">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="cfbde-194">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reboot_2'
+    name: 'reboot(string, string, ComputeNodeRebootOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reboot(poolId: string, nodeId: string, options: ComputeNodeRebootOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-195">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-195">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-196">再起動するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-196">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeRebootOptionalParams'
+          description: <span data-ttu-id="cfbde-197">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-198">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeRebootResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reboot'
+    name: 'reboot(string, string, Models.ComputeNodeRebootOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cfbde-199">アイドル状態または実行中の状態になっている場合にのみノードを再起動することができます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-199">You can restart a node only if it is in an idle or running state.</span></span>
+    syntax:
+      content: 'function reboot(poolId: string, nodeId: string, options?: Models.ComputeNodeRebootOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-200">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-200">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-201">再起動するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-201">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeRebootOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeRebootResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reboot_1'
+    name: 'reboot(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reboot(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-202">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-202">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-203">再起動するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-203">The ID of the compute node that you want to restart.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-204">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-204">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeRebootResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reimage_2'
+    name: 'reimage(string, string, ComputeNodeReimageOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reimage(poolId: string, nodeId: string, options: ComputeNodeReimageOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-205">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-205">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-206">再起動するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-206">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeReimageOptionalParams'
+          description: <span data-ttu-id="cfbde-207">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-207">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-208">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-208">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeReimageResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reimage'
+    name: 'reimage(string, string, Models.ComputeNodeReimageOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cfbde-209">アイドル状態または実行中状態である場合にのみ、ノードでオペレーティング システムを再インストールすることができます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-209">You can reinstall the operating system on a node only if it is in an idle or running state.</span></span> <span data-ttu-id="cfbde-210">この API は、クラウド サービスの構成プロパティで作成されたプールでのみ呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-210">This API can be invoked only on pools created with the cloud service configuration property.</span></span>
+    syntax:
+      content: 'function reimage(poolId: string, nodeId: string, options?: Models.ComputeNodeReimageOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-211">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-211">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-212">再起動するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-212">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeReimageOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeReimageResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reimage_1'
+    name: 'reimage(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reimage(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-213">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-213">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-214">再起動するコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-214">The ID of the compute node that you want to restart.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-215">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeReimageResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.updateUser_2'
+    name: 'updateUser(string, string, string, NodeUpdateUserParameter, ComputeNodeUpdateUserOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateUser(poolId: string, nodeId: string, userName: string, nodeUpdateUserParameter: NodeUpdateUserParameter, options: ComputeNodeUpdateUserOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-216">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-216">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-217">ユーザー アカウントを更新するコンピューターの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-217">The ID of the machine on which you want to update a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-218">更新するユーザー アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="cfbde-218">The name of the user account to update.</span></span>
+        - id: nodeUpdateUserParameter
+          type:
+            - '@azure/batch.NodeUpdateUserParameter'
+          description: <span data-ttu-id="cfbde-219">要求のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="cfbde-219">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeUpdateUserOptionalParams'
+          description: <span data-ttu-id="cfbde-220">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-220">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-221">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-221">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUpdateUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.updateUser'
+    name: 'updateUser(string, string, string, NodeUpdateUserParameter, Models.ComputeNodeUpdateUserOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="cfbde-222">この操作は、アカウントの更新可能なすべてのプロパティの置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-222">This operation replaces of all the updatable properties of the account.</span></span> <span data-ttu-id="cfbde-223">たとえば、expiryTime 要素が指定されていない場合、既定値は、左いない未変更の状態、現在の値が置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-223">For example, if the expiryTime element is not specified, the current value is replaced with the default value, not left unmodified.</span></span> <span data-ttu-id="cfbde-224">アイドル状態または実行中の状態にある場合にのみノード上のユーザー アカウントを更新することができます。</span><span class="sxs-lookup"><span data-stu-id="cfbde-224">You can update a user account on a node only when it is in the idle or running state.</span></span>'
+    syntax:
+      content: 'function updateUser(poolId: string, nodeId: string, userName: string, nodeUpdateUserParameter: NodeUpdateUserParameter, options?: Models.ComputeNodeUpdateUserOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-225">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-225">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-226">ユーザー アカウントを更新するコンピューターの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-226">The ID of the machine on which you want to update a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-227">更新するユーザー アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="cfbde-227">The name of the user account to update.</span></span>
+        - id: nodeUpdateUserParameter
+          type:
+            - '@azure/batch.NodeUpdateUserParameter'
+          description: <span data-ttu-id="cfbde-228">要求のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="cfbde-228">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeUpdateUserOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeUpdateUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.updateUser_1'
+    name: 'updateUser(string, string, string, NodeUpdateUserParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateUser(poolId: string, nodeId: string, userName: string, nodeUpdateUserParameter: NodeUpdateUserParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-229">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-229">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-230">ユーザー アカウントを更新するコンピューターの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-230">The ID of the machine on which you want to update a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-231">更新するユーザー アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="cfbde-231">The name of the user account to update.</span></span>
+        - id: nodeUpdateUserParameter
+          type:
+            - '@azure/batch.NodeUpdateUserParameter'
+          description: <span data-ttu-id="cfbde-232">要求のパラメーター。</span><span class="sxs-lookup"><span data-stu-id="cfbde-232">The parameters for the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="cfbde-233">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-233">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUpdateUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_2'
+    name: 'uploadBatchServiceLogs(string, string, UploadBatchServiceLogsConfiguration, ComputeNodeUploadBatchServiceLogsOptionalParams, ServiceCallback<UploadBatchServiceLogsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function uploadBatchServiceLogs(poolId: string, nodeId: string, uploadBatchServiceLogsConfiguration: UploadBatchServiceLogsConfiguration, options: ComputeNodeUploadBatchServiceLogsOptionalParams, callback: ServiceCallback<UploadBatchServiceLogsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-234">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-234">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-235">Azure Batch サービスのログ ファイルをアップロードするコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-235">The ID of the compute node from which you want to upload the Azure Batch service log files.</span></span>
+        - id: uploadBatchServiceLogsConfiguration
+          type:
+            - '@azure/batch.UploadBatchServiceLogsConfiguration'
+          description: <span data-ttu-id="cfbde-236">Azure Batch サービスのログ ファイルは、構成をアップロードします。</span><span class="sxs-lookup"><span data-stu-id="cfbde-236">The Azure Batch service log files upload configuration.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeUploadBatchServiceLogsOptionalParams'
+          description: <span data-ttu-id="cfbde-237">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="cfbde-237">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.UploadBatchServiceLogsResult>
+          description: |
+            <span data-ttu-id="cfbde-238">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-238">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUploadBatchServiceLogsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs'
+    name: 'uploadBatchServiceLogs(string, string, UploadBatchServiceLogsConfiguration, Models.ComputeNodeUploadBatchServiceLogsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cfbde-239">これは、エラーが発生し、Azure サポートにエスカレートする場合は、ノードから自動的に Azure Batch サービスのログ ファイルを収集するため。</span><span class="sxs-lookup"><span data-stu-id="cfbde-239">This is for gathering Azure Batch service log files in an automated fashion from nodes if you are experiencing an error and wish to escalate to Azure support.</span></span> <span data-ttu-id="cfbde-240">Azure Batch サービスのログ ファイルは、Batch サービスで問題のデバッグを支援するために Azure のサポートと共有する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cfbde-240">The Azure Batch service log files should be shared with Azure support to aid in debugging issues with the Batch service.</span></span>
+    syntax:
+      content: 'function uploadBatchServiceLogs(poolId: string, nodeId: string, uploadBatchServiceLogsConfiguration: UploadBatchServiceLogsConfiguration, options?: Models.ComputeNodeUploadBatchServiceLogsOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-241">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-241">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-242">Azure Batch サービスのログ ファイルをアップロードするコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-242">The ID of the compute node from which you want to upload the Azure Batch service log files.</span></span>
+        - id: uploadBatchServiceLogsConfiguration
+          type:
+            - '@azure/batch.UploadBatchServiceLogsConfiguration'
+          description: <span data-ttu-id="cfbde-243">Azure Batch サービスのログ ファイルは、構成をアップロードします。</span><span class="sxs-lookup"><span data-stu-id="cfbde-243">The Azure Batch service log files upload configuration.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeUploadBatchServiceLogsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeUploadBatchServiceLogsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_1'
+    name: 'uploadBatchServiceLogs(string, string, UploadBatchServiceLogsConfiguration, ServiceCallback<UploadBatchServiceLogsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function uploadBatchServiceLogs(poolId: string, nodeId: string, uploadBatchServiceLogsConfiguration: UploadBatchServiceLogsConfiguration, callback: ServiceCallback<UploadBatchServiceLogsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-244">コンピューティング ノードを含むプールの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-244">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="cfbde-245">Azure Batch サービスのログ ファイルをアップロードするコンピューティング ノードの ID。</span><span class="sxs-lookup"><span data-stu-id="cfbde-245">The ID of the compute node from which you want to upload the Azure Batch service log files.</span></span>
+        - id: uploadBatchServiceLogsConfiguration
+          type:
+            - '@azure/batch.UploadBatchServiceLogsConfiguration'
+          description: <span data-ttu-id="cfbde-246">Azure Batch サービスのログ ファイルは、構成をアップロードします。</span><span class="sxs-lookup"><span data-stu-id="cfbde-246">The Azure Batch service log files upload configuration.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.UploadBatchServiceLogsResult>
+          description: |
+            <span data-ttu-id="cfbde-247">コールバック</span><span class="sxs-lookup"><span data-stu-id="cfbde-247">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUploadBatchServiceLogsResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.ComputeNodeUser'
+    name: ComputeNodeUser
+    spec.typeScript:
+      - name: ComputeNodeUser
+        fullName: ComputeNodeUser
+        uid: '@azure/batch.ComputeNodeUser'
+  - uid: '@azure/batch.ComputeNodeAddUserOptionalParams'
+    name: ComputeNodeAddUserOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeAddUserOptionalParams
+        fullName: ComputeNodeAddUserOptionalParams
+        uid: '@azure/batch.ComputeNodeAddUserOptionalParams'
+  - uid: '@azure/batch.ComputeNodeDeleteUserOptionalParams'
+    name: ComputeNodeDeleteUserOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeDeleteUserOptionalParams
+        fullName: ComputeNodeDeleteUserOptionalParams
+        uid: '@azure/batch.ComputeNodeDeleteUserOptionalParams'
+  - uid: '@azure/batch.ComputeNodeDisableSchedulingOptionalParams'
+    name: ComputeNodeDisableSchedulingOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeDisableSchedulingOptionalParams
+        fullName: ComputeNodeDisableSchedulingOptionalParams
+        uid: '@azure/batch.ComputeNodeDisableSchedulingOptionalParams'
+  - uid: '@azure/batch.ComputeNodeEnableSchedulingOptionalParams'
+    name: ComputeNodeEnableSchedulingOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeEnableSchedulingOptionalParams
+        fullName: ComputeNodeEnableSchedulingOptionalParams
+        uid: '@azure/batch.ComputeNodeEnableSchedulingOptionalParams'
+  - uid: ServiceCallback<@azure/batch.ComputeNode>
+    name: ComputeNode>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ComputeNode
+        fullName: ComputeNode
+        uid: '@azure/batch.ComputeNode'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeGetOptionalParams'
+    name: ComputeNodeGetOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeGetOptionalParams
+        fullName: ComputeNodeGetOptionalParams
+        uid: '@azure/batch.ComputeNodeGetOptionalParams'
+  - uid: '@azure/batch.ComputeNodeGetRemoteDesktopOptionalParams'
+    name: ComputeNodeGetRemoteDesktopOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeGetRemoteDesktopOptionalParams
+        fullName: ComputeNodeGetRemoteDesktopOptionalParams
+        uid: '@azure/batch.ComputeNodeGetRemoteDesktopOptionalParams'
+  - uid: ServiceCallback<@azure/batch.ComputeNodeGetRemoteLoginSettingsResult>
+    name: ComputeNodeGetRemoteLoginSettingsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ComputeNodeGetRemoteLoginSettingsResult
+        fullName: ComputeNodeGetRemoteLoginSettingsResult
+        uid: '@azure/batch.ComputeNodeGetRemoteLoginSettingsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeGetRemoteLoginSettingsOptionalParams'
+    name: ComputeNodeGetRemoteLoginSettingsOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeGetRemoteLoginSettingsOptionalParams
+        fullName: ComputeNodeGetRemoteLoginSettingsOptionalParams
+        uid: '@azure/batch.ComputeNodeGetRemoteLoginSettingsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.ComputeNodeListResult>
+    name: ComputeNodeListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ComputeNodeListResult
+        fullName: ComputeNodeListResult
+        uid: '@azure/batch.ComputeNodeListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeListOptionalParams'
+    name: ComputeNodeListOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeListOptionalParams
+        fullName: ComputeNodeListOptionalParams
+        uid: '@azure/batch.ComputeNodeListOptionalParams'
+  - uid: '@azure/batch.ComputeNodeListNextOptionalParams'
+    name: ComputeNodeListNextOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeListNextOptionalParams
+        fullName: ComputeNodeListNextOptionalParams
+        uid: '@azure/batch.ComputeNodeListNextOptionalParams'
+  - uid: '@azure/batch.ComputeNodeRebootOptionalParams'
+    name: ComputeNodeRebootOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeRebootOptionalParams
+        fullName: ComputeNodeRebootOptionalParams
+        uid: '@azure/batch.ComputeNodeRebootOptionalParams'
+  - uid: '@azure/batch.ComputeNodeReimageOptionalParams'
+    name: ComputeNodeReimageOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeReimageOptionalParams
+        fullName: ComputeNodeReimageOptionalParams
+        uid: '@azure/batch.ComputeNodeReimageOptionalParams'
+  - uid: '@azure/batch.NodeUpdateUserParameter'
+    name: NodeUpdateUserParameter
+    spec.typeScript:
+      - name: NodeUpdateUserParameter
+        fullName: NodeUpdateUserParameter
+        uid: '@azure/batch.NodeUpdateUserParameter'
+  - uid: '@azure/batch.ComputeNodeUpdateUserOptionalParams'
+    name: ComputeNodeUpdateUserOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeUpdateUserOptionalParams
+        fullName: ComputeNodeUpdateUserOptionalParams
+        uid: '@azure/batch.ComputeNodeUpdateUserOptionalParams'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    spec.typeScript:
+      - name: UploadBatchServiceLogsConfiguration
+        fullName: UploadBatchServiceLogsConfiguration
+        uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+  - uid: ServiceCallback<@azure/batch.UploadBatchServiceLogsResult>
+    name: UploadBatchServiceLogsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: UploadBatchServiceLogsResult
+        fullName: UploadBatchServiceLogsResult
+        uid: '@azure/batch.UploadBatchServiceLogsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeUploadBatchServiceLogsOptionalParams'
+    name: ComputeNodeUploadBatchServiceLogsOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeUploadBatchServiceLogsOptionalParams
+        fullName: ComputeNodeUploadBatchServiceLogsOptionalParams
+        uid: '@azure/batch.ComputeNodeUploadBatchServiceLogsOptionalParams'
