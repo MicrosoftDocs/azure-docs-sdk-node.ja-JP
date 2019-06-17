@@ -1,0 +1,302 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobAddParameter'
+    name: JobAddParameter
+    fullName: JobAddParameter
+    children:
+      - '@azure/batch.JobAddParameter.commonEnvironmentSettings'
+      - '@azure/batch.JobAddParameter.constraints'
+      - '@azure/batch.JobAddParameter.displayName'
+      - '@azure/batch.JobAddParameter.id'
+      - '@azure/batch.JobAddParameter.jobManagerTask'
+      - '@azure/batch.JobAddParameter.jobPreparationTask'
+      - '@azure/batch.JobAddParameter.jobReleaseTask'
+      - '@azure/batch.JobAddParameter.metadata'
+      - '@azure/batch.JobAddParameter.networkConfiguration'
+      - '@azure/batch.JobAddParameter.onAllTasksComplete'
+      - '@azure/batch.JobAddParameter.onTaskFailure'
+      - '@azure/batch.JobAddParameter.poolInfo'
+      - '@azure/batch.JobAddParameter.priority'
+      - '@azure/batch.JobAddParameter.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8bed2-101">JobAddParameter を表すインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="8bed2-101">An interface representing JobAddParameter.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8bed2-102">一般的な環境変数の設定の一覧。</span><span class="sxs-lookup"><span data-stu-id="8bed2-102">The list of common environment variable settings.</span></span> <span data-ttu-id="8bed2-103">すべてのタスク (ジョブ マネージャー、ジョブの準備およびジョブ リリース タスクを含む)、ジョブ内のこれらの環境変数が設定されます。</span><span class="sxs-lookup"><span data-stu-id="8bed2-103">These environment variables are set for all tasks in the job (including the Job Manager, Job Preparation and Job Release tasks).</span></span>
+      <span data-ttu-id="8bed2-104">個々 のタスクは、ここで指定した値が異なる同じ設定名を指定することで、環境設定をオーバーライドできます。</span><span class="sxs-lookup"><span data-stu-id="8bed2-104">Individual tasks can override an environment setting specified here by specifying the same setting name with a different value.</span></span>
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8bed2-105">ジョブの実行の制約。</span><span class="sxs-lookup"><span data-stu-id="8bed2-105">The execution constraints for the job.</span></span>
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8bed2-106">ジョブの表示名。</span><span class="sxs-lookup"><span data-stu-id="8bed2-106">The display name for the job.</span></span> <span data-ttu-id="8bed2-107">表示名は一意である必要はありませんし、最大長 1024 まで任意の Unicode 文字を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="8bed2-107">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8bed2-108">アカウント内でジョブを一意に識別する文字列。</span><span class="sxs-lookup"><span data-stu-id="8bed2-108">A string that uniquely identifies the job within the account.</span></span> <span data-ttu-id="8bed2-109">この ID は、ハイフン、アンダー スコアを含む、英数字の任意の組み合わせを含めることができます、64 を超える文字を含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="8bed2-109">The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters.</span></span> <span data-ttu-id="8bed2-110">ID は、小文字、大文字と (つまり、大文字と小文字が異なるのみアカウント内の 2 つの Id はない必要があります)。</span><span class="sxs-lookup"><span data-stu-id="8bed2-110">The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</span></span>'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8bed2-111">ジョブの開始時に起動されるようにジョブ マネージャー タスクの詳細です。</span><span class="sxs-lookup"><span data-stu-id="8bed2-111">Details of a Job Manager task to be launched when the job is started.</span></span> <span data-ttu-id="8bed2-112">ジョブがジョブ マネージャー タスクを指定しない場合、ユーザーがジョブにタスクを追加する必要があります明示的にします。</span><span class="sxs-lookup"><span data-stu-id="8bed2-112">If the job does not specify a Job Manager task, the user must explicitly add tasks to the job.</span></span> <span data-ttu-id="8bed2-113">ジョブがジョブ マネージャー タスクを指定する場合、Batch サービスは、ジョブが作成され、ジョブ内の他のタスクをスケジュールする前に、ジョブ マネージャー タスクのスケジュールを設定しようと、ジョブ マネージャー タスクを作成します。</span><span class="sxs-lookup"><span data-stu-id="8bed2-113">If the job does specify a Job Manager task, the Batch service creates the Job Manager task when the job is created, and will try to schedule the Job Manager task before scheduling other tasks in the job.</span></span> <span data-ttu-id="8bed2-114">ジョブ マネージャー タスクの一般的な目的は、たとえばを実行するどのような追加のタスクを決定する、作業が完了したときの決定など、ジョブ実行を制御や監視にです。(ただし、ジョブ マネージャー タスクがこれらのアクティビティに限定されません - システムで本格的なタスクでは、ジョブに必要な任意のアクションを実行します。)たとえば、ジョブ マネージャー タスク可能性がありますをパラメーターとして指定されたファイルをダウンロード、そのファイルの内容を分析およびその内容に基づいた追加のタスクを送信します。</span><span class="sxs-lookup"><span data-stu-id="8bed2-114">The Job Manager task''s typical purpose is to control and/or monitor job execution, for example by deciding what additional tasks to run, determining when the work is complete, etc. (However, a Job Manager task is not restricted to these activities - it is a fully-fledged task in the system and perform whatever actions are required for the job.) For example, a Job Manager task might download a file specified as a parameter, analyze the contents of that file and submit additional tasks based on those contents.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8bed2-115">ジョブの準備タスク。</span><span class="sxs-lookup"><span data-stu-id="8bed2-115">The Job Preparation task.</span></span> <span data-ttu-id="8bed2-116">ジョブにジョブの準備タスクがある場合は、Batch サービスは、ジョブ準備タスクをそのコンピューティング ノードでそのジョブのすべてのタスクを開始する前にコンピューティング ノードで実行します。</span><span class="sxs-lookup"><span data-stu-id="8bed2-116">If a job has a Job Preparation task, the Batch service will run the Job Preparation task on a compute node before starting any tasks of that job on that compute node.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8bed2-117">ジョブのリリース タスク。</span><span class="sxs-lookup"><span data-stu-id="8bed2-117">The Job Release task.</span></span> <span data-ttu-id="8bed2-118">また、ジョブのジョブ準備タスクを指定せず、ジョブ解放タスクを指定できません。</span><span class="sxs-lookup"><span data-stu-id="8bed2-118">A Job Release task cannot be specified without also specifying a Job Preparation task for the job.</span></span> <span data-ttu-id="8bed2-119">Batch サービスでは、ジョブの準備タスクを実行したコンピューティング ノードでジョブ解放タスクが実行されます。</span><span class="sxs-lookup"><span data-stu-id="8bed2-119">The Batch service runs the Job Release task on the compute nodes that have run the Job Preparation task.</span></span> <span data-ttu-id="8bed2-120">ジョブのリリース タスクの主な目的は、コンピューティング ノード、ジョブ準備タスクによって行われた変更を取り消すです。</span><span class="sxs-lookup"><span data-stu-id="8bed2-120">The primary purpose of the Job Release task is to undo changes to compute nodes made by the Job Preparation task.</span></span> <span data-ttu-id="8bed2-121">アクティビティ例にはでは、ローカルのファイルを削除するか、ジョブの準備の一環として開始されたサービスをシャット ダウンが含まれます。</span><span class="sxs-lookup"><span data-stu-id="8bed2-121">Example activities include deleting local files, or shutting down services that were started as part of job preparation.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8bed2-122">メタデータとして、ジョブに関連付けられている名前/値ペアのリスト。</span><span class="sxs-lookup"><span data-stu-id="8bed2-122">A list of name-value pairs associated with the job as metadata.</span></span> <span data-ttu-id="8bed2-123">Batch サービスがメタデータに意味を割り当てませんユーザー コードの使用のためだけです。</span><span class="sxs-lookup"><span data-stu-id="8bed2-123">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8bed2-124">ジョブのネットワーク構成。</span><span class="sxs-lookup"><span data-stu-id="8bed2-124">The network configuration for the job.</span></span>
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8bed2-125">アクション、ジョブ内のすべてのタスクが完了した状態では場合に、Batch サービスは実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8bed2-125">The action the Batch service should take when all tasks in the job are in the completed state.</span></span>
+      <span data-ttu-id="8bed2-126">ジョブにタスクが含まれていない場合、すべてのタスクと見なされること完了に注意してください。</span><span class="sxs-lookup"><span data-stu-id="8bed2-126">Note that if a job contains no tasks, then all tasks are considered complete.</span></span> <span data-ttu-id="8bed2-127">このオプションは、最もよくジョブ マネージャー タスクでは使用したがってジョブの自動終了せずジョブ マネージャーを使用する場合は、最初に noaction に onAllTasksComplete を設定および、タスクの追加が完了したら、terminatejob に onAllTasksComplete を設定するジョブのプロパティを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8bed2-127">This option is therefore most commonly used with a Job Manager task; if you want to use automatic job termination without a Job Manager, you should initially set onAllTasksComplete to noaction and update the job properties to set onAllTasksComplete to terminatejob once you have finished adding tasks.</span></span> <span data-ttu-id="8bed2-128">既定値は noaction です。</span><span class="sxs-lookup"><span data-stu-id="8bed2-128">The default is noaction.</span></span> <span data-ttu-id="8bed2-129">使用可能な値が含まれます: 'noAction'、'terminateJob'</span><span class="sxs-lookup"><span data-stu-id="8bed2-129">Possible values include: 'noAction', 'terminateJob'</span></span>
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8bed2-130">アクション、ジョブ内のタスクが失敗したときに、Batch サービスは実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8bed2-130">The action the Batch service should take when any task in the job fails.</span></span> <span data-ttu-id="8bed2-131">タスクがあると見なされますが、failureInfo の失敗した場合。</span><span class="sxs-lookup"><span data-stu-id="8bed2-131">A task is considered to have failed if has a failureInfo.</span></span> <span data-ttu-id="8bed2-132">再試行回数を使い果たした後に 0 以外の終了コードでのタスクが完了すると、failureInfo が設定されているまたはタスクの開始中にエラーがあった場合など、リソース ファイルのためダウンロード エラー。</span><span class="sxs-lookup"><span data-stu-id="8bed2-132">A failureInfo is set if the task completes with a non-zero exit code after exhausting its retry count, or if there was an error starting the task, for example due to a resource file download error.</span></span> <span data-ttu-id="8bed2-133">既定値は noaction です。</span><span class="sxs-lookup"><span data-stu-id="8bed2-133">The default is noaction.</span></span> <span data-ttu-id="8bed2-134">使用可能な値が含まれます: ''noAction''、''performExitOptionsJobAction''</span><span class="sxs-lookup"><span data-stu-id="8bed2-134">Possible values include: ''noAction'', ''performExitOptionsJobAction''</span></span>'
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8bed2-135">Batch サービスがジョブのタスクを実行するプール。</span><span class="sxs-lookup"><span data-stu-id="8bed2-135">The pool on which the Batch service runs the job's tasks.</span></span>
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8bed2-136">ジョブの優先度。</span><span class="sxs-lookup"><span data-stu-id="8bed2-136">The priority of the job.</span></span> <span data-ttu-id="8bed2-137">優先度の値の範囲は-1000 から 1000 で、-1000 は最も低い優先順位と 1000 が最高の優先順位です。</span><span class="sxs-lookup"><span data-stu-id="8bed2-137">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="8bed2-138">既定値は 0 です。</span><span class="sxs-lookup"><span data-stu-id="8bed2-138">The default value is 0.</span></span>'
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8bed2-139">かどうか、ジョブ内のタスクでは、相互に依存関係を定義できます。</span><span class="sxs-lookup"><span data-stu-id="8bed2-139">Whether tasks in the job can define dependencies on each other.</span></span> <span data-ttu-id="8bed2-140">既定値は false です。</span><span class="sxs-lookup"><span data-stu-id="8bed2-140">The default is false.</span></span>
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'

@@ -10,13 +10,13 @@ items:
       - '@azure/arm-network.NetworkInterface.etag'
       - '@azure/arm-network.NetworkInterface.hostedWorkloads'
       - '@azure/arm-network.NetworkInterface.id'
-      - '@azure/arm-network.NetworkInterface.interfaceEndpoint'
       - '@azure/arm-network.NetworkInterface.ipConfigurations'
       - '@azure/arm-network.NetworkInterface.location'
       - '@azure/arm-network.NetworkInterface.macAddress'
       - '@azure/arm-network.NetworkInterface.name'
       - '@azure/arm-network.NetworkInterface.networkSecurityGroup'
       - '@azure/arm-network.NetworkInterface.primary'
+      - '@azure/arm-network.NetworkInterface.privateEndpoint'
       - '@azure/arm-network.NetworkInterface.provisioningState'
       - '@azure/arm-network.NetworkInterface.resourceGuid'
       - '@azure/arm-network.NetworkInterface.tags'
@@ -26,7 +26,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="ca4c3-101">リソース グループ内のネットワーク インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-101">A network interface in a resource group.</span></span>
+    summary: <span data-ttu-id="27e44-101">リソース グループ内のネットワーク インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="27e44-101">A network interface in a resource group.</span></span>
     extends:
       name: '@azure/arm-network.Resource'
     package: '@azure/arm-network'
@@ -37,7 +37,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-102">ネットワーク インターフェイスで DNS 設定。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-102">The DNS settings in network interface.</span></span>
+    summary: <span data-ttu-id="27e44-102">ネットワーク インターフェイスで DNS 設定。</span><span class="sxs-lookup"><span data-stu-id="27e44-102">The DNS settings in network interface.</span></span>
     optional: true
     syntax:
       content: 'dnsSettings?: NetworkInterfaceDnsSettings'
@@ -52,7 +52,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-103">場合は、ネットワーク インターフェイスが高速ネットワークが有効になります。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-103">If the network interface is accelerated networking enabled.</span></span>
+    summary: <span data-ttu-id="27e44-103">場合は、ネットワーク インターフェイスが高速ネットワークが有効になります。</span><span class="sxs-lookup"><span data-stu-id="27e44-103">If the network interface is accelerated networking enabled.</span></span>
     optional: true
     syntax:
       content: 'enableAcceleratedNetworking?: undefined | false | true'
@@ -67,7 +67,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-104">このネットワーク インターフェイスで IP 転送が有効になっているかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-104">Indicates whether IP forwarding is enabled on this network interface.</span></span>
+    summary: <span data-ttu-id="27e44-104">このネットワーク インターフェイスで IP 転送が有効になっているかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="27e44-104">Indicates whether IP forwarding is enabled on this network interface.</span></span>
     optional: true
     syntax:
       content: 'enableIPForwarding?: undefined | false | true'
@@ -82,7 +82,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-105">読み取り専用する一意の文字列リソースを更新するたびに変更します。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-105">A unique read-only string that changes whenever the resource is updated.</span></span>
+    summary: <span data-ttu-id="27e44-105">読み取り専用する一意の文字列リソースを更新するたびに変更します。</span><span class="sxs-lookup"><span data-stu-id="27e44-105">A unique read-only string that changes whenever the resource is updated.</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -97,7 +97,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="ca4c3-106">リンクされた BareMetal リソースへの参照の一覧**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="ca4c3-106">A list of references to linked BareMetal resources **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: |-
+      <span data-ttu-id="27e44-106">リンクされた BareMetal リソースへの参照の一覧。</span><span class="sxs-lookup"><span data-stu-id="27e44-106">A list of references to linked BareMetal resources.</span></span>
+      <span data-ttu-id="27e44-107">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="27e44-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'hostedWorkloads?: string[]'
@@ -112,30 +114,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-107">リソースの ID</span><span class="sxs-lookup"><span data-stu-id="ca4c3-107">Resource ID.</span></span>
+    summary: <span data-ttu-id="27e44-108">リソースの ID</span><span class="sxs-lookup"><span data-stu-id="27e44-108">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkInterface.interfaceEndpoint'
-    name: interfaceEndpoint
-    fullName: interfaceEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      <span data-ttu-id="ca4c3-108">ネットワーク インターフェイスがリンクされているインターフェイスのエンドポイントへの参照。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-108">A reference to the interface endpoint to which the network interface is linked.</span></span>
-      <span data-ttu-id="ca4c3-109">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="ca4c3-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
-    optional: true
-    syntax:
-      content: 'interfaceEndpoint?: InterfaceEndpoint'
-      return:
-        type:
-          - '@azure/arm-network.InterfaceEndpoint'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.ipConfigurations'
     name: ipConfigurations
@@ -144,7 +129,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-110">ネットワーク インターフェイスの ip 構成の一覧。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-110">A list of IPConfigurations of the network interface.</span></span>
+    summary: <span data-ttu-id="27e44-109">ネットワーク インターフェイスの ip 構成の一覧。</span><span class="sxs-lookup"><span data-stu-id="27e44-109">A list of IPConfigurations of the network interface.</span></span>
     optional: true
     syntax:
       content: 'ipConfigurations?: NetworkInterfaceIPConfiguration[]'
@@ -159,7 +144,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-111">リソースの場所。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-111">Resource location.</span></span>
+    summary: <span data-ttu-id="27e44-110">リソースの場所。</span><span class="sxs-lookup"><span data-stu-id="27e44-110">Resource location.</span></span>
     optional: true
     syntax:
       content: 'location?: undefined | string'
@@ -174,7 +159,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-112">ネットワーク インターフェイスの MAC アドレス。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-112">The MAC address of the network interface.</span></span>
+    summary: <span data-ttu-id="27e44-111">ネットワーク インターフェイスの MAC アドレス。</span><span class="sxs-lookup"><span data-stu-id="27e44-111">The MAC address of the network interface.</span></span>
     optional: true
     syntax:
       content: 'macAddress?: undefined | string'
@@ -190,8 +175,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="ca4c3-113">リソース名。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-113">Resource name.</span></span>
-      <span data-ttu-id="ca4c3-114">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="ca4c3-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="27e44-112">リソース名。</span><span class="sxs-lookup"><span data-stu-id="27e44-112">Resource name.</span></span>
+      <span data-ttu-id="27e44-113">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="27e44-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -206,7 +191,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-115">NetworkSecurityGroup リソースの参照。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-115">The reference of the NetworkSecurityGroup resource.</span></span>
+    summary: <span data-ttu-id="27e44-114">NetworkSecurityGroup リソースの参照。</span><span class="sxs-lookup"><span data-stu-id="27e44-114">The reference of the NetworkSecurityGroup resource.</span></span>
     optional: true
     syntax:
       content: 'networkSecurityGroup?: NetworkSecurityGroup'
@@ -221,13 +206,30 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-116">これは、仮想マシン上のプライマリ ネットワーク インターフェイスかどうかを取得します。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-116">Gets whether this is a primary network interface on a virtual machine.</span></span>
+    summary: <span data-ttu-id="27e44-115">これは、仮想マシン上のプライマリ ネットワーク インターフェイスかどうかを取得します。</span><span class="sxs-lookup"><span data-stu-id="27e44-115">Gets whether this is a primary network interface on a virtual machine.</span></span>
     optional: true
     syntax:
       content: 'primary?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkInterface.privateEndpoint'
+    name: privateEndpoint
+    fullName: privateEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="27e44-116">ネットワーク インターフェイスがリンクされているプライベート エンドポイントへの参照。</span><span class="sxs-lookup"><span data-stu-id="27e44-116">A reference to the private endpoint to which the network interface is linked.</span></span>
+      <span data-ttu-id="27e44-117">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="27e44-117">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'privateEndpoint?: PrivateEndpoint'
+      return:
+        type:
+          - '@azure/arm-network.PrivateEndpoint'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.provisioningState'
     name: provisioningState
@@ -236,7 +238,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="ca4c3-117">パブリック IP リソースのプロビジョニングの状態。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-117">The provisioning state of the public IP resource.</span></span> <span data-ttu-id="ca4c3-118">有効な値は次のとおりです。'' の更新''、''削除'' および ''失敗'' です。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-118">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    summary: '<span data-ttu-id="27e44-118">パブリック IP リソースのプロビジョニングの状態。</span><span class="sxs-lookup"><span data-stu-id="27e44-118">The provisioning state of the public IP resource.</span></span> <span data-ttu-id="27e44-119">設定可能な値は、次のとおりです。'' の更新''、''削除'' および ''失敗'' です。</span><span class="sxs-lookup"><span data-stu-id="27e44-119">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -251,7 +253,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-119">リソース、ネットワーク インターフェイス リソースの GUID プロパティです。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-119">The resource GUID property of the network interface resource.</span></span>
+    summary: <span data-ttu-id="27e44-120">リソース、ネットワーク インターフェイス リソースの GUID プロパティです。</span><span class="sxs-lookup"><span data-stu-id="27e44-120">The resource GUID property of the network interface resource.</span></span>
     optional: true
     syntax:
       content: 'resourceGuid?: undefined | string'
@@ -266,7 +268,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-120">リソース タグ。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-120">Resource tags.</span></span>
+    summary: <span data-ttu-id="27e44-121">リソース タグ。</span><span class="sxs-lookup"><span data-stu-id="27e44-121">Resource tags.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -281,7 +283,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ca4c3-121">ネットワーク インターフェイスの TapConfigurations の一覧。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-121">A list of TapConfigurations of the network interface.</span></span>
+    summary: <span data-ttu-id="27e44-122">ネットワーク インターフェイスの TapConfigurations の一覧。</span><span class="sxs-lookup"><span data-stu-id="27e44-122">A list of TapConfigurations of the network interface.</span></span>
     optional: true
     syntax:
       content: 'tapConfigurations?: NetworkInterfaceTapConfiguration[]'
@@ -297,8 +299,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="ca4c3-122">リソースの種類。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-122">Resource type.</span></span>
-      <span data-ttu-id="ca4c3-123">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="ca4c3-123">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="27e44-123">リソースの種類。</span><span class="sxs-lookup"><span data-stu-id="27e44-123">Resource type.</span></span>
+      <span data-ttu-id="27e44-124">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="27e44-124">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'
@@ -314,8 +316,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="ca4c3-124">仮想マシンの参照。</span><span class="sxs-lookup"><span data-stu-id="ca4c3-124">The reference of a virtual machine.</span></span>
-      <span data-ttu-id="ca4c3-125">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="ca4c3-125">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="27e44-125">仮想マシンの参照。</span><span class="sxs-lookup"><span data-stu-id="27e44-125">The reference of a virtual machine.</span></span>
+      <span data-ttu-id="27e44-126">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="27e44-126">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'virtualMachine?: SubResource'
@@ -336,12 +338,6 @@ references:
       - name: NetworkInterfaceDnsSettings
         fullName: NetworkInterfaceDnsSettings
         uid: '@azure/arm-network.NetworkInterfaceDnsSettings'
-  - uid: '@azure/arm-network.InterfaceEndpoint'
-    name: InterfaceEndpoint
-    spec.typeScript:
-      - name: InterfaceEndpoint
-        fullName: InterfaceEndpoint
-        uid: '@azure/arm-network.InterfaceEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
     name: 'NetworkInterfaceIPConfiguration[]'
     spec.typeScript:
@@ -356,6 +352,12 @@ references:
       - name: NetworkSecurityGroup
         fullName: NetworkSecurityGroup
         uid: '@azure/arm-network.NetworkSecurityGroup'
+  - uid: '@azure/arm-network.PrivateEndpoint'
+    name: PrivateEndpoint
+    spec.typeScript:
+      - name: PrivateEndpoint
+        fullName: PrivateEndpoint
+        uid: '@azure/arm-network.PrivateEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
     name: 'NetworkInterfaceTapConfiguration[]'
     spec.typeScript:
