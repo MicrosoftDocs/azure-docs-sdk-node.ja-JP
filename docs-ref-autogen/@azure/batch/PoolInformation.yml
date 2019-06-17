@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    fullName: PoolInformation
+    children:
+      - '@azure/batch.PoolInformation.autoPoolSpecification'
+      - '@azure/batch.PoolInformation.poolId'
+    langs:
+      - typeScript
+    type: interface
+    summary: PoolInformation を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolInformation.autoPoolSpecification'
+    name: autoPoolSpecification
+    fullName: autoPoolSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      「自動プールの」一時的な特性です。 ジョブが送信されたときに、Batch サービスはこの自動プールを作成します。 自動プールの作成に失敗した場合は、Batch サービス ジョブを完了済みの状態に移動しますされ、プールの作成エラーがジョブのスケジュール エラー プロパティで設定されます。
+      Batch サービスは、有効期間を管理 (両方を作成して、keepAlive が指定されていない場合、削除)、自動プールの。 ジョブがアクティブな間、自動プールの有効期間に影響を与えるユーザーの操作と、予期しない動作が発生します。 プールの ID と自動プールの仕様の両方ではなくいずれかを指定する必要があります。
+    optional: true
+    syntax:
+      content: 'autoPoolSpecification?: AutoPoolSpecification'
+      return:
+        type:
+          - '@azure/batch.AutoPoolSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolInformation.poolId'
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 既存のプールの ID。 ジョブのすべてのタスクは、指定されたプールで実行されます。 このプロパティによって参照されるプールが存在することを確認する必要があります。 Batch サービスのジョブをスケジュールしようとする時に、プールが存在しない場合は、その id を持つプールを作成するまでジョブのタスクは実行されません。Batch サービスによってジョブ要求は拒否されないことに注意してください。単にいないまで実行されますタスク、プールが存在します。 プールの ID と自動プールの仕様の両方ではなくいずれかを指定する必要があります。
+    optional: true
+    syntax:
+      content: 'poolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AutoPoolSpecification'
+    name: AutoPoolSpecification
+    spec.typeScript:
+      - name: AutoPoolSpecification
+        fullName: AutoPoolSpecification
+        uid: '@azure/batch.AutoPoolSpecification'
