@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.GeoReplicationStats'
+    name: GeoReplicationStats
+    fullName: GeoReplicationStats
+    children:
+      - '@azure/arm-storage.GeoReplicationStats.canFailover'
+      - '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+      - '@azure/arm-storage.GeoReplicationStats.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: レプリケーションをストレージ アカウントの Blob、テーブル、キュー、およびファイル サービスに関連する統計。 ストレージ アカウントの地理冗長レプリケーションが有効になっているときにのみ使用できます。
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.canFailover'
+    name: canFailover
+    fullName: canFailover
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      アカウントのアカウントのフェールオーバーがサポートされているかどうかを示すブール フラグです。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'canFailover?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+    name: lastSyncTime
+    fullName: lastSyncTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      上記のすべてのプライマリ書き込みこの UTC 日付/時刻値が保証されて読み取り操作に使用できます。 プライマリは、可能性がありますまたは読み取りを利用できない可能性がありますを時間でこの点を次に書き込みます。
+      要素は、LastSyncTime の値がない場合、既定値可能性があります使用可能なこれは、セカンダリの場合に発生することができますがオフラインか、ブートス トラップでです。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'lastSyncTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '2 次拠点の状態です。 指定できる値は: - ライブ。2 次拠点がアクティブで、動作であることを示します。 ブートス トラップします。1 次拠点から 2 次拠点への初期同期が進行状況を示します。これは通常、レプリケーションを有効にするときに発生します。 -利用不可。2 次拠点が一時的に使用できないことを示します。 指定できる値は、次のとおりです。''ライブ''、''のブートス トラップ''、''使用できない''**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**'
+    optional: true
+    syntax:
+      content: 'status?: GeoReplicationStatus'
+      return:
+        type:
+          - '@azure/arm-storage.GeoReplicationStatus'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.GeoReplicationStatus'
+    name: GeoReplicationStatus
+    spec.typeScript:
+      - name: GeoReplicationStatus
+        fullName: GeoReplicationStatus
+        uid: '@azure/arm-storage.GeoReplicationStatus'

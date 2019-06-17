@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-network.PatchRouteFilter.etag'
       - '@azure/arm-network.PatchRouteFilter.id'
+      - '@azure/arm-network.PatchRouteFilter.ipv6Peerings'
       - '@azure/arm-network.PatchRouteFilter.name'
       - '@azure/arm-network.PatchRouteFilter.peerings'
       - '@azure/arm-network.PatchRouteFilter.provisioningState'
@@ -51,6 +52,21 @@ items:
         type:
           - undefined | string
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.PatchRouteFilter.ipv6Peerings'
+    name: ipv6Peerings
+    fullName: ipv6Peerings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Express route 回線 ipv6 ピアリングへの参照のコレクション。
+    optional: true
+    syntax:
+      content: 'ipv6Peerings?: ExpressRouteCircuitPeering[]'
+      return:
+        type:
+          - '@azure/arm-network.ExpressRouteCircuitPeering[]'
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.PatchRouteFilter.name'
     name: name
     fullName: name
@@ -91,7 +107,7 @@ items:
       - typeScript
     type: property
     summary: |-
-      リソースのプロビジョニングの状態。 有効な値は次のとおりです。'更新、' '削除' および 'Succeeded'、'失敗' です。
+      リソースのプロビジョニングの状態。 設定可能な値は、次のとおりです。'更新、' '削除' および 'Succeeded'、'失敗' です。
       **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
     optional: true
     syntax:
