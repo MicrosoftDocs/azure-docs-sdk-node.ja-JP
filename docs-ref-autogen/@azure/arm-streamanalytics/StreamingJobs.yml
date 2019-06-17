@@ -1,0 +1,803 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.StreamingJobs'
+    name: StreamingJobs
+    fullName: StreamingJobs
+    children:
+      - '@azure/arm-streamanalytics.StreamingJobs.beginCreateOrReplace'
+      - '@azure/arm-streamanalytics.StreamingJobs.beginDeleteMethod'
+      - '@azure/arm-streamanalytics.StreamingJobs.beginStart'
+      - '@azure/arm-streamanalytics.StreamingJobs.beginStop'
+      - '@azure/arm-streamanalytics.StreamingJobs.createOrReplace'
+      - '@azure/arm-streamanalytics.StreamingJobs.deleteMethod'
+      - '@azure/arm-streamanalytics.StreamingJobs.get'
+      - '@azure/arm-streamanalytics.StreamingJobs.get_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.get_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.list'
+      - '@azure/arm-streamanalytics.StreamingJobs.list_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.list_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.listNext'
+      - '@azure/arm-streamanalytics.StreamingJobs.listNext_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listNext_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.start'
+      - '@azure/arm-streamanalytics.StreamingJobs.stop'
+      - '@azure/arm-streamanalytics.StreamingJobs.constructor'
+      - '@azure/arm-streamanalytics.StreamingJobs.update'
+      - '@azure/arm-streamanalytics.StreamingJobs.update_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: StreamingJobs を表すクラスです。
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginCreateOrReplace'
+    name: 'beginCreateOrReplace(StreamingJob, string, string, Models.StreamingJobsBeginCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ストリーミング ジョブを作成するか、既存のストリーミング ジョブを置き換えます。
+    syntax:
+      content: 'function beginCreateOrReplace(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options?: Models.StreamingJobsBeginCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: 新しいストリーミング ジョブを作成または既存のものを置き換えるために使用するストリーミング ジョブの定義。
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - Models.StreamingJobsBeginCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ストリーミング ジョブを削除します。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginStart'
+    name: 'beginStart(string, string, Models.StreamingJobsBeginStartOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ストリーミング ジョブを開始します。 ジョブが開始されると入力イベントの処理を開始、出力が生成されます。
+    syntax:
+      content: 'function beginStart(resourceGroupName: string, jobName: string, options?: Models.StreamingJobsBeginStartOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - Models.StreamingJobsBeginStartOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginStop'
+    name: 'beginStop(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 実行中のストリーミング ジョブを停止します。 これにより、実行中のストリーミング ジョブ入力イベントの処理と出力の生成を停止します。
+    syntax:
+      content: 'function beginStop(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.createOrReplace'
+    name: 'createOrReplace(StreamingJob, string, string, Models.StreamingJobsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ストリーミング ジョブを作成するか、既存のストリーミング ジョブを置き換えます。
+    syntax:
+      content: 'function createOrReplace(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options?: Models.StreamingJobsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: 新しいストリーミング ジョブを作成または既存のものを置き換えるために使用するストリーミング ジョブの定義。
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - Models.StreamingJobsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ストリーミング ジョブを削除します。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.get'
+    name: 'get(string, string, Models.StreamingJobsGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定されたストリーミング ジョブの詳細を取得します。
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, options?: Models.StreamingJobsGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - Models.StreamingJobsGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.get_1'
+    name: 'get(string, string, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.get_2'
+    name: 'get(string, string, StreamingJobsGetOptionalParams, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, options: StreamingJobsGetOptionalParams, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsGetOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.list'
+    name: list(Models.StreamingJobsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: すべての特定のサブスクリプションのストリーミング ジョブを一覧表示します。
+    syntax:
+      content: 'function list(options?: Models.StreamingJobsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.StreamingJobsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.list_1'
+    name: list(ServiceCallback<StreamingJobListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsListResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.list_2'
+    name: 'list(StreamingJobsListOptionalParams, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: StreamingJobsListOptionalParams, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsListOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsListResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.StreamingJobsListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定されたリソース グループ内のストリーミング ジョブのすべての一覧を表示します。
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.StreamingJobsListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: options
+          type:
+            - Models.StreamingJobsListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, StreamingJobsListByResourceGroupOptionalParams, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: StreamingJobsListByResourceGroupOptionalParams, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsListByResourceGroupOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定されたリソース グループ内のストリーミング ジョブのすべての一覧を表示します。
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: すべての特定のサブスクリプションのストリーミング ジョブを一覧表示します。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsListNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listNext_1'
+    name: 'listNext(string, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsListNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.start'
+    name: 'start(string, string, Models.StreamingJobsStartOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ストリーミング ジョブを開始します。 ジョブが開始されると入力イベントの処理を開始、出力が生成されます。
+    syntax:
+      content: 'function start(resourceGroupName: string, jobName: string, options?: Models.StreamingJobsStartOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - Models.StreamingJobsStartOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.stop'
+    name: 'stop(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 実行中のストリーミング ジョブを停止します。 これにより、実行中のストリーミング ジョブ入力イベントの処理と出力の生成を停止します。
+    syntax:
+      content: 'function stop(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.constructor'
+    name: StreamingJobs(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: StreamingJobs を作成します。
+    syntax:
+      content: 'new StreamingJobs(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            サービス クライアントへの参照。
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.update'
+    name: 'update(StreamingJob, string, string, Models.StreamingJobsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 既存のストリーミング ジョブを更新します。 これを部分的に更新 (つまり使用できます。 1 つまたは 2 つのプロパティを更新)、ストリーミング ジョブ、ジョブ定義の残りの部分には影響しません。
+    syntax:
+      content: 'function update(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options?: Models.StreamingJobsUpdateOptionalParams)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: |-
+            ストリーミング ジョブ オブジェクトを使用します。 既存のストリーミング ジョブ (で対応するプロパティをここで指定したプロパティが上書きされます。これらのプロパティは更新されます)。
+            ここでは null に設定されている任意のプロパティは、既存の入力の対応するプロパティが、同じままし、このパッチ操作の結果として変更はことを意味します。
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - Models.StreamingJobsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.update_1'
+    name: 'update(StreamingJob, string, string, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: |-
+            ストリーミング ジョブ オブジェクトを使用します。 既存のストリーミング ジョブ (で対応するプロパティをここで指定したプロパティが上書きされます。これらのプロパティは更新されます)。
+            ここでは null に設定されている任意のプロパティは、既存の入力の対応するプロパティが、同じままし、このパッチ操作の結果として変更はことを意味します。
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.update_2'
+    name: 'update(StreamingJob, string, string, StreamingJobsUpdateOptionalParams, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options: StreamingJobsUpdateOptionalParams, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: |-
+            ストリーミング ジョブ オブジェクトを使用します。 既存のストリーミング ジョブ (で対応するプロパティをここで指定したプロパティが上書きされます。これらのプロパティは更新されます)。
+            ここでは null に設定されている任意のプロパティは、既存の入力の対応するプロパティが、同じままし、このパッチ操作の結果として変更はことを意味します。
+        - id: resourceGroupName
+          type:
+            - string
+          description: リソースが含まれているリソース グループの名前。 この値は、Azure リソース マネージャー API またはポータルから取得できます。
+        - id: jobName
+          type:
+            - string
+          description: ストリーミング ジョブの名前。
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsUpdateOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.StreamingJobsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.StreamingJob'
+    name: StreamingJob
+    spec.typeScript:
+      - name: StreamingJob
+        fullName: StreamingJob
+        uid: '@azure/arm-streamanalytics.StreamingJob'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+    name: StreamingJob>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StreamingJob
+        fullName: StreamingJob
+        uid: '@azure/arm-streamanalytics.StreamingJob'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsGetOptionalParams'
+    name: StreamingJobsGetOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsGetOptionalParams
+        fullName: StreamingJobsGetOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+    name: StreamingJobListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StreamingJobListResult
+        fullName: StreamingJobListResult
+        uid: '@azure/arm-streamanalytics.StreamingJobListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsListOptionalParams'
+    name: StreamingJobsListOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsListOptionalParams
+        fullName: StreamingJobsListOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsListOptionalParams'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsListByResourceGroupOptionalParams'
+    name: StreamingJobsListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsListByResourceGroupOptionalParams
+        fullName: StreamingJobsListByResourceGroupOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsUpdateOptionalParams'
+    name: StreamingJobsUpdateOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsUpdateOptionalParams
+        fullName: StreamingJobsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsUpdateOptionalParams'
