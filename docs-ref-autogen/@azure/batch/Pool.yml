@@ -1,0 +1,1555 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Pool'
+    name: Pool
+    fullName: Pool
+    children:
+      - '@azure/batch.Pool.add'
+      - '@azure/batch.Pool.add_2'
+      - '@azure/batch.Pool.add_1'
+      - '@azure/batch.Pool.deleteMethod'
+      - '@azure/batch.Pool.deleteMethod_2'
+      - '@azure/batch.Pool.deleteMethod_1'
+      - '@azure/batch.Pool.disableAutoScale'
+      - '@azure/batch.Pool.disableAutoScale_2'
+      - '@azure/batch.Pool.disableAutoScale_1'
+      - '@azure/batch.Pool.enableAutoScale'
+      - '@azure/batch.Pool.enableAutoScale_2'
+      - '@azure/batch.Pool.enableAutoScale_1'
+      - '@azure/batch.Pool.evaluateAutoScale'
+      - '@azure/batch.Pool.evaluateAutoScale_2'
+      - '@azure/batch.Pool.evaluateAutoScale_1'
+      - '@azure/batch.Pool.exists'
+      - '@azure/batch.Pool.exists_2'
+      - '@azure/batch.Pool.exists_1'
+      - '@azure/batch.Pool.get'
+      - '@azure/batch.Pool.get_2'
+      - '@azure/batch.Pool.get_1'
+      - '@azure/batch.Pool.getAllLifetimeStatistics'
+      - '@azure/batch.Pool.getAllLifetimeStatistics_2'
+      - '@azure/batch.Pool.getAllLifetimeStatistics_1'
+      - '@azure/batch.Pool.list'
+      - '@azure/batch.Pool.list_2'
+      - '@azure/batch.Pool.list_1'
+      - '@azure/batch.Pool.listNext'
+      - '@azure/batch.Pool.listNext_2'
+      - '@azure/batch.Pool.listNext_1'
+      - '@azure/batch.Pool.listUsageMetrics'
+      - '@azure/batch.Pool.listUsageMetrics_2'
+      - '@azure/batch.Pool.listUsageMetrics_1'
+      - '@azure/batch.Pool.listUsageMetricsNext'
+      - '@azure/batch.Pool.listUsageMetricsNext_2'
+      - '@azure/batch.Pool.listUsageMetricsNext_1'
+      - '@azure/batch.Pool.patch'
+      - '@azure/batch.Pool.patch_2'
+      - '@azure/batch.Pool.patch_1'
+      - '@azure/batch.Pool.constructor'
+      - '@azure/batch.Pool.removeNodes'
+      - '@azure/batch.Pool.removeNodes_2'
+      - '@azure/batch.Pool.removeNodes_1'
+      - '@azure/batch.Pool.resize'
+      - '@azure/batch.Pool.resize_2'
+      - '@azure/batch.Pool.resize_1'
+      - '@azure/batch.Pool.stopResize'
+      - '@azure/batch.Pool.stopResize_2'
+      - '@azure/batch.Pool.stopResize_1'
+      - '@azure/batch.Pool.updateProperties'
+      - '@azure/batch.Pool.updateProperties_2'
+      - '@azure/batch.Pool.updateProperties_1'
+    langs:
+      - typeScript
+    type: class
+    summary: プールを表すクラスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.add'
+    name: 'add(PoolAddParameter, Models.PoolAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: プールの名前を付けるときは、ユーザー名またはシークレットのプロジェクト名などの機密情報が含まれないようにします。 この情報は、Microsoft サポート エンジニアにアクセスできるテレメトリ ログに表示可能性があります。
+    syntax:
+      content: 'function add(pool: PoolAddParameter, options?: Models.PoolAddOptionalParams)'
+      parameters:
+        - id: pool
+          type:
+            - '@azure/batch.PoolAddParameter'
+          description: 追加するプール。
+        - id: options
+          type:
+            - Models.PoolAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.add_2'
+    name: 'add(PoolAddParameter, PoolAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(pool: PoolAddParameter, options: PoolAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: pool
+          type:
+            - '@azure/batch.PoolAddParameter'
+          description: 追加するプール。
+        - id: options
+          type:
+            - '@azure/batch.PoolAddOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.add_1'
+    name: 'add(PoolAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(pool: PoolAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: pool
+          type:
+            - '@azure/batch.PoolAddParameter'
+          description: 追加するプール。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.deleteMethod'
+    name: 'deleteMethod(string, Models.PoolDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      プールが削除されることを要求するときに、次の操作が発生する: プールの状態が ; の削除に設定されています。プールで進行中のサイズ変更操作が停止しました。Batch サービスの開始ノードをゼロにプールのサイズ変更既存のノードで実行されているすべてのタスクが終了し、(既定 requeue オプションを使用して要求されたサイズ変更、プールの操作) 場合、再度キューに登録します。最後に、プールは、システムから削除されます。 実行中のタスクがキューに再登録するため、ユーザーは、別のプールを対象に、ジョブを更新することで、これらのタスクを再実行できます。 新しいプール上でタスクを実行できます。
+      Requeue の動作をオーバーライドする場合は、サイズがゼロにプールを削除する前に、プールを圧縮するには、明示的にサイズ変更のプールを呼び出す必要があります。 プール削除の状態で、更新、Patch または Delete API を呼び出す場合は、エラー コード PoolBeingDeleted で HTTP ステータス コード 409 で失敗します。
+    syntax:
+      content: 'function deleteMethod(poolId: string, options?: Models.PoolDeleteMethodOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 削除するプールの ID。
+        - id: options
+          type:
+            - Models.PoolDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.deleteMethod_2'
+    name: 'deleteMethod(string, PoolDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(poolId: string, options: PoolDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 削除するプールの ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolDeleteMethodOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(poolId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 削除するプールの ID。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.disableAutoScale'
+    name: 'disableAutoScale(string, Models.PoolDisableAutoScaleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(poolId: string, options?: Models.PoolDisableAutoScaleOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 自動スケールを無効にするプールの ID。
+        - id: options
+          type:
+            - Models.PoolDisableAutoScaleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.disableAutoScale_2'
+    name: 'disableAutoScale(string, PoolDisableAutoScaleOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(poolId: string, options: PoolDisableAutoScaleOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 自動スケールを無効にするプールの ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolDisableAutoScaleOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.disableAutoScale_1'
+    name: 'disableAutoScale(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(poolId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 自動スケールを無効にするプールの ID。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.enableAutoScale'
+    name: 'enableAutoScale(string, PoolEnableAutoScaleParameter, Models.PoolEnableAutoScaleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      サイズ変更操作が、プールで進行中の場合、プールで自動スケールを有効にすることはできません。
+      プールの自動スケールが現在無効になっている場合は、要求の一部として有効な自動スケールの数式を指定する必要があります。 プールの自動スケールが既に有効になっている場合は、新しい自動スケールの数式や新しい評価の間隔を指定できます。 30 秒ごとに複数回、同じプールのこの API を呼び出すことはできません。
+    syntax:
+      content: 'function enableAutoScale(poolId: string, poolEnableAutoScaleParameter: PoolEnableAutoScaleParameter, options?: Models.PoolEnableAutoScaleOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 自動スケールを有効にするプールの ID。
+        - id: poolEnableAutoScaleParameter
+          type:
+            - '@azure/batch.PoolEnableAutoScaleParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - Models.PoolEnableAutoScaleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolEnableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.enableAutoScale_2'
+    name: 'enableAutoScale(string, PoolEnableAutoScaleParameter, PoolEnableAutoScaleOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableAutoScale(poolId: string, poolEnableAutoScaleParameter: PoolEnableAutoScaleParameter, options: PoolEnableAutoScaleOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 自動スケールを有効にするプールの ID。
+        - id: poolEnableAutoScaleParameter
+          type:
+            - '@azure/batch.PoolEnableAutoScaleParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - '@azure/batch.PoolEnableAutoScaleOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolEnableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.enableAutoScale_1'
+    name: 'enableAutoScale(string, PoolEnableAutoScaleParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableAutoScale(poolId: string, poolEnableAutoScaleParameter: PoolEnableAutoScaleParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 自動スケールを有効にするプールの ID。
+        - id: poolEnableAutoScaleParameter
+          type:
+            - '@azure/batch.PoolEnableAutoScaleParameter'
+          description: 要求のパラメーター。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolEnableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.evaluateAutoScale'
+    name: 'evaluateAutoScale(string, string, Models.PoolEvaluateAutoScaleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: この API は、自動スケールの数式を検証するためには、主に、単純にプールに数式を適用せず、結果が返される。 プールには、自動スケールの数式を評価するために有効になっている必要があります。
+    syntax:
+      content: 'function evaluateAutoScale(poolId: string, autoScaleFormula: string, options?: Models.PoolEvaluateAutoScaleOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 自動スケールの数式を評価するプールの ID。
+        - id: autoScaleFormula
+          type:
+            - string
+          description: 'プール内のコンピューティング ノードの必要な数の式。 数式が検証の結果が計算され、そのプールには適用されません。 プールに、式の適用、'' を有効にするプールで自動スケーリング ''。 次の数式を指定する方法については、自動的にスケールを参照してくださいコンピューティング、Azure Batch プール内のノード (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)します。'
+        - id: options
+          type:
+            - Models.PoolEvaluateAutoScaleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolEvaluateAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.evaluateAutoScale_2'
+    name: 'evaluateAutoScale(string, string, PoolEvaluateAutoScaleOptionalParams, ServiceCallback<AutoScaleRun>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function evaluateAutoScale(poolId: string, autoScaleFormula: string, options: PoolEvaluateAutoScaleOptionalParams, callback: ServiceCallback<AutoScaleRun>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 自動スケールの数式を評価するプールの ID。
+        - id: autoScaleFormula
+          type:
+            - string
+          description: 'プール内のコンピューティング ノードの必要な数の式。 数式が検証の結果が計算され、そのプールには適用されません。 プールに、式の適用、'' を有効にするプールで自動スケーリング ''。 次の数式を指定する方法については、自動的にスケールを参照してくださいコンピューティング、Azure Batch プール内のノード (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)します。'
+        - id: options
+          type:
+            - '@azure/batch.PoolEvaluateAutoScaleOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.AutoScaleRun>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolEvaluateAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.evaluateAutoScale_1'
+    name: 'evaluateAutoScale(string, string, ServiceCallback<AutoScaleRun>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function evaluateAutoScale(poolId: string, autoScaleFormula: string, callback: ServiceCallback<AutoScaleRun>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 自動スケールの数式を評価するプールの ID。
+        - id: autoScaleFormula
+          type:
+            - string
+          description: 'プール内のコンピューティング ノードの必要な数の式。 数式が検証の結果が計算され、そのプールには適用されません。 プールに、式の適用、'' を有効にするプールで自動スケーリング ''。 次の数式を指定する方法については、自動的にスケールを参照してくださいコンピューティング、Azure Batch プール内のノード (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)します。'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.AutoScaleRun>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolEvaluateAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.exists'
+    name: 'exists(string, Models.PoolExistsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: プールの基本プロパティを取得します。
+    syntax:
+      content: 'function exists(poolId: string, options?: Models.PoolExistsOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 取得するプールの ID。
+        - id: options
+          type:
+            - Models.PoolExistsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.exists_2'
+    name: 'exists(string, PoolExistsOptionalParams, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function exists(poolId: string, options: PoolExistsOptionalParams, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 取得するプールの ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolExistsOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.exists_1'
+    name: 'exists(string, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function exists(poolId: string, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 取得するプールの ID。
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.get'
+    name: 'get(string, Models.PoolGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 指定したプールに関する情報を取得します。
+    syntax:
+      content: 'function get(poolId: string, options?: Models.PoolGetOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 取得するプールの ID。
+        - id: options
+          type:
+            - Models.PoolGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.get_2'
+    name: 'get(string, PoolGetOptionalParams, ServiceCallback<CloudPool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, options: PoolGetOptionalParams, callback: ServiceCallback<CloudPool>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 取得するプールの ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolGetOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPool>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.get_1'
+    name: 'get(string, ServiceCallback<CloudPool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, callback: ServiceCallback<CloudPool>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 取得するプールの ID。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPool>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.getAllLifetimeStatistics'
+    name: getAllLifetimeStatistics(Models.PoolGetAllLifetimeStatisticsOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 統計情報は、存在していたアカウントの作成から、アカウントに、最後に、統計の更新時刻をすべてプールにわたって集計されます。 統計情報をすぐに使用できない可能性があります。 Batch サービスは、統計情報の定期的なロール アップを実行します。 一般的な遅延は、約 30 分です。
+    syntax:
+      content: 'function getAllLifetimeStatistics(options?: Models.PoolGetAllLifetimeStatisticsOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PoolGetAllLifetimeStatisticsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.getAllLifetimeStatistics_2'
+    name: 'getAllLifetimeStatistics(PoolGetAllLifetimeStatisticsOptionalParams, ServiceCallback<PoolStatistics>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(options: PoolGetAllLifetimeStatisticsOptionalParams, callback: ServiceCallback<PoolStatistics>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolStatistics>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.getAllLifetimeStatistics_1'
+    name: getAllLifetimeStatistics(ServiceCallback<PoolStatistics>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(callback: ServiceCallback<PoolStatistics>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolStatistics>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.list'
+    name: list(Models.PoolListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options?: Models.PoolListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PoolListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.list_2'
+    name: 'list(PoolListOptionalParams, ServiceCallback<CloudPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: PoolListOptionalParams, callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.PoolListOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.list_1'
+    name: list(ServiceCallback<CloudPoolListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listNext'
+    name: 'listNext(string, Models.PoolListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.PoolListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - Models.PoolListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listNext_2'
+    name: 'listNext(string, PoolListNextOptionalParams, ServiceCallback<CloudPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: PoolListNextOptionalParams, callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - '@azure/batch.PoolListNextOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listNext_1'
+    name: 'listNext(string, ServiceCallback<CloudPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetrics'
+    name: listUsageMetrics(Models.PoolListUsageMetricsOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: など、poolId $filter 句を指定しない場合、応答にはによって返される集計間隔の時間範囲内のアカウントで存在していたすべてのプールが含まれます。 現在使用できません。 最後の集計間隔の開始および終了時刻に、これらの既定のフィルターを開始時刻または終了時刻を含む $filter 句を指定しない場合つまり、最後の集計間隔のみが返されます。
+    syntax:
+      content: 'function listUsageMetrics(options?: Models.PoolListUsageMetricsOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PoolListUsageMetricsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetrics_2'
+    name: 'listUsageMetrics(PoolListUsageMetricsOptionalParams, ServiceCallback<PoolListUsageMetricsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetrics(options: PoolListUsageMetricsOptionalParams, callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.PoolListUsageMetricsOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetrics_1'
+    name: listUsageMetrics(ServiceCallback<PoolListUsageMetricsResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetrics(callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetricsNext'
+    name: 'listUsageMetricsNext(string, Models.PoolListUsageMetricsNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: など、poolId $filter 句を指定しない場合、応答にはによって返される集計間隔の時間範囲内のアカウントで存在していたすべてのプールが含まれます。 現在使用できません。 最後の集計間隔の開始および終了時刻に、これらの既定のフィルターを開始時刻または終了時刻を含む $filter 句を指定しない場合つまり、最後の集計間隔のみが返されます。
+    syntax:
+      content: 'function listUsageMetricsNext(nextPageLink: string, options?: Models.PoolListUsageMetricsNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - Models.PoolListUsageMetricsNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetricsNext_2'
+    name: 'listUsageMetricsNext(string, PoolListUsageMetricsNextOptionalParams, ServiceCallback<PoolListUsageMetricsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetricsNext(nextPageLink: string, options: PoolListUsageMetricsNextOptionalParams, callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: options
+          type:
+            - '@azure/batch.PoolListUsageMetricsNextOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetricsNext_1'
+    name: 'listUsageMetricsNext(string, ServiceCallback<PoolListUsageMetricsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetricsNext(nextPageLink: string, callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: リスト操作に成功した前回の呼び出しからの NextLink です。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.patch'
+    name: 'patch(string, PoolPatchParameter, Models.PoolPatchOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: これには、要求で指定されたプールのプロパティのみ置き換えられます。 たとえば、プールに関連付けられた開始タスク、要求が開始タスクの要素を指定しない場合は、既存の開始タスクはプールに。
+    syntax:
+      content: 'function patch(poolId: string, poolPatchParameter: PoolPatchParameter, options?: Models.PoolPatchOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 更新するプールの ID。
+        - id: poolPatchParameter
+          type:
+            - '@azure/batch.PoolPatchParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - Models.PoolPatchOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.patch_2'
+    name: 'patch(string, PoolPatchParameter, PoolPatchOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(poolId: string, poolPatchParameter: PoolPatchParameter, options: PoolPatchOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 更新するプールの ID。
+        - id: poolPatchParameter
+          type:
+            - '@azure/batch.PoolPatchParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - '@azure/batch.PoolPatchOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.patch_1'
+    name: 'patch(string, PoolPatchParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(poolId: string, poolPatchParameter: PoolPatchParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 更新するプールの ID。
+        - id: poolPatchParameter
+          type:
+            - '@azure/batch.PoolPatchParameter'
+          description: 要求のパラメーター。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.constructor'
+    name: Pool(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: プールを作成します。
+    syntax:
+      content: 'new Pool(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            サービス クライアントへの参照。
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.removeNodes'
+    name: 'removeNodes(string, NodeRemoveParameter, Models.PoolRemoveNodesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: この操作は、プールの割り当ての状態が安定したときにのみ実行できます。 この操作を実行すると割り当ての状態変更が安定からサイズを変更します。
+    syntax:
+      content: 'function removeNodes(poolId: string, nodeRemoveParameter: NodeRemoveParameter, options?: Models.PoolRemoveNodesOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: ノードを削除するプールの ID。
+        - id: nodeRemoveParameter
+          type:
+            - '@azure/batch.NodeRemoveParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - Models.PoolRemoveNodesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolRemoveNodesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.removeNodes_2'
+    name: 'removeNodes(string, NodeRemoveParameter, PoolRemoveNodesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeNodes(poolId: string, nodeRemoveParameter: NodeRemoveParameter, options: PoolRemoveNodesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: ノードを削除するプールの ID。
+        - id: nodeRemoveParameter
+          type:
+            - '@azure/batch.NodeRemoveParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - '@azure/batch.PoolRemoveNodesOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolRemoveNodesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.removeNodes_1'
+    name: 'removeNodes(string, NodeRemoveParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeNodes(poolId: string, nodeRemoveParameter: NodeRemoveParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: ノードを削除するプールの ID。
+        - id: nodeRemoveParameter
+          type:
+            - '@azure/batch.NodeRemoveParameter'
+          description: 要求のパラメーター。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolRemoveNodesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.resize'
+    name: 'resize(string, PoolResizeParameter, Models.PoolResizeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: プールは、その割り当ての状態が点灯しているときにのみ変更できます。 プールは既にサイズ変更、要求はステータス コード 409 で失敗します。 ときに、プールのサイズを変更する安定したから、プールの割り当て状態変更がサイズ変更します。 自動スケールが構成されているプールのサイズを変更することはできません。 これを行うしようとすると、Batch サービスはエラー 409 を返します。 下方向にプールのサイズを変更する場合、Batch サービスは削除するノードを選択します。 特定のノードを削除するには、プール削除ノード API を代わりに使用します。
+    syntax:
+      content: 'function resize(poolId: string, poolResizeParameter: PoolResizeParameter, options?: Models.PoolResizeOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: サイズを変更するプールの ID。
+        - id: poolResizeParameter
+          type:
+            - '@azure/batch.PoolResizeParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - Models.PoolResizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.resize_2'
+    name: 'resize(string, PoolResizeParameter, PoolResizeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function resize(poolId: string, poolResizeParameter: PoolResizeParameter, options: PoolResizeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: サイズを変更するプールの ID。
+        - id: poolResizeParameter
+          type:
+            - '@azure/batch.PoolResizeParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - '@azure/batch.PoolResizeOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.resize_1'
+    name: 'resize(string, PoolResizeParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function resize(poolId: string, poolResizeParameter: PoolResizeParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: サイズを変更するプールの ID。
+        - id: poolResizeParameter
+          type:
+            - '@azure/batch.PoolResizeParameter'
+          description: 要求のパラメーター。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.stopResize'
+    name: 'stopResize(string, Models.PoolStopResizeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: プール サイズ変更操作の前に以前の状態は元に戻りません。 さらに行われた変更だけが停止され、プールが現在の状態を維持します。 停止してから後、に停止操作が実行されているノードの数にプールが安定化します。 プールの割り当ての状態は、停止操作中は停止してから、着実に最初に変更します。 サイズ変更操作を明示的なサイズ変更プール要求する必要はありません。この API は、作成時に、プールの初期サイズ設定を停止することもできます。
+    syntax:
+      content: 'function stopResize(poolId: string, options?: Models.PoolStopResizeOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: サイズを停止するプールの ID。
+        - id: options
+          type:
+            - Models.PoolStopResizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.stopResize_2'
+    name: 'stopResize(string, PoolStopResizeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(poolId: string, options: PoolStopResizeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: サイズを停止するプールの ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolStopResizeOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.stopResize_1'
+    name: 'stopResize(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(poolId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: サイズを停止するプールの ID。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.updateProperties'
+    name: 'updateProperties(string, PoolUpdatePropertiesParameter, Models.PoolUpdatePropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: これにより、プールのすべての更新可能なプロパティが完全に置き換えられます。 たとえば、プールに関連付けられている開始タスク、開始タスクがこの要求で指定されていない場合、Batch サービスは削除する場合でタスクを開始する既存の。
+    syntax:
+      content: 'function updateProperties(poolId: string, poolUpdatePropertiesParameter: PoolUpdatePropertiesParameter, options?: Models.PoolUpdatePropertiesOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 更新するプールの ID。
+        - id: poolUpdatePropertiesParameter
+          type:
+            - '@azure/batch.PoolUpdatePropertiesParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - Models.PoolUpdatePropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolUpdatePropertiesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.updateProperties_2'
+    name: 'updateProperties(string, PoolUpdatePropertiesParameter, PoolUpdatePropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateProperties(poolId: string, poolUpdatePropertiesParameter: PoolUpdatePropertiesParameter, options: PoolUpdatePropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 更新するプールの ID。
+        - id: poolUpdatePropertiesParameter
+          type:
+            - '@azure/batch.PoolUpdatePropertiesParameter'
+          description: 要求のパラメーター。
+        - id: options
+          type:
+            - '@azure/batch.PoolUpdatePropertiesOptionalParams'
+          description: 省略可能なパラメーター
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolUpdatePropertiesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.updateProperties_1'
+    name: 'updateProperties(string, PoolUpdatePropertiesParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateProperties(poolId: string, poolUpdatePropertiesParameter: PoolUpdatePropertiesParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 更新するプールの ID。
+        - id: poolUpdatePropertiesParameter
+          type:
+            - '@azure/batch.PoolUpdatePropertiesParameter'
+          description: 要求のパラメーター。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            コールバック
+      return:
+        type:
+          - Promise<Models.PoolUpdatePropertiesResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.PoolAddParameter'
+    name: PoolAddParameter
+    spec.typeScript:
+      - name: PoolAddParameter
+        fullName: PoolAddParameter
+        uid: '@azure/batch.PoolAddParameter'
+  - uid: '@azure/batch.PoolAddOptionalParams'
+    name: PoolAddOptionalParams
+    spec.typeScript:
+      - name: PoolAddOptionalParams
+        fullName: PoolAddOptionalParams
+        uid: '@azure/batch.PoolAddOptionalParams'
+  - uid: '@azure/batch.PoolDeleteMethodOptionalParams'
+    name: PoolDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: PoolDeleteMethodOptionalParams
+        fullName: PoolDeleteMethodOptionalParams
+        uid: '@azure/batch.PoolDeleteMethodOptionalParams'
+  - uid: '@azure/batch.PoolDisableAutoScaleOptionalParams'
+    name: PoolDisableAutoScaleOptionalParams
+    spec.typeScript:
+      - name: PoolDisableAutoScaleOptionalParams
+        fullName: PoolDisableAutoScaleOptionalParams
+        uid: '@azure/batch.PoolDisableAutoScaleOptionalParams'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter'
+    name: PoolEnableAutoScaleParameter
+    spec.typeScript:
+      - name: PoolEnableAutoScaleParameter
+        fullName: PoolEnableAutoScaleParameter
+        uid: '@azure/batch.PoolEnableAutoScaleParameter'
+  - uid: '@azure/batch.PoolEnableAutoScaleOptionalParams'
+    name: PoolEnableAutoScaleOptionalParams
+    spec.typeScript:
+      - name: PoolEnableAutoScaleOptionalParams
+        fullName: PoolEnableAutoScaleOptionalParams
+        uid: '@azure/batch.PoolEnableAutoScaleOptionalParams'
+  - uid: ServiceCallback<@azure/batch.AutoScaleRun>
+    name: AutoScaleRun>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AutoScaleRun
+        fullName: AutoScaleRun
+        uid: '@azure/batch.AutoScaleRun'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolEvaluateAutoScaleOptionalParams'
+    name: PoolEvaluateAutoScaleOptionalParams
+    spec.typeScript:
+      - name: PoolEvaluateAutoScaleOptionalParams
+        fullName: PoolEvaluateAutoScaleOptionalParams
+        uid: '@azure/batch.PoolEvaluateAutoScaleOptionalParams'
+  - uid: '@azure/batch.PoolExistsOptionalParams'
+    name: PoolExistsOptionalParams
+    spec.typeScript:
+      - name: PoolExistsOptionalParams
+        fullName: PoolExistsOptionalParams
+        uid: '@azure/batch.PoolExistsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudPool>
+    name: CloudPool>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudPool
+        fullName: CloudPool
+        uid: '@azure/batch.CloudPool'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolGetOptionalParams'
+    name: PoolGetOptionalParams
+    spec.typeScript:
+      - name: PoolGetOptionalParams
+        fullName: PoolGetOptionalParams
+        uid: '@azure/batch.PoolGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.PoolStatistics>
+    name: PoolStatistics>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PoolStatistics
+        fullName: PoolStatistics
+        uid: '@azure/batch.PoolStatistics'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams'
+    name: PoolGetAllLifetimeStatisticsOptionalParams
+    spec.typeScript:
+      - name: PoolGetAllLifetimeStatisticsOptionalParams
+        fullName: PoolGetAllLifetimeStatisticsOptionalParams
+        uid: '@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudPoolListResult>
+    name: CloudPoolListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudPoolListResult
+        fullName: CloudPoolListResult
+        uid: '@azure/batch.CloudPoolListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolListOptionalParams'
+    name: PoolListOptionalParams
+    spec.typeScript:
+      - name: PoolListOptionalParams
+        fullName: PoolListOptionalParams
+        uid: '@azure/batch.PoolListOptionalParams'
+  - uid: '@azure/batch.PoolListNextOptionalParams'
+    name: PoolListNextOptionalParams
+    spec.typeScript:
+      - name: PoolListNextOptionalParams
+        fullName: PoolListNextOptionalParams
+        uid: '@azure/batch.PoolListNextOptionalParams'
+  - uid: ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+    name: PoolListUsageMetricsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PoolListUsageMetricsResult
+        fullName: PoolListUsageMetricsResult
+        uid: '@azure/batch.PoolListUsageMetricsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolListUsageMetricsOptionalParams'
+    name: PoolListUsageMetricsOptionalParams
+    spec.typeScript:
+      - name: PoolListUsageMetricsOptionalParams
+        fullName: PoolListUsageMetricsOptionalParams
+        uid: '@azure/batch.PoolListUsageMetricsOptionalParams'
+  - uid: '@azure/batch.PoolListUsageMetricsNextOptionalParams'
+    name: PoolListUsageMetricsNextOptionalParams
+    spec.typeScript:
+      - name: PoolListUsageMetricsNextOptionalParams
+        fullName: PoolListUsageMetricsNextOptionalParams
+        uid: '@azure/batch.PoolListUsageMetricsNextOptionalParams'
+  - uid: '@azure/batch.PoolPatchParameter'
+    name: PoolPatchParameter
+    spec.typeScript:
+      - name: PoolPatchParameter
+        fullName: PoolPatchParameter
+        uid: '@azure/batch.PoolPatchParameter'
+  - uid: '@azure/batch.PoolPatchOptionalParams'
+    name: PoolPatchOptionalParams
+    spec.typeScript:
+      - name: PoolPatchOptionalParams
+        fullName: PoolPatchOptionalParams
+        uid: '@azure/batch.PoolPatchOptionalParams'
+  - uid: '@azure/batch.NodeRemoveParameter'
+    name: NodeRemoveParameter
+    spec.typeScript:
+      - name: NodeRemoveParameter
+        fullName: NodeRemoveParameter
+        uid: '@azure/batch.NodeRemoveParameter'
+  - uid: '@azure/batch.PoolRemoveNodesOptionalParams'
+    name: PoolRemoveNodesOptionalParams
+    spec.typeScript:
+      - name: PoolRemoveNodesOptionalParams
+        fullName: PoolRemoveNodesOptionalParams
+        uid: '@azure/batch.PoolRemoveNodesOptionalParams'
+  - uid: '@azure/batch.PoolResizeParameter'
+    name: PoolResizeParameter
+    spec.typeScript:
+      - name: PoolResizeParameter
+        fullName: PoolResizeParameter
+        uid: '@azure/batch.PoolResizeParameter'
+  - uid: '@azure/batch.PoolResizeOptionalParams'
+    name: PoolResizeOptionalParams
+    spec.typeScript:
+      - name: PoolResizeOptionalParams
+        fullName: PoolResizeOptionalParams
+        uid: '@azure/batch.PoolResizeOptionalParams'
+  - uid: '@azure/batch.PoolStopResizeOptionalParams'
+    name: PoolStopResizeOptionalParams
+    spec.typeScript:
+      - name: PoolStopResizeOptionalParams
+        fullName: PoolStopResizeOptionalParams
+        uid: '@azure/batch.PoolStopResizeOptionalParams'
+  - uid: '@azure/batch.PoolUpdatePropertiesParameter'
+    name: PoolUpdatePropertiesParameter
+    spec.typeScript:
+      - name: PoolUpdatePropertiesParameter
+        fullName: PoolUpdatePropertiesParameter
+        uid: '@azure/batch.PoolUpdatePropertiesParameter'
+  - uid: '@azure/batch.PoolUpdatePropertiesOptionalParams'
+    name: PoolUpdatePropertiesOptionalParams
+    spec.typeScript:
+      - name: PoolUpdatePropertiesOptionalParams
+        fullName: PoolUpdatePropertiesOptionalParams
+        uid: '@azure/batch.PoolUpdatePropertiesOptionalParams'

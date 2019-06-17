@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ScaleAction'
+    name: ScaleAction
+    fullName: ScaleAction
+    children:
+      - '@azure/arm-monitor.ScaleAction.cooldown'
+      - '@azure/arm-monitor.ScaleAction.direction'
+      - '@azure/arm-monitor.ScaleAction.type'
+      - '@azure/arm-monitor.ScaleAction.value'
+    langs:
+      - typeScript
+    type: interface
+    summary: スケーリング処理のパラメーター。
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.cooldown'
+    name: cooldown
+    fullName: cooldown
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このアクションが発生する前に最後のスケーリング処理のために待機する時間数。 これは、1 週間から 1 分で ISO 8601 形式でなければなりません。
+    syntax:
+      content: 'cooldown: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.direction'
+    name: direction
+    fullName: direction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: スケールの方向。 かどうか、スケール アクションが増加またはインスタンスの数を減らします。 指定できる値は、次のとおりです。'None'、'増加'、' 低下 '
+    syntax:
+      content: 'direction: ScaleDirection'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleDirection'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'スケールのルールが発生したときに発生するアクションの種類。 指定できる値は、次のとおりです。''ChangeCount'', ''PercentChangeCount'', ''ExactCount'''
+    syntax:
+      content: 'type: ScaleType'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.value'
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'スケーリング処理に関連するインスタンスの数。 1 以上の値を設定する必要があります。 既定値は 1 です。 既定値:''1''.'
+    optional: true
+    syntax:
+      content: 'value?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ScaleDirection'
+    name: ScaleDirection
+    spec.typeScript:
+      - name: ScaleDirection
+        fullName: ScaleDirection
+        uid: '@azure/arm-monitor.ScaleDirection'
+  - uid: '@azure/arm-monitor.ScaleType'
+    name: ScaleType
+    spec.typeScript:
+      - name: ScaleType
+        fullName: ScaleType
+        uid: '@azure/arm-monitor.ScaleType'

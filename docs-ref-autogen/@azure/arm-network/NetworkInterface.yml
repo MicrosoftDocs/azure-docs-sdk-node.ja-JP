@@ -10,13 +10,13 @@ items:
       - '@azure/arm-network.NetworkInterface.etag'
       - '@azure/arm-network.NetworkInterface.hostedWorkloads'
       - '@azure/arm-network.NetworkInterface.id'
-      - '@azure/arm-network.NetworkInterface.interfaceEndpoint'
       - '@azure/arm-network.NetworkInterface.ipConfigurations'
       - '@azure/arm-network.NetworkInterface.location'
       - '@azure/arm-network.NetworkInterface.macAddress'
       - '@azure/arm-network.NetworkInterface.name'
       - '@azure/arm-network.NetworkInterface.networkSecurityGroup'
       - '@azure/arm-network.NetworkInterface.primary'
+      - '@azure/arm-network.NetworkInterface.privateEndpoint'
       - '@azure/arm-network.NetworkInterface.provisioningState'
       - '@azure/arm-network.NetworkInterface.resourceGuid'
       - '@azure/arm-network.NetworkInterface.tags'
@@ -97,7 +97,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: リンクされた BareMetal リソースへの参照の一覧**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    summary: |-
+      リンクされた BareMetal リソースへの参照の一覧。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
     optional: true
     syntax:
       content: 'hostedWorkloads?: string[]'
@@ -119,23 +121,6 @@ items:
       return:
         type:
           - undefined | string
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkInterface.interfaceEndpoint'
-    name: interfaceEndpoint
-    fullName: interfaceEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      ネットワーク インターフェイスがリンクされているインターフェイスのエンドポイントへの参照。
-      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
-    optional: true
-    syntax:
-      content: 'interfaceEndpoint?: InterfaceEndpoint'
-      return:
-        type:
-          - '@azure/arm-network.InterfaceEndpoint'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.ipConfigurations'
     name: ipConfigurations
@@ -229,6 +214,23 @@ items:
         type:
           - undefined | false | true
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkInterface.privateEndpoint'
+    name: privateEndpoint
+    fullName: privateEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ネットワーク インターフェイスがリンクされているプライベート エンドポイントへの参照。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'privateEndpoint?: PrivateEndpoint'
+      return:
+        type:
+          - '@azure/arm-network.PrivateEndpoint'
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.provisioningState'
     name: provisioningState
     fullName: provisioningState
@@ -236,7 +238,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: パブリック IP リソースのプロビジョニングの状態。 有効な値は次のとおりです。' の更新'、'削除' および '失敗' です。
+    summary: パブリック IP リソースのプロビジョニングの状態。 設定可能な値は、次のとおりです。' の更新'、'削除' および '失敗' です。
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -336,12 +338,6 @@ references:
       - name: NetworkInterfaceDnsSettings
         fullName: NetworkInterfaceDnsSettings
         uid: '@azure/arm-network.NetworkInterfaceDnsSettings'
-  - uid: '@azure/arm-network.InterfaceEndpoint'
-    name: InterfaceEndpoint
-    spec.typeScript:
-      - name: InterfaceEndpoint
-        fullName: InterfaceEndpoint
-        uid: '@azure/arm-network.InterfaceEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
     name: 'NetworkInterfaceIPConfiguration[]'
     spec.typeScript:
@@ -356,6 +352,12 @@ references:
       - name: NetworkSecurityGroup
         fullName: NetworkSecurityGroup
         uid: '@azure/arm-network.NetworkSecurityGroup'
+  - uid: '@azure/arm-network.PrivateEndpoint'
+    name: PrivateEndpoint
+    spec.typeScript:
+      - name: PrivateEndpoint
+        fullName: PrivateEndpoint
+        uid: '@azure/arm-network.PrivateEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
     name: 'NetworkInterfaceTapConfiguration[]'
     spec.typeScript:
