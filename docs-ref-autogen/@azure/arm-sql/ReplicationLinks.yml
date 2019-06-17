@@ -1,0 +1,523 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ReplicationLinks'
+    name: ReplicationLinks
+    fullName: ReplicationLinks
+    children:
+      - '@azure/arm-sql.ReplicationLinks.beginFailover'
+      - '@azure/arm-sql.ReplicationLinks.beginFailoverAllowDataLoss'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod_2'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod_1'
+      - '@azure/arm-sql.ReplicationLinks.failover'
+      - '@azure/arm-sql.ReplicationLinks.failoverAllowDataLoss'
+      - '@azure/arm-sql.ReplicationLinks.get'
+      - '@azure/arm-sql.ReplicationLinks.get_2'
+      - '@azure/arm-sql.ReplicationLinks.get_1'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase_2'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase_1'
+      - '@azure/arm-sql.ReplicationLinks.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="0aa1a-101">ReplicationLinks を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-101">Class representing a ReplicationLinks.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.beginFailover'
+    name: 'beginFailover(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0aa1a-102">現在のプライマリ レプリカのデータベースからフェールオーバーして、どのレプリカのデータベースがプライマリかを設定します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-102">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-103">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-104">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-105">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-105">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-106">フェールオーバーへのレプリケーション リンクを含むデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-106">The name of the database that has the replication link to be failed over.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-107">フェールオーバーをレプリケーション リンクの ID。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-107">The ID of the replication link to be failed over.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.beginFailoverAllowDataLoss'
+    name: 'beginFailoverAllowDataLoss(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0aa1a-108">現在のプライマリ レプリカのデータベースからフェールオーバーして、どのレプリカのデータベースがプライマリかを設定します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-108">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="0aa1a-109">この操作を行うとデータが失われる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-109">This operation might result in data loss.</span></span>
+    syntax:
+      content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-110">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-110">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-111">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-111">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-112">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-112">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-113">フェールオーバーへのレプリケーション リンクを含むデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-113">The name of the database that has the replication link to be failed over.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-114">フェールオーバーをレプリケーション リンクの ID。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-114">The ID of the replication link to be failed over.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0aa1a-115">データベース レプリケーション リンクを削除します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-115">Deletes a database replication link.</span></span> <span data-ttu-id="0aa1a-116">フェールオーバー中には実行できません。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-116">Cannot be done during failover.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-117">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-117">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-118">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-118">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-119">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-119">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-120">削除するレプリケーション リンクがあるデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-120">The name of the database that has the replication link to be dropped.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-121">削除するレプリケーション リンクの ID。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-121">The ID of the replication link to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-122">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-122">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-123">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-123">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-124">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-124">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-125">削除するレプリケーション リンクがあるデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-125">The name of the database that has the replication link to be dropped.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-126">削除するレプリケーション リンクの ID。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-126">The ID of the replication link to be deleted.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0aa1a-127">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="0aa1a-127">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="0aa1a-128">コールバック</span><span class="sxs-lookup"><span data-stu-id="0aa1a-128">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-129">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-130">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-131">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-131">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-132">削除するレプリケーション リンクがあるデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-132">The name of the database that has the replication link to be dropped.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-133">削除するレプリケーション リンクの ID。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-133">The ID of the replication link to be deleted.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="0aa1a-134">コールバック</span><span class="sxs-lookup"><span data-stu-id="0aa1a-134">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.failover'
+    name: 'failover(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0aa1a-135">現在のプライマリ レプリカのデータベースからフェールオーバーして、どのレプリカのデータベースがプライマリかを設定します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-135">Sets which replica database is primary by failing over from the current primary replica database.</span></span>
+    syntax:
+      content: 'function failover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-136">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-136">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-137">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-137">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-138">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-138">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-139">フェールオーバーへのレプリケーション リンクを含むデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-139">The name of the database that has the replication link to be failed over.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-140">フェールオーバーをレプリケーション リンクの ID。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-140">The ID of the replication link to be failed over.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.failoverAllowDataLoss'
+    name: 'failoverAllowDataLoss(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0aa1a-141">現在のプライマリ レプリカのデータベースからフェールオーバーして、どのレプリカのデータベースがプライマリかを設定します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-141">Sets which replica database is primary by failing over from the current primary replica database.</span></span> <span data-ttu-id="0aa1a-142">この操作を行うとデータが失われる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-142">This operation might result in data loss.</span></span>
+    syntax:
+      content: 'function failoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-143">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-143">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-144">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-144">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-145">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-145">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-146">フェールオーバーへのレプリケーション リンクを含むデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-146">The name of the database that has the replication link to be failed over.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-147">フェールオーバーをレプリケーション リンクの ID。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-147">The ID of the replication link to be failed over.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0aa1a-148">データベース レプリケーション リンクを取得します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-148">Gets a database replication link.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-149">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-149">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-150">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-150">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-151">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-151">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-152">リンクを取得するデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-152">The name of the database to get the link for.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-153">レプリケーション リンク ID を取得します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-153">The replication link ID to be retrieved.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<ReplicationLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: RequestOptionsBase, callback: ServiceCallback<ReplicationLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-154">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-154">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-155">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-155">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-156">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-156">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-157">リンクを取得するデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-157">The name of the database to get the link for.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-158">レプリケーション リンク ID を取得します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-158">The replication link ID to be retrieved.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0aa1a-159">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="0aa1a-159">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLink>
+          description: |
+            <span data-ttu-id="0aa1a-160">コールバック</span><span class="sxs-lookup"><span data-stu-id="0aa1a-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<ReplicationLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<ReplicationLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-161">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-161">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-162">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-162">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-163">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-163">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-164">リンクを取得するデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-164">The name of the database to get the link for.</span></span>
+        - id: linkId
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-165">レプリケーション リンク ID を取得します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-165">The replication link ID to be retrieved.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLink>
+          description: |
+            <span data-ttu-id="0aa1a-166">コールバック</span><span class="sxs-lookup"><span data-stu-id="0aa1a-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase'
+    name: 'listByDatabase(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0aa1a-167">データベースのレプリケーション リンクの一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-167">Lists a database's replication links.</span></span>
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-168">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-168">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-169">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-169">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-170">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-170">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-171">リンクを取得するデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-171">The name of the database to retrieve links for.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase_2'
+    name: 'listByDatabase(string, string, string, RequestOptionsBase, ServiceCallback<ReplicationLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options: RequestOptionsBase, callback: ServiceCallback<ReplicationLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-172">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-172">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-173">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-173">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-174">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-174">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-175">リンクを取得するデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-175">The name of the database to retrieve links for.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0aa1a-176">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="0aa1a-176">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+          description: |
+            <span data-ttu-id="0aa1a-177">コールバック</span><span class="sxs-lookup"><span data-stu-id="0aa1a-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase_1'
+    name: 'listByDatabase(string, string, string, ServiceCallback<ReplicationLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<ReplicationLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-178">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-178">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="0aa1a-179">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-179">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-180">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-180">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="0aa1a-181">リンクを取得するデータベースの名前。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-181">The name of the database to retrieve links for.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+          description: |
+            <span data-ttu-id="0aa1a-182">コールバック</span><span class="sxs-lookup"><span data-stu-id="0aa1a-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.constructor'
+    name: ReplicationLinks(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0aa1a-183">ReplicationLinks を作成します。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-183">Create a ReplicationLinks.</span></span>
+    syntax:
+      content: 'new ReplicationLinks(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="0aa1a-184">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="0aa1a-184">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-sql.ReplicationLink>
+    name: ReplicationLink>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ReplicationLink
+        fullName: ReplicationLink
+        uid: '@azure/arm-sql.ReplicationLink'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+    name: ReplicationLinkListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ReplicationLinkListResult
+        fullName: ReplicationLinkListResult
+        uid: '@azure/arm-sql.ReplicationLinkListResult'
+      - name: '>'
+        fullName: '>'

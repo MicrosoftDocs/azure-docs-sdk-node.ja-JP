@@ -4,18 +4,36 @@ items:
     name: ServiceAssociationLink
     fullName: ServiceAssociationLink
     children:
+      - '@azure/arm-network.ServiceAssociationLink.allowDelete'
       - '@azure/arm-network.ServiceAssociationLink.etag'
       - '@azure/arm-network.ServiceAssociationLink.id'
       - '@azure/arm-network.ServiceAssociationLink.link'
       - '@azure/arm-network.ServiceAssociationLink.linkedResourceType'
+      - '@azure/arm-network.ServiceAssociationLink.locations'
       - '@azure/arm-network.ServiceAssociationLink.name'
       - '@azure/arm-network.ServiceAssociationLink.provisioningState'
+      - '@azure/arm-network.ServiceAssociationLink.type'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="741d2-101">ServiceAssociationLink リソースです。</span><span class="sxs-lookup"><span data-stu-id="741d2-101">ServiceAssociationLink resource.</span></span>
+    summary: <span data-ttu-id="a223d-101">ServiceAssociationLink リソースです。</span><span class="sxs-lookup"><span data-stu-id="a223d-101">ServiceAssociationLink resource.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ServiceAssociationLink.allowDelete'
+    name: allowDelete
+    fullName: allowDelete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a223d-102">True の場合、リソースを削除することができます。</span><span class="sxs-lookup"><span data-stu-id="a223d-102">If true, the resource can be deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'allowDelete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.etag'
     name: etag
@@ -25,8 +43,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="741d2-102">読み取り専用する一意の文字列リソースを更新するたびに変更します。</span><span class="sxs-lookup"><span data-stu-id="741d2-102">A unique read-only string that changes whenever the resource is updated.</span></span>
-      <span data-ttu-id="741d2-103">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="741d2-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="a223d-103">読み取り専用する一意の文字列リソースを更新するたびに変更します。</span><span class="sxs-lookup"><span data-stu-id="a223d-103">A unique read-only string that changes whenever the resource is updated.</span></span>
+      <span data-ttu-id="a223d-104">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="a223d-104">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -41,7 +59,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="741d2-104">リソースの ID</span><span class="sxs-lookup"><span data-stu-id="741d2-104">Resource ID.</span></span>
+    summary: <span data-ttu-id="a223d-105">リソースの ID</span><span class="sxs-lookup"><span data-stu-id="a223d-105">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -56,7 +74,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="741d2-105">外部のリソースにリンクします。</span><span class="sxs-lookup"><span data-stu-id="741d2-105">Link to the external resource.</span></span>
+    summary: <span data-ttu-id="a223d-106">外部のリソースにリンクします。</span><span class="sxs-lookup"><span data-stu-id="a223d-106">Link to the external resource.</span></span>
     optional: true
     syntax:
       content: 'link?: undefined | string'
@@ -71,13 +89,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="741d2-106">リンクされたリソースのリソースの種類。</span><span class="sxs-lookup"><span data-stu-id="741d2-106">Resource type of the linked resource.</span></span>
+    summary: <span data-ttu-id="a223d-107">リンクされたリソースのリソースの種類。</span><span class="sxs-lookup"><span data-stu-id="a223d-107">Resource type of the linked resource.</span></span>
     optional: true
     syntax:
       content: 'linkedResourceType?: undefined | string'
       return:
         type:
           - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ServiceAssociationLink.locations'
+    name: locations
+    fullName: locations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a223d-108">場所の一覧。</span><span class="sxs-lookup"><span data-stu-id="a223d-108">A list of locations.</span></span>
+    optional: true
+    syntax:
+      content: 'locations?: string[]'
+      return:
+        type:
+          - 'string[]'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.name'
     name: name
@@ -86,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="741d2-107">リソース グループ内で一意であるリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="741d2-107">Name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="741d2-108">この名前は、リソースへのアクセスに使用できます。</span><span class="sxs-lookup"><span data-stu-id="741d2-108">This name can be used to access the resource.</span></span>
+    summary: <span data-ttu-id="a223d-109">リソース グループ内で一意であるリソースの名前。</span><span class="sxs-lookup"><span data-stu-id="a223d-109">Name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="a223d-110">この名前は、リソースへのアクセスに使用できます。</span><span class="sxs-lookup"><span data-stu-id="a223d-110">This name can be used to access the resource.</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -102,11 +135,26 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="741d2-109">ServiceAssociationLink リソースのプロビジョニング状態。</span><span class="sxs-lookup"><span data-stu-id="741d2-109">Provisioning state of the ServiceAssociationLink resource.</span></span>
-      <span data-ttu-id="741d2-110">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="741d2-110">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="a223d-111">ServiceAssociationLink リソースのプロビジョニング状態。</span><span class="sxs-lookup"><span data-stu-id="a223d-111">Provisioning state of the ServiceAssociationLink resource.</span></span>
+      <span data-ttu-id="a223d-112">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="a223d-112">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ServiceAssociationLink.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a223d-113">リソースの種類。</span><span class="sxs-lookup"><span data-stu-id="a223d-113">Resource type.</span></span>
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
