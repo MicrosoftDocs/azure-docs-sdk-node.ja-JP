@@ -1,0 +1,358 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ManagedDatabase'
+    name: ManagedDatabase
+    fullName: ManagedDatabase
+    children:
+      - '@azure/arm-sql.ManagedDatabase.catalogCollation'
+      - '@azure/arm-sql.ManagedDatabase.collation'
+      - '@azure/arm-sql.ManagedDatabase.createMode'
+      - '@azure/arm-sql.ManagedDatabase.creationDate'
+      - '@azure/arm-sql.ManagedDatabase.defaultSecondaryLocation'
+      - '@azure/arm-sql.ManagedDatabase.earliestRestorePoint'
+      - '@azure/arm-sql.ManagedDatabase.failoverGroupId'
+      - '@azure/arm-sql.ManagedDatabase.id'
+      - '@azure/arm-sql.ManagedDatabase.location'
+      - '@azure/arm-sql.ManagedDatabase.name'
+      - '@azure/arm-sql.ManagedDatabase.recoverableDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.restorableDroppedDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.restorePointInTime'
+      - '@azure/arm-sql.ManagedDatabase.sourceDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.status'
+      - '@azure/arm-sql.ManagedDatabase.storageContainerSasToken'
+      - '@azure/arm-sql.ManagedDatabase.storageContainerUri'
+      - '@azure/arm-sql.ManagedDatabase.tags'
+      - '@azure/arm-sql.ManagedDatabase.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="9d5ae-101">管理されたデータベース リソースです。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-101">A managed database resource.</span></span>
+    extends:
+      name: '@azure/arm-sql.TrackedResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.catalogCollation'
+    name: catalogCollation
+    fullName: catalogCollation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d5ae-102">メタデータ カタログの照合順序。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-102">Collation of the metadata catalog.</span></span> <span data-ttu-id="9d5ae-103">指定できる値は、次のとおりです。'' DATABASE_DEFAULT''、''SQL_Latin1_General_CP1_CI_AS''</span><span class="sxs-lookup"><span data-stu-id="9d5ae-103">Possible values include: ''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS''</span></span>'
+    optional: true
+    syntax:
+      content: 'catalogCollation?: CatalogCollationType'
+      return:
+        type:
+          - '@azure/arm-sql.CatalogCollationType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.collation'
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d5ae-104">管理対象のデータベースの照合順序。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-104">Collation of the managed database.</span></span>
+    optional: true
+    syntax:
+      content: 'collation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d5ae-105">管理されたデータベースでは、モードを作成します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-105">Managed database create mode.</span></span> <span data-ttu-id="9d5ae-106">PointInTimeRestore:既存のデータベースの時点のバックアップ内のポイントを復元することによって、データベースを作成します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-106">PointInTimeRestore: Create a database by restoring a point in time backup of an existing database.</span></span> <span data-ttu-id="9d5ae-107">[Sourcedatabasename]、SourceManagedInstanceName および PointInTime を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-107">SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified.</span></span> <span data-ttu-id="9d5ae-108">RestoreExternalBackup:外部のバックアップ ファイルから復元することによって、データベースを作成します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-108">RestoreExternalBackup: Create a database by restoring from external backup files.</span></span> <span data-ttu-id="9d5ae-109">照合順序や StorageContainerUri StorageContainerSasToken を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-109">Collation, StorageContainerUri and StorageContainerSasToken must be specified.</span></span> <span data-ttu-id="9d5ae-110">回復: Geo レプリケートされたバックアップを復元してデータベースを作成します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-110">Recovery: Creates a database by restoring a geo-replicated backup.</span></span>
+      <span data-ttu-id="9d5ae-111">RecoverableDatabaseId は、復元する回復可能なデータベース リソースの ID として指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-111">RecoverableDatabaseId must be specified as the recoverable database resource ID to restore.</span></span>
+      <span data-ttu-id="9d5ae-112">指定できる値は、次のとおりです。' Default'、'RestoreExternalBackup'、'PointInTimeRestore'、'Recovery'</span><span class="sxs-lookup"><span data-stu-id="9d5ae-112">Possible values include: 'Default', 'RestoreExternalBackup', 'PointInTimeRestore', 'Recovery'</span></span>
+    optional: true
+    syntax:
+      content: 'createMode?: ManagedDatabaseCreateMode'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseCreateMode'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.creationDate'
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d5ae-113">データベースの作成日。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-113">Creation date of the database.</span></span>
+      <span data-ttu-id="9d5ae-114">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="9d5ae-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'creationDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.defaultSecondaryLocation'
+    name: defaultSecondaryLocation
+    fullName: defaultSecondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d5ae-115">Geo ペア リージョン。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-115">Geo paired region.</span></span>
+      <span data-ttu-id="9d5ae-116">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="9d5ae-116">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'defaultSecondaryLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.earliestRestorePoint'
+    name: earliestRestorePoint
+    fullName: earliestRestorePoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d5ae-117">最も早いのポイントイン タイム リストア時間ポイントを復元します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-117">Earliest restore point in time for point in time restore.</span></span>
+      <span data-ttu-id="9d5ae-118">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="9d5ae-118">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'earliestRestorePoint?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.failoverGroupId'
+    name: failoverGroupId
+    fullName: failoverGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d5ae-119">この管理対象のデータベースに属するインスタンスのフェールオーバー グループ リソースの識別子です。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-119">Instance Failover Group resource identifier that this managed database belongs to.</span></span>
+      <span data-ttu-id="9d5ae-120">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="9d5ae-120">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'failoverGroupId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d5ae-121">リソースの ID</span><span class="sxs-lookup"><span data-stu-id="9d5ae-121">Resource ID.</span></span>
+      <span data-ttu-id="9d5ae-122">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="9d5ae-122">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d5ae-123">リソースの場所。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-123">Resource location.</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d5ae-124">リソース名。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-124">Resource name.</span></span>
+      <span data-ttu-id="9d5ae-125">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="9d5ae-125">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.recoverableDatabaseId'
+    name: recoverableDatabaseId
+    fullName: recoverableDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d5ae-126">関連付けられている回復可能なデータベースのリソース識別子は、このデータベースの操作を作成します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-126">The resource identifier of the recoverable database associated with create operation of this database.</span></span>
+    optional: true
+    syntax:
+      content: 'recoverableDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.restorableDroppedDatabaseId'
+    name: restorableDroppedDatabaseId
+    fullName: restorableDroppedDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d5ae-127">このデータベースを作成するときに復元する削除済みデータベースのリソース id。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-127">The restorable dropped database resource id to restore when creating this database.</span></span>
+    optional: true
+    syntax:
+      content: 'restorableDroppedDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.restorePointInTime'
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d5ae-128">条件付きです。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-128">Conditional.</span></span> <span data-ttu-id="9d5ae-129">(Createmode = restore) が PointInTimeRestore の場合は、この値が必要です。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-129">If createMode is PointInTimeRestore, this value is required.</span></span> <span data-ttu-id="9d5ae-130">新しいデータベースを作成する復元は、ソース データベースの時刻 (ISO8601 形式) で、ポイントを指定します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-130">Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.</span></span>'
+    optional: true
+    syntax:
+      content: 'restorePointInTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.sourceDatabaseId'
+    name: sourceDatabaseId
+    fullName: sourceDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d5ae-131">関連付けられているソース データベースのリソース識別子は、このデータベースの操作を作成します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-131">The resource identifier of the source database associated with create operation of this database.</span></span>
+    optional: true
+    syntax:
+      content: 'sourceDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d5ae-132">データベースの状態です。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-132">Status of the database.</span></span> <span data-ttu-id="9d5ae-133">指定できる値は、次のとおりです。''オンライン''、''オフライン''、''作成''、''アクセス''、''の更新'' '' シャット ダウン''**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="9d5ae-133">Possible values include: ''Online'', ''Offline'', ''Shutdown'', ''Creating'', ''Inaccessible'', ''Updating'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'status?: ManagedDatabaseStatus'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseStatus'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.storageContainerSasToken'
+    name: storageContainerSasToken
+    fullName: storageContainerSasToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d5ae-134">条件付きです。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-134">Conditional.</span></span> <span data-ttu-id="9d5ae-135">(Createmode = restore) が RestoreExternalBackup の場合は、この値が必要です。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-135">If createMode is RestoreExternalBackup, this value is required.</span></span> <span data-ttu-id="9d5ae-136">ストレージ コンテナーの sas トークンを指定します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-136">Specifies the storage container sas token.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageContainerSasToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.storageContainerUri'
+    name: storageContainerUri
+    fullName: storageContainerUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9d5ae-137">条件付きです。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-137">Conditional.</span></span> <span data-ttu-id="9d5ae-138">(Createmode = restore) が RestoreExternalBackup の場合は、この値が必要です。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-138">If createMode is RestoreExternalBackup, this value is required.</span></span> <span data-ttu-id="9d5ae-139">この復元用のバックアップの格納先ストレージ コンテナーの uri を指定します。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-139">Specifies the uri of the storage container where backups for this restore are stored.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageContainerUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9d5ae-140">リソース タグ。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-140">Resource tags.</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9d5ae-141">リソースの種類。</span><span class="sxs-lookup"><span data-stu-id="9d5ae-141">Resource type.</span></span>
+      <span data-ttu-id="9d5ae-142">**注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**</span><span class="sxs-lookup"><span data-stu-id="9d5ae-142">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.TrackedResource'
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: '@azure/arm-sql.TrackedResource'
+  - uid: '@azure/arm-sql.CatalogCollationType'
+    name: CatalogCollationType
+    spec.typeScript:
+      - name: CatalogCollationType
+        fullName: CatalogCollationType
+        uid: '@azure/arm-sql.CatalogCollationType'
+  - uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+    name: ManagedDatabaseCreateMode
+    spec.typeScript:
+      - name: ManagedDatabaseCreateMode
+        fullName: ManagedDatabaseCreateMode
+        uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+  - uid: '@azure/arm-sql.ManagedDatabaseStatus'
+    name: ManagedDatabaseStatus
+    spec.typeScript:
+      - name: ManagedDatabaseStatus
+        fullName: ManagedDatabaseStatus
+        uid: '@azure/arm-sql.ManagedDatabaseStatus'
