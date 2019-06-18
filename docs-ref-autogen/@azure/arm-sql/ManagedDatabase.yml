@@ -1,0 +1,358 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ManagedDatabase'
+    name: ManagedDatabase
+    fullName: ManagedDatabase
+    children:
+      - '@azure/arm-sql.ManagedDatabase.catalogCollation'
+      - '@azure/arm-sql.ManagedDatabase.collation'
+      - '@azure/arm-sql.ManagedDatabase.createMode'
+      - '@azure/arm-sql.ManagedDatabase.creationDate'
+      - '@azure/arm-sql.ManagedDatabase.defaultSecondaryLocation'
+      - '@azure/arm-sql.ManagedDatabase.earliestRestorePoint'
+      - '@azure/arm-sql.ManagedDatabase.failoverGroupId'
+      - '@azure/arm-sql.ManagedDatabase.id'
+      - '@azure/arm-sql.ManagedDatabase.location'
+      - '@azure/arm-sql.ManagedDatabase.name'
+      - '@azure/arm-sql.ManagedDatabase.recoverableDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.restorableDroppedDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.restorePointInTime'
+      - '@azure/arm-sql.ManagedDatabase.sourceDatabaseId'
+      - '@azure/arm-sql.ManagedDatabase.status'
+      - '@azure/arm-sql.ManagedDatabase.storageContainerSasToken'
+      - '@azure/arm-sql.ManagedDatabase.storageContainerUri'
+      - '@azure/arm-sql.ManagedDatabase.tags'
+      - '@azure/arm-sql.ManagedDatabase.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: 管理されたデータベース リソースです。
+    extends:
+      name: '@azure/arm-sql.TrackedResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.catalogCollation'
+    name: catalogCollation
+    fullName: catalogCollation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: メタデータ カタログの照合順序。 指定できる値は、次のとおりです。' DATABASE_DEFAULT'、'SQL_Latin1_General_CP1_CI_AS'
+    optional: true
+    syntax:
+      content: 'catalogCollation?: CatalogCollationType'
+      return:
+        type:
+          - '@azure/arm-sql.CatalogCollationType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.collation'
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 管理対象のデータベースの照合順序。
+    optional: true
+    syntax:
+      content: 'collation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      管理されたデータベースでは、モードを作成します。 PointInTimeRestore:既存のデータベースの時点のバックアップ内のポイントを復元することによって、データベースを作成します。 [Sourcedatabasename]、SourceManagedInstanceName および PointInTime を指定する必要があります。 RestoreExternalBackup:外部のバックアップ ファイルから復元することによって、データベースを作成します。 照合順序や StorageContainerUri StorageContainerSasToken を指定する必要があります。 回復: Geo レプリケートされたバックアップを復元してデータベースを作成します。
+      RecoverableDatabaseId は、復元する回復可能なデータベース リソースの ID として指定する必要があります。
+      指定できる値は、次のとおりです。' Default'、'RestoreExternalBackup'、'PointInTimeRestore'、'Recovery'
+    optional: true
+    syntax:
+      content: 'createMode?: ManagedDatabaseCreateMode'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseCreateMode'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.creationDate'
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      データベースの作成日。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'creationDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.defaultSecondaryLocation'
+    name: defaultSecondaryLocation
+    fullName: defaultSecondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Geo ペア リージョン。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'defaultSecondaryLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.earliestRestorePoint'
+    name: earliestRestorePoint
+    fullName: earliestRestorePoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最も早いのポイントイン タイム リストア時間ポイントを復元します。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'earliestRestorePoint?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.failoverGroupId'
+    name: failoverGroupId
+    fullName: failoverGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      この管理対象のデータベースに属するインスタンスのフェールオーバー グループ リソースの識別子です。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'failoverGroupId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      リソースの ID
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソースの場所。
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      リソース名。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.recoverableDatabaseId'
+    name: recoverableDatabaseId
+    fullName: recoverableDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 関連付けられている回復可能なデータベースのリソース識別子は、このデータベースの操作を作成します。
+    optional: true
+    syntax:
+      content: 'recoverableDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.restorableDroppedDatabaseId'
+    name: restorableDroppedDatabaseId
+    fullName: restorableDroppedDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このデータベースを作成するときに復元する削除済みデータベースのリソース id。
+    optional: true
+    syntax:
+      content: 'restorableDroppedDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.restorePointInTime'
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 条件付きです。 (Createmode = restore) が PointInTimeRestore の場合は、この値が必要です。 新しいデータベースを作成する復元は、ソース データベースの時刻 (ISO8601 形式) で、ポイントを指定します。
+    optional: true
+    syntax:
+      content: 'restorePointInTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.sourceDatabaseId'
+    name: sourceDatabaseId
+    fullName: sourceDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 関連付けられているソース データベースのリソース識別子は、このデータベースの操作を作成します。
+    optional: true
+    syntax:
+      content: 'sourceDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: データベースの状態です。 指定できる値は、次のとおりです。'オンライン'、'オフライン'、'作成'、'アクセス'、'の更新' ' シャット ダウン'**に注意してください。このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'status?: ManagedDatabaseStatus'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseStatus'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.storageContainerSasToken'
+    name: storageContainerSasToken
+    fullName: storageContainerSasToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 条件付きです。 (Createmode = restore) が RestoreExternalBackup の場合は、この値が必要です。 ストレージ コンテナーの sas トークンを指定します。
+    optional: true
+    syntax:
+      content: 'storageContainerSasToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.storageContainerUri'
+    name: storageContainerUri
+    fullName: storageContainerUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 条件付きです。 (Createmode = restore) が RestoreExternalBackup の場合は、この値が必要です。 この復元用のバックアップの格納先ストレージ コンテナーの uri を指定します。
+    optional: true
+    syntax:
+      content: 'storageContainerUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: リソース タグ。
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabase.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      リソースの種類。
+      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.TrackedResource'
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: '@azure/arm-sql.TrackedResource'
+  - uid: '@azure/arm-sql.CatalogCollationType'
+    name: CatalogCollationType
+    spec.typeScript:
+      - name: CatalogCollationType
+        fullName: CatalogCollationType
+        uid: '@azure/arm-sql.CatalogCollationType'
+  - uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+    name: ManagedDatabaseCreateMode
+    spec.typeScript:
+      - name: ManagedDatabaseCreateMode
+        fullName: ManagedDatabaseCreateMode
+        uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+  - uid: '@azure/arm-sql.ManagedDatabaseStatus'
+    name: ManagedDatabaseStatus
+    spec.typeScript:
+      - name: ManagedDatabaseStatus
+        fullName: ManagedDatabaseStatus
+        uid: '@azure/arm-sql.ManagedDatabaseStatus'
