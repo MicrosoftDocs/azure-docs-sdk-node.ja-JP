@@ -5,6 +5,7 @@ items:
     fullName: NetworkManagementClientContext
     children:
       - '@azure/arm-network.NetworkManagementClientContext.acceptLanguage'
+      - '@azure/arm-network.NetworkManagementClientContext.apiVersion'
       - '@azure/arm-network.NetworkManagementClientContext.beginLongRunningRequest'
       - '@azure/arm-network.NetworkManagementClientContext.credentials'
       - '@azure/arm-network.NetworkManagementClientContext.longRunningOperationRetryTimeout'
@@ -36,20 +37,35 @@ items:
         type:
           - string
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkManagementClientContext.apiVersion'
+    name: apiVersion
+    fullName: apiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'apiVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkManagementClientContext.beginLongRunningRequest'
     name: 'beginLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="abb4c-101">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、HttpLongRunningOperationResponse を取得します。</span><span class="sxs-lookup"><span data-stu-id="abb4c-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="03ccb-101">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、HttpLongRunningOperationResponse を取得します。</span><span class="sxs-lookup"><span data-stu-id="03ccb-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="abb4c-102">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="abb4c-102">The request object</span></span>
+          description: <span data-ttu-id="03ccb-102">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="03ccb-102">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -80,7 +96,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="abb4c-103">長時間実行される操作の秒の再試行タイムアウト。</span><span class="sxs-lookup"><span data-stu-id="abb4c-103">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="abb4c-104">既定値は 30 です。</span><span class="sxs-lookup"><span data-stu-id="abb4c-104">Default value is 30.</span></span>
+    summary: <span data-ttu-id="03ccb-103">長時間実行される操作の秒の再試行タイムアウト。</span><span class="sxs-lookup"><span data-stu-id="03ccb-103">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="03ccb-104">既定値は 30 です。</span><span class="sxs-lookup"><span data-stu-id="03ccb-104">Default value is 30.</span></span>
     optional: true
     syntax:
       content: 'longRunningOperationRetryTimeout?: undefined | number'
@@ -94,18 +110,18 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="abb4c-105">NetworkManagementClient クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="abb4c-105">Initializes a new instance of the NetworkManagementClient class.</span></span>
+    summary: <span data-ttu-id="03ccb-105">NetworkManagementClient クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="03ccb-105">Initializes a new instance of the NetworkManagementClient class.</span></span>
     syntax:
       content: 'new NetworkManagementClientContext(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.NetworkManagementClientOptions)'
       parameters:
         - id: credentials
           type:
             - ServiceClientCredentials
-          description: <span data-ttu-id="abb4c-106">Azure に接続するクライアントに必要な資格情報。</span><span class="sxs-lookup"><span data-stu-id="abb4c-106">Credentials needed for the client to connect to Azure.</span></span>
+          description: <span data-ttu-id="03ccb-106">Azure に接続するクライアントに必要な資格情報。</span><span class="sxs-lookup"><span data-stu-id="03ccb-106">Credentials needed for the client to connect to Azure.</span></span>
         - id: subscriptionId
           type:
             - string
-          description: <span data-ttu-id="abb4c-107">Microsoft Azure サブスクリプションを一意に識別するサブスクリプションの資格情報。</span><span class="sxs-lookup"><span data-stu-id="abb4c-107">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="abb4c-108">サブスクリプション ID は、全ての修理依頼についてURI の一部を生じさせます。</span><span class="sxs-lookup"><span data-stu-id="abb4c-108">The subscription ID forms part of the URI for every service call.</span></span>
+          description: <span data-ttu-id="03ccb-107">Microsoft Azure サブスクリプションを一意に識別するサブスクリプションの資格情報。</span><span class="sxs-lookup"><span data-stu-id="03ccb-107">The subscription credentials which uniquely identify the Microsoft Azure subscription.</span></span> <span data-ttu-id="03ccb-108">サブスクリプション ID は、全ての修理依頼についてURI の一部を生じさせます。</span><span class="sxs-lookup"><span data-stu-id="03ccb-108">The subscription ID forms part of the URI for every service call.</span></span>
         - id: options
           type:
             - Models.NetworkManagementClientOptions
@@ -118,7 +134,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="abb4c-109">指定された LROPollState から、LROPoller を復元します。</span><span class="sxs-lookup"><span data-stu-id="abb4c-109">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="abb4c-110">このメソッドは、別のプロセスやマシンで、LROPoller を再作成に使用できます。</span><span class="sxs-lookup"><span data-stu-id="abb4c-110">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    summary: <span data-ttu-id="03ccb-109">指定された LROPollState から、LROPoller を復元します。</span><span class="sxs-lookup"><span data-stu-id="03ccb-109">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="03ccb-110">このメソッドは、別のプロセスやマシンで、LROPoller を再作成に使用できます。</span><span class="sxs-lookup"><span data-stu-id="03ccb-110">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
     syntax:
       content: 'function restoreLROPoller(lroPollState: LROPollState)'
       parameters:
@@ -136,14 +152,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="abb4c-111">ポーリングされ、最終的な結果を提供する要求を作成するためのメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="abb4c-111">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    summary: <span data-ttu-id="03ccb-111">ポーリングされ、最終的な結果を提供する要求を作成するためのメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="03ccb-111">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
     syntax:
       content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="abb4c-112">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="abb4c-112">The request object</span></span>
+          description: <span data-ttu-id="03ccb-112">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="03ccb-112">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -159,22 +175,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="abb4c-113">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、LROPoller を取得します。</span><span class="sxs-lookup"><span data-stu-id="abb4c-113">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="03ccb-113">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、LROPoller を取得します。</span><span class="sxs-lookup"><span data-stu-id="03ccb-113">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="abb4c-114">操作の引数。</span><span class="sxs-lookup"><span data-stu-id="abb4c-114">The arguments to the operation.</span></span>
+          description: <span data-ttu-id="03ccb-114">操作の引数。</span><span class="sxs-lookup"><span data-stu-id="03ccb-114">The arguments to the operation.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="abb4c-115">操作を指定します。</span><span class="sxs-lookup"><span data-stu-id="abb4c-115">The specification for the operation.</span></span>
+          description: <span data-ttu-id="03ccb-115">操作を指定します。</span><span class="sxs-lookup"><span data-stu-id="03ccb-115">The specification for the operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="abb4c-116">要求時に送信される追加のオプション。</span><span class="sxs-lookup"><span data-stu-id="abb4c-116">Additional options to be sent while making the request.</span></span>
+          description: <span data-ttu-id="03ccb-116">要求時に送信される追加のオプション。</span><span class="sxs-lookup"><span data-stu-id="03ccb-116">Additional options to be sent while making the request.</span></span>
           optional: true
       return:
         type:
@@ -186,23 +202,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="abb4c-117">指定された OperationSpec を使用して設定される HTTP 要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="abb4c-117">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    summary: <span data-ttu-id="03ccb-117">指定された OperationSpec を使用して設定される HTTP 要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="03ccb-117">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
     syntax:
       content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="abb4c-118">この引数から HTTP 要求のテンプレート化された値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="abb4c-118">The arguments that the HTTP request's templated values will be populated from.</span></span>
+          description: <span data-ttu-id="03ccb-118">この引数から HTTP 要求のテンプレート化された値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="03ccb-118">The arguments that the HTTP request's templated values will be populated from.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="abb4c-119">使用して設定、httpRequest OperationSpec します。</span><span class="sxs-lookup"><span data-stu-id="abb4c-119">The OperationSpec to use to populate the httpRequest.</span></span>
+          description: <span data-ttu-id="03ccb-119">使用して設定、httpRequest OperationSpec します。</span><span class="sxs-lookup"><span data-stu-id="03ccb-119">The OperationSpec to use to populate the httpRequest.</span></span>
         - id: callback
           type:
             - ServiceCallback<any>
           description: |
-            <span data-ttu-id="abb4c-120">応答が受信されたときに呼び出すコールバック。</span><span class="sxs-lookup"><span data-stu-id="abb4c-120">The callback to call when the response is received.</span></span>
+            <span data-ttu-id="03ccb-120">応答が受信されたときに呼び出すコールバック。</span><span class="sxs-lookup"><span data-stu-id="03ccb-120">The callback to call when the response is received.</span></span>
           optional: true
       return:
         type:
@@ -214,7 +230,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="abb4c-121">指定された httpRequest を送信します。</span><span class="sxs-lookup"><span data-stu-id="abb4c-121">Send the provided httpRequest.</span></span>
+    summary: <span data-ttu-id="03ccb-121">指定された httpRequest を送信します。</span><span class="sxs-lookup"><span data-stu-id="03ccb-121">Send the provided httpRequest.</span></span>
     syntax:
       content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
       parameters:

@@ -1,0 +1,1213 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.StorageAccounts'
+    name: StorageAccounts
+    fullName: StorageAccounts
+    children:
+      - '@azure/arm-storage.StorageAccounts.beginCreate'
+      - '@azure/arm-storage.StorageAccounts.beginFailover'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
+      - '@azure/arm-storage.StorageAccounts.create'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod_2'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod_1'
+      - '@azure/arm-storage.StorageAccounts.failover'
+      - '@azure/arm-storage.StorageAccounts.getProperties'
+      - '@azure/arm-storage.StorageAccounts.getProperties_1'
+      - '@azure/arm-storage.StorageAccounts.getProperties_2'
+      - '@azure/arm-storage.StorageAccounts.list'
+      - '@azure/arm-storage.StorageAccounts.list_2'
+      - '@azure/arm-storage.StorageAccounts.list_1'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS_2'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS_1'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
+      - '@azure/arm-storage.StorageAccounts.listKeys'
+      - '@azure/arm-storage.StorageAccounts.listKeys_2'
+      - '@azure/arm-storage.StorageAccounts.listKeys_1'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey_2'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey_1'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
+      - '@azure/arm-storage.StorageAccounts.constructor'
+      - '@azure/arm-storage.StorageAccounts.update'
+      - '@azure/arm-storage.StorageAccounts.update_2'
+      - '@azure/arm-storage.StorageAccounts.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="bdef8-101">StorageAccounts を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-101">Class representing a StorageAccounts.</span></span>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.beginCreate'
+    name: 'beginCreate(string, string, StorageAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="bdef8-102">非同期的に指定されたパラメーターで新しいストレージ アカウントを作成します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-102">Asynchronously creates a new storage account with the specified parameters.</span></span> <span data-ttu-id="bdef8-103">アカウントが既に作成されて、異なるプロパティを持つ後続の作成要求が発行される場合は、アカウントのプロパティが更新されます。</span><span class="sxs-lookup"><span data-stu-id="bdef8-103">If an account is already created and a subsequent create request is issued with different properties, the account properties will be updated.</span></span> <span data-ttu-id="bdef8-104">アカウントが既に作成されていて、それ以降の作成または更新要求が正確に同じプロパティ セットと共に発行される、要求は成功します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-104">If an account is already created and a subsequent create or update request is issued with the exact same set of properties, the request will succeed.</span></span>'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-105">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-105">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-106">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-106">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-107">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-107">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-108">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-108">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountCreateParameters'
+          description: <span data-ttu-id="bdef8-109">作成したアカウントを入力するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-109">The parameters to provide for the created account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.beginFailover'
+    name: 'beginFailover(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-110">可用性の問題が発生した場合、ストレージ アカウントのフェールオーバーの要求をトリガーできます。</span><span class="sxs-lookup"><span data-stu-id="bdef8-110">Failover request can be triggered for a storage account in case of availability issues.</span></span> <span data-ttu-id="bdef8-111">RA-GRS アカウントのセカンダリのクラスターにストレージ アカウントのプライマリ クラスターから、フェールオーバーが発生します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-111">The failover occurs from the storage account's primary cluster to secondary cluster for RA-GRS accounts.</span></span> <span data-ttu-id="bdef8-112">セカンダリのクラスターは、フェールオーバー後にプライマリとなります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-112">The secondary cluster will become primary after failover.</span></span>
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-113">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-113">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-114">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-114">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-115">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-115">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-116">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-116">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability'
+    name: 'checkNameAvailability(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-117">ストレージ アカウント名が有効と既に使用されていないことを確認します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-117">Checks that the storage account name is valid and is not already in use.</span></span>
+    syntax:
+      content: 'function checkNameAvailability(name: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-118">ストレージ アカウント名。</span><span class="sxs-lookup"><span data-stu-id="bdef8-118">The storage account name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
+    name: 'checkNameAvailability(string, RequestOptionsBase, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, options: RequestOptionsBase, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-119">ストレージ アカウント名。</span><span class="sxs-lookup"><span data-stu-id="bdef8-119">The storage account name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-120">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-120">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="bdef8-121">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-121">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
+    name: 'checkNameAvailability(string, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-122">ストレージ アカウント名。</span><span class="sxs-lookup"><span data-stu-id="bdef8-122">The storage account name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="bdef8-123">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-123">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.create'
+    name: 'create(string, string, StorageAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="bdef8-124">非同期的に指定されたパラメーターで新しいストレージ アカウントを作成します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-124">Asynchronously creates a new storage account with the specified parameters.</span></span> <span data-ttu-id="bdef8-125">アカウントが既に作成されて、異なるプロパティを持つ後続の作成要求が発行される場合は、アカウントのプロパティが更新されます。</span><span class="sxs-lookup"><span data-stu-id="bdef8-125">If an account is already created and a subsequent create request is issued with different properties, the account properties will be updated.</span></span> <span data-ttu-id="bdef8-126">アカウントが既に作成されていて、それ以降の作成または更新要求が正確に同じプロパティ セットと共に発行される、要求は成功します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-126">If an account is already created and a subsequent create or update request is issued with the exact same set of properties, the request will succeed.</span></span>'
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-127">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-127">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-128">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-128">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-129">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-129">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-130">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-130">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountCreateParameters'
+          description: <span data-ttu-id="bdef8-131">作成したアカウントを入力するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-131">The parameters to provide for the created account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsCreateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-132">Microsoft Azure ストレージ アカウントを削除します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-132">Deletes a storage account in Microsoft Azure.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-133">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-133">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-134">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-134">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-135">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-135">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-136">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-136">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-137">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-137">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-138">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-138">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-139">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-139">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-140">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-140">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-141">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="bdef8-142">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-143">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-143">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-144">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-144">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-145">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-145">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-146">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-146">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="bdef8-147">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-147">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.failover'
+    name: 'failover(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-148">可用性の問題が発生した場合、ストレージ アカウントのフェールオーバーの要求をトリガーできます。</span><span class="sxs-lookup"><span data-stu-id="bdef8-148">Failover request can be triggered for a storage account in case of availability issues.</span></span> <span data-ttu-id="bdef8-149">RA-GRS アカウントのセカンダリのクラスターにストレージ アカウントのプライマリ クラスターから、フェールオーバーが発生します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-149">The failover occurs from the storage account's primary cluster to secondary cluster for RA-GRS accounts.</span></span> <span data-ttu-id="bdef8-150">セカンダリのクラスターは、フェールオーバー後にプライマリとなります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-150">The secondary cluster will become primary after failover.</span></span>
+    syntax:
+      content: 'function failover(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-151">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-151">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-152">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-152">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-153">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-153">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-154">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-154">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties'
+    name: 'getProperties(string, string, Models.StorageAccountsGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="bdef8-155">など、名、SKU 名、場所、およびアカウントの状態に限定されませんが、指定されたストレージ アカウントのプロパティを返します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-155">Returns the properties for the specified storage account including but not limited to name, SKU name, location, and account status.</span></span> <span data-ttu-id="bdef8-156">ListKeys 操作は、ストレージ キーを取得するために使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-156">The ListKeys operation should be used to retrieve storage keys.</span></span>'
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, options?: Models.StorageAccountsGetPropertiesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-157">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-157">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-158">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-158">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-159">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-159">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-160">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-160">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - Models.StorageAccountsGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties_1'
+    name: 'getProperties(string, string, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-161">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-161">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-162">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-162">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-163">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-163">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-164">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-164">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="bdef8-165">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties_2'
+    name: 'getProperties(string, string, StorageAccountsGetPropertiesOptionalParams, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, options: StorageAccountsGetPropertiesOptionalParams, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-166">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-166">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-167">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-167">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-168">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-168">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-169">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-169">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+          description: <span data-ttu-id="bdef8-170">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-170">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="bdef8-171">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-172">サブスクリプションで使用可能なすべてのストレージ アカウントを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-172">Lists all the storage accounts available under the subscription.</span></span> <span data-ttu-id="bdef8-173">ストレージ キーが返されずに注意してください。これは、ListKeys 操作を使用します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-173">Note that storage keys are not returned; use the ListKeys operation for this.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-174">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="bdef8-175">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list_1'
+    name: list(ServiceCallback<StorageAccountListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="bdef8-176">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-176">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS'
+    name: 'listAccountSAS(string, string, AccountSasParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-177">ストレージ アカウントの SAS の資格情報を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-177">List SAS credentials of a storage account.</span></span>
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-178">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-178">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-179">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-179">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-180">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-180">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-181">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-181">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: <span data-ttu-id="bdef8-182">ストレージ アカウントの SAS の資格情報の一覧を提供するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-182">The parameters to provide to list SAS credentials for the storage account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_2'
+    name: 'listAccountSAS(string, string, AccountSasParameters, RequestOptionsBase, ServiceCallback<ListAccountSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options: RequestOptionsBase, callback: ServiceCallback<ListAccountSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-183">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-183">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-184">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-184">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-185">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-185">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-186">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-186">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: <span data-ttu-id="bdef8-187">ストレージ アカウントの SAS の資格情報の一覧を提供するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-187">The parameters to provide to list SAS credentials for the storage account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-188">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-188">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+          description: |
+            <span data-ttu-id="bdef8-189">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_1'
+    name: 'listAccountSAS(string, string, AccountSasParameters, ServiceCallback<ListAccountSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, callback: ServiceCallback<ListAccountSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-190">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-190">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-191">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-191">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-192">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-192">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-193">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-193">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: <span data-ttu-id="bdef8-194">ストレージ アカウントの SAS の資格情報の一覧を提供するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-194">The parameters to provide to list SAS credentials for the storage account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+          description: |
+            <span data-ttu-id="bdef8-195">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-196">指定したリソース グループで使用可能なすべてのストレージ アカウントを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-196">Lists all the storage accounts available under the given resource group.</span></span> <span data-ttu-id="bdef8-197">ストレージ キーが返されずに注意してください。これは、ListKeys 操作を使用します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-197">Note that storage keys are not returned; use the ListKeys operation for this.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-198">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-198">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-199">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-199">The name is case insensitive.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-200">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-200">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-201">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-201">The name is case insensitive.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-202">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="bdef8-203">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-204">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-204">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-205">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-205">The name is case insensitive.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="bdef8-206">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-206">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys'
+    name: 'listKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-207">指定されたストレージ アカウントのアクセス キーを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-207">Lists the access keys for the specified storage account.</span></span>
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-208">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-208">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-209">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-209">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-210">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-210">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-211">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-211">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys_2'
+    name: 'listKeys(string, string, RequestOptionsBase, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-212">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-212">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-213">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-213">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-214">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-214">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-215">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-215">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-216">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-216">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="bdef8-217">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-217">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys_1'
+    name: 'listKeys(string, string, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-218">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-218">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-219">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-219">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-220">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-220">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-221">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-221">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="bdef8-222">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-222">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-223">特定のリソースのサービス SAS の資格情報を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-223">List service SAS credentials of a specific resource.</span></span>
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-224">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-224">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-225">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-225">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-226">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-226">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-227">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-227">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: <span data-ttu-id="bdef8-228">リスト サービス SAS の資格情報を提供するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-228">The parameters to provide to list service SAS credentials.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, RequestOptionsBase, ServiceCallback<ListServiceSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options: RequestOptionsBase, callback: ServiceCallback<ListServiceSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-229">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-229">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-230">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-230">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-231">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-231">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-232">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-232">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: <span data-ttu-id="bdef8-233">リスト サービス SAS の資格情報を提供するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-233">The parameters to provide to list service SAS credentials.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-234">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-234">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+          description: |
+            <span data-ttu-id="bdef8-235">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-235">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, ServiceCallback<ListServiceSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, callback: ServiceCallback<ListServiceSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-236">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-236">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-237">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-237">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-238">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-238">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-239">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-239">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: <span data-ttu-id="bdef8-240">リスト サービス SAS の資格情報を提供するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-240">The parameters to provide to list service SAS credentials.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+          description: |
+            <span data-ttu-id="bdef8-241">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-241">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey'
+    name: 'regenerateKey(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-242">指定されたストレージ アカウントのアクセス キーのいずれかを再生成します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-242">Regenerates one of the access keys for the specified storage account.</span></span>
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-243">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-243">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-244">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-244">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-245">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-245">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-246">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-246">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="bdef8-247">再生成された、可能な値を指定するストレージ キーの名前は、key1、key2 です。</span><span class="sxs-lookup"><span data-stu-id="bdef8-247">The name of storage keys that want to be regenerated, possible values are key1, key2.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_2'
+    name: 'regenerateKey(string, string, string, RequestOptionsBase, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-248">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-248">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-249">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-249">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-250">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-250">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-251">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-251">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="bdef8-252">再生成された、可能な値を指定するストレージ キーの名前は、key1、key2 です。</span><span class="sxs-lookup"><span data-stu-id="bdef8-252">The name of storage keys that want to be regenerated, possible values are key1, key2.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-253">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-253">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="bdef8-254">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-254">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_1'
+    name: 'regenerateKey(string, string, string, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-255">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-255">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-256">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-256">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-257">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-257">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-258">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-258">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="bdef8-259">再生成された、可能な値を指定するストレージ キーの名前は、key1、key2 です。</span><span class="sxs-lookup"><span data-stu-id="bdef8-259">The name of storage keys that want to be regenerated, possible values are key1, key2.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="bdef8-260">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-260">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
+    name: 'revokeUserDelegationKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-261">ユーザーの委任のキーを取り消します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-261">Revoke user delegation keys.</span></span>
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-262">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-262">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-263">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-263">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-264">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-264">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-265">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-265">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
+    name: 'revokeUserDelegationKeys(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-266">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-266">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-267">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-267">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-268">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-268">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-269">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-269">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-270">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-270">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="bdef8-271">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-271">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
+    name: 'revokeUserDelegationKeys(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-272">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-272">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-273">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-273">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-274">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-274">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-275">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-275">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="bdef8-276">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-276">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.constructor'
+    name: StorageAccounts(StorageManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="bdef8-277">StorageAccounts を作成します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-277">Create a StorageAccounts.</span></span>
+    syntax:
+      content: 'new StorageAccounts(client: StorageManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-storage.StorageManagementClientContext'
+          description: |
+            <span data-ttu-id="bdef8-278">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="bdef8-278">Reference to the service client.</span></span>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update'
+    name: 'update(string, string, StorageAccountUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="bdef8-279">更新操作は、SKU、暗号化、アクセス層、またはストレージ アカウントのタグを更新できます。</span><span class="sxs-lookup"><span data-stu-id="bdef8-279">The update operation can be used to update the SKU, encryption, access tier, or tags for a storage account.</span></span> <span data-ttu-id="bdef8-280">それは、カスタム ドメインにアカウントをマップする使用できます。</span><span class="sxs-lookup"><span data-stu-id="bdef8-280">It can also be used to map the account to a custom domain.</span></span> <span data-ttu-id="bdef8-281">ストレージ アカウントごとに 1 つのカスタム ドメインがサポートされます。カスタム ドメインの置換と変更はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-281">Only one custom domain is supported per storage account; the replacement/change of custom domain is not supported.</span></span> <span data-ttu-id="bdef8-282">以前のカスタム ドメインを置換するには、古い値必要がありますオフ/登録解除前に、新しい値を設定することができます。</span><span class="sxs-lookup"><span data-stu-id="bdef8-282">In order to replace an old custom domain, the old value must be cleared/unregistered before a new value can be set.</span></span> <span data-ttu-id="bdef8-283">複数のプロパティの更新がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="bdef8-283">The update of multiple properties is supported.</span></span> <span data-ttu-id="bdef8-284">この呼び出しでは、アカウントのストレージ キーは変更されません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-284">This call does not change the storage keys for the account.</span></span> <span data-ttu-id="bdef8-285">ストレージ アカウント キーを変更する場合は、キーを再生成操作を使用します。</span><span class="sxs-lookup"><span data-stu-id="bdef8-285">If you want to change the storage account keys, use the regenerate keys operation.</span></span> <span data-ttu-id="bdef8-286">ストレージ アカウントの名前と場所は、作成後に変更できません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-286">The location and name of the storage account cannot be changed after creation.</span></span>'
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-287">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-287">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-288">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-288">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-289">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-289">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-290">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-290">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: <span data-ttu-id="bdef8-291">更新されたアカウントを入力するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-291">The parameters to provide for the updated account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update_2'
+    name: 'update(string, string, StorageAccountUpdateParameters, RequestOptionsBase, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-292">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-292">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-293">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-293">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-294">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-294">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-295">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-295">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: <span data-ttu-id="bdef8-296">更新されたアカウントを入力するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-296">The parameters to provide for the updated account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="bdef8-297">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="bdef8-297">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="bdef8-298">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-298">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update_1'
+    name: 'update(string, string, StorageAccountUpdateParameters, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-299">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-299">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="bdef8-300">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="bdef8-300">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="bdef8-301">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="bdef8-301">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="bdef8-302">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdef8-302">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: <span data-ttu-id="bdef8-303">更新されたアカウントを入力するパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="bdef8-303">The parameters to provide for the updated account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="bdef8-304">コールバック</span><span class="sxs-lookup"><span data-stu-id="bdef8-304">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.StorageManagementClientContext'
+    name: StorageManagementClientContext
+    spec.typeScript:
+      - name: StorageManagementClientContext
+        fullName: StorageManagementClientContext
+        uid: '@azure/arm-storage.StorageManagementClientContext'
+  - uid: '@azure/arm-storage.StorageAccountCreateParameters'
+    name: StorageAccountCreateParameters
+    spec.typeScript:
+      - name: StorageAccountCreateParameters
+        fullName: StorageAccountCreateParameters
+        uid: '@azure/arm-storage.StorageAccountCreateParameters'
+  - uid: ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+    name: CheckNameAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckNameAvailabilityResult
+        fullName: CheckNameAvailabilityResult
+        uid: '@azure/arm-storage.CheckNameAvailabilityResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccount>
+    name: StorageAccount>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccount
+        fullName: StorageAccount
+        uid: '@azure/arm-storage.StorageAccount'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+    name: StorageAccountsGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: StorageAccountsGetPropertiesOptionalParams
+        fullName: StorageAccountsGetPropertiesOptionalParams
+        uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+    name: StorageAccountListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccountListResult
+        fullName: StorageAccountListResult
+        uid: '@azure/arm-storage.StorageAccountListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.AccountSasParameters'
+    name: AccountSasParameters
+    spec.typeScript:
+      - name: AccountSasParameters
+        fullName: AccountSasParameters
+        uid: '@azure/arm-storage.AccountSasParameters'
+  - uid: ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+    name: ListAccountSasResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListAccountSasResponse
+        fullName: ListAccountSasResponse
+        uid: '@azure/arm-storage.ListAccountSasResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+    name: StorageAccountListKeysResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccountListKeysResult
+        fullName: StorageAccountListKeysResult
+        uid: '@azure/arm-storage.StorageAccountListKeysResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.ServiceSasParameters'
+    name: ServiceSasParameters
+    spec.typeScript:
+      - name: ServiceSasParameters
+        fullName: ServiceSasParameters
+        uid: '@azure/arm-storage.ServiceSasParameters'
+  - uid: ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+    name: ListServiceSasResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListServiceSasResponse
+        fullName: ListServiceSasResponse
+        uid: '@azure/arm-storage.ListServiceSasResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters'
+    name: StorageAccountUpdateParameters
+    spec.typeScript:
+      - name: StorageAccountUpdateParameters
+        fullName: StorageAccountUpdateParameters
+        uid: '@azure/arm-storage.StorageAccountUpdateParameters'

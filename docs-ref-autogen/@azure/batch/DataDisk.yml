@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.DataDisk'
+    name: DataDisk
+    fullName: DataDisk
+    children:
+      - '@azure/batch.DataDisk.caching'
+      - '@azure/batch.DataDisk.diskSizeGB'
+      - '@azure/batch.DataDisk.lun'
+      - '@azure/batch.DataDisk.storageAccountType'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="86341-101">DataDisk を表すインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="86341-101">An interface representing DataDisk.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86341-102">データ ディスクを有効にするキャッシュの型。</span><span class="sxs-lookup"><span data-stu-id="86341-102">The type of caching to be enabled for the data disks.</span></span> <span data-ttu-id="86341-103">キャッシュの既定値は、readwrite です。</span><span class="sxs-lookup"><span data-stu-id="86341-103">The default value for caching is readwrite.</span></span> <span data-ttu-id="86341-104">キャッシュのオプションについては、次を参照してください。:https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/します。</span><span class="sxs-lookup"><span data-stu-id="86341-104">For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.</span></span>
+      <span data-ttu-id="86341-105">使用可能な値が含まれます: 'none'、'readOnly'、'readWrite'</span><span class="sxs-lookup"><span data-stu-id="86341-105">Possible values include: 'none', 'readOnly', 'readWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingType'
+      return:
+        type:
+          - '@azure/batch.CachingType'
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86341-106">ギガバイト単位で初期ディスク サイズ。</span><span class="sxs-lookup"><span data-stu-id="86341-106">The initial disk size in gigabytes.</span></span>
+    syntax:
+      content: 'diskSizeGB: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86341-107">論理ユニットの数。</span><span class="sxs-lookup"><span data-stu-id="86341-107">The logical unit number.</span></span> <span data-ttu-id="86341-108">Lun は、各データ ディスクを一意に識別するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="86341-108">The lun is used to uniquely identify each data disk.</span></span> <span data-ttu-id="86341-109">複数のディスクをアタッチするには、個別の lun ごとことがあります。</span><span class="sxs-lookup"><span data-stu-id="86341-109">If attaching multiple disks, each should have a distinct lun.</span></span>'
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.storageAccountType'
+    name: storageAccountType
+    fullName: storageAccountType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86341-110">データ ディスクとして使用するストレージ アカウントの種類。</span><span class="sxs-lookup"><span data-stu-id="86341-110">The storage account type to be used for the data disk.</span></span> <span data-ttu-id="86341-111">省略した場合、既定値は"standard_lrs"にします。</span><span class="sxs-lookup"><span data-stu-id="86341-111">If omitted, the default is "standard_lrs".</span></span> <span data-ttu-id="86341-112">指定できる値は、次のとおりです。'' StandardLRS''、''PremiumLRS''</span><span class="sxs-lookup"><span data-stu-id="86341-112">Possible values include: ''StandardLRS'', ''PremiumLRS''</span></span>'
+    optional: true
+    syntax:
+      content: 'storageAccountType?: StorageAccountType'
+      return:
+        type:
+          - '@azure/batch.StorageAccountType'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CachingType'
+    name: CachingType
+    spec.typeScript:
+      - name: CachingType
+        fullName: CachingType
+        uid: '@azure/batch.CachingType'
+  - uid: '@azure/batch.StorageAccountType'
+    name: StorageAccountType
+    spec.typeScript:
+      - name: StorageAccountType
+        fullName: StorageAccountType
+        uid: '@azure/batch.StorageAccountType'
