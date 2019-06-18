@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.AutoPoolSpecification'
+    name: AutoPoolSpecification
+    fullName: AutoPoolSpecification
+    children:
+      - '@azure/batch.AutoPoolSpecification.autoPoolIdPrefix'
+      - '@azure/batch.AutoPoolSpecification.keepAlive'
+      - '@azure/batch.AutoPoolSpecification.pool'
+      - '@azure/batch.AutoPoolSpecification.poolLifetimeOption'
+    langs:
+      - typeScript
+    type: interface
+    summary: AutoPoolSpecification を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.autoPoolIdPrefix'
+    name: autoPoolIdPrefix
+    fullName: autoPoolIdPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プールが自動的に作成されたときに、一意識別子に追加するプレフィックス。 Batch サービスは、各自動プールの作成時に一意の識別子を割り当てます。 さまざまな目的で作成されたプールを区別するために割り当てられている ID にプレフィックスを追加するには、この要素を指定できます。 プレフィックスは、最大 20 文字を使用できます。
+    optional: true
+    syntax:
+      content: 'autoPoolIdPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.keepAlive'
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: その有効期間の期限が切れた後は、自動プールを維持するかどうか。 (PoolLifetimeOption 設定によって決まります) には、その有効期間の期限が切れた後に、Batch サービスでプールを削除、false の場合つまり、ジョブまたはジョブがスケジュール設定を完了します。 True の場合、Batch サービスは削除されません、プールに自動的に。 このオプションで作成された自動プールを削除するユーザーの責任です。
+    optional: true
+    syntax:
+      content: 'keepAlive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.pool'
+    name: pool
+    fullName: pool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 自動プールのプール仕様。
+    optional: true
+    syntax:
+      content: 'pool?: PoolSpecification'
+      return:
+        type:
+          - '@azure/batch.PoolSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.poolLifetimeOption'
+    name: poolLifetimeOption
+    fullName: poolLifetimeOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '作成した自動プールの場合は、および複数のジョブ スケジュールでは、プールに割り当てられているの最小有効期間。 使用可能な値が含まれます: ''jobSchedule''、''ジョブ'''
+    syntax:
+      content: 'poolLifetimeOption: PoolLifetimeOption'
+      return:
+        type:
+          - '@azure/batch.PoolLifetimeOption'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.PoolSpecification'
+    name: PoolSpecification
+    spec.typeScript:
+      - name: PoolSpecification
+        fullName: PoolSpecification
+        uid: '@azure/batch.PoolSpecification'
+  - uid: '@azure/batch.PoolLifetimeOption'
+    name: PoolLifetimeOption
+    spec.typeScript:
+      - name: PoolLifetimeOption
+        fullName: PoolLifetimeOption
+        uid: '@azure/batch.PoolLifetimeOption'

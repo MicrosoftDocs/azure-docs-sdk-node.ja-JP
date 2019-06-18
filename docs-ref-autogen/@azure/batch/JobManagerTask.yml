@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    fullName: JobManagerTask
+    children:
+      - '@azure/batch.JobManagerTask.allowLowPriorityNode'
+      - '@azure/batch.JobManagerTask.applicationPackageReferences'
+      - '@azure/batch.JobManagerTask.authenticationTokenSettings'
+      - '@azure/batch.JobManagerTask.commandLine'
+      - '@azure/batch.JobManagerTask.constraints'
+      - '@azure/batch.JobManagerTask.containerSettings'
+      - '@azure/batch.JobManagerTask.displayName'
+      - '@azure/batch.JobManagerTask.environmentSettings'
+      - '@azure/batch.JobManagerTask.id'
+      - '@azure/batch.JobManagerTask.killJobOnCompletion'
+      - '@azure/batch.JobManagerTask.outputFiles'
+      - '@azure/batch.JobManagerTask.resourceFiles'
+      - '@azure/batch.JobManagerTask.runExclusive'
+      - '@azure/batch.JobManagerTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: ジョブが作成されたら、ジョブ マネージャー タスクが自動的に開始されます。 Batch サービスは、その他のタスク、ジョブ内の前にジョブ マネージャー タスクのスケジュール設定しようとします。 プールを圧縮するには、Batch サービスは (つまり、ノード 'normal' 実行中のタスクがジョブ マネージャー タスクを実行しているノードの前に削除されます) を可能な限りのジョブ マネージャー タスクが実行されているコンピューティング ノードを保持しようとします。 ジョブ マネージャー タスクが失敗し、再起動する必要がある、システムで最高の優先度でスケジュールを設定しようとします。 アイドル状態のノードがない場合は、システムは、プールで実行中のタスクの 1 つを終了され、再起動するジョブ マネージャー タスクの空き領域を確保するためにキューに戻すこと可能性があります。 他のジョブでタスクよりも優先度は 1 つのジョブでジョブ マネージャー タスクによってがないことに注意してください。 ジョブ全体で、のみジョブ レベルの優先度が適用されます。 たとえば、優先度 0 のジョブでジョブ マネージャーは、再起動する必要がある場合はしないに代わるもので優先度 1 のジョブのタスク。 コンピューティング ノードで、復旧操作がトリガーされたときに、batch はタスクを再試行します。 回復操作の例が含まれます (ただしこれらに限定されません)、異常なコンピューティング ノードが再起動またはホスト エラーにより、コンピューティング ノードが表示されなくなったとします。 操作は依存しないと、maxTaskRetryCount 照らし合わせてカウントされることはありません、回復を再試行します。 MaxTaskRetryCount が 0 の場合でも、復旧操作のための内部の再試行が発生します。 このため、すべてのタスクにべき等であることがあります。 つまり、タスクが許容されているが中断され、任意の破損またはデータの重複を発生させることがなく再起動する必要があります。 最適な練習を何らかの形式のチェックポイント処理を使用するには時間の長いタスクを実行します。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.allowLowPriorityNode'
+    name: allowLowPriorityNode
+    fullName: allowLowPriorityNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: かどうか、ジョブ マネージャー タスクは、優先順位の低いコンピューティング ノードで実行できます。 既定値は true です。
+    optional: true
+    syntax:
+      content: 'allowLowPriorityNode?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch サービスは、コマンドラインを実行する前に、コンピューティング ノードを展開するアプリケーション パッケージの一覧。 アプリケーション パッケージがダウンロードされ、作業ディレクトリ タスクではない、共有ディレクトリに配置されます。 そのため、参照されるパッケージは、コンピューティング ノードに既に存在しが最新では、が再ダウンロードされません。コンピューティング ノード上の既存のコピーが使用されます。 参照されているアプリケーション パッケージをインストールできない場合、たとえば、パッケージが削除されたか、ダウンロードが失敗したため、タスクが失敗したため。
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクが Batch service 操作の実行に使用できる認証トークンの設定。 このプロパティが設定されている場合、Batch サービスは、アカウント アクセス キーを必要とせずに Batch サービスの操作を認証するために使用する認証トークンを使用してタスクを提供します。 AZ_BATCH_AUTHENTICATION_TOKEN の環境変数を使用して、トークンが提供されます。 トークンを使用して、タスクが実行できる操作は、設定によって異なります。 たとえば、タスクは、ジョブに他のタスクを追加またはまたはその他のタスク、ジョブの下でのジョブの状態を確認するには、ジョブのアクセス許可を要求できます。
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ジョブ マネージャー タスクのコマンドラインです。 コマンド ライン シェルで動作しないためことはできません活用してください環境変数の拡張などのシェルの機能。 このような機能を活用する場合を呼び出す必要があります、コマンドラインでシェル例 "cmd/c MyCommand"を使用して Windows でまたは"//bin/sh-c MyCommand"linux。 コマンドラインは、ファイルのパスを参照している場合、(タスク作業ディレクトリを基準)、相対パスを使うか、バッチの指定された環境変数を使用して (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)します。'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブ マネージャー タスクに適用される制約。
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブ マネージャー タスクを実行するコンテナーの設定。 このタスクを実行するプールに containerConfiguration が設定がある場合は、これも設定する必要があります。 このタスクを実行するプールが containerConfiguration が設定を持っていない場合これを設定しない必要があります。 これは、指定した場合、AZ_BATCH_NODE_ROOT_DIR (ノード上の Azure Batch ディレクトリのルート) の下のすべてのディレクトリに再帰的には、コンテナーにマップする、すべてのタスクの環境変数は、コンテナーにマップしてタスクのコマンドラインは、コンテナー内で実行します。
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブ マネージャー タスクの表示名。 一意である必要がないと、最大長 1024 まで任意の Unicode 文字を含めることができます。
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブ マネージャー タスクの環境変数設定の一覧。
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブ内のジョブ マネージャー タスクを一意に識別する文字列。 この ID は、ハイフン、アンダー スコアを含む、英数字の任意の組み合わせを含めることができます、64 を超える文字を含めることはできません。
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.killJobOnCompletion'
+    name: killJobOnCompletion
+    fullName: killJobOnCompletion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: かどうか、ジョブ マネージャー タスクの完了は、全体のジョブの完了を示します。 True の場合、ジョブ マネージャー タスクが完了したら、Batch サービスのマークとしてジョブを完了します。 (ジョブのリリース) 以外には、この時点で任意のタスクが実行している場合、は、これらのタスクが終了します。 False の場合、ジョブ マネージャー タスクが完了しても、ジョブの状態は影響しません。 この場合、onAllTasksComplete 属性を使用して、ジョブを終了しますか、または、クライアントまたはユーザーのジョブを明示的に終了がある必要があります。 この例は、ジョブ マネージャーが一連のタスクを作成しますでそれらの実行でさらにロールしはないかどうかは。 既定値は true です。 コントロールのジョブの有効期間、およびジョブ マネージャー タスクを使用していない (進行状況の監視) にジョブのタスクを作成するには、のみ onAllTasksComplete と onTaskFailure 属性を使用している場合は、killJobOnCompletion を false に設定する必要があります。
+    optional: true
+    syntax:
+      content: 'killJobOnCompletion?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: コマンドラインを実行した後、Batch サービスがコンピューティング ノードからアップロードするファイルの一覧。 マルチ インスタンス タスクでは、プライマリ タスクを実行するコンピューティング ノードから、ファイルのみアップロードされます。
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      コマンドラインを実行する前に、Batch サービスをコンピューティング ノードにダウンロードするファイルの一覧。 この要素の下に示されているファイルは、タスクの作業ディレクトリ内にあります。
+      リソース ファイルの一覧の最大サイズがあります。  最大サイズを超えると、要求は失敗し、RequestEntityTooLarge が応答のエラー コードになります。 このような場合は、サイズの ResourceFiles コレクションを減らす必要があります。 これは、.zip ファイル、アプリケーションのパッケージまたは Docker コンテナーを使用して実現できます。
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.runExclusive'
+    name: runExclusive
+    fullName: runExclusive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      かどうか、ジョブ マネージャー タスクには、これを実行して、コンピューティング ノードの排他的な使用が必要です。 True の場合、ジョブ マネージャーが実行されている限り、同じコンピューティング ノードの上の他のタスクは実行されません。 False の場合、その他のタスク同時に実行できますジョブ マネージャーとコンピューティング ノード上。
+      場合は、ノードでは、複数の同時実行タスクに関連するこれはのみ、ジョブ マネージャー タスクはノードの同時実行タスクの制限に対して通常カウントします。 既定値は true です。
+    optional: true
+    syntax:
+      content: 'runExclusive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブ マネージャー タスクを実行するユーザーの id。 省略した場合、タスクは、タスクに一意の非管理者ユーザーとして実行されます。
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'

@@ -1,0 +1,178 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation'
+    name: JobReleaseTaskExecutionInformation
+    fullName: JobReleaseTaskExecutionInformation
+    children:
+      - '@azure/batch.JobReleaseTaskExecutionInformation.containerInfo'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.endTime'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.exitCode'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.failureInfo'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.result'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.startTime'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.state'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectory'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: JobReleaseTaskExecutionInformation を表すインターフェイスです。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクが実行されているコンテナーに関する情報。 このプロパティは、コンテナーのコンテキストでタスクを実行する場合にのみに設定されます。
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ジョブのリリース タスクが完了した時刻。 このプロパティは、タスクが完了状態の場合にのみに設定されます。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクのコマンドラインで指定されたプログラムの終了コード。 このパラメーターには、タスクが完了した状態で場合にのみが返されます。 プロセスの終了コードでは、そのプロセスのアプリケーション開発者によって実装される特定の規則が反映されます。 意思決定、コード内に終了コード値を使用する場合は、アプリケーション プロセスによって使用される終了コードの規則がわかっていることを確認します。 終了コードがコンピューティング ノードのオペレーティング システム、プロセスが強制的に終了しましたなどに生成される可能性がありますに注意してください。
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 存在する場合は、タスクの失敗を説明する情報。 このプロパティでは、タスクが完了した状態で場合にのみが設定され、エラーが発生しました。
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'タスクの実行の結果。 場合は、値は ''failed''、エラーの詳細は failureInfo プロパティで検出できます。 使用可能な値が含まれます: ''成功''、''失敗'''
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクの実行が開始した時刻です。 タスクが再起動または再実行された場合は、タスクが実行を開始したつい最近の時刻となります。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'コンピューティング ノードでジョブ解放タスクの現在の状態。 使用可能な値が含まれます: ''running''、''完了'''
+    syntax:
+      content: 'state: JobReleaseTaskState'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectory'
+    name: taskRootDirectory
+    fullName: taskRootDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: コンピューティング ノードでジョブ解放タスクのルート ディレクトリ。 このパスを使用して、ログ ファイルなど、タスクによって作成されたファイルを取得することができます。
+    optional: true
+    syntax:
+      content: 'taskRootDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl'
+    name: taskRootDirectoryUrl
+    fullName: taskRootDirectoryUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: コンピューティング ノードでジョブ解放タスクのルート ディレクトリの URL。
+    optional: true
+    syntax:
+      content: 'taskRootDirectoryUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.JobReleaseTaskState'
+    name: JobReleaseTaskState
+    spec.typeScript:
+      - name: JobReleaseTaskState
+        fullName: JobReleaseTaskState
+        uid: '@azure/batch.JobReleaseTaskState'

@@ -13,6 +13,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayProbe.name'
       - '@azure/arm-network.ApplicationGatewayProbe.path'
       - '@azure/arm-network.ApplicationGatewayProbe.pickHostNameFromBackendHttpSettings'
+      - '@azure/arm-network.ApplicationGatewayProbe.port'
       - '@azure/arm-network.ApplicationGatewayProbe.protocol'
       - '@azure/arm-network.ApplicationGatewayProbe.provisioningState'
       - '@azure/arm-network.ApplicationGatewayProbe.timeout'
@@ -139,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: 'プローブの相対パス。 パスは先頭の ''/''。 送信されたプローブ<Protocol>://<host>:<port><path>'
+    summary: 'プローブの相対パス。 パスは先頭の ''/''。 送信されたプローブ<Protocol>://<host>:<port><path>します。'
     optional: true
     syntax:
       content: 'path?: undefined | string'
@@ -161,6 +162,21 @@ items:
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayProbe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プローブ、バックエンド サーバーに使用されるカスタムのポート。 有効な値の範囲は 1 から 65535 です。 設定されていない、http からポートの場合、設定が使用されます。 このプロパティはのみ Standard_v2 および WAF_v2 に有効です。
+    optional: true
+    syntax:
+      content: 'port?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayProbe.protocol'
     name: protocol
@@ -184,7 +200,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: バックエンド http 設定のリソースのプロビジョニング状態。 有効な値は次のとおりです。' の更新'、'削除' および '失敗' です。
+    summary: バックエンド http 設定のリソースのプロビジョニング状態。 設定可能な値は、次のとおりです。' の更新'、'削除' および '失敗' です。
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
