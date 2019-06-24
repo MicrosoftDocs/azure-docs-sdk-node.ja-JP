@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-hubs.ClientOptionsBase'
+    name: ClientOptionsBase
+    fullName: ClientOptionsBase
+    children:
+      - '@azure/event-hubs.ClientOptionsBase.dataTransformer'
+      - '@azure/event-hubs.ClientOptionsBase.userAgent'
+      - '@azure/event-hubs.ClientOptionsBase.webSocket'
+      - '@azure/event-hubs.ClientOptionsBase.webSocketConstructorOptions'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="d9f45-101">ベースのクライアントのオプションについて説明します。</span><span class="sxs-lookup"><span data-stu-id="d9f45-101">Describes the base client options.</span></span>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.dataTransformer'
+    name: dataTransformer
+    fullName: dataTransformer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d9f45-102">{DataTransformer}[dataTransformer]エンコードし、それぞれ送信および受信したメッセージのデコードに使用されるデータ トランスフォーマー。</span><span class="sxs-lookup"><span data-stu-id="d9f45-102">{DataTransformer} [dataTransformer] The data transformer that will be used to encode and decode the sent and received messages respectively.</span></span> <span data-ttu-id="d9f45-103">提供されない場合は、DefaultDataTransformer を使用しています。</span><span class="sxs-lookup"><span data-stu-id="d9f45-103">If not provided then we will use the DefaultDataTransformer.</span></span> <span data-ttu-id="d9f45-104">既定トランスフォーマーは、ほとんどのケースを処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d9f45-104">The default transformer should handle majority of the cases.</span></span> <span data-ttu-id="d9f45-105">このオプションは、特殊なシナリオにのみ使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d9f45-105">This option needs to be used only for specialized scenarios.</span></span>'
+    optional: true
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        type:
+          - DataTransformer
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d9f45-106">{文字列}[userAgent]ユーザー エージェントに組み込まれているユーザーに追加する必要があるエージェント文字列。</span><span class="sxs-lookup"><span data-stu-id="d9f45-106">{string} [userAgent] The user agent that needs to be appended to the built in user agent string.</span></span>'
+    optional: true
+    syntax:
+      content: 'userAgent?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.webSocket'
+    name: webSocket
+    fullName: webSocket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="d9f45-107">WebSocket コンス トラクター、WebSocket 経由の AMQP 接続を作成するために使用します。</span><span class="sxs-lookup"><span data-stu-id="d9f45-107">The WebSocket constructor used to create an AMQP connection over a WebSocket.</span></span>
+      <span data-ttu-id="d9f45-108">このオプションを指定する必要があります、次のシナリオ</span><span class="sxs-lookup"><span data-stu-id="d9f45-108">This option should be provided in the below scenarios</span></span>
+      - <span data-ttu-id="d9f45-109">Event Hubs への AMQP 接続で使用されているものである TCP ポート 5671 は、環境内でブロックされます。</span><span class="sxs-lookup"><span data-stu-id="d9f45-109">The TCP port 5671 which is what is used by the AMQP connection to Event Hubs is blocked in your environment.</span></span>
+      - <span data-ttu-id="d9f45-110">アプリケーションは、プロキシ サーバーの背後で実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d9f45-110">Your application needs to be run behind a proxy server</span></span>
+      - <span data-ttu-id="d9f45-111">アプリケーションがブラウザーで実行して、ブラウザーで組み込みの WebSocket ではなく実装を Websocket の独自の選択を提供します。</span><span class="sxs-lookup"><span data-stu-id="d9f45-111">Your application needs to run in the browser and you want to provide your own choice of Websocket implementation instead of the built-in WebSocket in the browser.</span></span>
+    optional: true
+    syntax:
+      content: 'webSocket?: WebSocketImpl'
+      return:
+        type:
+          - WebSocketImpl
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.webSocketConstructorOptions'
+    name: webSocketConstructorOptions
+    fullName: webSocketConstructorOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d9f45-112">WebSocket コンス トラクターに渡されるオプションの {webSocketConstructorOptions}-</span><span class="sxs-lookup"><span data-stu-id="d9f45-112">{webSocketConstructorOptions} - Options to be passed to the WebSocket constructor</span></span>'
+    optional: true
+    syntax:
+      content: 'webSocketConstructorOptions?: any'
+      return:
+        type:
+          - any
+    package: '@azure/event-hubs'

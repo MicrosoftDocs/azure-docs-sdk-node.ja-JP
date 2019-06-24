@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - azure-batch.JobReleaseTask.commandLine
+      - azure-batch.JobReleaseTask.containerSettings
+      - azure-batch.JobReleaseTask.environmentSettings
+      - azure-batch.JobReleaseTask.id
+      - azure-batch.JobReleaseTask.maxWallClockTime
+      - azure-batch.JobReleaseTask.resourceFiles
+      - azure-batch.JobReleaseTask.retentionTime
+      - azure-batch.JobReleaseTask.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="f2b9b-101">ジョブ解放タスクは、次のいずれかのジョブの終了時に実行されます。ユーザーがジョブの終了 API、またはジョブがまだアクティブなジョブの最大のウォール クロック時間の制限に達すると、ジョブがアクティブでまたはジョブのジョブ マネージャー タスクが完了したらも、ジョブが終了するよう構成に、削除のジョブ API を呼び出すときにジョブの管理er 完了します。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-101">The Job Release Task runs when the Job ends, because of one of the following: The user calls the Terminate Job API, or the Delete Job API while the Job is still active, the Job's maximum wall clock time constraint is reached, and the Job is still active, or the Job's Job Manager Task completed, and the Job is configured to terminate when the Job Manager completes.</span></span>
+      <span data-ttu-id="f2b9b-102">ジョブのタスクが実行されしたジョブの準備タスクが実行され、完了した各ノードでジョブ解放タスクが実行されます。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-102">The Job Release Task runs on each Node where Tasks of the Job have run and the Job Preparation Task ran and completed.</span></span> <span data-ttu-id="f2b9b-103">ジョブ準備タスクを実行し、これ以上タスクがそのノードで実行されているジョブのジョブの終了 (とそのため、ジョブ準備タスクは再実行されませんキーを押す)、ノードを再イメージ化した場合、そのコンピューティング ノードでジョブ解放タスクが実行されません。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-103">If you reimage a Node after it has run the Job Preparation Task, and the Job ends without any further Tasks of the Job running on that Node (and hence the Job Preparation Task does not re-run), then the Job Release Task does not run on that Compute Node.</span></span>
+      <span data-ttu-id="f2b9b-104">場合は、ノードを再起動すると、ジョブ解放タスクが実行中でも、コンピューティング ノードの起動時には、ジョブ解放タスクが再度実行されます。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-104">If a Node reboots while the Job Release Task is still running, the Job Release Task runs again when the Compute Node starts up.</span></span> <span data-ttu-id="f2b9b-105">ジョブは、すべてのジョブ解放タスクが完了するまで完了としてマークされていません。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-105">The Job is not marked as complete until all Job Release Tasks have completed.</span></span> <span data-ttu-id="f2b9b-106">ジョブ解放タスクは、バック グラウンドで実行されます。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-106">The Job Release Task runs in the background.</span></span> <span data-ttu-id="f2b9b-107">スケジュールのスロットを占有しませんつまり、プールで指定された maxTasksPerNode 上限に達するまではカウントされません。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-107">It does not occupy a scheduling slot; that is, it does not count towards the maxTasksPerNode limit specified on the Pool.</span></span>
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2b9b-108">コマンド ライン シェルで動作しないためことはできません活用してください環境変数の拡張などのシェルの機能。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-108">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="f2b9b-109">このような機能を活用する場合を呼び出す必要があります、コマンドラインでシェル例 "cmd/c MyCommand"を使用して Windows でまたは"//bin/sh-c MyCommand"linux。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-109">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="f2b9b-110">コマンドラインは、ファイルのパスを参照している場合、(タスク作業ディレクトリを基準)、相対パスを使うか、バッチの指定された環境変数を使用して (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)します。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-110">If the command line refers to file paths, it should use a relative path (relative to the Task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2b9b-111">これは、指定した場合、AZ_BATCH_NODE_ROOT_DIR (ノード上の Azure Batch ディレクトリのルート) の下のすべてのディレクトリに再帰的には、コンテナーにマップする、すべてのタスクの環境変数は、コンテナーにマップしてタスクのコマンドラインは、コンテナー内で実行します。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-111">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all Task environment variables are mapped into the container, and the Task command line is executed in the container.</span></span> <span data-ttu-id="f2b9b-112">AZ_BATCH_NODE_ROOT_DIR の外部でのコンテナーで生成されたファイルをバッチ ファイルの Api はこれらのファイルにアクセスできないできなくは、ホストのディスクに反映されません可能性があります。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-112">Files produced in the container outside of AZ_BATCH_NODE_ROOT_DIR might not be reflected to the host disk, meaning that Batch file APIs will not be able to access those files.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2b9b-113">この ID は、ハイフン、アンダー スコアを含む、英数字の任意の組み合わせを含めることができます、64 を超える文字を含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-113">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span> <span data-ttu-id="f2b9b-114">このプロパティを指定しない場合、Batch サービスには、''jobrelease'' の既定値が割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-114">If you do not specify this property, the Batch service assigns a default value of ''jobrelease''.</span></span> <span data-ttu-id="f2b9b-115">ジョブ内の他のタスクがジョブ解放タスクと同じ ID を持つことはできません。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-115">No other Task in the Job can have the same ID as the Job Release Task.</span></span> <span data-ttu-id="f2b9b-116">同じ id を持つタスクを送信しようとすると、Batch サービスはエラー コード TaskIdSameAsJobReleaseTask; 要求を拒否します。REST API を直接呼び出す、HTTP 状態コードは 409 (Conflict) です。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-116">If you try to submit a Task with the same id, the Batch service rejects the request with error code TaskIdSameAsJobReleaseTask; if you are calling the REST API directly, the HTTP status code is 409 (Conflict).</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f2b9b-117">この要素の下に示されているファイルは、タスクの作業ディレクトリ内にあります。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-117">Files listed under this element are located in the Task's working directory.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2b9b-118">既定値は 7 日間、つまりタスク ディレクトリは 7 日間保持するコンピューティング ノードが削除されるか、ジョブを削除しない限り、します。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-118">The default is 7 days, i.e. the Task directory will be retained for 7 days unless the Compute Node is removed or the Job is deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2b9b-119">省略した場合、タスクは、タスクに一意の非管理者ユーザーとして実行されます。</span><span class="sxs-lookup"><span data-stu-id="f2b9b-119">If omitted, the Task runs as a non-administrative user unique to the Task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

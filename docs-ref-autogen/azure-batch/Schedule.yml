@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.Schedule
+    name: Schedule
+    fullName: Schedule
+    children:
+      - azure-batch.Schedule.doNotRunAfter
+      - azure-batch.Schedule.doNotRunUntil
+      - azure-batch.Schedule.recurrenceInterval
+      - azure-batch.Schedule.startWindow
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.Schedule.doNotRunAfter
+    name: doNotRunAfter
+    fullName: doNotRunAfter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="217a7-101">DoNotRunAfter 時刻を指定しないと、定期的なジョブ スケジュールを作成しての場合は、明示的に終了するまで、ジョブ スケジュールがアクティブな残ります。</span><span class="sxs-lookup"><span data-stu-id="217a7-101">If you do not specify a doNotRunAfter time, and you are creating a recurring Job Schedule, the Job Schedule will remain active until you explicitly terminate it.</span></span>'
+    optional: true
+    syntax:
+      content: 'doNotRunAfter?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.Schedule.doNotRunUntil
+    name: doNotRunUntil
+    fullName: doNotRunUntil
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="217a7-102">DoNotRunUntil 時間を指定しない場合、スケジュールがジョブをすぐに作成する準備ができてになります。</span><span class="sxs-lookup"><span data-stu-id="217a7-102">If you do not specify a doNotRunUntil time, the schedule becomes ready to create Jobs immediately.</span></span>'
+    optional: true
+    syntax:
+      content: 'doNotRunUntil?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.Schedule.recurrenceInterval
+    name: recurrenceInterval
+    fullName: recurrenceInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="217a7-103">ジョブのスケジュールを持てないため最大でその下にある 1 つのアクティブなジョブ、特定の時点はジョブのスケジュールでは、新しいジョブの作成に時間が前のジョブが実行中の場合は、前のジョブが完了するまで、Batch サービスはしない新しいジョブを作成は。</span><span class="sxs-lookup"><span data-stu-id="217a7-103">Because a Job Schedule can have at most one active Job under it at any given time, if it is time to create a new Job under a Job Schedule, but the previous Job is still running, the Batch service will not create the new Job until the previous Job finishes.</span></span> <span data-ttu-id="217a7-104">前のジョブが新しい recurrenceInterval の startWindow 期間内で完了しなかった場合は、新しいジョブがその間隔でスケジュールいません。</span><span class="sxs-lookup"><span data-stu-id="217a7-104">If the previous Job does not finish within the startWindow period of the new recurrenceInterval, then no new Job will be scheduled for that interval.</span></span> <span data-ttu-id="217a7-105">定期的なジョブの場合は、通常、jobSpecification で、jobManagerTask を指定してください。</span><span class="sxs-lookup"><span data-stu-id="217a7-105">For recurring Jobs, you should normally specify a jobManagerTask in the jobSpecification.</span></span> <span data-ttu-id="217a7-106">JobManagerTask を使用しない場合、外部プロセス ジョブが作成されると、監視する必要がありますがタスクをジョブに追加し、ジョブの次回の試行の準備を終了します。</span><span class="sxs-lookup"><span data-stu-id="217a7-106">If you do not use jobManagerTask, you will need an external process to monitor when Jobs are created, add Tasks to the Jobs and terminate the Jobs ready for the next recurrence.</span></span> <span data-ttu-id="217a7-107">既定値は、スケジュールが再発しない: doNotRunUntil 時間の後の startWindow 内で 1 つのジョブが作成され、そのジョブが完了するとすぐには、スケジュールが完了します。</span><span class="sxs-lookup"><span data-stu-id="217a7-107">The default is that the schedule does not recur: one Job is created, within the startWindow after the doNotRunUntil time, and the schedule is complete as soon as that Job finishes.</span></span> <span data-ttu-id="217a7-108">最小値は、1 分です。</span><span class="sxs-lookup"><span data-stu-id="217a7-108">The minimum value is 1 minute.</span></span> <span data-ttu-id="217a7-109">下限値を指定する場合、Batch サービスはエラー; でスケジュールを拒否します。REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="217a7-109">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'recurrenceInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.Schedule.startWindow
+    name: startWindow
+    fullName: startWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="217a7-110">ジョブは、startWindow 間隔内で作成されていない場合、''機会'' は失われます。次の繰り返しのスケジュールまでジョブは作成されません。</span><span class="sxs-lookup"><span data-stu-id="217a7-110">If a Job is not created within the startWindow interval, then the ''opportunity'' is lost; no Job will be created until the next recurrence of the schedule.</span></span> <span data-ttu-id="217a7-111">スケジュールは定期的に実行、startWindow が繰り返し間隔よりも長い場合は、し、これと同じです、無限の startWindow に次の定期的な間隔の 1 つ recurrenceInterval で '' 期限'' ジョブはフォワード実行されないためです。</span><span class="sxs-lookup"><span data-stu-id="217a7-111">If the schedule is recurring, and the startWindow is longer than the recurrence interval, then this is equivalent to an infinite startWindow, because the Job that is ''due'' in one recurrenceInterval is not carried forward into the next recurrence interval.</span></span> <span data-ttu-id="217a7-112">既定値は有限ではありません。</span><span class="sxs-lookup"><span data-stu-id="217a7-112">The default is infinite.</span></span> <span data-ttu-id="217a7-113">最小値は、1 分です。</span><span class="sxs-lookup"><span data-stu-id="217a7-113">The minimum value is 1 minute.</span></span> <span data-ttu-id="217a7-114">下限値を指定する場合、Batch サービスはエラー; でスケジュールを拒否します。REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="217a7-114">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'startWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

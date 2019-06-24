@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkSecurityGroupRule
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - azure-batch.NetworkSecurityGroupRule.access
+      - azure-batch.NetworkSecurityGroupRule.priority
+      - azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+      - azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.access
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0dc24-101">使用可能な値が含まれます: ''許可''、''拒否''</span><span class="sxs-lookup"><span data-stu-id="0dc24-101">Possible values include: ''allow'', ''deny''</span></span>'
+    syntax:
+      content: 'access: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="0dc24-102">プール内の優先順位は一意であり、優先順位の順序で評価されます。</span><span class="sxs-lookup"><span data-stu-id="0dc24-102">Priorities within a Pool must be unique and are evaluated in order of priority.</span></span>
+      <span data-ttu-id="0dc24-103">数値が低いほど、優先度は高くなります。</span><span class="sxs-lookup"><span data-stu-id="0dc24-103">The lower the number the higher the priority.</span></span> <span data-ttu-id="0dc24-104">たとえば、ルールを指定して、150、250、350 の順序番号を持つ可能性があります。</span><span class="sxs-lookup"><span data-stu-id="0dc24-104">For example, rules could be specified with order numbers of 150, 250, and 350.</span></span> <span data-ttu-id="0dc24-105">150 の発注番号を持つルールは、250 の順序であるルールよりも優先されます。</span><span class="sxs-lookup"><span data-stu-id="0dc24-105">The rule with the order number of 150 takes precedence over the rule that has an order of 250.</span></span> <span data-ttu-id="0dc24-106">許可される優先度は、150 に 3500 です。</span><span class="sxs-lookup"><span data-stu-id="0dc24-106">Allowed priorities are 150 to 3500.</span></span> <span data-ttu-id="0dc24-107">場合は、要求は HTTP ステータス コード 400 で失敗の予約済みまたは重複した値が提供されます。</span><span class="sxs-lookup"><span data-stu-id="0dc24-107">If any reserved or duplicate values are provided the request fails with HTTP status code 400.</span></span>
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0dc24-108">有効な値は 1 つの IP アドレス (例: 10.10.10.10)、IP サブネット (192.168.1.0/24 など)、既定のタグ、または \* (すべてのアドレス) にします。</span><span class="sxs-lookup"><span data-stu-id="0dc24-108">Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or \* (for all addresses).</span></span>  <span data-ttu-id="0dc24-109">その他の場合、要求は HTTP ステータス コード 400 で失敗値が提供されます。</span><span class="sxs-lookup"><span data-stu-id="0dc24-109">If any other values are provided the request fails with HTTP status code 400.</span></span>'
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    name: sourcePortRanges
+    fullName: sourcePortRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0dc24-110">有効な値は ''*'' (すべてのポート 0 ~ 65535)、特定のポート (22 など)、またはポート範囲 (つまり 100 ~ 200)。ポートは、0 ~ 65535 の範囲内である必要があります。このコレクション内の各エントリには、(範囲または個々 のポート) の他のすべてのエントリを重複してはなりません。その他の場合、要求は HTTP ステータス コード 400 で失敗値が提供されます。既定値は ''*''。</span><span class="sxs-lookup"><span data-stu-id="0dc24-110">Valid values are ''*'' (for all ports 0 - 65535), a specific port (i.e. 22), or a port range (i.e. 100-200). The ports must be in the range of 0 to 65535. Each entry in this collection must not overlap any other entry (either a range or an individual port). If any other values are provided the request fails with HTTP status code 400. The default value is ''*''.</span></span>'
+    optional: true
+    syntax:
+      content: 'sourcePortRanges?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch

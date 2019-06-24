@@ -6,13 +6,13 @@ items:
     children:
       - '@azure/arm-containerregistry.RegistryUpdateParameters.adminUserEnabled'
       - '@azure/arm-containerregistry.RegistryUpdateParameters.networkRuleSet'
+      - '@azure/arm-containerregistry.RegistryUpdateParameters.policies'
       - '@azure/arm-containerregistry.RegistryUpdateParameters.sku'
-      - '@azure/arm-containerregistry.RegistryUpdateParameters.storageAccount'
       - '@azure/arm-containerregistry.RegistryUpdateParameters.tags'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="8ea8c-101">コンテナー レジストリを更新するためのパラメーター。</span><span class="sxs-lookup"><span data-stu-id="8ea8c-101">The parameters for updating a container registry.</span></span>
+    summary: <span data-ttu-id="6118a-101">コンテナー レジストリを更新するためのパラメーター。</span><span class="sxs-lookup"><span data-stu-id="6118a-101">The parameters for updating a container registry.</span></span>
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RegistryUpdateParameters.adminUserEnabled'
     name: adminUserEnabled
@@ -21,7 +21,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="8ea8c-102">管理者ユーザーは有効になっているかどうかを示す値。</span><span class="sxs-lookup"><span data-stu-id="8ea8c-102">The value that indicates whether the admin user is enabled.</span></span>
+    summary: <span data-ttu-id="6118a-102">管理者ユーザーは有効になっているかどうかを示す値。</span><span class="sxs-lookup"><span data-stu-id="6118a-102">The value that indicates whether the admin user is enabled.</span></span>
     optional: true
     syntax:
       content: 'adminUserEnabled?: undefined | false | true'
@@ -36,13 +36,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="8ea8c-103">ネットワーク ルールは、コンテナー レジストリを設定します。</span><span class="sxs-lookup"><span data-stu-id="8ea8c-103">The network rule set for a container registry.</span></span>
+    summary: <span data-ttu-id="6118a-103">ネットワーク ルールは、コンテナー レジストリを設定します。</span><span class="sxs-lookup"><span data-stu-id="6118a-103">The network rule set for a container registry.</span></span>
     optional: true
     syntax:
       content: 'networkRuleSet?: NetworkRuleSet'
       return:
         type:
           - '@azure/arm-containerregistry.NetworkRuleSet'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.RegistryUpdateParameters.policies'
+    name: policies
+    fullName: policies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6118a-104">コンテナー レジストリのポリシー。</span><span class="sxs-lookup"><span data-stu-id="6118a-104">The policies for a container registry.</span></span>
+    optional: true
+    syntax:
+      content: 'policies?: Policies'
+      return:
+        type:
+          - '@azure/arm-containerregistry.Policies'
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RegistryUpdateParameters.sku'
     name: sku
@@ -51,28 +66,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="8ea8c-104">コンテナー レジストリの SKU。</span><span class="sxs-lookup"><span data-stu-id="8ea8c-104">The SKU of the container registry.</span></span>
+    summary: <span data-ttu-id="6118a-105">コンテナー レジストリの SKU。</span><span class="sxs-lookup"><span data-stu-id="6118a-105">The SKU of the container registry.</span></span>
     optional: true
     syntax:
       content: 'sku?: Sku'
       return:
         type:
           - '@azure/arm-containerregistry.Sku'
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.RegistryUpdateParameters.storageAccount'
-    name: storageAccount
-    fullName: storageAccount
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: '<span data-ttu-id="8ea8c-105">コンテナー レジストリのストレージ アカウントのパラメーター。</span><span class="sxs-lookup"><span data-stu-id="8ea8c-105">The parameters of a storage account for the container registry.</span></span> <span data-ttu-id="8ea8c-106">従来の SKU にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="8ea8c-106">Only applicable to Classic SKU.</span></span> <span data-ttu-id="8ea8c-107">指定すると、ストレージ アカウントのコンテナー レジストリと同じ物理的な場所にあります。</span><span class="sxs-lookup"><span data-stu-id="8ea8c-107">If specified, the storage account must be in the same physical location as the container registry.</span></span>'
-    optional: true
-    syntax:
-      content: 'storageAccount?: StorageAccountProperties'
-      return:
-        type:
-          - '@azure/arm-containerregistry.StorageAccountProperties'
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.RegistryUpdateParameters.tags'
     name: tags
@@ -81,7 +81,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="8ea8c-108">コンテナー レジストリのタグ。</span><span class="sxs-lookup"><span data-stu-id="8ea8c-108">The tags for the container registry.</span></span>
+    summary: <span data-ttu-id="6118a-106">コンテナー レジストリのタグ。</span><span class="sxs-lookup"><span data-stu-id="6118a-106">The tags for the container registry.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -96,15 +96,15 @@ references:
       - name: NetworkRuleSet
         fullName: NetworkRuleSet
         uid: '@azure/arm-containerregistry.NetworkRuleSet'
+  - uid: '@azure/arm-containerregistry.Policies'
+    name: Policies
+    spec.typeScript:
+      - name: Policies
+        fullName: Policies
+        uid: '@azure/arm-containerregistry.Policies'
   - uid: '@azure/arm-containerregistry.Sku'
     name: Sku
     spec.typeScript:
       - name: Sku
         fullName: Sku
         uid: '@azure/arm-containerregistry.Sku'
-  - uid: '@azure/arm-containerregistry.StorageAccountProperties'
-    name: StorageAccountProperties
-    spec.typeScript:
-      - name: StorageAccountProperties
-        fullName: StorageAccountProperties
-        uid: '@azure/arm-containerregistry.StorageAccountProperties'

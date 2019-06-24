@@ -5,8 +5,8 @@ items:
     fullName: StorageAccountUpdateParameters
     children:
       - '@azure/arm-storage.StorageAccountUpdateParameters.accessTier'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.azureFilesIdentityBasedAuthentication'
       - '@azure/arm-storage.StorageAccountUpdateParameters.customDomain'
-      - '@azure/arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration'
       - '@azure/arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly'
       - '@azure/arm-storage.StorageAccountUpdateParameters.encryption'
       - '@azure/arm-storage.StorageAccountUpdateParameters.identity'
@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="4c49f-101">このパラメーターは、ストレージ アカウントのプロパティを更新するときに指定することができます。</span><span class="sxs-lookup"><span data-stu-id="4c49f-101">The parameters that can be provided when updating the storage account properties.</span></span>
+    summary: <span data-ttu-id="7ff85-101">このパラメーターは、ストレージ アカウントのプロパティを更新するときに指定することができます。</span><span class="sxs-lookup"><span data-stu-id="7ff85-101">The parameters that can be provided when updating the storage account properties.</span></span>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountUpdateParameters.accessTier'
     name: accessTier
@@ -27,14 +27,29 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="4c49f-102">ストレージ アカウントの種類が必要なに BlobStorage を = です。</span><span class="sxs-lookup"><span data-stu-id="4c49f-102">Required for storage accounts where kind = BlobStorage.</span></span> <span data-ttu-id="4c49f-103">アクセス層は、課金に使用します。</span><span class="sxs-lookup"><span data-stu-id="4c49f-103">The access tier used for billing.</span></span>
-      <span data-ttu-id="4c49f-104">指定できる値は、次のとおりです。'ホット'、' クール '</span><span class="sxs-lookup"><span data-stu-id="4c49f-104">Possible values include: 'Hot', 'Cool'</span></span>
+      <span data-ttu-id="7ff85-102">ストレージ アカウントの種類が必要なに BlobStorage を = です。</span><span class="sxs-lookup"><span data-stu-id="7ff85-102">Required for storage accounts where kind = BlobStorage.</span></span> <span data-ttu-id="7ff85-103">アクセス層は、課金に使用します。</span><span class="sxs-lookup"><span data-stu-id="7ff85-103">The access tier used for billing.</span></span>
+      <span data-ttu-id="7ff85-104">指定できる値は、次のとおりです。'ホット'、' クール '</span><span class="sxs-lookup"><span data-stu-id="7ff85-104">Possible values include: 'Hot', 'Cool'</span></span>
     optional: true
     syntax:
       content: 'accessTier?: AccessTier'
       return:
         type:
           - '@azure/arm-storage.AccessTier'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.azureFilesIdentityBasedAuthentication'
+    name: azureFilesIdentityBasedAuthentication
+    fullName: azureFilesIdentityBasedAuthentication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="7ff85-105">Azure Files の id ベースの認証設定を提供します。</span><span class="sxs-lookup"><span data-stu-id="7ff85-105">Provides the identity based authentication settings for Azure Files.</span></span>
+    optional: true
+    syntax:
+      content: 'azureFilesIdentityBasedAuthentication?: AzureFilesIdentityBasedAuthentication'
+      return:
+        type:
+          - '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountUpdateParameters.customDomain'
     name: customDomain
@@ -43,28 +58,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4c49f-105">ユーザーがストレージ アカウントに割り当てられているカスタム ドメイン。</span><span class="sxs-lookup"><span data-stu-id="4c49f-105">Custom domain assigned to the storage account by the user.</span></span> <span data-ttu-id="4c49f-106">名前は、CNAME のソースです。</span><span class="sxs-lookup"><span data-stu-id="4c49f-106">Name is the CNAME source.</span></span> <span data-ttu-id="4c49f-107">1 つのカスタム ドメインは、この時点でストレージ アカウントごとにサポートされます。</span><span class="sxs-lookup"><span data-stu-id="4c49f-107">Only one custom domain is supported per storage account at this time.</span></span> <span data-ttu-id="4c49f-108">既存のカスタム ドメインをクリアするには、カスタム ドメイン名のプロパティを空の文字列を使用します。</span><span class="sxs-lookup"><span data-stu-id="4c49f-108">To clear the existing custom domain, use an empty string for the custom domain name property.</span></span>'
+    summary: '<span data-ttu-id="7ff85-106">ユーザーがストレージ アカウントに割り当てられているカスタム ドメイン。</span><span class="sxs-lookup"><span data-stu-id="7ff85-106">Custom domain assigned to the storage account by the user.</span></span> <span data-ttu-id="7ff85-107">名前は、CNAME のソースです。</span><span class="sxs-lookup"><span data-stu-id="7ff85-107">Name is the CNAME source.</span></span> <span data-ttu-id="7ff85-108">1 つのカスタム ドメインは、この時点でストレージ アカウントごとにサポートされます。</span><span class="sxs-lookup"><span data-stu-id="7ff85-108">Only one custom domain is supported per storage account at this time.</span></span> <span data-ttu-id="7ff85-109">既存のカスタム ドメインをクリアするには、カスタム ドメイン名のプロパティを空の文字列を使用します。</span><span class="sxs-lookup"><span data-stu-id="7ff85-109">To clear the existing custom domain, use an empty string for the custom domain name property.</span></span>'
     optional: true
     syntax:
       content: 'customDomain?: CustomDomain'
       return:
         type:
           - '@azure/arm-storage.CustomDomain'
-    package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration'
-    name: enableAzureFilesAadIntegration
-    fullName: enableAzureFilesAadIntegration
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: <span data-ttu-id="4c49f-109">場合に、SMB の Azure ファイルの AAD 統合を有効を true に設定します。</span><span class="sxs-lookup"><span data-stu-id="4c49f-109">Enables Azure Files AAD Integration for SMB if sets to true.</span></span>
-    optional: true
-    syntax:
-      content: 'enableAzureFilesAadIntegration?: undefined | false | true'
-      return:
-        type:
-          - undefined | false | true
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly'
     name: enableHttpsTrafficOnly
@@ -73,7 +73,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4c49f-110">場合は、ストレージ サービスにのみ https トラフィックを許可を true に設定します。</span><span class="sxs-lookup"><span data-stu-id="4c49f-110">Allows https traffic only to storage service if sets to true.</span></span>
+    summary: <span data-ttu-id="7ff85-110">場合は、ストレージ サービスにのみ https トラフィックを許可を true に設定します。</span><span class="sxs-lookup"><span data-stu-id="7ff85-110">Allows https traffic only to storage service if sets to true.</span></span>
     optional: true
     syntax:
       content: 'enableHttpsTrafficOnly?: undefined | false | true'
@@ -88,7 +88,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4c49f-111">アカウントの暗号化の設定を提供します。</span><span class="sxs-lookup"><span data-stu-id="4c49f-111">Provides the encryption settings on the account.</span></span> <span data-ttu-id="4c49f-112">既定の設定は暗号化されません。</span><span class="sxs-lookup"><span data-stu-id="4c49f-112">The default setting is unencrypted.</span></span>
+    summary: <span data-ttu-id="7ff85-111">アカウントの暗号化の設定を提供します。</span><span class="sxs-lookup"><span data-stu-id="7ff85-111">Provides the encryption settings on the account.</span></span> <span data-ttu-id="7ff85-112">既定の設定は暗号化されません。</span><span class="sxs-lookup"><span data-stu-id="7ff85-112">The default setting is unencrypted.</span></span>
     optional: true
     syntax:
       content: 'encryption?: Encryption'
@@ -103,7 +103,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4c49f-113">リソースの id。</span><span class="sxs-lookup"><span data-stu-id="4c49f-113">The identity of the resource.</span></span>
+    summary: <span data-ttu-id="7ff85-113">リソースの id。</span><span class="sxs-lookup"><span data-stu-id="7ff85-113">The identity of the resource.</span></span>
     optional: true
     syntax:
       content: 'identity?: Identity'
@@ -118,7 +118,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4c49f-114">任意。</span><span class="sxs-lookup"><span data-stu-id="4c49f-114">Optional.</span></span> <span data-ttu-id="4c49f-115">ストレージ アカウントの種類を示します。</span><span class="sxs-lookup"><span data-stu-id="4c49f-115">Indicates the type of storage account.</span></span> <span data-ttu-id="4c49f-116">現在 StorageV2 値のみサーバーによってサポートされています。</span><span class="sxs-lookup"><span data-stu-id="4c49f-116">Currently only StorageV2 value supported by server.</span></span> <span data-ttu-id="4c49f-117">指定できる値は、次のとおりです。''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span><span class="sxs-lookup"><span data-stu-id="4c49f-117">Possible values include: ''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span></span>'
+    summary: '<span data-ttu-id="7ff85-114">任意。</span><span class="sxs-lookup"><span data-stu-id="7ff85-114">Optional.</span></span> <span data-ttu-id="7ff85-115">ストレージ アカウントの種類を示します。</span><span class="sxs-lookup"><span data-stu-id="7ff85-115">Indicates the type of storage account.</span></span> <span data-ttu-id="7ff85-116">現在 StorageV2 値のみサーバーによってサポートされています。</span><span class="sxs-lookup"><span data-stu-id="7ff85-116">Currently only StorageV2 value supported by server.</span></span> <span data-ttu-id="7ff85-117">指定できる値は、次のとおりです。''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span><span class="sxs-lookup"><span data-stu-id="7ff85-117">Possible values include: ''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage''</span></span>'
     optional: true
     syntax:
       content: 'kind?: Kind'
@@ -133,7 +133,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4c49f-118">ネットワーク ルール セット</span><span class="sxs-lookup"><span data-stu-id="4c49f-118">Network rule set</span></span>
+    summary: <span data-ttu-id="7ff85-118">ネットワーク ルール セット</span><span class="sxs-lookup"><span data-stu-id="7ff85-118">Network rule set</span></span>
     optional: true
     syntax:
       content: 'networkRuleSet?: NetworkRuleSet'
@@ -148,7 +148,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4c49f-119">取得または SKU の名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="4c49f-119">Gets or sets the SKU name.</span></span> <span data-ttu-id="4c49f-120">Standard_ZRS や Premium_LRS Premium_ZRS には、SKU 名を更新できませんも、これらの SKU 名のアカウントを他の値に更新できることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="4c49f-120">Note that the SKU name cannot be updated to Standard_ZRS, Premium_LRS or Premium_ZRS, nor can accounts of those SKU names be updated to any other value.</span></span>'
+    summary: '<span data-ttu-id="7ff85-119">取得または SKU の名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="7ff85-119">Gets or sets the SKU name.</span></span> <span data-ttu-id="7ff85-120">Standard_ZRS や Premium_LRS Premium_ZRS には、SKU 名を更新できませんも、これらの SKU 名のアカウントを他の値に更新できることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="7ff85-120">Note that the SKU name cannot be updated to Standard_ZRS, Premium_LRS or Premium_ZRS, nor can accounts of those SKU names be updated to any other value.</span></span>'
     optional: true
     syntax:
       content: 'sku?: Sku'
@@ -163,7 +163,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4c49f-121">取得またはリソースを説明するキー値のペアのリストを設定します。</span><span class="sxs-lookup"><span data-stu-id="4c49f-121">Gets or sets a list of key value pairs that describe the resource.</span></span> <span data-ttu-id="4c49f-122">これらのタグはリソース グループをまたがってこのリソースを表示およびグループ化する際に使用できます。</span><span class="sxs-lookup"><span data-stu-id="4c49f-122">These tags can be used in viewing and grouping this resource (across resource groups).</span></span> <span data-ttu-id="4c49f-123">リソースの最大 15 個のタグを指定できます。</span><span class="sxs-lookup"><span data-stu-id="4c49f-123">A maximum of 15 tags can be provided for a resource.</span></span> <span data-ttu-id="4c49f-124">各タグは、128 文字および 256 文字以下の長さの値の値よりも大きくないキーが必要です。</span><span class="sxs-lookup"><span data-stu-id="4c49f-124">Each tag must have a key no greater in length than 128 characters and a value no greater in length than 256 characters.</span></span>
+    summary: <span data-ttu-id="7ff85-121">取得またはリソースを説明するキー値のペアのリストを設定します。</span><span class="sxs-lookup"><span data-stu-id="7ff85-121">Gets or sets a list of key value pairs that describe the resource.</span></span> <span data-ttu-id="7ff85-122">これらのタグはリソース グループをまたがってこのリソースを表示およびグループ化する際に使用できます。</span><span class="sxs-lookup"><span data-stu-id="7ff85-122">These tags can be used in viewing and grouping this resource (across resource groups).</span></span> <span data-ttu-id="7ff85-123">リソースの最大 15 個のタグを指定できます。</span><span class="sxs-lookup"><span data-stu-id="7ff85-123">A maximum of 15 tags can be provided for a resource.</span></span> <span data-ttu-id="7ff85-124">各タグは、128 文字および 256 文字以下の長さの値の値よりも大きくないキーが必要です。</span><span class="sxs-lookup"><span data-stu-id="7ff85-124">Each tag must have a key no greater in length than 128 characters and a value no greater in length than 256 characters.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -178,6 +178,12 @@ references:
       - name: AccessTier
         fullName: AccessTier
         uid: '@azure/arm-storage.AccessTier'
+  - uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
+    name: AzureFilesIdentityBasedAuthentication
+    spec.typeScript:
+      - name: AzureFilesIdentityBasedAuthentication
+        fullName: AzureFilesIdentityBasedAuthentication
+        uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
   - uid: '@azure/arm-storage.CustomDomain'
     name: CustomDomain
     spec.typeScript:

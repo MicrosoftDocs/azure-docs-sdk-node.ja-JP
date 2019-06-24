@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobPatchParameter
+    name: JobPatchParameter
+    fullName: JobPatchParameter
+    children:
+      - azure-batch.JobPatchParameter.constraints
+      - azure-batch.JobPatchParameter.metadata
+      - azure-batch.JobPatchParameter.onAllTasksComplete
+      - azure-batch.JobPatchParameter.poolInfo
+      - azure-batch.JobPatchParameter.priority
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="04e05-101">省略した場合、制約のままにする既存の実行は変更されません。</span><span class="sxs-lookup"><span data-stu-id="04e05-101">If omitted, the existing execution constraints are left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - azure-batch.JobConstraints
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="04e05-102">省略した場合、メタデータのまま、既存のジョブは変更されません。</span><span class="sxs-lookup"><span data-stu-id="04e05-102">If omitted, the existing Job metadata is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.onAllTasksComplete
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="04e05-103">省略した場合、入力候補の動作のまま変更されません。</span><span class="sxs-lookup"><span data-stu-id="04e05-103">If omitted, the completion behavior is left unchanged.</span></span> <span data-ttu-id="04e05-104">Noaction に terminatejob から値を変更することがありますいない - は、自動ジョブの終了を関与して後を有効にできませんもう一度オフします。</span><span class="sxs-lookup"><span data-stu-id="04e05-104">You may not change the value from terminatejob to noaction - that is, once you have engaged automatic Job termination, you cannot turn it off again.</span></span> <span data-ttu-id="04e05-105">格納しようとする場合、要求が ''無効なプロパティ値'' エラー応答; が失敗します。REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="04e05-105">If you try to do this, the request fails with an ''invalid property value'' error response; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="04e05-106">使用可能な値が含まれます: ''noAction''、''terminateJob''</span><span class="sxs-lookup"><span data-stu-id="04e05-106">Possible values include: ''noAction'', ''terminateJob''</span></span>'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.poolInfo
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="04e05-107">ジョブが無効になっている場合にのみ、ジョブのプールを変更する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="04e05-107">You may change the Pool for a Job only when the Job is disabled.</span></span> <span data-ttu-id="04e05-108">PoolInfo 要素を含めるし、ジョブが無効になっていない場合、修正プログラムのジョブの呼び出しは失敗します。</span><span class="sxs-lookup"><span data-stu-id="04e05-108">The Patch Job call will fail if you include the poolInfo element and the Job is not disabled.</span></span> <span data-ttu-id="04e05-109">KeepAlive プロパティのみを更新できる場合は、autoPoolSpecification 仕様、poolInfo で指定するをクリックし、自動プールのジョブの poolLifetimeOption がある場合のみです。</span><span class="sxs-lookup"><span data-stu-id="04e05-109">If you specify an autoPoolSpecification specification in the poolInfo, only the keepAlive property can be updated, and then only if the auto Pool has a poolLifetimeOption of Job.</span></span> <span data-ttu-id="04e05-110">省略した場合、その現在のプールで実行するジョブが続行されます。</span><span class="sxs-lookup"><span data-stu-id="04e05-110">If omitted, the Job continues to run on its current Pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'poolInfo?: PoolInformation'
+      return:
+        type:
+          - azure-batch.PoolInformation
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="04e05-111">優先度の値の範囲は-1000 から 1000 で、-1000 は最も低い優先順位と 1000 が最高の優先順位です。</span><span class="sxs-lookup"><span data-stu-id="04e05-111">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="04e05-112">ジョブの優先順位が左を省略すると、変更されません。</span><span class="sxs-lookup"><span data-stu-id="04e05-112">If omitted, the priority of the Job is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'priority?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+references:
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: azure-batch.JobConstraints
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: azure-batch.PoolInformation

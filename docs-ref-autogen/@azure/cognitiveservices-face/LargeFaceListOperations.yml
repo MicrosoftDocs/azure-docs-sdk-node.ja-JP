@@ -47,7 +47,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="81933-101">LargeFaceListOperations を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="81933-101">Class representing a LargeFaceListOperations.</span></span>
+    summary: <span data-ttu-id="21ce6-101">LargeFaceListOperations を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="21ce6-101">Class representing a LargeFaceListOperations.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargeFaceListOperations.addFaceFromStream_2'
     name: 'addFaceFromStream(string, msRest.HttpRequestBody, LargeFaceListAddFaceFromStreamOptionalParams, ServiceCallback<PersistedFace>)'
@@ -62,20 +62,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-102">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-102">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-102">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-102">Id referencing a particular large face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="81933-103">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="81933-103">An image stream.</span></span>
+          description: <span data-ttu-id="21ce6-103">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="21ce6-103">An image stream.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromStreamOptionalParams'
-          description: <span data-ttu-id="81933-104">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-104">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-104">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-104">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="81933-105">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-105">The callback</span></span>
+            <span data-ttu-id="21ce6-105">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-105">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListAddFaceFromStreamResponse>
@@ -86,18 +86,35 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="81933-106">顔を大規模な顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="81933-106">Add a face to a large face list.</span></span> <span data-ttu-id="81933-107">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="81933-107">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="81933-108">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="81933-108">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>'
+    summary: |-
+      <span data-ttu-id="21ce6-106">指定された大規模顔リストに顔を追加します (最大 1,000,000 個)。</span><span class="sxs-lookup"><span data-stu-id="21ce6-106">Add a face to a specified large face list, up to 1,000,000 faces.</span></span>
+      <br /> <span data-ttu-id="21ce6-107">複数人の顔を含むイメージを処理するのには、入力の顔を targetFace 四角形を使用してイメージとして指定できます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-107">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="21ce6-108">追加の顔を表す persistedFaceId を返します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-108">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="21ce6-109">イメージは格納されません。</span><span class="sxs-lookup"><span data-stu-id="21ce6-109">No image will be stored.</span></span> <span data-ttu-id="21ce6-110">までサーバーには、抽出された顔機能のみ[LargeFaceList Face - 削除](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4)または[LargeFaceList - 削除](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-110">Only the extracted face feature will be stored on server until [LargeFaceList Face - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) or [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) is called.</span></span>
+      <br /> <span data-ttu-id="21ce6-111">注 persistedFaceId はによって生成された faceId を異なる[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-111">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="21ce6-112">高い顔のイメージ品質は、認識精度を意味します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-112">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id="21ce6-113">高品質な顔を検討してください: 正面、clear、および顔のサイズは 200 (目の間に 100 ピクセル単位) が 200 ピクセル x、または大きくします。</span><span class="sxs-lookup"><span data-stu-id="21ce6-113">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="21ce6-114">JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="21ce6-114">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="21ce6-115">許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-115">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="21ce6-116">"targetFace"四角形は、1 つの面を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="21ce6-116">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="21ce6-117">0 個または複数の面は、エラーと見なされます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-117">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="21ce6-118">指定された"targetFace"四角形が返されない場合[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)、検出、顔を正常に追加して保証はありません。</span><span class="sxs-lookup"><span data-stu-id="21ce6-118">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="21ce6-119">検出可能な顔のサイズ (36 4096 x 4096 ピクセル x 36) から大きな頭部姿勢、または大規模な閉塞にエラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-119">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="21ce6-120">同じ顔リストとの間の顔の追加/削除は順番に処理され、一覧は、並列でさまざまな面との間。</span><span class="sxs-lookup"><span data-stu-id="21ce6-120">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>
+      * <span data-ttu-id="21ce6-121">検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。</span><span class="sxs-lookup"><span data-stu-id="21ce6-121">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="21ce6-122">1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-122">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="21ce6-123">異なる 'detectionModel' の値を指定することができます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-123">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="21ce6-124">使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="21ce6-124">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="21ce6-125">モデル</span><span class="sxs-lookup"><span data-stu-id="21ce6-125">Model</span></span> | <span data-ttu-id="21ce6-126">使用をお勧めします-case(s)</span><span class="sxs-lookup"><span data-stu-id="21ce6-126">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="21ce6-127">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="21ce6-127">'detection_01':</span></span> | <span data-ttu-id="21ce6-128">既定の検出モデル [LargeFaceList - 追加</span><span class="sxs-lookup"><span data-stu-id="21ce6-128">The default detection model for [LargeFaceList - Add</span></span>
+      <span data-ttu-id="21ce6-129">Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-129">Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3).</span></span> <span data-ttu-id="21ce6-130">ほぼ正面の顔の検出をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="21ce6-130">Recommend for near frontal face detection.</span></span> <span data-ttu-id="21ce6-131">角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="21ce6-131">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="21ce6-132">| |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。</span><span class="sxs-lookup"><span data-stu-id="21ce6-132">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> <span data-ttu-id="21ce6-133">|クォータ:</span><span class="sxs-lookup"><span data-stu-id="21ce6-133">| Quota:</span></span>
+      * <span data-ttu-id="21ce6-134">無料レベルのサブスクリプション クォータ:大規模な顔リストごとに 1,000 直面します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-134">Free-tier subscription quota: 1,000 faces per large face list.</span></span>
+      * <span data-ttu-id="21ce6-135">S0 レベルのサブスクリプション クォータ:1,000,000 は、大規模な顔リストごとに直面します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-135">S0-tier subscription quota: 1,000,000 faces per large face list.</span></span>
     syntax:
       content: 'function addFaceFromStream(largeFaceListId: string, image: msRest.HttpRequestBody, options?: Models.LargeFaceListAddFaceFromStreamOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-109">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-109">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-136">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-136">Id referencing a particular large face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="81933-110">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="81933-110">An image stream.</span></span>
+          description: <span data-ttu-id="21ce6-137">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="21ce6-137">An image stream.</span></span>
         - id: options
           type:
             - Models.LargeFaceListAddFaceFromStreamOptionalParams
@@ -120,16 +137,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-111">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-111">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-138">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-138">Id referencing a particular large face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="81933-112">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="81933-112">An image stream.</span></span>
+          description: <span data-ttu-id="21ce6-139">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="21ce6-139">An image stream.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="81933-113">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-113">The callback</span></span>
+            <span data-ttu-id="21ce6-140">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-140">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListAddFaceFromStreamResponse>
@@ -147,20 +164,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-114">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-114">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-141">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-141">Id referencing a particular large face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="81933-115">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="81933-115">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="21ce6-142">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="21ce6-142">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams'
-          description: <span data-ttu-id="81933-116">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-116">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-143">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-143">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="81933-117">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-117">The callback</span></span>
+            <span data-ttu-id="21ce6-144">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-144">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListAddFaceFromUrlResponse>
@@ -171,18 +188,35 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="81933-118">顔を大規模な顔リストに追加します。</span><span class="sxs-lookup"><span data-stu-id="81933-118">Add a face to a large face list.</span></span> <span data-ttu-id="81933-119">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="81933-119">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="81933-120">PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。</span><span class="sxs-lookup"><span data-stu-id="81933-120">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>'
+    summary: |-
+      <span data-ttu-id="21ce6-145">指定された大規模顔リストに顔を追加します (最大 1,000,000 個)。</span><span class="sxs-lookup"><span data-stu-id="21ce6-145">Add a face to a specified large face list, up to 1,000,000 faces.</span></span>
+      <br /> <span data-ttu-id="21ce6-146">複数人の顔を含むイメージを処理するのには、入力の顔を targetFace 四角形を使用してイメージとして指定できます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-146">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="21ce6-147">追加の顔を表す persistedFaceId を返します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-147">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="21ce6-148">イメージは格納されません。</span><span class="sxs-lookup"><span data-stu-id="21ce6-148">No image will be stored.</span></span> <span data-ttu-id="21ce6-149">までサーバーには、抽出された顔機能のみ[LargeFaceList Face - 削除](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4)または[LargeFaceList - 削除](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-149">Only the extracted face feature will be stored on server until [LargeFaceList Face - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) or [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) is called.</span></span>
+      <br /> <span data-ttu-id="21ce6-150">注 persistedFaceId はによって生成された faceId を異なる[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-150">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="21ce6-151">高い顔のイメージ品質は、認識精度を意味します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-151">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id="21ce6-152">高品質な顔を検討してください: 正面、clear、および顔のサイズは 200 (目の間に 100 ピクセル単位) が 200 ピクセル x、または大きくします。</span><span class="sxs-lookup"><span data-stu-id="21ce6-152">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="21ce6-153">JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="21ce6-153">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="21ce6-154">許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-154">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="21ce6-155">"targetFace"四角形は、1 つの面を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="21ce6-155">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="21ce6-156">0 個または複数の面は、エラーと見なされます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-156">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="21ce6-157">指定された"targetFace"四角形が返されない場合[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)、検出、顔を正常に追加して保証はありません。</span><span class="sxs-lookup"><span data-stu-id="21ce6-157">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="21ce6-158">検出可能な顔のサイズ (36 4096 x 4096 ピクセル x 36) から大きな頭部姿勢、または大規模な閉塞にエラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-158">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="21ce6-159">同じ顔リストとの間の顔の追加/削除は順番に処理され、一覧は、並列でさまざまな面との間。</span><span class="sxs-lookup"><span data-stu-id="21ce6-159">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>
+      * <span data-ttu-id="21ce6-160">検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。</span><span class="sxs-lookup"><span data-stu-id="21ce6-160">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="21ce6-161">1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-161">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="21ce6-162">異なる 'detectionModel' の値を指定することができます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-162">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="21ce6-163">使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="21ce6-163">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="21ce6-164">モデル</span><span class="sxs-lookup"><span data-stu-id="21ce6-164">Model</span></span> | <span data-ttu-id="21ce6-165">使用をお勧めします-case(s)</span><span class="sxs-lookup"><span data-stu-id="21ce6-165">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="21ce6-166">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="21ce6-166">'detection_01':</span></span> | <span data-ttu-id="21ce6-167">既定の検出モデル [LargeFaceList - 追加</span><span class="sxs-lookup"><span data-stu-id="21ce6-167">The default detection model for [LargeFaceList - Add</span></span>
+      <span data-ttu-id="21ce6-168">Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-168">Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3).</span></span> <span data-ttu-id="21ce6-169">ほぼ正面の顔の検出をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="21ce6-169">Recommend for near frontal face detection.</span></span> <span data-ttu-id="21ce6-170">角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="21ce6-170">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="21ce6-171">| |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。</span><span class="sxs-lookup"><span data-stu-id="21ce6-171">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> <span data-ttu-id="21ce6-172">|クォータ:</span><span class="sxs-lookup"><span data-stu-id="21ce6-172">| Quota:</span></span>
+      * <span data-ttu-id="21ce6-173">無料レベルのサブスクリプション クォータ:大規模な顔リストごとに 1,000 直面します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-173">Free-tier subscription quota: 1,000 faces per large face list.</span></span>
+      * <span data-ttu-id="21ce6-174">S0 レベルのサブスクリプション クォータ:1,000,000 は、大規模な顔リストごとに直面します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-174">S0-tier subscription quota: 1,000,000 faces per large face list.</span></span>
     syntax:
       content: 'function addFaceFromUrl(largeFaceListId: string, url: string, options?: Models.LargeFaceListAddFaceFromUrlOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-121">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-121">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-175">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-175">Id referencing a particular large face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="81933-122">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="81933-122">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="21ce6-176">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="21ce6-176">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - Models.LargeFaceListAddFaceFromUrlOptionalParams
@@ -205,16 +239,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-123">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-123">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-177">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-177">Id referencing a particular large face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="81933-124">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="81933-124">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="21ce6-178">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="21ce6-178">Publicly reachable URL of an image</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="81933-125">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-125">The callback</span></span>
+            <span data-ttu-id="21ce6-179">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-179">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListAddFaceFromUrlResponse>
@@ -232,16 +266,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-126">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-126">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-180">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-180">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListCreateOptionalParams'
-          description: <span data-ttu-id="81933-127">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-127">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-181">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-181">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-128">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-128">The callback</span></span>
+            <span data-ttu-id="21ce6-182">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-182">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -252,25 +286,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: |-
-      <span data-ttu-id="81933-129">ユーザー指定の largeFaceListId、名、省略可能な userData および recognitionModel で、空の大規模な顔リストを作成します。</span><span class="sxs-lookup"><span data-stu-id="81933-129">Create an empty large face list with user-specified largeFaceListId, name, an optional userData and recognitionModel.</span></span>
-      <br /> <span data-ttu-id="81933-130">大規模な顔リスト最大 1,000,000 面、面の一覧し、で使用される[Face - 類似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)します。</span><span class="sxs-lookup"><span data-stu-id="81933-130">Large face list is a list of faces, up to 1,000,000 faces, and used by [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>
-      <br /> <span data-ttu-id="81933-131">作成後は、ユーザーが使用する必要があります[LargeFaceList Face - 追加](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3)面をインポートして[LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1)をすぐに使えるようにする[Face - FindSimilar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)します。</span><span class="sxs-lookup"><span data-stu-id="81933-131">After creation, user should use [LargeFaceList Face - Add](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) to import the faces and [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) to make it ready for [Face - FindSimilar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span> <span data-ttu-id="81933-132">顔がまでサーバーに格納されている[LargeFaceList - 削除](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="81933-132">Faces are stored on server until [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) is called.</span></span>
-      <br /> <span data-ttu-id="81933-133">似ていますが、有名人に似た顔のような顔をフィルター処理、検索のようなシナリオの使用を見つけたり、ライトと顔識別方法。</span><span class="sxs-lookup"><span data-stu-id="81933-133">Find Similar is used for scenario like finding celebrity-like faces, similar face filtering, or as a light way face identification.</span></span> <span data-ttu-id="81933-134">ユーザーを識別するために、実際に使用する場合は、使用しますが、[つの PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
-      [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)と[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。</span><span class="sxs-lookup"><span data-stu-id="81933-134">But if the actual use is to identify person, please use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
-      [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) and [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>
-      <br />
-      * <span data-ttu-id="81933-135">無料レベルのサブスクリプション クォータ:大規模な 64 は、リストに直面します。</span><span class="sxs-lookup"><span data-stu-id="81933-135">Free-tier subscription quota: 64 large face lists.</span></span>
-      * <span data-ttu-id="81933-136">S0 レベルのサブスクリプション クォータ:1,000,000 大規模な顔の一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="81933-136">S0-tier subscription quota: 1,000,000 large face lists.</span></span>
-      <br />
-      <span data-ttu-id="81933-137">この大規模な顔リストに関連付ける 'recognitionModel' を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="81933-137">'recognitionModel' should be specified to associate with this large face list.</span></span> <span data-ttu-id="81933-138">'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。</span><span class="sxs-lookup"><span data-stu-id="81933-138">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="81933-139">既存の大規模な顔リストに追加される新しい面では、コレクションに既に関連付けられている認識モデルを使用します。</span><span class="sxs-lookup"><span data-stu-id="81933-139">New faces that are added to an existing large face list will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id="81933-140">認識モデルの別のバージョンによって抽出された特徴には、大規模な顔の一覧で既存の顔の特徴を更新できません。</span><span class="sxs-lookup"><span data-stu-id="81933-140">Existing face features in a large face list can't be updated to features extracted by another version of recognition model.</span></span>
+    summary: "<span data-ttu-id=\"21ce6-183\">ユーザー指定の largeFaceListId、名、省略可能な userData および recognitionModel で、空の大規模な顔リストを作成します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-183\">Create an empty large face list with user-specified largeFaceListId, name, an optional userData and recognitionModel.</span></span>\n<br /> <span data-ttu-id=\"21ce6-184\">大規模な顔リスト最大 1,000,000 面、面の一覧し、で使用される[Face - 類似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-184\">Large face list is a list of faces, up to 1,000,000 faces, and used by [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>\n<br /> <span data-ttu-id=\"21ce6-185\">作成後は、ユーザーが使用する必要があります[LargeFaceList Face - 追加](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3)面をインポートして[LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1)をすぐに使えるようにする[面で類似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-185\">After creation, user should use [LargeFaceList Face - Add](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) to import the faces and [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) to make it ready for [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span> <span data-ttu-id=\"21ce6-186\">イメージは格納されません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-186\">No image will be stored.</span></span> <span data-ttu-id=\"21ce6-187\">抽出された顔の特徴のみがまでサーバーに格納されている[LargeFaceList - 削除](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)が呼び出されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-187\">Only the extracted face features are stored on server until [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) is called.</span></span>\n<br /> <span data-ttu-id=\"21ce6-188\">似ていますが、有名人に似た顔のような顔をフィルター処理、検索のようなシナリオの使用を見つけたり、ライトと顔識別方法。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-188\">Find Similar is used for scenario like finding celebrity-like faces, similar face filtering, or as a light way face identification.</span></span> <span data-ttu-id=\"21ce6-189\">ユーザーを識別するために、実際に使用する場合は、使用しますが、[つの PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)と[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-189\">But if the actual use is to identify person, please use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) and [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br/><span data-ttu-id=\"21ce6-190\">この大規模な顔リストに関連付ける 'recognitionModel' を指定する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-190\">'recognitionModel' should be specified to associate with this large face list.</span></span> <span data-ttu-id=\"21ce6-191\">'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-191\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"21ce6-192\">既存の大規模な顔リストに追加される新しい面では、コレクションに既に関連付けられている認識モデルを使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-192\">New faces that are added to an existing large face list will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id=\"21ce6-193\">認識モデルの別のバージョンによって抽出された特徴には、大規模な顔の一覧で既存の顔の特徴を更新できません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-193\">Existing face features in a large face list can't be updated to features extracted by another version of recognition model.</span></span>\n* <span data-ttu-id=\"21ce6-194\">'recognition_01':既定の認識モデル[LargeFaceList-作成](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc)です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-194\">'recognition_01': The default recognition model for [LargeFaceList- Create](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc).</span></span> <span data-ttu-id=\"21ce6-195\">2019 年 3 月の前に作成されたこれらすべての大規模な顔リストは、この認識モデルで結合されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-195\">All those large face lists created before 2019 March are bonded with this recognition model.</span></span>\n* <span data-ttu-id=\"21ce6-196\">'recognition_02':2019 年 3 月にリリースされた認識モデル。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-196\">'recognition_02': Recognition model released in 2019 March.</span></span> <span data-ttu-id=\"21ce6-197\">'recognition_01' と比較対象の全体的な精度が向上するためには、'recognition_02' をお勧めします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-197\">'recognition_02' is recommended since its\_overall accuracy is improved compared with 'recognition_01'.</span></span>\n<span data-ttu-id=\"21ce6-198\">大規模な顔リスト クォータ:</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-198\">Large face list quota:</span></span>\n* <span data-ttu-id=\"21ce6-199\">無料レベルのサブスクリプション クォータ:大規模な 64 は、リストに直面します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-199\">Free-tier subscription quota: 64 large face lists.</span></span>\n* <span data-ttu-id=\"21ce6-200\">S0 レベルのサブスクリプション クォータ:1,000,000 大規模な顔の一覧表示されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"21ce6-200\">S0-tier subscription quota: 1,000,000 large face lists.</span></span>"
     syntax:
       content: 'function create(largeFaceListId: string, options?: Models.LargeFaceListCreateOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-141">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-141">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-201">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-201">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - Models.LargeFaceListCreateOptionalParams
@@ -293,12 +316,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-142">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-142">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-202">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-202">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-143">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-143">The callback</span></span>
+            <span data-ttu-id="21ce6-203">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-203">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -309,18 +332,20 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="81933-144">(、PersistedFaceId と、largeFaceListId によって指定される)、大規模な顔の一覧から既存の顔を削除します。</span><span class="sxs-lookup"><span data-stu-id="81933-144">Delete an existing face from a large face list (given by a persistedFaceId and a largeFaceListId).</span></span> <span data-ttu-id="81933-145">表面に関連する永続化されたイメージも削除されます。</span><span class="sxs-lookup"><span data-stu-id="81933-145">Persisted image related to the face will also be deleted.</span></span>
+    summary: |-
+      <span data-ttu-id="21ce6-204">大規模な顔リストから指定した largeFaceListId して persistedFaceId 顔を削除します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-204">Delete a face from a large face list by specified largeFaceListId and persistedFaceId.</span></span>
+      <br /> <span data-ttu-id="21ce6-205">同じ大規模な顔リストとの間の顔の追加/削除は、一覧は、並列で大規模な顔を異なるとの間、順番に処理されます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-205">Adding/deleting faces to/from a same large face list are processed sequentially and to/from different large face lists are in parallel.</span></span>
     syntax:
       content: 'function deleteFace(largeFaceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-146">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-146">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-206">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-206">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="81933-147">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-147">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="21ce6-207">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-207">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -343,20 +368,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-148">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-148">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-208">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-208">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="81933-149">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-149">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="21ce6-209">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-209">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="81933-150">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-150">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-210">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-210">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-151">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-151">The callback</span></span>
+            <span data-ttu-id="21ce6-211">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-211">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -374,16 +399,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-152">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-152">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-212">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-212">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="81933-153">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-153">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="21ce6-213">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-213">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-154">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-154">The callback</span></span>
+            <span data-ttu-id="21ce6-214">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-214">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -394,14 +419,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="81933-155">FaceListId に従って既存の大規模な顔リストを削除します。</span><span class="sxs-lookup"><span data-stu-id="81933-155">Delete an existing large face list according to faceListId.</span></span> <span data-ttu-id="81933-156">顔の大きな顔リスト内のイメージも削除されますが永続化されます。</span><span class="sxs-lookup"><span data-stu-id="81933-156">Persisted face images in the large face list will also be deleted.</span></span>
+    summary: <span data-ttu-id="21ce6-215">指定された大規模顔リストを削除します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-215">Delete a specified large face list.</span></span>
     syntax:
       content: 'function deleteMethod(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-157">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-157">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-216">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-216">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -424,16 +449,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-158">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-158">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-217">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-217">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="81933-159">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-159">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-218">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-218">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-160">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-160">The callback</span></span>
+            <span data-ttu-id="21ce6-219">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-219">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -451,12 +476,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-161">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-161">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-220">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-220">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-162">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-162">The callback</span></span>
+            <span data-ttu-id="21ce6-221">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-221">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -474,16 +499,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-163">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-163">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-222">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-222">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListGetOptionalParams'
-          description: <span data-ttu-id="81933-164">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-164">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-223">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-223">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.LargeFaceList>
           description: |
-            <span data-ttu-id="81933-165">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-165">The callback</span></span>
+            <span data-ttu-id="21ce6-224">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-224">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetResponse>
@@ -494,14 +519,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="81933-166">大規模な顔リストの largeFaceListId、名、userData および recognitionModel を取得します。</span><span class="sxs-lookup"><span data-stu-id="81933-166">Retrieve a large face list’s largeFaceListId, name, userData and recognitionModel.</span></span>'
+    summary: '<span data-ttu-id="21ce6-225">大規模な顔リストの largeFaceListId、名、userData および recognitionModel を取得します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-225">Retrieve a large face list’s largeFaceListId, name, userData and recognitionModel.</span></span>'
     syntax:
       content: 'function get(largeFaceListId: string, options?: Models.LargeFaceListGetOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-167">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-167">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-226">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-226">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - Models.LargeFaceListGetOptionalParams
@@ -524,12 +549,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-168">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-168">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-227">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-227">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.LargeFaceList>
           description: |
-            <span data-ttu-id="81933-169">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-169">The callback</span></span>
+            <span data-ttu-id="21ce6-228">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-228">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetResponse>
@@ -540,18 +565,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="81933-170">永続化された顔 (persistedFaceId とその所属 largeFaceListId で指定) に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="81933-170">Retrieve information about a persisted face (specified by persistedFaceId and its belonging largeFaceListId).</span></span>
+    summary: <span data-ttu-id="21ce6-229">永続化された顔 (persistedFaceId とその所属 largeFaceListId で指定) に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-229">Retrieve information about a persisted face (specified by persistedFaceId and its belonging largeFaceListId).</span></span>
     syntax:
       content: 'function getFace(largeFaceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-171">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-171">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-230">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-230">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="81933-172">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-172">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="21ce6-231">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-231">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -574,20 +599,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-173">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-173">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-232">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-232">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="81933-174">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-174">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="21ce6-233">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-233">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="81933-175">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-175">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-234">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-234">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="81933-176">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-176">The callback</span></span>
+            <span data-ttu-id="21ce6-235">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-235">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetFaceResponse>
@@ -605,16 +630,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-177">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-177">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-236">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-236">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="81933-178">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-178">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="21ce6-237">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-237">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="81933-179">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-179">The callback</span></span>
+            <span data-ttu-id="21ce6-238">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-238">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetFaceResponse>
@@ -625,14 +650,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="81933-180">(完了したや実行中) は、大規模な顔リストのトレーニング状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="81933-180">Retrieve the training status of a large face list (completed or ongoing).</span></span>
+    summary: <span data-ttu-id="21ce6-239">(完了したや実行中) は、大規模な顔リストのトレーニング状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-239">Retrieve the training status of a large face list (completed or ongoing).</span></span>
     syntax:
       content: 'function getTrainingStatus(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-181">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-181">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-240">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-240">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -655,16 +680,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-182">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-182">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-241">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-241">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="81933-183">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-183">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-242">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-242">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="81933-184">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-184">The callback</span></span>
+            <span data-ttu-id="21ce6-243">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-243">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetTrainingStatusResponse>
@@ -682,12 +707,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-185">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-185">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-244">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-244">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="81933-186">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-186">The callback</span></span>
+            <span data-ttu-id="21ce6-245">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-245">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetTrainingStatusResponse>
@@ -698,7 +723,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="81933-187">LargeFaceListOperations を作成します。</span><span class="sxs-lookup"><span data-stu-id="81933-187">Create a LargeFaceListOperations.</span></span>
+    summary: <span data-ttu-id="21ce6-246">LargeFaceListOperations を作成します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-246">Create a LargeFaceListOperations.</span></span>
     syntax:
       content: 'new LargeFaceListOperations(client: FaceClientContext)'
       parameters:
@@ -706,7 +731,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="81933-188">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="81933-188">Reference to the service client.</span></span>
+            <span data-ttu-id="21ce6-247">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="21ce6-247">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargeFaceListOperations.list_2'
     name: 'list(LargeFaceListListOptionalParams, ServiceCallback<LargeFaceList[]>)'
@@ -721,12 +746,12 @@ items:
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListListOptionalParams'
-          description: <span data-ttu-id="81933-189">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-189">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-248">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-248">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.LargeFaceList[]>'
           description: |
-            <span data-ttu-id="81933-190">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-190">The callback</span></span>
+            <span data-ttu-id="21ce6-249">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-249">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListListResponse>
@@ -738,17 +763,17 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="81933-191">LargeFaceListId、名前、userData および recognitionModel の大規模な顔リストの情報を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="81933-191">List large face lists’ information of largeFaceListId, name, userData and recognitionModel.</span></span> <br
+      <span data-ttu-id="21ce6-250">LargeFaceListId、名前、userData および recognitionModel の大規模な顔リストの情報を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-250">List large face lists’ information of largeFaceListId, name, userData and recognitionModel.</span></span> <br
       />
-      <span data-ttu-id="81933-192">LargeFaceList 使用内の顔の情報を取得する[LargeFaceList 顔の取得](/docs/services/563879b61984550e40cbbe8d/operations/5a158cf2d2de3616c086f2d5)</span><span class="sxs-lookup"><span data-stu-id="81933-192">To get face information inside largeFaceList use [LargeFaceList Face - Get](/docs/services/563879b61984550e40cbbe8d/operations/5a158cf2d2de3616c086f2d5)</span></span><br />
-      * <span data-ttu-id="81933-193">大規模な顔リストは、largeFaceListId のアルファベット順に格納されます。</span><span class="sxs-lookup"><span data-stu-id="81933-193">Large face lists are stored in alphabetical order of largeFaceListId.</span></span>
-      * <span data-ttu-id="81933-194">"start"パラメーター (文字列、省略可能) は、エントリは、文字列を比較して大きい id を持つ返されるユーザー指定の largeFaceListId 値です。</span><span class="sxs-lookup"><span data-stu-id="81933-194">"start" parameter (string, optional) is a user-provided largeFaceListId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id="81933-195">"start"を示す最初の項目からの戻り値を空に設定します。</span><span class="sxs-lookup"><span data-stu-id="81933-195">"start" set to empty to indicate return from the first item.</span></span>
-      * <span data-ttu-id="81933-196">"top"パラメーター (int, 省略可能) は、返されるエントリの数を指定します。</span><span class="sxs-lookup"><span data-stu-id="81933-196">"top" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id="81933-197">1000 エントリの一致するものは、1 つの呼び出しで返されることができます。</span><span class="sxs-lookup"><span data-stu-id="81933-197">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id="81933-198">詳細をフェッチするには、現在の呼び出しの最後に返されるエントリの Id を持つ"start"を指定できます。</span><span class="sxs-lookup"><span data-stu-id="81933-198">To fetch more, you can specify "start" with the last returned entry’s Id of the current call.</span></span>
+      <span data-ttu-id="21ce6-251">LargeFaceList 使用内の顔の情報を取得する[LargeFaceList 顔の取得](/docs/services/563879b61984550e40cbbe8d/operations/5a158cf2d2de3616c086f2d5)</span><span class="sxs-lookup"><span data-stu-id="21ce6-251">To get face information inside largeFaceList use [LargeFaceList Face - Get](/docs/services/563879b61984550e40cbbe8d/operations/5a158cf2d2de3616c086f2d5)</span></span><br />
+      * <span data-ttu-id="21ce6-252">大規模な顔リストは、largeFaceListId のアルファベット順に格納されます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-252">Large face lists are stored in alphabetical order of largeFaceListId.</span></span>
+      * <span data-ttu-id="21ce6-253">"start"パラメーター (文字列、省略可能) は、エントリは、文字列を比較して大きい id を持つ返されるユーザー指定の largeFaceListId 値です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-253">"start" parameter (string, optional) is a user-provided largeFaceListId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id="21ce6-254">"start"を示す最初の項目からの戻り値を空に設定します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-254">"start" set to empty to indicate return from the first item.</span></span>
+      * <span data-ttu-id="21ce6-255">"top"パラメーター (int, 省略可能) は、返されるエントリの数を指定します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-255">"top" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id="21ce6-256">1000 エントリの一致するものは、1 つの呼び出しで返されることができます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-256">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id="21ce6-257">詳細をフェッチするには、現在の呼び出しの最後に返されるエントリの Id を持つ"start"を指定できます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-257">To fetch more, you can specify "start" with the last returned entry’s Id of the current call.</span></span>
       <br />
-      <span data-ttu-id="81933-199">たとえば、5 つの大規模な人物リストの合計:"list1"、...,"list5"。</span><span class="sxs-lookup"><span data-stu-id="81933-199">For example, total 5 large person lists: "list1", ..., "list5".</span></span>
-      <br /> <span data-ttu-id="81933-200">"開始 = & 上位 ="5 のすべてのリストが返されます。</span><span class="sxs-lookup"><span data-stu-id="81933-200">"start=&top=" will return all 5 lists.</span></span>
-      <br /> <span data-ttu-id="81933-201">"開始 = & トップ = 2"は"list1"、"list2"を返します。</span><span class="sxs-lookup"><span data-stu-id="81933-201">"start=&top=2" will return "list1", "list2".</span></span>
-      <br /> <span data-ttu-id="81933-202">"開始 list2 (& t) = 3 ="は"list3"、"list4"、"list5"を返します。</span><span class="sxs-lookup"><span data-stu-id="81933-202">"start=list2&top=3" will return "list3", "list4", "list5".</span></span>
+      <span data-ttu-id="21ce6-258">たとえば、5 つの大規模な人物リストの合計:"list1"、...,"list5"。</span><span class="sxs-lookup"><span data-stu-id="21ce6-258">For example, total 5 large person lists: "list1", ..., "list5".</span></span>
+      <br /> <span data-ttu-id="21ce6-259">"開始 = & 上位 ="5 のすべてのリストが返されます。</span><span class="sxs-lookup"><span data-stu-id="21ce6-259">"start=&top=" will return all 5 lists.</span></span>
+      <br /> <span data-ttu-id="21ce6-260">"開始 = & トップ = 2"は"list1"、"list2"を返します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-260">"start=&top=2" will return "list1", "list2".</span></span>
+      <br /> <span data-ttu-id="21ce6-261">"開始 list2 (& t) = 3 ="は"list3"、"list4"、"list5"を返します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-261">"start=list2&top=3" will return "list3", "list4", "list5".</span></span>
     syntax:
       content: 'function list(options?: Models.LargeFaceListListOptionalParams)'
       parameters:
@@ -775,7 +800,7 @@ items:
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.LargeFaceList[]>'
           description: |
-            <span data-ttu-id="81933-203">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-203">The callback</span></span>
+            <span data-ttu-id="21ce6-262">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-262">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListListResponse>
@@ -793,16 +818,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-204">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-204">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-263">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-263">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListListFacesOptionalParams'
-          description: <span data-ttu-id="81933-205">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-205">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-264">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-264">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.PersistedFace[]>'
           description: |
-            <span data-ttu-id="81933-206">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-206">The callback</span></span>
+            <span data-ttu-id="21ce6-265">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-265">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListListFacesResponse>
@@ -813,14 +838,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="81933-207">大規模な顔リスト内のすべての面を一覧表示し、顔の情報 (userData と顔の登録済みの顔の persistedFaceIds を含む) を取得します。</span><span class="sxs-lookup"><span data-stu-id="81933-207">List all faces in a large face list, and retrieve face information (including userData and persistedFaceIds of registered faces of the face).</span></span>'
+    summary: '<span data-ttu-id="21ce6-266">大規模な顔リスト内のすべての面を一覧表示し、顔の情報 (userData と顔の登録済みの顔の persistedFaceIds を含む) を取得します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-266">List all faces in a large face list, and retrieve face information (including userData and persistedFaceIds of registered faces of the face).</span></span>'
     syntax:
       content: 'function listFaces(largeFaceListId: string, options?: Models.LargeFaceListListFacesOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-208">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-208">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-267">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-267">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - Models.LargeFaceListListFacesOptionalParams
@@ -843,12 +868,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-209">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-209">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-268">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-268">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.PersistedFace[]>'
           description: |
-            <span data-ttu-id="81933-210">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-210">The callback</span></span>
+            <span data-ttu-id="21ce6-269">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-269">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListListFacesResponse>
@@ -859,14 +884,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="81933-211">大規模な顔リスト トレーニング タスクをキューでトレーニング タスクをすぐに開始できません。</span><span class="sxs-lookup"><span data-stu-id="81933-211">Queue a large face list training task, the training task may not be started immediately.</span></span>'
+    summary: '<span data-ttu-id="21ce6-270">大規模な顔リスト トレーニング タスクをキューでトレーニング タスクをすぐに開始できません。</span><span class="sxs-lookup"><span data-stu-id="21ce6-270">Queue a large face list training task, the training task may not be started immediately.</span></span>'
     syntax:
       content: 'function train(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-212">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-212">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-271">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-271">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -889,16 +914,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-213">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-213">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-272">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-272">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="81933-214">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-214">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-273">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-273">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-215">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-215">The callback</span></span>
+            <span data-ttu-id="21ce6-274">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-274">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -916,12 +941,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-216">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-216">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-275">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-275">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-217">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-217">The callback</span></span>
+            <span data-ttu-id="21ce6-276">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-276">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -939,16 +964,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-218">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-218">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-277">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-277">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListUpdateOptionalParams'
-          description: <span data-ttu-id="81933-219">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-219">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-278">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-278">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-220">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-220">The callback</span></span>
+            <span data-ttu-id="21ce6-279">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-279">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -959,14 +984,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="81933-221">大規模な顔リストの情報を更新します。</span><span class="sxs-lookup"><span data-stu-id="81933-221">Update information of a large face list.</span></span>
+    summary: <span data-ttu-id="21ce6-280">大規模な顔リストの情報を更新します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-280">Update information of a large face list.</span></span>
     syntax:
       content: 'function update(largeFaceListId: string, options?: Models.LargeFaceListUpdateOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-222">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-222">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-281">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-281">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - Models.LargeFaceListUpdateOptionalParams
@@ -989,12 +1014,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-223">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-223">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-282">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-282">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-224">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-224">The callback</span></span>
+            <span data-ttu-id="21ce6-283">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-283">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -1012,20 +1037,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-225">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-225">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-284">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-284">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="81933-226">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-226">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="21ce6-285">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-285">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListUpdateFaceOptionalParams'
-          description: <span data-ttu-id="81933-227">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="81933-227">The optional parameters</span></span>
+          description: <span data-ttu-id="21ce6-286">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="21ce6-286">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-228">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-228">The callback</span></span>
+            <span data-ttu-id="21ce6-287">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-287">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -1036,18 +1061,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="81933-229">永続化された顔の userData フィールドを更新します。</span><span class="sxs-lookup"><span data-stu-id="81933-229">Update a persisted face's userData field.</span></span>
+    summary: <span data-ttu-id="21ce6-288">永続化された顔の userData フィールドを更新します。</span><span class="sxs-lookup"><span data-stu-id="21ce6-288">Update a persisted face's userData field.</span></span>
     syntax:
       content: 'function updateFace(largeFaceListId: string, persistedFaceId: string, options?: Models.LargeFaceListUpdateFaceOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-230">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-230">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-289">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-289">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="81933-231">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-231">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="21ce6-290">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-290">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - Models.LargeFaceListUpdateFaceOptionalParams
@@ -1070,16 +1095,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="81933-232">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-232">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="21ce6-291">特定の大規模な顔リストを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-291">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="81933-233">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="81933-233">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="21ce6-292">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="21ce6-292">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="81933-234">コールバック</span><span class="sxs-lookup"><span data-stu-id="81933-234">The callback</span></span>
+            <span data-ttu-id="21ce6-293">コールバック</span><span class="sxs-lookup"><span data-stu-id="21ce6-293">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>

@@ -32,9 +32,12 @@ items:
       - '@azure/arm-storage.BlobContainers.lease_2'
       - '@azure/arm-storage.BlobContainers.lease'
       - '@azure/arm-storage.BlobContainers.lease_1'
-      - '@azure/arm-storage.BlobContainers.list'
       - '@azure/arm-storage.BlobContainers.list_2'
+      - '@azure/arm-storage.BlobContainers.list'
       - '@azure/arm-storage.BlobContainers.list_1'
+      - '@azure/arm-storage.BlobContainers.listNext'
+      - '@azure/arm-storage.BlobContainers.listNext_2'
+      - '@azure/arm-storage.BlobContainers.listNext_1'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_2'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_1'
@@ -47,7 +50,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="5f594-101">BlobContainers を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="5f594-101">Class representing a BlobContainers.</span></span>
+    summary: <span data-ttu-id="7a667-101">BlobContainers を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="7a667-101">Class representing a BlobContainers.</span></span>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.constructor'
     name: BlobContainers(StorageManagementClientContext)
@@ -55,7 +58,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-102">BlobContainers を作成します。</span><span class="sxs-lookup"><span data-stu-id="5f594-102">Create a BlobContainers.</span></span>
+    summary: <span data-ttu-id="7a667-102">BlobContainers を作成します。</span><span class="sxs-lookup"><span data-stu-id="7a667-102">Create a BlobContainers.</span></span>
     syntax:
       content: 'new BlobContainers(client: StorageManagementClientContext)'
       parameters:
@@ -63,7 +66,7 @@ items:
           type:
             - '@azure/arm-storage.StorageManagementClientContext'
           description: |
-            <span data-ttu-id="5f594-103">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="5f594-103">Reference to the service client.</span></span>
+            <span data-ttu-id="7a667-103">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="7a667-103">Reference to the service client.</span></span>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.clearLegalHold'
     name: 'clearLegalHold(string, string, string, string[], msRest.RequestOptionsBase)'
@@ -71,26 +74,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-104">クリア法律では、タグを保持します。</span><span class="sxs-lookup"><span data-stu-id="5f594-104">Clears legal hold tags.</span></span> <span data-ttu-id="5f594-105">存在しないか、同じタグをクリアすると、べき等操作が発生します。</span><span class="sxs-lookup"><span data-stu-id="5f594-105">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="5f594-106">ClearLegalHold は、要求で指定したタグのみをクリアします。</span><span class="sxs-lookup"><span data-stu-id="5f594-106">ClearLegalHold clears out only the specified tags in the request.</span></span>
+    summary: <span data-ttu-id="7a667-104">クリア法律では、タグを保持します。</span><span class="sxs-lookup"><span data-stu-id="7a667-104">Clears legal hold tags.</span></span> <span data-ttu-id="7a667-105">存在しないか、同じタグをクリアすると、べき等操作が発生します。</span><span class="sxs-lookup"><span data-stu-id="7a667-105">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="7a667-106">ClearLegalHold は、要求で指定したタグのみをクリアします。</span><span class="sxs-lookup"><span data-stu-id="7a667-106">ClearLegalHold clears out only the specified tags in the request.</span></span>
     syntax:
       content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-107">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-107">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-108">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-108">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-107">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-107">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-108">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-108">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-109">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-109">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-110">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-110">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-109">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-109">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-110">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-110">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-111">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-111">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-112">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-112">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-113">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-113">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-111">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-111">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-112">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-112">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-113">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-113">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="5f594-114">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="5f594-114">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="7a667-114">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="7a667-114">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -113,28 +116,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-115">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-115">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-116">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-116">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-115">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-115">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-116">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-116">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-117">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-117">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-118">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-118">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-117">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-117">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-118">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-118">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-119">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-119">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-120">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-120">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-121">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-121">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-119">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-119">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-120">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-120">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-121">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-121">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="5f594-122">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="5f594-122">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="7a667-122">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="7a667-122">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="5f594-123">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-123">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-123">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-123">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LegalHold>
           description: |
-            <span data-ttu-id="5f594-124">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-124">The callback</span></span>
+            <span data-ttu-id="7a667-124">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-124">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersClearLegalHoldResponse>
@@ -152,24 +155,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-125">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-125">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-126">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-126">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-125">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-125">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-126">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-126">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-127">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-127">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-128">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-128">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-127">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-127">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-128">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-128">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-129">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-129">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-130">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-130">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-131">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-131">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-129">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-129">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-130">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-130">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-131">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-131">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="5f594-132">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="5f594-132">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="7a667-132">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="7a667-132">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LegalHold>
           description: |
-            <span data-ttu-id="5f594-133">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-133">The callback</span></span>
+            <span data-ttu-id="7a667-133">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-133">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersClearLegalHoldResponse>
@@ -187,24 +190,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-134">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-134">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-135">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-135">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-134">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-134">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-135">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-135">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-136">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-136">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-137">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-137">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-136">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-136">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-137">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-137">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-138">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-138">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-139">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-139">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-140">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-140">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-138">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-138">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-139">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-139">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-140">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-140">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersCreateOptionalParams'
-          description: <span data-ttu-id="5f594-141">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-141">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-141">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-141">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="5f594-142">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-142">The callback</span></span>
+            <span data-ttu-id="7a667-142">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-142">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersCreateResponse>
@@ -215,22 +218,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-143">要求本文での説明に従って、指定されたアカウントの新しいコンテナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="5f594-143">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="5f594-144">コンテナーのリソースには、そのコンテナーのメタデータとプロパティが含まれています。</span><span class="sxs-lookup"><span data-stu-id="5f594-144">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="5f594-145">これは、コンテナーに含まれる blob の一覧には含まれません。</span><span class="sxs-lookup"><span data-stu-id="5f594-145">It does not include a list of the blobs contained by the container.</span></span>
+    summary: <span data-ttu-id="7a667-143">要求本文での説明に従って、指定されたアカウントの新しいコンテナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="7a667-143">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="7a667-144">コンテナーのリソースには、そのコンテナーのメタデータとプロパティが含まれています。</span><span class="sxs-lookup"><span data-stu-id="7a667-144">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="7a667-145">これは、コンテナーに含まれる blob の一覧には含まれません。</span><span class="sxs-lookup"><span data-stu-id="7a667-145">It does not include a list of the blobs contained by the container.</span></span>
     syntax:
       content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersCreateOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-146">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-146">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-147">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-147">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-146">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-146">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-147">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-147">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-148">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-148">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-149">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-149">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-148">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-148">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-149">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-149">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-150">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-150">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-151">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-151">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-152">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-152">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-150">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-150">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-151">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-151">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-152">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-152">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - Models.BlobContainersCreateOptionalParams
@@ -253,20 +256,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-153">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-153">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-154">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-154">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-153">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-153">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-154">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-154">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-155">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-155">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-156">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-156">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-155">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-155">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-156">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-156">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-157">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-157">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-158">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-158">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-159">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-159">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-157">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-157">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-158">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-158">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-159">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-159">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="5f594-160">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-160">The callback</span></span>
+            <span data-ttu-id="7a667-160">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-160">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersCreateResponse>
@@ -284,28 +287,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-161">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-161">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-162">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-162">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-161">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-161">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-162">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-162">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-163">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-163">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-164">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-164">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-163">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-163">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-164">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-164">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-165">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-165">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-166">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-166">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-167">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-167">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-165">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-165">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-166">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-166">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-167">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-167">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="5f594-168">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="5f594-168">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="7a667-168">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="7a667-168">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams'
-          description: <span data-ttu-id="5f594-169">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-169">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-169">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-169">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-170">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-170">The callback</span></span>
+            <span data-ttu-id="7a667-170">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-170">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersCreateOrUpdateImmutabilityPolicyResponse>
@@ -316,26 +319,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-171">作成またはロックされた不変ポリシーを更新します。</span><span class="sxs-lookup"><span data-stu-id="5f594-171">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="5f594-172">指定されたが、この操作は必要ありません、If-match 内の ETag が受け入れられます。</span><span class="sxs-lookup"><span data-stu-id="5f594-172">ETag in If-Match is honored if given but not required for this operation.</span></span>
+    summary: <span data-ttu-id="7a667-171">作成またはロックされた不変ポリシーを更新します。</span><span class="sxs-lookup"><span data-stu-id="7a667-171">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="7a667-172">指定されたが、この操作は必要ありません、If-match 内の ETag が受け入れられます。</span><span class="sxs-lookup"><span data-stu-id="7a667-172">ETag in If-Match is honored if given but not required for this operation.</span></span>
     syntax:
       content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Models.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-173">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-173">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-174">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-174">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-173">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-173">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-174">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-174">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-175">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-175">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-176">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-176">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-175">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-175">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-176">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-176">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-177">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-177">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-178">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-178">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-179">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-179">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-177">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-177">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-178">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-178">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-179">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-179">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="5f594-180">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="5f594-180">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="7a667-180">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="7a667-180">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: options
           type:
             - Models.BlobContainersCreateOrUpdateImmutabilityPolicyOptionalParams
@@ -358,24 +361,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-181">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-181">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-182">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-182">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-181">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-181">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-182">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-182">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-183">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-183">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-184">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-184">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-183">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-183">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-184">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-184">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-185">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-185">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-186">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-186">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-187">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-187">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-185">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-185">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-186">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-186">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-187">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-187">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="5f594-188">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="5f594-188">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="7a667-188">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="7a667-188">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-189">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-189">The callback</span></span>
+            <span data-ttu-id="7a667-189">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-189">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersCreateOrUpdateImmutabilityPolicyResponse>
@@ -387,27 +390,27 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="5f594-190">ロックされた不変ポリシーを中止します。</span><span class="sxs-lookup"><span data-stu-id="5f594-190">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="5f594-191">削除の応答が、immutabilityPeriodSinceCreationInDays を 0 に設定します。</span><span class="sxs-lookup"><span data-stu-id="5f594-191">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="5f594-192">ETag が If-match では、この操作に必要です。</span><span class="sxs-lookup"><span data-stu-id="5f594-192">ETag in If-Match is required for this operation.</span></span>
-      <span data-ttu-id="5f594-193">ロックされた不変ポリシーの削除は許可されませんは、コンテナー内のすべての blob を削除した後、コンテナーを削除するしかありません。</span><span class="sxs-lookup"><span data-stu-id="5f594-193">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>
+      <span data-ttu-id="7a667-190">ロックされた不変ポリシーを中止します。</span><span class="sxs-lookup"><span data-stu-id="7a667-190">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="7a667-191">削除の応答が、immutabilityPeriodSinceCreationInDays を 0 に設定します。</span><span class="sxs-lookup"><span data-stu-id="7a667-191">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="7a667-192">ETag が If-match では、この操作に必要です。</span><span class="sxs-lookup"><span data-stu-id="7a667-192">ETag in If-Match is required for this operation.</span></span>
+      <span data-ttu-id="7a667-193">ロックされた不変ポリシーの削除は許可されませんは、コンテナー内のすべての blob を削除した後、コンテナーを削除するしかありません。</span><span class="sxs-lookup"><span data-stu-id="7a667-193">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>
     syntax:
       content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-194">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-194">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-195">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-195">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-194">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-194">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-195">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-195">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-196">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-196">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-197">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-197">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-196">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-196">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-197">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-197">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-198">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-198">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-199">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-199">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-200">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-200">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-198">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-198">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-199">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-199">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-200">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-200">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="5f594-201">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="5f594-201">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="5f594-202">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5f594-202">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="5f594-203">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="5f594-203">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="7a667-201">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="7a667-201">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7a667-202">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="7a667-202">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7a667-203">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="7a667-203">If omitted, this operation will always be applied.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -430,28 +433,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-204">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-204">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-205">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-205">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-204">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-204">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-205">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-205">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-206">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-206">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-207">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-207">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-206">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-206">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-207">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-207">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-208">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-208">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-209">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-209">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-210">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-210">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-208">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-208">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-209">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-209">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-210">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-210">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="5f594-211">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="5f594-211">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="5f594-212">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5f594-212">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="5f594-213">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="5f594-213">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="7a667-211">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="7a667-211">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7a667-212">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="7a667-212">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7a667-213">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="7a667-213">If omitted, this operation will always be applied.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="5f594-214">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-214">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-214">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-214">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-215">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-215">The callback</span></span>
+            <span data-ttu-id="7a667-215">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-215">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersDeleteImmutabilityPolicyResponse>
@@ -469,24 +472,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-216">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-216">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-217">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-217">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-216">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-216">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-217">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-217">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-218">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-218">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-219">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-219">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-218">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-218">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-219">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-219">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-220">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-220">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-221">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-221">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-222">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-222">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-220">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-220">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-221">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-221">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-222">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-222">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="5f594-223">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="5f594-223">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="5f594-224">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5f594-224">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="5f594-225">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="5f594-225">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="7a667-223">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="7a667-223">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7a667-224">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="7a667-224">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7a667-225">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="7a667-225">If omitted, this operation will always be applied.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-226">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-226">The callback</span></span>
+            <span data-ttu-id="7a667-226">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-226">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersDeleteImmutabilityPolicyResponse>
@@ -497,22 +500,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-227">指定されたそのアカウントでコンテナーを削除します。</span><span class="sxs-lookup"><span data-stu-id="5f594-227">Deletes specified container under its account.</span></span>
+    summary: <span data-ttu-id="7a667-227">指定されたそのアカウントでコンテナーを削除します。</span><span class="sxs-lookup"><span data-stu-id="7a667-227">Deletes specified container under its account.</span></span>
     syntax:
       content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-228">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-228">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-229">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-229">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-228">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-228">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-229">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-229">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-230">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-230">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-231">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-231">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-230">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-230">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-231">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-231">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-232">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-232">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-233">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-233">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-234">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-234">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-232">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-232">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-233">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-233">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-234">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-234">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -535,24 +538,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-235">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-235">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-236">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-236">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-235">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-235">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-236">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-236">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-237">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-237">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-238">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-238">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-237">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-237">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-238">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-238">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-239">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-239">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-240">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-240">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-241">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-241">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-239">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-239">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-240">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-240">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-241">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-241">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="5f594-242">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-242">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-242">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-242">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="5f594-243">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-243">The callback</span></span>
+            <span data-ttu-id="7a667-243">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-243">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -570,20 +573,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-244">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-244">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-245">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-245">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-244">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-244">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-245">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-245">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-246">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-246">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-247">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-247">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-246">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-246">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-247">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-247">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-248">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-248">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-249">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-249">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-250">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-250">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-248">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-248">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-249">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-249">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-250">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-250">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="5f594-251">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-251">The callback</span></span>
+            <span data-ttu-id="7a667-251">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-251">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -594,30 +597,30 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-252">ロックされた immutabilityPolicy の immutabilityPeriodSinceCreationInDays を拡張します。</span><span class="sxs-lookup"><span data-stu-id="5f594-252">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="5f594-253">ロック済みポリシーで許可されている唯一のアクションは、この操作になります。</span><span class="sxs-lookup"><span data-stu-id="5f594-253">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="5f594-254">ETag が If-match では、この操作に必要です。</span><span class="sxs-lookup"><span data-stu-id="5f594-254">ETag in If-Match is required for this operation.</span></span>
+    summary: <span data-ttu-id="7a667-252">ロックされた immutabilityPolicy の immutabilityPeriodSinceCreationInDays を拡張します。</span><span class="sxs-lookup"><span data-stu-id="7a667-252">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="7a667-253">ロック済みポリシーで許可されている唯一のアクションは、この操作になります。</span><span class="sxs-lookup"><span data-stu-id="7a667-253">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="7a667-254">ETag が If-match では、この操作に必要です。</span><span class="sxs-lookup"><span data-stu-id="7a667-254">ETag in If-Match is required for this operation.</span></span>
     syntax:
       content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-255">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-255">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-256">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-256">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-255">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-255">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-256">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-256">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-257">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-257">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-258">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-258">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-257">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-257">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-258">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-258">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-259">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-259">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-260">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-260">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-261">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-261">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-259">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-259">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-260">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-260">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-261">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-261">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="5f594-262">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="5f594-262">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="5f594-263">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5f594-263">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="5f594-264">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="5f594-264">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="7a667-262">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="7a667-262">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7a667-263">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="7a667-263">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7a667-264">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="7a667-264">If omitted, this operation will always be applied.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="5f594-265">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="5f594-265">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="7a667-265">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="7a667-265">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -640,32 +643,32 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-266">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-266">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-267">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-267">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-266">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-266">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-267">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-267">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-268">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-268">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-269">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-269">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-268">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-268">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-269">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-269">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-270">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-270">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-271">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-271">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-272">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-272">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-270">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-270">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-271">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-271">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-272">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-272">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="5f594-273">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="5f594-273">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="5f594-274">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5f594-274">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="5f594-275">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="5f594-275">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="7a667-273">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="7a667-273">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7a667-274">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="7a667-274">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7a667-275">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="7a667-275">If omitted, this operation will always be applied.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="5f594-276">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="5f594-276">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="7a667-276">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="7a667-276">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="5f594-277">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-277">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-277">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-277">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-278">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-278">The callback</span></span>
+            <span data-ttu-id="7a667-278">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-278">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersExtendImmutabilityPolicyResponse>
@@ -683,28 +686,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-279">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-279">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-280">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-280">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-279">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-279">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-280">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-280">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-281">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-281">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-282">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-282">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-281">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-281">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-282">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-282">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-283">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-283">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-284">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-284">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-285">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-285">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-283">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-283">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-284">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-284">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-285">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-285">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="5f594-286">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="5f594-286">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="5f594-287">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5f594-287">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="5f594-288">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="5f594-288">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="7a667-286">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="7a667-286">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7a667-287">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="7a667-287">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7a667-288">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="7a667-288">If omitted, this operation will always be applied.</span></span>'
         - id: immutabilityPeriodSinceCreationInDays
           type:
             - number
-          description: '<span data-ttu-id="5f594-289">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="5f594-289">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
+          description: '<span data-ttu-id="7a667-289">日以内に、ポリシーが作成されてからコンテナー内の blob の不変性期間。</span><span class="sxs-lookup"><span data-stu-id="7a667-289">The immutability period for the blobs in the container since the policy creation, in days.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-290">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-290">The callback</span></span>
+            <span data-ttu-id="7a667-290">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-290">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersExtendImmutabilityPolicyResponse>
@@ -715,22 +718,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-291">指定したコンテナーのプロパティを取得します。</span><span class="sxs-lookup"><span data-stu-id="5f594-291">Gets properties of a specified container.</span></span>
+    summary: <span data-ttu-id="7a667-291">指定したコンテナーのプロパティを取得します。</span><span class="sxs-lookup"><span data-stu-id="7a667-291">Gets properties of a specified container.</span></span>
     syntax:
       content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-292">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-292">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-293">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-293">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-292">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-292">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-293">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-293">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-294">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-294">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-295">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-295">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-294">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-294">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-295">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-295">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-296">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-296">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-297">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-297">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-298">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-298">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-296">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-296">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-297">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-297">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-298">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-298">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -753,24 +756,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-299">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-299">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-300">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-300">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-299">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-299">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-300">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-300">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-301">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-301">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-302">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-302">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-301">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-301">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-302">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-302">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-303">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-303">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-304">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-304">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-305">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-305">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-303">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-303">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-304">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-304">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-305">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-305">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="5f594-306">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-306">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-306">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-306">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="5f594-307">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-307">The callback</span></span>
+            <span data-ttu-id="7a667-307">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-307">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersGetResponse>
@@ -788,20 +791,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-308">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-308">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-309">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-309">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-308">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-308">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-309">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-309">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-310">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-310">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-311">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-311">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-310">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-310">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-311">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-311">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-312">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-312">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-313">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-313">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-314">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-314">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-312">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-312">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-313">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-313">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-314">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-314">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="5f594-315">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-315">The callback</span></span>
+            <span data-ttu-id="7a667-315">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-315">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersGetResponse>
@@ -819,24 +822,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-316">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-316">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-317">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-317">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-316">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-316">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-317">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-317">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-318">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-318">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-319">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-319">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-318">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-318">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-319">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-319">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-320">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-320">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-321">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-321">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-322">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-322">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-320">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-320">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-321">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-321">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-322">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-322">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersGetImmutabilityPolicyOptionalParams'
-          description: <span data-ttu-id="5f594-323">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-323">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-323">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-323">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-324">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-324">The callback</span></span>
+            <span data-ttu-id="7a667-324">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-324">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersGetImmutabilityPolicyResponse>
@@ -847,22 +850,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-325">対応する ETag 応答ヘッダーと本文のと共に既存の不変ポリシーを取得します。</span><span class="sxs-lookup"><span data-stu-id="5f594-325">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>
+    summary: <span data-ttu-id="7a667-325">対応する ETag 応答ヘッダーと本文のと共に既存の不変ポリシーを取得します。</span><span class="sxs-lookup"><span data-stu-id="7a667-325">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>
     syntax:
       content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersGetImmutabilityPolicyOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-326">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-326">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-327">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-327">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-326">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-326">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-327">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-327">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-328">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-328">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-329">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-329">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-328">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-328">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-329">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-329">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-330">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-330">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-331">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-331">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-332">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-332">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-330">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-330">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-331">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-331">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-332">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-332">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - Models.BlobContainersGetImmutabilityPolicyOptionalParams
@@ -885,20 +888,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-333">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-333">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-334">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-334">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-333">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-333">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-334">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-334">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-335">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-335">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-336">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-336">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-335">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-335">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-336">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-336">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-337">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-337">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-338">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-338">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-339">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-339">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-337">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-337">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-338">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-338">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-339">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-339">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-340">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-340">The callback</span></span>
+            <span data-ttu-id="7a667-340">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-340">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersGetImmutabilityPolicyResponse>
@@ -916,24 +919,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-341">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-341">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-342">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-342">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-341">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-341">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-342">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-342">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-343">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-343">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-344">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-344">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-343">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-343">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-344">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-344">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-345">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-345">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-346">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-346">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-347">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-347">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-345">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-345">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-346">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-346">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-347">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-347">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersLeaseOptionalParams'
-          description: <span data-ttu-id="5f594-348">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-348">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-348">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-348">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LeaseContainerResponse>
           description: |
-            <span data-ttu-id="5f594-349">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-349">The callback</span></span>
+            <span data-ttu-id="7a667-349">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-349">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersLeaseResponse>
@@ -944,22 +947,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="5f594-350">Lease Container 操作では、確立し、コンテナーの削除操作のロックを管理します。</span><span class="sxs-lookup"><span data-stu-id="5f594-350">The Lease Container operation establishes and manages a lock on a container for delete operations.</span></span> <span data-ttu-id="5f594-351">ロック期間は、15 ～ 60 秒にすることも、無限にすることもできます。</span><span class="sxs-lookup"><span data-stu-id="5f594-351">The lock duration can be 15 to 60 seconds, or can be infinite.</span></span>'
+    summary: '<span data-ttu-id="7a667-350">Lease Container 操作では、確立し、コンテナーの削除操作のロックを管理します。</span><span class="sxs-lookup"><span data-stu-id="7a667-350">The Lease Container operation establishes and manages a lock on a container for delete operations.</span></span> <span data-ttu-id="7a667-351">ロック期間は、15 ～ 60 秒にすることも、無限にすることもできます。</span><span class="sxs-lookup"><span data-stu-id="7a667-351">The lock duration can be 15 to 60 seconds, or can be infinite.</span></span>'
     syntax:
       content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersLeaseOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-352">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-352">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-353">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-353">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-352">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-352">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-353">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-353">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-354">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-354">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-355">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-355">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-354">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-354">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-355">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-355">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-356">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-356">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-357">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-357">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-358">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-358">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-356">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-356">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-357">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-357">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-358">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-358">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - Models.BlobContainersLeaseOptionalParams
@@ -982,78 +985,78 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-359">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-359">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-360">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-360">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-359">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-359">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-360">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-360">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-361">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-361">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-362">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-362">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-361">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-361">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-362">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-362">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-363">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-363">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-364">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-364">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-365">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-365">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-363">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-363">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-364">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-364">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-365">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-365">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LeaseContainerResponse>
           description: |
-            <span data-ttu-id="5f594-366">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-366">The callback</span></span>
+            <span data-ttu-id="7a667-366">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-366">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersLeaseResponse>
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainers.list'
-    name: 'list(string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="5f594-367">すべてのコンテナーを一覧表示し、データ プレーンのようなプレフィックスをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="5f594-367">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="5f594-368">また SRP 今日は返されません継続トークン。</span><span class="sxs-lookup"><span data-stu-id="5f594-368">Also SRP today does not return continuation token.</span></span>
-    syntax:
-      content: 'function list(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: <span data-ttu-id="5f594-369">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-369">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-370">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-370">The name is case insensitive.</span></span>
-        - id: accountName
-          type:
-            - string
-          description: <span data-ttu-id="5f594-371">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-371">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-372">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-372">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<Models.BlobContainersListResponse>
-    package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.list_2'
-    name: 'list(string, string, RequestOptionsBase, ServiceCallback<ListContainerItems>)'
+    name: 'list(string, string, BlobContainersListOptionalParams, ServiceCallback<ListContainerItems>)'
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function list(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<ListContainerItems>)'
+      content: 'function list(resourceGroupName: string, accountName: string, options: BlobContainersListOptionalParams, callback: ServiceCallback<ListContainerItems>)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-373">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-373">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-374">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-374">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-367">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-367">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-368">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-368">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-375">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-375">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-376">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-376">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-369">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-369">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-370">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-370">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: options
           type:
-            - RequestOptionsBase
-          description: <span data-ttu-id="5f594-377">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-377">The optional parameters</span></span>
+            - '@azure/arm-storage.BlobContainersListOptionalParams'
+          description: <span data-ttu-id="7a667-371">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-371">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ListContainerItems>
           description: |
-            <span data-ttu-id="5f594-378">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-378">The callback</span></span>
+            <span data-ttu-id="7a667-372">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-372">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.list'
+    name: 'list(string, string, Models.BlobContainersListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7a667-373">すべてのコンテナーを一覧表示し、データ プレーンのようなプレフィックスをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="7a667-373">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="7a667-374">また SRP 今日は返されません継続トークン。</span><span class="sxs-lookup"><span data-stu-id="7a667-374">Also SRP today does not return continuation token.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options?: Models.BlobContainersListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="7a667-375">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-375">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-376">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-376">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="7a667-377">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-377">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-378">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-378">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+        - id: options
+          type:
+            - Models.BlobContainersListOptionalParams
+          description: ''
+          optional: true
       return:
         type:
           - Promise<Models.BlobContainersListResponse>
@@ -1071,19 +1074,92 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-379">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-379">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-380">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-380">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-379">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-379">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-380">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-380">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-381">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-381">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-382">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-382">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-381">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-381">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-382">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-382">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ListContainerItems>
           description: |
-            <span data-ttu-id="5f594-383">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-383">The callback</span></span>
+            <span data-ttu-id="7a667-383">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-383">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="7a667-384">すべてのコンテナーを一覧表示し、データ プレーンのようなプレフィックスをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="7a667-384">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="7a667-385">また SRP 今日は返されません継続トークン。</span><span class="sxs-lookup"><span data-stu-id="7a667-385">Also SRP today does not return continuation token.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="7a667-386">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="7a667-386">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="7a667-387">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="7a667-387">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="7a667-388">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-388">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            <span data-ttu-id="7a667-389">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-389">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext_1'
+    name: 'listNext(string, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="7a667-390">リスト操作に成功した前回の呼び出しからの NextLink です。</span><span class="sxs-lookup"><span data-stu-id="7a667-390">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            <span data-ttu-id="7a667-391">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-391">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
     name: 'lockImmutabilityPolicy(string, string, string, string, msRest.RequestOptionsBase)'
@@ -1091,26 +1167,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-384">ロック済み状態に、不変ポリシーを設定します。</span><span class="sxs-lookup"><span data-stu-id="5f594-384">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="5f594-385">ロック済みポリシーで許可されている唯一の操作は、ExtendImmutabilityPolicy 操作です。</span><span class="sxs-lookup"><span data-stu-id="5f594-385">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="5f594-386">ETag が If-match では、この操作に必要です。</span><span class="sxs-lookup"><span data-stu-id="5f594-386">ETag in If-Match is required for this operation.</span></span>
+    summary: <span data-ttu-id="7a667-392">ロック済み状態に、不変ポリシーを設定します。</span><span class="sxs-lookup"><span data-stu-id="7a667-392">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="7a667-393">ロック済みポリシーで許可されている唯一の操作は、ExtendImmutabilityPolicy 操作です。</span><span class="sxs-lookup"><span data-stu-id="7a667-393">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="7a667-394">ETag が If-match では、この操作に必要です。</span><span class="sxs-lookup"><span data-stu-id="7a667-394">ETag in If-Match is required for this operation.</span></span>
     syntax:
       content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-387">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-387">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-388">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-388">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-395">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-395">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-396">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-396">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-389">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-389">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-390">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-390">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-397">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-397">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-398">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-398">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-391">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-391">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-392">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-392">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-393">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-393">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-399">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-399">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-400">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-400">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-401">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-401">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="5f594-394">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="5f594-394">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="5f594-395">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5f594-395">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="5f594-396">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="5f594-396">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="7a667-402">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="7a667-402">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7a667-403">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="7a667-403">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7a667-404">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="7a667-404">If omitted, this operation will always be applied.</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1133,28 +1209,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-397">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-397">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-398">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-398">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-405">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-405">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-406">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-406">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-399">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-399">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-400">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-400">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-407">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-407">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-408">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-408">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-401">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-401">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-402">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-402">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-403">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-403">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-409">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-409">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-410">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-410">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-411">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-411">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="5f594-404">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="5f594-404">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="5f594-405">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5f594-405">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="5f594-406">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="5f594-406">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="7a667-412">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="7a667-412">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7a667-413">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="7a667-413">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7a667-414">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="7a667-414">If omitted, this operation will always be applied.</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="5f594-407">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-407">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-415">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-415">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-408">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-408">The callback</span></span>
+            <span data-ttu-id="7a667-416">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-416">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersLockImmutabilityPolicyResponse>
@@ -1172,24 +1248,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-409">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-409">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-410">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-410">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-417">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-417">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-418">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-418">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-411">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-411">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-412">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-412">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-419">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-419">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-420">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-420">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-413">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-413">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-414">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-414">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-415">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-415">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-421">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-421">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-422">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-422">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-423">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-423">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: ifMatch
           type:
             - string
-          description: '<span data-ttu-id="5f594-416">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="5f594-416">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="5f594-417">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="5f594-417">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="5f594-418">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="5f594-418">If omitted, this operation will always be applied.</span></span>'
+          description: '<span data-ttu-id="7a667-424">不変ポリシーを更新するエンティティの状態 (ETag) バージョン。</span><span class="sxs-lookup"><span data-stu-id="7a667-424">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id="7a667-425">値"\*"操作の不変ポリシーが既に存在する場合にのみ適用できます。</span><span class="sxs-lookup"><span data-stu-id="7a667-425">A value of "\*" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id="7a667-426">省略した場合、この操作は常に適用します。</span><span class="sxs-lookup"><span data-stu-id="7a667-426">If omitted, this operation will always be applied.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ImmutabilityPolicy>
           description: |
-            <span data-ttu-id="5f594-419">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-419">The callback</span></span>
+            <span data-ttu-id="7a667-427">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-427">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersLockImmutabilityPolicyResponse>
@@ -1200,26 +1276,26 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-420">有効なセットは、タグを保持します。</span><span class="sxs-lookup"><span data-stu-id="5f594-420">Sets legal hold tags.</span></span> <span data-ttu-id="5f594-421">べき等操作で同じタグ結果を設定します。</span><span class="sxs-lookup"><span data-stu-id="5f594-421">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="5f594-422">SetLegalHold は、追加のパターンに従うし、要求で指定されていない既存のタグをクリア アウトできません。</span><span class="sxs-lookup"><span data-stu-id="5f594-422">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+    summary: <span data-ttu-id="7a667-428">有効なセットは、タグを保持します。</span><span class="sxs-lookup"><span data-stu-id="7a667-428">Sets legal hold tags.</span></span> <span data-ttu-id="7a667-429">べき等操作で同じタグ結果を設定します。</span><span class="sxs-lookup"><span data-stu-id="7a667-429">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="7a667-430">SetLegalHold は、追加のパターンに従うし、要求で指定されていない既存のタグをクリア アウトできません。</span><span class="sxs-lookup"><span data-stu-id="7a667-430">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
     syntax:
       content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-423">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-423">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-424">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-424">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-431">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-431">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-432">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-432">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-425">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-425">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-426">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-426">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-433">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-433">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-434">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-434">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-427">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-427">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-428">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-428">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-429">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-429">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-435">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-435">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-436">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-436">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-437">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-437">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="5f594-430">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="5f594-430">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="7a667-438">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="7a667-438">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1242,28 +1318,28 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-431">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-431">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-432">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-432">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-439">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-439">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-440">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-440">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-433">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-433">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-434">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-434">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-441">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-441">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-442">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-442">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-435">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-435">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-436">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-436">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-437">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-437">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-443">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-443">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-444">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-444">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-445">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-445">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="5f594-438">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="5f594-438">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="7a667-446">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="7a667-446">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="5f594-439">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-439">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-447">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-447">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LegalHold>
           description: |
-            <span data-ttu-id="5f594-440">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-440">The callback</span></span>
+            <span data-ttu-id="7a667-448">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-448">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersSetLegalHoldResponse>
@@ -1281,24 +1357,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-441">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-441">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-442">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-442">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-449">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-449">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-450">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-450">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-443">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-443">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-444">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-444">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-451">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-451">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-452">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-452">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-445">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-445">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-446">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-446">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-447">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-447">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-453">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-453">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-454">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-454">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-455">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-455">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: tags
           type:
             - 'string[]'
-          description: <span data-ttu-id="5f594-448">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="5f594-448">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+          description: <span data-ttu-id="7a667-456">各タグは 3 ~ 23 文字の英数字にする必要があり、SRP で大文字と小文字に正規化されます。</span><span class="sxs-lookup"><span data-stu-id="7a667-456">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.LegalHold>
           description: |
-            <span data-ttu-id="5f594-449">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-449">The callback</span></span>
+            <span data-ttu-id="7a667-457">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-457">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersSetLegalHoldResponse>
@@ -1316,24 +1392,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-450">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-450">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-451">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-451">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-458">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-458">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-459">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-459">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-452">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-452">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-453">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-453">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-460">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-460">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-461">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-461">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-454">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-454">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-455">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-455">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-456">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-456">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-462">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-462">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-463">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-463">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-464">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-464">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - '@azure/arm-storage.BlobContainersUpdateOptionalParams'
-          description: <span data-ttu-id="5f594-457">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="5f594-457">The optional parameters</span></span>
+          description: <span data-ttu-id="7a667-465">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="7a667-465">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="5f594-458">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-458">The callback</span></span>
+            <span data-ttu-id="7a667-466">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-466">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersUpdateResponse>
@@ -1344,22 +1420,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="5f594-459">要求本文で指定されているコンテナーのプロパティを更新します。</span><span class="sxs-lookup"><span data-stu-id="5f594-459">Updates container properties as specified in request body.</span></span> <span data-ttu-id="5f594-460">要求内に記載されていないプロパティは変更されません。</span><span class="sxs-lookup"><span data-stu-id="5f594-460">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="5f594-461">指定されたコンテナーが既に存在しない場合、更新が失敗します。</span><span class="sxs-lookup"><span data-stu-id="5f594-461">Update fails if the specified container doesn't already exist.</span></span>
+    summary: <span data-ttu-id="7a667-467">要求本文で指定されているコンテナーのプロパティを更新します。</span><span class="sxs-lookup"><span data-stu-id="7a667-467">Updates container properties as specified in request body.</span></span> <span data-ttu-id="7a667-468">要求内に記載されていないプロパティは変更されません。</span><span class="sxs-lookup"><span data-stu-id="7a667-468">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="7a667-469">指定されたコンテナーが既に存在しない場合、更新が失敗します。</span><span class="sxs-lookup"><span data-stu-id="7a667-469">Update fails if the specified container doesn't already exist.</span></span>
     syntax:
       content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: Models.BlobContainersUpdateOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-462">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-462">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-463">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-463">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-470">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-470">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-471">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-471">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-464">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-464">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-465">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-465">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-472">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-472">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-473">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-473">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-466">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-466">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-467">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-467">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-468">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-468">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-474">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-474">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-475">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-475">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-476">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-476">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: options
           type:
             - Models.BlobContainersUpdateOptionalParams
@@ -1382,20 +1458,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="5f594-469">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-469">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="5f594-470">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="5f594-470">The name is case insensitive.</span></span>
+          description: <span data-ttu-id="7a667-477">ユーザーのサブスクリプション内のリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-477">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="7a667-478">名前は、大文字と小文字を区別しません。</span><span class="sxs-lookup"><span data-stu-id="7a667-478">The name is case insensitive.</span></span>
         - id: accountName
           type:
             - string
-          description: <span data-ttu-id="5f594-471">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-471">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="5f594-472">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-472">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
+          description: <span data-ttu-id="7a667-479">指定されたリソース グループ内のストレージ アカウントの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-479">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="7a667-480">ストレージ アカウント名の長さは 3 ～ 24 文字で、数字と小文字のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-480">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>
         - id: containerName
           type:
             - string
-          description: '<span data-ttu-id="5f594-473">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="5f594-473">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="5f594-474">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-474">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="5f594-475">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5f594-475">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
+          description: '<span data-ttu-id="7a667-481">指定されたストレージ アカウント内の blob コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="7a667-481">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="7a667-482">Blob コンテナー名は、長さ 3 ~ 63 文字でなければし、数字、小文字、およびダッシュ (-) のみを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-482">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span> <span data-ttu-id="7a667-483">すべてのダッシュ (-) 文字は、すぐに前し、後にアルファベットまたは数字をする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a667-483">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.BlobContainer>
           description: |
-            <span data-ttu-id="5f594-476">コールバック</span><span class="sxs-lookup"><span data-stu-id="5f594-476">The callback</span></span>
+            <span data-ttu-id="7a667-484">コールバック</span><span class="sxs-lookup"><span data-stu-id="7a667-484">The callback</span></span>
       return:
         type:
           - Promise<Models.BlobContainersUpdateResponse>
@@ -1481,6 +1557,12 @@ references:
         uid: '@azure/arm-storage.ListContainerItems'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-storage.BlobContainersListOptionalParams'
+    name: BlobContainersListOptionalParams
+    spec.typeScript:
+      - name: BlobContainersListOptionalParams
+        fullName: BlobContainersListOptionalParams
+        uid: '@azure/arm-storage.BlobContainersListOptionalParams'
   - uid: '@azure/arm-storage.BlobContainersUpdateOptionalParams'
     name: BlobContainersUpdateOptionalParams
     spec.typeScript:

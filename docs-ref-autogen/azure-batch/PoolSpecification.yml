@@ -1,0 +1,393 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolSpecification
+    name: PoolSpecification
+    fullName: PoolSpecification
+    children:
+      - azure-batch.PoolSpecification.applicationLicenses
+      - azure-batch.PoolSpecification.applicationPackageReferences
+      - azure-batch.PoolSpecification.autoScaleEvaluationInterval
+      - azure-batch.PoolSpecification.autoScaleFormula
+      - azure-batch.PoolSpecification.certificateReferences
+      - azure-batch.PoolSpecification.cloudServiceConfiguration
+      - azure-batch.PoolSpecification.displayName
+      - azure-batch.PoolSpecification.enableAutoScale
+      - azure-batch.PoolSpecification.enableInterNodeCommunication
+      - azure-batch.PoolSpecification.maxTasksPerNode
+      - azure-batch.PoolSpecification.metadata
+      - azure-batch.PoolSpecification.networkConfiguration
+      - azure-batch.PoolSpecification.resizeTimeout
+      - azure-batch.PoolSpecification.startTask
+      - azure-batch.PoolSpecification.targetDedicatedNodes
+      - azure-batch.PoolSpecification.targetLowPriorityNodes
+      - azure-batch.PoolSpecification.taskSchedulingPolicy
+      - azure-batch.PoolSpecification.userAccounts
+      - azure-batch.PoolSpecification.virtualMachineConfiguration
+      - azure-batch.PoolSpecification.vmSize
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.applicationLicenses
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-101">アプリケーションのライセンスの一覧は、Batch サービスの利用可能なアプリケーション ライセンスのサブセットである必要があります。</span><span class="sxs-lookup"><span data-stu-id="26ecb-101">The list of application licenses must be a subset of available Batch service application licenses.</span></span> <span data-ttu-id="26ecb-102">サポートされていない、ライセンスが要求された場合は、プールの作成は失敗します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-102">If a license is requested which is not supported, Pool creation will fail.</span></span> <span data-ttu-id="26ecb-103">プールで許可されているライセンスは、''maya''、''vray''、''3dsmax''、''arnold'' です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-103">The permitted licenses available on the Pool are ''maya'', ''vray'', ''3dsmax'', ''arnold''.</span></span> <span data-ttu-id="26ecb-104">アプリケーション ライセンスごとにプールに追加すると追加料金が適用されます。</span><span class="sxs-lookup"><span data-stu-id="26ecb-104">An additional charge applies for each application license added to the Pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-105">パッケージ参照の変更は、プールに参加するすべての新しいノードに影響を与えるが、再起動または再イメージ化されるまでに、プールに既に存在するコンピューティング ノードには影響しません。</span><span class="sxs-lookup"><span data-stu-id="26ecb-105">Changes to Package references affect all new Nodes joining the Pool, but do not affect Compute Nodes that are already in the Pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="26ecb-106">最大 10 個のパッケージ参照のいずれかのプールがあります。</span><span class="sxs-lookup"><span data-stu-id="26ecb-106">There is a maximum of 10 Package references on any given Pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.autoScaleEvaluationInterval
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-107">既定値は、15 分です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-107">The default value is 15 minutes.</span></span> <span data-ttu-id="26ecb-108">最小値と最大値は、それぞれ 5 分から 168 時間です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-108">The minimum and maximum value are 5 minutes and 168 hours respectively.</span></span> <span data-ttu-id="26ecb-109">値以下で 5 分を超えないか 168 時間よりも大きい値を指定すると、Batch サービスは無効なプロパティ値をエラーで要求を拒否します。REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-109">If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.autoScaleFormula
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-110">このプロパティがある必要がありますいない enableAutoScale が false に設定されているかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-110">This property must not be specified if enableAutoScale is set to false.</span></span> <span data-ttu-id="26ecb-111">EnableAutoScale が設定されている場合に必要では、true に設定します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-111">It is required if enableAutoScale is set to true.</span></span> <span data-ttu-id="26ecb-112">数式は、プールを作成する前に、有効性をチェックされます。</span><span class="sxs-lookup"><span data-stu-id="26ecb-112">The formula is checked for validity before the Pool is created.</span></span> <span data-ttu-id="26ecb-113">数式が有効でない場合、Batch サービスは、詳細なエラー情報が要求を拒否します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-113">If the formula is not valid, the Batch service rejects the request with detailed error information.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-114">Windows ノードの場合は、Batch サービスは、場所と指定された証明書ストアに証明書をインストールします。</span><span class="sxs-lookup"><span data-stu-id="26ecb-114">For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location.</span></span> <span data-ttu-id="26ecb-115">Linux コンピューティング ノードの場合は、証明書は、タスク作業ディレクトリと AZ_BATCH_CERTIFICATES_DIR がこの場所に対してクエリを実行するタスクに指定された環境変数内でディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="26ecb-115">For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the Task to query for this location.</span></span> <span data-ttu-id="26ecb-116">''RemoteUser'' の可視性を持つ証明書の場合、ユーザーのホーム ディレクトリに ''証明書'' ディレクトリが作成 (例、/home/{ユーザー名}/証明書) し、証明書がそのディレクトリに配置されます。</span><span class="sxs-lookup"><span data-stu-id="26ecb-116">For Certificates with visibility of ''remoteUser'', a ''certs'' directory is created in the user''s home directory (e.g., /home/{user-name}/certs) and Certificates are placed in that directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.cloudServiceConfiguration
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-117">このプロパティである必要があります、プールが Azure PaaS Vm を作成する必要があるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-117">This property must be specified if the Pool needs to be created with Azure PaaS VMs.</span></span> <span data-ttu-id="26ecb-118">このプロパティと virtualMachineConfiguration は相互に排他的であり、プロパティのいずれかを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="26ecb-118">This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified.</span></span> <span data-ttu-id="26ecb-119">どちらも指定されてし、Batch サービスはエラーを返します。REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-119">If neither is specified then the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="26ecb-120">このプロパティは、その poolAllocationMode プロパティを"UserSubscription"に設定して Batch アカウントが作成されたかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-120">This property cannot be specified if the Batch Account was created with its poolAllocationMode property set to ''UserSubscription''.</span></span>'
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - azure-batch.CloudServiceConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26ecb-121">表示名は一意である必要はありませんし、最大長 1024 まで任意の Unicode 文字を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="26ecb-121">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.enableAutoScale
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-122">False の場合、targetDedicateNodes と targetLowPriorityNodes の少なくとも 1 つ指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="26ecb-122">If false, at least one of targetDedicateNodes and targetLowPriorityNodes must be specified.</span></span> <span data-ttu-id="26ecb-123">True の場合は、autoScaleFormula 要素が必要です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-123">If true, the autoScaleFormula element is required.</span></span> <span data-ttu-id="26ecb-124">プールは、数式に従って自動的にサイズ変更します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-124">The Pool automatically resizes according to the formula.</span></span> <span data-ttu-id="26ecb-125">既定値は false です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-125">The default value is false.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.enableInterNodeCommunication
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26ecb-126">ノード間通信を有効にすると、プールのコンピューティング ノードの展開の制限により、プールの最大サイズが制限されます。</span><span class="sxs-lookup"><span data-stu-id="26ecb-126">Enabling inter-node communication limits the maximum size of the Pool due to deployment restrictions on the Compute Nodes of the Pool.</span></span> <span data-ttu-id="26ecb-127">これにより、プールの必要なサイズに到達しない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="26ecb-127">This may result in the Pool not reaching its desired size.</span></span> <span data-ttu-id="26ecb-128">既定値は false です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-128">The default value is false.</span></span>
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.maxTasksPerNode
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26ecb-129">既定値は 1 です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-129">The default value is 1.</span></span> <span data-ttu-id="26ecb-130">最大値は 4 回、プールの vmSize のコアの数または 256 のうち、小さい方です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-130">The maximum value is the smaller of 4 times the number of cores of the vmSize of the Pool or 256.</span></span>
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="26ecb-131">Batch サービスがメタデータに意味を割り当てませんユーザー コードの使用のためだけです。</span><span class="sxs-lookup"><span data-stu-id="26ecb-131">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - azure-batch.NetworkConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.resizeTimeout
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-132">このタイムアウトは手動スケーリングにのみ適用されます。影響を与えません enableAutoScale が設定されている場合に true に設定します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-132">This timeout applies only to manual scaling; it has no effect when enableAutoScale is set to true.</span></span> <span data-ttu-id="26ecb-133">既定値は、15 分です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-133">The default value is 15 minutes.</span></span> <span data-ttu-id="26ecb-134">最小値は、5 分です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-134">The minimum value is 5 minutes.</span></span> <span data-ttu-id="26ecb-135">5 分より小さい値を指定する場合、Batch サービスはエラー; で要求を拒否します。REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-135">If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.targetDedicatedNodes
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-136">このプロパティがある必要がありますいない enableAutoScale が設定されているかどうかは指定されたを true にします。</span><span class="sxs-lookup"><span data-stu-id="26ecb-136">This property must not be specified if enableAutoScale is set to true.</span></span> <span data-ttu-id="26ecb-137">EnableAutoScale が false に設定されている場合は、targetDedicatedNodes、targetLowPriorityNodes、またはその両方を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="26ecb-137">If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</span></span>'
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.targetLowPriorityNodes
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-138">このプロパティがある必要がありますいない enableAutoScale が設定されているかどうかは指定されたを true にします。</span><span class="sxs-lookup"><span data-stu-id="26ecb-138">This property must not be specified if enableAutoScale is set to true.</span></span> <span data-ttu-id="26ecb-139">EnableAutoScale が false に設定されている場合は、targetDedicatedNodes、targetLowPriorityNodes、またはその両方を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="26ecb-139">If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</span></span>'
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.taskSchedulingPolicy
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-140">指定しない場合、既定の負荷が分散されます。</span><span class="sxs-lookup"><span data-stu-id="26ecb-140">If not specified, the default is spread.</span></span>'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - azure-batch.TaskSchedulingPolicy
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.userAccounts
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - 'azure-batch.UserAccount[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.virtualMachineConfiguration
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-141">このプロパティである必要があります、プールが Azure IaaS Vm を作成する必要があるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-141">This property must be specified if the Pool needs to be created with Azure IaaS VMs.</span></span> <span data-ttu-id="26ecb-142">このプロパティは、cloudServiceConfiguration は相互に排他的であり、プロパティのいずれかを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="26ecb-142">This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.</span></span> <span data-ttu-id="26ecb-143">どちらも指定されてし、Batch サービスはエラーを返します。REST API を直接呼び出す、HTTP 状態コードは 400 (Bad Request) です。</span><span class="sxs-lookup"><span data-stu-id="26ecb-143">If neither is specified then the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - azure-batch.VirtualMachineConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.vmSize
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="26ecb-144">プール内の仮想マシンの利用可能なサイズについては、Azure Batch プール内のコンピューティング ノードの VM サイズの選択を参照してください。 (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes)します。</span><span class="sxs-lookup"><span data-stu-id="26ecb-144">For information about available sizes of virtual machines in Pools, see Choose a VM size for Compute Nodes in an Azure Batch Pool (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).</span></span>'
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.CloudServiceConfiguration
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: azure-batch.CloudServiceConfiguration
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: azure-batch.NetworkConfiguration
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask
+  - uid: azure-batch.TaskSchedulingPolicy
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: azure-batch.TaskSchedulingPolicy
+  - uid: 'azure-batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: azure-batch.UserAccount
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.VirtualMachineConfiguration
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: azure-batch.VirtualMachineConfiguration

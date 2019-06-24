@@ -38,7 +38,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="12e9d-101">LargePersonGroupPerson を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="12e9d-101">Class representing a LargePersonGroupPerson.</span></span>
+    summary: <span data-ttu-id="d042f-101">LargePersonGroupPerson を表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="d042f-101">Class representing a LargePersonGroupPerson.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupPerson.addFaceFromStream_2'
     name: 'addFaceFromStream(string, string, msRest.HttpRequestBody, LargePersonGroupPersonAddFaceFromStreamOptionalParams, ServiceCallback<PersistedFace>)'
@@ -53,24 +53,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-102">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-102">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-102">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-102">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-103">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-103">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-103">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-103">Id referencing a particular person.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="12e9d-104">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="12e9d-104">An image stream.</span></span>
+          description: <span data-ttu-id="d042f-104">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="d042f-104">An image stream.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams'
-          description: <span data-ttu-id="12e9d-105">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-105">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-105">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-105">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="12e9d-106">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-106">The callback</span></span>
+            <span data-ttu-id="d042f-106">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-106">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromStreamResponse>
@@ -81,22 +81,37 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="12e9d-107">代表的な顔を識別するためのユーザーに追加します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-107">Add a representative face to a person for identification.</span></span> <span data-ttu-id="12e9d-108">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="12e9d-108">The input face is specified as an image with a targetFace rectangle.</span></span>
+    summary: |-
+      <span data-ttu-id="d042f-107">顔を人に顔識別のほか、確認用の大規模なユーザー グループに追加します。</span><span class="sxs-lookup"><span data-stu-id="d042f-107">Add a face to a person into a large person group for face identification or verification.</span></span> <span data-ttu-id="d042f-108">複数人の顔を含むイメージを処理するのには、入力の顔を targetFace 四角形を使用してイメージとして指定できます。</span><span class="sxs-lookup"><span data-stu-id="d042f-108">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d042f-109">追加の顔を表す persistedFaceId を返します。</span><span class="sxs-lookup"><span data-stu-id="d042f-109">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="d042f-110">イメージは格納されません。</span><span class="sxs-lookup"><span data-stu-id="d042f-110">No image will be stored.</span></span> <span data-ttu-id="d042f-111">までサーバーには、抽出された顔機能のみ[LargePersonGroup PersonFace - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3)、 [LargePersonGroup 人削除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)または[LargePersonGroup - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="d042f-111">Only the extracted face feature will be stored on server until [LargePersonGroup PersonFace - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>
+      <br /> <span data-ttu-id="d042f-112">注 persistedFaceId はによって生成された faceId を異なる[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)します。</span><span class="sxs-lookup"><span data-stu-id="d042f-112">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="d042f-113">高い顔のイメージ品質は、認識精度を意味します。</span><span class="sxs-lookup"><span data-stu-id="d042f-113">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id="d042f-114">高品質な顔を検討してください: 正面、clear、および顔のサイズは 200 (目の間に 100 ピクセル単位) が 200 ピクセル x、または大きくします。</span><span class="sxs-lookup"><span data-stu-id="d042f-114">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="d042f-115">ユーザーの各エントリには、最大 248 顔を保持できます。</span><span class="sxs-lookup"><span data-stu-id="d042f-115">Each person entry can hold up to 248 faces.</span></span>
+      * <span data-ttu-id="d042f-116">JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="d042f-116">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="d042f-117">許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。</span><span class="sxs-lookup"><span data-stu-id="d042f-117">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="d042f-118">"targetFace"四角形は、1 つの面を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="d042f-118">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="d042f-119">0 個または複数の面は、エラーと見なされます。</span><span class="sxs-lookup"><span data-stu-id="d042f-119">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="d042f-120">指定された"targetFace"四角形が返されない場合[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)、検出、顔を正常に追加して保証はありません。</span><span class="sxs-lookup"><span data-stu-id="d042f-120">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="d042f-121">検出可能な顔のサイズ (36 4096 x 4096 ピクセル x 36) から大きな頭部姿勢、または大規模な閉塞にエラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="d042f-121">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="d042f-122">顔が同一人物との間の追加/削除は順番に処理されます。</span><span class="sxs-lookup"><span data-stu-id="d042f-122">Adding/deleting faces to/from a same person will be processed sequentially.</span></span> <span data-ttu-id="d042f-123">別の担当者との間の顔の追加/削除は、並列で処理されます。</span><span class="sxs-lookup"><span data-stu-id="d042f-123">Adding/deleting faces to/from different persons are processed in parallel.</span></span>
+      * <span data-ttu-id="d042f-124">検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。</span><span class="sxs-lookup"><span data-stu-id="d042f-124">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="d042f-125">1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。</span><span class="sxs-lookup"><span data-stu-id="d042f-125">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="d042f-126">異なる 'detectionModel' の値を指定することができます。</span><span class="sxs-lookup"><span data-stu-id="d042f-126">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="d042f-127">使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="d042f-127">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="d042f-128">モデル</span><span class="sxs-lookup"><span data-stu-id="d042f-128">Model</span></span> | <span data-ttu-id="d042f-129">使用をお勧めします-case(s)</span><span class="sxs-lookup"><span data-stu-id="d042f-129">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="d042f-130">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="d042f-130">'detection_01':</span></span> | <span data-ttu-id="d042f-131">既定の検出モデル [LargePersonGroup ユーザーの追加</span><span class="sxs-lookup"><span data-stu-id="d042f-131">The default detection model for [LargePersonGroup Person - Add</span></span>
+      <span data-ttu-id="d042f-132">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42) します。</span><span class="sxs-lookup"><span data-stu-id="d042f-132">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42).</span></span> <span data-ttu-id="d042f-133">ほぼ正面の顔の検出をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="d042f-133">Recommend for near frontal face detection.</span></span> <span data-ttu-id="d042f-134">角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d042f-134">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="d042f-135">| |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d042f-135">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromStream(largePersonGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-109">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-109">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-136">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-136">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-110">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-110">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-137">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-137">Id referencing a particular person.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="12e9d-111">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="12e9d-111">An image stream.</span></span>
+          description: <span data-ttu-id="d042f-138">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="d042f-138">An image stream.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams
@@ -119,20 +134,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-112">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-112">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-139">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-139">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-113">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-113">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-140">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-140">Id referencing a particular person.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="12e9d-114">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="12e9d-114">An image stream.</span></span>
+          description: <span data-ttu-id="d042f-141">イメージ ストリーム。</span><span class="sxs-lookup"><span data-stu-id="d042f-141">An image stream.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="12e9d-115">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-115">The callback</span></span>
+            <span data-ttu-id="d042f-142">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-142">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromStreamResponse>
@@ -150,24 +165,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-116">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-116">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-143">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-143">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-117">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-117">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-144">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-144">Id referencing a particular person.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="12e9d-118">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="12e9d-118">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="d042f-145">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="d042f-145">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromUrlOptionalParams'
-          description: <span data-ttu-id="12e9d-119">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-119">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-146">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-146">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="12e9d-120">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-120">The callback</span></span>
+            <span data-ttu-id="d042f-147">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-147">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromUrlResponse>
@@ -178,22 +193,37 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="12e9d-121">代表的な顔を識別するためのユーザーに追加します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-121">Add a representative face to a person for identification.</span></span> <span data-ttu-id="12e9d-122">入力の顔は targetFace 四角形を使用してイメージとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="12e9d-122">The input face is specified as an image with a targetFace rectangle.</span></span>
+    summary: |-
+      <span data-ttu-id="d042f-148">顔を人に顔識別のほか、確認用の大規模なユーザー グループに追加します。</span><span class="sxs-lookup"><span data-stu-id="d042f-148">Add a face to a person into a large person group for face identification or verification.</span></span> <span data-ttu-id="d042f-149">複数人の顔を含むイメージを処理するのには、入力の顔を targetFace 四角形を使用してイメージとして指定できます。</span><span class="sxs-lookup"><span data-stu-id="d042f-149">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="d042f-150">追加の顔を表す persistedFaceId を返します。</span><span class="sxs-lookup"><span data-stu-id="d042f-150">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="d042f-151">イメージは格納されません。</span><span class="sxs-lookup"><span data-stu-id="d042f-151">No image will be stored.</span></span> <span data-ttu-id="d042f-152">までサーバーには、抽出された顔機能のみ[LargePersonGroup PersonFace - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3)、 [LargePersonGroup 人削除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)または[LargePersonGroup - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="d042f-152">Only the extracted face feature will be stored on server until [LargePersonGroup PersonFace - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>
+      <br /> <span data-ttu-id="d042f-153">注 persistedFaceId はによって生成された faceId を異なる[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)します。</span><span class="sxs-lookup"><span data-stu-id="d042f-153">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="d042f-154">高い顔のイメージ品質は、認識精度を意味します。</span><span class="sxs-lookup"><span data-stu-id="d042f-154">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id="d042f-155">高品質な顔を検討してください: 正面、clear、および顔のサイズは 200 (目の間に 100 ピクセル単位) が 200 ピクセル x、または大きくします。</span><span class="sxs-lookup"><span data-stu-id="d042f-155">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="d042f-156">ユーザーの各エントリには、最大 248 顔を保持できます。</span><span class="sxs-lookup"><span data-stu-id="d042f-156">Each person entry can hold up to 248 faces.</span></span>
+      * <span data-ttu-id="d042f-157">JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="d042f-157">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="d042f-158">許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。</span><span class="sxs-lookup"><span data-stu-id="d042f-158">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="d042f-159">"targetFace"四角形は、1 つの面を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="d042f-159">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="d042f-160">0 個または複数の面は、エラーと見なされます。</span><span class="sxs-lookup"><span data-stu-id="d042f-160">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="d042f-161">指定された"targetFace"四角形が返されない場合[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)、検出、顔を正常に追加して保証はありません。</span><span class="sxs-lookup"><span data-stu-id="d042f-161">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="d042f-162">検出可能な顔のサイズ (36 4096 x 4096 ピクセル x 36) から大きな頭部姿勢、または大規模な閉塞にエラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="d042f-162">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="d042f-163">顔が同一人物との間の追加/削除は順番に処理されます。</span><span class="sxs-lookup"><span data-stu-id="d042f-163">Adding/deleting faces to/from a same person will be processed sequentially.</span></span> <span data-ttu-id="d042f-164">別の担当者との間の顔の追加/削除は、並列で処理されます。</span><span class="sxs-lookup"><span data-stu-id="d042f-164">Adding/deleting faces to/from different persons are processed in parallel.</span></span>
+      * <span data-ttu-id="d042f-165">検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。</span><span class="sxs-lookup"><span data-stu-id="d042f-165">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="d042f-166">1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。</span><span class="sxs-lookup"><span data-stu-id="d042f-166">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="d042f-167">異なる 'detectionModel' の値を指定することができます。</span><span class="sxs-lookup"><span data-stu-id="d042f-167">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="d042f-168">使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="d042f-168">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="d042f-169">モデル</span><span class="sxs-lookup"><span data-stu-id="d042f-169">Model</span></span> | <span data-ttu-id="d042f-170">使用をお勧めします-case(s)</span><span class="sxs-lookup"><span data-stu-id="d042f-170">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="d042f-171">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="d042f-171">'detection_01':</span></span> | <span data-ttu-id="d042f-172">既定の検出モデル [LargePersonGroup ユーザーの追加</span><span class="sxs-lookup"><span data-stu-id="d042f-172">The default detection model for [LargePersonGroup Person - Add</span></span>
+      <span data-ttu-id="d042f-173">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42) します。</span><span class="sxs-lookup"><span data-stu-id="d042f-173">Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42).</span></span> <span data-ttu-id="d042f-174">ほぼ正面の顔の検出をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="d042f-174">Recommend for near frontal face detection.</span></span> <span data-ttu-id="d042f-175">角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d042f-175">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="d042f-176">| |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d042f-176">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromUrl(largePersonGroupId: string, personId: string, url: string, options?: Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-123">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-123">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-177">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-177">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-124">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-124">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-178">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-178">Id referencing a particular person.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="12e9d-125">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="12e9d-125">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="d042f-179">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="d042f-179">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams
@@ -216,20 +246,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-126">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-126">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-180">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-180">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-127">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-127">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-181">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-181">Id referencing a particular person.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="12e9d-128">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="12e9d-128">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="d042f-182">イメージの URL をパブリックに到達可能</span><span class="sxs-lookup"><span data-stu-id="d042f-182">Publicly reachable URL of an image</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="12e9d-129">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-129">The callback</span></span>
+            <span data-ttu-id="d042f-183">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-183">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonAddFaceFromUrlResponse>
@@ -247,16 +277,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-130">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-130">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-184">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-184">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonCreateOptionalParams'
-          description: <span data-ttu-id="12e9d-131">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-131">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-185">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-185">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="12e9d-132">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-132">The callback</span></span>
+            <span data-ttu-id="d042f-186">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-186">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonCreateResponse>
@@ -267,14 +297,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="12e9d-133">指定された大規模人物グループに新しい人物を作成します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-133">Create a new person in a specified large person group.</span></span>
+    summary: <span data-ttu-id="d042f-187">指定された大規模人物グループに新しい人物を作成します。</span><span class="sxs-lookup"><span data-stu-id="d042f-187">Create a new person in a specified large person group.</span></span>
     syntax:
       content: 'function create(largePersonGroupId: string, options?: Models.LargePersonGroupPersonCreateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-134">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-134">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-188">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-188">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonCreateOptionalParams
@@ -297,12 +327,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-135">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-135">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-189">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-189">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="12e9d-136">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-136">The callback</span></span>
+            <span data-ttu-id="d042f-190">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-190">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonCreateResponse>
@@ -313,22 +343,25 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="12e9d-137">個人の顔を削除します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-137">Delete a face from a person.</span></span> <span data-ttu-id="12e9d-138">永続化された顔の相対的な機能も削除されます。</span><span class="sxs-lookup"><span data-stu-id="12e9d-138">Relative feature for the persisted face will also be deleted.</span></span>
+    summary: |-
+      <span data-ttu-id="d042f-191">大きなユーザー グループ内のユーザーから指定した largePersonGroupId、personId persistedFaceId して顔を削除します。</span><span class="sxs-lookup"><span data-stu-id="d042f-191">Delete a face from a person in a large person group by specified largePersonGroupId, personId and persistedFaceId.</span></span>
+      <br /> <span data-ttu-id="d042f-192">顔が同一人物との間の追加/削除は順番に処理されます。</span><span class="sxs-lookup"><span data-stu-id="d042f-192">Adding/deleting faces to/from a same person will be processed sequentially.</span></span>
+      <span data-ttu-id="d042f-193">別の担当者との間の顔の追加/削除は、並列で処理されます。</span><span class="sxs-lookup"><span data-stu-id="d042f-193">Adding/deleting faces to/from different persons are processed in parallel.</span></span>
     syntax:
       content: 'function deleteFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-139">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-139">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-194">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-194">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-140">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-140">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-195">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-195">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="12e9d-141">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-141">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="d042f-196">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-196">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -351,24 +384,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-142">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-142">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-197">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-197">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-143">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-143">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-198">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-198">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="12e9d-144">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-144">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="d042f-199">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-199">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="12e9d-145">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-145">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-200">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-200">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="12e9d-146">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-146">The callback</span></span>
+            <span data-ttu-id="d042f-201">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-201">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -386,20 +419,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-147">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-147">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-202">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-202">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-148">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-148">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-203">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-203">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="12e9d-149">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-149">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="d042f-204">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-204">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="12e9d-150">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-150">The callback</span></span>
+            <span data-ttu-id="d042f-205">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-205">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -410,18 +443,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="12e9d-151">大規模人物グループから既存の人物を削除します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-151">Delete an existing person from a large person group.</span></span> <span data-ttu-id="12e9d-152">個人のデータが格納されているすべてと、顔の特徴の人の記事では削除されます。</span><span class="sxs-lookup"><span data-stu-id="12e9d-152">All stored person data, and face features in the person entry will be deleted.</span></span>'
+    summary: '<span data-ttu-id="d042f-206">大規模人物グループから既存の人物を削除します。</span><span class="sxs-lookup"><span data-stu-id="d042f-206">Delete an existing person from a large person group.</span></span> <span data-ttu-id="d042f-207">PersistedFaceId、userData、person エントリでユーザー名と顔機能はすべて削除されます。</span><span class="sxs-lookup"><span data-stu-id="d042f-207">The persistedFaceId, userData, person name and face feature in the person entry will all be deleted.</span></span>'
     syntax:
       content: 'function deleteMethod(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-153">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-153">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-208">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-208">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-154">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-154">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-209">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-209">Id referencing a particular person.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -444,20 +477,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-155">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-155">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-210">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-210">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-156">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-156">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-211">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-211">Id referencing a particular person.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="12e9d-157">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-157">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-212">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-212">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="12e9d-158">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-158">The callback</span></span>
+            <span data-ttu-id="d042f-213">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-213">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -475,16 +508,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-159">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-159">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-214">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-214">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-160">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-160">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-215">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-215">Id referencing a particular person.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="12e9d-161">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-161">The callback</span></span>
+            <span data-ttu-id="d042f-216">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-216">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -495,18 +528,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="12e9d-162">登録済みの永続化された顔、名 userData など、個人の情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-162">Retrieve a person''s information, including registered persisted faces, name and userData.</span></span>'
+    summary: '<span data-ttu-id="d042f-217">ユーザーの名前と userData、および登録されている人の顔機能を表す永続化された faceIds を取得します。</span><span class="sxs-lookup"><span data-stu-id="d042f-217">Retrieve a person''s name and userData, and the persisted faceIds representing the registered person face feature.</span></span>'
     syntax:
       content: 'function get(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-163">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-163">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-218">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-218">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-164">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-164">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-219">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-219">Id referencing a particular person.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -529,20 +562,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-165">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-165">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-220">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-220">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-166">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-166">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-221">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-221">Id referencing a particular person.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="12e9d-167">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-167">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-222">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-222">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="12e9d-168">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-168">The callback</span></span>
+            <span data-ttu-id="d042f-223">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-223">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetResponse>
@@ -560,16 +593,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-169">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-169">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-224">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-224">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-170">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-170">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-225">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-225">Id referencing a particular person.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.Person>
           description: |
-            <span data-ttu-id="12e9d-171">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-171">The callback</span></span>
+            <span data-ttu-id="d042f-226">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-226">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetResponse>
@@ -580,22 +613,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="12e9d-172">永続化された顔 (persistedFaceId、personId およびその属する largePersonGroupId で指定) に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-172">Retrieve information about a persisted face (specified by persistedFaceId, personId and its belonging largePersonGroupId).</span></span>'
+    summary: '<span data-ttu-id="d042f-227">永続化された顔 (persistedFaceId、personId およびその属する largePersonGroupId で指定) に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d042f-227">Retrieve information about a persisted face (specified by persistedFaceId, personId and its belonging largePersonGroupId).</span></span>'
     syntax:
       content: 'function getFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-173">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-173">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-228">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-228">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-174">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-174">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-229">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-229">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="12e9d-175">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-175">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="d042f-230">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-230">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -618,24 +651,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-176">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-176">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-231">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-231">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-177">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-177">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-232">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-232">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="12e9d-178">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-178">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="d042f-233">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-233">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="12e9d-179">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-179">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-234">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-234">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="12e9d-180">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-180">The callback</span></span>
+            <span data-ttu-id="d042f-235">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-235">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetFaceResponse>
@@ -653,20 +686,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-181">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-181">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-236">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-236">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-182">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-182">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-237">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-237">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="12e9d-183">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-183">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="d042f-238">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-238">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="12e9d-184">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-184">The callback</span></span>
+            <span data-ttu-id="d042f-239">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-239">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonGetFaceResponse>
@@ -677,7 +710,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="12e9d-185">LargePersonGroupPerson を作成します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-185">Create a LargePersonGroupPerson.</span></span>
+    summary: <span data-ttu-id="d042f-240">LargePersonGroupPerson を作成します。</span><span class="sxs-lookup"><span data-stu-id="d042f-240">Create a LargePersonGroupPerson.</span></span>
     syntax:
       content: 'new LargePersonGroupPerson(client: FaceClientContext)'
       parameters:
@@ -685,7 +718,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="12e9d-186">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="12e9d-186">Reference to the service client.</span></span>
+            <span data-ttu-id="d042f-241">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="d042f-241">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupPerson.list_2'
     name: 'list(string, LargePersonGroupPersonListOptionalParams, ServiceCallback<Person[]>)'
@@ -700,16 +733,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-187">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-187">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-242">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-242">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonListOptionalParams'
-          description: <span data-ttu-id="12e9d-188">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-188">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-243">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-243">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.Person[]>'
           description: |
-            <span data-ttu-id="12e9d-189">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-189">The callback</span></span>
+            <span data-ttu-id="d042f-244">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-244">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonListResponse>
@@ -720,14 +753,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="12e9d-190">大きなユーザー グループではすべて、担当者の一覧を表示し、ユーザー情報 (personId、名前、userData 人の顔が登録済みの persistedFaceIds など) を取得します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-190">List all persons in a large person group, and retrieve person information (including personId, name, userData and persistedFaceIds of registered faces of the person).</span></span>'
+    summary: '<span data-ttu-id="d042f-245">大きなユーザー グループではすべて、担当者の一覧を表示し、ユーザー情報 (personId、名前、userData 人の顔が登録済みの persistedFaceIds など) を取得します。</span><span class="sxs-lookup"><span data-stu-id="d042f-245">List all persons in a large person group, and retrieve person information (including personId, name, userData and persistedFaceIds of registered faces of the person).</span></span>'
     syntax:
       content: 'function list(largePersonGroupId: string, options?: Models.LargePersonGroupPersonListOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-191">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-191">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-246">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-246">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonListOptionalParams
@@ -750,12 +783,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-192">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-192">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-247">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-247">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.Person[]>'
           description: |
-            <span data-ttu-id="12e9d-193">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-193">The callback</span></span>
+            <span data-ttu-id="d042f-248">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-248">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupPersonListResponse>
@@ -773,20 +806,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-194">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-194">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-249">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-249">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-195">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-195">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-250">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-250">Id referencing a particular person.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonUpdateOptionalParams'
-          description: <span data-ttu-id="12e9d-196">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-196">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-251">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-251">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="12e9d-197">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-197">The callback</span></span>
+            <span data-ttu-id="d042f-252">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-252">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -797,18 +830,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="12e9d-198">人物の name または userData を更新します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-198">Update name or userData of a person.</span></span>
+    summary: <span data-ttu-id="d042f-253">人物の name または userData を更新します。</span><span class="sxs-lookup"><span data-stu-id="d042f-253">Update name or userData of a person.</span></span>
     syntax:
       content: 'function update(largePersonGroupId: string, personId: string, options?: Models.LargePersonGroupPersonUpdateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-199">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-199">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-254">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-254">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-200">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-200">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-255">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-255">Id referencing a particular person.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonUpdateOptionalParams
@@ -831,16 +864,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-201">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-201">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-256">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-256">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-202">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-202">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-257">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-257">Id referencing a particular person.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="12e9d-203">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-203">The callback</span></span>
+            <span data-ttu-id="d042f-258">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-258">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -858,24 +891,24 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-204">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-204">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-259">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-259">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-205">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-205">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-260">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-260">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="12e9d-206">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-206">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="d042f-261">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-261">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupPersonUpdateFaceOptionalParams'
-          description: <span data-ttu-id="12e9d-207">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="12e9d-207">The optional parameters</span></span>
+          description: <span data-ttu-id="d042f-262">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d042f-262">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="12e9d-208">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-208">The callback</span></span>
+            <span data-ttu-id="d042f-263">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-263">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -886,22 +919,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="12e9d-209">人物の永続化された顔の userData フィールドを更新します。</span><span class="sxs-lookup"><span data-stu-id="12e9d-209">Update a person persisted face's userData field.</span></span>
+    summary: <span data-ttu-id="d042f-264">人物の永続化された顔の userData フィールドを更新します。</span><span class="sxs-lookup"><span data-stu-id="d042f-264">Update a person persisted face's userData field.</span></span>
     syntax:
       content: 'function updateFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: Models.LargePersonGroupPersonUpdateFaceOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-210">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-210">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-265">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-265">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-211">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-211">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-266">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-266">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="12e9d-212">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-212">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="d042f-267">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-267">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupPersonUpdateFaceOptionalParams
@@ -924,20 +957,20 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="12e9d-213">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-213">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="d042f-268">特定の大規模なユーザー グループを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-268">Id referencing a particular large person group.</span></span>
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="12e9d-214">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-214">Id referencing a particular person.</span></span>
+          description: <span data-ttu-id="d042f-269">特定のユーザーを参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-269">Id referencing a particular person.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="12e9d-215">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="12e9d-215">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="d042f-270">既存の顔の特定 persistedFaceId を参照する id です。</span><span class="sxs-lookup"><span data-stu-id="d042f-270">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="12e9d-216">コールバック</span><span class="sxs-lookup"><span data-stu-id="12e9d-216">The callback</span></span>
+            <span data-ttu-id="d042f-271">コールバック</span><span class="sxs-lookup"><span data-stu-id="d042f-271">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>

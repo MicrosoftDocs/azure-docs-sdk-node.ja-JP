@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-mysql.Servers.beginCreate'
       - '@azure/arm-mysql.Servers.beginDeleteMethod'
+      - '@azure/arm-mysql.Servers.beginRestart'
       - '@azure/arm-mysql.Servers.beginUpdate'
       - '@azure/arm-mysql.Servers.create'
       - '@azure/arm-mysql.Servers.deleteMethod'
@@ -18,12 +19,13 @@ items:
       - '@azure/arm-mysql.Servers.listByResourceGroup'
       - '@azure/arm-mysql.Servers.listByResourceGroup_2'
       - '@azure/arm-mysql.Servers.listByResourceGroup_1'
+      - '@azure/arm-mysql.Servers.restart'
       - '@azure/arm-mysql.Servers.constructor'
       - '@azure/arm-mysql.Servers.update'
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="ac350-101">サーバーを表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="ac350-101">Class representing a Servers.</span></span>
+    summary: <span data-ttu-id="46c85-101">サーバーを表すクラスです。</span><span class="sxs-lookup"><span data-stu-id="46c85-101">Class representing a Servers.</span></span>
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.Servers.beginCreate'
     name: 'beginCreate(string, string, ServerForCreate, msRest.RequestOptionsBase)'
@@ -31,22 +33,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-102">新しいサーバーを作成します。 または、既存のサーバーを更新します。</span><span class="sxs-lookup"><span data-stu-id="ac350-102">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="ac350-103">更新操作は、既存のサーバーで上書きされます。</span><span class="sxs-lookup"><span data-stu-id="ac350-103">The update action will overwrite the existing server.</span></span>
+    summary: <span data-ttu-id="46c85-102">新しいサーバーを作成します。 または、既存のサーバーを更新します。</span><span class="sxs-lookup"><span data-stu-id="46c85-102">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="46c85-103">更新操作は、既存のサーバーで上書きされます。</span><span class="sxs-lookup"><span data-stu-id="46c85-103">The update action will overwrite the existing server.</span></span>
     syntax:
       content: 'function beginCreate(resourceGroupName: string, serverName: string, parameters: ServerForCreate, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-104">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-105">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-104">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-105">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="ac350-106">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-106">The name of the server.</span></span>
+          description: <span data-ttu-id="46c85-106">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-106">The name of the server.</span></span>
         - id: parameters
           type:
             - '@azure/arm-mysql.ServerForCreate'
-          description: <span data-ttu-id="ac350-107">作成または更新サーバーの必須パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="ac350-107">The required parameters for creating or updating a server.</span></span>
+          description: <span data-ttu-id="46c85-107">作成または更新サーバーの必須パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="46c85-107">The required parameters for creating or updating a server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -62,18 +64,45 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-108">サーバーを削除します。</span><span class="sxs-lookup"><span data-stu-id="ac350-108">Deletes a server.</span></span>
+    summary: <span data-ttu-id="46c85-108">サーバーを削除します。</span><span class="sxs-lookup"><span data-stu-id="46c85-108">Deletes a server.</span></span>
     syntax:
       content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-109">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-110">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-109">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-110">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="ac350-111">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-111">The name of the server.</span></span>
+          description: <span data-ttu-id="46c85-111">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-111">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.beginRestart'
+    name: 'beginRestart(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c85-112">サーバーを再起動します。</span><span class="sxs-lookup"><span data-stu-id="46c85-112">Restarts a server.</span></span>
+    syntax:
+      content: 'function beginRestart(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c85-113">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-113">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-114">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-114">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c85-115">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-115">The name of the server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -89,22 +118,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-112">既存のサーバーを更新します。</span><span class="sxs-lookup"><span data-stu-id="ac350-112">Updates an existing server.</span></span> <span data-ttu-id="ac350-113">要求本文には、通常のサーバー定義に存在するプロパティの多くを 1 つを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="ac350-113">The request body can contain one to many of the properties present in the normal server definition.</span></span>
+    summary: <span data-ttu-id="46c85-116">既存のサーバーを更新します。</span><span class="sxs-lookup"><span data-stu-id="46c85-116">Updates an existing server.</span></span> <span data-ttu-id="46c85-117">要求本文には、通常のサーバー定義に存在するプロパティの多くを 1 つを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="46c85-117">The request body can contain one to many of the properties present in the normal server definition.</span></span>
     syntax:
       content: 'function beginUpdate(resourceGroupName: string, serverName: string, parameters: ServerUpdateParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-114">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-114">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-115">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-115">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-118">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-118">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-119">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-119">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="ac350-116">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-116">The name of the server.</span></span>
+          description: <span data-ttu-id="46c85-120">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-120">The name of the server.</span></span>
         - id: parameters
           type:
             - '@azure/arm-mysql.ServerUpdateParameters'
-          description: <span data-ttu-id="ac350-117">サーバーの更新の必須パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="ac350-117">The required parameters for updating a server.</span></span>
+          description: <span data-ttu-id="46c85-121">サーバーの更新の必須パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="46c85-121">The required parameters for updating a server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -120,22 +149,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-118">新しいサーバーを作成します。 または、既存のサーバーを更新します。</span><span class="sxs-lookup"><span data-stu-id="ac350-118">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="ac350-119">更新操作は、既存のサーバーで上書きされます。</span><span class="sxs-lookup"><span data-stu-id="ac350-119">The update action will overwrite the existing server.</span></span>
+    summary: <span data-ttu-id="46c85-122">新しいサーバーを作成します。 または、既存のサーバーを更新します。</span><span class="sxs-lookup"><span data-stu-id="46c85-122">Creates a new server or updates an existing server.</span></span> <span data-ttu-id="46c85-123">更新操作は、既存のサーバーで上書きされます。</span><span class="sxs-lookup"><span data-stu-id="46c85-123">The update action will overwrite the existing server.</span></span>
     syntax:
       content: 'function create(resourceGroupName: string, serverName: string, parameters: ServerForCreate, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-120">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-120">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-121">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-121">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-124">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-124">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-125">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-125">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="ac350-122">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-122">The name of the server.</span></span>
+          description: <span data-ttu-id="46c85-126">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-126">The name of the server.</span></span>
         - id: parameters
           type:
             - '@azure/arm-mysql.ServerForCreate'
-          description: <span data-ttu-id="ac350-123">作成または更新サーバーの必須パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="ac350-123">The required parameters for creating or updating a server.</span></span>
+          description: <span data-ttu-id="46c85-127">作成または更新サーバーの必須パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="46c85-127">The required parameters for creating or updating a server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -151,18 +180,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-124">サーバーを削除します。</span><span class="sxs-lookup"><span data-stu-id="ac350-124">Deletes a server.</span></span>
+    summary: <span data-ttu-id="46c85-128">サーバーを削除します。</span><span class="sxs-lookup"><span data-stu-id="46c85-128">Deletes a server.</span></span>
     syntax:
       content: 'function deleteMethod(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-125">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-125">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-126">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-126">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-129">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-130">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="ac350-127">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-127">The name of the server.</span></span>
+          description: <span data-ttu-id="46c85-131">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-131">The name of the server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -178,18 +207,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-128">サーバーに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="ac350-128">Gets information about a server.</span></span>
+    summary: <span data-ttu-id="46c85-132">サーバーに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="46c85-132">Gets information about a server.</span></span>
     syntax:
       content: 'function get(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-129">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-130">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-133">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-133">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-134">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-134">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="ac350-131">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-131">The name of the server.</span></span>
+          description: <span data-ttu-id="46c85-135">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-135">The name of the server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -212,20 +241,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-132">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-132">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-133">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-133">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-136">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-136">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-137">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-137">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="ac350-134">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-134">The name of the server.</span></span>
+          description: <span data-ttu-id="46c85-138">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-138">The name of the server.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="ac350-135">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ac350-135">The optional parameters</span></span>
+          description: <span data-ttu-id="46c85-139">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="46c85-139">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.Server>
           description: |
-            <span data-ttu-id="ac350-136">コールバック</span><span class="sxs-lookup"><span data-stu-id="ac350-136">The callback</span></span>
+            <span data-ttu-id="46c85-140">コールバック</span><span class="sxs-lookup"><span data-stu-id="46c85-140">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersGetResponse>
@@ -243,16 +272,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-137">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-137">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-138">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-138">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-141">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-141">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-142">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-142">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="ac350-139">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-139">The name of the server.</span></span>
+          description: <span data-ttu-id="46c85-143">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-143">The name of the server.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.Server>
           description: |
-            <span data-ttu-id="ac350-140">コールバック</span><span class="sxs-lookup"><span data-stu-id="ac350-140">The callback</span></span>
+            <span data-ttu-id="46c85-144">コールバック</span><span class="sxs-lookup"><span data-stu-id="46c85-144">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersGetResponse>
@@ -263,7 +292,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-141">特定のサブスクリプション内のすべてのサーバーを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ac350-141">List all the servers in a given subscription.</span></span>
+    summary: <span data-ttu-id="46c85-145">特定のサブスクリプション内のすべてのサーバーを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="46c85-145">List all the servers in a given subscription.</span></span>
     syntax:
       content: 'function list(options?: msRest.RequestOptionsBase)'
       parameters:
@@ -289,12 +318,12 @@ items:
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="ac350-142">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ac350-142">The optional parameters</span></span>
+          description: <span data-ttu-id="46c85-146">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="46c85-146">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.ServerListResult>
           description: |
-            <span data-ttu-id="ac350-143">コールバック</span><span class="sxs-lookup"><span data-stu-id="ac350-143">The callback</span></span>
+            <span data-ttu-id="46c85-147">コールバック</span><span class="sxs-lookup"><span data-stu-id="46c85-147">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersListResponse>
@@ -313,7 +342,7 @@ items:
           type:
             - ServiceCallback<@azure/arm-mysql.ServerListResult>
           description: |
-            <span data-ttu-id="ac350-144">コールバック</span><span class="sxs-lookup"><span data-stu-id="ac350-144">The callback</span></span>
+            <span data-ttu-id="46c85-148">コールバック</span><span class="sxs-lookup"><span data-stu-id="46c85-148">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersListResponse>
@@ -324,14 +353,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-145">指定したリソース グループ内のすべてのサーバーを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ac350-145">List all the servers in a given resource group.</span></span>
+    summary: <span data-ttu-id="46c85-149">指定したリソース グループ内のすべてのサーバーを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="46c85-149">List all the servers in a given resource group.</span></span>
     syntax:
       content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-146">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-146">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-147">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-147">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-150">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-150">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-151">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-151">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -354,16 +383,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-148">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-148">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-149">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-149">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-152">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-152">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-153">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-153">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="ac350-150">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="ac350-150">The optional parameters</span></span>
+          description: <span data-ttu-id="46c85-154">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="46c85-154">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.ServerListResult>
           description: |
-            <span data-ttu-id="ac350-151">コールバック</span><span class="sxs-lookup"><span data-stu-id="ac350-151">The callback</span></span>
+            <span data-ttu-id="46c85-155">コールバック</span><span class="sxs-lookup"><span data-stu-id="46c85-155">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersListByResourceGroupResponse>
@@ -381,15 +410,42 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-152">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-152">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-153">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-153">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-156">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-156">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-157">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-157">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-mysql.ServerListResult>
           description: |
-            <span data-ttu-id="ac350-154">コールバック</span><span class="sxs-lookup"><span data-stu-id="ac350-154">The callback</span></span>
+            <span data-ttu-id="46c85-158">コールバック</span><span class="sxs-lookup"><span data-stu-id="46c85-158">The callback</span></span>
       return:
         type:
           - Promise<Models.ServersListByResourceGroupResponse>
+    package: '@azure/arm-mysql'
+  - uid: '@azure/arm-mysql.Servers.restart'
+    name: 'restart(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c85-159">サーバーを再起動します。</span><span class="sxs-lookup"><span data-stu-id="46c85-159">Restarts a server.</span></span>
+    syntax:
+      content: 'function restart(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c85-160">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-160">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-161">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-161">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c85-162">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-162">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.Servers.constructor'
     name: Servers(MySQLManagementClientContext)
@@ -397,7 +453,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-155">サーバーを作成します。</span><span class="sxs-lookup"><span data-stu-id="ac350-155">Create a Servers.</span></span>
+    summary: <span data-ttu-id="46c85-163">サーバーを作成します。</span><span class="sxs-lookup"><span data-stu-id="46c85-163">Create a Servers.</span></span>
     syntax:
       content: 'new Servers(client: MySQLManagementClientContext)'
       parameters:
@@ -405,7 +461,7 @@ items:
           type:
             - '@azure/arm-mysql.MySQLManagementClientContext'
           description: |
-            <span data-ttu-id="ac350-156">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="ac350-156">Reference to the service client.</span></span>
+            <span data-ttu-id="46c85-164">サービス クライアントへの参照。</span><span class="sxs-lookup"><span data-stu-id="46c85-164">Reference to the service client.</span></span>
     package: '@azure/arm-mysql'
   - uid: '@azure/arm-mysql.Servers.update'
     name: 'update(string, string, ServerUpdateParameters, msRest.RequestOptionsBase)'
@@ -413,22 +469,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="ac350-157">既存のサーバーを更新します。</span><span class="sxs-lookup"><span data-stu-id="ac350-157">Updates an existing server.</span></span> <span data-ttu-id="ac350-158">要求本文には、通常のサーバー定義に存在するプロパティの多くを 1 つを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="ac350-158">The request body can contain one to many of the properties present in the normal server definition.</span></span>
+    summary: <span data-ttu-id="46c85-165">既存のサーバーを更新します。</span><span class="sxs-lookup"><span data-stu-id="46c85-165">Updates an existing server.</span></span> <span data-ttu-id="46c85-166">要求本文には、通常のサーバー定義に存在するプロパティの多くを 1 つを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="46c85-166">The request body can contain one to many of the properties present in the normal server definition.</span></span>
     syntax:
       content: 'function update(resourceGroupName: string, serverName: string, parameters: ServerUpdateParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="ac350-159">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-159">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="ac350-160">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="ac350-160">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+          description: <span data-ttu-id="46c85-167">リソースが含まれているリソース グループの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-167">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c85-168">この値は、Azure リソース マネージャー API またはポータルから取得できます。</span><span class="sxs-lookup"><span data-stu-id="46c85-168">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
         - id: serverName
           type:
             - string
-          description: <span data-ttu-id="ac350-161">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="ac350-161">The name of the server.</span></span>
+          description: <span data-ttu-id="46c85-169">サーバーの名前。</span><span class="sxs-lookup"><span data-stu-id="46c85-169">The name of the server.</span></span>
         - id: parameters
           type:
             - '@azure/arm-mysql.ServerUpdateParameters'
-          description: <span data-ttu-id="ac350-162">サーバーの更新の必須パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="ac350-162">The required parameters for updating a server.</span></span>
+          description: <span data-ttu-id="46c85-170">サーバーの更新の必須パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="46c85-170">The required parameters for updating a server.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase

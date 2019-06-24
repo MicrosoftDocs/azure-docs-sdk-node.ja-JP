@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.targetFace'
@@ -14,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="777b3-101">省略可能なパラメーター。</span><span class="sxs-lookup"><span data-stu-id="777b3-101">Optional Parameters.</span></span>
+    summary: <span data-ttu-id="17d55-101">省略可能なパラメーター。</span><span class="sxs-lookup"><span data-stu-id="17d55-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/cognitiveservices-face'
@@ -25,7 +26,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="777b3-102">要求を中止するために使用される信号。</span><span class="sxs-lookup"><span data-stu-id="777b3-102">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="17d55-102">要求を中止するために使用される信号。</span><span class="sxs-lookup"><span data-stu-id="17d55-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -40,13 +41,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="777b3-103">{オブジェクト}[customHeaders]ユーザーは、要求が送信される前に適用されるカスタム要求ヘッダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="777b3-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="17d55-103">{オブジェクト}[customHeaders]ユーザーは、要求が送信される前に適用されるカスタム要求ヘッダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="17d55-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="17d55-104">検出モデルの名前です。</span><span class="sxs-lookup"><span data-stu-id="17d55-104">Name of detection model.</span></span> <span data-ttu-id="17d55-105">検出モデルを使用して、送信された画像の顔を検出できます。</span><span class="sxs-lookup"><span data-stu-id="17d55-105">Detection model is used to detect faces in the submitted image.</span></span> <span data-ttu-id="17d55-106">実行するときに検出モデルの名前を指定することができますを検出または (Large) FaceList - 顔の追加または (Large) つの PersonGroup - 追加の顔です。</span><span class="sxs-lookup"><span data-stu-id="17d55-106">A detection model name can be provided when performing Face - Detect or (Large)FaceList - Add Face or (Large)PersonGroup - Add Face.</span></span> <span data-ttu-id="17d55-107">既定値では、別のモデルが必要に応じて、明示的に指定してください、''detection_01'' です。</span><span class="sxs-lookup"><span data-stu-id="17d55-107">The default value is ''detection_01'', if another model is needed, please explicitly specify it.</span></span> <span data-ttu-id="17d55-108">使用可能な値が含まれます: ''detection_01''、''detection_02''。</span><span class="sxs-lookup"><span data-stu-id="17d55-108">Possible values include: ''detection_01'', ''detection_02''.</span></span> <span data-ttu-id="17d55-109">既定値: ''detection_01''。</span><span class="sxs-lookup"><span data-stu-id="17d55-109">Default value: ''detection_01''.</span></span>'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -55,7 +71,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="777b3-104">ダウンロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="777b3-104">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="17d55-110">ダウンロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="17d55-110">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -70,7 +86,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="777b3-105">アップロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="777b3-105">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="17d55-111">アップロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="17d55-111">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -85,7 +101,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="777b3-106">指定の形式でユーザーに追加するターゲットの正面の顔矩形"targetFace 左、上、幅、高さを ="。</span><span class="sxs-lookup"><span data-stu-id="777b3-106">A face rectangle to specify the target face to be added to a person in the format of "targetFace=left,top,width,height".</span></span> <span data-ttu-id="777b3-107">例:</span><span class="sxs-lookup"><span data-stu-id="777b3-107">E.g.</span></span> <span data-ttu-id="777b3-108">"targetFace = 10, 10、100, 100"。</span><span class="sxs-lookup"><span data-stu-id="777b3-108">"targetFace=10,10,100,100".</span></span> <span data-ttu-id="777b3-109">イメージには、複数の顔がある場合、targetFace は指定を追加するに直面する必要があります。</span><span class="sxs-lookup"><span data-stu-id="777b3-109">If there is more than one face in the image, targetFace is required to specify which face to add.</span></span> <span data-ttu-id="777b3-110">イメージ全体で検出された 1 つだけの顔が targetFace は。</span><span class="sxs-lookup"><span data-stu-id="777b3-110">No targetFace means there is only one face detected in the entire image.</span></span>'
+    summary: '<span data-ttu-id="17d55-112">指定の形式でユーザーに追加するターゲットの正面の顔矩形"targetFace 左、上、幅、高さを ="。</span><span class="sxs-lookup"><span data-stu-id="17d55-112">A face rectangle to specify the target face to be added to a person in the format of "targetFace=left,top,width,height".</span></span> <span data-ttu-id="17d55-113">例:</span><span class="sxs-lookup"><span data-stu-id="17d55-113">E.g.</span></span> <span data-ttu-id="17d55-114">"targetFace = 10, 10、100, 100"。</span><span class="sxs-lookup"><span data-stu-id="17d55-114">"targetFace=10,10,100,100".</span></span> <span data-ttu-id="17d55-115">イメージには、複数の顔がある場合、targetFace は指定を追加するに直面する必要があります。</span><span class="sxs-lookup"><span data-stu-id="17d55-115">If there is more than one face in the image, targetFace is required to specify which face to add.</span></span> <span data-ttu-id="17d55-116">イメージ全体で検出された 1 つだけの顔が targetFace は。</span><span class="sxs-lookup"><span data-stu-id="17d55-116">No targetFace means there is only one face detected in the entire image.</span></span>'
     optional: true
     syntax:
       content: 'targetFace?: number[]'
@@ -100,7 +116,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="777b3-111">要求が自動的に終了されるまでにかかる時間をミリ秒単位の数。</span><span class="sxs-lookup"><span data-stu-id="777b3-111">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="17d55-117">要求が自動的に終了されるまでにかかる時間をミリ秒単位の数。</span><span class="sxs-lookup"><span data-stu-id="17d55-117">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -115,7 +131,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="777b3-112">目的を問わず面について、ユーザー指定のデータ。</span><span class="sxs-lookup"><span data-stu-id="777b3-112">User-specified data about the face for any purpose.</span></span> <span data-ttu-id="777b3-113">最大長は、1 KB です。</span><span class="sxs-lookup"><span data-stu-id="777b3-113">The maximum length is 1KB.</span></span>
+    summary: <span data-ttu-id="17d55-118">目的を問わず面について、ユーザー指定のデータ。</span><span class="sxs-lookup"><span data-stu-id="17d55-118">User-specified data about the face for any purpose.</span></span> <span data-ttu-id="17d55-119">最大長は、1 KB です。</span><span class="sxs-lookup"><span data-stu-id="17d55-119">The maximum length is 1KB.</span></span>
     optional: true
     syntax:
       content: 'userData?: undefined | string'
@@ -123,3 +139,10 @@ items:
         type:
           - undefined | string
     package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'
