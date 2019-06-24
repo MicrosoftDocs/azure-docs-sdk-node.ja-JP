@@ -81,7 +81,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 代表的な顔を識別するためのユーザーに追加します。 入力の顔は targetFace 四角形を使用してイメージとして指定されます。
+    summary: |-
+      顔を人に顔識別のほか、確認用の大規模なユーザー グループに追加します。 複数人の顔を含むイメージを処理するのには、入力の顔を targetFace 四角形を使用してイメージとして指定できます。 追加の顔を表す persistedFaceId を返します。 イメージは格納されません。 までサーバーには、抽出された顔機能のみ[LargePersonGroup PersonFace - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3)、 [LargePersonGroup 人削除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)または[LargePersonGroup - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)が呼び出されます。
+      <br /> 注 persistedFaceId はによって生成された faceId を異なる[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)します。
+      * 高い顔のイメージ品質は、認識精度を意味します。 高品質な顔を検討してください: 正面、clear、および顔のサイズは 200 (目の間に 100 ピクセル単位) が 200 ピクセル x、または大きくします。
+      * ユーザーの各エントリには、最大 248 顔を保持できます。
+      * JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。 許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。
+      * "targetFace"四角形は、1 つの面を含める必要があります。 0 個または複数の面は、エラーと見なされます。 指定された"targetFace"四角形が返されない場合[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)、検出、顔を正常に追加して保証はありません。
+      * 検出可能な顔のサイズ (36 4096 x 4096 ピクセル x 36) から大きな頭部姿勢、または大規模な閉塞にエラーが発生します。
+      * 顔が同一人物との間の追加/削除は順番に処理されます。 別の担当者との間の顔の追加/削除は、並列で処理されます。
+      * 検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。
+      1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。
+      * 異なる 'detectionModel' の値を指定することができます。 使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | モデル | 使用をお勧めします-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | 既定の検出モデル [LargePersonGroup ユーザーの追加
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42) します。 ほぼ正面の顔の検出をお勧めします。 角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。 | |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。 |
     syntax:
       content: 'function addFaceFromStream(largePersonGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
@@ -178,7 +193,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 代表的な顔を識別するためのユーザーに追加します。 入力の顔は targetFace 四角形を使用してイメージとして指定されます。
+    summary: |-
+      顔を人に顔識別のほか、確認用の大規模なユーザー グループに追加します。 複数人の顔を含むイメージを処理するのには、入力の顔を targetFace 四角形を使用してイメージとして指定できます。 追加の顔を表す persistedFaceId を返します。 イメージは格納されません。 までサーバーには、抽出された顔機能のみ[LargePersonGroup PersonFace - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3)、 [LargePersonGroup 人削除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)または[LargePersonGroup - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)が呼び出されます。
+      <br /> 注 persistedFaceId はによって生成された faceId を異なる[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)します。
+      * 高い顔のイメージ品質は、認識精度を意味します。 高品質な顔を検討してください: 正面、clear、および顔のサイズは 200 (目の間に 100 ピクセル単位) が 200 ピクセル x、または大きくします。
+      * ユーザーの各エントリには、最大 248 顔を保持できます。
+      * JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。 許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。
+      * "targetFace"四角形は、1 つの面を含める必要があります。 0 個または複数の面は、エラーと見なされます。 指定された"targetFace"四角形が返されない場合[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)、検出、顔を正常に追加して保証はありません。
+      * 検出可能な顔のサイズ (36 4096 x 4096 ピクセル x 36) から大きな頭部姿勢、または大規模な閉塞にエラーが発生します。
+      * 顔が同一人物との間の追加/削除は順番に処理されます。 別の担当者との間の顔の追加/削除は、並列で処理されます。
+      * 検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。
+      1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。
+      * 異なる 'detectionModel' の値を指定することができます。 使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | モデル | 使用をお勧めします-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | 既定の検出モデル [LargePersonGroup ユーザーの追加
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42) します。 ほぼ正面の顔の検出をお勧めします。 角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。 | |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。 |
     syntax:
       content: 'function addFaceFromUrl(largePersonGroupId: string, personId: string, url: string, options?: Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
@@ -313,7 +343,10 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 個人の顔を削除します。 永続化された顔の相対的な機能も削除されます。
+    summary: |-
+      大きなユーザー グループ内のユーザーから指定した largePersonGroupId、personId persistedFaceId して顔を削除します。
+      <br /> 顔が同一人物との間の追加/削除は順番に処理されます。
+      別の担当者との間の顔の追加/削除は、並列で処理されます。
     syntax:
       content: 'function deleteFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -410,7 +443,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 大規模人物グループから既存の人物を削除します。 個人のデータが格納されているすべてと、顔の特徴の人の記事では削除されます。
+    summary: 大規模人物グループから既存の人物を削除します。 PersistedFaceId、userData、person エントリでユーザー名と顔機能はすべて削除されます。
     syntax:
       content: 'function deleteMethod(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -495,7 +528,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 登録済みの永続化された顔、名 userData など、個人の情報を取得します。
+    summary: ユーザーの名前と userData、および登録されている人の顔機能を表す永続化された faceIds を取得します。
     syntax:
       content: 'function get(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:

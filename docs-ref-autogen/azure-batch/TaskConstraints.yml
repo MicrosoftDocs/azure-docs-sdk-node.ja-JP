@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - azure-batch.TaskConstraints.maxTaskRetryCount
+      - azure-batch.TaskConstraints.maxWallClockTime
+      - azure-batch.TaskConstraints.retentionTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: この値が 0 以外の終了コードにより、タスクの実行可能ファイルの再試行の回数を具体的には制御することに注意してください。 Batch サービスでは、タスクを 1 回、試すし、この上限に達するまで再試行できます。 たとえば、最大再試行回数が最大 3、Batch がタスクが場合 4 が (初回試行 1 回と再試行 3 回) タイムアウトします。 最大再試行回数が 0 の場合は、Batch サービスは最初の試行後に、タスクを再試行しません。 最大再試行回数が-1 の場合、Batch サービスは制限がないタスクを再試行します。
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: これが指定されていない場合は、制限はありません時間にどのくらいの時間、タスクが実行します。
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 既定値は 7 日間、つまりタスク ディレクトリは 7 日間保持するコンピューティング ノードが削除されるか、ジョブを削除しない限り、します。
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

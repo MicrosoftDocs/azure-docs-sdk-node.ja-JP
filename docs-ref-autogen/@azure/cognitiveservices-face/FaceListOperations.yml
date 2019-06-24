@@ -72,8 +72,21 @@ items:
     langs:
       - typeScript
     summary: |-
-      顔を顔リストに追加します。 入力の顔は targetFace 四角形を使用してイメージとして指定されます。
-      PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。
+      指定された顔リストに顔を追加します (最大 1,000 個)。
+      <br /> 複数人の顔を含むイメージを処理するのには、入力の顔を targetFace 四角形を使用してイメージとして指定できます。 追加の顔を表す persistedFaceId を返します。 イメージは格納されません。 までサーバーには、抽出された顔機能のみ[FaceList - 削除 Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251)または[FaceList - 削除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f)が呼び出されます。
+      <br /> 注 persistedFaceId はによって生成された faceId を異なる[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)します。
+      * 高い顔のイメージ品質は、優れた検出および認識の精度を意味します。 高品質な顔を検討してください: 正面、clear、および顔のサイズは 200 (目の間に 100 ピクセル単位) が 200 ピクセル x、または大きくします。
+      * JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。 許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。
+      * "targetFace"四角形は、1 つの面を含める必要があります。 0 個または複数の面は、エラーと見なされます。 指定された"targetFace"四角形が返されない場合[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)、検出、顔を正常に追加して保証はありません。
+      * 検出可能な顔のサイズ (36 4096 x 4096 ピクセル x 36) から大きな頭部姿勢、または大規模な閉塞にエラーが発生します。
+      * 同じ顔リストとの間の顔の追加/削除は順番に処理され、一覧は、並列でさまざまな面との間。
+      * 検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。
+      1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。
+      * 異なる 'detectionModel' の値を指定することができます。 使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | モデル | 使用をお勧めします-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | 既定の検出モデル [FaceList - 追加
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) します。 ほぼ正面の顔の検出をお勧めします。 角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。 | |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。 |
     syntax:
       content: 'function addFaceFromStream(faceListId: string, image: msRest.HttpRequestBody, options?: Models.FaceListAddFaceFromStreamOptionalParams)'
       parameters:
@@ -159,8 +172,21 @@ items:
     langs:
       - typeScript
     summary: |-
-      顔を顔リストに追加します。 入力の顔は targetFace 四角形を使用してイメージとして指定されます。
-      PersistedFaceId は期限切れし、追加の顔を表す persistedFaceId を返されます。
+      指定された顔リストに顔を追加します (最大 1,000 個)。
+      <br /> 複数人の顔を含むイメージを処理するのには、入力の顔を targetFace 四角形を使用してイメージとして指定できます。 追加の顔を表す persistedFaceId を返します。 イメージは格納されません。 までサーバーには、抽出された顔機能のみ[FaceList - 削除 Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251)または[FaceList - 削除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f)が呼び出されます。
+      <br /> 注 persistedFaceId はによって生成された faceId を異なる[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)します。
+      * 高い顔のイメージ品質は、優れた検出および認識の精度を意味します。 高品質な顔を検討してください: 正面、clear、および顔のサイズは 200 (目の間に 100 ピクセル単位) が 200 ピクセル x、または大きくします。
+      * JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。 許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。
+      * "targetFace"四角形は、1 つの面を含める必要があります。 0 個または複数の面は、エラーと見なされます。 指定された"targetFace"四角形が返されない場合[直面 - 検出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)、検出、顔を正常に追加して保証はありません。
+      * 検出可能な顔のサイズ (36 4096 x 4096 ピクセル x 36) から大きな頭部姿勢、または大規模な閉塞にエラーが発生します。
+      * 同じ顔リストとの間の顔の追加/削除は順番に処理され、一覧は、並列でさまざまな面との間。
+      * 検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。
+      1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。
+      * 異なる 'detectionModel' の値を指定することができます。 使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | モデル | 使用をお勧めします-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | 既定の検出モデル [FaceList - 追加
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) します。 ほぼ正面の顔の検出をお勧めします。 角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。 | |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。 |
     syntax:
       content: 'function addFaceFromUrl(faceListId: string, url: string, options?: Models.FaceListAddFaceFromUrlOptionalParams)'
       parameters:
@@ -244,10 +270,13 @@ items:
     summary: |-
       ユーザー指定の faceListId、名、省略可能な userData および recognitionModel で、空の顔リストを作成します。 最大 64 の面は、リストは、1 つのサブスクリプションで許可されます。
       <br /> 顔リスト面、最大 1,000 個の顔の一覧し、で使用される[Face - 類似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)します。
-      <br /> 作成後は、ユーザーが使用する必要があります[FaceList - 追加の顔](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250)面をインポートします。 顔がまでサーバーに格納されている[FaceList - 削除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f)が呼び出されます。
+      <br /> 作成後は、ユーザーが使用する必要があります[FaceList - 追加の顔](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250)面をインポートします。 イメージは格納されません。 抽出された顔の特徴のみがまでサーバーに格納されている[FaceList - 削除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f)が呼び出されます。
       <br /> 似ていますが、有名人に似た顔のような顔をフィルター処理、検索のようなシナリオの使用を見つけたり、ライトと顔識別方法。 ユーザーを識別するために、実際に使用する場合は、使用しますが、[つの PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
       [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)と[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。
-      <br /> ご検討ください[LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc)顔の数が大きい場合。 最大 1,000,000 顔をサポートできます。 この顔リストに関連付ける 'recognitionModel' を指定する必要があります。 'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。 既存の顔リストに追加される新しい面では、コレクションに既に関連付けられている認識モデルを使用します。 認識モデルの別のバージョンによって抽出された特徴には、顔の一覧で既存の顔の特徴を更新できません。
+      <br /> ご検討ください[LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc)顔の数が大きい場合。 最大 1,000,000 顔をサポートできます。
+      <br />この顔リストに関連付ける 'recognitionModel' を指定する必要があります。 'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。 既存の顔リストに追加される新しい面では、コレクションに既に関連付けられている認識モデルを使用します。 認識モデルの別のバージョンによって抽出された特徴には、顔の一覧で既存の顔の特徴を更新できません。
+      * 'recognition_01':既定の認識モデル[FaceList-作成](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b)です。 2019 年 3 月の前に作成されたこれらすべての顔リストは、この認識モデルで結合されます。
+      * 'recognition_02':2019 年 3 月にリリースされた認識モデル。 'recognition_01' と比較対象の全体的な精度が向上するためには、'recognition_02' をお勧めします。
     syntax:
       content: 'function create(faceListId: string, options?: Models.FaceListCreateOptionalParams)'
       parameters:
@@ -294,8 +323,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      (、PersistedFaceId と、faceListId によって指定される)、顔の一覧から既存の顔を削除します。
-      表面に関連する永続化されたイメージも削除されます。
+      指定した faceListId して persistedFaceId 顔リストから顔を削除します。
+      <br /> 同じ顔リストとの間の顔の追加/削除は順番に処理され、一覧は、並列でさまざまな面との間。
     syntax:
       content: 'function deleteFace(faceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -380,7 +409,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: FaceListId に従って既存の顔リストを削除します。 顔顔リスト内のイメージも削除されますが永続化されます。
+    summary: 指定された顔リストを削除します。
     syntax:
       content: 'function deleteMethod(faceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:

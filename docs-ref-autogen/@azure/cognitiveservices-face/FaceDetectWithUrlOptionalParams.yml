@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams.recognitionModel'
@@ -50,6 +51,21 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '検出モデルの名前です。 検出モデルを使用して、送信された画像の顔を検出できます。 実行するときに検出モデルの名前を指定することができますを検出または (Large) FaceList - 顔の追加または (Large) つの PersonGroup - 追加の顔です。 既定値では、別のモデルが必要に応じて、明示的に指定してください、''detection_01'' です。 使用可能な値が含まれます: ''detection_01''、''detection_02''。 既定値: ''detection_01''。'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -174,6 +190,12 @@ items:
           - undefined | number
     package: '@azure/cognitiveservices-face'
 references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'
   - uid: '@azure/cognitiveservices-face.RecognitionModel'
     name: RecognitionModel
     spec.typeScript:

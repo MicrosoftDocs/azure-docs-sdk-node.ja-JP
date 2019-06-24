@@ -39,16 +39,16 @@ items:
       - typeScript
     summary: |-
       指定した personGroupId、名、ユーザー指定の userData recognitionModel と新しいユーザー グループを作成します。
-      <br /> ユーザー グループは、顔のイメージと顔認識機能を含む、ユーザーがアップロードされたデータのコンテナーです。
+      <br /> ユーザー グループは、顔認識機能を含む、ユーザーがアップロードされたデータのコンテナーです。
       <br /> 作成後は、次のように使用します。[つの PersonGroup 人作成](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c)担当者をグループに追加し、呼び出す[つの PersonGroup - トレーニング](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249)をこのグループを準備する[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。
-      <br /> 個人の顔、画像、および userData は [つの PersonGroup 人までのサーバーに格納されます。
-      - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) または[つの PersonGroup - 削除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)が呼び出されます。
-      <br />
+      <br /> イメージは格納されません。 のみ、person 顔の特徴を抽出し、userData までサーバーに格納されます[つの PersonGroup 人削除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d)または[つの PersonGroup - 削除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)が呼び出されます。
+      <br/>このユーザー グループに関連付ける 'recognitionModel' を指定する必要があります。 'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。 既存のユーザー グループに追加される新しい面では、コレクションに既に関連付けられている認識モデルを使用します。 ユーザー グループの既存の顔の特徴は、認識モデルの別のバージョンによって抽出された特徴に更新できません。
+      * 'recognition_01':既定の認識モデル[つの PersonGroup - 作成](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244)です。 2019 年 3 月の前に作成されたこれらすべてのユーザー グループは、この認識モデルで結合されます。
+      * 'recognition_02':2019 年 3 月にリリースされた認識モデル。 'recognition_01' と比較対象の全体的な精度が向上するためには、'recognition_02' をお勧めします。
+      ユーザー グループのクォータ:
       * 無料レベルのサブスクリプション クォータ:1,000 人のグループ。 それぞれには、最大 1,000 人の人物が保持されます。
       * S0 レベルのサブスクリプション クォータ:1,000,000 人物グループ。 それぞれには、最大 10,000 個の担当者は保持されます。
       * 大きなスケール顔識別の問題を処理するために使用してください[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)します。
-      <br />
-      このユーザー グループに関連付ける 'recognitionModel' を指定する必要があります。 'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。 既存のユーザー グループに追加される新しい面では、コレクションに既に関連付けられている認識モデルを使用します。 ユーザー グループの既存の顔の特徴は、認識モデルの別のバージョンによって抽出された特徴に更新できません。
     syntax:
       content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
       parameters:

@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    children:
+      - azure-batch.TaskContainerSettings.containerRunOptions
+      - azure-batch.TaskContainerSettings.imageName
+      - azure-batch.TaskContainerSettings.registry
+      - azure-batch.TaskContainerSettings.workingDirectory
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.containerRunOptions
+    name: containerRunOptions
+    fullName: containerRunOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 追加のオプションは、Batch サービスによって制御されているだけでなく、"docker create"コマンドに引数として指定されます。
+    optional: true
+    syntax:
+      content: 'containerRunOptions?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.imageName
+    name: imageName
+    fullName: imageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'これは、"docker pull"に指定するように、完全なイメージ参照です。 イメージの名前、タグの一部としてタグが指定されないかどうかは": 最新"は、既定値として使用します。'
+    syntax:
+      content: 'imageName: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.registry
+    name: registry
+    fullName: registry
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プールの作成時に既に指定した場合、この設定を省略できます。
+    optional: true
+    syntax:
+      content: 'registry?: ContainerRegistry'
+      return:
+        type:
+          - azure-batch.ContainerRegistry
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.workingDirectory
+    name: workingDirectory
+    fullName: workingDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '既定では ''taskWorkingDirectory'' です。 使用可能な値が含まれます: ''taskWorkingDirectory''、''containerImageDefault'''
+    optional: true
+    syntax:
+      content: 'workingDirectory?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.ContainerRegistry
+    name: ContainerRegistry
+    spec.typeScript:
+      - name: ContainerRegistry
+        fullName: ContainerRegistry
+        uid: azure-batch.ContainerRegistry

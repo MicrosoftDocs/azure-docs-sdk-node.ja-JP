@@ -1,0 +1,166 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobReleaseTaskExecutionInformation
+    name: JobReleaseTaskExecutionInformation
+    fullName: JobReleaseTaskExecutionInformation
+    children:
+      - azure-batch.JobReleaseTaskExecutionInformation.containerInfo
+      - azure-batch.JobReleaseTaskExecutionInformation.endTime
+      - azure-batch.JobReleaseTaskExecutionInformation.exitCode
+      - azure-batch.JobReleaseTaskExecutionInformation.failureInfo
+      - azure-batch.JobReleaseTaskExecutionInformation.result
+      - azure-batch.JobReleaseTaskExecutionInformation.startTime
+      - azure-batch.JobReleaseTaskExecutionInformation.state
+      - azure-batch.JobReleaseTaskExecutionInformation.taskRootDirectory
+      - azure-batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTaskExecutionInformation.containerInfo
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このプロパティは、コンテナーのコンテキストでタスクを実行する場合にのみに設定されます。
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - azure-batch.TaskContainerExecutionInformation
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTaskExecutionInformation.endTime
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このプロパティは、タスクが完了状態の場合にのみに設定されます。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTaskExecutionInformation.exitCode
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このパラメーターには、タスクが完了した状態で場合にのみが返されます。 プロセスの終了コードでは、そのプロセスのアプリケーション開発者によって実装される特定の規則が反映されます。 意思決定、コード内に終了コード値を使用する場合は、アプリケーション プロセスによって使用される終了コードの規則がわかっていることを確認します。 終了コードがプロセスが強制的に終了したなど、コンピューティング ノードのオペレーティング システムに生成される可能性がありますに注意してください。
+    optional: true
+    syntax:
+      content: 'exitCode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTaskExecutionInformation.failureInfo
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このプロパティでは、タスクが完了した状態で場合にのみが設定され、エラーが発生しました。
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - azure-batch.TaskFailureInformation
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTaskExecutionInformation.result
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '場合は、値は ''failed''、エラーの詳細は failureInfo プロパティで検出できます。 使用可能な値が含まれます: ''成功''、''失敗'''
+    optional: true
+    syntax:
+      content: 'result?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTaskExecutionInformation.startTime
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: タスクを再起動または再試行されていますが、これは、タスクが実行を開始した最新の時間です。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTaskExecutionInformation.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '使用可能な値が含まれます: ''running''、''完了'''
+    syntax:
+      content: 'state: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTaskExecutionInformation.taskRootDirectory
+    name: taskRootDirectory
+    fullName: taskRootDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'taskRootDirectory?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl
+    name: taskRootDirectoryUrl
+    fullName: taskRootDirectoryUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'taskRootDirectoryUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerExecutionInformation
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: azure-batch.TaskContainerExecutionInformation
+  - uid: azure-batch.TaskFailureInformation
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: azure-batch.TaskFailureInformation

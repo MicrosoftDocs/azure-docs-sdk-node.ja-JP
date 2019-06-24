@@ -18,10 +18,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      これは、VirtualMachineConfiguration プールで実行されるジョブにのみサポートします。
-      これは、フォーム/subscriptions/{subscription}/resourcegroups/{グループ}/providers/{provider}/virtualNetworks/{network}/subnets/{サブネット} の。
-      仮想ネットワークは、同じリージョンと Azure Batch アカウントとサブスクリプションでなければなりません。
-      指定したサブネットに十分な空き IP アドレスをジョブからタスクを実行しているノードの数が必要です。 詳細については、https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configurationを参照してください。
+      仮想ネットワークは、同じリージョンと、Azure Batch アカウントとサブスクリプションでなければなりません。 指定したサブネットに十分な空き IP アドレスをジョブからタスクを実行するコンピューティング ノードの数が必要です。 プール内のコンピューティング ノードの数まで指定できます。 "MicrosoftAzureBatch"サービス プリンシパルは、Azure Batch サービスは、ノードにタスクをスケジュールできるように、指定した VNet に対する、「クラシック仮想マシン共同作成者」ロール ベース アクセス制御 (RBAC) ロールが必要です。 これは、指定した VNet は、関連付けられているネットワーク セキュリティ グループ (NSG) があるチェックすることで確認できます。 指定したサブネット内のノードへの通信が NSG によって拒否された場合、Batch サービスは、コンピューティング ノードの状態に設定使用できなくなります。 これは、フォーム/subscriptions/{subscription}/resourcegroups/{グループ}/providers/{provider}/virtualNetworks/{network}/subnets/{サブネット} の。
+      指定した VNet に、関連付けられているネットワーク セキュリティ グループ (NSG) がある場合は、いくつかの予約済みのシステム ポートは、Azure Batch サービスからの受信通信を有効にする必要があります。 仮想マシンの構成で作成されたプール、ポート 29876 と 29877 を有効にするだけでなくポート 22 を Windows の Linux とポート 3389 です。 ポート 443 は、Azure Storage への通信の発信接続用に開かれるにも必要です。 詳細についてを参照してください。 https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
     syntax:
       content: 'subnetId: string'
       return:

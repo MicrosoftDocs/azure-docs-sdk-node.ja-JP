@@ -3,63 +3,13 @@ items:
   - uid: '@azure/arm-containerregistry.Status'
     name: Status
     fullName: Status
-    children:
-      - '@azure/arm-containerregistry.Status.displayStatus'
-      - '@azure/arm-containerregistry.Status.message'
-      - '@azure/arm-containerregistry.Status.timestamp'
-    langs:
-      - typeScript
-    type: interface
-    summary: 操作が呼び出された時点で、Azure リソースのステータス。
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Status.displayStatus'
-    name: displayStatus
-    fullName: displayStatus
     children: []
     langs:
       - typeScript
-    type: property
+    type: type alias
     summary: |-
-      状態の短いラベルです。
-      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
-    optional: true
+      状態の値を定義します。
+      使用可能な値が含まれます: 'enabled'、'disabled'
     syntax:
-      content: 'displayStatus?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Status.message'
-    name: message
-    fullName: message
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      警告やエラー メッセージなどの状態、詳細メッセージ。
-      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
-    optional: true
-    syntax:
-      content: 'message?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Status.timestamp'
-    name: timestamp
-    fullName: timestamp
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      現在の値に、状態が変更されたときのタイムスタンプ。
-      **注: このプロパティはシリアル化されません。サーバーによってのみ設定できます。**
-    optional: true
-    syntax:
-      content: 'timestamp?: Date'
-      return:
-        type:
-          - Date
+      content: type Status = "enabled" | "disabled"
     package: '@azure/arm-containerregistry'

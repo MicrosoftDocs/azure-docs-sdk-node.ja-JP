@@ -64,7 +64,28 @@ items:
     type: method
     langs:
       - typeScript
-    summary: イメージと返します顔などの場所には、必要に応じて faceIds、ランドマーク、および属性を使用して、人間の顔を検出します。
+    summary: |-
+      画像内の人間の顔を検出して、顔を示す四角形を返します。必要に応じて、FaceId、ランドマーク、および属性も返します。<br />
+      * イメージは格納されません。 抽出された顔機能のみをサーバーに格納されます。 FaceId face 機能の識別子し、で使用される[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)、[直面 - 確認](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)、および [顔
+      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) を検索します。
+      ストアドの顔の機能では、有効期限が切れるし、検出の元の呼び出し後 24 時間に削除されます。
+      * 省略可能なパラメーターには、faceId、ランドマーク、および属性が含まれます。 属性には、年齢、性別、headPose、気に入った機能、facialHair、眼鏡、emotion、髪、構成、オクルー ジョン、[アクセサリ]、ぼかし、露出とノイズが含まれます。 特定の属性に対して返される結果の一部を正確なできない可能性があります。
+      * JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。 許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。
+      * イメージの最大 100 の顔を返すことができます。 小から大規模な顔四角形のサイズによっては、顔が順位付け。
+      * クエリを実行するときに最適な結果を得る[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)、[直面 - 確認](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)、および [顔
+      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' は true) を検索は顔を使用してください: 正面、クリア、および最小サイズ 200 x 200 ピクセル (目の間に 100 ピクセル単位)。
+      * 検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。
+      1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。
+      * 異なる 'detectionModel' の値を指定することができます。 使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | モデル | 使用をお勧めします-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | [フェイス - の既定の検出モデル
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) します。 ほぼ正面の顔の検出をお勧めします。 角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。 | |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。 |
+      * 異なる 'recognitionModel' 値が提供されます。 フォロー アップ操作などの確認、識別する場合と同様の検索が必要な 'recognitionModel' パラメーターを使用して認識モデルを指定してください。 'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。 指定されると、検出された faceIds は指定された認識モデルに関連付けられてなります。 詳細についてを参照してください[認識モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | モデル | 使用をお勧めします-case(s) |
+      | ---------- | -------- |
+      | 'recognition_01': | [フェイス - の既定の認識モデル
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) します。 これらすべての faceIds 2019 年 3 月より前に作成は、この認識モデルで結合されます。 | |'recognition_02': |2019 年 3 月にリリースされた認識モデル。 'recognition_01' と比較対象の全体的な精度が向上するためには、'recognition_02' をお勧めします。 |
     syntax:
       content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
       parameters:
@@ -139,16 +160,26 @@ items:
       - typeScript
     summary: |-
       画像内の人間の顔を検出して、顔を示す四角形を返します。必要に応じて、FaceId、ランドマーク、および属性も返します。<br />
-      * FaceId、ランドマーク、および属性を含む省略可能なパラメーター。 属性には、年齢、性別、headPose、気に入った機能、facialHair、眼鏡、emotion、髪、構成、オクルー ジョン、[アクセサリ]、ぼかし、露出とノイズが含まれます。
-      * 実際の画像ではなく、抽出された顔機能は、サーバーに格納されます。 FaceId face 機能の識別子し、で使用される[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)、[直面 - 確認](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)、および [顔
-      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) を検索します。 検出の呼び出しの後 24 時間に期限が切れます。
-      * 高い顔のイメージ品質は、優れた検出および認識の精度を意味します。 高品質な顔を検討してください: 正面、clear、および顔のサイズは 200 (目の間に 100 ピクセル単位) が 200 ピクセル x、または大きくします。
+      * イメージは格納されません。 抽出された顔機能のみをサーバーに格納されます。 FaceId face 機能の識別子し、で使用される[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)、[直面 - 確認](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)、および [顔
+      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) を検索します。
+      ストアドの顔の機能では、有効期限が切れるし、検出の元の呼び出し後 24 時間に削除されます。
+      * 省略可能なパラメーターには、faceId、ランドマーク、および属性が含まれます。 属性には、年齢、性別、headPose、気に入った機能、facialHair、眼鏡、emotion、髪、構成、オクルー ジョン、[アクセサリ]、ぼかし、露出とノイズが含まれます。 特定の属性に対して返される結果の一部を正確なできない可能性があります。
       * JPEG、PNG、GIF (最初のフレーム) および BMP 形式がサポートされています。 許可されているイメージ ファイルのサイズは、1 KB から 6 MB です。
-      * そのサイズは 36 x 36 に 4096 x 4096 ピクセル顔は検出可能です。 場合、ください入力画像を拡大しようと非常に小さくてもクリアの顔を検出する必要があります。
-      * イメージの最大 64 の面を返すことができます。 小から大規模な顔四角形のサイズによっては、顔が順位付け。
-      * Face detector の正面と近い正面の顔を好みます。 顔など非常に大規模な検出された顔を角度 (頭部姿勢) またはオクルー ジョンされている、または正しくないイメージの向きならない場合があります。
-      * 属性 (年齢、性別、headPose、気に入った機能、facialHair、眼鏡、emotion、髪、構成、オクルー ジョン、[アクセサリ]、ぼかし、露出とノイズ) を完全に正確なことができない可能性があります。 HeadPose のピッチの値は、予約済みのフィールドでは常に 0 を返します。
+      * イメージの最大 100 の顔を返すことができます。 小から大規模な顔四角形のサイズによっては、顔が順位付け。
+      * クエリを実行するときに最適な結果を得る[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)、[直面 - 確認](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)、および [顔
+      - Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' は true) を検索は顔を使用してください: 正面、クリア、および最小サイズ 200 x 200 ピクセル (目の間に 100 ピクセル単位)。
+      * 検出可能な顔の最小サイズは、1920 x 1080 ピクセルを超えるイメージで 36 x 36 ピクセルです。
+      1920 x 1080 ピクセルよりも高いイメージには、比例して顔の最小サイズが必要です。
+      * 異なる 'detectionModel' の値を指定することができます。 使用して、さまざまな検出モデルの比較を参照してください[検出モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | モデル | 使用をお勧めします-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | [フェイス - の既定の検出モデル
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) します。 ほぼ正面の顔の検出をお勧めします。 角度が非常に大きい (頭部姿勢) 面、閉塞面または正しくないイメージの向きとシナリオは、このような場合に顔が検出されない可能性があります。 | |'detection_02': |2019 でリリースされた検出モデルは、特に小規模、側、画像がぼやける顔の正確さの向上の可能性があります。 |
       * 異なる 'recognitionModel' 値が提供されます。 フォロー アップ操作などの確認、識別する場合と同様の検索が必要な 'recognitionModel' パラメーターを使用して認識モデルを指定してください。 'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。 指定されると、検出された faceIds は指定された認識モデルに関連付けられてなります。 詳細についてを参照してください[認識モデルを指定する方法](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | モデル | 使用をお勧めします-case(s) |
+      | ---------- | -------- |
+      | 'recognition_01': | [フェイス - の既定の認識モデル
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236) します。 これらすべての faceIds 2019 年 3 月より前に作成は、この認識モデルで結合されます。 | |'recognition_02': |2019 年 3 月にリリースされた認識モデル。 'recognition_01' と比較対象の全体的な精度が向上するためには、'recognition_02' をお勧めします。 |
     syntax:
       content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
       parameters:

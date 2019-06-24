@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+      - azure-batch.NetworkConfiguration.endpointConfiguration
+      - azure-batch.NetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: プールのネットワーク構成。
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '使用可能な値が含まれます: ''none''、''ジョブ'''
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: プール エンドポイントの構成は、virtualMachineConfiguration プロパティを使用して、プールでのみサポートされます。
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.PoolEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '仮想ネットワークは、同じリージョンと、Azure Batch アカウントとサブスクリプションでなければなりません。 指定したサブネットには、プール内のコンピューティング ノードの数を格納するための十分な空き IP アドレスが必要です。 サブネットには、十分な空き IP アドレスが割り当てられていない、プールは、ノードを割り当てます部分的にし、サイズ変更エラーが発生します。 "MicrosoftAzureBatch"サービス プリンシパルでは、指定した VNet、「クラシック仮想マシン共同作成者」ロール ベース アクセス制御 (RBAC) ロールが必要です。 指定したサブネットには、ノードのタスクのスケジュールを設定できる Azure Batch サービスからの通信を許可する必要があります。 これは、指定した VNet は、関連付けられているネットワーク セキュリティ グループ (NSG) があるチェックすることで確認できます。 指定したサブネット内のノードへの通信が NSG によって拒否された場合、Batch サービスは、コンピューティング ノードの状態に設定使用できなくなります。 ARM 仮想ネットワークのみ (''Microsoft.Network/virtualNetworks'') のサポート virtualMachineConfiguration で作成されたプールが cloudServiceConfiguration で作成されたプール ARM とクラシック仮想ネットワークの両方がサポートされていません。 指定した VNet にネットワーク セキュリティ グループ (NSG) が関連付けられている場合、予約されているいくつかのシステム ポートの受信通信を有効にする必要があります。 仮想マシンの構成で作成されたプール、ポート 29876 と 29877 を有効にするだけでなくポート 22 を Windows の Linux とポート 3389 です。 クラウド サービスの構成で作成されたプール、10100、20100、30100 のポートを有効にします。 ポート 443 で Azure Storage への発信接続とも有効にします。 詳細についてを参照してください。 https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration'
+    optional: true
+    syntax:
+      content: 'subnetId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolEndpointConfiguration
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: azure-batch.PoolEndpointConfiguration

@@ -66,15 +66,16 @@ items:
       - typeScript
     summary: |-
       ユーザーが指定した largePersonGroupId で新しい大規模なユーザー グループ、名前、省略可能な userData および recognitionModel を作成します。
-      <br /> 大きなユーザー グループは、コンテナーの顔のイメージと顔認識機能を含む、アップロードされたユーザー データと 1,000,000 人までです。
+      <br /> 大きなユーザー グループは、コンテナー、顔認識機能を含む、ユーザーがアップロードされたデータの 1,000,000 人までです。
       <br /> 作成後は、次のように使用します。 [LargePersonGroup 人作成](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40)グループ、および呼び出しにユーザーを追加する[LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4)をこのグループを準備する[直面 - 識別](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)します。
-      <br /> 人の顔、画像、および userData はまでサーバーに格納されます[LargePersonGroup 人削除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)または[LargePersonGroup - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)が呼び出されます。
-      <br />
+      <br /> イメージは格納されません。 のみ、person 顔の特徴を抽出し、userData までサーバーに格納されます[LargePersonGroup 人削除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)または[LargePersonGroup - 削除](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)が呼び出されます。
+      <br/>この大きなユーザー グループに関連付ける 'recognitionModel' を指定する必要があります。 'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。 既存の大規模なユーザー グループに追加される新しい面では、コレクションに既に関連付けられている認識モデルを使用します。
+      大きなユーザー グループの既存の顔の特徴は、認識モデルの別のバージョンによって抽出された特徴に更新できません。
+      * 'recognition_01':既定の認識モデル[LargePersonGroup - 作成](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)です。 2019 年 3 月の前に作成されたこれらすべての大きなユーザー グループは、この認識モデルで結合されます。
+      * 'recognition_02':2019 年 3 月にリリースされた認識モデル。 'recognition_01' と比較対象の全体的な精度が向上するためには、'recognition_02' をお勧めします。
+      大きなユーザー グループのクォータ:
       * 無料レベルのサブスクリプション クォータ:1,000 の大規模な人物グループ。
       * S0 レベルのサブスクリプション クォータ:1,000,000 大きなユーザー グループ。
-      <br />
-      この大きなユーザー グループに関連付ける 'recognitionModel' を指定する必要があります。 'RecognitionModel' の既定値は 'recognition_01' が場合、このパラメーターにする必要があるモデルが最新モデルに明示的に指定されることが必要なしてください。 既存の大規模なユーザー グループに追加される新しい面では、コレクションに既に関連付けられている認識モデルを使用します。
-      大きなユーザー グループの既存の顔の特徴は、認識モデルの別のバージョンによって抽出された特徴に更新できません。
     syntax:
       content: 'function create(largePersonGroupId: string, options?: Models.LargePersonGroupCreateOptionalParams)'
       parameters:

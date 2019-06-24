@@ -1,0 +1,330 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskAddParameter
+    name: TaskAddParameter
+    fullName: TaskAddParameter
+    children:
+      - azure-batch.TaskAddParameter.affinityInfo
+      - azure-batch.TaskAddParameter.applicationPackageReferences
+      - azure-batch.TaskAddParameter.authenticationTokenSettings
+      - azure-batch.TaskAddParameter.commandLine
+      - azure-batch.TaskAddParameter.constraints
+      - azure-batch.TaskAddParameter.containerSettings
+      - azure-batch.TaskAddParameter.dependsOn
+      - azure-batch.TaskAddParameter.displayName
+      - azure-batch.TaskAddParameter.environmentSettings
+      - azure-batch.TaskAddParameter.exitConditions
+      - azure-batch.TaskAddParameter.id
+      - azure-batch.TaskAddParameter.multiInstanceSettings
+      - azure-batch.TaskAddParameter.outputFiles
+      - azure-batch.TaskAddParameter.resourceFiles
+      - azure-batch.TaskAddParameter.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: ノードに回復操作がトリガーされたときに、batch はタスクを再試行します。 回復操作の例が含まれます (ただしこれらに限定されません)、異常なノードが再起動またはホスト エラーにより、コンピューティング ノードが表示されなくなったとします。 操作は依存しないと、maxTaskRetryCount 照らし合わせてカウントされることはありません、回復を再試行します。 MaxTaskRetryCount が 0 の場合でも、復旧操作のための内部の再試行が発生します。 このため、すべてのタスクにべき等であることがあります。 つまり、タスクが許容されているが中断され、任意の破損またはデータの重複を発生させることがなく再起動する必要があります。 最適な練習を何らかの形式のチェックポイント処理を使用するには時間の長いタスクを実行します。
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.affinityInfo
+    name: affinityInfo
+    fullName: affinityInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'affinityInfo?: AffinityInformation'
+      return:
+        type:
+          - azure-batch.AffinityInformation
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アプリケーション パッケージがダウンロードされ、作業ディレクトリ タスクではない、共有ディレクトリに配置されます。 そのため、参照されるパッケージは、ノードが既にあり、最新の状態は場合、しには再ダウンロードされません。コンピューティング ノードで、既存のコピーが使用されます。 参照パッケージをインストールできない場合、たとえば、パッケージが削除されたか、ダウンロードが失敗したため、タスクが失敗したため。
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.authenticationTokenSettings
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このプロパティが設定されている場合、Batch サービスは、アカウント アクセス キーを必要とせずに Batch サービスの操作を認証するために使用する認証トークンを使用してタスクを提供します。 AZ_BATCH_AUTHENTICATION_TOKEN の環境変数を使用して、トークンが提供されます。 トークンを使用して、タスクが実行できる操作は、設定によって異なります。 たとえば、タスクは、その他のタスクをジョブに追加するには、ジョブのアクセス許可を要求またはまたはその他のタスク、ジョブの下でのジョブの状態を確認します。
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - azure-batch.AuthenticationTokenSettings
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'マルチ インスタンス タスクでは、コマンドラインは、プライマリ タスクとすべてのサブタスクのコーディネーション コマンドラインの実行が完了した後、プライマリのタスクとして実行されます。 コマンド ライン シェルで動作しないためことはできません活用してください環境変数の拡張などのシェルの機能。 このような機能を活用する場合を呼び出す必要があります、コマンドラインでシェル例 "cmd/c MyCommand"を使用して Windows でまたは"//bin/sh-c MyCommand"linux。 コマンドラインは、ファイルのパスを参照している場合、(タスク作業ディレクトリを基準)、相対パスを使うか、バッチの指定された環境変数を使用して (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)します。'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 制約を指定しない場合は、maxTaskRetryCount は、ジョブに指定された maxTaskRetryCount と、maxWallClockTime は有限では、retentionTime は 7 日間。
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - azure-batch.TaskConstraints
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このタスクを実行するプールに containerConfiguration が設定がある場合は、これも設定する必要があります。 このタスクを実行するプールが containerConfiguration が設定を持っていない場合これを設定しない必要があります。 これは、指定した場合、AZ_BATCH_NODE_ROOT_DIR (ノード上の Azure Batch ディレクトリのルート) の下のすべてのディレクトリに再帰的には、コンテナーにマップする、すべてのタスクの環境変数は、コンテナーにマップしてタスクのコマンドラインは、コンテナー内で実行します。 AZ_BATCH_NODE_ROOT_DIR の外部でのコンテナーで生成されたファイルをバッチ ファイルの Api はこれらのファイルにアクセスできないできなくは、ホストのディスクに反映されません可能性があります。
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.dependsOn
+    name: dependsOn
+    fullName: dependsOn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 依存しているすべてのタスクが正常に完了するまで、このタスクはスケジュールされません。 失敗それらのタスクのいずれか、再試行カウントを使い果たしてしまう場合は、このタスクがスケジュールされることはありません。 ジョブがない場合は、usesTaskDependencies を true で、この要素に設定が存在する、TaskDependenciesNotSpecifiedOnJob のエラー コードで、要求は失敗します。
+    optional: true
+    syntax:
+      content: 'dependsOn?: TaskDependencies'
+      return:
+        type:
+          - azure-batch.TaskDependencies
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 表示名は一意である必要はありませんし、最大長 1024 まで任意の Unicode 文字を含めることができます。
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.exitConditions
+    name: exitConditions
+    fullName: exitConditions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: どの、Batch サービスは、タスクが完了したときに応答します。
+    optional: true
+    syntax:
+      content: 'exitConditions?: ExitConditions'
+      return:
+        type:
+          - azure-batch.ExitConditions
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: この ID は、ハイフン、アンダー スコアを含む、英数字の任意の組み合わせを含めることができます、64 を超える文字を含めることはできません。 ID は、小文字、大文字と (つまり、大文字と小文字が異なるだけジョブ内の 2 つの Id はない必要があります)。
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.multiInstanceSettings
+    name: multiInstanceSettings
+    fullName: multiInstanceSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'multiInstanceSettings?: MultiInstanceSettings'
+      return:
+        type:
+          - azure-batch.MultiInstanceSettings
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: マルチ インスタンス タスクでは、プライマリ タスクを実行するコンピューティング ノードから、ファイルのみアップロードされます。
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-batch.OutputFile[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: マルチ インスタンス タスクでは、プライマリ タスクを実行するコンピューティング ノードにリソース ファイルのみダウンロードされます。 リソース ファイルの一覧の最大サイズがあります。  最大サイズを超えると、要求は失敗し、RequestEntityTooLarge が応答のエラー コードになります。 このような場合は、サイズの ResourceFiles コレクションを減らす必要があります。 これは、.zip ファイル、アプリケーションのパッケージまたは Docker コンテナーを使用して実現できます。
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 省略した場合、タスクは、タスクに一意の非管理者ユーザーとして実行されます。
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.AffinityInformation
+    name: AffinityInformation
+    spec.typeScript:
+      - name: AffinityInformation
+        fullName: AffinityInformation
+        uid: azure-batch.AffinityInformation
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.AuthenticationTokenSettings
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: azure-batch.AuthenticationTokenSettings
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: azure-batch.TaskConstraints
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: azure-batch.TaskDependencies
+    name: TaskDependencies
+    spec.typeScript:
+      - name: TaskDependencies
+        fullName: TaskDependencies
+        uid: azure-batch.TaskDependencies
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.ExitConditions
+    name: ExitConditions
+    spec.typeScript:
+      - name: ExitConditions
+        fullName: ExitConditions
+        uid: azure-batch.ExitConditions
+  - uid: azure-batch.MultiInstanceSettings
+    name: MultiInstanceSettings
+    spec.typeScript:
+      - name: MultiInstanceSettings
+        fullName: MultiInstanceSettings
+        uid: azure-batch.MultiInstanceSettings
+  - uid: 'azure-batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-batch.OutputFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

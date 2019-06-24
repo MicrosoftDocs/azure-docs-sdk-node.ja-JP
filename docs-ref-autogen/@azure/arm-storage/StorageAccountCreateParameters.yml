@@ -5,8 +5,8 @@ items:
     fullName: StorageAccountCreateParameters
     children:
       - '@azure/arm-storage.StorageAccountCreateParameters.accessTier'
+      - '@azure/arm-storage.StorageAccountCreateParameters.azureFilesIdentityBasedAuthentication'
       - '@azure/arm-storage.StorageAccountCreateParameters.customDomain'
-      - '@azure/arm-storage.StorageAccountCreateParameters.enableAzureFilesAadIntegration'
       - '@azure/arm-storage.StorageAccountCreateParameters.enableHttpsTrafficOnly'
       - '@azure/arm-storage.StorageAccountCreateParameters.encryption'
       - '@azure/arm-storage.StorageAccountCreateParameters.identity'
@@ -38,6 +38,21 @@ items:
         type:
           - '@azure/arm-storage.AccessTier'
     package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountCreateParameters.azureFilesIdentityBasedAuthentication'
+    name: azureFilesIdentityBasedAuthentication
+    fullName: azureFilesIdentityBasedAuthentication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Azure Files の id ベースの認証設定を提供します。
+    optional: true
+    syntax:
+      content: 'azureFilesIdentityBasedAuthentication?: AzureFilesIdentityBasedAuthentication'
+      return:
+        type:
+          - '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
+    package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountCreateParameters.customDomain'
     name: customDomain
     fullName: customDomain
@@ -53,21 +68,6 @@ items:
         type:
           - '@azure/arm-storage.CustomDomain'
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.StorageAccountCreateParameters.enableAzureFilesAadIntegration'
-    name: enableAzureFilesAadIntegration
-    fullName: enableAzureFilesAadIntegration
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 場合に、SMB の Azure ファイルの AAD 統合を有効を true に設定します。
-    optional: true
-    syntax:
-      content: 'enableAzureFilesAadIntegration?: undefined | false | true'
-      return:
-        type:
-          - undefined | false | true
-    package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountCreateParameters.enableHttpsTrafficOnly'
     name: enableHttpsTrafficOnly
     fullName: enableHttpsTrafficOnly
@@ -75,7 +75,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: 場合は、ストレージ サービスにのみ https トラフィックを許可を true に設定します。
+    summary: 場合は、ストレージ サービスにのみ https トラフィックを許可を true に設定します。 既定値は、API バージョン 2019-04-01 以降は true です。
     optional: true
     syntax:
       content: 'enableHttpsTrafficOnly?: undefined | false | true'
@@ -207,6 +207,12 @@ references:
       - name: AccessTier
         fullName: AccessTier
         uid: '@azure/arm-storage.AccessTier'
+  - uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
+    name: AzureFilesIdentityBasedAuthentication
+    spec.typeScript:
+      - name: AzureFilesIdentityBasedAuthentication
+        fullName: AzureFilesIdentityBasedAuthentication
+        uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
   - uid: '@azure/arm-storage.CustomDomain'
     name: CustomDomain
     spec.typeScript:
