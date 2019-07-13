@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeltaNodesCheckHealthEvaluation'
+    name: DeltaNodesCheckHealthEvaluation
+    fullName: DeltaNodesCheckHealthEvaluation
+    children:
+      - '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.baselineErrorCount'
+      - '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.baselineTotalCount'
+      - '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.description'
+      - '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.kind'
+      - '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.maxPercentDeltaUnhealthyNodes'
+      - '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.totalCount'
+      - '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      現在の集計正常性状態に影響を与えた問題のある各ノードの正常性評価を含む、デルタ ノードの正常性評価を表します。
+      クラスターのアップグレード時に、クラスターの集計された正常性状態は警告またはエラー時に返されることができます。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.baselineErrorCount'
+    name: baselineErrorCount
+    fullName: baselineErrorCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスターのアップグレードの集計された正常性状態、先頭に、正常性ストアでのエラーとノードの数。
+    optional: true
+    syntax:
+      content: 'baselineErrorCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.baselineTotalCount'
+    name: baselineTotalCount
+    fullName: baselineTotalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスターのアップグレードの開始時の正常性ストア内のノードの合計数。
+    optional: true
+    syntax:
+      content: 'baselineTotalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 評価プロセスの概要を表す正常性評価の説明です。
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'kind: "DeltaNodesCheck"'
+      return:
+        type:
+          - '"DeltaNodesCheck"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.maxPercentDeltaUnhealthyNodes'
+    name: maxPercentDeltaUnhealthyNodes
+    fullName: maxPercentDeltaUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 最大許容パーセンテージ デルタ、ClusterUpgradeHealthPolicy から異常なノード。
+    optional: true
+    syntax:
+      content: 'maxPercentDeltaUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.totalCount'
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 正常性ストア内のノードの合計数。
+    optional: true
+    syntax:
+      content: 'totalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeltaNodesCheckHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      集計された正常性の状態の原因となった異常性の評価のリスト。
+      集計された正常性の影響を受けるすべての異常な NodeHealthEvaluation が含まれています。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

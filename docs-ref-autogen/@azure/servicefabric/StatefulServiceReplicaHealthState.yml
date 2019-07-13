@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState'
+    name: StatefulServiceReplicaHealthState
+    fullName: StatefulServiceReplicaHealthState
+    children:
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.aggregatedHealthState'
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.partitionId'
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.replicaId'
+      - '@azure/servicefabric.StatefulServiceReplicaHealthState.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: レプリカ ID および集計正常性状態を含む、ステートフル サービス レプリカの正常性の状態を表します。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このレプリカが属しているパーティションの ID。
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ステートフル サービス レプリカの id。 ReplicaId は、パーティションのレプリカを一意に識別する Service Fabric によって使用されます。 パーティション内で一意ですし、レプリカの有効期間は変更されません。 レプリカがドロップ別のレプリカが同じパーティションに同じノードで作成される場合は、さまざまな値を id の取得します。場合がありますステートレス サービス インスタンスの id は、レプリカ id とも呼ばれます。
+    optional: true
+    syntax:
+      content: 'replicaId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceReplicaHealthState.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

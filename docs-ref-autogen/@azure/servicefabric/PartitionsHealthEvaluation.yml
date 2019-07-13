@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation'
+    name: PartitionsHealthEvaluation
+    fullName: PartitionsHealthEvaluation
+    children:
+      - '@azure/servicefabric.PartitionsHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.description'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.kind'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.totalCount'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: 現在の集計正常性状態に影響を与える問題のある各パーティションの正常性評価を含む、サービスのパーティションの正常性評価を表します。 エラーまたは警告は、サービスの正常性と集計正常性状態を評価するときに返されます。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 評価プロセスの概要を表す正常性評価の説明です。
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'kind: "Partitions"'
+      return:
+        type:
+          - '"Partitions"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService'
+    name: maxPercentUnhealthyPartitionsPerService
+    fullName: maxPercentUnhealthyPartitionsPerService
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービスごとの異常なパーティションの割合が、ServiceTypeHealthPolicy から最大です。
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyPartitionsPerService?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.totalCount'
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 正常性ストアからサービスのパーティションの合計数。
+    optional: true
+    syntax:
+      content: 'totalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 集計された正常性の状態の原因となった異常性の評価のリスト。 集計された正常性の影響を受けるすべての異常な PartitionHealthEvaluation が含まれています。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

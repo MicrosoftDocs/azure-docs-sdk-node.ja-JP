@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription'
+    name: GetBackupByStorageQueryDescription
+    fullName: GetBackupByStorageQueryDescription
+    children:
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.backupEntity'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.latest'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.storage'
+    langs:
+      - typeScript
+    type: interface
+    summary: リストのバックアップ、およびバックアップ ストレージの詳細をどこからバックアップをフェッチするときに適用される追加のフィルターについて説明します。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.backupEntity'
+    name: backupEntity
+    fullName: backupEntity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: バックアップを列挙するエンティティを示します。
+    syntax:
+      content: 'backupEntity: BackupEntityUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupEntityUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter'
+    name: endDateTimeFilter
+    fullName: endDateTimeFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 末尾を指定のバックアップを列挙するまでの ISO8601 の日時します。 指定しない場合、バックアップの末尾まで列挙されます。
+    optional: true
+    syntax:
+      content: 'endDateTimeFilter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.latest'
+    name: latest
+    fullName: latest
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'True を指定した場合は、指定されたバックアップ エンティティの下のすべてのパーティションの (範囲指定された時間)、最新のバックアップを取得します。 既定値: false。'
+    optional: true
+    syntax:
+      content: 'latest?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter'
+    name: startDateTimeFilter
+    fullName: startDateTimeFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 開始日を指定すると、バックアップを列挙 ISO8601 の日時します。 指定しない場合、バックアップは、最初から列挙されます。
+    optional: true
+    syntax:
+      content: 'startDateTimeFilter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.storage'
+    name: storage
+    fullName: storage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: バックアップを列挙するバックアップ ストレージのパラメーターについて説明します。 これは省略可能ですし、このバックアップ エンティティが現在バックアップ中 (で指定されているバックアップ ポリシー) として、バックアップ ストレージから既定でバックアップを列挙します。 このパラメーターは、別のクラスターを復元することがありますからバックアップを列挙できると便利です。
+    syntax:
+      content: 'storage: BackupStorageDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupStorageDescriptionUnion'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupEntityUnion'
+    name: BackupEntityUnion
+    spec.typeScript:
+      - name: BackupEntityUnion
+        fullName: BackupEntityUnion
+        uid: '@azure/servicefabric.BackupEntityUnion'
+  - uid: '@azure/servicefabric.BackupStorageDescriptionUnion'
+    name: BackupStorageDescriptionUnion
+    spec.typeScript:
+      - name: BackupStorageDescriptionUnion
+        fullName: BackupStorageDescriptionUnion
+        uid: '@azure/servicefabric.BackupStorageDescriptionUnion'

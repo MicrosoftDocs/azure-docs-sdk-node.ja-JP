@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionHealthState'
+    name: PartitionHealthState
+    fullName: PartitionHealthState
+    children:
+      - '@azure/servicefabric.PartitionHealthState.aggregatedHealthState'
+      - '@azure/servicefabric.PartitionHealthState.partitionId'
+    langs:
+      - typeScript
+    type: interface
+    summary: パーティション識別子および集計された正常性状態を含むパーティションのヘルス状態を表します。
+    extends:
+      name: '@azure/servicefabric.EntityHealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthState.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthState.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このオブジェクトのヘルス状態が説明されているパーティションの id。
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthState'
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: '@azure/servicefabric.EntityHealthState'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
