@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedNetworkResourceDescriptionList'
+    name: PagedNetworkResourceDescriptionList
+    fullName: PagedNetworkResourceDescriptionList
+    children:
+      - '@azure/servicefabric.PagedNetworkResourceDescriptionList.continuationToken'
+      - '@azure/servicefabric.PagedNetworkResourceDescriptionList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: ネットワーク リソースの一覧。 すべての結果が 1 つのメッセージに収まらないときに、リストはページングされます。 次の結果セットは、この一覧に指定された継続トークンと共に、同じクエリを実行することによって取得できます。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedNetworkResourceDescriptionList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      継続トークンのパラメーターは、次の結果セットを取得するために使用されます。 システムからの結果が 1 つの応答に収まらないときに、継続トークンが API の応答に含まれます。 この値が次の API 呼び出しに渡されると、API が次の結果セットを返します。
+      それ以上の結果はありません、応答に継続トークンは含まれません。
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedNetworkResourceDescriptionList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一覧の 1 つのページです。
+    optional: true
+    syntax:
+      content: 'items?: NetworkResourceDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.NetworkResourceDescription[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.NetworkResourceDescription[]'
+    name: 'NetworkResourceDescription[]'
+    spec.typeScript:
+      - name: NetworkResourceDescription
+        fullName: NetworkResourceDescription
+        uid: '@azure/servicefabric.NetworkResourceDescription'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    fullName: ClusterHealthPolicy
+    children:
+      - '@azure/servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap'
+      - '@azure/servicefabric.ClusterHealthPolicy.considerWarningAsError'
+      - '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications'
+      - '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: または、クラスター ノードのクラスターの正常性を評価するために使用する正常性ポリシーを定義します。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap'
+    name: applicationTypeHealthPolicyMap
+    fullName: applicationTypeHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      特定のアプリケーションの種類の異常なアプリケーションの最大の割合でマップを定義します。
+      各エントリは、キーとしてアプリケーションの種類名を指定し、値として指定したアプリケーションの種類のアプリケーションを評価するために使用される MaxPercentUnhealthyApplications を表す整数を指定します。
+      アプリケーションの種類の正常性ポリシー マップをクラスターの正常性評価時に使用して、特別なアプリケーションの種類を記述できます。
+      マップに含まれるアプリケーションの種類は、クラスターの正常性ポリシーで定義されているグローバルな MaxPercentUnhealthyApplications ではなく、マップで指定されている割合に対して評価されます。
+      マップで指定されているアプリケーションの種類のアプリケーションは、アプリケーションのグローバル プールに対してカウントされません。
+      たとえば、ある種類の一部のアプリケーションがクリティカルである場合、クラスター管理者はそのアプリケーションの種類のエントリをマップに追加し、値 0% を割り当てることができます (つまり、すべてのエラーは許容されません)。
+      他のすべてのアプリケーションは、20% に設定された MaxPercentUnhealthyApplications で評価して、多数のアプリケーション インスタンスのうち一部の障害を許容できます。
+      アプリケーションの種類の正常性ポリシー マップは、HealthManager/EnableApplicationTypeHealthEvaluation の構成エントリを使うアプリケーションの種類の正常性評価がクラスター マニフェストで有効になっている場合にのみ使われます。
+    optional: true
+    syntax:
+      content: 'applicationTypeHealthPolicyMap?: ApplicationTypeHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '警告がエラーと同じ重大度で処理されることを示します。 既定値: false。'
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications'
+    name: maxPercentUnhealthyApplications
+    fullName: maxPercentUnhealthyApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      エラーを報告する前の異常なアプリケーションの最大許容パーセンテージ。 たとえば、アプリケーションの 10% の異常を許容するには、この値を 10 にします。
+      パーセンテージは、異常な可能性のあるアプリケーションの最大許容パーセンテージを表します。この値を超えるとクラスターはエラーの状態と見なされます。
+      許容パーセンテージ内であっても、1 つ以上の異常なアプリケーションがある場合は、正常性は Warning として評価されます。
+      これは、異常なアプリケーションの数をクラスター内のアプリケーション インスタンスの総数で割ることによって計算されます。ApplicationTypeHealthPolicyMap に含まれているアプリケーションの種類のアプリケーションは除外されます。
+      切り上げ計算が実行され、少数のアプリケーションに対する 1 つのエラーは許容されます。 既定のパーセンテージは 0 です。 ［既定値］:0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyApplications?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes'
+    name: maxPercentUnhealthyNodes
+    fullName: maxPercentUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      エラーを報告する前の異常なノードの最大許容パーセンテージ。 たとえば、ノードの 10% の異常を許容するには、この値を 10 にします。
+      パーセンテージは、異常な可能性のあるノードの最大許容パーセンテージを表します。この値を超えるとクラスターはエラーの状態と見なされます。
+      許容パーセンテージ内であっても、1 つ以上の異常なノードがある場合は、正常性は Warning として評価されます。
+      パーセンテージは、異常なノードの数をクラスター内のノードの総数で割ることによって計算されます。
+      切り上げ計算が実行され、少数のノードに対する 1 つのエラーは許容されます。 既定のパーセンテージは 0 です。
+
+      大規模なクラスターでは、ダウンしているか修復を必要とするノードがいくつか必ず存在するため、それが許容されるようにこのパーセンテージを構成する必要があります。 ［既定値］:0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem[]'
+    name: 'ApplicationTypeHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ApplicationTypeHealthPolicyMapItem
+        fullName: ApplicationTypeHealthPolicyMapItem
+        uid: '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'

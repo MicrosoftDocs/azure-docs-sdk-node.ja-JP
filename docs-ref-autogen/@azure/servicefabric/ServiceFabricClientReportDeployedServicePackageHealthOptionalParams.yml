@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 省略可能なパラメーター。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      レポートをすぐに送信する必要があるかどうかを示すフラグ。
+      正常性レポートは Service Fabric ゲートウェイ アプリケーションに送信され、これにより正常性ストアに転送されます。
+      Immediate が true に設定された場合、HTTP ゲートウェイ アプリケーションで使用されているファブリック クライアント設定に関係なく、このレポートはすぐに HTTP ゲートウェイから正常性ストアに送信されます。
+      これは、できるだけ早く送信する必要がある重要なレポートに役立ちます。
+      タイミングやその他の条件に応じて、レポートの送信は依然として失敗する可能性があります。たとえば、HTTP ゲートウェイが閉じている場合やメッセージがゲートウェイに到達しない場合です。
+      Immediate が false に設定された場合、レポートは、正常性クライアントの設定に基づいて HTTP ゲートウェイから送信されます。 その結果、HealthReportSendInterval の構成に従ってバッチ処理されます。
+      この設定が推奨されているのは、正常性クライアントが正常性ストアへの正常性レポート メッセージに加えて正常性レポート処理を最適化できるようになるためです。
+      既定では、レポートはすぐに送信されません。 既定値: false。
     optional: true
     syntax:
       content: 'immediate?: undefined | false | true'
@@ -115,7 +123,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '秒単位で、操作を実行するためのサーバーのタイムアウト。 このタイムアウトは、クライアントが要求された操作が完了するを待機する期間を指定します。 このパラメーターの既定値は、60 秒です。 ［既定値］:60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

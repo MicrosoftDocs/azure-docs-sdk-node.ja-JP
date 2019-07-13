@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/servicefabric.OperationStatus.operationId'
+      - '@azure/servicefabric.OperationStatus.state'
+      - '@azure/servicefabric.OperationStatus.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: ユーザーが誘発した操作の OperationId、OperationState、OperationType が含まれています。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.OperationStatus.operationId'
+    name: operationId
+    fullName: operationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: この API への呼び出しを識別する GUID。  これは、対応する GetProgress API にも渡されます。
+    optional: true
+    syntax:
+      content: 'operationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.OperationStatus.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 操作の状態。 次のような値となる場合があります。'Invalid'、'Running'、'ロールバックしています'、'完了'、' エラーが発生しました '、'キャンセル'、'ForceCancelled'
+    optional: true
+    syntax:
+      content: 'state?: OperationState'
+      return:
+        type:
+          - '@azure/servicefabric.OperationState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.OperationStatus.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '操作の種類。 次のような値となる場合があります。''Invalid'', ''PartitionDataLoss'', ''PartitionQuorumLoss'', ''PartitionRestart'', ''NodeTransition'''
+    optional: true
+    syntax:
+      content: 'type?: OperationType'
+      return:
+        type:
+          - '@azure/servicefabric.OperationType'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.OperationState'
+    name: OperationState
+    spec.typeScript:
+      - name: OperationState
+        fullName: OperationState
+        uid: '@azure/servicefabric.OperationState'
+  - uid: '@azure/servicefabric.OperationType'
+    name: OperationType
+    spec.typeScript:
+      - name: OperationType
+        fullName: OperationType
+        uid: '@azure/servicefabric.OperationType'

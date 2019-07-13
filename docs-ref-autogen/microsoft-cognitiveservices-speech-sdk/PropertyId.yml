@@ -41,7 +41,7 @@ items:
       - typeScript
     summary: |-
       Cognitive Services 音声サービスのサブスクリプション キー。 インテントの認識エンジンを使用している場合は、特定の LUIS アプリの LUIS エンドポイント キーを指定するように指定する必要があります。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに、 @see SpeechConfig.fromSubscription します。
+      代わりに、[SpeechConfig.fromSubscription] を使用します。
     type: field
     numericValue: 0
     package: microsoft-cognitiveservices-speech-sdk
@@ -52,8 +52,8 @@ items:
       - typeScript
     summary: |-
       Cognitive Services 音声サービス エンドポイント (url)。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに、 @see SpeechConfig.fromEndpoint します。
-      注意:このエンドポイントは、アクセス トークンを取得するために使用するエンドポイントと同じではありません。
+      Instead, use [[SpeechConfig.fromEndpoint]].
+      注: このエンドポイントは、アクセス トークンを取得するために使用するエンドポイントと同じではありません。
     type: field
     numericValue: 1
     package: microsoft-cognitiveservices-speech-sdk
@@ -64,7 +64,7 @@ items:
       - typeScript
     summary: |-
       Cognitive Services Speech Service のリージョン。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに、 @see SpeechConfig.fromSubscription、 @see SpeechConfig.fromEndpoint、 @see SpeechConfig.fromAuthorizationToken します。
+      代わりに、使用 [SpeechConfig.fromSubscription] [SpeechConfig.fromEndpoint] [SpeechConfig.fromAuthorizationToken]。
     type: field
     numericValue: 2
     package: microsoft-cognitiveservices-speech-sdk
@@ -75,7 +75,7 @@ items:
       - typeScript
     summary: |-
       Cognitive Services Speech Service の認証トークン (アクセス トークンとも呼ばれます)。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに、 @see SpeechConfig.fromAuthorizationToken、
+      Instead, use [[SpeechConfig.fromAuthorizationToken]], [[SpeechRecognizer.authorizationToken]], [[IntentRecognizer.authorizationToken]], [[TranslationRecognizer.authorizationToken]].
     type: field
     numericValue: 3
     package: microsoft-cognitiveservices-speech-sdk
@@ -95,8 +95,8 @@ items:
       - typeScript
     summary: |-
       Cognitive Services 音声サービスのエンドポイント id。通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに、 @see SpeechConfig.setEndpointId します。
-      注意:エンドポイント id がエンドポイントの詳細の下に一覧表示、音声のポータルで確認できます。
+      代わりに、[SpeechConfig.endpointId] を使用します。
+      注: エンドポイント id がエンドポイントの詳細の下に一覧表示、音声のポータルで確認できます。
     type: field
     numericValue: 5
     package: microsoft-cognitiveservices-speech-sdk
@@ -107,7 +107,7 @@ items:
       - typeScript
     summary: |-
       コンマの一覧には、ターゲット翻訳言語として使用する言語 (BCP 47 形式) が区切られます。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに使用して@seeSpeechTranslationConfig.addTargetLanguage、
+      代わりに使用 [SpeechTranslationConfig.addTargetLanguage] [SpeechTranslationConfig.targetLanguages] [TranslationRecognizer.targetLanguages]。
     type: field
     numericValue: 6
     package: microsoft-cognitiveservices-speech-sdk
@@ -118,8 +118,8 @@ items:
       - typeScript
     summary: |-
       音声サービス音声 Cognitive Service テキストの名前。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに、 @see SpeechTranslationConfig.setVoiceName します。
-      注意:有効な音声名が表示されます<a href="https://aka.ms/csspeech/voicenames">ここ</a>します。
+      代わりに、[SpeechTranslationConfig.voiceName] を使用します。
+      注: 有効な音声名が表示されます<a href="https://aka.ms/csspeech/voicenames">ここ</a>します。
     type: field
     numericValue: 7
     package: microsoft-cognitiveservices-speech-sdk
@@ -139,7 +139,7 @@ items:
       - typeScript
     summary: |-
       Language Understanding サービス地域です。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに、 @see LanguageUnderstandingModel します。
+      代わりに、[LanguageUnderstandingModel] を使用します。
     type: field
     numericValue: 9
     package: microsoft-cognitiveservices-speech-sdk
@@ -213,7 +213,7 @@ items:
       - typeScript
     summary: |-
       (BCP 47 形式) で認識される音声言語。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに、 @see SpeechConfig.setSpeechRecognitionLanguage します。
+      Instead, use [[SpeechConfig.speechRecognitionLanguage]].
     type: field
     numericValue: 15
     package: microsoft-cognitiveservices-speech-sdk
@@ -224,7 +224,7 @@ items:
       - typeScript
     summary: |-
       セッション id。この id は、オーディオ入力ストリームとバインドされている基になる音声認識のインスタンスの特定のバインドを表す普遍的一意識別子 (UUID とも呼ばれます)。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに使用して@seeSessionEventArgs.sessionId します。
+      [SessionEventArgs.sessionId] を代わりに使用します。
     type: field
     numericValue: 16
     package: microsoft-cognitiveservices-speech-sdk
@@ -235,7 +235,7 @@ items:
       - typeScript
     summary: |-
       Cognitive Services 音声サービスの要求の応答は、形式 (簡易または詳細) を出力します。 通常の状況では、このプロパティを直接使用する必要はありません。
-      代わりに使用して@seeSpeechConfig.setOutputFormat します。
+      Instead use [[SpeechConfig.outputFormat]].
     type: field
     numericValue: 17
     package: microsoft-cognitiveservices-speech-sdk
@@ -262,7 +262,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: (JSON 形式) で Cognitive Services 音声サービス エラーの詳細。 通常の状況では、このプロパティを直接使用する必要はありません。 代わりに使用して@seeCancellationDetails.getErrorDetails します。
+    summary: '(JSON 形式) で Cognitive Services 音声サービス エラーの詳細。 通常の状況では、このプロパティを直接使用する必要はありません。 [CancellationDetails.errorDetails] を代わりに使用します。'
     type: field
     numericValue: 20
     package: microsoft-cognitiveservices-speech-sdk
@@ -298,7 +298,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: (JSON 形式) で Language Understanding Service 応答出力します。 経由で使用できる@seeIntentRecognitionResult.Properties します。
+    summary: '(JSON 形式) で Language Understanding Service 応答出力します。 [IntentRecognitionResult] を利用'
     type: field
     numericValue: 24
     package: microsoft-cognitiveservices-speech-sdk

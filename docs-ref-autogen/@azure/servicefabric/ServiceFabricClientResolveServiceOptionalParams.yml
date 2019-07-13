@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 省略可能なパラメーター。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -87,7 +87,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      パーティションのキーの種類。 このパラメーターは、サービスのパーティション構成が Int64Range または Named の場合に必要です。 指定できる値は次のとおりです。
+      - None (1) には、PartitionKeyValue パラメーターが指定されていないことを示します。 これは、パーティション構成が Singleton のパーティションに有効です。 これが既定値です。 値は 1 です。
+      - Int64Range (2) - PartitionKeyValue パラメーターが int64 パーティション キーであることを示します。
+      これは、パーティション構成が Int64Range のパーティションに有効です。 値は 2 です。
+      - Named (3) - PartitionKeyValue パラメーターがパーティションの名前であることを示します。 これは、パーティション構成が Named のパーティションに有効です。 値は 3 です。
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +107,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      パーティション キー。 これは、サービスのパーティション構成が Int64Range または Named の場合に必要です。
+      これは、パーティション ID ではなく、整数キー値かパーティション ID の名前のどちらかになります。
+      たとえば、サービスは、0 から 10 の範囲パーティションを使用している場合、PartitionKeyValue はその範囲内の整数になります。 サービスの説明のクエリを実行して、範囲または名前を表示します。
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 以前に受け取った応答のバージョン フィールドの値。 これは、以前に取得した結果が古くなっていることをユーザーが知っている場合に必要です。
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -147,7 +155,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '秒単位で、操作を実行するためのサーバーのタイムアウト。 このタイムアウトは、クライアントが要求された操作が完了するを待機する期間を指定します。 このパラメーターの既定値は、60 秒です。 ［既定値］:60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

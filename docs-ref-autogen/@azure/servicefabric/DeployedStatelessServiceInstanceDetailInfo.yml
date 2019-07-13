@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo'
+    name: DeployedStatelessServiceInstanceDetailInfo
+    fullName: DeployedStatelessServiceInstanceDetailInfo
+    children:
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperation'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperationStartTimeUtc'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.partitionId'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.reportedLoad'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceKind'
+      - '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceName'
+    langs:
+      - typeScript
+    type: interface
+    summary: コード パッケージで実行されているステートレス インスタンスに関する情報。 DeployedServiceReplicaQueryResult が ServiceKind、ServiceName、PartitionId、InstanceId のような重複するデータを含むことに注意してください。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperation'
+    name: currentServiceOperation
+    fullName: currentServiceOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ステートフル サービス レプリカまたはステートレス サービス インスタンスの現在のアクティブなライフ サイクル操作を指定します。 次のような値となる場合があります。'不明'、'None'、' 開く '、'ChangeRole'、'閉じる'、'中止'
+    optional: true
+    syntax:
+      content: 'currentServiceOperation?: ServiceOperationName'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceOperationName'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperationStartTimeUtc'
+    name: currentServiceOperationStartTimeUtc
+    fullName: currentServiceOperationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: UTC 形式で現在のサービス操作の開始時刻。
+    optional: true
+    syntax:
+      content: 'currentServiceOperationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult'
+    name: deployedServiceReplicaQueryResult
+    fullName: deployedServiceReplicaQueryResult
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ノードにデプロイされたステートレス サービス インスタンスに関する情報。
+    optional: true
+    syntax:
+      content: 'deployedServiceReplicaQueryResult?: DeployedStatelessServiceInstanceInfo'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId'
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ステートレス サービス インスタンスの id。 インスタンス Id は、ステートレス サービスのパーティションのインスタンスを一意に識別する Service Fabric によって使用されます。 パーティション内で一意ですし、インスタンスの有効期間は変更されません。 インスタンスは、同じまたは別のノードでフェールオーバーが場合、は、さまざまな値を InstanceId の取得します。
+    optional: true
+    syntax:
+      content: 'instanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パーティションを一意に識別するために、Service Fabric によって使用される内部の ID。 これは、サービスの作成時にランダムに生成された GUID です。 パーティション ID は一意し、サービスの有効期間は変更されません。 同じサービスが削除され、そのパーティションの Id を再作成する場合は、異なるでしょう。
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.reportedLoad'
+    name: reportedLoad
+    fullName: reportedLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: レプリカによって報告された負荷の一覧。
+    optional: true
+    syntax:
+      content: 'reportedLoad?: LoadMetricReportInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReportInfo[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'URI の形式の開始時にサービスの完全な階層名`fabric:`します。'
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceOperationName'
+    name: ServiceOperationName
+    spec.typeScript:
+      - name: ServiceOperationName
+        fullName: ServiceOperationName
+        uid: '@azure/servicefabric.ServiceOperationName'
+  - uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo'
+    name: DeployedStatelessServiceInstanceInfo
+    spec.typeScript:
+      - name: DeployedStatelessServiceInstanceInfo
+        fullName: DeployedStatelessServiceInstanceInfo
+        uid: '@azure/servicefabric.DeployedStatelessServiceInstanceInfo'
+  - uid: '@azure/servicefabric.LoadMetricReportInfo[]'
+    name: 'LoadMetricReportInfo[]'
+    spec.typeScript:
+      - name: LoadMetricReportInfo
+        fullName: LoadMetricReportInfo
+        uid: '@azure/servicefabric.LoadMetricReportInfo'
+      - name: '[]'
+        fullName: '[]'

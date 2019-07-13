@@ -1,0 +1,163 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo'
+    name: StatefulServicePartitionInfo
+    fullName: StatefulServicePartitionInfo
+    children:
+      - '@azure/servicefabric.StatefulServicePartitionInfo.healthState'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.minReplicaSetSize'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.partitionInformation'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.partitionStatus'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.primaryEpoch'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.serviceKind'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: Service Fabric のステートフル サービスのパーティションに関する情報.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration'
+    name: lastQuorumLossDuration
+    fullName: lastQuorumLossDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このパーティションがクォーラム損失の期間です。 パーティションがクォーラム損失で現在場合は、その状態になっている期間を返します。 このフィールドでは、この期間の指定に ISO8601 形式を使用しています。
+    optional: true
+    syntax:
+      content: 'lastQuorumLossDuration?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.minReplicaSetSize'
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: レプリカ セットの最小サイズ (数)。
+    optional: true
+    syntax:
+      content: 'minReplicaSetSize?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.partitionInformation'
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: スキームとことでサポートされるキーのパーティション分割、パーティション id について説明します。
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformationUnion'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionInformationUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.partitionStatus'
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Service fabric のサービス パーティションの状態です。 次のような値となる場合があります。''Invalid'', ''Ready'', ''NotReady'', ''InQuorumLoss'', ''Reconfiguring'', ''Deleting'''
+    optional: true
+    syntax:
+      content: 'partitionStatus?: ServicePartitionStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePartitionStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.primaryEpoch'
+    name: primaryEpoch
+    fullName: primaryEpoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エポックは、全体としてのパーティションの構成の番号です。 レプリカの構成が、プライマリ レプリカの変更がレプリケートされ、新しいプライマリ レプリカから、操作は、古いプライマリ レプリカから送信されたものから新しいエポックと呼ばれますと例については、変更を設定するとします。
+    optional: true
+    syntax:
+      content: 'primaryEpoch?: Epoch'
+      return:
+        type:
+          - '@azure/servicefabric.Epoch'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize'
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ターゲット レプリカ セットのサイズ (数)。
+    optional: true
+    syntax:
+      content: 'targetReplicaSetSize?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.PartitionInformationUnion'
+    name: PartitionInformationUnion
+    spec.typeScript:
+      - name: PartitionInformationUnion
+        fullName: PartitionInformationUnion
+        uid: '@azure/servicefabric.PartitionInformationUnion'
+  - uid: '@azure/servicefabric.ServicePartitionStatus'
+    name: ServicePartitionStatus
+    spec.typeScript:
+      - name: ServicePartitionStatus
+        fullName: ServicePartitionStatus
+        uid: '@azure/servicefabric.ServicePartitionStatus'
+  - uid: '@azure/servicefabric.Epoch'
+    name: Epoch
+    spec.typeScript:
+      - name: Epoch
+        fullName: Epoch
+        uid: '@azure/servicefabric.Epoch'

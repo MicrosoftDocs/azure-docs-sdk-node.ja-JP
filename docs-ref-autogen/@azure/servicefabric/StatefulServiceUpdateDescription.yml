@@ -1,0 +1,274 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription'
+    name: StatefulServiceUpdateDescription
+    fullName: StatefulServiceUpdateDescription
+    children:
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.correlationScheme'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.defaultMoveCost'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.flags'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.loadMetrics'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.minReplicaSetSize'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.placementConstraints'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.quorumLossWaitDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.replicaRestartWaitDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.scalingPolicies'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.serviceKind'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.servicePlacementPolicies'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.standByReplicaKeepDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceUpdateDescription.targetReplicaSetSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: ステートフル サービスの更新プログラムをについて説明します。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.correlationScheme'
+    name: correlationScheme
+    fullName: correlationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 相関スキーム。
+    optional: true
+    syntax:
+      content: 'correlationScheme?: ServiceCorrelationDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceCorrelationDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.defaultMoveCost'
+    name: defaultMoveCost
+    fullName: defaultMoveCost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービスの移動コスト。 次のような値となる場合があります。'0'、'Low'、'Medium'、'High'
+    optional: true
+    syntax:
+      content: 'defaultMoveCost?: MoveCost'
+      return:
+        type:
+          - '@azure/servicefabric.MoveCost'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.flags'
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      その他のプロパティを設定するかどうかを示すフラグです。 各関連付けられているプロパティに対応して、以下で指定したフラグを場合、プロパティが指定されていることを示します。
+      このプロパティは、ビットごとの 'OR' 演算子を使用して取得したこれらのフラグの組み合わせを指定できます。
+      たとえば、指定された値が 6 の ReplicaRestartWaitDuration (2) と (4) の QuorumLossWaitDuration フラグが設定します。
+      - その他のプロパティを設定するなし - は示しません。 値は 0 です。
+      - TargetReplicaSetSize/InstanceCount - は、(ステートフル サービス) 用の TargetReplicaSetSize プロパティまたは (ステートレス サービス) 用 InstanceCount プロパティが設定するかどうかを示します。 値は 1 です。
+      - ReplicaRestartWaitDuration - は、プロパティの設定の ReplicaRestartWaitDuration を示します。 値は、2 です。
+      - QuorumLossWaitDuration では、プロパティが設定されて QuorumLossWaitDuration を示します。 値は、します。
+      4.
+      - StandByReplicaKeepDuration のでは、プロパティが設定されて StandByReplicaKeepDuration を示します。 値は 8 です。
+      - MinReplicaSetSize - は、プロパティが設定されて MinReplicaSetSize を示します。 値は 16 です。
+      - PlacementConstraints - は、プロパティが設定されて PlacementConstraints を示します。 値は、32 です。
+      - PlacementPolicyList - は、プロパティが設定されて ServicePlacementPolicies を示します。 値は、します。
+      64.
+      - -の相関関係では、プロパティが設定されて CorrelationScheme を示します。 値は 128 です。
+      - メトリックのでは、プロパティが設定されて ServiceLoadMetrics を示します。 値には 256 です。
+      - DefaultMoveCost - は、プロパティが設定されて DefaultMoveCost を示します。 値は 512 文字です。
+      - ScalingPolicy - は、プロパティが設定されて ScalingPolicies を示します。 値は、1024 です。
+    optional: true
+    syntax:
+      content: 'flags?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.loadMetrics'
+    name: loadMetrics
+    fullName: loadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービスの負荷メトリック。
+    optional: true
+    syntax:
+      content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.minReplicaSetSize'
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: レプリカ セットの最小サイズ (数)。
+    optional: true
+    syntax:
+      content: 'minReplicaSetSize?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.placementConstraints'
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 文字列としての配置の制約。 配置の制約はノード プロパティ上のブール式で、サービスの要件に基づいて特定のノードにサービスを制限することができます。 たとえば、配置する NodeType が blue のノード上のサービスを次を指定します。"NodeColor == blue)"。
+    optional: true
+    syntax:
+      content: 'placementConstraints?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.quorumLossWaitDurationSeconds'
+    name: quorumLossWaitDurationSeconds
+    fullName: quorumLossWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パーティションがクォーラム損失の状態であることを許可する最大期間 (秒)。
+    optional: true
+    syntax:
+      content: 'quorumLossWaitDurationSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.replicaRestartWaitDurationSeconds'
+    name: replicaRestartWaitDurationSeconds
+    fullName: replicaRestartWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: レプリカがダウンしてから新しいレプリカが作成されるまでの期間 (秒)。
+    optional: true
+    syntax:
+      content: 'replicaRestartWaitDurationSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.scalingPolicies'
+    name: scalingPolicies
+    fullName: scalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このサービスのスケーリング ポリシー。
+    optional: true
+    syntax:
+      content: 'scalingPolicies?: ScalingPolicyDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ScalingPolicyDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.servicePlacementPolicies'
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービス配置ポリシー。
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescriptionUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.standByReplicaKeepDurationSeconds'
+    name: standByReplicaKeepDurationSeconds
+    fullName: standByReplicaKeepDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 削除される前にスタンバイ レプリカを維持する期間を定義します。
+    optional: true
+    syntax:
+      content: 'standByReplicaKeepDurationSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceUpdateDescription.targetReplicaSetSize'
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ターゲット レプリカ セットのサイズ (数)。
+    optional: true
+    syntax:
+      content: 'targetReplicaSetSize?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceCorrelationDescription[]'
+    name: 'ServiceCorrelationDescription[]'
+    spec.typeScript:
+      - name: ServiceCorrelationDescription
+        fullName: ServiceCorrelationDescription
+        uid: '@azure/servicefabric.ServiceCorrelationDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.MoveCost'
+    name: MoveCost
+    spec.typeScript:
+      - name: MoveCost
+        fullName: MoveCost
+        uid: '@azure/servicefabric.MoveCost'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: '@azure/servicefabric.ServiceLoadMetricDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ScalingPolicyDescription[]'
+    name: 'ScalingPolicyDescription[]'
+    spec.typeScript:
+      - name: ScalingPolicyDescription
+        fullName: ScalingPolicyDescription
+        uid: '@azure/servicefabric.ScalingPolicyDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    name: 'ServicePlacementPolicyDescriptionUnion[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescriptionUnion
+        fullName: ServicePlacementPolicyDescriptionUnion
+        uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion'
+      - name: '[]'
+        fullName: '[]'

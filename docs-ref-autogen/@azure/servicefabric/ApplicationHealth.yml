@@ -1,0 +1,179 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealth'
+    name: ApplicationHealth
+    fullName: ApplicationHealth
+    children:
+      - '@azure/servicefabric.ApplicationHealth.aggregatedHealthState'
+      - '@azure/servicefabric.ApplicationHealth.deployedApplicationHealthStates'
+      - '@azure/servicefabric.ApplicationHealth.healthEvents'
+      - '@azure/servicefabric.ApplicationHealth.healthStatistics'
+      - '@azure/servicefabric.ApplicationHealth.name'
+      - '@azure/servicefabric.ApplicationHealth.serviceHealthStates'
+      - '@azure/servicefabric.ApplicationHealth.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: アプリケーションの正常性を表します。 アプリケーションで集計された正常性状態と、サービスと、デプロイされたアプリケーションの正常性状態が含まれています。
+    extends:
+      name: '@azure/servicefabric.EntityHealth'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealth.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      正常性マネージャーによって計算されたエンティティの集計正常性状態を表す HealthState します。
+      エンティティの正常性評価では、エンティティとその子 (該当する場合) で報告されるすべてのイベントが反映されます。
+      集計は、目的の正常性ポリシーを適用することで行われます。 次のような値となる場合があります。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealth.deployedApplicationHealthStates'
+    name: deployedApplicationHealthStates
+    fullName: deployedApplicationHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 正常性ストアで見つかったとしてアプリケーション正常性状態を展開します。
+    optional: true
+    syntax:
+      content: 'deployedApplicationHealthStates?: DeployedApplicationHealthState[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationHealthState[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealth.healthEvents'
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: エンティティで報告される正常性イベントの一覧。
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealth.healthStatistics'
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 照会されたエンティティのすべての子の種類の正常性の統計情報を示します。
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - '@azure/servicefabric.HealthStatistics'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealth.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'アプリケーションの名前を含む、'' fabric:''URI スキームのないアプリケーションの完全な名前です。'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealth.serviceHealthStates'
+    name: serviceHealthStates
+    fullName: serviceHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 見つかったとして正常性ストアに、正常性の状態をサービスします。
+    optional: true
+    syntax:
+      content: 'serviceHealthStates?: ServiceHealthState[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceHealthState[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealth.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 現在の正常性状態に集計された理由を示す異常性の評価には、正常性マネージャーによってが返されました。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealth'
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: '@azure/servicefabric.EntityHealth'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthState[]'
+    name: 'DeployedApplicationHealthState[]'
+    spec.typeScript:
+      - name: DeployedApplicationHealthState
+        fullName: DeployedApplicationHealthState
+        uid: '@azure/servicefabric.DeployedApplicationHealthState'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: '@azure/servicefabric.HealthStatistics'
+  - uid: '@azure/servicefabric.ServiceHealthState[]'
+    name: 'ServiceHealthState[]'
+    spec.typeScript:
+      - name: ServiceHealthState
+        fullName: ServiceHealthState
+        uid: '@azure/servicefabric.ServiceHealthState'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'
