@@ -1,0 +1,135 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus'
+    name: SecondaryIdleReplicatorStatus
+    fullName: SecondaryIdleReplicatorStatus
+    children:
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.copyQueueStatus'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.isInBuild'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.kind'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastAcknowledgementSentTimeUtc'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastCopyOperationReceivedTimeUtc'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastReplicationOperationReceivedTimeUtc'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.replicationQueueStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: アイドル状態のモードではプライマリによってビルドしているときに、セカンダリ レプリケーターの状態です。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.copyQueueStatus'
+    name: copyQueueStatus
+    fullName: copyQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: セカンダリ レプリケーターのコピー キューに関する詳細です。
+    optional: true
+    syntax:
+      content: 'copyQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicatorQueueStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.isInBuild'
+    name: isInBuild
+    fullName: isInBuild
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: レプリカが現在ビルドされているかどうかを示す値。
+    optional: true
+    syntax:
+      content: 'isInBuild?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'kind: "IdleSecondary"'
+      return:
+        type:
+          - '"IdleSecondary"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastAcknowledgementSentTimeUtc'
+    name: lastAcknowledgementSentTimeUtc
+    fullName: lastAcknowledgementSentTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最後のタイムスタンプ (UTC)、プライマリ レプリケーターに送信された受信確認。
+      UTC 0 では、受信確認メッセージが送信されないことを示す、無効な値を表します。
+    optional: true
+    syntax:
+      content: 'lastAcknowledgementSentTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastCopyOperationReceivedTimeUtc'
+    name: lastCopyOperationReceivedTimeUtc
+    fullName: lastCopyOperationReceivedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最後のタイムスタンプ (UTC) がプライマリから受信したコピー操作。
+      UTC 0 は、コピー操作のメッセージが受信されたことを示す、無効な値を表します。
+    optional: true
+    syntax:
+      content: 'lastCopyOperationReceivedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastReplicationOperationReceivedTimeUtc'
+    name: lastReplicationOperationReceivedTimeUtc
+    fullName: lastReplicationOperationReceivedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最後のタイムスタンプ (UTC) がプライマリから受信されたレプリケーション操作。
+      UTC 0 は、レプリケーション操作のメッセージが受信されたことを示す、無効な値を表します。
+    optional: true
+    syntax:
+      content: 'lastReplicationOperationReceivedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.replicationQueueStatus'
+    name: replicationQueueStatus
+    fullName: replicationQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: セカンダリ レプリケーターのレプリケーション キューの詳細。
+    optional: true
+    syntax:
+      content: 'replicationQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicatorQueueStatus'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus'
+    name: ReplicatorQueueStatus
+    spec.typeScript:
+      - name: ReplicatorQueueStatus
+        fullName: ReplicatorQueueStatus
+        uid: '@azure/servicefabric.ReplicatorQueueStatus'

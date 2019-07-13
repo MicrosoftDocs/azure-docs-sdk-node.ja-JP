@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationLoadInfo'
+    name: ApplicationLoadInfo
+    fullName: ApplicationLoadInfo
+    children:
+      - '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+      - '@azure/servicefabric.ApplicationLoadInfo.id'
+      - '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    langs:
+      - typeScript
+    type: interface
+    summary: Service Fabric アプリケーションの情報を読み込みます。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+    name: applicationLoadMetricInformation
+    fullName: applicationLoadMetricInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アプリケーション容量メトリックの説明の一覧です。
+    optional: true
+    syntax:
+      content: 'applicationLoadMetricInformation?: ApplicationMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      アプリケーションの ID。 これは、アプリケーションの名前でエンコードされた表現です。
+      これは、REST Api では、アプリケーションのリソースを識別するために使用されます。
+      バージョン 6.0 以降、階層名はで区切られた、"\~"文字です。 たとえば、アプリケーション名が"fabric:/myapp/app1"、アプリケーション id になります"myapp\~app1"6.0 以降で"myapp/app1"以前のバージョン。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+    name: maximumNodes
+    fullName: maximumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      このアプリケーションをインスタンス化するノードの最大数。
+      またがるこのアプリケーションが許可されているノードの数になります。
+      アプリケーション容量が定義されていないアプリケーションは、この値を 0 となります。
+    optional: true
+    syntax:
+      content: 'maximumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+    name: minimumNodes
+    fullName: minimumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      このアプリケーションのノードの最小数。
+      Service Fabric ReservedLoad と同一クラスター内の容量を予約できる場所のノードの数とは * このアプリケーション インスタンスの MinimumNodes します。
+      アプリケーション容量が定義されていないアプリケーションは、この値を 0 となります。
+    optional: true
+    syntax:
+      content: 'minimumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    name: nodeCount
+    fullName: nodeCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      このアプリケーションがインスタンス化されるノードの数。
+      アプリケーション容量が定義されていないアプリケーションは、この値を 0 となります。
+    optional: true
+    syntax:
+      content: 'nodeCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription[]'
+    name: 'ApplicationMetricDescription[]'
+    spec.typeScript:
+      - name: ApplicationMetricDescription
+        fullName: ApplicationMetricDescription
+        uid: '@azure/servicefabric.ApplicationMetricDescription'
+      - name: '[]'
+        fullName: '[]'

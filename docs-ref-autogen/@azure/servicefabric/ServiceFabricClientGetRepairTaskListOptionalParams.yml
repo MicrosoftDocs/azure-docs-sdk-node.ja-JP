@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 省略可能なパラメーター。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -56,7 +56,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 要求したタスクを一覧に含める必要がある修復 Executor の名前。
     optional: true
     syntax:
       content: 'executorFilter?: undefined | string'
@@ -101,7 +101,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      どのタスクの状態を結果リストに含める必要があるかを指定する、次の値の bitwise-OR。
+      - 1 - 作成済み
+      - 2-要求
+      - 4-準備
+      - 8-承認
+      - 16-実行
+      - 32 ビットの復元
+      - 64 - 完了済み
     optional: true
     syntax:
       content: 'stateFilter?: undefined | number'
@@ -116,7 +124,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 照合される修復タスク ID プレフィックス。
     optional: true
     syntax:
       content: 'taskIdFilter?: undefined | string'

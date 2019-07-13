@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosEventsSegment'
+    name: ChaosEventsSegment
+    fullName: ChaosEventsSegment
+    children:
+      - '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+      - '@azure/servicefabric.ChaosEventsSegment.history'
+    langs:
+      - typeScript
+    type: interface
+    summary: 混乱イベントと、次のセグメントを取得する継続トークンの一覧が含まれています。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      継続トークンのパラメーターは、次の結果セットを取得するために使用されます。 システムからの結果が 1 つの応答に収まらないときに、継続トークンが API の応答に含まれます。 この値が次の API 呼び出しに渡されると、API が次の結果セットを返します。
+      それ以上の結果はありません、応答に継続トークンは含まれません。
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.history'
+    name: history
+    fullName: history
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ユーザーが指定した条件を満たす混乱イベントの一覧です。
+    optional: true
+    syntax:
+      content: 'history?: ChaosEventWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.ChaosEventWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ChaosEventWrapper[]'
+    name: 'ChaosEventWrapper[]'
+    spec.typeScript:
+      - name: ChaosEventWrapper
+        fullName: ChaosEventWrapper
+        uid: '@azure/servicefabric.ChaosEventWrapper'
+      - name: '[]'
+        fullName: '[]'

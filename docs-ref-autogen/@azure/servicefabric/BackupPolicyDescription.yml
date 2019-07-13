@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.BackupPolicyDescription'
+    name: BackupPolicyDescription
+    fullName: BackupPolicyDescription
+    children:
+      - '@azure/servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss'
+      - '@azure/servicefabric.BackupPolicyDescription.maxIncrementalBackups'
+      - '@azure/servicefabric.BackupPolicyDescription.name'
+      - '@azure/servicefabric.BackupPolicyDescription.retentionPolicy'
+      - '@azure/servicefabric.BackupPolicyDescription.schedule'
+      - '@azure/servicefabric.BackupPolicyDescription.storage'
+    langs:
+      - typeScript
+    type: interface
+    summary: 定期的なバックアップを構成するためのバックアップ ポリシーについて説明します。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss'
+    name: autoRestoreOnDataLoss
+    fullName: autoRestoreOnDataLoss
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パーティションでデータ損失イベントが発生した場合に、利用可能な最新のバックアップを使用して自動的に復元をトリガーするかどうかを指定します。
+    syntax:
+      content: 'autoRestoreOnDataLoss: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.maxIncrementalBackups'
+    name: maxIncrementalBackups
+    fullName: maxIncrementalBackups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      2 回の完全バックアップの間に実行される増分バックアップの最大数を定義します。 これは、上限の値だけです。 次の条件のいずれかに該当する場合は、指定した回数の増分バックアップが完了する前に、完全バックアップを実行できます。
+      - レプリカがプライマリになったため完全バックアップを取得しません。
+      - 最後のバックアップが切り捨てられたため、ログ レコードの一部または
+      - レプリカが MaxAccumulatedBackupLogSizeInMB 制限を超えた。
+    syntax:
+      content: 'maxIncrementalBackups: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このバックアップ ポリシーを識別する一意の名前。
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.retentionPolicy'
+    name: retentionPolicy
+    fullName: retentionPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 記憶域にバックアップを保持するポリシーについて説明します。
+    optional: true
+    syntax:
+      content: 'retentionPolicy?: RetentionPolicyDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.RetentionPolicyDescriptionUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.schedule'
+    name: schedule
+    fullName: schedule
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: バックアップ スケジュール パラメーターをについて説明します。
+    syntax:
+      content: 'schedule: BackupScheduleDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupScheduleDescriptionUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.storage'
+    name: storage
+    fullName: storage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 定期的なバックアップを格納する場所をバックアップ ストレージの詳細について説明します。
+    syntax:
+      content: 'storage: BackupStorageDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupStorageDescriptionUnion'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.RetentionPolicyDescriptionUnion'
+    name: RetentionPolicyDescriptionUnion
+    spec.typeScript:
+      - name: RetentionPolicyDescriptionUnion
+        fullName: RetentionPolicyDescriptionUnion
+        uid: '@azure/servicefabric.RetentionPolicyDescriptionUnion'
+  - uid: '@azure/servicefabric.BackupScheduleDescriptionUnion'
+    name: BackupScheduleDescriptionUnion
+    spec.typeScript:
+      - name: BackupScheduleDescriptionUnion
+        fullName: BackupScheduleDescriptionUnion
+        uid: '@azure/servicefabric.BackupScheduleDescriptionUnion'
+  - uid: '@azure/servicefabric.BackupStorageDescriptionUnion'
+    name: BackupStorageDescriptionUnion
+    spec.typeScript:
+      - name: BackupStorageDescriptionUnion
+        fullName: BackupStorageDescriptionUnion
+        uid: '@azure/servicefabric.BackupStorageDescriptionUnion'

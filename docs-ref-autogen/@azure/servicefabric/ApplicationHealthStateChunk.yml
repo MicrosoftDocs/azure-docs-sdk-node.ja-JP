@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk'
+    name: ApplicationHealthStateChunk
+    fullName: ApplicationHealthStateChunk
+    children:
+      - '@azure/servicefabric.ApplicationHealthStateChunk.applicationName'
+      - '@azure/servicefabric.ApplicationHealthStateChunk.applicationTypeName'
+      - '@azure/servicefabric.ApplicationHealthStateChunk.deployedApplicationHealthStateChunks'
+      - '@azure/servicefabric.ApplicationHealthStateChunk.healthState'
+      - '@azure/servicefabric.ApplicationHealthStateChunk.serviceHealthStateChunks'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      アプリケーションの正常性状態チャンクを表します。
+      アプリケーションの正常性状態チャンクは、アプリケーション名、その集計正常性状態とすべての子サービスを含み、クラスターの正常性チャンク クエリの説明でフィルターに該当するアプリケーションを展開します。
+    extends:
+      name: '@azure/servicefabric.EntityHealthStateChunk'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'アプリケーションの名前を含む、'' fabric:''URI スキームのないアプリケーションの完全な名前です。'
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.applicationTypeName'
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アプリケーション マニフェストで定義されているアプリケーションの種類名。
+    optional: true
+    syntax:
+      content: 'applicationTypeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.deployedApplicationHealthStateChunks'
+    name: deployedApplicationHealthStateChunks
+    fullName: deployedApplicationHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスターの正常性チャンク クエリの説明でフィルターに該当するクラスターにデプロイされたアプリケーションの正常性状態の一覧をチャンクします。
+    optional: true
+    syntax:
+      content: 'deployedApplicationHealthStateChunks?: DeployedApplicationHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationHealthStateChunkList'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.serviceHealthStateChunks'
+    name: serviceHealthStateChunks
+    fullName: serviceHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: サービスのヘルス状態の一覧は、クラスターの正常性チャンク クエリの説明でフィルターに該当するクラスターのチャンクです。
+    optional: true
+    syntax:
+      content: 'serviceHealthStateChunks?: ServiceHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceHealthStateChunkList'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthStateChunk'
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: '@azure/servicefabric.EntityHealthStateChunk'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateChunkList'
+    name: DeployedApplicationHealthStateChunkList
+    spec.typeScript:
+      - name: DeployedApplicationHealthStateChunkList
+        fullName: DeployedApplicationHealthStateChunkList
+        uid: '@azure/servicefabric.DeployedApplicationHealthStateChunkList'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ServiceHealthStateChunkList'
+    name: ServiceHealthStateChunkList
+    spec.typeScript:
+      - name: ServiceHealthStateChunkList
+        fullName: ServiceHealthStateChunkList
+        uid: '@azure/servicefabric.ServiceHealthStateChunkList'

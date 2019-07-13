@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthEvaluation'
+    name: DeployedApplicationHealthEvaluation
+    fullName: DeployedApplicationHealthEvaluation
+    children:
+      - '@azure/servicefabric.DeployedApplicationHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.DeployedApplicationHealthEvaluation.applicationName'
+      - '@azure/servicefabric.DeployedApplicationHealthEvaluation.description'
+      - '@azure/servicefabric.DeployedApplicationHealthEvaluation.kind'
+      - '@azure/servicefabric.DeployedApplicationHealthEvaluation.nodeName'
+      - '@azure/servicefabric.DeployedApplicationHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む、デプロイされたアプリケーションの正常性評価を表します。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthEvaluation.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'アプリケーションの名前を含む、'' fabric:''URI スキームのないアプリケーションの完全な名前です。'
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 評価プロセスの概要を表す正常性評価の説明です。
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ポリモーフィックな識別子
+    syntax:
+      content: 'kind: "DeployedApplication"'
+      return:
+        type:
+          - '"DeployedApplication"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthEvaluation.nodeName'
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アプリケーションのデプロイ先のノードの名前。
+    optional: true
+    syntax:
+      content: 'nodeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      デプロイされたアプリケーションの現在の集計正常性状態の原因となった異常性の評価のリスト。
+      DeployedServicePackagesHealthEvaluation または EventHealthEvaluation、異常性の評価の種類を指定できます。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

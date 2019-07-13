@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionLoadInformation'
+    name: PartitionLoadInformation
+    fullName: PartitionLoadInformation
+    children:
+      - '@azure/servicefabric.PartitionLoadInformation.partitionId'
+      - '@azure/servicefabric.PartitionLoadInformation.primaryLoadMetricReports'
+      - '@azure/servicefabric.PartitionLoadInformation.secondaryLoadMetricReports'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      表すでは、プライマリとセカンダリの報告される負荷メトリックを含むパーティションの情報を読み込めません。
+      報告される負荷がない場合に、パーティションのサービスの既定の負荷を PartitionLoadInformation が含まれます。
+      既定の負荷を LoadMetricReport の LastReportedUtc は 0 に設定されます。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: パーティションの id。
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.primaryLoadMetricReports'
+    name: primaryLoadMetricReports
+    fullName: primaryLoadMetricReports
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: このパーティションのプライマリ レプリカからの負荷レポートの配列。
+    optional: true
+    syntax:
+      content: 'primaryLoadMetricReports?: LoadMetricReport[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReport[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.secondaryLoadMetricReports'
+    name: secondaryLoadMetricReports
+    fullName: secondaryLoadMetricReports
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      このパーティションのすべてのセカンダリ レプリカからの負荷の集計レポートの配列。
+      配列には、各メトリックの報告された最新の負荷にはのみが含まれています。
+    optional: true
+    syntax:
+      content: 'secondaryLoadMetricReports?: LoadMetricReport[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReport[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.LoadMetricReport[]'
+    name: 'LoadMetricReport[]'
+    spec.typeScript:
+      - name: LoadMetricReport
+        fullName: LoadMetricReport
+        uid: '@azure/servicefabric.LoadMetricReport'
+      - name: '[]'
+        fullName: '[]'

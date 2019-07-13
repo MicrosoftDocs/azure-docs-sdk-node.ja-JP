@@ -1,0 +1,174 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription'
+    name: RollingUpgradeUpdateDescription
+    fullName: RollingUpgradeUpdateDescription
+    children:
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.failureAction'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.forceRestart'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: アプリケーションまたはクラスターのローリング アップグレードを更新するためのパラメーターについて説明します。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.failureAction'
+    name: failureAction
+    fullName: failureAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      監視対象のアップグレード ポリシーまたは正常性の監視ポリシー違反が発生したときに実行する補正アクション。
+      無効なは、指定したアクションが有効でないを示します。 ロールバックは、自動的にロールバックしてアップグレードを開始するを指定します。
+      手動では、アップグレードは UnmonitoredManual アップグレード モードに切り替えることを示します。 次のような値となる場合があります。' Invalid'、'Rollback'、'Manual'
+    optional: true
+    syntax:
+      content: 'failureAction?: FailureAction'
+      return:
+        type:
+          - '@azure/servicefabric.FailureAction'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.forceRestart'
+    name: forceRestart
+    fullName: forceRestart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: True の場合、し、プロセスが強制的に再起動アップグレード中に (構成の変更のみをアップグレードまたはデータ)、コードのバージョンが変更されていない場合でもです。
+    optional: true
+    syntax:
+      content: 'forceRestart?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds'
+    name: healthCheckRetryTimeoutInMilliseconds
+    fullName: healthCheckRetryTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 場合、アプリケーションまたはクラスターが正常でない FailureAction が実行される前に、正常性評価を再試行する時間。 最初に、ISO 8601 の期間を表す文字列として解釈されます。 それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。
+    optional: true
+    syntax:
+      content: 'healthCheckRetryTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds'
+    name: healthCheckStableDurationInMilliseconds
+    fullName: healthCheckStableDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アプリケーションまたはクラスターが正常な状態である必要がある時間。この時間を超えると、アップグレードが次のアップグレード ドメインに進みます。 最初に、ISO 8601 の期間を表す文字列として解釈されます。 それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。
+    optional: true
+    syntax:
+      content: 'healthCheckStableDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds'
+    name: healthCheckWaitDurationInMilliseconds
+    fullName: healthCheckWaitDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ドメインのアップグレードを完了後、待機する時間。この時間を超えると、正常性ポリシーが適用されます。
+      最初に、ISO 8601 の期間を表す文字列として解釈されます。 それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。
+    optional: true
+    syntax:
+      content: 'healthCheckWaitDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds'
+    name: replicaSetCheckTimeoutInMilliseconds
+    fullName: replicaSetCheckTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      アップグレード ドメインの処理をブロックし、予期しない問題が発生したときに可用性の損失を防ぐための最長時間。 このタイムアウトが期限切れになると、可用性の損失問題に関係なく、アップグレード ドメインの処理が続行されます。 タイムアウトは、各アップグレード ドメインの開始時にリセットされます。 有効な値は 0 から 42949672925 の範囲です (0 と 42949672925 を含みます)。
+      (符号なし 32 ビット整数)。
+    optional: true
+    syntax:
+      content: 'replicaSetCheckTimeoutInMilliseconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode'
+    name: rollingUpgradeMode
+    fullName: rollingUpgradeMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ローリング アップグレード時に正常性を監視するために使用されるモード。 値は UnmonitoredAuto、UnmonitoredManual、および監視対象です。 次のような値となる場合があります。'' Invalid''、''UnmonitoredAuto''、''UnmonitoredManual''、''監視''。 ［既定値］:'' UnmonitoredAuto''。'
+    syntax:
+      content: 'rollingUpgradeMode: UpgradeMode'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds'
+    name: upgradeDomainTimeoutInMilliseconds
+    fullName: upgradeDomainTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 各ドメインがアップグレードを完了する必要がある時間。この時間を超えると、FailureAction が実行されます。 最初に、ISO 8601 の期間を表す文字列として解釈されます。 それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。
+    optional: true
+    syntax:
+      content: 'upgradeDomainTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds'
+    name: upgradeTimeoutInMilliseconds
+    fullName: upgradeTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: アップグレード全体を完了する必要がある時間。この時間を超えると、FailureAction が実行されます。 最初に、ISO 8601 の期間を表す文字列として解釈されます。 それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。
+    optional: true
+    syntax:
+      content: 'upgradeTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.FailureAction'
+    name: FailureAction
+    spec.typeScript:
+      - name: FailureAction
+        fullName: FailureAction
+        uid: '@azure/servicefabric.FailureAction'
+  - uid: '@azure/servicefabric.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/servicefabric.UpgradeMode'

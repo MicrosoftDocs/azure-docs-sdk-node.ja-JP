@@ -1,0 +1,271 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.HealthEvent'
+    name: HealthEvent
+    fullName: HealthEvent
+    children:
+      - '@azure/servicefabric.HealthEvent.description'
+      - '@azure/servicefabric.HealthEvent.healthState'
+      - '@azure/servicefabric.HealthEvent.isExpired'
+      - '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
+      - '@azure/servicefabric.HealthEvent.lastModifiedUtcTimestamp'
+      - '@azure/servicefabric.HealthEvent.lastOkTransitionAt'
+      - '@azure/servicefabric.HealthEvent.lastWarningTransitionAt'
+      - '@azure/servicefabric.HealthEvent.property'
+      - '@azure/servicefabric.HealthEvent.removeWhenExpired'
+      - '@azure/servicefabric.HealthEvent.sequenceNumber'
+      - '@azure/servicefabric.HealthEvent.sourceId'
+      - '@azure/servicefabric.HealthEvent.sourceUtcTimestamp'
+      - '@azure/servicefabric.HealthEvent.timeToLiveInMilliSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: 正常性マネージャーによって追加された追加のメタデータを持つクラスター、アプリケーション ノードなどの正常性エンティティで報告される正常性の情報を表します。
+    extends:
+      name: '@azure/servicefabric.HealthInformation'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      正常性情報の説明。 レポートについて人間が判読できる情報を追加するために使用するフリー テキストを表します。
+      この説明の文字列の最大長は 4,096 文字です。
+      指定された文字列が長い場合は、自動的に切り捨てられます。
+      切り捨てられると、説明の末尾の文字には "[切り捨て]" というマーカーが含まれ、文字列の合計サイズが 4,096 文字になります。
+      このマーカーの存在は、切り捨てが発生したことをユーザーに示します。
+      切り捨てられた場合、説明に含まれるのは元の文字列のうち 4,096 文字未満であることに注意してください。
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。'Invalid'、'Ok'、'警告'、'Error'、'Unknown'
+    syntax:
+      content: 'healthState: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.isExpired'
+    name: isExpired
+    fullName: isExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 正常性イベントが有効期限が切れた場合に true を返します。
+    optional: true
+    syntax:
+      content: 'isExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
+    name: lastErrorTransitionAt
+    fullName: lastErrorTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      現在の正常性状態が「エラー」の場合は、このプロパティは、位置、正常性レポートを「エラー」で最初に報告された日時を返します。 定期的なレポートの場合は、同じ状態を持つ多数のレポートが生成された可能性がただし、このプロパティは、日付とエラーの正常性レポートを受信した最初の時刻のみを返します。
+      現在の正常性状態が"Ok"または「警告」の場合は、日付と時刻を別の状態に遷移する前に「エラー」の最後にされた正常性状態を返します。
+
+      正常性状態が「エラー」されなかった、値がゼロの日付と時刻になります。
+    optional: true
+    syntax:
+      content: 'lastErrorTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastModifiedUtcTimestamp'
+    name: lastModifiedUtcTimestamp
+    fullName: lastModifiedUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 日付と時間、正常性レポートが正常性ストアによって最終変更された日時。
+    optional: true
+    syntax:
+      content: 'lastModifiedUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastOkTransitionAt'
+    name: lastOkTransitionAt
+    fullName: lastOkTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      現在の正常性状態が"Ok"の場合は、このプロパティは、位置、正常性レポートを 'Ok' で最初に報告された日時を返します。
+      定期的なレポートの場合は、同じ状態を持つ多数のレポートが生成された可能性が。
+      このプロパティは、[Ok] の最初の正常性レポートが受信した日時を返します。
+      現在の正常性状態が「エラー」または「警告」の場合は、日付と時刻の正常性状態が別の状態に遷移する前に Ok、最後に位置を返します。
+
+      正常性の状態が 'Ok' されなかった場合、値がゼロの日付と時刻になります。
+    optional: true
+    syntax:
+      content: 'lastOkTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastWarningTransitionAt'
+    name: lastWarningTransitionAt
+    fullName: lastWarningTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      現在のヘルス状態が '警告'、このプロパティは位置の正常性レポートを「警告」に最初に報告された日時を返します。 定期的なレポートの場合は、同じ状態を持つ多数のレポートが生成された可能性がただし、このプロパティは、日付と時刻が「警告」の最初の正常性レポートでのみが受信したを返します。
+      現在の正常性状態が"Ok"または「エラー」の場合は、日付と時刻の正常性状態が別の状態に遷移する前に '警告'、最後に位置を返します。
+
+      正常性状態が決して '警告'、値がゼロの日付と時刻になります。
+    optional: true
+    syntax:
+      content: 'lastWarningTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.property'
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      正常性情報のプロパティ。 エンティティには、さまざまなプロパティの正常性レポートを含めることができます。
+      このプロパティは固定値列挙型ではなく文字列で、これにより、レポーターは、レポートをトリガーする状態の条件を柔軟に分類できます。
+      たとえば、SourceId が "LocalWatchdog" のレポーターは、ノード上で使用可能なディスクの状態を監視できるため、そのノードの "AvailableDisk" プロパティをレポートできます。
+      同じレポーターは、ノードの接続性を監視できるため、同じノードの "Connectivity" プロパティをレポートできます。
+      正常性ストアでは、これらのレポートは、指定されたノードの個々の正常性イベントとして扱われます。
+      このプロパティは SourceId と共に、正常性情報を一意に識別します。
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.removeWhenExpired'
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      有効期限が切れたときにレポートを正常性ストアから削除するかどうかを示す値。
+      true に設定した場合、レポートは、有効期限が切れると正常性ストアから削除されます。
+      false に設定した場合、レポートは、有効期限が切れるとエラーとして処理されます。 既定では、このプロパティの値は false です。
+      クライアントは、定期的にレポートする場合、RemoveWhenExpired を false (既定値) に設定する必要があります。
+      これにより、レポーターは、問題 (デッドロックなど) を備え、報告することはできません、エンティティと評価されますエラーで正常性レポートの有効期限が切れます。
+      これにより、このエンティティの正常性はエラー状態と見なされます。
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      数値文字列で表された、この正常性レポートのシーケンス番号。
+      レポートのシーケンス番号は、古いレポートを検出するために正常性ストアによって使用されます。
+      指定しない場合、シーケンス番号は、レポートが追加されたときに正常性クライアントによって自動的に生成されます。
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sourceId'
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 正常性に関する情報を生成したクライアント/ウォッチドッグ/システム コンポーネントを識別するソース名。
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sourceUtcTimestamp'
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 日付と正常性レポートに、ソースによって送信された時刻。
+    optional: true
+    syntax:
+      content: 'sourceUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.timeToLiveInMilliSeconds'
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      この正常性レポートの有効期間。 このフィールドでは、この期間の指定に ISO8601 形式が使用されます。
+      クライアントは、定期的にレポートする場合、レポートの送信頻度を有効期間よりも高くする必要があります。
+      クライアントは、遷移時にレポートする場合、有効期間を無限に設定できます。
+      有効期間が期限切れになると、正常性に関する情報を含む正常性イベントは、正常性ストアから削除される (RemoveWhenExpired が true の場合) か、エラーと評価されます (RemoveWhenExpired が false の場合)。
+      指定しない場合、有効期間の既定値は無限になります。
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthInformation'
+    name: HealthInformation
+    spec.typeScript:
+      - name: HealthInformation
+        fullName: HealthInformation
+        uid: '@azure/servicefabric.HealthInformation'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
