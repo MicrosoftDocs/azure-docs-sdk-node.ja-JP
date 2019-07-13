@@ -18,6 +18,8 @@ items:
       - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.sendOperationRequest'
       - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.sendRequest'
       - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.subscriptionId'
+      - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.usages'
+      - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.virtualMachineSizes'
       - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.workspaces'
     langs:
       - typeScript
@@ -61,18 +63,18 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="4ead9-101">AzureMachineLearningWorkspaces クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="4ead9-101">Initializes a new instance of the AzureMachineLearningWorkspaces class.</span></span>
+    summary: <span data-ttu-id="2fb20-101">AzureMachineLearningWorkspaces クラスの新しいインスタンスを初期化します。</span><span class="sxs-lookup"><span data-stu-id="2fb20-101">Initializes a new instance of the AzureMachineLearningWorkspaces class.</span></span>
     syntax:
       content: 'new AzureMachineLearningWorkspaces(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.AzureMachineLearningWorkspacesOptions)'
       parameters:
         - id: credentials
           type:
             - ServiceClientCredentials
-          description: <span data-ttu-id="4ead9-102">Azure に接続するクライアントに必要な資格情報。</span><span class="sxs-lookup"><span data-stu-id="4ead9-102">Credentials needed for the client to connect to Azure.</span></span>
+          description: <span data-ttu-id="2fb20-102">Azure に接続するクライアントに必要な資格情報。</span><span class="sxs-lookup"><span data-stu-id="2fb20-102">Credentials needed for the client to connect to Azure.</span></span>
         - id: subscriptionId
           type:
             - string
-          description: <span data-ttu-id="4ead9-103">Azure サブスクリプションの識別子です。</span><span class="sxs-lookup"><span data-stu-id="4ead9-103">Azure subscription identifier.</span></span>
+          description: <span data-ttu-id="2fb20-103">Azure サブスクリプションの識別子です。</span><span class="sxs-lookup"><span data-stu-id="2fb20-103">Azure subscription identifier.</span></span>
         - id: options
           type:
             - Models.AzureMachineLearningWorkspacesOptions
@@ -85,14 +87,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="4ead9-104">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、HttpLongRunningOperationResponse を取得します。</span><span class="sxs-lookup"><span data-stu-id="4ead9-104">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="2fb20-104">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、HttpLongRunningOperationResponse を取得します。</span><span class="sxs-lookup"><span data-stu-id="2fb20-104">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="4ead9-105">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="4ead9-105">The request object</span></span>
+          description: <span data-ttu-id="2fb20-105">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="2fb20-105">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -123,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4ead9-106">長時間実行される操作の秒の再試行タイムアウト。</span><span class="sxs-lookup"><span data-stu-id="4ead9-106">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="4ead9-107">既定値は 30 です。</span><span class="sxs-lookup"><span data-stu-id="4ead9-107">Default value is 30.</span></span>
+    summary: <span data-ttu-id="2fb20-106">長時間実行される操作の秒の再試行タイムアウト。</span><span class="sxs-lookup"><span data-stu-id="2fb20-106">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="2fb20-107">既定値は 30 です。</span><span class="sxs-lookup"><span data-stu-id="2fb20-107">Default value is 30.</span></span>
     optional: true
     syntax:
       content: 'longRunningOperationRetryTimeout?: undefined | number'
@@ -165,7 +167,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="4ead9-108">指定された LROPollState から、LROPoller を復元します。</span><span class="sxs-lookup"><span data-stu-id="4ead9-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="4ead9-109">このメソッドは、別のプロセスやマシンで、LROPoller を再作成に使用できます。</span><span class="sxs-lookup"><span data-stu-id="4ead9-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    summary: <span data-ttu-id="2fb20-108">指定された LROPollState から、LROPoller を復元します。</span><span class="sxs-lookup"><span data-stu-id="2fb20-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="2fb20-109">このメソッドは、別のプロセスやマシンで、LROPoller を再作成に使用できます。</span><span class="sxs-lookup"><span data-stu-id="2fb20-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
     syntax:
       content: 'function restoreLROPoller(lroPollState: LROPollState)'
       parameters:
@@ -183,14 +185,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="4ead9-110">ポーリングされ、最終的な結果を提供する要求を作成するためのメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="4ead9-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    summary: <span data-ttu-id="2fb20-110">ポーリングされ、最終的な結果を提供する要求を作成するためのメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="2fb20-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
     syntax:
       content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="4ead9-111">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="4ead9-111">The request object</span></span>
+          description: <span data-ttu-id="2fb20-111">要求オブジェクト</span><span class="sxs-lookup"><span data-stu-id="2fb20-111">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -206,22 +208,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="4ead9-112">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、LROPoller を取得します。</span><span class="sxs-lookup"><span data-stu-id="4ead9-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="2fb20-112">(操作の実行時間が長い) LRO の最初の要求を送信し、LRO をポーリングし、LRO が終了したかどうかをチェックするメソッドを提供する、LROPoller を取得します。</span><span class="sxs-lookup"><span data-stu-id="2fb20-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="4ead9-113">操作の引数。</span><span class="sxs-lookup"><span data-stu-id="4ead9-113">The arguments to the operation.</span></span>
+          description: <span data-ttu-id="2fb20-113">操作の引数。</span><span class="sxs-lookup"><span data-stu-id="2fb20-113">The arguments to the operation.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="4ead9-114">操作を指定します。</span><span class="sxs-lookup"><span data-stu-id="4ead9-114">The specification for the operation.</span></span>
+          description: <span data-ttu-id="2fb20-114">操作を指定します。</span><span class="sxs-lookup"><span data-stu-id="2fb20-114">The specification for the operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="4ead9-115">要求時に送信される追加のオプション。</span><span class="sxs-lookup"><span data-stu-id="4ead9-115">Additional options to be sent while making the request.</span></span>
+          description: <span data-ttu-id="2fb20-115">要求時に送信される追加のオプション。</span><span class="sxs-lookup"><span data-stu-id="2fb20-115">Additional options to be sent while making the request.</span></span>
           optional: true
       return:
         type:
@@ -233,23 +235,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="4ead9-116">指定された OperationSpec を使用して設定される HTTP 要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="4ead9-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    summary: <span data-ttu-id="2fb20-116">指定された OperationSpec を使用して設定される HTTP 要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="2fb20-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
     syntax:
       content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="4ead9-117">この引数から HTTP 要求のテンプレート化された値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="4ead9-117">The arguments that the HTTP request's templated values will be populated from.</span></span>
+          description: <span data-ttu-id="2fb20-117">この引数から HTTP 要求のテンプレート化された値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="2fb20-117">The arguments that the HTTP request's templated values will be populated from.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="4ead9-118">使用して設定、httpRequest OperationSpec します。</span><span class="sxs-lookup"><span data-stu-id="4ead9-118">The OperationSpec to use to populate the httpRequest.</span></span>
+          description: <span data-ttu-id="2fb20-118">使用して設定、httpRequest OperationSpec します。</span><span class="sxs-lookup"><span data-stu-id="2fb20-118">The OperationSpec to use to populate the httpRequest.</span></span>
         - id: callback
           type:
             - ServiceCallback<any>
           description: |
-            <span data-ttu-id="4ead9-119">応答が受信されたときに呼び出すコールバック。</span><span class="sxs-lookup"><span data-stu-id="4ead9-119">The callback to call when the response is received.</span></span>
+            <span data-ttu-id="2fb20-119">応答が受信されたときに呼び出すコールバック。</span><span class="sxs-lookup"><span data-stu-id="2fb20-119">The callback to call when the response is received.</span></span>
           optional: true
       return:
         type:
@@ -261,7 +263,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="4ead9-120">指定された httpRequest を送信します。</span><span class="sxs-lookup"><span data-stu-id="4ead9-120">Send the provided httpRequest.</span></span>
+    summary: <span data-ttu-id="2fb20-120">指定された httpRequest を送信します。</span><span class="sxs-lookup"><span data-stu-id="2fb20-120">Send the provided httpRequest.</span></span>
     syntax:
       content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
       parameters:
@@ -286,6 +288,34 @@ items:
       return:
         type:
           - string
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.usages'
+    name: usages
+    fullName: usages
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'usages: Usages'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.Usages'
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.virtualMachineSizes'
+    name: virtualMachineSizes
+    fullName: virtualMachineSizes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'virtualMachineSizes: VirtualMachineSizes'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.VirtualMachineSizes'
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.workspaces'
     name: workspaces
@@ -320,6 +350,18 @@ references:
       - name: Operations
         fullName: Operations
         uid: '@azure/arm-machinelearningservices.Operations'
+  - uid: '@azure/arm-machinelearningservices.Usages'
+    name: Usages
+    spec.typeScript:
+      - name: Usages
+        fullName: Usages
+        uid: '@azure/arm-machinelearningservices.Usages'
+  - uid: '@azure/arm-machinelearningservices.VirtualMachineSizes'
+    name: VirtualMachineSizes
+    spec.typeScript:
+      - name: VirtualMachineSizes
+        fullName: VirtualMachineSizes
+        uid: '@azure/arm-machinelearningservices.VirtualMachineSizes'
   - uid: '@azure/arm-machinelearningservices.Workspaces'
     name: Workspaces
     spec.typeScript:

@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="a3a62-101">省略可能なパラメーター。</span><span class="sxs-lookup"><span data-stu-id="a3a62-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -27,7 +27,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="119ac-101">要求を中止するために使用される信号。</span><span class="sxs-lookup"><span data-stu-id="119ac-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="a3a62-102">要求を中止するために使用される信号。</span><span class="sxs-lookup"><span data-stu-id="a3a62-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -42,7 +42,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="119ac-102">{オブジェクト}[customHeaders]ユーザーは、要求が送信される前に適用されるカスタム要求ヘッダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="119ac-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="a3a62-103">{オブジェクト}[customHeaders]ユーザーは、要求が送信される前に適用されるカスタム要求ヘッダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="a3a62-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -57,7 +57,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="119ac-103">ダウンロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="119ac-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="a3a62-104">ダウンロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="a3a62-104">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -72,7 +72,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="119ac-104">アップロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="119ac-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="a3a62-105">アップロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="a3a62-105">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -87,7 +87,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="a3a62-106">パーティションのキーの種類。</span><span class="sxs-lookup"><span data-stu-id="a3a62-106">Key type for the partition.</span></span> <span data-ttu-id="a3a62-107">このパラメーターは、サービスのパーティション構成が Int64Range または Named の場合に必要です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-107">This parameter is required if the partition scheme for the service is Int64Range or Named.</span></span> <span data-ttu-id="a3a62-108">指定できる値は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="a3a62-108">The possible values are following.</span></span>
+      - <span data-ttu-id="a3a62-109">None (1) には、PartitionKeyValue パラメーターが指定されていないことを示します。</span><span class="sxs-lookup"><span data-stu-id="a3a62-109">None (1) - Indicates that the PartitionKeyValue parameter is not specified.</span></span> <span data-ttu-id="a3a62-110">これは、パーティション構成が Singleton のパーティションに有効です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-110">This is valid for the partitions with partitioning scheme as Singleton.</span></span> <span data-ttu-id="a3a62-111">これが既定値です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-111">This is the default value.</span></span> <span data-ttu-id="a3a62-112">値は 1 です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-112">The value is 1.</span></span>
+      - <span data-ttu-id="a3a62-113">Int64Range (2) - PartitionKeyValue パラメーターが int64 パーティション キーであることを示します。</span><span class="sxs-lookup"><span data-stu-id="a3a62-113">Int64Range (2) - Indicates that the PartitionKeyValue parameter is an int64 partition key.</span></span>
+      <span data-ttu-id="a3a62-114">これは、パーティション構成が Int64Range のパーティションに有効です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-114">This is valid for the partitions with partitioning scheme as Int64Range.</span></span> <span data-ttu-id="a3a62-115">値は 2 です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-115">The value is 2.</span></span>
+      - <span data-ttu-id="a3a62-116">Named (3) - PartitionKeyValue パラメーターがパーティションの名前であることを示します。</span><span class="sxs-lookup"><span data-stu-id="a3a62-116">Named (3) - Indicates that the PartitionKeyValue parameter is a name of the partition.</span></span> <span data-ttu-id="a3a62-117">これは、パーティション構成が Named のパーティションに有効です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-117">This is valid for the partitions with partitioning scheme as Named.</span></span> <span data-ttu-id="a3a62-118">値は 3 です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-118">The value is 3.</span></span>
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +107,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="a3a62-119">パーティション キー。</span><span class="sxs-lookup"><span data-stu-id="a3a62-119">Partition key.</span></span> <span data-ttu-id="a3a62-120">これは、サービスのパーティション構成が Int64Range または Named の場合に必要です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-120">This is required if the partition scheme for the service is Int64Range or Named.</span></span>
+      <span data-ttu-id="a3a62-121">これは、パーティション ID ではなく、整数キー値かパーティション ID の名前のどちらかになります。</span><span class="sxs-lookup"><span data-stu-id="a3a62-121">This is not the partition ID, but rather, either the integer key value, or the name of the partition ID.</span></span>
+      <span data-ttu-id="a3a62-122">たとえば、サービスは、0 から 10 の範囲パーティションを使用している場合、PartitionKeyValue はその範囲内の整数になります。</span><span class="sxs-lookup"><span data-stu-id="a3a62-122">For example, if your service is using ranged partitions from 0 to 10, then they PartitionKeyValue would be an integer in that range.</span></span> <span data-ttu-id="a3a62-123">サービスの説明のクエリを実行して、範囲または名前を表示します。</span><span class="sxs-lookup"><span data-stu-id="a3a62-123">Query service description to see the range or name.</span></span>
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: <span data-ttu-id="a3a62-124">以前に受け取った応答のバージョン フィールドの値。</span><span class="sxs-lookup"><span data-stu-id="a3a62-124">The value in the Version field of the response that was received previously.</span></span> <span data-ttu-id="a3a62-125">これは、以前に取得した結果が古くなっていることをユーザーが知っている場合に必要です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-125">This is required if the user knows that the result that was gotten previously is stale.</span></span>
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -132,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="119ac-105">要求が自動的に終了されるまでにかかる時間をミリ秒単位の数。</span><span class="sxs-lookup"><span data-stu-id="119ac-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="a3a62-126">要求が自動的に終了されるまでにかかる時間をミリ秒単位の数。</span><span class="sxs-lookup"><span data-stu-id="a3a62-126">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -147,7 +155,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="a3a62-127">秒単位で、操作を実行するためのサーバーのタイムアウト。</span><span class="sxs-lookup"><span data-stu-id="a3a62-127">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="a3a62-128">このタイムアウトは、クライアントが要求された操作が完了するを待機する期間を指定します。</span><span class="sxs-lookup"><span data-stu-id="a3a62-128">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="a3a62-129">このパラメーターの既定値は、60 秒です。</span><span class="sxs-lookup"><span data-stu-id="a3a62-129">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="a3a62-130">［既定値］:60.</span><span class="sxs-lookup"><span data-stu-id="a3a62-130">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

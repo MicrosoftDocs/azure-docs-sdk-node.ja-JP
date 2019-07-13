@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription'
+    name: MonitoringPolicyDescription
+    fullName: MonitoringPolicyDescription
+    children:
+      - '@azure/servicefabric.MonitoringPolicyDescription.failureAction'
+      - '@azure/servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="3e189-101">監視対象モードでアップグレードを監視するためのパラメーターについて説明します。</span><span class="sxs-lookup"><span data-stu-id="3e189-101">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.failureAction'
+    name: failureAction
+    fullName: failureAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3e189-102">監視対象のアップグレード ポリシーまたは正常性の監視ポリシー違反が発生したときに実行する補正アクション。</span><span class="sxs-lookup"><span data-stu-id="3e189-102">The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations.</span></span>
+      <span data-ttu-id="3e189-103">無効なは、指定したアクションが有効でないを示します。</span><span class="sxs-lookup"><span data-stu-id="3e189-103">Invalid indicates the failure action is invalid.</span></span> <span data-ttu-id="3e189-104">ロールバックは、自動的にロールバックしてアップグレードを開始するを指定します。</span><span class="sxs-lookup"><span data-stu-id="3e189-104">Rollback specifies that the upgrade will start rolling back automatically.</span></span>
+      <span data-ttu-id="3e189-105">手動では、アップグレードは UnmonitoredManual アップグレード モードに切り替えることを示します。</span><span class="sxs-lookup"><span data-stu-id="3e189-105">Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.</span></span> <span data-ttu-id="3e189-106">次のような値となる場合があります。' Invalid'、'Rollback'、'Manual'</span><span class="sxs-lookup"><span data-stu-id="3e189-106">Possible values include: 'Invalid', 'Rollback', 'Manual'</span></span>
+    optional: true
+    syntax:
+      content: 'failureAction?: FailureAction'
+      return:
+        type:
+          - '@azure/servicefabric.FailureAction'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds'
+    name: healthCheckRetryTimeoutInMilliseconds
+    fullName: healthCheckRetryTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3e189-107">場合、アプリケーションまたはクラスターが正常でない FailureAction が実行される前に、正常性評価を再試行する時間。</span><span class="sxs-lookup"><span data-stu-id="3e189-107">The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed.</span></span> <span data-ttu-id="3e189-108">最初に、ISO 8601 の期間を表す文字列として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-108">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="3e189-109">それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-109">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'healthCheckRetryTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds'
+    name: healthCheckStableDurationInMilliseconds
+    fullName: healthCheckStableDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3e189-110">アプリケーションまたはクラスターが正常な状態である必要がある時間。この時間を超えると、アップグレードが次のアップグレード ドメインに進みます。</span><span class="sxs-lookup"><span data-stu-id="3e189-110">The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain.</span></span> <span data-ttu-id="3e189-111">最初に、ISO 8601 の期間を表す文字列として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-111">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="3e189-112">それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-112">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'healthCheckStableDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds'
+    name: healthCheckWaitDurationInMilliseconds
+    fullName: healthCheckWaitDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="3e189-113">ドメインのアップグレードを完了後、待機する時間。この時間を超えると、正常性ポリシーが適用されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-113">The amount of time to wait after completing an upgrade domain before applying health policies.</span></span>
+      <span data-ttu-id="3e189-114">最初に、ISO 8601 の期間を表す文字列として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-114">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="3e189-115">それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-115">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+    optional: true
+    syntax:
+      content: 'healthCheckWaitDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds'
+    name: upgradeDomainTimeoutInMilliseconds
+    fullName: upgradeDomainTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3e189-116">各ドメインがアップグレードを完了する必要がある時間。この時間を超えると、FailureAction が実行されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-116">The amount of time each upgrade domain has to complete before FailureAction is executed.</span></span> <span data-ttu-id="3e189-117">最初に、ISO 8601 の期間を表す文字列として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-117">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="3e189-118">それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-118">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'upgradeDomainTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds'
+    name: upgradeTimeoutInMilliseconds
+    fullName: upgradeTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3e189-119">アップグレード全体を完了する必要がある時間。この時間を超えると、FailureAction が実行されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-119">The amount of time the overall upgrade has to complete before FailureAction is executed.</span></span> <span data-ttu-id="3e189-120">最初に、ISO 8601 の期間を表す文字列として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-120">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="3e189-121">それが失敗した場合、ミリ秒単位の合計数を表す数値として解釈されます。</span><span class="sxs-lookup"><span data-stu-id="3e189-121">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'upgradeTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.FailureAction'
+    name: FailureAction
+    spec.typeScript:
+      - name: FailureAction
+        fullName: FailureAction
+        uid: '@azure/servicefabric.FailureAction'

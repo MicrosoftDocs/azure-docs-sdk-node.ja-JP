@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+    name: ServiceTypeHealthPolicy
+    fullName: ServiceTypeHealthPolicy
+    children:
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="99e72-101">あるサービスの種類に属するサービスの正常性を評価するために使用される正常性ポリシーを表します。</span><span class="sxs-lookup"><span data-stu-id="99e72-101">Represents the health policy used to evaluate the health of services belonging to a service type.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+    name: maxPercentUnhealthyPartitionsPerService
+    fullName: maxPercentUnhealthyPartitionsPerService
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="99e72-102">サービスごとの異常なパーティションの割合が最大です。</span><span class="sxs-lookup"><span data-stu-id="99e72-102">The maximum allowed percentage of unhealthy partitions per service.</span></span> <span data-ttu-id="99e72-103">使用できる値は 0 から 100 の割合が許容最大値を表すバイト値可能性のあるサービスの前に正常なパーティションのパーセンテージがエラーと見なされます。</span><span class="sxs-lookup"><span data-stu-id="99e72-103">Allowed values are Byte values from zero to 100 The percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.</span></span>
+      <span data-ttu-id="99e72-104">割合が順守される少なくとも 1 つの異常なパーティションがある場合、正常性は Warning として評価します。</span><span class="sxs-lookup"><span data-stu-id="99e72-104">If the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="99e72-105">割合が異常なパーティションの数をサービスのパーティションの総数で割ることによって計算されます。</span><span class="sxs-lookup"><span data-stu-id="99e72-105">The percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.</span></span>
+      <span data-ttu-id="99e72-106">パーティション数が少ないの 1 つの障害を許容するように切り上げ、計算されます。</span><span class="sxs-lookup"><span data-stu-id="99e72-106">The computation rounds up to tolerate one failure on small numbers of partitions.</span></span> <span data-ttu-id="99e72-107">既定のパーセンテージは 0 です。</span><span class="sxs-lookup"><span data-stu-id="99e72-107">Default percentage is zero.</span></span> <span data-ttu-id="99e72-108">［既定値］:0.</span><span class="sxs-lookup"><span data-stu-id="99e72-108">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyPartitionsPerService?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+    name: maxPercentUnhealthyReplicasPerPartition
+    fullName: maxPercentUnhealthyReplicasPerPartition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="99e72-109">パーティションごとに異常なレプリカの割合が最大です。</span><span class="sxs-lookup"><span data-stu-id="99e72-109">The maximum allowed percentage of unhealthy replicas per partition.</span></span> <span data-ttu-id="99e72-110">許可されている値は 0 から 100 までのバイト値です。</span><span class="sxs-lookup"><span data-stu-id="99e72-110">Allowed values are Byte values from zero to 100.</span></span>
+      <span data-ttu-id="99e72-111">割合は、可能性のある正常なパーティションがエラーと見なされる前にレプリカの最大許容パーセンテージを表します。</span><span class="sxs-lookup"><span data-stu-id="99e72-111">The percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.</span></span>
+      <span data-ttu-id="99e72-112">割合が順守される少なくとも 1 つの異常なレプリカがある場合、正常性は Warning として評価します。</span><span class="sxs-lookup"><span data-stu-id="99e72-112">If the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="99e72-113">割合が異常なレプリカの数、パーティション内のレプリカの合計数で割ることによって計算されます。</span><span class="sxs-lookup"><span data-stu-id="99e72-113">The percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.</span></span>
+      <span data-ttu-id="99e72-114">レプリカ数が少ないの 1 つの障害を許容するように切り上げ、計算されます。</span><span class="sxs-lookup"><span data-stu-id="99e72-114">The computation rounds up to tolerate one failure on small numbers of replicas.</span></span> <span data-ttu-id="99e72-115">既定のパーセンテージは 0 です。</span><span class="sxs-lookup"><span data-stu-id="99e72-115">Default percentage is zero.</span></span> <span data-ttu-id="99e72-116">［既定値］:0.</span><span class="sxs-lookup"><span data-stu-id="99e72-116">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyReplicasPerPartition?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    name: maxPercentUnhealthyServices
+    fullName: maxPercentUnhealthyServices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="99e72-117">異常なサービスの割合が最大です。</span><span class="sxs-lookup"><span data-stu-id="99e72-117">The maximum allowed percentage of unhealthy services.</span></span> <span data-ttu-id="99e72-118">許可されている値は 0 から 100 までのバイト値です。</span><span class="sxs-lookup"><span data-stu-id="99e72-118">Allowed values are Byte values from zero to 100.</span></span>
+      <span data-ttu-id="99e72-119">可能性のある正常なアプリケーションがエラーと見なされる前にサービスの最大許容パーセンテージを表します。</span><span class="sxs-lookup"><span data-stu-id="99e72-119">The percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.</span></span>
+      <span data-ttu-id="99e72-120">割合が順守される少なくとも 1 つの異常なサービスがある場合、正常性は Warning として評価します。</span><span class="sxs-lookup"><span data-stu-id="99e72-120">If the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="99e72-121">これは、特定のサービスの種類の異常なサービスの数を特定のサービス型のサービスの合計数で割ることによって計算されます。</span><span class="sxs-lookup"><span data-stu-id="99e72-121">This is calculated by dividing the number of unhealthy services of the specific service type over the total number of services of the specific service type.</span></span>
+      <span data-ttu-id="99e72-122">切り上げ計算が少数のサービスに対する 1 つの障害を許容するようにします。</span><span class="sxs-lookup"><span data-stu-id="99e72-122">The computation rounds up to tolerate one failure on small numbers of services.</span></span> <span data-ttu-id="99e72-123">既定のパーセンテージは 0 です。</span><span class="sxs-lookup"><span data-stu-id="99e72-123">Default percentage is zero.</span></span> <span data-ttu-id="99e72-124">［既定値］:0.</span><span class="sxs-lookup"><span data-stu-id="99e72-124">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyServices?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

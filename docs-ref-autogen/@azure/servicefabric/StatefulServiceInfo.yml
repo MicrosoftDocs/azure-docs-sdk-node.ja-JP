@@ -1,0 +1,169 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceInfo'
+    name: StatefulServiceInfo
+    fullName: StatefulServiceInfo
+    children:
+      - '@azure/servicefabric.StatefulServiceInfo.hasPersistedState'
+      - '@azure/servicefabric.StatefulServiceInfo.healthState'
+      - '@azure/servicefabric.StatefulServiceInfo.id'
+      - '@azure/servicefabric.StatefulServiceInfo.isServiceGroup'
+      - '@azure/servicefabric.StatefulServiceInfo.manifestVersion'
+      - '@azure/servicefabric.StatefulServiceInfo.name'
+      - '@azure/servicefabric.StatefulServiceInfo.serviceKind'
+      - '@azure/servicefabric.StatefulServiceInfo.serviceStatus'
+      - '@azure/servicefabric.StatefulServiceInfo.typeName'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="fa961-101">Service Fabric のステートフル サービスに関する情報。</span><span class="sxs-lookup"><span data-stu-id="fa961-101">Information about a stateful Service Fabric service.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.hasPersistedState'
+    name: hasPersistedState
+    fullName: hasPersistedState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fa961-102">かどうか、サービスには、状態が永続化します。</span><span class="sxs-lookup"><span data-stu-id="fa961-102">Whether the service has persisted state.</span></span>
+    optional: true
+    syntax:
+      content: 'hasPersistedState?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa961-103">クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。''Invalid''、''Ok''、''警告''、''Error''、''Unknown''</span><span class="sxs-lookup"><span data-stu-id="fa961-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="fa961-104">サービスの ID。</span><span class="sxs-lookup"><span data-stu-id="fa961-104">The identity of the service.</span></span> <span data-ttu-id="fa961-105">この ID は、サービスの名前でエンコードされた表現です。</span><span class="sxs-lookup"><span data-stu-id="fa961-105">This ID is an encoded representation of the service name.</span></span> <span data-ttu-id="fa961-106">これは、サービスのリソースを識別するために、REST Api で使用されます。</span><span class="sxs-lookup"><span data-stu-id="fa961-106">This is used in the REST APIs to identify the service resource.</span></span>
+      <span data-ttu-id="fa961-107">バージョン 6.0 以降、階層名はで区切られた、"\~"文字です。</span><span class="sxs-lookup"><span data-stu-id="fa961-107">Starting in version 6.0, hierarchical names are delimited with the "\~" character.</span></span> <span data-ttu-id="fa961-108">たとえば、サービス名が"fabric:/myapp/app1/svc1"、サービス id になります"myapp ~ app1\~svc1"6.0 以降で"myapp/app1/svc1"以前のバージョン。</span><span class="sxs-lookup"><span data-stu-id="fa961-108">For example, if the service name is "fabric:/myapp/app1/svc1", the service identity would be "myapp~app1\~svc1" in 6.0+ and "myapp/app1/svc1" in previous versions.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.isServiceGroup'
+    name: isServiceGroup
+    fullName: isServiceGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fa961-109">かどうか、サービスはサービスのグループです。</span><span class="sxs-lookup"><span data-stu-id="fa961-109">Whether the service is in a service group.</span></span>
+    optional: true
+    syntax:
+      content: 'isServiceGroup?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.manifestVersion'
+    name: manifestVersion
+    fullName: manifestVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fa961-110">サービス マニフェストのバージョン。</span><span class="sxs-lookup"><span data-stu-id="fa961-110">The version of the service manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'manifestVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa961-111">使用して、サービスの完全名 '' fabric:''URI スキームのないアプリケーションの完全な名前です。</span><span class="sxs-lookup"><span data-stu-id="fa961-111">The full name of the service with ''fabric:'' URI scheme.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fa961-112">ポリモーフィックな識別子</span><span class="sxs-lookup"><span data-stu-id="fa961-112">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.serviceStatus'
+    name: serviceStatus
+    fullName: serviceStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa961-113">アプリケーションの状態です。</span><span class="sxs-lookup"><span data-stu-id="fa961-113">The status of the application.</span></span> <span data-ttu-id="fa961-114">次のような値となる場合があります。''不明''、''Active''、''アップグレード''、''削除''、''作成''、'' 失敗 ''</span><span class="sxs-lookup"><span data-stu-id="fa961-114">Possible values include: ''Unknown'', ''Active'', ''Upgrading'', ''Deleting'', ''Creating'', ''Failed''</span></span>'
+    optional: true
+    syntax:
+      content: 'serviceStatus?: ServiceStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fa961-115">サービス マニフェストで指定されているサービスの種類の名前です。</span><span class="sxs-lookup"><span data-stu-id="fa961-115">Name of the service type as specified in the service manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ServiceStatus'
+    name: ServiceStatus
+    spec.typeScript:
+      - name: ServiceStatus
+        fullName: ServiceStatus
+        uid: '@azure/servicefabric.ServiceStatus'

@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="0154e-101">省略可能なパラメーター。</span><span class="sxs-lookup"><span data-stu-id="0154e-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -25,7 +25,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d580b-101">要求を中止するために使用される信号。</span><span class="sxs-lookup"><span data-stu-id="d580b-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="0154e-102">要求を中止するために使用される信号。</span><span class="sxs-lookup"><span data-stu-id="0154e-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -40,7 +40,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="d580b-102">{オブジェクト}[customHeaders]ユーザーは、要求が送信される前に適用されるカスタム要求ヘッダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="d580b-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="0154e-103">{オブジェクト}[customHeaders]ユーザーは、要求が送信される前に適用されるカスタム要求ヘッダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="0154e-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -55,7 +55,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="0154e-104">レポートをすぐに送信する必要があるかどうかを示すフラグ。</span><span class="sxs-lookup"><span data-stu-id="0154e-104">A flag that indicates whether the report should be sent immediately.</span></span>
+      <span data-ttu-id="0154e-105">正常性レポートは Service Fabric ゲートウェイ アプリケーションに送信され、これにより正常性ストアに転送されます。</span><span class="sxs-lookup"><span data-stu-id="0154e-105">A health report is sent to a Service Fabric gateway Application, which forwards to the health store.</span></span>
+      <span data-ttu-id="0154e-106">Immediate が true に設定された場合、HTTP ゲートウェイ アプリケーションで使用されているファブリック クライアント設定に関係なく、このレポートはすぐに HTTP ゲートウェイから正常性ストアに送信されます。</span><span class="sxs-lookup"><span data-stu-id="0154e-106">If Immediate is set to true, the report is sent immediately from HTTP Gateway to the health store, regardless of the fabric client settings that the HTTP Gateway Application is using.</span></span>
+      <span data-ttu-id="0154e-107">これは、できるだけ早く送信する必要がある重要なレポートに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="0154e-107">This is useful for critical reports that should be sent as soon as possible.</span></span>
+      <span data-ttu-id="0154e-108">タイミングやその他の条件に応じて、レポートの送信は依然として失敗する可能性があります。たとえば、HTTP ゲートウェイが閉じている場合やメッセージがゲートウェイに到達しない場合です。</span><span class="sxs-lookup"><span data-stu-id="0154e-108">Depending on timing and other conditions, sending the report may still fail, for example if the HTTP Gateway is closed or the message doesn't reach the Gateway.</span></span>
+      <span data-ttu-id="0154e-109">Immediate が false に設定された場合、レポートは、正常性クライアントの設定に基づいて HTTP ゲートウェイから送信されます。</span><span class="sxs-lookup"><span data-stu-id="0154e-109">If Immediate is set to false, the report is sent based on the health client settings from the HTTP Gateway.</span></span> <span data-ttu-id="0154e-110">その結果、HealthReportSendInterval の構成に従ってバッチ処理されます。</span><span class="sxs-lookup"><span data-stu-id="0154e-110">Therefore, it will be batched according to the HealthReportSendInterval configuration.</span></span>
+      <span data-ttu-id="0154e-111">この設定が推奨されているのは、正常性クライアントが正常性ストアへの正常性レポート メッセージに加えて正常性レポート処理を最適化できるようになるためです。</span><span class="sxs-lookup"><span data-stu-id="0154e-111">This is the recommended setting because it allows the health client to optimize health reporting messages to health store as well as health report processing.</span></span>
+      <span data-ttu-id="0154e-112">既定では、レポートはすぐに送信されません。</span><span class="sxs-lookup"><span data-stu-id="0154e-112">By default, reports are not sent immediately.</span></span> <span data-ttu-id="0154e-113">既定値: false。</span><span class="sxs-lookup"><span data-stu-id="0154e-113">Default value: false.</span></span>
     optional: true
     syntax:
       content: 'immediate?: undefined | false | true'
@@ -70,7 +78,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d580b-103">ダウンロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="d580b-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="0154e-114">ダウンロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="0154e-114">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -85,7 +93,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d580b-104">アップロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="d580b-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="0154e-115">アップロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="0154e-115">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -100,7 +108,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d580b-105">要求が自動的に終了されるまでにかかる時間をミリ秒単位の数。</span><span class="sxs-lookup"><span data-stu-id="d580b-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="0154e-116">要求が自動的に終了されるまでにかかる時間をミリ秒単位の数。</span><span class="sxs-lookup"><span data-stu-id="0154e-116">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -115,7 +123,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="0154e-117">秒単位で、操作を実行するためのサーバーのタイムアウト。</span><span class="sxs-lookup"><span data-stu-id="0154e-117">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="0154e-118">このタイムアウトは、クライアントが要求された操作が完了するを待機する期間を指定します。</span><span class="sxs-lookup"><span data-stu-id="0154e-118">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="0154e-119">このパラメーターの既定値は、60 秒です。</span><span class="sxs-lookup"><span data-stu-id="0154e-119">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="0154e-120">［既定値］:60.</span><span class="sxs-lookup"><span data-stu-id="0154e-120">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

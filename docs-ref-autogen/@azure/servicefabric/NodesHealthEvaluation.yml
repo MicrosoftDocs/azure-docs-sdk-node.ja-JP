@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.NodesHealthEvaluation'
+    name: NodesHealthEvaluation
+    fullName: NodesHealthEvaluation
+    children:
+      - '@azure/servicefabric.NodesHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.NodesHealthEvaluation.description'
+      - '@azure/servicefabric.NodesHealthEvaluation.kind'
+      - '@azure/servicefabric.NodesHealthEvaluation.maxPercentUnhealthyNodes'
+      - '@azure/servicefabric.NodesHealthEvaluation.totalCount'
+      - '@azure/servicefabric.NodesHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="d60bc-101">現在の集計正常性状態に影響を与えた問題のある各ノードの正常性評価を含むノードの正常性評価を表します。</span><span class="sxs-lookup"><span data-stu-id="d60bc-101">Represents health evaluation for nodes, containing health evaluations for each unhealthy node that impacted current aggregated health state.</span></span> <span data-ttu-id="d60bc-102">エラーまたは警告は、クラスターの正常性と集計正常性状態を評価するときに返されます。</span><span class="sxs-lookup"><span data-stu-id="d60bc-102">Can be returned when evaluating cluster health and the aggregated health state is either Error or Warning.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodesHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d60bc-103">クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。''Invalid''、''Ok''、''警告''、''Error''、''Unknown''</span><span class="sxs-lookup"><span data-stu-id="d60bc-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodesHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d60bc-104">評価プロセスの概要を表す正常性評価の説明です。</span><span class="sxs-lookup"><span data-stu-id="d60bc-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodesHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d60bc-105">ポリモーフィックな識別子</span><span class="sxs-lookup"><span data-stu-id="d60bc-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Nodes"'
+      return:
+        type:
+          - '"Nodes"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodesHealthEvaluation.maxPercentUnhealthyNodes'
+    name: maxPercentUnhealthyNodes
+    fullName: maxPercentUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d60bc-106">異常なノードの割合が、ClusterHealthPolicy から最大です。</span><span class="sxs-lookup"><span data-stu-id="d60bc-106">Maximum allowed percentage of unhealthy nodes from the ClusterHealthPolicy.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodesHealthEvaluation.totalCount'
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d60bc-107">正常性ストアで見つかったノードの合計数。</span><span class="sxs-lookup"><span data-stu-id="d60bc-107">Total number of nodes found in the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'totalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodesHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d60bc-108">集計された正常性の状態の原因となった異常性の評価のリスト。</span><span class="sxs-lookup"><span data-stu-id="d60bc-108">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="d60bc-109">集計された正常性の影響を受けるすべての異常な NodeHealthEvaluation が含まれています。</span><span class="sxs-lookup"><span data-stu-id="d60bc-109">Includes all the unhealthy NodeHealthEvaluation that impacted the aggregated health.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

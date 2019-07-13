@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.EventHealthEvaluation'
+    name: EventHealthEvaluation
+    fullName: EventHealthEvaluation
+    children:
+      - '@azure/servicefabric.EventHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.EventHealthEvaluation.considerWarningAsError'
+      - '@azure/servicefabric.EventHealthEvaluation.description'
+      - '@azure/servicefabric.EventHealthEvaluation.kind'
+      - '@azure/servicefabric.EventHealthEvaluation.unhealthyEvent'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="edbc7-101">エンティティで報告された HealthEvent の正常性評価を表します。</span><span class="sxs-lookup"><span data-stu-id="edbc7-101">Represents health evaluation of a HealthEvent that was reported on the entity.</span></span>
+      <span data-ttu-id="edbc7-102">エラーまたは警告の結果、エンティティの正常性を評価したときに、正常性評価が返されます。</span><span class="sxs-lookup"><span data-stu-id="edbc7-102">The health evaluation is returned when evaluating health of an entity results in Error or Warning.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="edbc7-103">クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。''Invalid''、''Ok''、''警告''、''Error''、''Unknown''</span><span class="sxs-lookup"><span data-stu-id="edbc7-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="edbc7-104">警告がエラーと同じ重大度で処理されることを示します。</span><span class="sxs-lookup"><span data-stu-id="edbc7-104">Indicates whether warnings are treated with the same severity as errors.</span></span> <span data-ttu-id="edbc7-105">フィールドは、エンティティを評価するために使用する正常性ポリシーで指定されます。</span><span class="sxs-lookup"><span data-stu-id="edbc7-105">The field is specified in the health policy used to evaluate the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="edbc7-106">評価プロセスの概要を表す正常性評価の説明です。</span><span class="sxs-lookup"><span data-stu-id="edbc7-106">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="edbc7-107">ポリモーフィックな識別子</span><span class="sxs-lookup"><span data-stu-id="edbc7-107">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Event"'
+      return:
+        type:
+          - '"Event"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.unhealthyEvent'
+    name: unhealthyEvent
+    fullName: unhealthyEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="edbc7-108">正常性マネージャーによって追加された追加のメタデータを持つクラスター、アプリケーション ノードなどの正常性エンティティで報告される正常性の情報を表します。</span><span class="sxs-lookup"><span data-stu-id="edbc7-108">Represents health information reported on a health entity, such as cluster, application or node, with additional metadata added by the Health Manager.</span></span>'
+    optional: true
+    syntax:
+      content: 'unhealthyEvent?: HealthEvent'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent'
+    name: HealthEvent
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'

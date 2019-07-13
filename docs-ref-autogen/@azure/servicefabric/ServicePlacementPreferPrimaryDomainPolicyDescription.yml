@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription'
+    name: ServicePlacementPreferPrimaryDomainPolicyDescription
+    fullName: ServicePlacementPreferPrimaryDomainPolicyDescription
+    children:
+      - '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName'
+      - '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      <span data-ttu-id="db255-101">サービスのプライマリ レプリカの最適に配置先、特定のドメインで Service Fabric サービスの配置に使用するポリシーについて説明します。</span><span class="sxs-lookup"><span data-stu-id="db255-101">Describes the policy to be used for placement of a Service Fabric service where the service's Primary replicas should optimally be placed in a particular domain.</span></span>
+      <span data-ttu-id="db255-102">この配置ポリシーは通常、特定の障害ドメインでサービスのプライマリ レプリカを配置する必要がありますを指定するには、Service Fabric クラスターが地理的に配布されているシナリオでの障害ドメインで使用で地理的に分散します。シナリオは、地域またはデータ センターの境界を通常配置します。</span><span class="sxs-lookup"><span data-stu-id="db255-102">This placement policy is usually used with fault domains in scenarios where the Service Fabric cluster is geographically distributed in order to indicate that a service's primary replica should be located in a particular fault domain, which in geo-distributed scenarios usually aligns with regional or datacenter boundaries.</span></span> <span data-ttu-id="db255-103">これは、最適化のためであること、プライマリ レプリカが届かなかったり障害、容量の制限、またはその他の制約のためには、このドメインにあることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="db255-103">Note that since this is an optimization it is possible that the Primary replica may not end up located in this domain due to failures, capacity limits, or other constraints.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName'
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="db255-104">このポリシーに従って配置に使用する必要がありますドメインの名前。</span><span class="sxs-lookup"><span data-stu-id="db255-104">The name of the domain that should used for placement as per this policy.</span></span>
+    optional: true
+    syntax:
+      content: 'domainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="db255-105">ポリモーフィックな識別子</span><span class="sxs-lookup"><span data-stu-id="db255-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'type: "PreferPrimaryDomain"'
+      return:
+        type:
+          - '"PreferPrimaryDomain"'
+    package: '@azure/servicefabric'

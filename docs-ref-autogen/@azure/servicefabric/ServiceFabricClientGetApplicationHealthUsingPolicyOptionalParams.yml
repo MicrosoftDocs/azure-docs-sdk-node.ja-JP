@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="54fcf-101">省略可能なパラメーター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e82d5-101">要求を中止するために使用される信号。</span><span class="sxs-lookup"><span data-stu-id="e82d5-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="54fcf-102">要求を中止するために使用される信号。</span><span class="sxs-lookup"><span data-stu-id="54fcf-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -44,7 +44,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="54fcf-103">アプリケーションまたはその子のいずれかの正常性を評価するために使用する正常性ポリシーについて説明します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-103">Describes the health policies used to evaluate the health of an application or one of its children.</span></span>
+      <span data-ttu-id="54fcf-104">存在しない場合、正常性評価は、アプリケーション マニフェストからの正常性ポリシーまたは既定の正常性ポリシーを使用します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-104">If not present, the health evaluation uses the health policy from application manifest or the default health policy.</span></span>
     optional: true
     syntax:
       content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
@@ -59,7 +61,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="e82d5-102">{オブジェクト}[customHeaders]ユーザーは、要求が送信される前に適用されるカスタム要求ヘッダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="e82d5-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="54fcf-105">{オブジェクト}[customHeaders]ユーザーは、要求が送信される前に適用されるカスタム要求ヘッダーを定義します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-105">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -74,7 +76,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="54fcf-106">正常性の状態に基づくアプリケーションの正常性クエリの結果で返されるデプロイされたアプリケーションの正常性の状態オブジェクトをフィルター処理できます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-106">Allows filtering of the deployed applications health state objects returned in the result of application health query based on their health state.</span></span>
+      <span data-ttu-id="54fcf-107">このパラメーターに指定できる値には、次の正常性の状態のいずれかの整数値が含まれます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-107">The possible values for this parameter include integer value of one of the following health states.</span></span> <span data-ttu-id="54fcf-108">フィルターに一致するデプロイ済みアプリケーションのみが返されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-108">Only deployed applications that match the filter will be returned.</span></span>
+      <span data-ttu-id="54fcf-109">すべてのデプロイ済みアプリケーションは、集計された正常性の状態を評価するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-109">All deployed applications are used to evaluate the aggregated health state.</span></span> <span data-ttu-id="54fcf-110">指定しない場合、すべてのエントリが返されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-110">If not specified, all entries are returned.</span></span>
+      <span data-ttu-id="54fcf-111">状態値はフラグベースの列挙型であるため、値はビット演算子 'OR' を使用して取得したこれらの値の組み合わせが可能です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-111">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="54fcf-112">たとえば、指定した値が 6 の場合、HealthState の値が OK (2) と Warning (4) のデプロイ済みアプリケーションの正常性の状態が返されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-112">For example, if the provided value is 6 then health state of deployed applications with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="54fcf-113">Default - 既定値。</span><span class="sxs-lookup"><span data-stu-id="54fcf-113">Default - Default value.</span></span> <span data-ttu-id="54fcf-114">任意の HealthState と一致します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-114">Matches any HealthState.</span></span> <span data-ttu-id="54fcf-115">値は 0 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-115">The value is zero.</span></span>
+      - <span data-ttu-id="54fcf-116">None - どの HealthState 値とも一致しないフィルター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-116">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="54fcf-117">状態の特定のコレクションの結果が返されないようにするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-117">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="54fcf-118">値は 1 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-118">The value is 1.</span></span>
+      - <span data-ttu-id="54fcf-119">Ok - 入力一致するフィルター HealthState 値が ok をクリックします。</span><span class="sxs-lookup"><span data-stu-id="54fcf-119">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="54fcf-120">値は 2 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-120">The value is 2.</span></span>
+      - <span data-ttu-id="54fcf-121">警告 - フィルター値を HealthState 入力に一致します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-121">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="54fcf-122">値は 4 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-122">The value is 4.</span></span>
+      - <span data-ttu-id="54fcf-123">Error - HealthState 値が Error の入力に一致するフィルター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-123">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="54fcf-124">値は 8 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-124">The value is 8.</span></span>
+      - <span data-ttu-id="54fcf-125">All - 任意の HealthState 値の入力に一致するフィルター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-125">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="54fcf-126">値は 65535 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-126">The value is 65535.</span></span> <span data-ttu-id="54fcf-127">［既定値］:0.</span><span class="sxs-lookup"><span data-stu-id="54fcf-127">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'deployedApplicationsHealthStateFilter?: undefined | number'
@@ -89,7 +102,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="54fcf-128">正常性の状態に基づいて返された HealthEvent オブジェクトのコレクションをフィルター処理できます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-128">Allows filtering the collection of HealthEvent objects returned based on health state.</span></span>
+      <span data-ttu-id="54fcf-129">このパラメーターに指定できる値には、次の正常性の状態のいずれかの整数値が含まれます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-129">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="54fcf-130">フィルターに一致するイベントのみが返されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-130">Only events that match the filter are returned.</span></span> <span data-ttu-id="54fcf-131">すべてのイベントが集計された正常性の状態を評価するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-131">All events are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="54fcf-132">指定しない場合、すべてのエントリが返されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-132">If not specified, all entries are returned.</span></span> <span data-ttu-id="54fcf-133">状態値はフラグベースの列挙型であるため、値はビット演算子 'OR' を使用して取得したこれらの値の組み合わせが可能です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-133">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using the bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="54fcf-134">たとえば、指定した値が 6 の場合、HealthState の値が OK (2) と Warning (4) のすべてのイベントが返されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-134">For example, If the provided value is 6 then all of the events with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="54fcf-135">Default - 既定値。</span><span class="sxs-lookup"><span data-stu-id="54fcf-135">Default - Default value.</span></span> <span data-ttu-id="54fcf-136">任意の HealthState と一致します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-136">Matches any HealthState.</span></span> <span data-ttu-id="54fcf-137">値は 0 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-137">The value is zero.</span></span>
+      - <span data-ttu-id="54fcf-138">None - どの HealthState 値とも一致しないフィルター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-138">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="54fcf-139">状態の特定のコレクションの結果が返されないようにするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-139">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="54fcf-140">値は 1 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-140">The value is 1.</span></span>
+      - <span data-ttu-id="54fcf-141">Ok - 入力一致するフィルター HealthState 値が ok をクリックします。</span><span class="sxs-lookup"><span data-stu-id="54fcf-141">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="54fcf-142">値は 2 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-142">The value is 2.</span></span>
+      - <span data-ttu-id="54fcf-143">警告 - フィルター値を HealthState 入力に一致します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-143">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="54fcf-144">値は 4 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-144">The value is 4.</span></span>
+      - <span data-ttu-id="54fcf-145">Error - HealthState 値が Error の入力に一致するフィルター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-145">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="54fcf-146">値は 8 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-146">The value is 8.</span></span>
+      - <span data-ttu-id="54fcf-147">All - 任意の HealthState 値の入力に一致するフィルター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-147">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="54fcf-148">値は 65535 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-148">The value is 65535.</span></span> <span data-ttu-id="54fcf-149">［既定値］:0.</span><span class="sxs-lookup"><span data-stu-id="54fcf-149">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -104,7 +128,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="54fcf-150">正常性の統計情報をクエリ結果の一部として返すかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-150">Indicates whether the health statistics should be returned as part of the query result.</span></span> <span data-ttu-id="54fcf-151">既定では false です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-151">False by default.</span></span>
+      <span data-ttu-id="54fcf-152">統計情報は、正常性の状態が Ok、Warning、および Error の子エンティティの数を示します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-152">The statistics show the number of children entities in health state Ok, Warning, and Error.</span></span>
+      <span data-ttu-id="54fcf-153">既定値: false。</span><span class="sxs-lookup"><span data-stu-id="54fcf-153">Default value: false.</span></span>
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -119,7 +146,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e82d5-103">ダウンロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="e82d5-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="54fcf-154">ダウンロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="54fcf-154">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -134,7 +161,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e82d5-104">アップロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="e82d5-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="54fcf-155">アップロードの進行状況の発生時に開始するコールバック。</span><span class="sxs-lookup"><span data-stu-id="54fcf-155">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -149,7 +176,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="54fcf-156">正常性状態に基づくサービス正常性クエリの結果で返される、サービスの正常性状態のオブジェクトのフィルター処理ができます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-156">Allows filtering of the services health state objects returned in the result of services health query based on their health state.</span></span>
+      <span data-ttu-id="54fcf-157">このパラメーターに指定できる値には、次の正常性の状態のいずれかの整数値が含まれます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-157">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="54fcf-158">フィルターに一致するサービスのみが返されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-158">Only services that match the filter are returned.</span></span> <span data-ttu-id="54fcf-159">すべてのサービスが集計された正常性の状態を評価するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-159">All services are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="54fcf-160">指定しない場合、すべてのエントリが返されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-160">If not specified, all entries are returned.</span></span> <span data-ttu-id="54fcf-161">状態値はフラグベースの列挙型であるため、値はビット演算子 'OR' を使用して取得したこれらの値の組み合わせが可能です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-161">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using bitwise 'OR' operator.</span></span> <span data-ttu-id="54fcf-162">たとえば、指定した値が 6 の場合、HealthState の値が OK (2) と Warning (4) のサービスの正常性の状態が返されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-162">For example, if the provided value is 6 then health state of services with HealthState value of OK (2) and Warning (4) will be returned.</span></span>
+      - <span data-ttu-id="54fcf-163">Default - 既定値。</span><span class="sxs-lookup"><span data-stu-id="54fcf-163">Default - Default value.</span></span> <span data-ttu-id="54fcf-164">任意の HealthState と一致します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-164">Matches any HealthState.</span></span> <span data-ttu-id="54fcf-165">値は 0 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-165">The value is zero.</span></span>
+      - <span data-ttu-id="54fcf-166">None - どの HealthState 値とも一致しないフィルター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-166">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="54fcf-167">状態の特定のコレクションの結果が返されないようにするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="54fcf-167">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="54fcf-168">値は 1 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-168">The value is 1.</span></span>
+      - <span data-ttu-id="54fcf-169">Ok - 入力一致するフィルター HealthState 値が ok をクリックします。</span><span class="sxs-lookup"><span data-stu-id="54fcf-169">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="54fcf-170">値は 2 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-170">The value is 2.</span></span>
+      - <span data-ttu-id="54fcf-171">警告 - フィルター値を HealthState 入力に一致します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-171">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="54fcf-172">値は 4 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-172">The value is 4.</span></span>
+      - <span data-ttu-id="54fcf-173">Error - HealthState 値が Error の入力に一致するフィルター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-173">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="54fcf-174">値は 8 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-174">The value is 8.</span></span>
+      - <span data-ttu-id="54fcf-175">All - 任意の HealthState 値の入力に一致するフィルター。</span><span class="sxs-lookup"><span data-stu-id="54fcf-175">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="54fcf-176">値は 65535 です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-176">The value is 65535.</span></span> <span data-ttu-id="54fcf-177">［既定値］:0.</span><span class="sxs-lookup"><span data-stu-id="54fcf-177">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'servicesHealthStateFilter?: undefined | number'
@@ -164,7 +201,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e82d5-105">要求が自動的に終了されるまでにかかる時間をミリ秒単位の数。</span><span class="sxs-lookup"><span data-stu-id="e82d5-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="54fcf-178">要求が自動的に終了されるまでにかかる時間をミリ秒単位の数。</span><span class="sxs-lookup"><span data-stu-id="54fcf-178">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -179,7 +216,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="54fcf-179">秒単位で、操作を実行するためのサーバーのタイムアウト。</span><span class="sxs-lookup"><span data-stu-id="54fcf-179">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="54fcf-180">このタイムアウトは、クライアントが要求された操作が完了するを待機する期間を指定します。</span><span class="sxs-lookup"><span data-stu-id="54fcf-180">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="54fcf-181">このパラメーターの既定値は、60 秒です。</span><span class="sxs-lookup"><span data-stu-id="54fcf-181">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="54fcf-182">［既定値］:60.</span><span class="sxs-lookup"><span data-stu-id="54fcf-182">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'
