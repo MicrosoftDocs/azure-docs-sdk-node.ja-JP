@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription'
+    name: GetBackupByStorageQueryDescription
+    fullName: GetBackupByStorageQueryDescription
+    children:
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.backupEntity'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.latest'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.storage'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="4320d-101">リストのバックアップ、およびバックアップ ストレージの詳細をどこからバックアップをフェッチするときに適用される追加のフィルターについて説明します。</span><span class="sxs-lookup"><span data-stu-id="4320d-101">Describes additional filters to be applied, while listing backups, and backup storage details from where to fetch the backups.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.backupEntity'
+    name: backupEntity
+    fullName: backupEntity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4320d-102">バックアップを列挙するエンティティを示します。</span><span class="sxs-lookup"><span data-stu-id="4320d-102">Indicates the entity for which to enumerate backups.</span></span>
+    syntax:
+      content: 'backupEntity: BackupEntityUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupEntityUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter'
+    name: endDateTimeFilter
+    fullName: endDateTimeFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4320d-103">末尾を指定のバックアップを列挙するまでの ISO8601 の日時します。</span><span class="sxs-lookup"><span data-stu-id="4320d-103">Specifies the end date time in ISO8601 till which to enumerate backups.</span></span> <span data-ttu-id="4320d-104">指定しない場合、バックアップの末尾まで列挙されます。</span><span class="sxs-lookup"><span data-stu-id="4320d-104">If not specified, backups are enumerated till the end.</span></span>'
+    optional: true
+    syntax:
+      content: 'endDateTimeFilter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.latest'
+    name: latest
+    fullName: latest
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4320d-105">True を指定した場合は、指定されたバックアップ エンティティの下のすべてのパーティションの (範囲指定された時間)、最新のバックアップを取得します。</span><span class="sxs-lookup"><span data-stu-id="4320d-105">If specified as true, gets the most recent backup (within the specified time range) for every partition under the specified backup entity.</span></span> <span data-ttu-id="4320d-106">既定値: false。</span><span class="sxs-lookup"><span data-stu-id="4320d-106">Default value: false.</span></span>'
+    optional: true
+    syntax:
+      content: 'latest?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter'
+    name: startDateTimeFilter
+    fullName: startDateTimeFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4320d-107">開始日を指定すると、バックアップを列挙 ISO8601 の日時します。</span><span class="sxs-lookup"><span data-stu-id="4320d-107">Specifies the start date time in ISO8601 from which to enumerate backups.</span></span> <span data-ttu-id="4320d-108">指定しない場合、バックアップは、最初から列挙されます。</span><span class="sxs-lookup"><span data-stu-id="4320d-108">If not specified, backups are enumerated from the beginning.</span></span>'
+    optional: true
+    syntax:
+      content: 'startDateTimeFilter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.storage'
+    name: storage
+    fullName: storage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4320d-109">バックアップを列挙するバックアップ ストレージのパラメーターについて説明します。</span><span class="sxs-lookup"><span data-stu-id="4320d-109">Describes the parameters for the backup storage from where to enumerate backups.</span></span> <span data-ttu-id="4320d-110">これは省略可能ですし、このバックアップ エンティティが現在バックアップ中 (で指定されているバックアップ ポリシー) として、バックアップ ストレージから既定でバックアップを列挙します。</span><span class="sxs-lookup"><span data-stu-id="4320d-110">This is optional and by default backups are enumerated from the backup storage where this backup entity is currently being backed up (as specified in backup policy).</span></span> <span data-ttu-id="4320d-111">このパラメーターは、別のクラスターを復元することがありますからバックアップを列挙できると便利です。</span><span class="sxs-lookup"><span data-stu-id="4320d-111">This parameter is useful to be able to enumerate backups from another cluster where you may intend to restore.</span></span>
+    syntax:
+      content: 'storage: BackupStorageDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupStorageDescriptionUnion'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupEntityUnion'
+    name: BackupEntityUnion
+    spec.typeScript:
+      - name: BackupEntityUnion
+        fullName: BackupEntityUnion
+        uid: '@azure/servicefabric.BackupEntityUnion'
+  - uid: '@azure/servicefabric.BackupStorageDescriptionUnion'
+    name: BackupStorageDescriptionUnion
+    spec.typeScript:
+      - name: BackupStorageDescriptionUnion
+        fullName: BackupStorageDescriptionUnion
+        uid: '@azure/servicefabric.BackupStorageDescriptionUnion'
