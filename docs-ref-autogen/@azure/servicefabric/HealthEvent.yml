@@ -1,0 +1,271 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.HealthEvent'
+    name: HealthEvent
+    fullName: HealthEvent
+    children:
+      - '@azure/servicefabric.HealthEvent.description'
+      - '@azure/servicefabric.HealthEvent.healthState'
+      - '@azure/servicefabric.HealthEvent.isExpired'
+      - '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
+      - '@azure/servicefabric.HealthEvent.lastModifiedUtcTimestamp'
+      - '@azure/servicefabric.HealthEvent.lastOkTransitionAt'
+      - '@azure/servicefabric.HealthEvent.lastWarningTransitionAt'
+      - '@azure/servicefabric.HealthEvent.property'
+      - '@azure/servicefabric.HealthEvent.removeWhenExpired'
+      - '@azure/servicefabric.HealthEvent.sequenceNumber'
+      - '@azure/servicefabric.HealthEvent.sourceId'
+      - '@azure/servicefabric.HealthEvent.sourceUtcTimestamp'
+      - '@azure/servicefabric.HealthEvent.timeToLiveInMilliSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="70016-101">正常性マネージャーによって追加された追加のメタデータを持つクラスター、アプリケーション ノードなどの正常性エンティティで報告される正常性の情報を表します。</span><span class="sxs-lookup"><span data-stu-id="70016-101">Represents health information reported on a health entity, such as cluster, application or node, with additional metadata added by the Health Manager.</span></span>'
+    extends:
+      name: '@azure/servicefabric.HealthInformation'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="70016-102">正常性情報の説明。</span><span class="sxs-lookup"><span data-stu-id="70016-102">The description of the health information.</span></span> <span data-ttu-id="70016-103">レポートについて人間が判読できる情報を追加するために使用するフリー テキストを表します。</span><span class="sxs-lookup"><span data-stu-id="70016-103">It represents free text used to add human readable information about the report.</span></span>
+      <span data-ttu-id="70016-104">この説明の文字列の最大長は 4,096 文字です。</span><span class="sxs-lookup"><span data-stu-id="70016-104">The maximum string length for the description is 4096 characters.</span></span>
+      <span data-ttu-id="70016-105">指定された文字列が長い場合は、自動的に切り捨てられます。</span><span class="sxs-lookup"><span data-stu-id="70016-105">If the provided string is longer, it will be automatically truncated.</span></span>
+      <span data-ttu-id="70016-106">切り捨てられると、説明の末尾の文字には "[切り捨て]" というマーカーが含まれ、文字列の合計サイズが 4,096 文字になります。</span><span class="sxs-lookup"><span data-stu-id="70016-106">When truncated, the last characters of the description contain a marker "[Truncated]", and total string size is 4096 characters.</span></span>
+      <span data-ttu-id="70016-107">このマーカーの存在は、切り捨てが発生したことをユーザーに示します。</span><span class="sxs-lookup"><span data-stu-id="70016-107">The presence of the marker indicates to users that truncation occurred.</span></span>
+      <span data-ttu-id="70016-108">切り捨てられた場合、説明に含まれるのは元の文字列のうち 4,096 文字未満であることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="70016-108">Note that when truncated, the description has less than 4096 characters from the original string.</span></span>
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="70016-109">クラスター、ノード、アプリケーション、サービス、パーティション、レプリカなどなどの Service Fabric エンティティの正常性状態。次のような値となる場合があります。''Invalid''、''Ok''、''警告''、''Error''、''Unknown''</span><span class="sxs-lookup"><span data-stu-id="70016-109">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    syntax:
+      content: 'healthState: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.isExpired'
+    name: isExpired
+    fullName: isExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="70016-110">正常性イベントが有効期限が切れた場合に true を返します。</span><span class="sxs-lookup"><span data-stu-id="70016-110">Returns true if the health event is expired, otherwise false.</span></span>'
+    optional: true
+    syntax:
+      content: 'isExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
+    name: lastErrorTransitionAt
+    fullName: lastErrorTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="70016-111">現在の正常性状態が「エラー」の場合は、このプロパティは、位置、正常性レポートを「エラー」で最初に報告された日時を返します。</span><span class="sxs-lookup"><span data-stu-id="70016-111">If the current health state is 'Error', this property returns the time at which the health report was first reported with 'Error'.</span></span> <span data-ttu-id="70016-112">定期的なレポートの場合は、同じ状態を持つ多数のレポートが生成された可能性がただし、このプロパティは、日付とエラーの正常性レポートを受信した最初の時刻のみを返します。</span><span class="sxs-lookup"><span data-stu-id="70016-112">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Error' health report was received.</span></span>
+      <span data-ttu-id="70016-113">現在の正常性状態が"Ok"または「警告」の場合は、日付と時刻を別の状態に遷移する前に「エラー」の最後にされた正常性状態を返します。</span><span class="sxs-lookup"><span data-stu-id="70016-113">If the current health state is 'Ok' or 'Warning', returns the date and time at which the health state was last in 'Error', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="70016-114">正常性状態が「エラー」されなかった、値がゼロの日付と時刻になります。</span><span class="sxs-lookup"><span data-stu-id="70016-114">If the health state was never 'Error', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastErrorTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastModifiedUtcTimestamp'
+    name: lastModifiedUtcTimestamp
+    fullName: lastModifiedUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="70016-115">日付と時間、正常性レポートが正常性ストアによって最終変更された日時。</span><span class="sxs-lookup"><span data-stu-id="70016-115">The date and time when the health report was last modified by the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'lastModifiedUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastOkTransitionAt'
+    name: lastOkTransitionAt
+    fullName: lastOkTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="70016-116">現在の正常性状態が"Ok"の場合は、このプロパティは、位置、正常性レポートを 'Ok' で最初に報告された日時を返します。</span><span class="sxs-lookup"><span data-stu-id="70016-116">If the current health state is 'Ok', this property returns the time at which the health report was first reported with 'Ok'.</span></span>
+      <span data-ttu-id="70016-117">定期的なレポートの場合は、同じ状態を持つ多数のレポートが生成された可能性が。</span><span class="sxs-lookup"><span data-stu-id="70016-117">For periodic reporting, many reports with the same state may have been generated.</span></span>
+      <span data-ttu-id="70016-118">このプロパティは、[Ok] の最初の正常性レポートが受信した日時を返します。</span><span class="sxs-lookup"><span data-stu-id="70016-118">This property returns the date and time when the first 'Ok' health report was received.</span></span>
+      <span data-ttu-id="70016-119">現在の正常性状態が「エラー」または「警告」の場合は、日付と時刻の正常性状態が別の状態に遷移する前に Ok、最後に位置を返します。</span><span class="sxs-lookup"><span data-stu-id="70016-119">If the current health state is 'Error' or 'Warning', returns the date and time at which the health state was last in 'Ok', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="70016-120">正常性の状態が 'Ok' されなかった場合、値がゼロの日付と時刻になります。</span><span class="sxs-lookup"><span data-stu-id="70016-120">If the health state was never 'Ok', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastOkTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastWarningTransitionAt'
+    name: lastWarningTransitionAt
+    fullName: lastWarningTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="70016-121">現在のヘルス状態が '警告'、このプロパティは位置の正常性レポートを「警告」に最初に報告された日時を返します。</span><span class="sxs-lookup"><span data-stu-id="70016-121">If the current health state is 'Warning', this property returns the time at which the health report was first reported with 'Warning'.</span></span> <span data-ttu-id="70016-122">定期的なレポートの場合は、同じ状態を持つ多数のレポートが生成された可能性がただし、このプロパティは、日付と時刻が「警告」の最初の正常性レポートでのみが受信したを返します。</span><span class="sxs-lookup"><span data-stu-id="70016-122">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Warning' health report was received.</span></span>
+      <span data-ttu-id="70016-123">現在の正常性状態が"Ok"または「エラー」の場合は、日付と時刻の正常性状態が別の状態に遷移する前に '警告'、最後に位置を返します。</span><span class="sxs-lookup"><span data-stu-id="70016-123">If the current health state is 'Ok' or 'Error', returns the date and time at which the health state was last in 'Warning', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="70016-124">正常性状態が決して '警告'、値がゼロの日付と時刻になります。</span><span class="sxs-lookup"><span data-stu-id="70016-124">If the health state was never 'Warning', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastWarningTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.property'
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="70016-125">正常性情報のプロパティ。</span><span class="sxs-lookup"><span data-stu-id="70016-125">The property of the health information.</span></span> <span data-ttu-id="70016-126">エンティティには、さまざまなプロパティの正常性レポートを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="70016-126">An entity can have health reports for different properties.</span></span>
+      <span data-ttu-id="70016-127">このプロパティは固定値列挙型ではなく文字列で、これにより、レポーターは、レポートをトリガーする状態の条件を柔軟に分類できます。</span><span class="sxs-lookup"><span data-stu-id="70016-127">The property is a string and not a fixed enumeration to allow the reporter flexibility to categorize the state condition that triggers the report.</span></span>
+      <span data-ttu-id="70016-128">たとえば、SourceId が "LocalWatchdog" のレポーターは、ノード上で使用可能なディスクの状態を監視できるため、そのノードの "AvailableDisk" プロパティをレポートできます。</span><span class="sxs-lookup"><span data-stu-id="70016-128">For example, a reporter with SourceId "LocalWatchdog" can monitor the state of the available disk on a node, so it can report "AvailableDisk" property on that node.</span></span>
+      <span data-ttu-id="70016-129">同じレポーターは、ノードの接続性を監視できるため、同じノードの "Connectivity" プロパティをレポートできます。</span><span class="sxs-lookup"><span data-stu-id="70016-129">The same reporter can monitor the node connectivity, so it can report a property "Connectivity" on the same node.</span></span>
+      <span data-ttu-id="70016-130">正常性ストアでは、これらのレポートは、指定されたノードの個々の正常性イベントとして扱われます。</span><span class="sxs-lookup"><span data-stu-id="70016-130">In the health store, these reports are treated as separate health events for the specified node.</span></span>
+      <span data-ttu-id="70016-131">このプロパティは SourceId と共に、正常性情報を一意に識別します。</span><span class="sxs-lookup"><span data-stu-id="70016-131">Together with the SourceId, the property uniquely identifies the health information.</span></span>
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.removeWhenExpired'
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="70016-132">有効期限が切れたときにレポートを正常性ストアから削除するかどうかを示す値。</span><span class="sxs-lookup"><span data-stu-id="70016-132">Value that indicates whether the report is removed from health store when it expires.</span></span>
+      <span data-ttu-id="70016-133">true に設定した場合、レポートは、有効期限が切れると正常性ストアから削除されます。</span><span class="sxs-lookup"><span data-stu-id="70016-133">If set to true, the report is removed from the health store after it expires.</span></span>
+      <span data-ttu-id="70016-134">false に設定した場合、レポートは、有効期限が切れるとエラーとして処理されます。</span><span class="sxs-lookup"><span data-stu-id="70016-134">If set to false, the report is treated as an error when expired.</span></span> <span data-ttu-id="70016-135">既定では、このプロパティの値は false です。</span><span class="sxs-lookup"><span data-stu-id="70016-135">The value of this property is false by default.</span></span>
+      <span data-ttu-id="70016-136">クライアントは、定期的にレポートする場合、RemoveWhenExpired を false (既定値) に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="70016-136">When clients report periodically, they should set RemoveWhenExpired false (default).</span></span>
+      <span data-ttu-id="70016-137">これにより、レポーターは、問題 (デッドロックなど) を備え、報告することはできません、エンティティと評価されますエラーで正常性レポートの有効期限が切れます。</span><span class="sxs-lookup"><span data-stu-id="70016-137">This way, if the reporter has issues (e.g. deadlock) and can't report, the entity is evaluated at error when the health report expires.</span></span>
+      <span data-ttu-id="70016-138">これにより、このエンティティの正常性はエラー状態と見なされます。</span><span class="sxs-lookup"><span data-stu-id="70016-138">This flags the entity as being in Error health state.</span></span>
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="70016-139">数値文字列で表された、この正常性レポートのシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="70016-139">The sequence number for this health report as a numeric string.</span></span>
+      <span data-ttu-id="70016-140">レポートのシーケンス番号は、古いレポートを検出するために正常性ストアによって使用されます。</span><span class="sxs-lookup"><span data-stu-id="70016-140">The report sequence number is used by the health store to detect stale reports.</span></span>
+      <span data-ttu-id="70016-141">指定しない場合、シーケンス番号は、レポートが追加されたときに正常性クライアントによって自動的に生成されます。</span><span class="sxs-lookup"><span data-stu-id="70016-141">If not specified, a sequence number is auto-generated by the health client when a report is added.</span></span>
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sourceId'
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="70016-142">正常性に関する情報を生成したクライアント/ウォッチドッグ/システム コンポーネントを識別するソース名。</span><span class="sxs-lookup"><span data-stu-id="70016-142">The source name that identifies the client/watchdog/system component that generated the health information.</span></span>
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sourceUtcTimestamp'
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="70016-143">日付と正常性レポートに、ソースによって送信された時刻。</span><span class="sxs-lookup"><span data-stu-id="70016-143">The date and time when the health report was sent by the source.</span></span>
+    optional: true
+    syntax:
+      content: 'sourceUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.timeToLiveInMilliSeconds'
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="70016-144">この正常性レポートの有効期間。</span><span class="sxs-lookup"><span data-stu-id="70016-144">The duration for which this health report is valid.</span></span> <span data-ttu-id="70016-145">このフィールドでは、この期間の指定に ISO8601 形式が使用されます。</span><span class="sxs-lookup"><span data-stu-id="70016-145">This field uses ISO8601 format for specifying the duration.</span></span>
+      <span data-ttu-id="70016-146">クライアントは、定期的にレポートする場合、レポートの送信頻度を有効期間よりも高くする必要があります。</span><span class="sxs-lookup"><span data-stu-id="70016-146">When clients report periodically, they should send reports with higher frequency than time to live.</span></span>
+      <span data-ttu-id="70016-147">クライアントは、遷移時にレポートする場合、有効期間を無限に設定できます。</span><span class="sxs-lookup"><span data-stu-id="70016-147">If clients report on transition, they can set the time to live to infinite.</span></span>
+      <span data-ttu-id="70016-148">有効期間が期限切れになると、正常性に関する情報を含む正常性イベントは、正常性ストアから削除される (RemoveWhenExpired が true の場合) か、エラーと評価されます (RemoveWhenExpired が false の場合)。</span><span class="sxs-lookup"><span data-stu-id="70016-148">When time to live expires, the health event that contains the health information is either removed from health store, if RemoveWhenExpired is true, or evaluated at error, if RemoveWhenExpired false.</span></span>
+      <span data-ttu-id="70016-149">指定しない場合、有効期間の既定値は無限になります。</span><span class="sxs-lookup"><span data-stu-id="70016-149">If not specified, time to live defaults to infinite value.</span></span>
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthInformation'
+    name: HealthInformation
+    spec.typeScript:
+      - name: HealthInformation
+        fullName: HealthInformation
+        uid: '@azure/servicefabric.HealthInformation'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

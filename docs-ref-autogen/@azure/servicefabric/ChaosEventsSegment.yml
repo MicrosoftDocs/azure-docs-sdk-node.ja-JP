@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosEventsSegment'
+    name: ChaosEventsSegment
+    fullName: ChaosEventsSegment
+    children:
+      - '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+      - '@azure/servicefabric.ChaosEventsSegment.history'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="63f50-101">混乱イベントと、次のセグメントを取得する継続トークンの一覧が含まれています。</span><span class="sxs-lookup"><span data-stu-id="63f50-101">Contains the list of Chaos events and the continuation token to get the next segment.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="63f50-102">継続トークンのパラメーターは、次の結果セットを取得するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="63f50-102">The continuation token parameter is used to obtain next set of results.</span></span> <span data-ttu-id="63f50-103">システムからの結果が 1 つの応答に収まらないときに、継続トークンが API の応答に含まれます。</span><span class="sxs-lookup"><span data-stu-id="63f50-103">The continuation token is included in the response of the API when the results from the system do not fit in a single response.</span></span> <span data-ttu-id="63f50-104">この値が次の API 呼び出しに渡されると、API が次の結果セットを返します。</span><span class="sxs-lookup"><span data-stu-id="63f50-104">When this value is passed to the next API call, the API returns next set of results.</span></span>
+      <span data-ttu-id="63f50-105">それ以上の結果はありません、応答に継続トークンは含まれません。</span><span class="sxs-lookup"><span data-stu-id="63f50-105">If there are no further results, then the continuation token is not included in the response.</span></span>
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.history'
+    name: history
+    fullName: history
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="63f50-106">ユーザーが指定した条件を満たす混乱イベントの一覧です。</span><span class="sxs-lookup"><span data-stu-id="63f50-106">List of Chaos events that meet the user-supplied criteria.</span></span>
+    optional: true
+    syntax:
+      content: 'history?: ChaosEventWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.ChaosEventWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ChaosEventWrapper[]'
+    name: 'ChaosEventWrapper[]'
+    spec.typeScript:
+      - name: ChaosEventWrapper
+        fullName: ChaosEventWrapper
+        uid: '@azure/servicefabric.ChaosEventWrapper'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,357 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RepairTask'
+    name: RepairTask
+    fullName: RepairTask
+    children:
+      - '@azure/servicefabric.RepairTask.action'
+      - '@azure/servicefabric.RepairTask.description'
+      - '@azure/servicefabric.RepairTask.executor'
+      - '@azure/servicefabric.RepairTask.executorData'
+      - '@azure/servicefabric.RepairTask.flags'
+      - '@azure/servicefabric.RepairTask.history'
+      - '@azure/servicefabric.RepairTask.impact'
+      - '@azure/servicefabric.RepairTask.performPreparingHealthCheck'
+      - '@azure/servicefabric.RepairTask.performRestoringHealthCheck'
+      - '@azure/servicefabric.RepairTask.preparingHealthCheckState'
+      - '@azure/servicefabric.RepairTask.restoringHealthCheckState'
+      - '@azure/servicefabric.RepairTask.resultCode'
+      - '@azure/servicefabric.RepairTask.resultDetails'
+      - '@azure/servicefabric.RepairTask.resultStatus'
+      - '@azure/servicefabric.RepairTask.state'
+      - '@azure/servicefabric.RepairTask.target'
+      - '@azure/servicefabric.RepairTask.taskId'
+      - '@azure/servicefabric.RepairTask.version'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      <span data-ttu-id="86b0f-101">修復の種類が要求された、その進行状況は、およびその最終的な結果とは何でしたに関する情報を含む修復タスクを表します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-101">Represents a repair task, which includes information about what kind of repair was requested, what its progress is, and what its final result was.</span></span>
+      <span data-ttu-id="86b0f-102">この型は、Service Fabric プラットフォームをサポートしていますコードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="86b0f-102">This type supports the Service Fabric platform; it is not meant to be used directly from your code.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86b0f-103">要求された修復アクション。</span><span class="sxs-lookup"><span data-stu-id="86b0f-103">The requested repair action.</span></span> <span data-ttu-id="86b0f-104">修復タスクの作成、変更できない 1 回が 指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="86b0f-104">Must be specified when the repair task is created, and is immutable once set.</span></span>'
+    syntax:
+      content: 'action: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-105">修復タスクによって、またはその他の詳細情報の目的の説明。</span><span class="sxs-lookup"><span data-stu-id="86b0f-105">A description of the purpose of the repair task, or other informational details.</span></span>
+      <span data-ttu-id="86b0f-106">可能性がありますが設定した修復タスクが作成され、変更可能でないときに 1 回設定します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-106">May be set when the repair task is created, and is immutable once set.</span></span>
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.executor'
+    name: executor
+    fullName: executor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86b0f-107">修復 executor の名前。</span><span class="sxs-lookup"><span data-stu-id="86b0f-107">The name of the repair executor.</span></span> <span data-ttu-id="86b0f-108">要求済みおよびそれ以降の状態で指定する必要があり、変更可能な 1 回に設定します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-108">Must be specified in Claimed and later states, and is immutable once set.</span></span>'
+    optional: true
+    syntax:
+      content: 'executor?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.executorData'
+    name: executorData
+    fullName: executorData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86b0f-109">修復 executor は、内部状態の格納に使用できるデータ文字列です。</span><span class="sxs-lookup"><span data-stu-id="86b0f-109">A data string that the repair executor can use to store its internal state.</span></span>
+    optional: true
+    syntax:
+      content: 'executorData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.flags'
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-110">ビットごとの OR の次の値は、修復タスクの状態に関する追加情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-110">A bitwise-OR of the following values, which gives additional details about the status of the repair task.</span></span>
+      - <span data-ttu-id="86b0f-111">1 - 修復のキャンセルが要求されました</span><span class="sxs-lookup"><span data-stu-id="86b0f-111">1 - Cancellation of the repair has been requested</span></span>
+      - <span data-ttu-id="86b0f-112">2 - 修復の中止が要求されました</span><span class="sxs-lookup"><span data-stu-id="86b0f-112">2 - Abort of the repair has been requested</span></span>
+      - <span data-ttu-id="86b0f-113">4 - クライアント要求を使用して修復の承認が強制されました</span><span class="sxs-lookup"><span data-stu-id="86b0f-113">4 - Approval of the repair was forced via client request</span></span>
+    optional: true
+    syntax:
+      content: 'flags?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.history'
+    name: history
+    fullName: history
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-114">修復タスクの状態遷移のタイムスタンプを含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="86b0f-114">An object that contains timestamps of the repair task's state transitions.</span></span>
+      <span data-ttu-id="86b0f-115">これらのタイムスタンプは、システムによって更新され、直接変更することはできません。</span><span class="sxs-lookup"><span data-stu-id="86b0f-115">These timestamps are updated by the system, and cannot be directly modified.</span></span>
+    optional: true
+    syntax:
+      content: 'history?: RepairTaskHistory'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTaskHistory'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.impact'
+    name: impact
+    fullName: impact
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-116">影響オブジェクトは、システムが修復の実行を承認する前に、修復の影響の準備を実行するどのようなアクションを決定します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-116">The impact object determines what actions the system will take to prepare for the impact of the repair, prior to approving execution of the repair.</span></span>
+      <span data-ttu-id="86b0f-117">準備状態に遷移するときに、修復 executor によって影響を指定する必要がありは変更できない 1 回に設定します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-117">Impact must be specified by the repair executor when transitioning to the Preparing state, and is immutable once set.</span></span>
+    optional: true
+    syntax:
+      content: 'impact?: RepairImpactDescriptionBaseUnion'
+      return:
+        type:
+          - '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.performPreparingHealthCheck'
+    name: performPreparingHealthCheck
+    fullName: performPreparingHealthCheck
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86b0f-118">修復タスクによって、準備状態になったときに、正常性チェックを実行するかどうかを決定する値。</span><span class="sxs-lookup"><span data-stu-id="86b0f-118">A value to determine if health checks will be performed when the repair task enters the Preparing state.</span></span>
+    optional: true
+    syntax:
+      content: 'performPreparingHealthCheck?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.performRestoringHealthCheck'
+    name: performRestoringHealthCheck
+    fullName: performRestoringHealthCheck
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86b0f-119">修復タスクが Restoring 状態に入ったときに、正常性チェックを実行するかどうかを決定する値。</span><span class="sxs-lookup"><span data-stu-id="86b0f-119">A value to determine if health checks will be performed when the repair task enters the Restoring state.</span></span>
+    optional: true
+    syntax:
+      content: 'performRestoringHealthCheck?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.preparingHealthCheckState'
+    name: preparingHealthCheckState
+    fullName: preparingHealthCheckState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-120">修復タスクが、準備状態の場合、正常性チェックのワークフローの状態。</span><span class="sxs-lookup"><span data-stu-id="86b0f-120">The workflow state of the health check when the repair task is in the Preparing state.</span></span>
+      <span data-ttu-id="86b0f-121">次のような値となる場合があります。'NotStarted', 'InProgress', 'Succeeded', 'Skipped', 'TimedOut'</span><span class="sxs-lookup"><span data-stu-id="86b0f-121">Possible values include: 'NotStarted', 'InProgress', 'Succeeded', 'Skipped', 'TimedOut'</span></span>
+    optional: true
+    syntax:
+      content: 'preparingHealthCheckState?: RepairTaskHealthCheckState'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTaskHealthCheckState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.restoringHealthCheckState'
+    name: restoringHealthCheckState
+    fullName: restoringHealthCheckState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-122">修復タスクが Restoring 状態の場合、正常性チェックのワークフローの状態。</span><span class="sxs-lookup"><span data-stu-id="86b0f-122">The workflow state of the health check when the repair task is in the Restoring state.</span></span>
+      <span data-ttu-id="86b0f-123">次のような値となる場合があります。'NotStarted', 'InProgress', 'Succeeded', 'Skipped', 'TimedOut'</span><span class="sxs-lookup"><span data-stu-id="86b0f-123">Possible values include: 'NotStarted', 'InProgress', 'Succeeded', 'Skipped', 'TimedOut'</span></span>
+    optional: true
+    syntax:
+      content: 'restoringHealthCheckState?: RepairTaskHealthCheckState'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTaskHealthCheckState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.resultCode'
+    name: resultCode
+    fullName: resultCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-124">修復タスクの実行の結果に関する追加情報を提供する数値。</span><span class="sxs-lookup"><span data-stu-id="86b0f-124">A numeric value providing additional details about the result of the repair task execution.</span></span>
+      <span data-ttu-id="86b0f-125">復元とそれ以降の状態で指定することがあり、変更可能な 1 回に設定します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-125">May be specified in the Restoring and later states, and is immutable once set.</span></span>
+    optional: true
+    syntax:
+      content: 'resultCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.resultDetails'
+    name: resultDetails
+    fullName: resultDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-126">修復タスクの実行の結果に関する追加情報を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="86b0f-126">A string providing additional details about the result of the repair task execution.</span></span>
+      <span data-ttu-id="86b0f-127">復元とそれ以降の状態で指定することがあり、変更可能な 1 回に設定します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-127">May be specified in the Restoring and later states, and is immutable once set.</span></span>
+    optional: true
+    syntax:
+      content: 'resultDetails?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.resultStatus'
+    name: resultStatus
+    fullName: resultStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86b0f-128">修復タスクの実行の全体的な結果を示す値。</span><span class="sxs-lookup"><span data-stu-id="86b0f-128">A value describing the overall result of the repair task execution.</span></span> <span data-ttu-id="86b0f-129">復元後の状態で指定する必要があり、変更可能な 1 回に設定します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-129">Must be specified in the Restoring and later states, and is immutable once set.</span></span> <span data-ttu-id="86b0f-130">次のような値となる場合があります。''Invalid''、'' Succeeded''、''キャンセル''、''中断''、''失敗''、''保留中''</span><span class="sxs-lookup"><span data-stu-id="86b0f-130">Possible values include: ''Invalid'', ''Succeeded'', ''Cancelled'', ''Interrupted'', ''Failed'', ''Pending''</span></span>'
+    optional: true
+    syntax:
+      content: 'resultStatus?: ResultStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ResultStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86b0f-131">修復タスクのワークフローの状態。</span><span class="sxs-lookup"><span data-stu-id="86b0f-131">The workflow state of the repair task.</span></span> <span data-ttu-id="86b0f-132">有効な初期状態は Created、要求済み、および準備をしています。</span><span class="sxs-lookup"><span data-stu-id="86b0f-132">Valid initial states are Created, Claimed, and Preparing.</span></span> <span data-ttu-id="86b0f-133">次のような値となる場合があります。''Invalid''、''作成''、''に要求された''、''準備''、'' 承認 ''、''実行''、''リストア、'' ''完了''</span><span class="sxs-lookup"><span data-stu-id="86b0f-133">Possible values include: ''Invalid'', ''Created'', ''Claimed'', ''Preparing'', ''Approved'', ''Executing'', ''Restoring'', ''Completed''</span></span>'
+    syntax:
+      content: 'state: State'
+      return:
+        type:
+          - '@azure/servicefabric.State'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.target'
+    name: target
+    fullName: target
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-134">ターゲット オブジェクトは、システムが修復の実行を承認する前に、修復の影響の準備を実行するどのようなアクションを決定します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-134">The target object determines what actions the system will take to prepare for the impact of the repair, prior to approving execution of the repair.</span></span>
+      <span data-ttu-id="86b0f-135">可能性がありますが設定した修復タスクが作成され、変更可能でないときに 1 回設定します。</span><span class="sxs-lookup"><span data-stu-id="86b0f-135">May be set when the repair task is created, and is immutable once set.</span></span>
+    optional: true
+    syntax:
+      content: 'target?: RepairTargetDescriptionBaseUnion'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTargetDescriptionBaseUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.taskId'
+    name: taskId
+    fullName: taskId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86b0f-136">修復タスクの ID。</span><span class="sxs-lookup"><span data-stu-id="86b0f-136">The ID of the repair task.</span></span>
+    syntax:
+      content: 'taskId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.version'
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86b0f-137">修復タスクのバージョン。</span><span class="sxs-lookup"><span data-stu-id="86b0f-137">The version of the repair task.</span></span>
+      <span data-ttu-id="86b0f-138">新しい修復タスクを作成するときに、バージョンが 0 に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="86b0f-138">When creating a new repair task, the version must be set to zero.</span></span>  <span data-ttu-id="86b0f-139">修復タスクを更新するには、バージョンはオプティミスティック同時実行チェックに使用されます。</span><span class="sxs-lookup"><span data-stu-id="86b0f-139">When updating a repair task, the version is used for optimistic concurrency checks.</span></span>  <span data-ttu-id="86b0f-140">バージョンがゼロに設定されている場合、更新プログラム書き込みの競合は確認されません。</span><span class="sxs-lookup"><span data-stu-id="86b0f-140">If the version is set to zero, the update will not check for write conflicts.</span></span>  <span data-ttu-id="86b0f-141">場合は、バージョンは、修復タスクの実際の現在のバージョンには、この値が一致する場合のみ更新が成功し、0 以外の値に設定されます。</span><span class="sxs-lookup"><span data-stu-id="86b0f-141">If the version is set to a non-zero value, then the update will only succeed if the actual current version of the repair task matches this value.</span></span>
+    optional: true
+    syntax:
+      content: 'version?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.RepairTaskHistory'
+    name: RepairTaskHistory
+    spec.typeScript:
+      - name: RepairTaskHistory
+        fullName: RepairTaskHistory
+        uid: '@azure/servicefabric.RepairTaskHistory'
+  - uid: '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
+    name: RepairImpactDescriptionBaseUnion
+    spec.typeScript:
+      - name: RepairImpactDescriptionBaseUnion
+        fullName: RepairImpactDescriptionBaseUnion
+        uid: '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
+  - uid: '@azure/servicefabric.RepairTaskHealthCheckState'
+    name: RepairTaskHealthCheckState
+    spec.typeScript:
+      - name: RepairTaskHealthCheckState
+        fullName: RepairTaskHealthCheckState
+        uid: '@azure/servicefabric.RepairTaskHealthCheckState'
+  - uid: '@azure/servicefabric.ResultStatus'
+    name: ResultStatus
+    spec.typeScript:
+      - name: ResultStatus
+        fullName: ResultStatus
+        uid: '@azure/servicefabric.ResultStatus'
+  - uid: '@azure/servicefabric.State'
+    name: State
+    spec.typeScript:
+      - name: State
+        fullName: State
+        uid: '@azure/servicefabric.State'
+  - uid: '@azure/servicefabric.RepairTargetDescriptionBaseUnion'
+    name: RepairTargetDescriptionBaseUnion
+    spec.typeScript:
+      - name: RepairTargetDescriptionBaseUnion
+        fullName: RepairTargetDescriptionBaseUnion
+        uid: '@azure/servicefabric.RepairTargetDescriptionBaseUnion'
